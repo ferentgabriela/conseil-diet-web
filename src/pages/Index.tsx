@@ -1,7 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Heart, Users, Utensils, Calendar, Phone, Mail, MapPin } from "lucide-react";
+import { Heart, Users, Utensils, Calendar, Phone, Mail, MapPin, Clock } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Index = () => {
@@ -13,17 +13,21 @@ const Index = () => {
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-2">
               <Heart className="h-8 w-8 text-green-600" />
-              <h1 className="text-2xl font-bold text-green-800">Conseil Diététique</h1>
+              <div>
+                <h1 className="text-2xl font-bold text-green-800">Gabriela Ferent</h1>
+                <p className="text-sm text-gray-600">Diététicienne Diplômée</p>
+              </div>
             </div>
             <nav className="hidden md:flex space-x-6">
               <a href="#accueil" className="text-gray-700 hover:text-green-600 transition-colors">Accueil</a>
               <a href="#services" className="text-gray-700 hover:text-green-600 transition-colors">Services</a>
+              <a href="#cabinets" className="text-gray-700 hover:text-green-600 transition-colors">Cabinets</a>
               <a href="#apropos" className="text-gray-700 hover:text-green-600 transition-colors">À Propos</a>
               <a href="#contact" className="text-gray-700 hover:text-green-600 transition-colors">Contact</a>
             </nav>
             <Button className="bg-green-600 hover:bg-green-700">
               <Calendar className="h-4 w-4 mr-2" />
-              Prendre RDV
+              RDV sur Doctena
             </Button>
           </div>
         </div>
@@ -36,13 +40,13 @@ const Index = () => {
             Votre Bien-être Nutritionnel au Cœur du Luxembourg
           </h2>
           <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-            Découvrez une approche personnalisée de la nutrition avec notre équipe de diététiciens qualifiés. 
-            Nous vous accompagnons dans votre parcours vers une alimentation saine et équilibrée.
+            Je suis Gabriela Ferent, diététicienne diplômée, et je vous accompagne dans votre parcours vers une alimentation saine et équilibrée. 
+            Avec une approche personnalisée et bienveillante, découvrez comment améliorer votre relation avec la nutrition.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="bg-green-600 hover:bg-green-700 text-lg px-8 py-4">
               <Calendar className="h-5 w-5 mr-2" />
-              Consultation Gratuite
+              Prendre RDV sur Doctena
             </Button>
             <Button variant="outline" size="lg" className="text-lg px-8 py-4">
               En Savoir Plus
@@ -55,7 +59,7 @@ const Index = () => {
       <section id="services" className="py-16 px-4 bg-white">
         <div className="container mx-auto">
           <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold text-gray-900 mb-4">Nos Services Spécialisés</h3>
+            <h3 className="text-3xl font-bold text-gray-900 mb-4">Mes Services Spécialisés</h3>
             <p className="text-gray-600 max-w-2xl mx-auto">
               Une gamme complète de services nutritionnels adaptés à vos besoins individuels
             </p>
@@ -101,12 +105,82 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Cabinets Section */}
+      <section id="cabinets" className="py-16 px-4 bg-green-50">
+        <div className="container mx-auto">
+          <div className="text-center mb-12">
+            <h3 className="text-3xl font-bold text-gray-900 mb-4">Mes Cabinets</h3>
+            <p className="text-gray-600">
+              Je vous reçois dans trois cabinets situés au Luxembourg pour votre confort et proximité
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <Card className="hover:shadow-lg transition-shadow">
+              <CardHeader className="text-center">
+                <MapPin className="h-12 w-12 text-green-600 mx-auto mb-4" />
+                <CardTitle className="text-green-800">Luxembourg</CardTitle>
+              </CardHeader>
+              <CardContent className="text-center">
+                <p className="text-gray-600 mb-4">Cabinet principal au cœur de la capitale</p>
+                <Button variant="outline" className="w-full">
+                  <Calendar className="h-4 w-4 mr-2" />
+                  RDV Luxembourg
+                </Button>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-lg transition-shadow">
+              <CardHeader className="text-center">
+                <MapPin className="h-12 w-12 text-green-600 mx-auto mb-4" />
+                <CardTitle className="text-green-800">Ettelbruck</CardTitle>
+              </CardHeader>
+              <CardContent className="text-center">
+                <p className="text-gray-600 mb-4">Cabinet accessible dans le nord du pays</p>
+                <Button variant="outline" className="w-full">
+                  <Calendar className="h-4 w-4 mr-2" />
+                  RDV Ettelbruck
+                </Button>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-lg transition-shadow">
+              <CardHeader className="text-center">
+                <MapPin className="h-12 w-12 text-green-600 mx-auto mb-4" />
+                <CardTitle className="text-green-800">Insenborn</CardTitle>
+              </CardHeader>
+              <CardContent className="text-center">
+                <p className="text-gray-600 mb-4">Cabinet de proximité pour votre confort</p>
+                <Button variant="outline" className="w-full">
+                  <Calendar className="h-4 w-4 mr-2" />
+                  RDV Insenborn
+                </Button>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="text-center mt-12">
+            <div className="bg-white p-6 rounded-lg shadow-md inline-block">
+              <Clock className="h-8 w-8 text-green-600 mx-auto mb-3" />
+              <h4 className="text-xl font-semibold text-green-800 mb-2">Prise de Rendez-vous</h4>
+              <p className="text-gray-600 mb-4">
+                Réservez facilement votre consultation en ligne via Doctena
+              </p>
+              <Button className="bg-green-600 hover:bg-green-700">
+                <Calendar className="h-4 w-4 mr-2" />
+                Prendre RDV sur Doctena
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* About Section */}
-      <section id="apropos" className="py-16 px-4 bg-green-50">
+      <section id="apropos" className="py-16 px-4 bg-white">
         <div className="container mx-auto">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <h3 className="text-3xl font-bold text-gray-900 mb-4">Notre Approche</h3>
+              <h3 className="text-3xl font-bold text-gray-900 mb-4">Mon Approche</h3>
               <p className="text-gray-600 text-lg">
                 Une philosophie centrée sur l'écoute, la compréhension et l'accompagnement personnalisé
               </p>
@@ -118,17 +192,17 @@ const Index = () => {
                   Professionnalisme et Empathie
                 </h4>
                 <p className="text-gray-600 mb-6 leading-relaxed">
-                  Chez Conseil Diététique, nous croyons qu'une nutrition saine commence par une relation de confiance. 
-                  Notre équipe de diététiciens diplômés combine expertise scientifique et approche humaine pour 
-                  vous offrir un accompagnement sur mesure.
+                  En tant que diététicienne diplômée, je crois qu'une nutrition saine commence par une relation de confiance. 
+                  Je combine expertise scientifique et approche humaine pour vous offrir un accompagnement sur mesure 
+                  dans mes trois cabinets au Luxembourg.
                 </p>
                 <p className="text-gray-600 leading-relaxed">
-                  Nous prenons le temps de vous écouter, de comprendre vos défis et vos objectifs, 
+                  Je prends le temps de vous écouter, de comprendre vos défis et vos objectifs, 
                   pour construire ensemble un plan nutritionnel qui vous ressemble et qui s'adapte à votre style de vie.
                 </p>
               </div>
-              <div className="bg-white p-8 rounded-lg shadow-md">
-                <h5 className="text-xl font-semibold text-green-800 mb-4">Pourquoi Nous Choisir ?</h5>
+              <div className="bg-green-50 p-8 rounded-lg">
+                <h5 className="text-xl font-semibold text-green-800 mb-4">Pourquoi Me Choisir ?</h5>
                 <ul className="space-y-3 text-gray-600">
                   <li className="flex items-start">
                     <div className="w-2 h-2 bg-green-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
@@ -136,11 +210,15 @@ const Index = () => {
                   </li>
                   <li className="flex items-start">
                     <div className="w-2 h-2 bg-green-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                    Équipe de professionnels qualifiés
+                    Diététicienne diplômée et expérimentée
                   </li>
                   <li className="flex items-start">
                     <div className="w-2 h-2 bg-green-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                    Suivi régulier et ajustements
+                    Trois cabinets pour votre proximité
+                  </li>
+                  <li className="flex items-start">
+                    <div className="w-2 h-2 bg-green-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                    Suivi régulier et ajustements personnalisés
                   </li>
                   <li className="flex items-start">
                     <div className="w-2 h-2 bg-green-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
@@ -154,12 +232,12 @@ const Index = () => {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-16 px-4 bg-white">
+      <section id="contact" className="py-16 px-4 bg-green-50">
         <div className="container mx-auto">
           <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold text-gray-900 mb-4">Contactez-Nous</h3>
+            <h3 className="text-3xl font-bold text-gray-900 mb-4">Me Contacter</h3>
             <p className="text-gray-600">
-              Prêt à commencer votre parcours vers une meilleure nutrition ? Nous sommes là pour vous accompagner.
+              Prêt à commencer votre parcours vers une meilleure nutrition ? Je suis là pour vous accompagner.
             </p>
           </div>
 
@@ -178,32 +256,32 @@ const Index = () => {
                   <Mail className="h-6 w-6 text-green-600 mt-1" />
                   <div>
                     <h5 className="font-semibold text-gray-900">Email</h5>
-                    <p className="text-gray-600">contact@conseildietetique.lu</p>
+                    <p className="text-gray-600">gabriela@conseildietetique.lu</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
-                  <MapPin className="h-6 w-6 text-green-600 mt-1" />
+                  <Calendar className="h-6 w-6 text-green-600 mt-1" />
                   <div>
-                    <h5 className="font-semibold text-gray-900">Adresse</h5>
-                    <p className="text-gray-600">Luxembourg, Grand-Duché de Luxembourg</p>
+                    <h5 className="font-semibold text-gray-900">Rendez-vous</h5>
+                    <p className="text-gray-600">Réservation en ligne sur Doctena</p>
                   </div>
                 </div>
               </div>
 
-              <div className="mt-8 p-6 bg-green-50 rounded-lg">
-                <h5 className="font-semibold text-green-800 mb-3">Horaires d'Ouverture</h5>
-                <div className="space-y-2 text-gray-600">
-                  <div className="flex justify-between">
-                    <span>Lundi - Vendredi</span>
-                    <span>8h00 - 18h00</span>
+              <div className="mt-8 p-6 bg-white rounded-lg shadow-sm">
+                <h5 className="font-semibold text-green-800 mb-3">Mes Cabinets</h5>
+                <div className="space-y-4 text-gray-600">
+                  <div>
+                    <div className="font-medium text-gray-900">Luxembourg</div>
+                    <p className="text-sm">Centre-ville</p>
                   </div>
-                  <div className="flex justify-between">
-                    <span>Samedi</span>
-                    <span>9h00 - 14h00</span>
+                  <div>
+                    <div className="font-medium text-gray-900">Ettelbruck</div>
+                    <p className="text-sm">Nord du Luxembourg</p>
                   </div>
-                  <div className="flex justify-between">
-                    <span>Dimanche</span>
-                    <span>Fermé</span>
+                  <div>
+                    <div className="font-medium text-gray-900">Insenborn</div>
+                    <p className="text-sm">Proximité et confort</p>
                   </div>
                 </div>
               </div>
@@ -213,7 +291,7 @@ const Index = () => {
               <CardHeader>
                 <CardTitle className="text-green-800">Demande de Consultation</CardTitle>
                 <CardDescription>
-                  Remplissez ce formulaire et nous vous contacterons rapidement
+                  Remplissez ce formulaire et je vous contacterai rapidement
                 </CardDescription>
               </CardHeader>
               <CardContent>
@@ -253,6 +331,15 @@ const Index = () => {
                     />
                   </div>
                   <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">Cabinet préféré</label>
+                    <select className="w-full p-3 border border-gray-300 rounded-md focus:ring-green-500 focus:border-green-500">
+                      <option value="">Choisir un cabinet</option>
+                      <option value="luxembourg">Luxembourg</option>
+                      <option value="ettelbruck">Ettelbruck</option>
+                      <option value="insenborn">Insenborn</option>
+                    </select>
+                  </div>
+                  <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">Message</label>
                     <textarea 
                       className="w-full p-3 border border-gray-300 rounded-md focus:ring-green-500 focus:border-green-500 h-32"
@@ -276,14 +363,17 @@ const Index = () => {
             <div>
               <div className="flex items-center space-x-2 mb-4">
                 <Heart className="h-6 w-6" />
-                <h4 className="text-xl font-bold">Conseil Diététique</h4>
+                <div>
+                  <h4 className="text-xl font-bold">Gabriela Ferent</h4>
+                  <p className="text-green-100 text-sm">Diététicienne Diplômée</p>
+                </div>
               </div>
               <p className="text-green-100 leading-relaxed">
                 Votre partenaire de confiance pour une nutrition saine et équilibrée au Luxembourg.
               </p>
             </div>
             <div>
-              <h5 className="font-semibold mb-4">Services</h5>
+              <h5 className="font-semibold mb-4">Mes Services</h5>
               <ul className="space-y-2 text-green-100">
                 <li>Consultation nutritionnelle</li>
                 <li>Gestion du poids</li>
@@ -292,16 +382,17 @@ const Index = () => {
               </ul>
             </div>
             <div>
-              <h5 className="font-semibold mb-4">Contact</h5>
+              <h5 className="font-semibold mb-4">Mes Cabinets</h5>
               <div className="space-y-2 text-green-100">
-                <p>+352 XX XX XX XX</p>
-                <p>contact@conseildietetique.lu</p>
-                <p>Luxembourg</p>
+                <p>Luxembourg - Centre-ville</p>
+                <p>Ettelbruck - Nord</p>
+                <p>Insenborn - Proximité</p>
+                <p className="mt-4">RDV sur Doctena</p>
               </div>
             </div>
           </div>
           <div className="border-t border-green-700 mt-8 pt-8 text-center text-green-100">
-            <p>&copy; 2024 Conseil Diététique Luxembourg. Tous droits réservés.</p>
+            <p>&copy; 2024 Gabriela Ferent - Diététicienne Luxembourg. Tous droits réservés.</p>
           </div>
         </div>
       </footer>
