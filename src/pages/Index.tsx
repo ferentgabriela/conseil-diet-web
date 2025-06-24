@@ -25,7 +25,10 @@ const Index = () => {
               <a href="#apropos" className="text-gray-700 hover:text-green-600 transition-colors">À Propos</a>
               <a href="#contact" className="text-gray-700 hover:text-green-600 transition-colors">Contact</a>
             </nav>
-            <Button className="bg-green-600 hover:bg-green-700">
+            <Button 
+              className="bg-green-600 hover:bg-green-700"
+              onClick={() => window.open('https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874', '_blank')}
+            >
               <Calendar className="h-4 w-4 mr-2" />
               RDV sur Doctena
             </Button>
@@ -44,7 +47,11 @@ const Index = () => {
             Avec une approche personnalisée et bienveillante, découvrez comment améliorer votre relation avec la nutrition.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-green-600 hover:bg-green-700 text-lg px-8 py-4">
+            <Button 
+              size="lg" 
+              className="bg-green-600 hover:bg-green-700 text-lg px-8 py-4"
+              onClick={() => window.open('https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874', '_blank')}
+            >
               <Calendar className="h-5 w-5 mr-2" />
               Prendre RDV sur Doctena
             </Button>
@@ -123,7 +130,11 @@ const Index = () => {
               </CardHeader>
               <CardContent className="text-center">
                 <p className="text-gray-600 mb-4">Cabinet principal au cœur de la capitale</p>
-                <Button variant="outline" className="w-full">
+                <Button 
+                  variant="outline" 
+                  className="w-full"
+                  onClick={() => window.open('https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874#22943', '_blank')}
+                >
                   <Calendar className="h-4 w-4 mr-2" />
                   RDV Luxembourg
                 </Button>
@@ -137,7 +148,11 @@ const Index = () => {
               </CardHeader>
               <CardContent className="text-center">
                 <p className="text-gray-600 mb-4">Cabinet accessible dans le nord du pays</p>
-                <Button variant="outline" className="w-full">
+                <Button 
+                  variant="outline" 
+                  className="w-full"
+                  onClick={() => window.open('https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874#24538', '_blank')}
+                >
                   <Calendar className="h-4 w-4 mr-2" />
                   RDV Ettelbruck
                 </Button>
@@ -151,7 +166,11 @@ const Index = () => {
               </CardHeader>
               <CardContent className="text-center">
                 <p className="text-gray-600 mb-4">Cabinet de proximité pour votre confort</p>
-                <Button variant="outline" className="w-full">
+                <Button 
+                  variant="outline" 
+                  className="w-full"
+                  onClick={() => window.open('https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874#22919', '_blank')}
+                >
                   <Calendar className="h-4 w-4 mr-2" />
                   RDV Insenborn
                 </Button>
@@ -166,7 +185,10 @@ const Index = () => {
               <p className="text-gray-600 mb-4">
                 Réservez facilement votre consultation en ligne via Doctena
               </p>
-              <Button className="bg-green-600 hover:bg-green-700">
+              <Button 
+                className="bg-green-600 hover:bg-green-700"
+                onClick={() => window.open('https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874', '_blank')}
+              >
                 <Calendar className="h-4 w-4 mr-2" />
                 Prendre RDV sur Doctena
               </Button>
