@@ -53,19 +53,32 @@ const Navigation = () => {
       }`} style={{ top: '0', marginTop: '40px' }}>
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center py-4">
-            {/* Logo Section with Icon */}
-            <div className="flex items-center gap-3">
-              <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
-                <span className="text-2xl">🥗</span>
+            {/* Logo Section with Professional Design */}
+            <div className="flex items-center gap-4">
+              {/* Professional Logo */}
+              <div className="relative">
+                <div className="w-14 h-14 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center shadow-lg">
+                  <div className="relative">
+                    {/* Stylized G letter */}
+                    <div className="text-white font-bold text-2xl">G</div>
+                    {/* Small leaf accent */}
+                    <div className="absolute -top-1 -right-1 w-3 h-3 bg-green-300 rounded-full opacity-80"></div>
+                    <div className="absolute -bottom-1 -left-1 w-2 h-2 bg-green-300 rounded-full opacity-60"></div>
+                  </div>
+                </div>
+                {/* Subtle glow effect */}
+                <div className="absolute inset-0 w-14 h-14 bg-green-400 rounded-xl blur-lg opacity-20 -z-10"></div>
               </div>
-              <div className="flex flex-col">
-                <div className="text-2xl md:text-3xl font-bold text-gray-900">
+              
+              {/* Centered Text Content */}
+              <div className="flex flex-col justify-center">
+                <div className="text-2xl md:text-3xl font-bold text-gray-900 leading-tight">
                   Gabriela Ferent
                 </div>
-                <div className="text-sm md:text-base text-green-600 font-medium">
+                <div className="text-sm md:text-base text-green-600 font-medium leading-tight">
                   Diététicienne – Luxembourg
                 </div>
-                <div className="text-xs text-gray-600">
+                <div className="text-xs text-gray-600 leading-tight">
                   Consultations remboursées CNS jusqu'à 80%
                 </div>
               </div>
