@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Menu, X, Calendar, MapPin, Star, Shield } from 'lucide-react';
 import { useState, useEffect } from 'react';
@@ -174,7 +175,7 @@ const Navigation = () => {
       </nav>
 
       {/* Spacer to prevent content from going behind fixed header */}
-      <div className="h-[40px]"></div>
+      <div className="h-[30px]"></div>
     </>
   );
 };
