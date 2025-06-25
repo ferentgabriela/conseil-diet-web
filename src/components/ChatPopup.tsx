@@ -85,7 +85,7 @@ export const ChatPopup = () => {
   return (
     <>
       <Card className="fixed bottom-6 right-6 w-96 h-[600px] shadow-2xl z-50 flex flex-col">
-        <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+        <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2 flex-shrink-0">
           <CardTitle className="text-lg">Assistant Diététique</CardTitle>
           <Button
             variant="ghost"
@@ -97,9 +97,9 @@ export const ChatPopup = () => {
           </Button>
         </CardHeader>
         
-        <CardContent className="flex-1 flex flex-col p-4 space-y-4">
+        <CardContent className="flex-1 flex flex-col p-4 space-y-4 min-h-0">
           {messages.length === 0 && (
-            <div className="space-y-3">
+            <div className="space-y-3 flex-shrink-0">
               <p className="text-sm text-muted-foreground">
                 Bonjour ! Je suis l'assistant de Gabriela Ferent, diététicienne au Luxembourg. 
                 Comment puis-je vous aider aujourd'hui ?
@@ -123,71 +123,73 @@ export const ChatPopup = () => {
             </div>
           )}
 
-          <ScrollArea className="flex-1 pr-4">
-            <div className="space-y-4">
-              {messages.map((message) => (
-                <div
-                  key={message.id}
-                  className={`flex ${message.sender === 'user' ? 'justify-end' : 'justify-start'}`}
-                >
+          <div className="flex-1 min-h-0">
+            <ScrollArea className="h-full pr-4">
+              <div className="space-y-4">
+                {messages.map((message) => (
                   <div
-                    className={`flex items-start space-x-2 max-w-[80%] ${
-                      message.sender === 'user' ? 'flex-row-reverse space-x-reverse' : ''
-                    }`}
+                    key={message.id}
+                    className={`flex ${message.sender === 'user' ? 'justify-end' : 'justify-start'}`}
                   >
-                    <div className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center ${
-                      message.sender === 'user' ? 'bg-primary text-primary-foreground' : 'bg-muted'
-                    }`}>
-                      {message.sender === 'user' ? (
-                        <User className="h-4 w-4" />
-                      ) : (
-                        <Bot className="h-4 w-4" />
-                      )}
-                    </div>
                     <div
-                      className={`rounded-lg px-3 py-2 text-sm ${
-                        message.sender === 'user'
-                          ? 'bg-primary text-primary-foreground'
-                          : 'bg-muted'
+                      className={`flex items-start space-x-2 max-w-[85%] ${
+                        message.sender === 'user' ? 'flex-row-reverse space-x-reverse' : ''
                       }`}
                     >
-                      <div className="whitespace-pre-wrap">{message.message}</div>
-                      {message.message.includes('doctena.lu') && (
-                        <Button
-                          variant="ghost"
-                          size="sm"
-                          className="mt-2 p-0 h-auto text-xs underline"
-                          onClick={() => window.open('https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874', '_blank')}
-                        >
-                          Ouvrir Doctena <ExternalLink className="h-3 w-3 ml-1" />
-                        </Button>
-                      )}
-                    </div>
-                  </div>
-                </div>
-              ))}
-              
-              {isLoading && (
-                <div className="flex justify-start">
-                  <div className="flex items-start space-x-2">
-                    <div className="flex-shrink-0 w-8 h-8 rounded-full bg-muted flex items-center justify-center">
-                      <Bot className="h-4 w-4" />
-                    </div>
-                    <div className="bg-muted rounded-lg px-3 py-2 text-sm">
-                      <div className="flex space-x-1">
-                        <div className="w-2 h-2 bg-muted-foreground rounded-full animate-bounce"></div>
-                        <div className="w-2 h-2 bg-muted-foreground rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
-                        <div className="w-2 h-2 bg-muted-foreground rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
+                      <div className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center ${
+                        message.sender === 'user' ? 'bg-primary text-primary-foreground' : 'bg-muted'
+                      }`}>
+                        {message.sender === 'user' ? (
+                          <User className="h-4 w-4" />
+                        ) : (
+                          <Bot className="h-4 w-4" />
+                        )}
+                      </div>
+                      <div
+                        className={`rounded-lg px-3 py-2 text-sm break-words ${
+                          message.sender === 'user'
+                            ? 'bg-primary text-primary-foreground'
+                            : 'bg-muted'
+                        }`}
+                      >
+                        <div className="whitespace-pre-wrap break-words">{message.message}</div>
+                        {message.message.includes('doctena.lu') && (
+                          <Button
+                            variant="ghost"
+                            size="sm"
+                            className="mt-2 p-0 h-auto text-xs underline"
+                            onClick={() => window.open('https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874', '_blank')}
+                          >
+                            Ouvrir Doctena <ExternalLink className="h-3 w-3 ml-1" />
+                          </Button>
+                        )}
                       </div>
                     </div>
                   </div>
-                </div>
-              )}
-            </div>
-            <div ref={messagesEndRef} />
-          </ScrollArea>
+                ))}
+                
+                {isLoading && (
+                  <div className="flex justify-start">
+                    <div className="flex items-start space-x-2">
+                      <div className="flex-shrink-0 w-8 h-8 rounded-full bg-muted flex items-center justify-center">
+                        <Bot className="h-4 w-4" />
+                      </div>
+                      <div className="bg-muted rounded-lg px-3 py-2 text-sm">
+                        <div className="flex space-x-1">
+                          <div className="w-2 h-2 bg-muted-foreground rounded-full animate-bounce"></div>
+                          <div className="w-2 h-2 bg-muted-foreground rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
+                          <div className="w-2 h-2 bg-muted-foreground rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </div>
+              <div ref={messagesEndRef} />
+            </ScrollArea>
+          </div>
 
-          <div className="flex space-x-2">
+          <div className="flex space-x-2 flex-shrink-0">
             <Textarea
               value={currentMessage}
               onChange={(e) => setCurrentMessage(e.target.value)}
@@ -200,6 +202,7 @@ export const ChatPopup = () => {
               onClick={handleSendMessage}
               disabled={!currentMessage.trim() || isLoading}
               size="icon"
+              className="flex-shrink-0"
             >
               <Send className="h-4 w-4" />
             </Button>
