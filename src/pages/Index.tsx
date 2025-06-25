@@ -1,14 +1,17 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Heart, Users, Utensils, Calendar, Phone, Mail, MapPin, Clock } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Heart, Users, Utensils, Calendar, Phone, Mail, MapPin, Clock, CheckCircle, FileText, Stethoscope, Activity } from "lucide-react";
 
 const Index = () => {
+  const openDoctena = (url?: string) => {
+    const defaultUrl = 'https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874';
+    window.open(url || defaultUrl, '_blank');
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-green-50 to-white">
       {/* Header/Navigation */}
-      <header className="bg-white shadow-sm border-b">
+      <header className="bg-white shadow-sm border-b sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-2">
@@ -20,14 +23,14 @@ const Index = () => {
             </div>
             <nav className="hidden md:flex space-x-6">
               <a href="#accueil" className="text-gray-700 hover:text-green-600 transition-colors">Accueil</a>
-              <a href="#services" className="text-gray-700 hover:text-green-600 transition-colors">Services</a>
+              <a href="#cns" className="text-gray-700 hover:text-green-600 transition-colors">CNS</a>
+              <a href="#prive" className="text-gray-700 hover:text-green-600 transition-colors">Privé</a>
               <a href="#cabinets" className="text-gray-700 hover:text-green-600 transition-colors">Cabinets</a>
-              <a href="#apropos" className="text-gray-700 hover:text-green-600 transition-colors">À Propos</a>
               <a href="#contact" className="text-gray-700 hover:text-green-600 transition-colors">Contact</a>
             </nav>
             <Button 
               className="bg-green-600 hover:bg-green-700"
-              onClick={() => window.open('https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874', '_blank')}
+              onClick={() => openDoctena()}
             >
               <Calendar className="h-4 w-4 mr-2" />
               RDV sur Doctena
@@ -40,80 +43,221 @@ const Index = () => {
       <section id="accueil" className="py-20 px-4">
         <div className="container mx-auto text-center max-w-4xl">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Votre Bien-être Nutritionnel au Cœur du Luxembourg
+            Consultations Diététiques au Luxembourg
           </h2>
           <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-            Je suis Gabriela Ferent, diététicienne diplômée, et je vous accompagne dans votre parcours vers une alimentation saine et équilibrée. 
-            Avec une approche personnalisée et bienveillante, découvrez comment améliorer votre relation avec la nutrition.
+            Je suis Gabriela Ferent, diététicienne diplômée. Je propose des suivis nutritionnels 
+            <strong> remboursés par la CNS</strong> (sur prescription médicale) et des consultations privées 
+            pour tous vos besoins en nutrition et bien-être.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
               size="lg" 
               className="bg-green-600 hover:bg-green-700 text-lg px-8 py-4"
-              onClick={() => window.open('https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874', '_blank')}
+              onClick={() => openDoctena()}
             >
               <Calendar className="h-5 w-5 mr-2" />
               Prendre RDV sur Doctena
             </Button>
             <Button variant="outline" size="lg" className="text-lg px-8 py-4">
-              En Savoir Plus
+              Découvrir mes Services
             </Button>
           </div>
         </div>
       </section>
 
-      {/* Services Section */}
-      <section id="services" className="py-16 px-4 bg-white">
+      {/* CNS Coverage Section */}
+      <section id="cns" className="py-16 px-4 bg-white">
         <div className="container mx-auto">
           <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold text-gray-900 mb-4">Mes Services Spécialisés</h3>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Une gamme complète de services nutritionnels adaptés à vos besoins individuels
+            <div className="inline-flex items-center space-x-2 bg-green-100 px-4 py-2 rounded-full mb-4">
+              <CheckCircle className="h-5 w-5 text-green-600" />
+              <span className="text-green-800 font-semibold">Remboursé par la CNS</span>
+            </div>
+            <h3 className="text-3xl font-bold text-gray-900 mb-4">Suivi Diététique sur Prescription</h3>
+            <p className="text-gray-600 max-w-3xl mx-auto">
+              Bénéficiez d'un accompagnement nutritionnel remboursé par la CNS avec une prescription 
+              de votre médecin traitant pour diverses pathologies.
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card className="hover:shadow-lg transition-shadow border-green-100">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <Card className="border-green-200 bg-green-50">
+                <CardHeader>
+                  <div className="flex items-center space-x-3">
+                    <FileText className="h-8 w-8 text-green-600" />
+                    <div>
+                      <CardTitle className="text-green-800">Prescription Requise</CardTitle>
+                      <CardDescription>Demandez à votre médecin</CardDescription>
+                    </div>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <h4 className="font-semibold text-gray-900 mb-3">Conditions couvertes :</h4>
+                  <ul className="space-y-2 text-gray-700">
+                    <li className="flex items-start">
+                      <div className="w-2 h-2 bg-green-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                      Diabète (Type 1, Type 2, gestationnel)
+                    </li>
+                    <li className="flex items-start">
+                      <div className="w-2 h-2 bg-green-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                      Maladies cardiovasculaires
+                    </li>
+                    <li className="flex items-start">
+                      <div className="w-2 h-2 bg-green-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                      Troubles digestifs chroniques
+                    </li>
+                    <li className="flex items-start">
+                      <div className="w-2 h-2 bg-green-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                      Insuffisance rénale
+                    </li>
+                    <li className="flex items-start">
+                      <div className="w-2 h-2 bg-green-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                      Troubles alimentaires
+                    </li>
+                    <li className="flex items-start">
+                      <div className="w-2 h-2 bg-green-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                      Obésité avec complications
+                    </li>
+                  </ul>
+                </CardContent>
+              </Card>
+            </div>
+
+            <div className="space-y-6">
+              <div className="bg-gradient-to-r from-green-600 to-green-700 text-white p-8 rounded-lg">
+                <h4 className="text-2xl font-bold mb-4">Avantages CNS</h4>
+                <div className="space-y-4">
+                  <div className="flex items-center space-x-3">
+                    <CheckCircle className="h-6 w-6" />
+                    <span>Consultations remboursées à 100%</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <CheckCircle className="h-6 w-6" />
+                    <span>Suivi personnalisé et régulier</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <CheckCircle className="h-6 w-6" />
+                    <span>Plans alimentaires adaptés</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <CheckCircle className="h-6 w-6" />
+                    <span>Coordination avec votre médecin</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="text-center">
+                <p className="text-gray-600 mb-4">
+                  Vous avez une prescription médicale ?
+                </p>
+                <Button 
+                  size="lg" 
+                  className="bg-green-600 hover:bg-green-700 w-full"
+                  onClick={() => openDoctena()}
+                >
+                  <Calendar className="h-5 w-5 mr-2" />
+                  Réserver ma Consultation CNS
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Private Consultations Section */}
+      <section id="prive" className="py-16 px-4 bg-gray-50">
+        <div className="container mx-auto">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center space-x-2 bg-blue-100 px-4 py-2 rounded-full mb-4">
+              <Activity className="h-5 w-5 text-blue-600" />
+              <span className="text-blue-800 font-semibold">Consultation Privée</span>
+            </div>
+            <h3 className="text-3xl font-bold text-gray-900 mb-4">Suivi Nutritionnel Personnalisé</h3>
+            <p className="text-gray-600 max-w-3xl mx-auto">
+              Consultations directes sans prescription pour optimiser votre santé, 
+              perdre du poids, améliorer vos performances ou adopter une alimentation équilibrée.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+            <Card className="hover:shadow-lg transition-shadow border-blue-100">
               <CardHeader className="text-center">
-                <Utensils className="h-12 w-12 text-green-600 mx-auto mb-4" />
-                <CardTitle className="text-green-800">Consultation Nutritionnelle</CardTitle>
+                <Utensils className="h-12 w-12 text-blue-600 mx-auto mb-4" />
+                <CardTitle className="text-blue-800">Rééquilibrage Alimentaire</CardTitle>
               </CardHeader>
               <CardContent>
-                <CardDescription className="text-gray-600 text-center">
-                  Évaluation complète de vos habitudes alimentaires avec plan personnalisé
+                <CardDescription className="text-gray-600 text-center mb-4">
+                  Apprenez à mieux manger au quotidien avec des conseils pratiques et durables
                 </CardDescription>
+                <ul className="text-sm text-gray-600 space-y-1">
+                  <li>• Analyse de vos habitudes</li>
+                  <li>• Plans de repas personnalisés</li>
+                  <li>• Recettes et astuces pratiques</li>
+                </ul>
               </CardContent>
             </Card>
 
-            <Card className="hover:shadow-lg transition-shadow border-green-100">
+            <Card className="hover:shadow-lg transition-shadow border-blue-100">
               <CardHeader className="text-center">
-                <Heart className="h-12 w-12 text-green-600 mx-auto mb-4" />
-                <CardTitle className="text-green-800">Gestion du Poids</CardTitle>
+                <Activity className="h-12 w-12 text-blue-600 mx-auto mb-4" />
+                <CardTitle className="text-blue-800">Gestion du Poids</CardTitle>
               </CardHeader>
               <CardContent>
-                <CardDescription className="text-gray-600 text-center">
-                  Accompagnement bienveillant pour atteindre et maintenir votre poids santé
+                <CardDescription className="text-gray-600 text-center mb-4">
+                  Atteignez vos objectifs de poids de manière saine et durable
                 </CardDescription>
+                <ul className="text-sm text-gray-600 space-y-1">
+                  <li>• Approche progressive</li>
+                  <li>• Suivi régulier personnalisé</li>
+                  <li>• Maintien des résultats</li>
+                </ul>
               </CardContent>
             </Card>
 
-            <Card className="hover:shadow-lg transition-shadow border-green-100">
+            <Card className="hover:shadow-lg transition-shadow border-blue-100">
               <CardHeader className="text-center">
-                <Users className="h-12 w-12 text-green-600 mx-auto mb-4" />
-                <CardTitle className="text-green-800">Nutrition Familiale</CardTitle>
+                <Users className="h-12 w-12 text-blue-600 mx-auto mb-4" />
+                <CardTitle className="text-blue-800">Nutrition Familiale</CardTitle>
               </CardHeader>
               <CardContent>
-                <CardDescription className="text-gray-600 text-center">
-                  Conseils adaptés pour toute la famille, de l'enfance au troisième âge
+                <CardDescription className="text-gray-600 text-center mb-4">
+                  Conseils adaptés pour toute la famille, enfants et adultes
                 </CardDescription>
+                <ul className="text-sm text-gray-600 space-y-1">
+                  <li>• Nutrition infantile</li>
+                  <li>• Repas familiaux équilibrés</li>
+                  <li>• Éducation alimentaire</li>
+                </ul>
               </CardContent>
             </Card>
+          </div>
+
+          <div className="bg-white p-8 rounded-lg shadow-md max-w-3xl mx-auto text-center">
+            <h4 className="text-2xl font-semibold text-gray-900 mb-4">Consultation Privée</h4>
+            <p className="text-gray-600 mb-6">
+              Accès direct sans prescription médicale. Première consultation complète avec plan personnalisé.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button 
+                size="lg" 
+                className="bg-blue-600 hover:bg-blue-700"
+                onClick={() => openDoctena()}
+              >
+                <Calendar className="h-5 w-5 mr-2" />
+                Réserver ma Consultation Privée
+              </Button>
+              <Button variant="outline" size="lg">
+                En Savoir Plus
+              </Button>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Cabinets Section */}
-      <section id="cabinets" className="py-16 px-4 bg-green-50">
+      <section id="cabinets" className="py-16 px-4 bg-white">
         <div className="container mx-auto">
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">Mes Cabinets</h3>
@@ -197,183 +341,84 @@ const Index = () => {
         </div>
       </section>
 
-      {/* About Section */}
-      <section id="apropos" className="py-16 px-4 bg-white">
-        <div className="container mx-auto">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <h3 className="text-3xl font-bold text-gray-900 mb-4">Mon Approche</h3>
-              <p className="text-gray-600 text-lg">
-                Une philosophie centrée sur l'écoute, la compréhension et l'accompagnement personnalisé
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div>
-                <h4 className="text-2xl font-semibold text-green-800 mb-4">
-                  Professionnalisme et Empathie
-                </h4>
-                <p className="text-gray-600 mb-6 leading-relaxed">
-                  En tant que diététicienne diplômée, je crois qu'une nutrition saine commence par une relation de confiance. 
-                  Je combine expertise scientifique et approche humaine pour vous offrir un accompagnement sur mesure 
-                  dans mes trois cabinets au Luxembourg.
-                </p>
-                <p className="text-gray-600 leading-relaxed">
-                  Je prends le temps de vous écouter, de comprendre vos défis et vos objectifs, 
-                  pour construire ensemble un plan nutritionnel qui vous ressemble et qui s'adapte à votre style de vie.
-                </p>
-              </div>
-              <div className="bg-green-50 p-8 rounded-lg">
-                <h5 className="text-xl font-semibold text-green-800 mb-4">Pourquoi Me Choisir ?</h5>
-                <ul className="space-y-3 text-gray-600">
-                  <li className="flex items-start">
-                    <div className="w-2 h-2 bg-green-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                    Approche personnalisée et bienveillante
-                  </li>
-                  <li className="flex items-start">
-                    <div className="w-2 h-2 bg-green-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                    Diététicienne diplômée et expérimentée
-                  </li>
-                  <li className="flex items-start">
-                    <div className="w-2 h-2 bg-green-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                    Trois cabinets pour votre proximité
-                  </li>
-                  <li className="flex items-start">
-                    <div className="w-2 h-2 bg-green-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                    Suivi régulier et ajustements personnalisés
-                  </li>
-                  <li className="flex items-start">
-                    <div className="w-2 h-2 bg-green-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                    Méthodes fondées sur la science
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Section */}
+      {/* Contact Section - Now focused on Doctena CTA */}
       <section id="contact" className="py-16 px-4 bg-green-50">
-        <div className="container mx-auto">
-          <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold text-gray-900 mb-4">Me Contacter</h3>
-            <p className="text-gray-600">
-              Prêt à commencer votre parcours vers une meilleure nutrition ? Je suis là pour vous accompagner.
-            </p>
-          </div>
+        <div className="container mx-auto max-w-4xl text-center">
+          <h3 className="text-3xl font-bold text-gray-900 mb-6">Prêt à Commencer ?</h3>
+          <p className="text-xl text-gray-600 mb-8">
+            Réservez votre consultation en quelques clics sur Doctena. 
+            Choisissez le cabinet le plus proche de chez vous.
+          </p>
 
-          <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
-            <div>
-              <h4 className="text-2xl font-semibold text-green-800 mb-6">Informations de Contact</h4>
-              <div className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <Phone className="h-6 w-6 text-green-600 mt-1" />
-                  <div>
-                    <h5 className="font-semibold text-gray-900">Téléphone</h5>
-                    <p className="text-gray-600">+352 XX XX XX XX</p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-4">
-                  <Mail className="h-6 w-6 text-green-600 mt-1" />
-                  <div>
-                    <h5 className="font-semibold text-gray-900">Email</h5>
-                    <p className="text-gray-600">gabriela@conseildietetique.lu</p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-4">
-                  <Calendar className="h-6 w-6 text-green-600 mt-1" />
-                  <div>
-                    <h5 className="font-semibold text-gray-900">Rendez-vous</h5>
-                    <p className="text-gray-600">Réservation en ligne sur Doctena</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="mt-8 p-6 bg-white rounded-lg shadow-sm">
-                <h5 className="font-semibold text-green-800 mb-3">Mes Cabinets</h5>
-                <div className="space-y-4 text-gray-600">
-                  <div>
-                    <div className="font-medium text-gray-900">Luxembourg</div>
-                    <p className="text-sm">Centre-ville</p>
-                  </div>
-                  <div>
-                    <div className="font-medium text-gray-900">Ettelbruck</div>
-                    <p className="text-sm">Nord du Luxembourg</p>
-                  </div>
-                  <div>
-                    <div className="font-medium text-gray-900">Insenborn</div>
-                    <p className="text-sm">Proximité et confort</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-green-800">Demande de Consultation</CardTitle>
-                <CardDescription>
-                  Remplissez ce formulaire et je vous contacterai rapidement
-                </CardDescription>
+          <div className="grid md:grid-cols-3 gap-6 mb-12">
+            <Card className="hover:shadow-lg transition-shadow cursor-pointer" 
+                  onClick={() => openDoctena('https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874#22943')}>
+              <CardHeader className="text-center">
+                <MapPin className="h-8 w-8 text-green-600 mx-auto mb-2" />
+                <CardTitle className="text-green-800">Luxembourg</CardTitle>
+                <CardDescription>Centre-ville</CardDescription>
               </CardHeader>
-              <CardContent>
-                <form className="space-y-4">
-                  <div className="grid md:grid-cols-2 gap-4">
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">Prénom</label>
-                      <input 
-                        type="text" 
-                        className="w-full p-3 border border-gray-300 rounded-md focus:ring-green-500 focus:border-green-500"
-                        placeholder="Votre prénom"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">Nom</label>
-                      <input 
-                        type="text" 
-                        className="w-full p-3 border border-gray-300 rounded-md focus:ring-green-500 focus:border-green-500"
-                        placeholder="Votre nom"
-                      />
-                    </div>
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Email</label>
-                    <input 
-                      type="email" 
-                      className="w-full p-3 border border-gray-300 rounded-md focus:ring-green-500 focus:border-green-500"
-                      placeholder="votre.email@exemple.com"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Téléphone</label>
-                    <input 
-                      type="tel" 
-                      className="w-full p-3 border border-gray-300 rounded-md focus:ring-green-500 focus:border-green-500"
-                      placeholder="+352 XX XX XX XX"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Cabinet préféré</label>
-                    <select className="w-full p-3 border border-gray-300 rounded-md focus:ring-green-500 focus:border-green-500">
-                      <option value="">Choisir un cabinet</option>
-                      <option value="luxembourg">Luxembourg</option>
-                      <option value="ettelbruck">Ettelbruck</option>
-                      <option value="insenborn">Insenborn</option>
-                    </select>
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Message</label>
-                    <textarea 
-                      className="w-full p-3 border border-gray-300 rounded-md focus:ring-green-500 focus:border-green-500 h-32"
-                      placeholder="Décrivez brièvement vos objectifs ou questions..."
-                    ></textarea>
-                  </div>
-                  <Button type="submit" className="w-full bg-green-600 hover:bg-green-700">
-                    Envoyer la Demande
-                  </Button>
-                </form>
+              <CardContent className="text-center">
+                <Button className="w-full bg-green-600 hover:bg-green-700">
+                  <Calendar className="h-4 w-4 mr-2" />
+                  RDV Luxembourg
+                </Button>
               </CardContent>
             </Card>
+
+            <Card className="hover:shadow-lg transition-shadow cursor-pointer"
+                  onClick={() => openDoctena('https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874#24538')}>
+              <CardHeader className="text-center">
+                <MapPin className="h-8 w-8 text-green-600 mx-auto mb-2" />
+                <CardTitle className="text-green-800">Ettelbruck</CardTitle>
+                <CardDescription>Nord du Luxembourg</CardDescription>
+              </CardHeader>
+              <CardContent className="text-center">
+                <Button className="w-full bg-green-600 hover:bg-green-700">
+                  <Calendar className="h-4 w-4 mr-2" />
+                  RDV Ettelbruck
+                </Button>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-lg transition-shadow cursor-pointer"
+                  onClick={() => openDoctena('https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874#22919')}>
+              <CardHeader className="text-center">
+                <MapPin className="h-8 w-8 text-green-600 mx-auto mb-2" />
+                <CardTitle className="text-green-800">Insenborn</CardTitle>
+                <CardDescription>Proximité et confort</CardDescription>
+              </CardHeader>
+              <CardContent className="text-center">
+                <Button className="w-full bg-green-600 hover:bg-green-700">
+                  <Calendar className="h-4 w-4 mr-2" />
+                  RDV Insenborn
+                </Button>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="bg-white p-8 rounded-lg shadow-md">
+            <div className="flex items-center justify-center space-x-4 mb-6">
+              <Phone className="h-6 w-6 text-green-600" />
+              <div>
+                <h4 className="font-semibold text-gray-900">Questions ?</h4>
+                <p className="text-gray-600">+352 XX XX XX XX</p>
+              </div>
+              <Mail className="h-6 w-6 text-green-600 ml-8" />
+              <div>
+                <h4 className="font-semibold text-gray-900">Email</h4>
+                <p className="text-gray-600">gabriela@conseildietetique.lu</p>
+              </div>
+            </div>
+            
+            <Button 
+              size="lg" 
+              className="bg-green-600 hover:bg-green-700 text-lg px-12 py-4"
+              onClick={() => openDoctena()}
+            >
+              <Calendar className="h-6 w-6 mr-3" />
+              Prendre RDV Maintenant
+            </Button>
           </div>
         </div>
       </section>
