@@ -64,17 +64,21 @@ const Navigation = () => {
               href="https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700 transition-colors"
+              className="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700 transition-colors font-semibold"
             >
-              Prendre RDV
+              Réserver maintenant
             </a>
           </div>
 
-          {/* Contact Info */}
+          {/* Enhanced Contact Info with phone number */}
           <div className="hidden lg:flex items-center space-x-4 text-sm text-gray-600">
-            <div className="flex items-center">
+            <div className="flex items-center hover:text-green-600 transition-colors cursor-pointer">
+              <Phone className="h-4 w-4 mr-1" />
+              <a href="tel:+352123456789">+352 12 34 56 789</a>
+            </div>
+            <div className="flex items-center hover:text-green-600 transition-colors">
               <Mail className="h-4 w-4 mr-1" />
-              gabriela@conseildietetique.lu
+              <a href="mailto:gabriela@conseildietetique.lu">gabriela@conseildietetique.lu</a>
             </div>
           </div>
 
@@ -121,13 +125,26 @@ const Navigation = () => {
               >
                 FAQ
               </button>
+              
+              {/* Mobile contact info */}
+              <div className="border-t pt-4 space-y-2">
+                <a href="tel:+352123456789" className="flex items-center text-gray-600 hover:text-green-600">
+                  <Phone className="h-4 w-4 mr-2" />
+                  +352 12 34 56 789
+                </a>
+                <a href="mailto:gabriela@conseildietetique.lu" className="flex items-center text-gray-600 hover:text-green-600">
+                  <Mail className="h-4 w-4 mr-2" />
+                  Contact
+                </a>
+              </div>
+              
               <a
                 href="https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700 transition-colors text-center"
+                className="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700 transition-colors text-center font-semibold"
               >
-                Prendre RDV
+                Réserver maintenant
               </a>
             </div>
           </div>

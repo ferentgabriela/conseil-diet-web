@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { Calendar, ExternalLink } from 'lucide-react';
+import { Calendar, ExternalLink, Clock } from 'lucide-react';
 
 const FloatingCTA = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -28,19 +28,22 @@ const FloatingCTA = () => {
     <div className="fixed bottom-4 left-4 z-50 animate-fade-in">
       <div className="bg-green-600 text-white rounded-2xl shadow-2xl p-4 max-w-sm border-2 border-green-500">
         <div className="text-center">
-          <p className="font-semibold mb-2 text-sm">
-            🔥 Consultation disponible aujourd'hui
-          </p>
+          <div className="flex items-center justify-center gap-2 mb-2">
+            <Clock className="h-4 w-4 text-yellow-300" />
+            <p className="font-semibold text-sm">
+              🔥 Dernières places disponibles
+            </p>
+          </div>
           <p className="text-xs text-green-100 mb-3">
-            Remboursée jusqu'à 80% par la CNS
+            Consultation cette semaine • Remboursée CNS 80%
           </p>
           
           <button
             onClick={scrollToCabinets}
-            className="inline-flex items-center gap-2 w-full justify-center px-4 py-3 bg-white text-green-700 font-bold rounded-xl hover:bg-gray-100 transition-all duration-300 text-sm shadow-md"
+            className="inline-flex items-center gap-2 w-full justify-center px-4 py-3 bg-white text-green-700 font-bold rounded-xl hover:bg-gray-100 transition-all duration-300 text-sm shadow-md transform hover:scale-105"
           >
             <Calendar className="h-4 w-4" />
-            Prendre RDV
+            Réserver maintenant
           </button>
         </div>
       </div>
