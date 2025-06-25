@@ -10,6 +10,7 @@ import TransformationStoriesSection from '@/components/TransformationStoriesSect
 import NarrativeServicesSection from '@/components/NarrativeServicesSection';
 import CabinetsSection from '@/components/CabinetsSection';
 import DoctenaTestimonialsSection from '@/components/DoctenaTestimonialsSection';
+import BlogSection from '@/components/BlogSection';
 import AISummaryBlock from '@/components/AISummaryBlock';
 import Footer from '@/components/Footer';
 
@@ -28,14 +29,15 @@ const Index = () => {
     <div className="min-h-screen bg-white">
       <Navigation />
       
-      {/* Story Arc Structure */}
-      <NarrativeHeroSection />              {/* Problem → Agitate → Solve */}
+      {/* Enhanced Story Arc Structure */}
+      <NarrativeHeroSection />              {/* Problem → Emotional connection with lifestyle image */}
       <CombinedAboutAuthorSection />        {/* Why choose Gabriela */}
       <HowItWorksSection />                 {/* How the process works */}
       <TransformationStoriesSection />      {/* Real results & proof */}
       <NarrativeServicesSection />          {/* Services after trust is built */}
       <CabinetsSection />                   {/* Booking information */}
       <DoctenaTestimonialsSection />        {/* Additional social proof */}
+      <BlogSection />                       {/* SEO-rich content & expertise */}
       <FAQSection onOpenChat={handleOpenChat} />  {/* Address final concerns */}
       <AISummaryBlock />                    {/* Final summary */}
       
