@@ -1,9 +1,9 @@
 
 import React, { useState } from 'react';
-import { Navigation } from '@/components/Navigation';
-import { TestimonialsSection } from '@/components/TestimonialsSection';
-import { AboutSection } from '@/components/AboutSection';
-import { FAQSection } from '@/components/FAQSection';
+import Navigation from '@/components/Navigation';
+import TestimonialsSection from '@/components/TestimonialsSection';
+import AboutSection from '@/components/AboutSection';
+import FAQSection from '@/components/FAQSection';
 import { ChatPopup } from '@/components/ChatPopup';
 import { ExternalLink, Calendar, CheckCircle, Phone, FileText, Youtube, MapPin } from 'lucide-react';
 
