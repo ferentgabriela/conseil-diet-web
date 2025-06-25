@@ -1,0 +1,162 @@
+
+import React, { useState } from 'react';
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+} from '@/components/ui/dialog';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
+import { Textarea } from '@/components/ui/textarea';
+import { useToast } from '@/hooks/use-toast';
+import { supabase } from '@/integrations/supabase/client';
+
+interface ForwardMessageDialogProps {
+  open: boolean;
+  onOpenChange: (open: boolean) => void;
+  conversationId: string;
+}
+
+export const ForwardMessageDialog: React.FC<ForwardMessageDialogProps> = ({
+  open,
+  onOpenChange,
+  conversationId,
+}) => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    message: '',
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { toast } = useToast();
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    if (!formData.name.trim() || !formData.message.trim()) {
+      toast({
+        title: "Champs requis",
+        description: "Veuillez remplir votre nom et votre message.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    try {
+      const { error } = await supabase
+        .from('forwarded_messages')
+        .insert({
+          conversation_id: conversationId,
+          user_name: formData.name.trim(),
+          user_email: formData.email.trim() || null,
+          user_phone: formData.phone.trim() || null,
+          message: formData.message.trim(),
+          status: 'pending'
+        });
+
+      if (error) throw error;
+
+      toast({
+        title: "Message envoyé",
+        description: "Votre message a été transmis à Gabriela. Elle vous contactera dans les plus brefs délais.",
+      });
+
+      setFormData({ name: '', email: '', phone: '', message: '' });
+      onOpenChange(false);
+    } catch (error) {
+      console.error('Error forwarding message:', error);
+      toast({
+        title: "Erreur",
+        description: "Une erreur s'est produite lors de l'envoi de votre message. Veuillez réessayer.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  const handleInputChange = (field: string, value: string) => {
+    setFormData(prev => ({ ...prev, [field]: value }));
+  };
+
+  return (
+    <Dialog open={open} onOpenChange={onOpenChange}>
+      <DialogContent className="sm:max-w-[425px]">
+        <DialogHeader>
+          <DialogTitle>Contacter Gabriela Ferent</DialogTitle>
+          <DialogDescription>
+            Envoyez un message direct à Gabriela. Elle vous contactera personnellement dans les plus brefs délais.
+          </DialogDescription>
+        </DialogHeader>
+        
+        <form onSubmit={handleSubmit} className="space-y-4">
+          <div className="space-y-2">
+            <Label htmlFor="name">Nom complet *</Label>
+            <Input
+              id="name"
+              value={formData.name}
+              onChange={(e) => handleInputChange('name', e.target.value)}
+              placeholder="Votre nom et prénom"
+              required
+            />
+          </div>
+
+          <div className="space-y-2">
+            <Label htmlFor="email">Email</Label>
+            <Input
+              id="email"
+              type="email"
+              value={formData.email}
+              onChange={(e) => handleInputChange('email', e.target.value)}
+              placeholder="votre.email@exemple.com"
+            />
+          </div>
+
+          <div className="space-y-2">
+            <Label htmlFor="phone">Téléphone</Label>
+            <Input
+              id="phone"
+              type="tel"
+              value={formData.phone}
+              onChange={(e) => handleInputChange('phone', e.target.value)}
+              placeholder="+352 XX XX XX XX"
+            />
+          </div>
+
+          <div className="space-y-2">
+            <Label htmlFor="message">Message *</Label>
+            <Textarea
+              id="message"
+              value={formData.message}
+              onChange={(e) => handleInputChange('message', e.target.value)}
+              placeholder="Décrivez votre situation, vos besoins ou posez votre question..."
+              className="min-h-[100px]"
+              required
+            />
+          </div>
+
+          <DialogFooter>
+            <Button
+              type="button"
+              variant="outline"
+              onClick={() => onOpenChange(false)}
+              disabled={isSubmitting}
+            >
+              Annuler
+            </Button>
+            <Button type="submit" disabled={isSubmitting}>
+              {isSubmitting ? 'Envoi...' : 'Envoyer le message'}
+            </Button>
+          </DialogFooter>
+        </form>
+      </DialogContent>
+    </Dialog>
+  );
+};
