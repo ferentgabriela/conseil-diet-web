@@ -112,7 +112,7 @@ const Index = () => {
               <Button 
                 variant="outline" 
                 className="text-sm"
-                onClick={() => window.open('https://cns.public.lu/fr/assure/vie-quotidienne/frais-medicaux/autres-prestations/dieteticien.html', '_blank')}
+                onClick={() => window.open('https://cns.public.lu/fr/assure/remboursements/prestations-remboursees/prestations-paramedicales/dieteticiens.html', '_blank')}
                 aria-label="Consulter la documentation officielle CNS"
               >
                 <ExternalLink className="h-4 w-4 mr-2" aria-hidden="true" />
@@ -121,7 +121,7 @@ const Index = () => {
               <Button 
                 variant="outline" 
                 className="text-sm"
-                onClick={() => window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ', '_blank')}
+                onClick={() => window.open('https://youtu.be/MM7UIP9_XZ4?si=OSIpYuuHjba5yP3', '_blank')}
                 aria-label="Voir la vidéo explicative CNS"
               >
                 <ExternalLink className="h-4 w-4 mr-2" aria-hidden="true" />
