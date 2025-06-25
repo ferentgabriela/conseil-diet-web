@@ -103,7 +103,7 @@ export const ChatPopup = ({ isOpen: externalIsOpen, onToggle }: ChatPopupProps) 
             href={url} 
             target="_blank" 
             rel="noopener noreferrer" 
-            className="text-blue-500 hover:text-blue-700 underline inline-flex items-center gap-1 ml-1"
+            className="text-green-600 hover:text-green-700 underline inline-flex items-center gap-1 ml-1"
           >
             {linkText}
             <ExternalLink className="h-3 w-3" />
@@ -137,7 +137,7 @@ export const ChatPopup = ({ isOpen: externalIsOpen, onToggle }: ChatPopupProps) 
             href={urlMatch[0]} 
             target="_blank" 
             rel="noopener noreferrer" 
-            className="text-blue-500 hover:text-blue-700 underline inline-flex items-center gap-1"
+            className="text-green-600 hover:text-green-700 underline inline-flex items-center gap-1"
           >
             Link
             <ExternalLink className="h-3 w-3" />
@@ -190,14 +190,14 @@ export const ChatPopup = ({ isOpen: externalIsOpen, onToggle }: ChatPopupProps) 
 
   return (
     <>
-      <Card className="fixed bottom-6 right-6 w-[576px] h-[600px] shadow-2xl z-50 flex flex-col">
-        <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2 flex-shrink-0">
-          <CardTitle className="text-lg">Assistant Diététique</CardTitle>
+      <Card className="fixed bottom-6 right-6 w-[576px] h-[600px] shadow-2xl z-50 flex flex-col border-green-200">
+        <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2 flex-shrink-0 bg-gradient-to-r from-green-50 to-green-100 border-b border-green-200">
+          <CardTitle className="text-lg text-green-800">Assistant Diététique</CardTitle>
           <Button
             variant="ghost"
             size="icon"
             onClick={toggleOpen}
-            className="h-6 w-6"
+            className="h-6 w-6 text-green-600 hover:text-green-700 hover:bg-green-100"
           >
             <X className="h-4 w-4" />
           </Button>
@@ -218,7 +218,7 @@ export const ChatPopup = ({ isOpen: externalIsOpen, onToggle }: ChatPopupProps) 
                     <Badge
                       key={index}
                       variant="secondary"
-                      className="cursor-pointer hover:bg-secondary/80 text-xs"
+                      className="cursor-pointer hover:bg-green-100 text-xs bg-green-50 text-green-700 border-green-200"
                       onClick={action.action}
                     >
                       {action.text}
@@ -243,7 +243,7 @@ export const ChatPopup = ({ isOpen: externalIsOpen, onToggle }: ChatPopupProps) 
                       }`}
                     >
                       <div className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center ${
-                        message.sender === 'user' ? 'bg-primary text-primary-foreground' : 'bg-muted'
+                        message.sender === 'user' ? 'bg-green-600 text-white' : 'bg-green-100 text-green-600'
                       }`}>
                         {message.sender === 'user' ? (
                           <User className="h-4 w-4" />
@@ -254,8 +254,8 @@ export const ChatPopup = ({ isOpen: externalIsOpen, onToggle }: ChatPopupProps) 
                       <div
                         className={`rounded-lg px-3 py-2 text-sm break-words overflow-hidden ${
                           message.sender === 'user'
-                            ? 'bg-primary text-primary-foreground'
-                            : 'bg-muted'
+                            ? 'bg-green-600 text-white'
+                            : 'bg-green-50 text-green-900 border border-green-200'
                         }`}
                       >
                         <div className="whitespace-pre-wrap break-words text-wrap leading-relaxed">
@@ -269,14 +269,14 @@ export const ChatPopup = ({ isOpen: externalIsOpen, onToggle }: ChatPopupProps) 
                 {isLoading && (
                   <div className="flex justify-start">
                     <div className="flex items-start space-x-2">
-                      <div className="flex-shrink-0 w-8 h-8 rounded-full bg-muted flex items-center justify-center">
+                      <div className="flex-shrink-0 w-8 h-8 rounded-full bg-green-100 text-green-600 flex items-center justify-center">
                         <Bot className="h-4 w-4" />
                       </div>
-                      <div className="bg-muted rounded-lg px-3 py-2 text-sm">
+                      <div className="bg-green-50 border border-green-200 rounded-lg px-3 py-2 text-sm">
                         <div className="flex space-x-1">
-                          <div className="w-2 h-2 bg-muted-foreground rounded-full animate-bounce"></div>
-                          <div className="w-2 h-2 bg-muted-foreground rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
-                          <div className="w-2 h-2 bg-muted-foreground rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
+                          <div className="w-2 h-2 bg-green-600 rounded-full animate-bounce"></div>
+                          <div className="w-2 h-2 bg-green-600 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
+                          <div className="w-2 h-2 bg-green-600 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
                         </div>
                       </div>
                     </div>
@@ -293,14 +293,14 @@ export const ChatPopup = ({ isOpen: externalIsOpen, onToggle }: ChatPopupProps) 
               onChange={(e) => setCurrentMessage(e.target.value)}
               onKeyPress={handleKeyPress}
               placeholder="Tapez votre message..."
-              className="flex-1 min-h-[40px] max-h-[100px] resize-none"
+              className="flex-1 min-h-[40px] max-h-[100px] resize-none border-green-200 focus:border-green-400 focus:ring-green-400"
               rows={1}
             />
             <Button
               onClick={handleSendMessage}
               disabled={!currentMessage.trim() || isLoading}
               size="icon"
-              className="flex-shrink-0"
+              className="flex-shrink-0 bg-green-600 hover:bg-green-700"
             >
               <Send className="h-4 w-4" />
             </Button>
