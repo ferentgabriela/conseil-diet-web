@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Heart, Users, Utensils, Calendar, Phone, Mail, MapPin, Clock, CheckCircle, FileText, Stethoscope, Activity, ExternalLink } from "lucide-react";
@@ -121,7 +120,7 @@ const Index = () => {
               <Button 
                 variant="outline" 
                 className="text-sm"
-                onClick={() => window.open('https://youtu.be/MM7UIP9_XZ4?si=OSIpYuuHjba5yP3', '_blank')}
+                onClick={() => window.open('https://youtu.be/MM7UIP9_XZ4?si=OSIpYuuHjba5yP3F', '_blank')}
                 aria-label="Voir la vidéo explicative CNS"
               >
                 <ExternalLink className="h-4 w-4 mr-2" aria-hidden="true" />
