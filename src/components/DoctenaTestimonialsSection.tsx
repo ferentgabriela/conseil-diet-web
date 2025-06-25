@@ -9,25 +9,66 @@ const DoctenaTestimonialsSection = () => {
     script.async = true;
     document.head.appendChild(script);
 
-    // Add custom styles for the widget
+    // Add custom styles for the widget with more specific selectors
     const style = document.createElement('style');
     style.textContent = `
-      #doctena-reviews-widget {
+      /* Main widget container */
+      #doctena-reviews-widget,
+      div[data-toggle="doc-reviews"] {
         background-color: rgb(240, 253, 244) !important;
-      }
-      
-      #doctena-reviews-widget .doc-review-widget,
-      #doctena-reviews-widget .doc-review-widget > div,
-      #doctena-reviews-widget .doc-review-item {
-        background-color: rgb(240, 253, 244) !important;
-      }
-      
-      #doctena-reviews-widget .doc-review-widget {
         border-radius: 8px !important;
         padding: 20px !important;
       }
+      
+      /* All nested elements within the widget */
+      #doctena-reviews-widget *,
+      div[data-toggle="doc-reviews"] * {
+        background-color: rgb(240, 253, 244) !important;
+      }
+      
+      /* Specific widget classes */
+      .doc-review-widget,
+      .doc-review-widget > div,
+      .doc-review-item,
+      .doc-review-content,
+      .doc-review-header {
+        background-color: rgb(240, 253, 244) !important;
+      }
+      
+      /* Override any white backgrounds */
+      #doctena-reviews-widget [style*="background-color: white"],
+      #doctena-reviews-widget [style*="background-color:#fff"],
+      #doctena-reviews-widget [style*="background-color: #ffffff"] {
+        background-color: rgb(240, 253, 244) !important;
+      }
     `;
     document.head.appendChild(style);
+
+    // Apply styles after widget loads with multiple attempts
+    const applyStyles = () => {
+      const widget = document.querySelector('#doctena-reviews-widget');
+      const widgetByAttr = document.querySelector('div[data-toggle="doc-reviews"]');
+      
+      if (widget || widgetByAttr) {
+        const targetElement = widget || widgetByAttr;
+        if (targetElement) {
+          targetElement.style.backgroundColor = 'rgb(240, 253, 244)';
+          targetElement.style.borderRadius = '8px';
+          targetElement.style.padding = '20px';
+          
+          // Apply to all child elements
+          const allChildren = targetElement.querySelectorAll('*');
+          allChildren.forEach(child => {
+            (child as HTMLElement).style.backgroundColor = 'rgb(240, 253, 244)';
+          });
+        }
+      }
+    };
+
+    // Try applying styles at different intervals
+    setTimeout(applyStyles, 1000);
+    setTimeout(applyStyles, 3000);
+    setTimeout(applyStyles, 5000);
 
     return () => {
       // Cleanup script and styles on unmount
@@ -61,6 +102,7 @@ const DoctenaTestimonialsSection = () => {
             data-doctor-eid="492d6313-2026-4e38-ba00-ffd3a88d67de" 
             data-language="fr"
             id="doctena-reviews-widget"
+            style={{ backgroundColor: 'rgb(240, 253, 244)', borderRadius: '8px', padding: '20px' }}
           ></div>
         </div>
 
