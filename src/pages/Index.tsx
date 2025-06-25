@@ -1,7 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Heart, Users, Utensils, Calendar, Phone, Mail, MapPin, Clock, CheckCircle, FileText, Stethoscope, Activity } from "lucide-react";
+import { Heart, Users, Utensils, Calendar, Phone, Mail, MapPin, Clock, CheckCircle, FileText, Stethoscope, Activity, ExternalLink } from "lucide-react";
 import { useEffect } from "react";
 
 const Index = () => {
@@ -100,11 +100,34 @@ const Index = () => {
               <CheckCircle className="h-5 w-5 text-green-600" aria-hidden="true" />
               <span className="text-green-800 font-semibold">Remboursé par la CNS</span>
             </div>
-            <h3 id="cns-title" className="text-3xl font-bold text-gray-900 mb-4">Suivi Diététique sur Prescription</h3>
-            <p className="text-gray-600 max-w-3xl mx-auto">
-              Bénéficiez d'un accompagnement nutritionnel remboursé par la CNS avec une prescription 
-              de votre médecin traitant pour diverses pathologies.
+            <h3 id="cns-title" className="text-3xl font-bold text-gray-900 mb-4">Suivi Diététique sur Prescription Médicale</h3>
+            <p className="text-gray-600 max-w-3xl mx-auto mb-6">
+              La CNS (Caisse Nationale de Santé) rembourse les consultations diététiques sur prescription médicale 
+              pour des pathologies spécifiques reconnues. Bénéficiez d'un accompagnement nutritionnel professionnel 
+              pris en charge à 100%.
             </p>
+            
+            {/* Official CNS Resources */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+              <Button 
+                variant="outline" 
+                className="text-sm"
+                onClick={() => window.open('https://cns.public.lu/fr/assure/vie-quotidienne/frais-medicaux/autres-prestations/dieteticien.html', '_blank')}
+                aria-label="Consulter la documentation officielle CNS"
+              >
+                <ExternalLink className="h-4 w-4 mr-2" aria-hidden="true" />
+                Documentation Officielle CNS
+              </Button>
+              <Button 
+                variant="outline" 
+                className="text-sm"
+                onClick={() => window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ', '_blank')}
+                aria-label="Voir la vidéo explicative CNS"
+              >
+                <ExternalLink className="h-4 w-4 mr-2" aria-hidden="true" />
+                Vidéo Explicative CNS
+              </Button>
+            </div>
           </div>
           
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -115,55 +138,107 @@ const Index = () => {
                 alt="Consultation médicale - diététicienne avec patient"
                 className="w-full h-80 object-cover rounded-lg shadow-lg relative z-10"
               />
+              
+              {/* CNS Coverage Requirements */}
               <Card className="border-green-200 bg-green-50 mt-6">
                 <CardHeader>
                   <div className="flex items-center space-x-3">
                     <FileText className="h-8 w-8 text-green-600" aria-hidden="true" />
                     <div>
-                      <CardTitle className="text-green-800">Prescription Requise</CardTitle>
-                      <CardDescription>Demandez à votre médecin</CardDescription>
+                      <CardTitle className="text-green-800">Conditions de Remboursement CNS</CardTitle>
+                      <CardDescription>Prescription médicale obligatoire</CardDescription>
                     </div>
                   </div>
                 </CardHeader>
                 <CardContent>
-                  <h4 className="font-semibold text-gray-900 mb-3">Conditions couvertes :</h4>
-                  <ul className="space-y-2 text-gray-700" role="list">
-                    <li className="flex items-start" role="listitem">
-                      <div className="w-2 h-2 bg-green-600 rounded-full mt-2 mr-3 flex-shrink-0" aria-hidden="true"></div>
-                      Diabète (Type 1, Type 2, gestationnel)
-                    </li>
-                    <li className="flex items-start" role="listitem">
-                      <div className="w-2 h-2 bg-green-600 rounded-full mt-2 mr-3 flex-shrink-0" aria-hidden="true"></div>
-                      Maladies cardiovasculaires
-                    </li>
-                    <li className="flex items-start" role="listitem">
-                      <div className="w-2 h-2 bg-green-600 rounded-full mt-2 mr-3 flex-shrink-0" aria-hidden="true"></div>
-                      Troubles digestifs chroniques
-                    </li>
-                    <li className="flex items-start" role="listitem">
-                      <div className="w-2 h-2 bg-green-600 rounded-full mt-2 mr-3 flex-shrink-0" aria-hidden="true"></div>
-                      Insuffisance rénale
-                    </li>
-                    <li className="flex items-start" role="listitem">
-                      <div className="w-2 h-2 bg-green-600 rounded-full mt-2 mr-3 flex-shrink-0" aria-hidden="true"></div>
-                      Troubles alimentaires
-                    </li>
-                    <li className="flex items-start" role="listitem">
-                      <div className="w-2 h-2 bg-green-600 rounded-full mt-2 mr-3 flex-shrink-0" aria-hidden="true"></div>
-                      Obésité avec complications
-                    </li>
-                  </ul>
+                  <div className="space-y-4">
+                    <div className="bg-white p-4 rounded-lg border border-green-200">
+                      <h5 className="font-semibold text-gray-900 mb-2">Étapes pour bénéficier du remboursement :</h5>
+                      <ol className="list-decimal list-inside space-y-1 text-sm text-gray-700">
+                        <li>Consultation chez votre médecin traitant</li>
+                        <li>Prescription médicale mentionnant la pathologie</li>
+                        <li>Prise de rendez-vous chez le diététicien</li>
+                        <li>Remboursement automatique par la CNS</li>
+                      </ol>
+                    </div>
+                    
+                    <div className="bg-blue-50 p-4 rounded-lg border border-blue-200">
+                      <p className="text-sm text-blue-800">
+                        <strong>Important :</strong> Seules certaines pathologies donnent droit au remboursement. 
+                        Consultez votre médecin pour vérifier si votre condition est couverte.
+                      </p>
+                    </div>
+                  </div>
                 </CardContent>
               </Card>
             </div>
 
             <div className="space-y-6">
+              {/* Pathologies covered by CNS */}
+              <Card className="border-green-200">
+                <CardHeader>
+                  <CardTitle className="text-green-800 flex items-center">
+                    <Stethoscope className="h-6 w-6 mr-2" aria-hidden="true" />
+                    Pathologies Couvertes par la CNS
+                  </CardTitle>
+                  <CardDescription>Selon la documentation officielle CNS</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <div className="grid md:grid-cols-2 gap-4">
+                    <div>
+                      <h5 className="font-semibold text-gray-900 mb-3">Pathologies Métaboliques :</h5>
+                      <ul className="space-y-2 text-sm text-gray-700" role="list">
+                        <li className="flex items-start" role="listitem">
+                          <div className="w-2 h-2 bg-green-600 rounded-full mt-2 mr-3 flex-shrink-0" aria-hidden="true"></div>
+                          Diabète de type 1 et 2
+                        </li>
+                        <li className="flex items-start" role="listitem">
+                          <div className="w-2 h-2 bg-green-600 rounded-full mt-2 mr-3 flex-shrink-0" aria-hidden="true"></div>
+                          Diabète gestationnel
+                        </li>
+                        <li className="flex items-start" role="listitem">
+                          <div className="w-2 h-2 bg-green-600 rounded-full mt-2 mr-3 flex-shrink-0" aria-hidden="true"></div>
+                          Dyslipidémies
+                        </li>
+                        <li className="flex items-start" role="listitem">
+                          <div className="w-2 h-2 bg-green-600 rounded-full mt-2 mr-3 flex-shrink-0" aria-hidden="true"></div>
+                          Obésité (IMC ≥ 30)
+                        </li>
+                      </ul>
+                    </div>
+                    
+                    <div>
+                      <h5 className="font-semibold text-gray-900 mb-3">Autres Pathologies :</h5>
+                      <ul className="space-y-2 text-sm text-gray-700" role="list">
+                        <li className="flex items-start" role="listitem">
+                          <div className="w-2 h-2 bg-green-600 rounded-full mt-2 mr-3 flex-shrink-0" aria-hidden="true"></div>
+                          Maladies cardiovasculaires
+                        </li>
+                        <li className="flex items-start" role="listitem">
+                          <div className="w-2 h-2 bg-green-600 rounded-full mt-2 mr-3 flex-shrink-0" aria-hidden="true"></div>
+                          Insuffisance rénale chronique
+                        </li>
+                        <li className="flex items-start" role="listitem">
+                          <div className="w-2 h-2 bg-green-600 rounded-full mt-2 mr-3 flex-shrink-0" aria-hidden="true"></div>
+                          Troubles digestifs chroniques
+                        </li>
+                        <li className="flex items-start" role="listitem">
+                          <div className="w-2 h-2 bg-green-600 rounded-full mt-2 mr-3 flex-shrink-0" aria-hidden="true"></div>
+                          Troubles du comportement alimentaire
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+              
+              {/* CNS Benefits */}
               <div className="bg-gradient-to-r from-green-600 to-green-700 text-white p-8 rounded-lg">
-                <h4 className="text-2xl font-bold mb-4">Avantages CNS</h4>
+                <h4 className="text-2xl font-bold mb-4">Avantages du Remboursement CNS</h4>
                 <div className="space-y-4" role="list">
                   <div className="flex items-center space-x-3" role="listitem">
                     <CheckCircle className="h-6 w-6" aria-hidden="true" />
-                    <span>Consultations remboursées à 100%</span>
+                    <span>Prise en charge à 100% des consultations</span>
                   </div>
                   <div className="flex items-center space-x-3" role="listitem">
                     <CheckCircle className="h-6 w-6" aria-hidden="true" />
@@ -171,18 +246,22 @@ const Index = () => {
                   </div>
                   <div className="flex items-center space-x-3" role="listitem">
                     <CheckCircle className="h-6 w-6" aria-hidden="true" />
-                    <span>Plans alimentaires adaptés</span>
+                    <span>Plans alimentaires thérapeutiques adaptés</span>
                   </div>
                   <div className="flex items-center space-x-3" role="listitem">
                     <CheckCircle className="h-6 w-6" aria-hidden="true" />
-                    <span>Coordination avec votre médecin</span>
+                    <span>Coordination avec votre équipe médicale</span>
+                  </div>
+                  <div className="flex items-center space-x-3" role="listitem">
+                    <CheckCircle className="h-6 w-6" aria-hidden="true" />
+                    <span>Pas d'avance de frais</span>
                   </div>
                 </div>
               </div>
               
               <div className="text-center">
                 <p className="text-gray-600 mb-4">
-                  Vous avez une prescription médicale ?
+                  Vous avez une prescription médicale pour une pathologie couverte ?
                 </p>
                 <Button 
                   size="lg" 
@@ -193,6 +272,9 @@ const Index = () => {
                   <Calendar className="h-5 w-5 mr-2" aria-hidden="true" />
                   Réserver ma Consultation CNS
                 </Button>
+                <p className="text-xs text-gray-500 mt-2">
+                  Consultations remboursées à 100% par la CNS sur prescription médicale
+                </p>
               </div>
             </div>
           </div>
