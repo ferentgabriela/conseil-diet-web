@@ -53,8 +53,18 @@ const Navigation = () => {
       }`} style={{ top: '0', marginTop: '40px' }}>
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center py-4">
+            {/* Logo/Brand */}
+            <div className="flex items-center">
+              <h1 className="text-xl md:text-2xl font-bold text-gray-900">
+                Gabriela Ferent
+              </h1>
+              <span className="hidden md:block text-sm text-green-600 ml-2 font-medium">
+                Diététicienne Luxembourg
+              </span>
+            </div>
+
             {/* Desktop Menu - Journey Navigation */}
-            <div className="hidden lg:flex items-center justify-center flex-1 space-x-6">
+            <div className="hidden lg:flex items-center justify-center flex-1 space-x-6 ml-8">
               <button
                 onClick={() => scrollToSection('accueil')}
                 className="text-gray-800 hover:text-green-600 transition-colors font-semibold text-sm hover-scale"
