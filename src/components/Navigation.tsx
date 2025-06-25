@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Menu, X, Calendar, MapPin, Star, Shield } from 'lucide-react';
 import { useState, useEffect } from 'react';
@@ -28,7 +27,15 @@ const Navigation = () => {
   const scrollToCabinets = () => {
     const cabinetsSection = document.getElementById('cabinets');
     if (cabinetsSection) {
-      cabinetsSection.scrollIntoView({ behavior: 'smooth' });
+      // Calculate offset for fixed header (trust bar 40px + navigation ~88px + some padding)
+      const headerOffset = 150;
+      const elementPosition = cabinetsSection.offsetTop;
+      const offsetPosition = elementPosition - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
     }
     setIsMenuOpen(false);
   };
