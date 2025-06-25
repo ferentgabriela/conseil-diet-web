@@ -45,9 +45,9 @@ serve(async (req) => {
 - Accompagnement des seniors
 
 **IMPORTANT pour les localisations :** Quand tu mentionnes les cabinets, écris chaque ville sur une ligne séparée avec son propre lien :
-- Luxembourg : https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874
-- Ettelbruck : https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874  
-- Insenborn : https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874
+- Luxembourg - https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874
+- Ettelbruck - https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874  
+- Insenborn - https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874
 
 Réponds toujours en français, sois professionnel mais chaleureux, et guide les utilisateurs vers la prise de rendez-vous.`,
 
@@ -74,9 +74,9 @@ Réponds toujours en français, sois professionnel mais chaleureux, et guide les
 - Support for seniors
 
 **IMPORTANT for locations:** When mentioning the clinics, write each city on a separate line with its own link:
-- Luxembourg: https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874
-- Ettelbruck: https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874
-- Insenborn: https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874
+- Luxembourg - https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874
+- Ettelbruck - https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874
+- Insenborn - https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874
 
 Always respond in English, be professional but warm, and guide users toward booking appointments.`,
 
@@ -103,9 +103,9 @@ Always respond in English, be professional but warm, and guide users toward book
 - Sprijin pentru seniori
 
 **IMPORTANT pentru locații:** Când menționezi cabinetele, scrie fiecare oraș pe o linie separată cu propriul link:
-- Luxembourg: https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874
-- Ettelbruck: https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874
-- Insenborn: https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874
+- Luxembourg - https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874
+- Ettelbruck - https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874
+- Insenborn - https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874
 
 Răspunde întotdeauna în română, fii profesional dar cald, și ghidează utilizatorii către programare.`,
 
@@ -132,9 +132,9 @@ Răspunde întotdeauna în română, fii profesional dar cald, și ghidează uti
 - Unterstützung für Senioren
 
 **WICHTIG für Standorte:** Wenn du die Praxen erwähnst, schreibe jede Stadt in einer separaten Zeile mit ihrem eigenen Link:
-- Luxembourg: https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874
-- Ettelbruck: https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874
-- Insenborn: https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874
+- Luxembourg - https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874
+- Ettelbruck - https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874
+- Insenborn - https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874
 
 Antworte immer auf Deutsch, sei professionell aber herzlich, und führe Nutzer zur Terminbuchung.`
     };
