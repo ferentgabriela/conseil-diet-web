@@ -124,15 +124,15 @@ export const ChatPopup = () => {
           )}
 
           <div className="flex-1 min-h-0">
-            <ScrollArea className="h-full pr-4">
-              <div className="space-y-4">
+            <ScrollArea className="h-full pr-2">
+              <div className="space-y-4 pr-2">
                 {messages.map((message) => (
                   <div
                     key={message.id}
                     className={`flex ${message.sender === 'user' ? 'justify-end' : 'justify-start'}`}
                   >
                     <div
-                      className={`flex items-start space-x-2 max-w-[85%] ${
+                      className={`flex items-start space-x-2 max-w-[80%] ${
                         message.sender === 'user' ? 'flex-row-reverse space-x-reverse' : ''
                       }`}
                     >
@@ -146,21 +146,22 @@ export const ChatPopup = () => {
                         )}
                       </div>
                       <div
-                        className={`rounded-lg px-3 py-2 text-sm break-words ${
+                        className={`rounded-lg px-3 py-2 text-sm word-wrap break-words overflow-wrap break-word ${
                           message.sender === 'user'
                             ? 'bg-primary text-primary-foreground'
                             : 'bg-muted'
                         }`}
                       >
-                        <div className="whitespace-pre-wrap break-words">{message.message}</div>
+                        <div className="whitespace-pre-wrap break-words overflow-hidden text-wrap">{message.message}</div>
                         {message.message.includes('doctena.lu') && (
                           <Button
                             variant="ghost"
                             size="sm"
-                            className="mt-2 p-0 h-auto text-xs underline"
+                            className="mt-2 p-0 h-auto text-xs underline break-all"
                             onClick={() => window.open('https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874', '_blank')}
                           >
-                            Ouvrir Doctena <ExternalLink className="h-3 w-3 ml-1" />
+                            <span className="break-all">Ouvrir Doctena</span>
+                            <ExternalLink className="h-3 w-3 ml-1 flex-shrink-0" />
                           </Button>
                         )}
                       </div>
