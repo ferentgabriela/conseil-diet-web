@@ -10,7 +10,6 @@ import TransformationStoriesSection from '@/components/TransformationStoriesSect
 import NarrativeServicesSection from '@/components/NarrativeServicesSection';
 import CabinetsSection from '@/components/CabinetsSection';
 import DoctenaTestimonialsSection from '@/components/DoctenaTestimonialsSection';
-import FloatingCTA from '@/components/FloatingCTA';
 import AISummaryBlock from '@/components/AISummaryBlock';
 import Footer from '@/components/Footer';
 
@@ -43,7 +42,6 @@ const Index = () => {
       <Footer />                            {/* Contact information at bottom */}
       
       <ChatPopup isOpen={isChatOpen} onToggle={handleToggleChat} />
-      <FloatingCTA />
     </div>
   );
 };
