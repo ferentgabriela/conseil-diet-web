@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { ChatPopup } from '@/components/ChatPopup';
-import { ExternalLink, Calendar, CheckCircle, Phone } from 'lucide-react';
+import { ExternalLink, Calendar, CheckCircle, Phone, FileText, Youtube } from 'lucide-react';
 
 const Index = () => {
   const [isChatOpen, setIsChatOpen] = useState(false);
@@ -146,8 +146,72 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Cabinet Locations */}
+      {/* Official Resources Section */}
       <section className="py-12 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-8">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">
+              Informations Officielles
+            </h3>
+            <p className="text-gray-600">
+              Consultez les ressources officielles pour plus d'informations sur les remboursements CNS
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
+                  <FileText className="h-6 w-6 text-green-600" />
+                </div>
+                <div>
+                  <h4 className="text-lg font-semibold text-gray-900">Documentation CNS</h4>
+                  <p className="text-sm text-gray-600">Informations officielles sur les remboursements</p>
+                </div>
+              </div>
+              <p className="text-gray-600 mb-4">
+                Consultez la documentation officielle de la CNS concernant les prestations diététiques remboursées et les conditions d'éligibilité.
+              </p>
+              <a
+                href="https://cns.public.lu/fr/assure/remboursements/prestations-remboursees/prestations-paramedicales/dieteticiens.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-green-600 hover:text-green-700 font-medium"
+              >
+                Voir la documentation officielle
+                <ExternalLink className="h-4 w-4" />
+              </a>
+            </div>
+            
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center">
+                  <Youtube className="h-6 w-6 text-red-600" />
+                </div>
+                <div>
+                  <h4 className="text-lg font-semibold text-gray-900">Vidéo Explicative</h4>
+                  <p className="text-sm text-gray-600">Guide pratique sur les consultations diététiques</p>
+                </div>
+              </div>
+              <p className="text-gray-600 mb-4">
+                Regardez cette vidéo pour mieux comprendre le processus de consultation diététique et les démarches à suivre.
+              </p>
+              <a
+                href="https://youtu.be/MM7UIP9_XZ4?si=s_1pNpJgK5JnzyMS"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-red-600 hover:text-red-700 font-medium"
+              >
+                Regarder la vidéo
+                <ExternalLink className="h-4 w-4" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Cabinet Locations */}
+      <section className="py-12 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-8">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">
@@ -159,7 +223,7 @@ const Index = () => {
           </div>
 
           <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-            <div className="bg-white p-6 rounded-lg shadow-sm text-center">
+            <div className="bg-white p-6 rounded-lg shadow-sm text-center border">
               <h4 className="text-lg font-semibold text-gray-900 mb-2">Luxembourg-Ville</h4>
               <p className="text-gray-600 mb-4">Centre-ville</p>
               <a
@@ -172,7 +236,7 @@ const Index = () => {
               </a>
             </div>
             
-            <div className="bg-white p-6 rounded-lg shadow-sm text-center">
+            <div className="bg-white p-6 rounded-lg shadow-sm text-center border">
               <h4 className="text-lg font-semibold text-gray-900 mb-2">Ettelbruck</h4>
               <p className="text-gray-600 mb-4">Nord du Luxembourg</p>
               <a
@@ -185,7 +249,7 @@ const Index = () => {
               </a>
             </div>
             
-            <div className="bg-white p-6 rounded-lg shadow-sm text-center">
+            <div className="bg-white p-6 rounded-lg shadow-sm text-center border">
               <h4 className="text-lg font-semibold text-gray-900 mb-2">Insenborn</h4>
               <p className="text-gray-600 mb-4">Proche d'Ettelbruck</p>
               <a
@@ -202,7 +266,7 @@ const Index = () => {
       </section>
 
       {/* Contact Section */}
-      <section className="py-12 bg-white border-t">
+      <section className="py-12 bg-gray-50 border-t">
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-2xl mx-auto">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">
