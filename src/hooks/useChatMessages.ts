@@ -39,15 +39,15 @@ export const useChatMessages = (sessionId: string) => {
     const lowerText = text.toLowerCase();
     
     // Romanian keywords
-    const romanianKeywords = ['salut', 'bună', 'mulțumesc', 'vă rog', 'îmi poți', 'cum pot', 'informații', 'programare', 'consultație', 'dietetician'];
+    const romanianKeywords = ['salut', 'bună', 'mulțumesc', 'vă rog', 'îmi poți', 'cum pot', 'informații', 'programare', 'consultație', 'dietetician', 'problema', 'sănătate', 'ajuta', 'rezolva'];
     if (romanianKeywords.some(keyword => lowerText.includes(keyword))) return 'ro';
     
     // German keywords
-    const germanKeywords = ['hallo', 'guten', 'danke', 'bitte', 'können sie', 'wie kann', 'informationen', 'termin', 'beratung', 'ernährungsberatung'];
+    const germanKeywords = ['hallo', 'guten', 'danke', 'bitte', 'können sie', 'wie kann', 'informationen', 'termin', 'beratung', 'ernährungsberatung', 'problem', 'gesundheit'];
     if (germanKeywords.some(keyword => lowerText.includes(keyword))) return 'de';
     
     // English keywords
-    const englishKeywords = ['hello', 'thank you', 'please', 'can you', 'how can', 'information', 'appointment', 'consultation', 'dietitian'];
+    const englishKeywords = ['hello', 'thank you', 'please', 'can you', 'how can', 'information', 'appointment', 'consultation', 'dietitian', 'problem', 'health', 'help'];
     if (englishKeywords.some(keyword => lowerText.includes(keyword))) return 'en';
     
     // Default to French (primary language for Luxembourg)
@@ -183,6 +183,89 @@ export const useChatMessages = (sessionId: string) => {
   // Multilingual AI response generator
   const generateAIResponse = (userMessage: string, language: 'fr' | 'en' | 'ro' | 'de'): string => {
     const lowerMessage = userMessage.toLowerCase();
+
+    // General health questions
+    if (lowerMessage.includes('sănătate') || lowerMessage.includes('problema') || lowerMessage.includes('rezolv') || 
+        lowerMessage.includes('health') || lowerMessage.includes('problem') || lowerMessage.includes('solve') ||
+        lowerMessage.includes('santé') || lowerMessage.includes('problème') || lowerMessage.includes('résoudre') ||
+        lowerMessage.includes('gesundheit') || lowerMessage.includes('problem') || lowerMessage.includes('lösen')) {
+      
+      const responses = {
+        fr: `Je comprends que vous avez des préoccupations de santé. En tant qu'assistant de Gabriela Ferent, diététicienne certifiée, je peux vous orienter vers les bonnes solutions.
+
+**🏥 Consultations disponibles :**
+• **CNS** (sur prescription médicale) - Remboursées à 80%
+• **Privées** - Accès direct sans prescription
+
+**📋 Pathologies couramment traitées :**
+• Diabète et prédiabète
+• Surpoids et obésité
+• Troubles digestifs
+• Hypertension
+• Cholestérol élevé
+• Troubles alimentaires
+
+**🔗 Prendre rendez-vous :** https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874
+
+Pour une évaluation personnalisée, je vous recommande de réserver une consultation. Avez-vous une prescription médicale ou souhaitez-vous une consultation privée ?`,
+
+        en: `I understand you have health concerns. As Gabriela Ferent's assistant, a certified dietitian, I can guide you to the right solutions.
+
+**🏥 Available consultations:**
+• **CNS** (with medical prescription) - 80% reimbursed
+• **Private** - Direct access without prescription
+
+**📋 Commonly treated conditions:**
+• Diabetes and prediabetes
+• Overweight and obesity
+• Digestive disorders
+• Hypertension
+• High cholesterol
+• Eating disorders
+
+**🔗 Book appointment:** https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874
+
+For a personalized assessment, I recommend booking a consultation. Do you have a medical prescription or would you prefer a private consultation?`,
+
+        ro: `Înțeleg că aveți preocupări legate de sănătate. În calitate de asistent al Gabrielei Ferent, dietetician certificat, vă pot ghida către soluțiile potrivite.
+
+**🏥 Consultații disponibile:**
+• **CNS** (cu prescripție medicală) - Rambursate 80%
+• **Private** - Acces direct fără prescripție
+
+**📋 Afecțiuni frecvent tratate:**
+• Diabet și prediabet
+• Suprapondere și obezitate
+• Tulburări digestive
+• Hipertensiune
+• Colesterol ridicat
+• Tulburări alimentare
+
+**🔗 Programare:** https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874
+
+Pentru o evaluare personalizată, vă recomand să rezervați o consultație. Aveți o prescripție medicală sau preferați o consultație privată?`,
+
+        de: `Ich verstehe, dass Sie gesundheitliche Bedenken haben. Als Assistent von Gabriela Ferent, einer zertifizierten Ernährungsberaterin, kann ich Sie zu den richtigen Lösungen führen.
+
+**🏥 Verfügbare Beratungen:**
+• **CNS** (mit ärztlicher Verschreibung) - 80% erstattet
+• **Privat** - Direkter Zugang ohne Verschreibung
+
+**📋 Häufig behandelte Erkrankungen:**
+• Diabetes und Prädiabetes
+• Übergewicht und Adipositas
+• Verdauungsstörungen
+• Bluthochdruck
+• Hoher Cholesterinspiegel
+• Essstörungen
+
+**🔗 Termin buchen:** https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874
+
+Für eine persönliche Beurteilung empfehle ich Ihnen, eine Beratung zu buchen. Haben Sie eine ärztliche Verschreibung oder bevorzugen Sie eine private Beratung?`
+      };
+      
+      return responses[language];
+    }
 
     // CNS information responses
     if (lowerMessage.includes('cns') || lowerMessage.includes('remboursement') || lowerMessage.includes('sécurité sociale') || 
@@ -487,9 +570,12 @@ Für spezifische oder dringende Anfragen verwenden Sie den Button "Gabriela kont
       return responses[language];
     }
 
-    // Default welcome responses
-    const responses = {
-      fr: `Bonjour ! Je suis l'assistant de Gabriela Ferent, diététicienne diplômée au Luxembourg.
+    // Default welcome responses - only shown for very generic greetings
+    if (lowerMessage.includes('salut') || lowerMessage.includes('bună') || lowerMessage.includes('hello') || 
+        lowerMessage.includes('bonjour') || lowerMessage.includes('hallo') || lowerMessage.includes('guten')) {
+      
+      const responses = {
+        fr: `Bonjour ! Je suis l'assistant de Gabriela Ferent, diététicienne diplômée au Luxembourg.
 
 **Je peux vous aider avec :**
 • Informations sur les consultations remboursées CNS
@@ -504,7 +590,7 @@ Für spezifische oder dringende Anfragen verwenden Sie den Button "Gabriela kont
 
 Comment puis-je vous aider aujourd'hui ?`,
 
-      en: `Hello! I'm Gabriela Ferent's assistant, a certified dietitian in Luxembourg.
+        en: `Hello! I'm Gabriela Ferent's assistant, a certified dietitian in Luxembourg.
 
 **I can help you with:**
 • Information about CNS-reimbursed consultations
@@ -519,7 +605,7 @@ Comment puis-je vous aider aujourd'hui ?`,
 
 How can I help you today?`,
 
-      ro: `Bună! Sunt asistentul Gabrielei Ferent, dietetician certificat în Luxemburg.
+        ro: `Bună! Sunt asistentul Gabrielei Ferent, dietetician certificat în Luxemburg.
 
 **Vă pot ajuta cu:**
 • Informații despre consultațiile rambursate CNS
@@ -534,7 +620,7 @@ How can I help you today?`,
 
 Cu ce vă pot ajuta astăzi?`,
 
-      de: `Hallo! Ich bin der Assistent von Gabriela Ferent, einer zertifizierten Ernährungsberaterin in Luxemburg.
+        de: `Hallo! Ich bin der Assistent von Gabriela Ferent, einer zertifizierten Ernährungsberaterin in Luxemburg.
 
 **Ich kann Ihnen helfen bei:**
 • Informationen über CNS-erstattete Beratungen
@@ -548,6 +634,68 @@ Cu ce vă pot ajuta astăzi?`,
 • Stellen Sie mir eine spezifische Frage!
 
 Wie kann ich Ihnen heute helfen?`
+      };
+      
+      return responses[language];
+    }
+
+    // If no specific pattern matches, provide a helpful response based on detected language
+    const responses = {
+      fr: `Je comprends votre question. En tant qu'assistant de Gabriela Ferent, diététicienne certifiée, je peux vous aider avec :
+
+• **Consultations CNS** remboursées (sur prescription)
+• **Consultations privées** (accès direct)
+• **Informations** sur les pathologies traitées
+• **Prise de rendez-vous** via Doctena
+
+Pour une réponse plus précise, pourriez-vous me dire ce que vous recherchez exactement ? Par exemple :
+- Avez-vous une prescription médicale ?
+- Souhaitez-vous des informations sur une pathologie spécifique ?
+- Voulez-vous prendre rendez-vous ?
+
+🔗 **Réserver directement :** https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874`,
+
+      en: `I understand your question. As Gabriela Ferent's assistant, a certified dietitian, I can help you with:
+
+• **CNS consultations** reimbursed (with prescription)
+• **Private consultations** (direct access)
+• **Information** about treated conditions
+• **Appointment booking** via Doctena
+
+For a more precise answer, could you tell me what you're looking for exactly? For example:
+- Do you have a medical prescription?
+- Would you like information about a specific condition?
+- Do you want to book an appointment?
+
+🔗 **Book directly:** https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874`,
+
+      ro: `Înțeleg întrebarea dumneavoastră. În calitate de asistent al Gabrielei Ferent, dietetician certificat, vă pot ajuta cu:
+
+• **Consultații CNS** rambursate (cu prescripție)
+• **Consultații private** (acces direct)
+• **Informații** despre afecțiunile tratate
+• **Programare** prin Doctena
+
+Pentru un răspuns mai precis, îmi puteți spune exact ce căutați? De exemplu:
+- Aveți o prescripție medicală?
+- Doriți informații despre o afecțiune specifică?
+- Vreți să programați o întâlnire?
+
+🔗 **Rezervați direct:** https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874`,
+
+      de: `Ich verstehe Ihre Frage. Als Assistent von Gabriela Ferent, einer zertifizierten Ernährungsberaterin, kann ich Ihnen helfen mit:
+
+• **CNS-Beratungen** erstattet (mit Verschreibung)
+• **Private Beratungen** (direkter Zugang)
+• **Informationen** über behandelte Erkrankungen
+• **Terminbuchung** über Doctena
+
+Für eine genauere Antwort, könnten Sie mir sagen, wonach Sie genau suchen? Zum Beispiel:
+- Haben Sie eine ärztliche Verschreibung?
+- Möchten Sie Informationen über eine spezifische Erkrankung?
+- Möchten Sie einen Termin buchen?
+
+🔗 **Direkt buchen:** https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874`
     };
 
     return responses[language];
