@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Menu, X, Calendar, MapPin, Star, Shield } from 'lucide-react';
+import { Menu, X, Calendar, MapPin, Star, Shield, Heart, Leaf } from 'lucide-react';
 import { useState, useEffect } from 'react';
 
 const Navigation = () => {
@@ -53,17 +53,18 @@ const Navigation = () => {
       }`} style={{ top: '0', marginTop: '40px' }}>
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center py-4">
-            {/* Logo Section with Professional Design */}
+            {/* Logo Section with Health Symbol */}
             <div className="flex items-center gap-4">
-              {/* Professional Logo */}
+              {/* Health-focused Logo Symbol */}
               <div className="relative">
                 <div className="w-14 h-14 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center shadow-lg">
                   <div className="relative">
-                    {/* Stylized G letter */}
-                    <div className="text-white font-bold text-2xl">G</div>
-                    {/* Small leaf accent */}
-                    <div className="absolute -top-1 -right-1 w-3 h-3 bg-green-300 rounded-full opacity-80"></div>
-                    <div className="absolute -bottom-1 -left-1 w-2 h-2 bg-green-300 rounded-full opacity-60"></div>
+                    {/* Heart symbol with leaf accent for health & nutrition */}
+                    <Heart className="h-7 w-7 text-white fill-white" />
+                    {/* Small leaf accent to represent nutrition/natural health */}
+                    <div className="absolute -top-1 -right-1">
+                      <Leaf className="h-4 w-4 text-green-200" />
+                    </div>
                   </div>
                 </div>
                 {/* Subtle glow effect */}
