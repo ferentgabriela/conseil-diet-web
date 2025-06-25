@@ -62,7 +62,7 @@ const DoctenaTestimonialsSection = () => {
           {/* Highlighted testimonials carousel */}
           <div className="grid md:grid-cols-3 gap-8 mb-16 max-w-6xl mx-auto">
             {highlightedTestimonials.map((testimonial, index) => (
-              <div key={index} className="bg-white rounded-2xl p-8 shadow-xl border border-green-100 relative hover:shadow-2xl transition-all duration-300 hover:scale-105">
+              <div key={index} className="bg-white rounded-2xl p-8 shadow-xl border border-green-100 relative hover:shadow-2xl transition-all duration-300 hover:scale-105 flex flex-col">
                 <div className="absolute -top-4 left-6">
                   <div className="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center">
                     <Quote className="h-4 w-4 text-white" />
@@ -76,11 +76,11 @@ const DoctenaTestimonialsSection = () => {
                   ))}
                 </div>
                 
-                <blockquote className="text-lg text-gray-800 font-medium mb-6 leading-relaxed">
+                <blockquote className="text-lg text-gray-800 font-medium mb-6 leading-relaxed flex-grow">
                   "{testimonial.quote}"
                 </blockquote>
                 
-                <div className="flex items-center justify-between">
+                <div className="flex items-center justify-between mt-auto">
                   <div className="flex-1">
                     <p className="font-bold text-gray-900">{testimonial.author}</p>
                     <p className="text-sm text-green-600">{testimonial.treatment}</p>
