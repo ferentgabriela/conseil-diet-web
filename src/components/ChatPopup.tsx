@@ -70,27 +70,84 @@ export const ChatPopup = () => {
     }
   ];
 
-  // Enhanced function to detect and convert URLs to clickable links
+  // Enhanced function to parse and render text with clickable links
   const formatMessageWithLinks = (text: string) => {
     // Enhanced regex to match the specific format used by the AI
     const doctenaLinkRegex = /(Luxembourg|Ettelbruck|Insenborn)\s*-\s*(RDV Doctena|Programare Doctena|Book on Doctena|Termin auf Doctena)\s*:\s*(https:\/\/www\.doctena\.lu\/practitioner\/\d+)/g;
     
+    const parts = [];
+    let lastIndex = 0;
+    let match;
+
     // First handle the specific Doctena format
-    let formattedText = text.replace(doctenaLinkRegex, (match, city, linkText, url) => {
-      return `${city} - <a href="${url}" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:text-blue-700 underline">${linkText} <span class="inline-flex items-center"><svg class="h-3 w-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg></span></a>`;
-    });
-    
-    // Then handle any remaining standalone URLs
-    const urlRegex = /(https?:\/\/[^\s]+)/g;
-    formattedText = formattedText.replace(urlRegex, (url) => {
-      // Skip if this URL is already part of a formatted link
-      if (formattedText.includes(`href="${url}"`)) {
-        return url;
+    while ((match = doctenaLinkRegex.exec(text)) !== null) {
+      // Add text before the match
+      if (match.index > lastIndex) {
+        parts.push(text.slice(lastIndex, match.index));
       }
-      return `<a href="${url}" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:text-blue-700 underline break-all inline-flex items-center gap-1"><span class="break-all">Link</span><svg class="h-3 w-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg></a>`;
-    });
-    
-    return <div dangerouslySetInnerHTML={{ __html: formattedText }} className="break-words" />;
+      
+      // Add the formatted link
+      const [fullMatch, city, linkText, url] = match;
+      parts.push(
+        <span key={match.index}>
+          {city} - 
+          <a 
+            href={url} 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="text-blue-500 hover:text-blue-700 underline inline-flex items-center gap-1 ml-1"
+          >
+            {linkText}
+            <ExternalLink className="h-3 w-3" />
+          </a>
+        </span>
+      );
+      
+      lastIndex = match.index + fullMatch.length;
+    }
+
+    // Add remaining text after last match
+    if (lastIndex < text.length) {
+      let remainingText = text.slice(lastIndex);
+      
+      // Handle any standalone URLs in the remaining text
+      const urlRegex = /(https?:\/\/[^\s]+)/g;
+      const urlParts = [];
+      let urlLastIndex = 0;
+      let urlMatch;
+
+      while ((urlMatch = urlRegex.exec(remainingText)) !== null) {
+        // Add text before the URL
+        if (urlMatch.index > urlLastIndex) {
+          urlParts.push(remainingText.slice(urlLastIndex, urlMatch.index));
+        }
+        
+        // Add the URL as a link
+        urlParts.push(
+          <a 
+            key={lastIndex + urlMatch.index}
+            href={urlMatch[0]} 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="text-blue-500 hover:text-blue-700 underline inline-flex items-center gap-1"
+          >
+            Link
+            <ExternalLink className="h-3 w-3" />
+          </a>
+        );
+        
+        urlLastIndex = urlMatch.index + urlMatch[0].length;
+      }
+
+      // Add remaining text after last URL
+      if (urlLastIndex < remainingText.length) {
+        urlParts.push(remainingText.slice(urlLastIndex));
+      }
+
+      parts.push(...urlParts);
+    }
+
+    return <span className="break-words">{parts}</span>;
   };
 
   if (!isOpen) {
