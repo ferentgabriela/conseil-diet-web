@@ -31,30 +31,20 @@ const DoctenaTestimonialsSection = () => {
         </div>
 
         <div className="max-w-4xl mx-auto">
-          {/* Widget container with better integration */}
-          <div className="relative">
-            {/* Background decoration to soften the transition */}
-            <div className="absolute inset-0 bg-gradient-to-b from-green-50 via-green-25 to-white rounded-xl"></div>
+          {/* Simplified widget container with clean white background */}
+          <div className="bg-white rounded-xl shadow-sm border border-green-100 overflow-hidden">
+            {/* Top decoration bar */}
+            <div className="h-1 bg-gradient-to-r from-green-400 to-green-600"></div>
             
-            {/* Widget wrapper with subtle styling */}
-            <div className="relative bg-white rounded-xl shadow-sm border border-green-100 overflow-hidden">
-              {/* Top decoration bar */}
-              <div className="h-1 bg-gradient-to-r from-green-400 to-green-600"></div>
-              
-              {/* Widget container */}
-              <div className="p-6">
-                <div 
-                  data-toggle="doc-reviews" 
-                  data-doctor-eid="492d6313-2026-4e38-ba00-ffd3a88d67de" 
-                  data-language="fr"
-                  id="doctena-reviews-widget"
-                ></div>
-              </div>
+            {/* Widget container */}
+            <div className="p-6">
+              <div 
+                data-toggle="doc-reviews" 
+                data-doctor-eid="492d6313-2026-4e38-ba00-ffd3a88d67de" 
+                data-language="fr"
+                id="doctena-reviews-widget"
+              ></div>
             </div>
-            
-            {/* Side decorations */}
-            <div className="absolute -left-4 top-1/2 transform -translate-y-1/2 w-8 h-16 bg-green-200 rounded-r-full opacity-30"></div>
-            <div className="absolute -right-4 top-1/2 transform -translate-y-1/2 w-8 h-16 bg-green-200 rounded-l-full opacity-30"></div>
           </div>
         </div>
 
