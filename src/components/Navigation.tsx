@@ -28,15 +28,15 @@ const Navigation = () => {
   const scrollToCabinets = () => {
     const cabinetsSection = document.getElementById('cabinets');
     if (cabinetsSection) {
-      // Use a more reliable method to calculate the exact header height
-      // Trust bar is 40px + Navigation height (which includes py-4 padding)
+      // Use a much larger offset to ensure the title is completely visible
+      // Trust bar is 40px + Navigation height + section padding + title space
       const trustBarHeight = 40;
       const navigationElement = document.querySelector('nav');
       const navigationHeight = navigationElement ? navigationElement.offsetHeight : 88;
       const totalHeaderHeight = trustBarHeight + navigationHeight;
       
-      // Add some extra padding to ensure the title is clearly visible
-      const extraPadding = 20;
+      // Increase padding significantly to ensure title visibility
+      const extraPadding = 80; // Increased from 20px to 80px
       const finalOffset = totalHeaderHeight + extraPadding;
 
       console.log('Trust bar height:', trustBarHeight);
