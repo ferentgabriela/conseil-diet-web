@@ -1,3 +1,4 @@
+
 import React, { useState, useRef, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -160,27 +161,42 @@ export const ChatPopup = ({ isOpen: externalIsOpen, onToggle }: ChatPopupProps) 
   if (!isOpen) {
     return (
       <div className="fixed bottom-6 right-6 z-50 flex flex-col items-center">
-        {/* "Poser une question" text above the button */}
-        <div className="mb-2 bg-green-600 text-white px-3 py-1 rounded-lg shadow-lg text-sm font-medium animate-bounce">
+        {/* "Poser une question" text above the button with gentle fade animation */}
+        <div className="mb-2 bg-green-600 text-white px-3 py-1 rounded-lg shadow-lg text-sm font-medium animate-pulse">
           Poser une question
         </div>
         
-        {/* Dynamic AI Chat Button */}
+        {/* Dynamic Breathing Chat Button */}
         <Button
           onClick={toggleOpen}
-          className="h-16 w-16 rounded-full bg-green-600 hover:bg-green-700 shadow-2xl z-50 relative overflow-hidden group transition-all duration-300 hover:scale-110"
+          className="h-16 w-16 rounded-full bg-green-600 hover:bg-green-700 shadow-2xl z-50 relative overflow-hidden group transition-all duration-500 hover:scale-110"
+          style={{
+            animation: 'breathing 3s ease-in-out infinite'
+          }}
           size="icon"
         >
-          {/* Animated background pulse */}
-          <div className="absolute inset-0 bg-green-400 rounded-full animate-ping opacity-20"></div>
-          <div className="absolute inset-0 bg-green-500 rounded-full animate-pulse opacity-30"></div>
+          {/* Gentle ripple effects */}
+          <div 
+            className="absolute inset-0 bg-green-400 rounded-full opacity-20"
+            style={{ animation: 'ripple 4s ease-out infinite' }}
+          ></div>
+          <div 
+            className="absolute inset-0 bg-green-500 rounded-full opacity-15"
+            style={{ animation: 'ripple 4s ease-out infinite 1s' }}
+          ></div>
           
-          {/* Icon with breathing animation - Made bigger */}
-          <MessageCircle className="h-9 w-9 relative z-10 animate-pulse group-hover:animate-bounce" />
+          {/* Icon with gentle breathing animation */}
+          <MessageCircle 
+            className="h-9 w-9 relative z-10 group-hover:scale-110 transition-transform duration-300" 
+            style={{ animation: 'iconBreath 3s ease-in-out infinite' }}
+          />
           
-          {/* Floating notification dot */}
-          <div className="absolute -top-1 -right-1 h-4 w-4 bg-red-500 rounded-full animate-bounce">
-            <div className="absolute inset-1 bg-red-400 rounded-full animate-ping"></div>
+          {/* Enhanced notification dot with subtle pulsing */}
+          <div 
+            className="absolute -top-1 -right-1 h-5 w-5 bg-red-500 rounded-full flex items-center justify-center"
+            style={{ animation: 'dotPulse 2s ease-in-out infinite' }}
+          >
+            <div className="h-2 w-2 bg-white rounded-full"></div>
           </div>
         </Button>
       </div>
