@@ -3,6 +3,13 @@ import React from 'react';
 import { ExternalLink, Shield, Heart, CheckCircle, Star } from 'lucide-react';
 
 const ServicesSection = () => {
+  const scrollToCabinets = () => {
+    const cabinetsSection = document.getElementById('cabinets');
+    if (cabinetsSection) {
+      cabinetsSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section id="services" className="py-20 bg-white">
       <div className="container mx-auto px-4">
@@ -61,15 +68,12 @@ const ServicesSection = () => {
               </p>
             </div>
 
-            <a
-              href="https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874"
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              onClick={scrollToCabinets}
               className="inline-flex items-center gap-2 w-full justify-center px-6 py-4 bg-green-600 text-white font-bold rounded-xl hover:bg-green-700 transition-all duration-300 text-lg shadow-md hover:shadow-lg"
             >
-              Réserver ma consultation CNS
-              <ExternalLink className="h-5 w-5" />
-            </a>
+              Prendre RDV CNS
+            </button>
           </div>
 
           {/* Private Consultations */}
@@ -117,15 +121,12 @@ const ServicesSection = () => {
               </p>
             </div>
 
-            <a
-              href="https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874"
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              onClick={scrollToCabinets}
               className="inline-flex items-center gap-2 w-full justify-center px-6 py-4 bg-blue-600 text-white font-bold rounded-xl hover:bg-blue-700 transition-all duration-300 text-lg shadow-md hover:shadow-lg"
             >
-              Réserver ma consultation privée
-              <ExternalLink className="h-5 w-5" />
-            </a>
+              Prendre RDV Privé
+            </button>
           </div>
         </div>
       </div>

@@ -1,61 +1,141 @@
 
 import React from 'react';
-import { ExternalLink, MapPin } from 'lucide-react';
+import { ExternalLink, MapPin, Calendar, Clock, Phone } from 'lucide-react';
 
 const CabinetsSection = () => {
   return (
-    <section id="cabinets" className="py-16 bg-gray-50">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
-            Nos Cabinets
+    <section id="cabinets" className="py-20 bg-gradient-to-br from-green-50 via-blue-25 to-green-25 relative overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute inset-0 bg-gradient-to-r from-green-100/20 to-blue-100/20"></div>
+      
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            Choisissez Votre Cabinet
           </h2>
-          <p className="text-gray-600">
-            3 locations au Luxembourg pour votre convenance
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            3 locations au Luxembourg pour votre convenance. Sélectionnez le cabinet le plus proche de chez vous pour prendre rendez-vous.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-          <div className="bg-white p-6 rounded-lg shadow-sm border text-center">
-            <MapPin className="h-8 w-8 text-green-600 mx-auto mb-4" />
-            <h4 className="text-lg font-semibold text-gray-900 mb-2">Luxembourg-Ville</h4>
-            <p className="text-gray-600 mb-4 text-sm">Centre-ville</p>
+        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          {/* Luxembourg-Ville */}
+          <div className="group bg-gradient-to-br from-white to-green-50 border-2 border-green-200 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 hover:border-green-300">
+            <div className="text-center mb-6">
+              <div className="w-16 h-16 bg-green-600 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-green-700 transition-colors">
+                <MapPin className="h-8 w-8 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-2">Luxembourg-Ville</h3>
+              <p className="text-green-600 font-medium mb-2">Centre-ville</p>
+              <p className="text-sm text-gray-600">Facilement accessible en transport</p>
+            </div>
+
+            <div className="space-y-3 mb-6">
+              <div className="flex items-center gap-3 text-sm text-gray-600">
+                <Clock className="h-4 w-4 text-green-600" />
+                <span>Lun-Ven: 8h-18h</span>
+              </div>
+              <div className="flex items-center gap-3 text-sm text-gray-600">
+                <Phone className="h-4 w-4 text-green-600" />
+                <span>Accessible en bus et tram</span>
+              </div>
+            </div>
+
             <a
               href="https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874#22943"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1 text-green-600 hover:text-green-700 font-medium text-sm"
+              className="inline-flex items-center gap-2 w-full justify-center px-6 py-4 bg-green-600 text-white font-bold rounded-xl hover:bg-green-700 transition-all duration-300 text-lg shadow-md hover:shadow-lg"
             >
-              Réserver <ExternalLink className="h-3 w-3" />
+              <Calendar className="h-5 w-5" />
+              Prendre RDV
+              <ExternalLink className="h-4 w-4" />
             </a>
           </div>
           
-          <div className="bg-white p-6 rounded-lg shadow-sm border text-center">
-            <MapPin className="h-8 w-8 text-green-600 mx-auto mb-4" />
-            <h4 className="text-lg font-semibold text-gray-900 mb-2">Ettelbruck</h4>
-            <p className="text-gray-600 mb-4 text-sm">Nord du Luxembourg</p>
+          {/* Ettelbruck */}
+          <div className="group bg-gradient-to-br from-white to-blue-50 border-2 border-blue-200 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 hover:border-blue-300">
+            <div className="text-center mb-6">
+              <div className="w-16 h-16 bg-blue-600 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-700 transition-colors">
+                <MapPin className="h-8 w-8 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-2">Ettelbruck</h3>
+              <p className="text-blue-600 font-medium mb-2">Nord du Luxembourg</p>
+              <p className="text-sm text-gray-600">Idéal pour le nord du pays</p>
+            </div>
+
+            <div className="space-y-3 mb-6">
+              <div className="flex items-center gap-3 text-sm text-gray-600">
+                <Clock className="h-4 w-4 text-blue-600" />
+                <span>Lun-Ven: 8h-18h</span>
+              </div>
+              <div className="flex items-center gap-3 text-sm text-gray-600">
+                <Phone className="h-4 w-4 text-blue-600" />
+                <span>Parking disponible</span>
+              </div>
+            </div>
+
             <a
               href="https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874#24538"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1 text-green-600 hover:text-green-700 font-medium text-sm"
+              className="inline-flex items-center gap-2 w-full justify-center px-6 py-4 bg-blue-600 text-white font-bold rounded-xl hover:bg-blue-700 transition-all duration-300 text-lg shadow-md hover:shadow-lg"
             >
-              Réserver <ExternalLink className="h-3 w-3" />
+              <Calendar className="h-5 w-5" />
+              Prendre RDV
+              <ExternalLink className="h-4 w-4" />
             </a>
           </div>
           
-          <div className="bg-white p-6 rounded-lg shadow-sm border text-center">
-            <MapPin className="h-8 w-8 text-green-600 mx-auto mb-4" />
-            <h4 className="text-lg font-semibold text-gray-900 mb-2">Insenborn</h4>
-            <p className="text-gray-600 mb-4 text-sm">Proche d'Ettelbruck</p>
+          {/* Insenborn */}
+          <div className="group bg-gradient-to-br from-white to-purple-50 border-2 border-purple-200 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 hover:border-purple-300">
+            <div className="text-center mb-6">
+              <div className="w-16 h-16 bg-purple-600 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-purple-700 transition-colors">
+                <MapPin className="h-8 w-8 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-2">Insenborn</h3>
+              <p className="text-purple-600 font-medium mb-2">Proche d'Ettelbruck</p>
+              <p className="text-sm text-gray-600">Cadre calme et verdoyant</p>
+            </div>
+
+            <div className="space-y-3 mb-6">
+              <div className="flex items-center gap-3 text-sm text-gray-600">
+                <Clock className="h-4 w-4 text-purple-600" />
+                <span>Lun-Ven: 8h-18h</span>
+              </div>
+              <div className="flex items-center gap-3 text-sm text-gray-600">
+                <Phone className="h-4 w-4 text-purple-600" />
+                <span>Environnement paisible</span>
+              </div>
+            </div>
+
             <a
               href="https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874#22919"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1 text-green-600 hover:text-green-700 font-medium text-sm"
+              className="inline-flex items-center gap-2 w-full justify-center px-6 py-4 bg-purple-600 text-white font-bold rounded-xl hover:bg-purple-700 transition-all duration-300 text-lg shadow-md hover:shadow-lg"
             >
-              Réserver <ExternalLink className="h-3 w-3" />
+              <Calendar className="h-5 w-5" />
+              Prendre RDV
+              <ExternalLink className="h-4 w-4" />
             </a>
+          </div>
+        </div>
+
+        {/* Additional info section */}
+        <div className="text-center mt-12">
+          <div className="bg-white/80 rounded-2xl p-6 max-w-2xl mx-auto shadow-lg border border-green-200">
+            <h4 className="text-lg font-bold text-gray-900 mb-3">Informations Pratiques</h4>
+            <div className="grid md:grid-cols-2 gap-4 text-sm text-gray-600">
+              <div className="flex items-center gap-2">
+                <Calendar className="h-4 w-4 text-green-600" />
+                <span>Rendez-vous en ligne 24h/24</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Phone className="h-4 w-4 text-green-600" />
+                <span>Confirmation immédiate</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>

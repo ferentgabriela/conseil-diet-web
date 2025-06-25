@@ -15,6 +15,13 @@ const FloatingCTA = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const scrollToCabinets = () => {
+    const cabinetsSection = document.getElementById('cabinets');
+    if (cabinetsSection) {
+      cabinetsSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   if (!isVisible) return null;
 
   return (
@@ -28,16 +35,13 @@ const FloatingCTA = () => {
             Remboursée jusqu'à 80% par la CNS
           </p>
           
-          <a
-            href="https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874"
-            target="_blank"
-            rel="noopener noreferrer"
+          <button
+            onClick={scrollToCabinets}
             className="inline-flex items-center gap-2 w-full justify-center px-4 py-3 bg-white text-green-700 font-bold rounded-xl hover:bg-gray-100 transition-all duration-300 text-sm shadow-md"
           >
             <Calendar className="h-4 w-4" />
-            Réserver
-            <ExternalLink className="h-3 w-3" />
-          </a>
+            Prendre RDV
+          </button>
         </div>
       </div>
     </div>

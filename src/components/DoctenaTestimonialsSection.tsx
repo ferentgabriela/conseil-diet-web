@@ -19,6 +19,13 @@ const DoctenaTestimonialsSection = () => {
     };
   }, []);
 
+  const scrollToCabinets = () => {
+    const cabinetsSection = document.getElementById('cabinets');
+    if (cabinetsSection) {
+      cabinetsSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   const highlightedTestimonials = [
     {
       quote: "Son professionnalisme, son approche personnalisée et ses conseils pratiques m'ont aidée à améliorer mes habitudes alimentaires de manière durable.",
@@ -150,16 +157,13 @@ const DoctenaTestimonialsSection = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a
-              href="https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874"
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              onClick={scrollToCabinets}
               className="inline-flex items-center gap-3 px-8 py-4 bg-white text-green-700 font-bold rounded-xl hover:bg-gray-100 transition-all duration-300 text-lg shadow-lg hover:shadow-xl transform hover:scale-105"
             >
               <Calendar className="h-6 w-6" />
-              Prendre Rendez-vous Maintenant
-              <ExternalLink className="h-5 w-5" />
-            </a>
+              Prendre RDV Maintenant
+            </button>
             
             <div className="flex items-center gap-2 px-4 py-2 bg-white/20 rounded-full">
               <Star className="h-4 w-4 fill-yellow-300 text-yellow-300" />

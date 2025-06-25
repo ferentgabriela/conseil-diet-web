@@ -3,6 +3,13 @@ import React from 'react';
 import { ExternalLink, Calendar, Shield } from 'lucide-react';
 
 const HeroSection = () => {
+  const scrollToCabinets = () => {
+    const cabinetsSection = document.getElementById('cabinets');
+    if (cabinetsSection) {
+      cabinetsSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section id="accueil" className="pt-24 pb-16 bg-gradient-to-br from-green-50 via-blue-25 to-green-25 relative overflow-hidden">
       {/* Background decoration */}
@@ -22,16 +29,13 @@ const HeroSection = () => {
           
           {/* Enhanced CTA Button */}
           <div className="flex flex-col items-center mb-6">
-            <a
-              href="https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874"
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              onClick={scrollToCabinets}
               className="inline-flex items-center gap-3 px-10 py-5 bg-green-600 text-white font-bold rounded-xl hover:bg-green-700 transition-all duration-300 text-xl shadow-lg hover:shadow-xl transform hover:scale-105 animate-pulse"
             >
               <Calendar className="h-6 w-6" />
-              Prendre Rendez-vous
-              <ExternalLink className="h-5 w-5" />
-            </a>
+              Prendre RDV
+            </button>
             <div className="flex items-center gap-2 mt-3 px-4 py-2 bg-white/80 rounded-full shadow-sm">
               <Shield className="h-4 w-4 text-green-600" />
               <span className="text-sm text-gray-700 font-medium">
