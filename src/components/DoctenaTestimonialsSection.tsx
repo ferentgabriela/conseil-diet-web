@@ -21,22 +21,25 @@ const DoctenaTestimonialsSection = () => {
 
   const highlightedTestimonials = [
     {
-      quote: "J'ai perdu 12 kg en 3 mois, sans me priver !",
-      author: "Sophie M.",
+      quote: "J'ai consulté et ce fut un excellent choix. Son professionnalisme, son approche personnalisée et ses conseils pratiques m'ont aidé à améliorer mes habitudes alimentaires de manière durable. Si vous cherchez un nutritionniste à l'écoute de vos besoins, je le recommande sans hésitation.",
+      author: "Pedro",
+      date: "Février 2025",
       rating: 5,
-      treatment: "Rééquilibrage alimentaire"
+      treatment: "Accompagnement nutritionnel"
     },
     {
-      quote: "Gabriela m'a aidé à mieux gérer mon diabète avec des conseils pratiques.",
-      author: "Jean L.",
+      quote: "Le docteur est très professionniste. Elle prende le temps nécessaire pour écouter le patient et trouver la meilleure solution pour lui.",
+      author: "Diana",
+      date: "Juillet 2024",
       rating: 5,
-      treatment: "Consultation CNS - Diabète"
+      treatment: "Consultation personnalisée"
     },
     {
-      quote: "Enfin une approche bienveillante qui respecte mes habitudes !",
-      author: "Marie D.",
+      quote: "Mme Gabriela Ferent est une experte dans son domaine et possède l'expertise nécessaire pour cela, j'ai été et suis très satisfaite de ses services, de plus, ses actions ont une direction précise et atteignent l'objectif souhaité, merci !",
+      author: "Carmen",
+      date: "Juin 2024",
       rating: 5,
-      treatment: "Consultation privée"
+      treatment: "Suivi spécialisé"
     }
   ];
 
@@ -81,6 +84,7 @@ const DoctenaTestimonialsSection = () => {
                   <div>
                     <p className="font-bold text-gray-900">{testimonial.author}</p>
                     <p className="text-sm text-green-600">{testimonial.treatment}</p>
+                    <p className="text-xs text-gray-500">{testimonial.date}</p>
                   </div>
                   <div className="w-12 h-12 bg-gradient-to-br from-green-100 to-blue-100 rounded-full flex items-center justify-center">
                     <span className="text-xl">👤</span>
