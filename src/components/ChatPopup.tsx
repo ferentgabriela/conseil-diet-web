@@ -70,6 +70,31 @@ export const ChatPopup = () => {
     }
   ];
 
+  // Enhanced function to detect and convert URLs to clickable links
+  const formatMessageWithLinks = (text: string) => {
+    // Split text by URLs and format accordingly
+    const urlRegex = /(https?:\/\/[^\s]+)/g;
+    const parts = text.split(urlRegex);
+    
+    return parts.map((part, index) => {
+      if (part.match(urlRegex)) {
+        return (
+          <a
+            key={index}
+            href={part}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-500 hover:text-blue-700 underline break-all inline-flex items-center gap-1"
+          >
+            <span className="break-all">Réserver sur Doctena</span>
+            <ExternalLink className="h-3 w-3 flex-shrink-0" />
+          </a>
+        );
+      }
+      return <span key={index} className="break-words">{part}</span>;
+    });
+  };
+
   if (!isOpen) {
     return (
       <Button
@@ -132,7 +157,7 @@ export const ChatPopup = () => {
                     className={`flex ${message.sender === 'user' ? 'justify-end' : 'justify-start'}`}
                   >
                     <div
-                      className={`flex items-start space-x-2 max-w-[80%] ${
+                      className={`flex items-start space-x-2 max-w-[85%] ${
                         message.sender === 'user' ? 'flex-row-reverse space-x-reverse' : ''
                       }`}
                     >
@@ -146,24 +171,15 @@ export const ChatPopup = () => {
                         )}
                       </div>
                       <div
-                        className={`rounded-lg px-3 py-2 text-sm word-wrap break-words overflow-wrap break-word ${
+                        className={`rounded-lg px-3 py-2 text-sm break-words overflow-hidden ${
                           message.sender === 'user'
                             ? 'bg-primary text-primary-foreground'
                             : 'bg-muted'
                         }`}
                       >
-                        <div className="whitespace-pre-wrap break-words overflow-hidden text-wrap">{message.message}</div>
-                        {message.message.includes('doctena.lu') && (
-                          <Button
-                            variant="ghost"
-                            size="sm"
-                            className="mt-2 p-0 h-auto text-xs underline break-all"
-                            onClick={() => window.open('https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874', '_blank')}
-                          >
-                            <span className="break-all">Ouvrir Doctena</span>
-                            <ExternalLink className="h-3 w-3 ml-1 flex-shrink-0" />
-                          </Button>
-                        )}
+                        <div className="whitespace-pre-wrap break-words text-wrap leading-relaxed">
+                          {message.sender === 'ai' ? formatMessageWithLinks(message.message) : message.message}
+                        </div>
                       </div>
                     </div>
                   </div>
