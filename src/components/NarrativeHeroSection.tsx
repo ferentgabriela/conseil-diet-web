@@ -64,7 +64,7 @@ const NarrativeHeroSection = () => {
           <div className="flex flex-col items-center mb-8">
             <button
               onClick={scrollToCabinets}
-              className="inline-flex items-center gap-3 px-12 py-6 bg-green-600 text-white font-bold rounded-xl hover:bg-green-700 transition-all duration-300 text-xl shadow-lg hover:shadow-xl transform hover:scale-105 animate-pulse mb-4"
+              className="inline-flex items-center gap-3 px-12 py-6 bg-green-600 text-white font-bold rounded-xl hover:bg-green-700 transition-all duration-300 text-xl shadow-lg hover:shadow-xl transform hover:scale-105 mb-4"
             >
               <Calendar className="h-6 w-6" />
               Commencer ma transformation
