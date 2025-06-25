@@ -21,7 +21,7 @@ const DoctenaTestimonialsSection = () => {
 
   const highlightedTestimonials = [
     {
-      quote: "J'ai consulté et ce fut un excellent choix. Son professionnalisme, son approche personnalisée et ses conseils pratiques m'ont aidé à améliorer mes habitudes alimentaires de manière durable. Si vous cherchez un nutritionniste à l'écoute de vos besoins, je le recommande sans hésitation.",
+      quote: "Son professionnalisme, son approche personnalisée et ses conseils pratiques m'ont aidé à améliorer mes habitudes alimentaires de manière durable.",
       author: "Pedro",
       date: "Février 2025",
       rating: 5,
