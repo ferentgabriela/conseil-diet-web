@@ -28,17 +28,31 @@ const Navigation = () => {
   const scrollToCabinets = () => {
     const cabinetsSection = document.getElementById('cabinets');
     if (cabinetsSection) {
-      // Get the element's position relative to the viewport
-      const rect = cabinetsSection.getBoundingClientRect();
-      // Get current scroll position
-      const currentScrollY = window.scrollY;
-      // Calculate target position: current scroll + element's top position - fixed header height
-      // Trust bar (40px) + Navigation (88px) + extra padding for title visibility (100px)
-      const headerOffset = 228;
-      const targetScrollY = currentScrollY + rect.top - headerOffset;
+      // Use a more reliable method to calculate the exact header height
+      // Trust bar is 40px + Navigation height (which includes py-4 padding)
+      const trustBarHeight = 40;
+      const navigationElement = document.querySelector('nav');
+      const navigationHeight = navigationElement ? navigationElement.offsetHeight : 88;
+      const totalHeaderHeight = trustBarHeight + navigationHeight;
+      
+      // Add some extra padding to ensure the title is clearly visible
+      const extraPadding = 20;
+      const finalOffset = totalHeaderHeight + extraPadding;
+
+      console.log('Trust bar height:', trustBarHeight);
+      console.log('Navigation height:', navigationHeight);
+      console.log('Total header height:', totalHeaderHeight);
+      console.log('Final offset:', finalOffset);
+
+      // Get element position and scroll to it
+      const elementPosition = cabinetsSection.getBoundingClientRect().top + window.scrollY;
+      const targetPosition = elementPosition - finalOffset;
+
+      console.log('Element position:', elementPosition);
+      console.log('Target scroll position:', targetPosition);
 
       window.scrollTo({
-        top: targetScrollY,
+        top: targetPosition,
         behavior: 'smooth'
       });
     }
