@@ -25,6 +25,14 @@ const Navigation = () => {
     setIsMenuOpen(false);
   };
 
+  const scrollToCabinets = () => {
+    const cabinetsSection = document.getElementById('cabinets');
+    if (cabinetsSection) {
+      cabinetsSection.scrollIntoView({ behavior: 'smooth' });
+    }
+    setIsMenuOpen(false);
+  };
+
   return (
     <>
       {/* Trust Bar */}
@@ -98,15 +106,13 @@ const Navigation = () => {
 
             {/* Desktop CTA - Enhanced */}
             <div className="hidden md:block">
-              <a
-                href="https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874"
-                target="_blank"
-                rel="noopener noreferrer"
+              <button
+                onClick={scrollToCabinets}
                 className="inline-flex items-center gap-2 px-6 py-3 bg-green-600 text-white font-bold rounded-xl hover:bg-green-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 hover-scale"
               >
                 <Calendar className="h-5 w-5" />
                 Réserver ma consultation
-              </a>
+              </button>
               <div className="text-xs text-green-700 font-medium mt-1 text-center">
                 🔥 Places disponibles cette semaine
               </div>
@@ -156,15 +162,13 @@ const Navigation = () => {
                   Consultations
                 </button>
                 
-                <a
-                  href="https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <button
+                  onClick={scrollToCabinets}
                   className="inline-flex items-center gap-2 justify-center px-6 py-3 bg-green-600 text-white font-bold rounded-xl hover:bg-green-700 transition-all duration-300 shadow-lg"
                 >
                   <Calendar className="h-5 w-5" />
                   Réserver ma consultation
-                </a>
+                </button>
                 <div className="text-xs text-green-700 font-medium text-center">
                   🔥 Places disponibles cette semaine
                 </div>
