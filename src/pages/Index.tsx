@@ -596,12 +596,12 @@ const Index = () => {
               <Phone className="h-6 w-6 text-green-600" aria-hidden="true" />
               <div>
                 <h4 className="font-semibold text-gray-900">Questions ?</h4>
-                <p className="text-gray-600">+352 XX XX XX XX</p>
+                <p className="text-gray-600">+352691379172</p>
               </div>
               <Mail className="h-6 w-6 text-green-600 ml-8" aria-hidden="true" />
               <div>
                 <h4 className="font-semibold text-gray-900">Email</h4>
-                <p className="text-gray-600">gabriela@conseildietetique.lu</p>
+                <p className="text-gray-600">gabriela.ferent@conseildietetique.lu</p>
               </div>
             </div>
             
