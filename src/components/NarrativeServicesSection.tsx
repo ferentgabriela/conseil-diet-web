@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Shield, Heart, CheckCircle, Calendar } from 'lucide-react';
 
@@ -11,7 +10,7 @@ const NarrativeServicesSection = () => {
   };
 
   return (
-    <section id="services" className="py-20 bg-white">
+    <section id="services" className="py-20 bg-white mb-32">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
