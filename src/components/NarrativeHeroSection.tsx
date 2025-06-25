@@ -18,7 +18,7 @@ const NarrativeHeroSection = () => {
   };
 
   return (
-    <section id="accueil" className="pt-24 pb-16 bg-gradient-to-br from-green-50 via-blue-25 to-green-25 relative overflow-hidden">
+    <section id="accueil" className="pt-8 pb-16 bg-gradient-to-br from-green-50 via-blue-25 to-green-25 relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 bg-gradient-to-r from-green-100/20 to-blue-100/20"></div>
       
@@ -84,7 +84,7 @@ const NarrativeHeroSection = () => {
           <div className="text-center">
             <button
               onClick={scrollToAbout}
-              className="inline-flex items-center gap-2 text-green-700 hover:text-green-800 font-medium transition-colors"
+              className="inline-flex items-center gap-2 text-green-700 hover:text-green-800 font-medium transition-colors hover-scale"
             >
               <Heart className="h-4 w-4" />
               Découvrez pourquoi me choisir

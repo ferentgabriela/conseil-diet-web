@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -99,5 +100,13 @@
 
   body {
     @apply bg-background text-foreground;
+    padding-top: 120px; /* Account for trust bar + nav */
+  }
+}
+
+@layer utilities {
+  /* Hover Scale Animation */
+  .hover-scale {
+    @apply transition-transform duration-200 hover:scale-105;
   }
 }
