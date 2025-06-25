@@ -55,12 +55,11 @@ const Navigation = () => {
           <div className="flex justify-between items-center py-4">
             {/* Logo/Brand */}
             <div className="flex items-center">
-              <h1 className="text-xl md:text-2xl font-bold text-gray-900">
-                Gabriela Ferent
-              </h1>
-              <span className="hidden md:block text-sm text-green-600 ml-2 font-medium">
-                Diététicienne Luxembourg
-              </span>
+              <img 
+                src="/lovable-uploads/78e4cbae-9ecc-4ed6-808f-a5c42d697691.png" 
+                alt="Gabriela Ferent - Diététicienne Luxembourg" 
+                className="h-12 md:h-14"
+              />
             </div>
 
             {/* Desktop Menu - Journey Navigation */}
