@@ -1,4 +1,3 @@
-
 import React, { useState, useRef, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -176,8 +175,8 @@ export const ChatPopup = ({ isOpen: externalIsOpen, onToggle }: ChatPopupProps) 
           <div className="absolute inset-0 bg-green-400 rounded-full animate-ping opacity-20"></div>
           <div className="absolute inset-0 bg-green-500 rounded-full animate-pulse opacity-30"></div>
           
-          {/* Icon with breathing animation */}
-          <MessageCircle className="h-7 w-7 relative z-10 animate-pulse group-hover:animate-bounce" />
+          {/* Icon with breathing animation - Made bigger */}
+          <MessageCircle className="h-9 w-9 relative z-10 animate-pulse group-hover:animate-bounce" />
           
           {/* Floating notification dot */}
           <div className="absolute -top-1 -right-1 h-4 w-4 bg-red-500 rounded-full animate-bounce">
