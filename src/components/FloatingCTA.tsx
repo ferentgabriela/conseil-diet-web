@@ -18,7 +18,7 @@ const FloatingCTA = () => {
   if (!isVisible) return null;
 
   return (
-    <div className="fixed bottom-4 right-4 z-50 animate-fade-in">
+    <div className="fixed bottom-4 left-4 z-50 animate-fade-in">
       <div className="bg-green-600 text-white rounded-2xl shadow-2xl p-4 max-w-sm border-2 border-green-500">
         <div className="text-center">
           <p className="font-semibold mb-2 text-sm">
