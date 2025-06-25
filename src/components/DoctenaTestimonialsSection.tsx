@@ -9,78 +9,11 @@ const DoctenaTestimonialsSection = () => {
     script.async = true;
     document.head.appendChild(script);
 
-    // Add custom styles for the widget with more specific selectors
-    const style = document.createElement('style');
-    style.textContent = `
-      /* Main widget container */
-      #doctena-reviews-widget,
-      div[data-toggle="doc-reviews"] {
-        background-color: rgb(240, 253, 244) !important;
-        border-radius: 8px !important;
-        padding: 20px !important;
-      }
-      
-      /* All nested elements within the widget */
-      #doctena-reviews-widget *,
-      div[data-toggle="doc-reviews"] * {
-        background-color: rgb(240, 253, 244) !important;
-      }
-      
-      /* Specific widget classes */
-      .doc-review-widget,
-      .doc-review-widget > div,
-      .doc-review-item,
-      .doc-review-content,
-      .doc-review-header {
-        background-color: rgb(240, 253, 244) !important;
-      }
-      
-      /* Override any white backgrounds */
-      #doctena-reviews-widget [style*="background-color: white"],
-      #doctena-reviews-widget [style*="background-color:#fff"],
-      #doctena-reviews-widget [style*="background-color: #ffffff"] {
-        background-color: rgb(240, 253, 244) !important;
-      }
-    `;
-    document.head.appendChild(style);
-
-    // Apply styles after widget loads with multiple attempts
-    const applyStyles = () => {
-      const widget = document.querySelector('#doctena-reviews-widget');
-      const widgetByAttr = document.querySelector('div[data-toggle="doc-reviews"]');
-      
-      if (widget || widgetByAttr) {
-        const targetElement = widget || widgetByAttr;
-        if (targetElement) {
-          const htmlElement = targetElement as HTMLElement;
-          htmlElement.style.backgroundColor = 'rgb(240, 253, 244)';
-          htmlElement.style.borderRadius = '8px';
-          htmlElement.style.padding = '20px';
-          
-          // Apply to all child elements
-          const allChildren = targetElement.querySelectorAll('*');
-          allChildren.forEach(child => {
-            (child as HTMLElement).style.backgroundColor = 'rgb(240, 253, 244)';
-          });
-        }
-      }
-    };
-
-    // Try applying styles at different intervals
-    setTimeout(applyStyles, 1000);
-    setTimeout(applyStyles, 3000);
-    setTimeout(applyStyles, 5000);
-
     return () => {
-      // Cleanup script and styles on unmount
+      // Cleanup script on unmount
       const existingScript = document.querySelector('script[src="https://api.doctena.lu/js/widgetRatings/calendar/build.php"]');
       if (existingScript) {
         existingScript.remove();
-      }
-      
-      const existingStyle = document.querySelector('style');
-      if (existingStyle && existingStyle.textContent?.includes('#doctena-reviews-widget')) {
-        existingStyle.remove();
       }
     };
   }, []);
@@ -98,13 +31,31 @@ const DoctenaTestimonialsSection = () => {
         </div>
 
         <div className="max-w-4xl mx-auto">
-          <div 
-            data-toggle="doc-reviews" 
-            data-doctor-eid="492d6313-2026-4e38-ba00-ffd3a88d67de" 
-            data-language="fr"
-            id="doctena-reviews-widget"
-            style={{ backgroundColor: 'rgb(240, 253, 244)', borderRadius: '8px', padding: '20px' }}
-          ></div>
+          {/* Widget container with better integration */}
+          <div className="relative">
+            {/* Background decoration to soften the transition */}
+            <div className="absolute inset-0 bg-gradient-to-b from-green-50 via-green-25 to-white rounded-xl"></div>
+            
+            {/* Widget wrapper with subtle styling */}
+            <div className="relative bg-white rounded-xl shadow-sm border border-green-100 overflow-hidden">
+              {/* Top decoration bar */}
+              <div className="h-1 bg-gradient-to-r from-green-400 to-green-600"></div>
+              
+              {/* Widget container */}
+              <div className="p-6">
+                <div 
+                  data-toggle="doc-reviews" 
+                  data-doctor-eid="492d6313-2026-4e38-ba00-ffd3a88d67de" 
+                  data-language="fr"
+                  id="doctena-reviews-widget"
+                ></div>
+              </div>
+            </div>
+            
+            {/* Side decorations */}
+            <div className="absolute -left-4 top-1/2 transform -translate-y-1/2 w-8 h-16 bg-green-200 rounded-r-full opacity-30"></div>
+            <div className="absolute -right-4 top-1/2 transform -translate-y-1/2 w-8 h-16 bg-green-200 rounded-l-full opacity-30"></div>
+          </div>
         </div>
 
         <div className="text-center mt-12">
