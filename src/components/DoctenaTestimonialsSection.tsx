@@ -9,11 +9,36 @@ const DoctenaTestimonialsSection = () => {
     script.async = true;
     document.head.appendChild(script);
 
+    // Add custom styles for the widget
+    const style = document.createElement('style');
+    style.textContent = `
+      #doctena-reviews-widget {
+        background-color: rgb(240, 253, 244) !important;
+      }
+      
+      #doctena-reviews-widget .doc-review-widget,
+      #doctena-reviews-widget .doc-review-widget > div,
+      #doctena-reviews-widget .doc-review-item {
+        background-color: rgb(240, 253, 244) !important;
+      }
+      
+      #doctena-reviews-widget .doc-review-widget {
+        border-radius: 8px !important;
+        padding: 20px !important;
+      }
+    `;
+    document.head.appendChild(style);
+
     return () => {
-      // Cleanup script on unmount
+      // Cleanup script and styles on unmount
       const existingScript = document.querySelector('script[src="https://api.doctena.lu/js/widgetRatings/calendar/build.php"]');
       if (existingScript) {
         existingScript.remove();
+      }
+      
+      const existingStyle = document.querySelector('style');
+      if (existingStyle && existingStyle.textContent?.includes('#doctena-reviews-widget')) {
+        existingStyle.remove();
       }
     };
   }, []);
