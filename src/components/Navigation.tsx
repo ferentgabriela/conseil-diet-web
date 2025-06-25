@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Menu, X, Phone, Mail } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
 
 const Navigation = () => {
@@ -28,8 +28,8 @@ const Navigation = () => {
             </div>
           </div>
 
-          {/* Desktop Menu - Story Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          {/* Desktop Menu - Centered */}
+          <div className="hidden md:flex items-center justify-center flex-1 space-x-8 ml-8">
             <button
               onClick={() => scrollToSection('accueil')}
               className="text-gray-800 hover:text-green-600 transition-colors font-semibold text-base"
@@ -60,6 +60,10 @@ const Navigation = () => {
             >
               Services
             </button>
+          </div>
+
+          {/* Desktop CTA */}
+          <div className="hidden md:block">
             <a
               href="https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874"
               target="_blank"
@@ -125,22 +129,6 @@ const Navigation = () => {
             </div>
           </div>
         )}
-      </div>
-      
-      {/* Contact Information at Bottom */}
-      <div className="bg-gray-50 border-t border-gray-200">
-        <div className="container mx-auto px-4 py-3">
-          <div className="flex flex-col sm:flex-row justify-center items-center space-y-2 sm:space-y-0 sm:space-x-6 text-sm text-gray-600">
-            <div className="flex items-center hover:text-green-600 transition-colors cursor-pointer">
-              <Phone className="h-4 w-4 mr-1" />
-              <a href="tel:+352691379172">+352 691 379 172</a>
-            </div>
-            <div className="flex items-center hover:text-green-600 transition-colors">
-              <Mail className="h-4 w-4 mr-1" />
-              <a href="mailto:gabriela.ferent@conseildietetique.lu">gabriela.ferent@conseildietetique.lu</a>
-            </div>
-          </div>
-        </div>
       </div>
     </nav>
   );

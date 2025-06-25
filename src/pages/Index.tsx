@@ -12,6 +12,7 @@ import CabinetsSection from '@/components/CabinetsSection';
 import DoctenaTestimonialsSection from '@/components/DoctenaTestimonialsSection';
 import FloatingCTA from '@/components/FloatingCTA';
 import AISummaryBlock from '@/components/AISummaryBlock';
+import Footer from '@/components/Footer';
 
 const Index = () => {
   const [isChatOpen, setIsChatOpen] = useState(false);
@@ -38,6 +39,8 @@ const Index = () => {
       <DoctenaTestimonialsSection />        {/* Additional social proof */}
       <FAQSection onOpenChat={handleOpenChat} />  {/* Address final concerns */}
       <AISummaryBlock />                    {/* Final summary */}
+      
+      <Footer />                            {/* Contact information at bottom */}
       
       <ChatPopup isOpen={isChatOpen} onToggle={handleToggleChat} />
       <FloatingCTA />
