@@ -23,7 +23,7 @@ const ServicesSection = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto mb-20">
+        <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
           {/* CNS Consultations */}
           <div className="group bg-gradient-to-br from-green-50 to-green-100 border-2 border-green-200 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 hover:border-green-300">
             <div className="flex items-center mb-6">
