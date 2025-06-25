@@ -1,3 +1,4 @@
+
 import React, { useEffect } from 'react';
 import { Star, Quote, Calendar, ExternalLink } from 'lucide-react';
 
@@ -27,14 +28,14 @@ const DoctenaTestimonialsSection = () => {
       treatment: "Accompagnement nutritionnel"
     },
     {
-      quote: "Gabriela est très professionniste. Elle prende le temps nécessaire pour écouter le patient et trouver la meilleure solution pour lui.",
+      quote: "Gabriela est très professionnelle. Elle prend le temps nécessaire pour écouter le patient et trouver la meilleure solution pour lui.",
       author: "Diana",
       date: "Juillet 2024",
       rating: 5,
       treatment: "Consultation personnalisée"
     },
     {
-      quote: "Mme Gabriela Ferent est une experte dans son domaine et possède l'expertise nécessaire pour cela, j'ai été et suis très satisfaite de ses services, de plus, ses actions ont une direction précise et atteignent l'objectif souhaité, merci !",
+      quote: "Gabriela est une experte dans son domaine et possède l'expertise nécessaire pour cela. J'ai été et suis très satisfaite de ses services. De plus, ses actions ont une direction précise et atteignent l'objectif souhaité. Merci !",
       author: "Carmen",
       date: "Juin 2024",
       rating: 5,
