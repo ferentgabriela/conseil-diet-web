@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Menu, X, Calendar, MapPin, Star, Shield, Heart, Leaf } from 'lucide-react';
+import { Menu, X, Calendar, MapPin, Star, Shield } from 'lucide-react';
 import { useState, useEffect } from 'react';
 
 const Navigation = () => {
@@ -53,19 +53,16 @@ const Navigation = () => {
       }`} style={{ top: '0', marginTop: '40px' }}>
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center py-4">
-            {/* Logo Section with Health Symbol */}
+            {/* Logo Section with Uploaded Logo */}
             <div className="flex items-center gap-4">
-              {/* Health-focused Logo Symbol */}
+              {/* Nutrition Logo from Upload */}
               <div className="relative">
-                <div className="w-14 h-14 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center shadow-lg">
-                  <div className="relative">
-                    {/* Heart symbol with leaf accent for health & nutrition */}
-                    <Heart className="h-7 w-7 text-white fill-white" />
-                    {/* Small leaf accent to represent nutrition/natural health */}
-                    <div className="absolute -top-1 -right-1">
-                      <Leaf className="h-4 w-4 text-green-200" />
-                    </div>
-                  </div>
+                <div className="w-14 h-14 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center shadow-lg p-2">
+                  <img 
+                    src="/lovable-uploads/7aed0187-bfd8-4a87-9d19-94b89433ed0b.png" 
+                    alt="Nutrition Logo"
+                    className="w-10 h-10 object-contain filter brightness-0 invert"
+                  />
                 </div>
                 {/* Subtle glow effect */}
                 <div className="absolute inset-0 w-14 h-14 bg-green-400 rounded-xl blur-lg opacity-20 -z-10"></div>
