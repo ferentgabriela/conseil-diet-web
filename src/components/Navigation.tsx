@@ -19,12 +19,12 @@ const Navigation = () => {
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
-          <div className="flex items-center">
-            <div className="text-2xl font-bold text-green-700">
+          <div className="flex flex-col">
+            <div className="text-3xl font-bold text-gray-900">
               Gabriela Ferent
             </div>
-            <div className="ml-2 text-sm text-gray-600 hidden sm:block">
-              Diététicienne Luxembourg
+            <div className="text-base text-green-600 font-medium">
+              Diététicienne Nutritionniste Certifiée
             </div>
           </div>
 
@@ -32,31 +32,31 @@ const Navigation = () => {
           <div className="hidden md:flex items-center space-x-8">
             <button
               onClick={() => scrollToSection('accueil')}
-              className="text-gray-700 hover:text-green-600 transition-colors"
+              className="text-gray-800 hover:text-green-600 transition-colors font-semibold text-base"
             >
               Accueil
             </button>
             <button
               onClick={() => scrollToSection('apropos')}
-              className="text-gray-700 hover:text-green-600 transition-colors"
+              className="text-gray-800 hover:text-green-600 transition-colors font-semibold text-base"
             >
               Pourquoi
             </button>
             <button
               onClick={() => scrollToSection('processus')}
-              className="text-gray-700 hover:text-green-600 transition-colors"
+              className="text-gray-800 hover:text-green-600 transition-colors font-semibold text-base"
             >
               Processus
             </button>
             <button
               onClick={() => scrollToSection('transformations')}
-              className="text-gray-700 hover:text-green-600 transition-colors"
+              className="text-gray-800 hover:text-green-600 transition-colors font-semibold text-base"
             >
               Témoignages
             </button>
             <button
               onClick={() => scrollToSection('services')}
-              className="text-gray-700 hover:text-green-600 transition-colors"
+              className="text-gray-800 hover:text-green-600 transition-colors font-semibold text-base"
             >
               Services
             </button>
@@ -68,18 +68,6 @@ const Navigation = () => {
             >
               RDV disponible
             </a>
-          </div>
-
-          {/* Enhanced Contact Info with phone number */}
-          <div className="hidden lg:flex items-center space-x-4 text-sm text-gray-600">
-            <div className="flex items-center hover:text-green-600 transition-colors cursor-pointer">
-              <Phone className="h-4 w-4 mr-1" />
-              <a href="tel:+352123456789">+352 12 34 56 789</a>
-            </div>
-            <div className="flex items-center hover:text-green-600 transition-colors">
-              <Mail className="h-4 w-4 mr-1" />
-              <a href="mailto:gabriela@conseildietetique.lu">gabriela@conseildietetique.lu</a>
-            </div>
           </div>
 
           {/* Mobile Menu Button */}
@@ -97,46 +85,34 @@ const Navigation = () => {
             <div className="flex flex-col space-y-4">
               <button
                 onClick={() => scrollToSection('accueil')}
-                className="text-gray-700 hover:text-green-600 transition-colors text-left"
+                className="text-gray-800 hover:text-green-600 transition-colors text-left font-semibold"
               >
                 Accueil
               </button>
               <button
                 onClick={() => scrollToSection('apropos')}
-                className="text-gray-700 hover:text-green-600 transition-colors text-left"
+                className="text-gray-800 hover:text-green-600 transition-colors text-left font-semibold"
               >
                 Pourquoi
               </button>
               <button
                 onClick={() => scrollToSection('processus')}
-                className="text-gray-700 hover:text-green-600 transition-colors text-left"
+                className="text-gray-800 hover:text-green-600 transition-colors text-left font-semibold"
               >
                 Processus
               </button>
               <button
                 onClick={() => scrollToSection('transformations')}
-                className="text-gray-700 hover:text-green-600 transition-colors text-left"
+                className="text-gray-800 hover:text-green-600 transition-colors text-left font-semibold"
               >
                 Témoignages
               </button>
               <button
                 onClick={() => scrollToSection('services')}
-                className="text-gray-700 hover:text-green-600 transition-colors text-left"
+                className="text-gray-800 hover:text-green-600 transition-colors text-left font-semibold"
               >
                 Services
               </button>
-              
-              {/* Mobile contact info */}
-              <div className="border-t pt-4 space-y-2">
-                <a href="tel:+352123456789" className="flex items-center text-gray-600 hover:text-green-600">
-                  <Phone className="h-4 w-4 mr-2" />
-                  +352 12 34 56 789
-                </a>
-                <a href="mailto:gabriela@conseildietetique.lu" className="flex items-center text-gray-600 hover:text-green-600">
-                  <Mail className="h-4 w-4 mr-2" />
-                  Contact
-                </a>
-              </div>
               
               <a
                 href="https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874"
@@ -149,6 +125,22 @@ const Navigation = () => {
             </div>
           </div>
         )}
+      </div>
+      
+      {/* Contact Information at Bottom */}
+      <div className="bg-gray-50 border-t border-gray-200">
+        <div className="container mx-auto px-4 py-3">
+          <div className="flex flex-col sm:flex-row justify-center items-center space-y-2 sm:space-y-0 sm:space-x-6 text-sm text-gray-600">
+            <div className="flex items-center hover:text-green-600 transition-colors cursor-pointer">
+              <Phone className="h-4 w-4 mr-1" />
+              <a href="tel:+352691379172">+352 691 379 172</a>
+            </div>
+            <div className="flex items-center hover:text-green-600 transition-colors">
+              <Mail className="h-4 w-4 mr-1" />
+              <a href="mailto:gabriela.ferent@conseildietetique.lu">gabriela.ferent@conseildietetique.lu</a>
+            </div>
+          </div>
+        </div>
       </div>
     </nav>
   );
