@@ -53,17 +53,8 @@ const Navigation = () => {
       }`} style={{ top: '0', marginTop: '40px' }}>
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center py-4">
-            {/* Logo Section with Uploaded Logo */}
-            <div className="flex items-center">
-              <img 
-                src="/lovable-uploads/b0d29e69-60af-4752-bce9-cc5a5a110812.png" 
-                alt="Gabriela Ferent - Diététicienne Luxembourg"
-                className="h-16 w-auto object-contain"
-              />
-            </div>
-
             {/* Desktop Menu - Journey Navigation */}
-            <div className="hidden lg:flex items-center justify-center flex-1 space-x-6 ml-8">
+            <div className="hidden lg:flex items-center justify-center flex-1 space-x-6">
               <button
                 onClick={() => scrollToSection('accueil')}
                 className="text-gray-800 hover:text-green-600 transition-colors font-semibold text-sm hover-scale"
