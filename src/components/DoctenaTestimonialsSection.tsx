@@ -52,9 +52,10 @@ const DoctenaTestimonialsSection = () => {
       if (widget || widgetByAttr) {
         const targetElement = widget || widgetByAttr;
         if (targetElement) {
-          targetElement.style.backgroundColor = 'rgb(240, 253, 244)';
-          targetElement.style.borderRadius = '8px';
-          targetElement.style.padding = '20px';
+          const htmlElement = targetElement as HTMLElement;
+          htmlElement.style.backgroundColor = 'rgb(240, 253, 244)';
+          htmlElement.style.borderRadius = '8px';
+          htmlElement.style.padding = '20px';
           
           // Apply to all child elements
           const allChildren = targetElement.querySelectorAll('*');
