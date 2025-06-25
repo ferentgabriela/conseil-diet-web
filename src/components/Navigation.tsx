@@ -59,7 +59,7 @@ const Navigation = () => {
               <div className="relative">
                 <div className="w-14 h-14 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center shadow-lg p-2">
                   <img 
-                    src="/lovable-uploads/7aed0187-bfd8-4a87-9d19-94b89433ed0b.png" 
+                    src="/lovable-uploads/3db52de8-c224-45ab-8471-9f77daaeaaf9.png" 
                     alt="Nutrition Logo"
                     className="w-10 h-10 object-contain filter brightness-0 invert"
                   />
