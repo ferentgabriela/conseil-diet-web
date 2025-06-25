@@ -51,13 +51,20 @@ const Index = () => {
         </div>
       </header>
 
-      {/* Hero Section */}
-      <section id="accueil" className="py-20 px-4" role="main">
-        <div className="container mx-auto text-center max-w-4xl">
+      {/* Hero Section with Background Image */}
+      <section id="accueil" className="relative py-20 px-4 bg-gradient-to-r from-green-600/10 to-blue-600/10" role="main">
+        <div className="absolute inset-0 bg-black/20"></div>
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
+          style={{
+            backgroundImage: `url('https://images.unsplash.com/photo-1649972904349-6e44c42644a7?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80')`
+          }}
+        ></div>
+        <div className="container mx-auto text-center max-w-4xl relative z-10">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Consultations Diététiques au Luxembourg
           </h2>
-          <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+          <p className="text-xl text-gray-700 mb-8 leading-relaxed bg-white/90 p-6 rounded-lg shadow-lg">
             Je suis Gabriela Ferent, diététicienne diplômée. Je propose des suivis nutritionnels 
             <strong> remboursés par la CNS</strong> (sur prescription médicale) et des consultations privées 
             pour tous vos besoins en nutrition et bien-être.
@@ -75,7 +82,7 @@ const Index = () => {
             <Button 
               variant="outline" 
               size="lg" 
-              className="text-lg px-8 py-4"
+              className="text-lg px-8 py-4 bg-white/90 hover:bg-white"
               onClick={() => document.getElementById('cns')?.scrollIntoView({ behavior: 'smooth' })}
               aria-label="Découvrir les services de nutrition"
             >
@@ -101,8 +108,14 @@ const Index = () => {
           </div>
           
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <Card className="border-green-200 bg-green-50">
+            <div className="relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-lg"></div>
+              <img 
+                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                alt="Consultation médicale - diététicienne avec patient"
+                className="w-full h-80 object-cover rounded-lg shadow-lg relative z-10"
+              />
+              <Card className="border-green-200 bg-green-50 mt-6">
                 <CardHeader>
                   <div className="flex items-center space-x-3">
                     <FileText className="h-8 w-8 text-green-600" aria-hidden="true" />
@@ -203,9 +216,18 @@ const Index = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
             <article className="hover:shadow-lg transition-shadow border-blue-100">
-              <Card>
+              <Card className="h-full">
                 <CardHeader className="text-center">
-                  <Utensils className="h-12 w-12 text-blue-600 mx-auto mb-4" aria-hidden="true" />
+                  <div className="relative mb-4">
+                    <img 
+                      src="https://images.unsplash.com/photo-1523712999610-f77fbcfc3843?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                      alt="Aliments sains et équilibrés"
+                      className="w-full h-32 object-cover rounded-lg"
+                    />
+                    <div className="absolute inset-0 bg-blue-600/20 rounded-lg flex items-center justify-center">
+                      <Utensils className="h-12 w-12 text-white" aria-hidden="true" />
+                    </div>
+                  </div>
                   <CardTitle className="text-blue-800">Rééquilibrage Alimentaire</CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -222,9 +244,18 @@ const Index = () => {
             </article>
 
             <article className="hover:shadow-lg transition-shadow border-blue-100">
-              <Card>
+              <Card className="h-full">
                 <CardHeader className="text-center">
-                  <Activity className="h-12 w-12 text-blue-600 mx-auto mb-4" aria-hidden="true" />
+                  <div className="relative mb-4">
+                    <img 
+                      src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                      alt="Bien-être et activité physique"
+                      className="w-full h-32 object-cover rounded-lg"
+                    />
+                    <div className="absolute inset-0 bg-blue-600/20 rounded-lg flex items-center justify-center">
+                      <Activity className="h-12 w-12 text-white" aria-hidden="true" />
+                    </div>
+                  </div>
                   <CardTitle className="text-blue-800">Gestion du Poids</CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -241,9 +272,18 @@ const Index = () => {
             </article>
 
             <article className="hover:shadow-lg transition-shadow border-blue-100">
-              <Card>
+              <Card className="h-full">
                 <CardHeader className="text-center">
-                  <Users className="h-12 w-12 text-blue-600 mx-auto mb-4" aria-hidden="true" />
+                  <div className="relative mb-4">
+                    <img 
+                      src="https://images.unsplash.com/photo-1721322800607-8c38375eef04?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                      alt="Famille autour d'une table"
+                      className="w-full h-32 object-cover rounded-lg"
+                    />
+                    <div className="absolute inset-0 bg-blue-600/20 rounded-lg flex items-center justify-center">
+                      <Users className="h-12 w-12 text-white" aria-hidden="true" />
+                    </div>
+                  </div>
                   <CardTitle className="text-blue-800">Nutrition Familiale</CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -300,7 +340,17 @@ const Index = () => {
 
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             <article className="hover:shadow-lg transition-shadow">
-              <Card>
+              <Card className="h-full">
+                <div className="relative">
+                  <img 
+                    src="https://images.unsplash.com/photo-1721322800607-8c38375eef04?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                    alt="Cabinet Luxembourg - salle de consultation moderne"
+                    className="w-full h-48 object-cover rounded-t-lg"
+                  />
+                  <div className="absolute top-4 right-4 bg-green-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                    Principal
+                  </div>
+                </div>
                 <CardHeader className="text-center">
                   <MapPin className="h-12 w-12 text-green-600 mx-auto mb-4" aria-hidden="true" />
                   <CardTitle className="text-green-800">Luxembourg Ville</CardTitle>
@@ -321,7 +371,14 @@ const Index = () => {
             </article>
 
             <article className="hover:shadow-lg transition-shadow">
-              <Card>
+              <Card className="h-full">
+                <div className="relative">
+                  <img 
+                    src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                    alt="Cabinet Ettelbruck - espace de consultation confortable"
+                    className="w-full h-48 object-cover rounded-t-lg"
+                  />
+                </div>
                 <CardHeader className="text-center">
                   <MapPin className="h-12 w-12 text-green-600 mx-auto mb-4" aria-hidden="true" />
                   <CardTitle className="text-green-800">Ettelbruck</CardTitle>
@@ -342,7 +399,14 @@ const Index = () => {
             </article>
 
             <article className="hover:shadow-lg transition-shadow">
-              <Card>
+              <Card className="h-full">
+                <div className="relative">
+                  <img 
+                    src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                    alt="Cabinet Insenborn - environnement chaleureux et accueillant"
+                    className="w-full h-48 object-cover rounded-t-lg"
+                  />
+                </div>
                 <CardHeader className="text-center">
                   <MapPin className="h-12 w-12 text-green-600 mx-auto mb-4" aria-hidden="true" />
                   <CardTitle className="text-green-800">Insenborn</CardTitle>
