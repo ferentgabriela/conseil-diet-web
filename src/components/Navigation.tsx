@@ -54,32 +54,12 @@ const Navigation = () => {
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center py-4">
             {/* Logo Section with Uploaded Logo */}
-            <div className="flex items-center gap-4">
-              {/* Nutrition Logo from Upload */}
-              <div className="relative">
-                <div className="w-14 h-14 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center shadow-lg p-2">
-                  <img 
-                    src="/lovable-uploads/3db52de8-c224-45ab-8471-9f77daaeaaf9.png" 
-                    alt="Nutrition Logo"
-                    className="w-10 h-10 object-contain filter brightness-0 invert"
-                  />
-                </div>
-                {/* Subtle glow effect */}
-                <div className="absolute inset-0 w-14 h-14 bg-green-400 rounded-xl blur-lg opacity-20 -z-10"></div>
-              </div>
-              
-              {/* Centered Text Content */}
-              <div className="flex flex-col justify-center">
-                <div className="text-2xl md:text-3xl font-bold text-gray-900 leading-tight">
-                  Gabriela Ferent
-                </div>
-                <div className="text-sm md:text-base text-green-600 font-medium leading-tight">
-                  Diététicienne – Luxembourg
-                </div>
-                <div className="text-xs text-gray-600 leading-tight">
-                  Consultations remboursées CNS jusqu'à 80%
-                </div>
-              </div>
+            <div className="flex items-center">
+              <img 
+                src="/lovable-uploads/b0d29e69-60af-4752-bce9-cc5a5a110812.png" 
+                alt="Gabriela Ferent - Diététicienne Luxembourg"
+                className="h-16 w-auto object-contain"
+              />
             </div>
 
             {/* Desktop Menu - Journey Navigation */}
