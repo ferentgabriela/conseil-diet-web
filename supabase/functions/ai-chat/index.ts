@@ -44,10 +44,10 @@ serve(async (req) => {
 - Nutrition pendant la grossesse
 - Accompagnement des seniors
 
-**IMPORTANT pour les localisations :** Quand tu mentionnes les cabinets, utilise ce format :
-- Doctena Luxembourg (https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874)
-- Doctena Ettelbruck (https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874)
-- Doctena Insenborn (https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874)
+**IMPORTANT pour les localisations :** Quand tu mentionnes les cabinets, utilise ce format exact :
+- Luxembourg - [RDV Doctena](https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874)
+- Ettelbruck - [RDV Doctena](https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874)
+- Insenborn - [RDV Doctena](https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874)
 
 Réponds toujours en français, sois professionnel mais chaleureux, et guide les utilisateurs vers la prise de rendez-vous.`,
 
@@ -73,10 +73,10 @@ Réponds toujours en français, sois professionnel mais chaleureux, et guide les
 - Nutrition during pregnancy
 - Support for seniors
 
-**IMPORTANT for locations:** When mentioning the clinics, use this format:
-- Doctena Luxembourg (https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874)
-- Doctena Ettelbruck (https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874)
-- Doctena Insenborn (https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874)
+**IMPORTANT for locations:** When mentioning the clinics, use this exact format:
+- Luxembourg - [RDV Doctena](https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874)
+- Ettelbruck - [RDV Doctena](https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874)
+- Insenborn - [RDV Doctena](https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874)
 
 Always respond in English, be professional but warm, and guide users toward booking appointments.`,
 
@@ -102,10 +102,10 @@ Always respond in English, be professional but warm, and guide users toward book
 - Nutriție în timpul sarcinii
 - Sprijin pentru seniori
 
-**IMPORTANT pentru locații:** Când menționezi cabinetele, folosește acest format:
-- Doctena Luxembourg (https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874)
-- Doctena Ettelbruck (https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874)
-- Doctena Insenborn (https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874)
+**IMPORTANT pentru locații:** Când menționezi cabinetele, folosește acest format exact:
+- Luxembourg - [RDV Doctena](https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874)
+- Ettelbruck - [RDV Doctena](https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874)
+- Insenborn - [RDV Doctena](https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874)
 
 Răspunde întotdeauna în română, fii profesional dar cald, și ghidează utilizatorii către programare.`,
 
@@ -131,10 +131,10 @@ Răspunde întotdeauna în română, fii profesional dar cald, și ghidează uti
 - Ernährung während der Schwangerschaft
 - Unterstützung für Senioren
 
-**WICHTIG für Standorte:** Wenn du die Praxen erwähnst, verwende dieses Format:
-- Doctena Luxembourg (https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874)
-- Doctena Ettelbruck (https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874)
-- Doctena Insenborn (https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874)
+**WICHTIG für Standorte:** Wenn du die Praxen erwähnst, verwende dieses exakte Format:
+- Luxembourg - [RDV Doctena](https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874)
+- Ettelbruck - [RDV Doctena](https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874)
+- Insenborn - [RDV Doctena](https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874)
 
 Antworte immer auf Deutsch, sei professionell aber herzlich, und führe Nutzer zur Terminbuchung.`
     };
