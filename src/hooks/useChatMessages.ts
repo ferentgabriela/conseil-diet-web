@@ -11,10 +11,29 @@ interface Message {
   created_at: string;
 }
 
+// Database message type (what we get from Supabase)
+interface DatabaseMessage {
+  id: string;
+  message: string;
+  sender: string;
+  message_type: string | null;
+  created_at: string;
+  conversation_id: string;
+}
+
 export const useChatMessages = (sessionId: string) => {
   const [messages, setMessages] = useState<Message[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const { toast } = useToast();
+
+  // Helper function to convert database message to our Message type
+  const convertDatabaseMessage = (dbMessage: DatabaseMessage): Message => ({
+    id: dbMessage.id,
+    message: dbMessage.message,
+    sender: dbMessage.sender as 'user' | 'ai',
+    message_type: (dbMessage.message_type || 'text') as 'text' | 'system' | 'forwarded',
+    created_at: dbMessage.created_at,
+  });
 
   // Create or get conversation
   const initializeConversation = async () => {
@@ -59,7 +78,10 @@ export const useChatMessages = (sessionId: string) => {
 
         if (error) throw error;
 
-        setMessages(messagesData || []);
+        if (messagesData) {
+          const convertedMessages = messagesData.map(convertDatabaseMessage);
+          setMessages(convertedMessages);
+        }
       }
     } catch (error) {
       console.error('Error loading messages:', error);
@@ -97,7 +119,7 @@ export const useChatMessages = (sessionId: string) => {
       if (userMsgError) throw userMsgError;
 
       // Add user message to state immediately
-      setMessages(prev => [...prev, userMsgData]);
+      setMessages(prev => [...prev, convertDatabaseMessage(userMsgData)]);
 
       // Generate AI response
       const aiResponse = generateAIResponse(userMessage);
@@ -117,7 +139,7 @@ export const useChatMessages = (sessionId: string) => {
       if (aiMsgError) throw aiMsgError;
 
       // Add AI message to state
-      setMessages(prev => [...prev, aiMsgData]);
+      setMessages(prev => [...prev, convertDatabaseMessage(aiMsgData)]);
 
     } catch (error) {
       console.error('Error sending message:', error);
