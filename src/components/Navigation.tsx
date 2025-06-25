@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Menu, X, Calendar, MapPin, Star, Shield } from 'lucide-react';
 import { useState, useEffect } from 'react';
@@ -27,13 +28,17 @@ const Navigation = () => {
   const scrollToCabinets = () => {
     const cabinetsSection = document.getElementById('cabinets');
     if (cabinetsSection) {
-      // Calculate offset for fixed header (trust bar 40px + navigation ~88px + extra padding for title visibility)
-      const headerOffset = 200;
-      const elementPosition = cabinetsSection.offsetTop;
-      const offsetPosition = elementPosition - headerOffset;
+      // Get the element's position relative to the viewport
+      const rect = cabinetsSection.getBoundingClientRect();
+      // Get current scroll position
+      const currentScrollY = window.scrollY;
+      // Calculate target position: current scroll + element's top position - fixed header height
+      // Trust bar (40px) + Navigation (88px) + extra padding for title visibility (100px)
+      const headerOffset = 228;
+      const targetScrollY = currentScrollY + rect.top - headerOffset;
 
       window.scrollTo({
-        top: offsetPosition,
+        top: targetScrollY,
         behavior: 'smooth'
       });
     }
