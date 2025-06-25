@@ -175,7 +175,7 @@ const Navigation = () => {
       </nav>
 
       {/* Spacer to prevent content from going behind fixed header */}
-      <div className="h-[120px]"></div>
+      <div className="h-[60px]"></div>
     </>
   );
 };
