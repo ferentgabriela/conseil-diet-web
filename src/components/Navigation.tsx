@@ -33,28 +33,30 @@ const Navigation = () => {
   const scrollToCabinets = () => {
     const cabinetsSection = document.getElementById('cabinets');
     if (cabinetsSection) {
-      // Use a much larger offset to ensure the title is completely visible
-      // Trust bar is 40px + Navigation height + section padding + title space
-      const trustBarHeight = 40;
+      // Calculate the actual heights of fixed elements
+      const trustBarElement = document.querySelector('div[class*="bg-green-50"]');
       const navigationElement = document.querySelector('nav');
-      const navigationHeight = navigationElement ? navigationElement.offsetHeight : 88;
-      const totalHeaderHeight = trustBarHeight + navigationHeight;
       
-      // Increase padding significantly to ensure title visibility
-      const extraPadding = 80; // Increased from 20px to 80px
-      const finalOffset = totalHeaderHeight + extraPadding;
+      // Get actual heights
+      const trustBarHeight = trustBarElement ? trustBarElement.getBoundingClientRect().height : 40;
+      const navigationHeight = navigationElement ? navigationElement.getBoundingClientRect().height : 88;
+      
+      // Add significant padding to ensure the title is fully visible
+      const extraPadding = 120; // Increased padding for better visibility
+      const totalOffset = trustBarHeight + navigationHeight + extraPadding;
 
-      console.log('Trust bar height:', trustBarHeight);
-      console.log('Navigation height:', navigationHeight);
-      console.log('Total header height:', totalHeaderHeight);
-      console.log('Final offset:', finalOffset);
+      console.log('Trust bar actual height:', trustBarHeight);
+      console.log('Navigation actual height:', navigationHeight);
+      console.log('Extra padding:', extraPadding);
+      console.log('Total offset:', totalOffset);
 
-      // Get element position and scroll to it
+      // Get the section's position and scroll with the calculated offset
       const elementPosition = cabinetsSection.getBoundingClientRect().top + window.scrollY;
-      const targetPosition = elementPosition - finalOffset;
+      const targetPosition = Math.max(0, elementPosition - totalOffset);
 
       console.log('Element position:', elementPosition);
       console.log('Target scroll position:', targetPosition);
+      console.log('Current scroll position:', window.scrollY);
 
       window.scrollTo({
         top: targetPosition,
