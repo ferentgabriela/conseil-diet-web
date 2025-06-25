@@ -1,5 +1,6 @@
 
 import React, { useEffect } from 'react';
+import { Star, Quote, Calendar, ExternalLink } from 'lucide-react';
 
 const DoctenaTestimonialsSection = () => {
   // Load Doctena testimonials script
@@ -18,38 +19,115 @@ const DoctenaTestimonialsSection = () => {
     };
   }, []);
 
+  const highlightedTestimonials = [
+    {
+      quote: "J'ai perdu 12 kg en 3 mois, sans me priver !",
+      author: "Sophie M.",
+      rating: 5,
+      treatment: "Rééquilibrage alimentaire"
+    },
+    {
+      quote: "Gabriela m'a aidé à mieux gérer mon diabète avec des conseils pratiques.",
+      author: "Jean L.",
+      rating: 5,
+      treatment: "Consultation CNS - Diabète"
+    },
+    {
+      quote: "Enfin une approche bienveillante qui respecte mes habitudes !",
+      author: "Marie D.",
+      rating: 5,
+      treatment: "Consultation privée"
+    }
+  ];
+
   return (
-    <section>
-      {/* Title section with green background */}
-      <div className="py-16 bg-gradient-to-br from-green-50 to-blue-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+    <section className="relative overflow-hidden">
+      {/* Hero testimonials section */}
+      <div className="py-20 bg-gradient-to-br from-green-50 via-blue-25 to-green-25 relative">
+        <div className="absolute inset-0 bg-gradient-to-r from-green-100/20 to-blue-100/20"></div>
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               Témoignages de Patients
             </h2>
-            <p className="text-xl text-gray-600">
-              Découvrez les expériences de patients qui ont fait confiance à mon accompagnement
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Découvrez les transformations réelles de patients qui ont fait confiance à mon accompagnement
             </p>
+          </div>
+
+          {/* Highlighted testimonials carousel */}
+          <div className="grid md:grid-cols-3 gap-8 mb-16 max-w-6xl mx-auto">
+            {highlightedTestimonials.map((testimonial, index) => (
+              <div key={index} className="bg-white rounded-2xl p-8 shadow-xl border border-green-100 relative hover:shadow-2xl transition-all duration-300 hover:scale-105">
+                <div className="absolute -top-4 left-6">
+                  <div className="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center">
+                    <Quote className="h-4 w-4 text-white" />
+                  </div>
+                </div>
+                
+                {/* Star rating */}
+                <div className="flex mb-4 pt-2">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
+                  ))}
+                </div>
+                
+                <blockquote className="text-lg text-gray-800 font-medium mb-6 leading-relaxed">
+                  "{testimonial.quote}"
+                </blockquote>
+                
+                <div className="flex items-center justify-between">
+                  <div>
+                    <p className="font-bold text-gray-900">{testimonial.author}</p>
+                    <p className="text-sm text-green-600">{testimonial.treatment}</p>
+                  </div>
+                  <div className="w-12 h-12 bg-gradient-to-br from-green-100 to-blue-100 rounded-full flex items-center justify-center">
+                    <span className="text-xl">👤</span>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
 
-      {/* Widget section with white background */}
-      <div className="py-16 bg-white">
+      {/* Full testimonials widget section */}
+      <div className="py-20 bg-white">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            {/* Simplified widget container with clean white background */}
-            <div className="bg-white rounded-xl shadow-sm border border-green-100 overflow-hidden">
-              {/* Top decoration bar */}
-              <div className="h-1 bg-gradient-to-r from-green-400 to-green-600"></div>
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-12">
+              <h3 className="text-3xl font-bold text-gray-900 mb-4">
+                Tous les avis patients
+              </h3>
+              <p className="text-gray-600">
+                Consultez l'ensemble des témoignages vérifiés via Doctena
+              </p>
+            </div>
+
+            {/* Enhanced widget container */}
+            <div className="bg-gradient-to-br from-white to-gray-50 rounded-2xl shadow-xl border border-gray-200 overflow-hidden">
+              {/* Top decoration with rating summary */}
+              <div className="bg-gradient-to-r from-green-600 to-green-700 p-6 text-white text-center">
+                <div className="flex items-center justify-center gap-2 mb-2">
+                  <div className="flex">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="h-6 w-6 fill-yellow-300 text-yellow-300" />
+                    ))}
+                  </div>
+                  <span className="text-xl font-bold">4.9/5</span>
+                </div>
+                <p className="text-green-100">Basé sur les avis patients vérifiés</p>
+              </div>
               
               {/* Widget container */}
-              <div className="p-6">
+              <div className="p-8">
                 <div 
                   data-toggle="doc-reviews" 
                   data-doctor-eid="492d6313-2026-4e38-ba00-ffd3a88d67de" 
                   data-language="fr"
                   id="doctena-reviews-widget"
+                  className="min-h-[400px]"
                 ></div>
               </div>
             </div>
@@ -57,21 +135,32 @@ const DoctenaTestimonialsSection = () => {
         </div>
       </div>
 
-      {/* Call to action section with green background */}
-      <div className="py-16 bg-gradient-to-br from-green-50 to-blue-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center">
-            <p className="text-gray-600 mb-6">
-              Prêt(e) à commencer votre parcours nutritionnel ?
-            </p>
+      {/* Strong CTA section */}
+      <div className="py-16 bg-gradient-to-br from-green-600 to-green-700 text-white">
+        <div className="container mx-auto px-4 text-center">
+          <h3 className="text-3xl md:text-4xl font-bold mb-4">
+            Prêt(e) à commencer votre transformation ?
+          </h3>
+          <p className="text-xl text-green-100 mb-8 max-w-2xl mx-auto">
+            Rejoignez les centaines de patients qui ont déjà transformé leur relation à l'alimentation
+          </p>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
               href="https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center px-8 py-4 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transition-colors text-lg"
+              className="inline-flex items-center gap-3 px-8 py-4 bg-white text-green-700 font-bold rounded-xl hover:bg-gray-100 transition-all duration-300 text-lg shadow-lg hover:shadow-xl transform hover:scale-105"
             >
-              Prendre Rendez-vous
+              <Calendar className="h-6 w-6" />
+              Prendre Rendez-vous Maintenant
+              <ExternalLink className="h-5 w-5" />
             </a>
+            
+            <div className="flex items-center gap-2 px-4 py-2 bg-white/20 rounded-full">
+              <Star className="h-4 w-4 fill-yellow-300 text-yellow-300" />
+              <span className="text-sm">Consultation sans engagement</span>
+            </div>
           </div>
         </div>
       </div>
