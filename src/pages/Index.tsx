@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Navigation from '@/components/Navigation';
 import AboutSection from '@/components/AboutSection';
 import FAQSection from '@/components/FAQSection';
@@ -16,6 +16,22 @@ const Index = () => {
   const handleToggleChat = () => {
     setIsChatOpen(!isChatOpen);
   };
+
+  // Load Doctena testimonials script
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = 'https://api.doctena.lu/js/widgetRatings/calendar/build.php';
+    script.async = true;
+    document.head.appendChild(script);
+
+    return () => {
+      // Cleanup script on unmount
+      const existingScript = document.querySelector('script[src="https://api.doctena.lu/js/widgetRatings/calendar/build.php"]');
+      if (existingScript) {
+        existingScript.remove();
+      }
+    };
+  }, []);
 
   return (
     <div className="min-h-screen bg-white">
@@ -252,11 +268,12 @@ const Index = () => {
           </div>
 
           <div className="max-w-4xl mx-auto">
-            <section 
+            <div 
               data-toggle="doc-reviews" 
               data-doctor-eid="492d6313-2026-4e38-ba00-ffd3a88d67de" 
               data-language="fr"
-            ></section>
+              id="doctena-reviews-widget"
+            ></div>
           </div>
 
           <div className="text-center mt-12">
@@ -308,9 +325,6 @@ const Index = () => {
 
       {/* Chat Popup */}
       <ChatPopup isOpen={isChatOpen} onToggle={handleToggleChat} />
-
-      {/* Doctena Testimonials Script */}
-      <script src="https://api.doctena.lu/js/widgetRatings/calendar/build.php"></script>
     </div>
   );
 };
