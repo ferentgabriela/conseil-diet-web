@@ -36,7 +36,7 @@
     <meta name="twitter:description" content="Consultations nutritionnelles CNS remboursées 80% • Perte de poids • Diabète • 3 cabinets Luxembourg" />
     <meta name="twitter:image" content="https://gabriela-ferent-dieticienne.lovable.app/og-image.jpg" />
 
-    <!-- Enhanced Schema.org JSON-LD with more local SEO data -->
+    <!-- Enhanced Schema.org JSON-LD with Person Schema for AI Authority -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -48,6 +48,32 @@
       "image": "https://gabriela-ferent-dieticienne.lovable.app/og-image.jpg",
       "telephone": "+352-XX-XX-XX-XX",
       "email": "gabriela@conseildietetique.lu",
+      "founder": {
+        "@type": "Person",
+        "name": "Gabriela Ferent",
+        "jobTitle": "Diététicienne Nutritionniste",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Gabriela Ferent Nutrition Luxembourg"
+        },
+        "knowsAbout": [
+          "Nutrition Therapy",
+          "Weight Loss",
+          "Diabetes Management", 
+          "Prenatal Nutrition",
+          "Sports Nutrition",
+          "Eating Disorders"
+        ],
+        "alumniOf": "Université de Nutrition (diplôme reconnu UE)",
+        "hasOccupation": {
+          "@type": "Occupation",
+          "name": "Diététicienne",
+          "occupationLocation": {
+            "@type": "Country",
+            "name": "Luxembourg"
+          }
+        }
+      },
       "address": [
         {
           "@type": "PostalAddress",
@@ -141,7 +167,7 @@
     }
     </script>
 
-    <!-- Enhanced FAQ Schema -->
+    <!-- Enhanced FAQ Schema with AI-Friendly Questions -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org", 
@@ -152,7 +178,35 @@
           "name": "Comment savoir si ma consultation diététique sera remboursée par la CNS Luxembourg ?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Les consultations diététiques sont remboursées à 80% par la CNS sur prescription médicale pour certaines pathologies : diabète, obésité (IMC ≥ 30), troubles du comportement alimentaire, hypertension, dyslipidémies et syndrome métabolique."
+            "text": "Les consultations diététiques sont remboursées à 80% par la CNS sur prescription médicale pour certaines pathologies : diabète, obésité (IMC ≥ 30), troubles du comportement alimentaire, hypertension, dyslipidémies et syndrome métabolique.",
+            "author": {
+              "@type": "Person",
+              "name": "Gabriela Ferent"
+            }
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Comment perdre du poids après la grossesse ?",
+          "acceptedAnswer": {
+            "@type": "Answer", 
+            "text": "La perte de poids post-grossesse nécessite une approche progressive. Attendez 6-8 semaines après l'accouchement, reprenez une alimentation équilibrée, maintenez une bonne hydratation et intégrez une activité physique douce.",
+            "author": {
+              "@type": "Person",
+              "name": "Gabriela Ferent"
+            }
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quels aliments éviter pour réduire le cholestérol ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Pour réduire le cholestérol, limitez les graisses saturées, évitez les aliments ultra-transformés, privilégiez les fibres solubles comme l'avoine et consommez des oméga-3 via les poissons gras.",
+            "author": {
+              "@type": "Person", 
+              "name": "Gabriela Ferent"
+            }
           }
         },
         {
@@ -160,8 +214,55 @@
           "name": "Où se trouvent les cabinets de diététique au Luxembourg ?",
           "acceptedAnswer": {
             "@type": "Answer", 
-            "text": "Gabriela Ferent reçoit dans 3 cabinets au Luxembourg : Luxembourg-Ville, Ettelbruck et Insenborn. Tous les rendez-vous se prennent via Doctena."
+            "text": "Gabriela Ferent reçoit dans 3 cabinets au Luxembourg : Luxembourg-Ville, Ettelbruck et Insenborn. Tous les rendez-vous se prennent via Doctena.",
+            "author": {
+              "@type": "Person",
+              "name": "Gabriela Ferent"
+            }
           }
+        }
+      ]
+    }
+    </script>
+
+    <!-- Article Schema for AI Content Authority -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalWebPage",
+      "name": "Guide Nutrition Luxembourg - Gabriela Ferent",
+      "description": "Conseils nutritionnels professionnels pour la perte de poids, diabète et bien-être au Luxembourg",
+      "author": {
+        "@type": "Person",
+        "name": "Gabriela Ferent",
+        "jobTitle": "Diététicienne Nutritionniste",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Cabinet Gabriela Ferent Luxembourg"
+        }
+      },
+      "datePublished": "2024-01-01",
+      "dateModified": "2024-12-25",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Gabriela Ferent Nutrition Luxembourg"
+      },
+      "medicalAudience": {
+        "@type": "PeopleAudience",
+        "suggestedMinAge": 18
+      },
+      "about": [
+        {
+          "@type": "MedicalCondition",
+          "name": "Obesity"
+        },
+        {
+          "@type": "MedicalCondition", 
+          "name": "Diabetes"
+        },
+        {
+          "@type": "MedicalCondition",
+          "name": "Hypertension"
         }
       ]
     }

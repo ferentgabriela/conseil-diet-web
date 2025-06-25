@@ -10,6 +10,9 @@ import CabinetsSection from '@/components/CabinetsSection';
 import ResourcesSection from '@/components/ResourcesSection';
 import DoctenaTestimonialsSection from '@/components/DoctenaTestimonialsSection';
 import FloatingCTA from '@/components/FloatingCTA';
+import AuthorSection from '@/components/AuthorSection';
+import FAQBlogSection from '@/components/FAQBlogSection';
+import AISummaryBlock from '@/components/AISummaryBlock';
 
 const Index = () => {
   const [isChatOpen, setIsChatOpen] = useState(false);
@@ -28,10 +31,13 @@ const Index = () => {
       <HeroSection />
       <ServicesSection />
       <CabinetsSection />
+      <AuthorSection />
       <AboutSection />
+      <FAQBlogSection />
       <ResourcesSection />
       <DoctenaTestimonialsSection />
       <FAQSection onOpenChat={handleOpenChat} />
+      <AISummaryBlock />
       <ChatPopup isOpen={isChatOpen} onToggle={handleToggleChat} />
       <FloatingCTA />
     </div>

@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { ExternalLink, Shield, Heart, CheckCircle, Star } from 'lucide-react';
+import AISummaryBlock from './AISummaryBlock';
 
 const ServicesSection = () => {
   const scrollToCabinets = () => {
@@ -152,6 +153,9 @@ const ServicesSection = () => {
             </div>
           </div>
         </div>
+
+        {/* AI Summary Block */}
+        <AISummaryBlock variant="services" />
       </div>
     </section>
   );
