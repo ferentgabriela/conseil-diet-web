@@ -2,7 +2,11 @@
 import React, { useState } from 'react';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 
-const FAQSection = () => {
+interface FAQSectionProps {
+  onOpenChat?: () => void;
+}
+
+const FAQSection = ({ onOpenChat }: FAQSectionProps) => {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   const faqs = [
@@ -80,12 +84,12 @@ const FAQSection = () => {
             <p className="text-gray-600 mb-6">
               Vous avez d'autres questions ? N'hésitez pas à me contacter.
             </p>
-            <a
-              href="mailto:gabriela@conseildietetique.lu"
+            <button
+              onClick={onOpenChat}
               className="inline-flex items-center px-6 py-3 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transition-colors"
             >
               Poser une question
-            </a>
+            </button>
           </div>
         </div>
       </div>

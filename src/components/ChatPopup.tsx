@@ -18,12 +18,20 @@ interface Message {
   created_at: string;
 }
 
-export const ChatPopup = () => {
-  const [isOpen, setIsOpen] = useState(false);
+interface ChatPopupProps {
+  isOpen?: boolean;
+  onToggle?: () => void;
+}
+
+export const ChatPopup = ({ isOpen: externalIsOpen, onToggle }: ChatPopupProps) => {
+  const [internalIsOpen, setInternalIsOpen] = useState(false);
   const [currentMessage, setCurrentMessage] = useState('');
   const [sessionId] = useState(() => crypto.randomUUID());
   const [showForwardDialog, setShowForwardDialog] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
+
+  const isOpen = externalIsOpen !== undefined ? externalIsOpen : internalIsOpen;
+  const toggleOpen = onToggle || (() => setInternalIsOpen(!internalIsOpen));
 
   const { messages, sendMessage, isLoading } = useChatMessages(sessionId);
 
@@ -152,13 +160,31 @@ export const ChatPopup = () => {
 
   if (!isOpen) {
     return (
-      <Button
-        onClick={() => setIsOpen(true)}
-        className="fixed bottom-6 right-6 h-14 w-14 rounded-full bg-primary hover:bg-primary/90 shadow-lg z-50"
-        size="icon"
-      >
-        <MessageCircle className="h-6 w-6" />
-      </Button>
+      <div className="fixed bottom-6 right-6 z-50 flex flex-col items-center">
+        {/* "Poser une question" text above the button */}
+        <div className="mb-2 bg-green-600 text-white px-3 py-1 rounded-lg shadow-lg text-sm font-medium animate-bounce">
+          Poser une question
+        </div>
+        
+        {/* Dynamic AI Chat Button */}
+        <Button
+          onClick={toggleOpen}
+          className="h-16 w-16 rounded-full bg-green-600 hover:bg-green-700 shadow-2xl z-50 relative overflow-hidden group transition-all duration-300 hover:scale-110"
+          size="icon"
+        >
+          {/* Animated background pulse */}
+          <div className="absolute inset-0 bg-green-400 rounded-full animate-ping opacity-20"></div>
+          <div className="absolute inset-0 bg-green-500 rounded-full animate-pulse opacity-30"></div>
+          
+          {/* Icon with breathing animation */}
+          <MessageCircle className="h-7 w-7 relative z-10 animate-pulse group-hover:animate-bounce" />
+          
+          {/* Floating notification dot */}
+          <div className="absolute -top-1 -right-1 h-4 w-4 bg-red-500 rounded-full animate-bounce">
+            <div className="absolute inset-1 bg-red-400 rounded-full animate-ping"></div>
+          </div>
+        </Button>
+      </div>
     );
   }
 
@@ -170,7 +196,7 @@ export const ChatPopup = () => {
           <Button
             variant="ghost"
             size="icon"
-            onClick={() => setIsOpen(false)}
+            onClick={toggleOpen}
             className="h-6 w-6"
           >
             <X className="h-4 w-4" />

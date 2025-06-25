@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { ChatPopup } from '@/components/ChatPopup';
 import Navigation from '@/components/Navigation';
 import AboutSection from '@/components/AboutSection';
@@ -7,6 +7,16 @@ import FAQSection from '@/components/FAQSection';
 import TestimonialsSection from '@/components/TestimonialsSection';
 
 const Index = () => {
+  const [isChatOpen, setIsChatOpen] = useState(false);
+
+  const handleOpenChat = () => {
+    setIsChatOpen(true);
+  };
+
+  const handleToggleChat = () => {
+    setIsChatOpen(!isChatOpen);
+  };
+
   return (
     <div className="min-h-screen">
       <Navigation />
@@ -223,7 +233,7 @@ const Index = () => {
       </section>
 
       {/* FAQ Section */}
-      <FAQSection />
+      <FAQSection onOpenChat={handleOpenChat} />
 
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-12">
@@ -279,7 +289,7 @@ const Index = () => {
       </footer>
 
       {/* Chat Popup */}
-      <ChatPopup />
+      <ChatPopup isOpen={isChatOpen} onToggle={handleToggleChat} />
     </div>
   );
 };
