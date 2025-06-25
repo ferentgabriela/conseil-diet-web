@@ -1,39 +1,26 @@
 
 import React, { useState, useEffect } from 'react';
-import { Calendar, ExternalLink, X } from 'lucide-react';
+import { Calendar, ExternalLink } from 'lucide-react';
 
 const FloatingCTA = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const [isDismissed, setIsDismissed] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      // Show after scrolling 300px and if not dismissed
-      setIsVisible(window.scrollY > 300 && !isDismissed);
+      // Show after scrolling 300px
+      setIsVisible(window.scrollY > 300);
     };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [isDismissed]);
-
-  const handleDismiss = () => {
-    setIsDismissed(true);
-    setIsVisible(false);
-  };
+  }, []);
 
   if (!isVisible) return null;
 
   return (
     <div className="fixed bottom-4 right-4 z-50 animate-fade-in">
       <div className="bg-green-600 text-white rounded-2xl shadow-2xl p-4 max-w-sm border-2 border-green-500">
-        <button
-          onClick={handleDismiss}
-          className="absolute -top-2 -right-2 w-6 h-6 bg-gray-600 rounded-full flex items-center justify-center hover:bg-gray-700 transition-colors"
-        >
-          <X className="h-4 w-4 text-white" />
-        </button>
-        
-        <div className="pr-4">
+        <div className="text-center">
           <p className="font-semibold mb-2 text-sm">
             🔥 Consultation disponible aujourd'hui
           </p>

@@ -9,7 +9,6 @@ import ServicesSection from '@/components/ServicesSection';
 import CabinetsSection from '@/components/CabinetsSection';
 import ResourcesSection from '@/components/ResourcesSection';
 import DoctenaTestimonialsSection from '@/components/DoctenaTestimonialsSection';
-import ContactSection from '@/components/ContactSection';
 import FloatingCTA from '@/components/FloatingCTA';
 
 const Index = () => {
@@ -33,7 +32,6 @@ const Index = () => {
       <ResourcesSection />
       <DoctenaTestimonialsSection />
       <FAQSection onOpenChat={handleOpenChat} />
-      <ContactSection onOpenChat={handleOpenChat} />
       <ChatPopup isOpen={isChatOpen} onToggle={handleToggleChat} />
       <FloatingCTA />
     </div>
