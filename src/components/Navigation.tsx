@@ -27,8 +27,8 @@ const Navigation = () => {
   const scrollToCabinets = () => {
     const cabinetsSection = document.getElementById('cabinets');
     if (cabinetsSection) {
-      // Calculate offset for fixed header (trust bar 40px + navigation ~88px + some padding)
-      const headerOffset = 150;
+      // Calculate offset for fixed header (trust bar 40px + navigation ~88px + extra padding for title visibility)
+      const headerOffset = 200;
       const elementPosition = cabinetsSection.offsetTop;
       const offsetPosition = elementPosition - headerOffset;
 
