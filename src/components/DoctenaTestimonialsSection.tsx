@@ -21,7 +21,7 @@ const DoctenaTestimonialsSection = () => {
 
   const highlightedTestimonials = [
     {
-      quote: "Son professionnalisme, son approche personnalisée et ses conseils pratiques m'ont aidé à améliorer mes habitudes alimentaires de manière durable.",
+      quote: "Son professionnalisme, son approche personnalisée et ses conseils pratiques m'ont aidée à améliorer mes habitudes alimentaires de manière durable.",
       author: "Pedro",
       date: "Février 2025",
       rating: 5,
@@ -81,12 +81,12 @@ const DoctenaTestimonialsSection = () => {
                 </blockquote>
                 
                 <div className="flex items-center justify-between">
-                  <div>
+                  <div className="flex-1">
                     <p className="font-bold text-gray-900">{testimonial.author}</p>
                     <p className="text-sm text-green-600">{testimonial.treatment}</p>
                     <p className="text-xs text-gray-500">{testimonial.date}</p>
                   </div>
-                  <div className="w-12 h-12 bg-gradient-to-br from-green-100 to-blue-100 rounded-full flex items-center justify-center">
+                  <div className="w-12 h-12 bg-gradient-to-br from-green-100 to-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
                     <span className="text-xl">👤</span>
                   </div>
                 </div>
