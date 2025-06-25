@@ -72,27 +72,25 @@ export const ChatPopup = () => {
 
   // Enhanced function to detect and convert URLs to clickable links
   const formatMessageWithLinks = (text: string) => {
-    // Split text by URLs and format accordingly
-    const urlRegex = /(https?:\/\/[^\s]+)/g;
-    const parts = text.split(urlRegex);
+    // Enhanced regex to match the specific format used by the AI
+    const doctenaLinkRegex = /(Luxembourg|Ettelbruck|Insenborn)\s*-\s*(RDV Doctena|Programare Doctena|Book on Doctena|Termin auf Doctena)\s*:\s*(https:\/\/www\.doctena\.lu\/practitioner\/\d+)/g;
     
-    return parts.map((part, index) => {
-      if (part.match(urlRegex)) {
-        return (
-          <a
-            key={index}
-            href={part}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-blue-500 hover:text-blue-700 underline break-all inline-flex items-center gap-1"
-          >
-            <span className="break-all">Réserver sur Doctena</span>
-            <ExternalLink className="h-3 w-3 flex-shrink-0" />
-          </a>
-        );
-      }
-      return <span key={index} className="break-words">{part}</span>;
+    // First handle the specific Doctena format
+    let formattedText = text.replace(doctenaLinkRegex, (match, city, linkText, url) => {
+      return `${city} - <a href="${url}" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:text-blue-700 underline">${linkText} <span class="inline-flex items-center"><svg class="h-3 w-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg></span></a>`;
     });
+    
+    // Then handle any remaining standalone URLs
+    const urlRegex = /(https?:\/\/[^\s]+)/g;
+    formattedText = formattedText.replace(urlRegex, (url) => {
+      // Skip if this URL is already part of a formatted link
+      if (formattedText.includes(`href="${url}"`)) {
+        return url;
+      }
+      return `<a href="${url}" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:text-blue-700 underline break-all inline-flex items-center gap-1"><span class="break-all">Lien</span><svg class="h-3 w-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg></a>`;
+    });
+    
+    return <div dangerouslySetInnerHTML={{ __html: formattedText }} className="break-words" />;
   };
 
   if (!isOpen) {

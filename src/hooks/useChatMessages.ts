@@ -35,24 +35,39 @@ export const useChatMessages = (sessionId: string) => {
     created_at: dbMessage.created_at,
   });
 
-  // Language detection helper
+  // Enhanced language detection helper
   const detectLanguage = (text: string): 'fr' | 'en' | 'ro' | 'de' => {
     const lowerText = text.toLowerCase();
     
-    // Romanian keywords
-    const romanianKeywords = ['salut', 'bună', 'mulțumesc', 'vă rog', 'îmi poți', 'cum pot', 'informații', 'programare', 'consultație', 'dietetician', 'problema', 'sănătate', 'ajuta', 'rezolva'];
-    if (romanianKeywords.some(keyword => lowerText.includes(keyword))) return 'ro';
+    // Romanian keywords - more comprehensive list
+    const romanianKeywords = ['salut', 'bună', 'mulțumesc', 'vă rog', 'îmi poți', 'cum pot', 'informații', 'programare', 'consultație', 'dietetician', 'problema', 'sănătate', 'ajuta', 'rezolva', 'trimitere', 'doctor', 'fac', 'departe', 'unde', 'când', 'acum', 'aici', 'pentru', 'prin', 'după', 'înainte'];
+    const romanianCount = romanianKeywords.filter(keyword => lowerText.includes(keyword)).length;
     
     // German keywords
-    const germanKeywords = ['hallo', 'guten', 'danke', 'bitte', 'können sie', 'wie kann', 'informationen', 'termin', 'beratung', 'ernährungsberatung', 'problem', 'gesundheit'];
-    if (germanKeywords.some(keyword => lowerText.includes(keyword))) return 'de';
+    const germanKeywords = ['hallo', 'guten', 'danke', 'bitte', 'können sie', 'wie kann', 'informationen', 'termin', 'beratung', 'ernährungsberatung', 'problem', 'gesundheit', 'überweisung', 'arzt'];
+    const germanCount = germanKeywords.filter(keyword => lowerText.includes(keyword)).length;
     
     // English keywords
-    const englishKeywords = ['hello', 'thank you', 'please', 'can you', 'how can', 'information', 'appointment', 'consultation', 'dietitian', 'problem', 'health', 'help'];
-    if (englishKeywords.some(keyword => lowerText.includes(keyword))) return 'en';
+    const englishKeywords = ['hello', 'thank you', 'please', 'can you', 'how can', 'information', 'appointment', 'consultation', 'dietitian', 'problem', 'health', 'help', 'referral', 'doctor'];
+    const englishCount = englishKeywords.filter(keyword => lowerText.includes(keyword)).length;
     
-    // Default to French (primary language for Luxembourg)
-    return 'fr';
+    // French keywords
+    const frenchKeywords = ['bonjour', 'merci', 'pouvez', 'comment', 'informations', 'rendez-vous', 'consultation', 'diététicienne', 'problème', 'santé', 'aider', 'prescription', 'docteur'];
+    const frenchCount = frenchKeywords.filter(keyword => lowerText.includes(keyword)).length;
+    
+    // Determine language based on highest keyword count
+    const scores = {
+      ro: romanianCount,
+      de: germanCount,
+      en: englishCount,
+      fr: frenchCount
+    };
+    
+    const maxScore = Math.max(...Object.values(scores));
+    if (maxScore === 0) return 'fr'; // Default to French
+    
+    // Return the language with the highest score
+    return Object.keys(scores).find(lang => scores[lang as keyof typeof scores] === maxScore) as 'fr' | 'en' | 'ro' | 'de';
   };
 
   // Create or get conversation
