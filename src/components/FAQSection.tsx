@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { MessageCircle, ChevronRight, Heart, Scale, Baby, Clock, Euro, MapPin } from 'lucide-react';
+import { MessageCircle, ChevronRight, Heart, Scale, Baby, Clock, Euro, MapPin, Stethoscope, Calendar } from 'lucide-react';
 
 interface FAQSectionProps {
   onOpenChat?: () => void;
@@ -10,105 +10,173 @@ const FAQSection = ({ onOpenChat }: FAQSectionProps) => {
   const faqBlogPosts = [
     {
       id: 1,
-      icon: <Scale className="h-6 w-6" />,
-      category: "Perte de Poids",
-      question: "Comment perdre du poids après la grossesse sans nuire à l'allaitement ?",
-      summary: "La perte de poids post-grossesse nécessite une approche progressive et bienveillante, surtout pendant l'allaitement.",
-      content: "Après l'accouchement, votre corps a besoin de temps pour récupérer. Il est recommandé d'attendre 6-8 semaines avant de commencer un programme de perte de poids. Pendant l'allaitement, vos besoins énergétiques sont augmentés de 300-500 calories par jour.",
+      icon: <Euro className="h-6 w-6" />,
+      category: "Remboursement CNS",
+      question: "Est-ce que les consultations sont remboursées par la CNS ?",
+      summary: "Oui, la CNS rembourse 80% des consultations diététiques sur prescription médicale pour certaines pathologies spécifiques.",
+      content: "Le remboursement CNS est une réalité pour de nombreux patients au Luxembourg. La Caisse Nationale de Santé couvre les consultations diététiques dans le cadre de pathologies reconnues, ce qui rend l'accompagnement nutritionnel accessible au plus grand nombre.",
       keyPoints: [
-        "Reprendre une alimentation équilibrée progressivement",
-        "Privilégier les aliments riches en nutriments essentiels",
-        "Maintenir une hydratation optimale (2-3L d'eau/jour si allaitement)",
-        "Intégrer une activité physique douce et progressive",
-        "Dormir suffisamment pour réguler les hormones de la faim",
-        "Éviter les régimes restrictifs qui peuvent affecter la qualité du lait"
+        "Remboursement à 80% du tarif conventionnel avec prescription médicale",
+        "Pathologies couvertes : diabète, obésité (IMC ≥30), troubles cardiovasculaires",
+        "Hypertension, dyslipidémies et syndrome métabolique également couverts",
+        "Prescription obligatoire de votre médecin traitant ou spécialiste",
+        "Durée généralement de 6-12 mois selon la pathologie",
+        "Possibilité de renouvellement selon l'évolution de votre état"
       ],
-      expertTip: "💡 Mon conseil d'experte : La perte de poids idéale pendant l'allaitement est de 0,5-1kg par semaine maximum. Patience et bienveillance sont les clés du succès."
+      expertTip: "💡 Mon conseil d'experte : Dans 90% des cas, les conditions de remboursement sont remplies. N'hésitez pas à demander à votre médecin s'il peut vous prescrire des consultations diététiques !"
     },
     {
       id: 2,
-      icon: <Heart className="h-6 w-6" />,
-      category: "Cholestérol",
-      question: "Quels aliments éviter absolument pour réduire le cholestérol rapidement ?",
-      summary: "Pour réduire efficacement le cholestérol, il faut limiter certains aliments tout en privilégiant ceux qui ont un effet protecteur.",
-      content: "Le cholestérol sanguin provient à 80% de notre production interne et 20% de notre alimentation. Cependant, certains aliments peuvent significativement influencer ces taux, surtout chez les personnes sensibles.",
+      icon: <Stethoscope className="h-6 w-6" />,
+      category: "Prescription Médicale",
+      question: "Faut-il une prescription médicale pour consulter ?",
+      summary: "Une prescription médicale est nécessaire uniquement pour le remboursement CNS. Vous pouvez consulter librement sans prescription.",
+      content: "Vous avez le choix : consulter directement sans prescription pour un suivi privé, ou obtenir une prescription de votre médecin pour bénéficier du remboursement CNS. Les deux approches sont valides selon vos besoins et votre situation financière.",
       keyPoints: [
-        "Réduire les graisses saturées : charcuterie, fromages gras, beurre",
-        "Éviter les graisses trans : pâtisseries industrielles, margarines hydrogénées",
-        "Limiter les aliments ultra-transformés riches en sucres ajoutés",
-        "Privilégier les fibres solubles : avoine, légumineuses, pommes",
-        "Consommer des oméga-3 : poissons gras, noix, graines de lin",
-        "Intégrer les stérols végétaux : huiles végétales, fruits à coque"
+        "Consultation libre possible sans prescription (tarif privé)",
+        "Prescription nécessaire UNIQUEMENT pour le remboursement CNS",
+        "Votre médecin traitant peut facilement établir la prescription",
+        "Spécialistes (endocrinologue, cardiologue) peuvent aussi prescrire",
+        "Pas de délai d'attente si vous consultez directement",
+        "Même qualité de service avec ou sans prescription"
       ],
-      expertTip: "💡 Mon conseil d'experte : Un changement alimentaire bien mené peut réduire le cholestérol de 10-15% en 6-8 semaines. Les résultats sur les analyses sont visibles rapidement !"
+      expertTip: "💡 Mon conseil d'experte : Si vous avez une pathologie (surpoids, diabète, hypertension), demandez d'abord la prescription. Sinon, vous pouvez commencer directement et demander la prescription plus tard."
     },
     {
       id: 3,
-      icon: <Baby className="h-6 w-6" />,
-      category: "IMC & Obésité",
-      question: "Mon IMC est de 32, pourquoi les régimes ne marchent pas sur moi ?",
-      summary: "Un IMC élevé (≥30) indique une obésité qui nécessite une approche globale et personnalisée, pas juste un 'régime'.",
-      content: "Avec un IMC de 32, vous êtes en obésité de grade 1. Les régimes restrictifs échouent car ils ne s'attaquent pas aux causes profondes : déséquilibres hormonaux, résistance à l'insuline, inflammation chronique ou facteurs psychologiques.",
+      icon: <Heart className="h-6 w-6" />,
+      category: "Expertise Professionnelle",
+      question: "Quelle est la différence entre une diététicienne et une nutritionniste ?",
+      summary: "La diététicienne a une formation spécialisée reconnue et un titre protégé, contrairement au terme 'nutritionniste' qui peut être utilisé sans formation spécifique.",
+      content: "Au Luxembourg, le titre de diététicienne est protégé et nécessite une formation universitaire spécialisée. C'est un gage de qualité et de compétence que n'offrent pas les 'coachs en nutrition' ou autres professionnels non certifiés.",
       keyPoints: [
-        "Évaluer votre composition corporelle complète (masse grasse/muscle)",
-        "Identifier les facteurs contributifs : stress chronique, sommeil, hormones",
-        "Adopter une alimentation anti-inflammatoire riche en nutriments",
-        "Pratiquer une activité physique adaptée à votre condition physique",
-        "Gérer le stress et optimiser le sommeil (7-9h/nuit)",
-        "Bénéficier d'un suivi professionnel pour un plan personnalisé"
+        "Diététicienne : formation universitaire de 3-4 ans minimum",
+        "Titre protégé par la loi, inscription obligatoire au Ministère de la Santé",
+        "Formation en physiologie, pathologie, biochimie nutritionnelle",
+        "Compétence en nutrition clinique et thérapeutique",
+        "Nutritionniste : terme générique, pas de formation obligatoire",
+        "Seule la diététicienne peut pratiquer la nutrition médicale"
       ],
-      expertTip: "💡 Mon conseil d'experte : Avec un IMC ≥30, vous pouvez bénéficier d'un remboursement CNS à 80% avec prescription médicale. C'est un avantage à saisir !"
+      expertTip: "💡 Mon conseil d'experte : Vérifiez toujours les qualifications de votre professionnel. Ma formation universitaire et mon inscription officielle vous garantissent une prise en charge sérieuse et sécurisée."
     },
     {
       id: 4,
-      icon: <Clock className="h-6 w-6" />,
-      category: "Consultation",
-      question: "Combien de temps faut-il pour voir des résultats avec un suivi nutritionnel ?",
-      summary: "Les premiers résultats apparaissent généralement dans les 2-4 premières semaines, mais la transformation durable prend 3-6 mois.",
-      content: "La rapidité des résultats dépend de votre situation de départ, vos objectifs et votre adhésion au plan nutritionnel. Voici ce à quoi vous attendre selon votre profil :",
+      icon: <Calendar className="h-6 w-6" />,
+      category: "Première Consultation",
+      question: "À quoi dois-je m'attendre lors de la première consultation ?",
+      summary: "La première consultation dure 60 minutes et comprend un bilan complet de votre situation, vos habitudes alimentaires et l'établissement d'un plan personnalisé.",
+      content: "Cette première rencontre est cruciale pour bien vous connaître et établir un plan adapté à votre situation unique. C'est un moment d'échange bienveillant, sans jugement, où nous prenons le temps nécessaire pour comprendre vos besoins.",
       keyPoints: [
-        "Première semaine : amélioration de l'énergie et de la digestion",
-        "2-4 semaines : perte de poids visible (1-2kg), moins de fringales",
-        "6-8 semaines : amélioration des analyses (cholestérol, glycémie)",
-        "3 mois : nouvelles habitudes ancrées, perte de 6-10kg",
-        "6 mois : transformation complète, stabilisation du poids",
-        "Suivi à long terme : maintien des résultats, prévention des reprises"
+        "Durée : 60 minutes complètes, sans précipitation",
+        "Anamnèse complète : santé, habitudes, histoire pondérale",
+        "Analyse de vos habitudes alimentaires actuelles",
+        "Mesures anthropométriques (poids, composition corporelle)",
+        "Définition d'objectifs réalistes et personnalisés",
+        "Premiers conseils pratiques et plan d'action immédiat"
       ],
-      expertTip: "💡 Mon conseil d'experte : La régularité des consultations (toutes les 2-3 semaines au début) est clé pour des résultats durables. 95% de mes patients qui suivent le rythme atteignent leurs objectifs !"
+      expertTip: "💡 Mon conseil d'experte : Apportez vos dernières analyses sanguines si vous en avez, et n'hésitez pas à noter vos questions à l'avance. Plus je vous connais, mieux je peux vous aider !"
     },
     {
       id: 5,
-      icon: <Euro className="h-6 w-6" />,
-      category: "Remboursement CNS",
-      question: "Ma consultation sera-t-elle vraiment remboursée par la CNS ? Quelles sont les conditions ?",
-      summary: "Oui, la CNS rembourse 80% des consultations diététiques sur prescription médicale pour certaines pathologies spécifiques.",
-      content: "Le remboursement CNS est une réalité pour de nombreux patients. Voici exactement comment ça fonctionne et si vous y avez droit :",
+      icon: <Scale className="h-6 w-6" />,
+      category: "Plans Personnalisés",
+      question: "Proposez-vous des plans alimentaires personnalisés ?",
+      summary: "Chaque patient reçoit un plan alimentaire entièrement personnalisé, adapté à ses goûts, contraintes, pathologies et objectifs spécifiques.",
+      content: "Fini les régimes génériques ! Chaque plan que je crée est unique, comme vous. Je prends en compte vos préférences alimentaires, votre mode de vie, vos contraintes professionnelles et familiales pour créer un programme que vous pourrez suivre à long terme.",
       keyPoints: [
-        "Conditions : prescription médicale obligatoire de votre médecin traitant",
-        "Pathologies couvertes : diabète, obésité (IMC ≥30), troubles alimentaires",
-        "Aussi couvert : hypertension, dyslipidémies, syndrome métabolique",
-        "Taux de remboursement : 80% du tarif conventionnel",
-        "Durée : généralement 6-12 mois selon la pathologie",
-        "Renouvellement possible selon l'évolution de votre état de santé"
+        "Plan 100% personnalisé selon vos goûts et aversions",
+        "Adaptation à vos contraintes professionnelles et familiales",
+        "Prise en compte des pathologies et intolérances",
+        "Menus variés et recettes pratiques incluses",
+        "Ajustements réguliers selon vos progrès",
+        "Liste de courses et conseils pratiques fournis"
       ],
-      expertTip: "💡 Mon conseil d'experte : Demandez à votre médecin traitant s'il peut vous prescrire des consultations diététiques. Dans 90% des cas, les conditions sont remplies !"
+      expertTip: "💡 Mon conseil d'experte : Un bon plan alimentaire doit s'adapter à votre vie, pas l'inverse ! Je crée des programmes que vous pouvez suivre même avec une vie bien remplie."
     },
     {
       id: 6,
-      icon: <MapPin className="h-6 w-6" />,
-      category: "Praticité",
-      question: "Quel cabinet choisir au Luxembourg ? Y a-t-il des différences ?",
-      summary: "Mes 3 cabinets (Luxembourg-Ville, Ettelbruck, Insenborn) offrent exactement la même qualité de service. Choisissez selon votre localisation.",
-      content: "Tous mes cabinets sont équipés de matériel professionnel identique et offrent la même approche personnalisée. Le choix dépend uniquement de votre commodité géographique :",
+      icon: <Baby className="h-6 w-6" />,
+      category: "Approche Bienveillante",
+      question: "Est-ce que je vais devoir me priver ou suivre un régime strict ?",
+      summary: "Absolument pas ! Mon approche privilégie l'équilibre et le plaisir alimentaire. Fini les privations et la frustration.",
+      content: "Ma philosophie est claire : un changement durable ne peut pas être basé sur la privation et la frustration. Je vous accompagne vers une alimentation équilibrée et plaisante, où tous les aliments ont leur place avec modération.",
       keyPoints: [
-        "Luxembourg-Ville : idéal si vous travaillez en ville, parking disponible",
-        "Ettelbruck : parfait pour le Nord du pays, facilement accessible",
-        "Insenborn : pratique pour l'Ouest, cadre plus intimiste",
-        "Même équipement : balance à impédance, consultations de même durée",
-        "Même approche : consultation initiale 60min, suivis 30-45min",
-        "Flexibilité : possibilité de changer de cabinet selon vos besoins"
+        "Aucune interdiction alimentaire drastique",
+        "Apprentissage de l'équilibre et de la modération",
+        "Conservation du plaisir de manger et de partager",
+        "Techniques pour gérer les envies et les écarts",
+        "Rééducation progressive sans choc psychologique",
+        "Maintien de la vie sociale et des sorties"
       ],
-      expertTip: "💡 Mon conseil d'experte : Choisissez le cabinet le plus proche de chez vous ou de votre travail. La régularité des rendez-vous est plus importante que la localisation !"
+      expertTip: "💡 Mon conseil d'experte : Les régimes restrictifs échouent dans 95% des cas. Mon approche bienveillante vous permet de perdre du poids durablement tout en gardant une relation saine avec la nourriture."
+    },
+    {
+      id: 7,
+      icon: <Clock className="h-6 w-6" />,
+      category: "Résultats & Timing",
+      question: "Quels résultats puis-je espérer et en combien de temps ?",
+      summary: "Les premiers résultats apparaissent dans les 2-4 semaines. Une transformation durable s'observe généralement sur 3-6 mois selon vos objectifs.",
+      content: "Je privilégie des résultats durables plutôt que spectaculaires. Chaque parcours est unique, mais voici ce que vous pouvez raisonnablement attendre selon votre situation de départ et votre engagement dans le processus.",
+      keyPoints: [
+        "1-2 semaines : amélioration de l'énergie et du sommeil",
+        "3-4 semaines : perte de poids visible (1-2kg), moins de fringales",
+        "6-8 semaines : amélioration des analyses (cholestérol, glycémie)",
+        "3 mois : perte de 6-12kg, nouvelles habitudes ancrées",
+        "6 mois : transformation complète et stabilisation",
+        "Résultats durables si respect du suivi personnalisé"
+      ],
+      expertTip: "💡 Mon conseil d'experte : La régularité des consultations est clé. Mes patients qui respectent le rythme de suivi atteignent leurs objectifs dans 95% des cas !"
+    },
+    {
+      id: 8,
+      icon: <Stethoscope className="h-6 w-6" />,
+      category: "Nutrition Thérapeutique",
+      question: "Travaillez-vous avec des personnes ayant du diabète, de l'hypertension ou d'autres pathologies ?",
+      summary: "Oui, je suis spécialisée en nutrition thérapeutique et j'accompagne régulièrement des patients avec diverses pathologies chroniques.",
+      content: "Ma formation me permet de prendre en charge les pathologies nutritionnelles complexes. Je travaille en collaboration avec vos médecins pour optimiser votre état de santé par l'alimentation, souvent avec des résultats remarquables sur vos analyses.",
+      keyPoints: [
+        "Diabète type 1 et 2 : gestion glycémique optimisée",
+        "Hypertension : approche nutritionnelle pour réduire la tension",
+        "Dyslipidémies : stratégies pour améliorer le bilan lipidique",
+        "Troubles digestifs : adaptation alimentaire personnalisée",
+        "Pathologies rénales et hépatiques : expertise spécialisée",
+        "Collaboration avec votre équipe médicale"
+      ],
+      expertTip: "💡 Mon conseil d'experte : L'alimentation peut considérablement améliorer vos paramètres de santé. Certains de mes patients ont pu réduire leurs médicaments grâce aux changements nutritionnels !"
+    },
+    {
+      id: 9,
+      icon: <Calendar className="h-6 w-6" />,
+      category: "Praticité & Lifestyle",
+      question: "Vos conseils prennent-ils en compte mes habitudes et mon emploi du temps ?",
+      summary: "Absolument ! Je m'adapte entièrement à votre rythme de vie, vos contraintes professionnelles et familiales pour créer un plan réalisable au quotidien.",
+      content: "Je sais que vous avez une vraie vie, avec des contraintes professionnelles, familiales et sociales. Mes conseils sont toujours adaptés à votre réalité quotidienne, sinon ils ne serviront à rien. L'objectif est que vous puissiez appliquer mes recommandations facilement.",
+      keyPoints: [
+        "Adaptation aux horaires de travail atypiques",
+        "Solutions pour les repas d'affaires et déplacements",
+        "Conseils pratiques pour les familles avec enfants",
+        "Meal prep et organisation pour gagner du temps",
+        "Alternatives pour les contraintes budgétaires",
+        "Maintien de votre vie sociale et sorties"
+      ],
+      expertTip: "💡 Mon conseil d'experte : Un bon plan nutritionnel doit s'intégrer naturellement dans votre quotidien. Je trouve toujours des solutions pratiques, même pour les emplois du temps les plus chargés !"
+    },
+    {
+      id: 10,
+      icon: <MapPin className="h-6 w-6" />,
+      category: "Cabinets & Rendez-vous",
+      question: "Dans quelles villes se trouvent vos cabinets et comment prendre rendez-vous ?",
+      summary: "Je consulte dans 3 cabinets au Luxembourg : Luxembourg-Ville, Ettelbruck et Insenborn. Prise de rendez-vous simple et flexible selon votre localisation.",
+      content: "Mes trois cabinets offrent exactement la même qualité de service et sont équipés du même matériel professionnel. Choisissez simplement celui qui vous convient le mieux géographiquement ou selon vos disponibilités.",
+      keyPoints: [
+        "Luxembourg-Ville : centre-ville, parking disponible",
+        "Ettelbruck : idéal pour le Nord du pays, facilement accessible",
+        "Insenborn : parfait pour l'Ouest, cadre intimiste",
+        "Même équipement et approche dans tous les cabinets",
+        "Possibilité de changer de cabinet selon vos besoins",
+        "Prise de rendez-vous en ligne ou par téléphone"
+      ],
+      expertTip: "💡 Mon conseil d'experte : Choisissez le cabinet le plus pratique pour vous - proximité domicile ou travail. La régularité des rendez-vous est plus importante que la localisation !"
     }
   ];
 
