@@ -45,9 +45,9 @@ Consultations privées (accès direct) :
 - Accompagnement des seniors
 
 IMPORTANT pour les localisations : Quand tu mentionnes les cabinets, utilise ce format exact :
-- Luxembourg - RDV Doctena : https://www.doctena.lu/practitioner/302096
-- Ettelbruck - RDV Doctena : https://www.doctena.lu/practitioner/302097  
-- Insenborn - RDV Doctena : https://www.doctena.lu/practitioner/302095
+- Luxembourg - RDV Doctena : https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874#22943
+- Ettelbruck - RDV Doctena : https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874#24538
+- Insenborn - RDV Doctena : https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874#22919
 
 IMPORTANT : Réponds toujours en français, sois professionnel mais chaleureux, et guide les utilisateurs vers la prise de rendez-vous. N'utilise JAMAIS de formatage markdown comme les astérisques pour le gras, les traits de soulignement ou autres. Écris en texte simple uniquement.`,
 
@@ -74,9 +74,9 @@ Private Consultations (direct access):
 - Support for seniors
 
 IMPORTANT for locations: When mentioning the clinics, use this exact format:
-- Luxembourg - Book on Doctena: https://www.doctena.lu/practitioner/302096
-- Ettelbruck - Book on Doctena: https://www.doctena.lu/practitioner/302097
-- Insenborn - Book on Doctena: https://www.doctena.lu/practitioner/302095
+- Luxembourg - Book on Doctena: https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874#22943
+- Ettelbruck - Book on Doctena: https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874#24538
+- Insenborn - Book on Doctena: https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874#22919
 
 IMPORTANT: Always respond in English, be professional but warm, and guide users toward booking appointments. NEVER use any markdown formatting like asterisks for bold, underscores or other formatting. Write in plain text only.`,
 
@@ -103,9 +103,9 @@ Consultații private (acces direct):
 - Sprijin pentru seniori
 
 IMPORTANT pentru locații: Când menționezi cabinetele, folosește exact acest format:
-- Luxembourg - Programare Doctena: https://www.doctena.lu/practitioner/302096
-- Ettelbruck - Programare Doctena: https://www.doctena.lu/practitioner/302097
-- Insenborn - Programare Doctena: https://www.doctena.lu/practitioner/302095
+- Luxembourg - Programare Doctena: https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874#22943
+- Ettelbruck - Programare Doctena: https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874#24538
+- Insenborn - Programare Doctena: https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874#22919
 
 IMPORTANT: Răspunde întotdeauna în română, fii profesional dar cald, și ghidează utilizatorii către programare. Nu folosi NICIODATĂ formatare markdown cum ar fi asteriscuri pentru îngroșare, liniuțe de subliniere sau alte formatări. Scrie doar în text simplu.`,
 
@@ -132,9 +132,9 @@ Private Beratungen (direkter Zugang):
 - Unterstützung für Senioren
 
 WICHTIG für Standorte: Wenn du die Praxen erwähnst, verwende genau dieses Format:
-- Luxembourg - Termin auf Doctena: https://www.doctena.lu/practitioner/302096
-- Ettelbruck - Termin auf Doctena: https://www.doctena.lu/practitioner/302097
-- Insenborn - Termin auf Doctena: https://www.doctena.lu/practitioner/302095
+- Luxembourg - Termin auf Doctena: https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874#22943
+- Ettelbruck - Termin auf Doctena: https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874#24538
+- Insenborn - Termin auf Doctena: https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874#22919
 
 WICHTIG: Antworte immer auf Deutsch, sei professionell aber herzlich, und führe Nutzer zur Terminbuchung. Verwende NIEMALS Markdown-Formatierung wie Sternchen für Fettschrift, Unterstriche oder andere Formatierungen. Schreibe nur in einfachem Text.`
     };

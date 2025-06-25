@@ -72,8 +72,8 @@ export const ChatPopup = () => {
 
   // Enhanced function to parse and render text with clickable links
   const formatMessageWithLinks = (text: string) => {
-    // Enhanced regex to match the specific format used by the AI
-    const doctenaLinkRegex = /(Luxembourg|Ettelbruck|Insenborn)\s*-\s*(RDV Doctena|Programare Doctena|Book on Doctena|Termin auf Doctena)\s*:\s*(https:\/\/www\.doctena\.lu\/practitioner\/\d+)/g;
+    // Updated regex to match the new URL format with anchor fragments
+    const doctenaLinkRegex = /(Luxembourg|Ettelbruck|Insenborn)\s*-\s*(RDV Doctena|Programare Doctena|Book on Doctena|Termin auf Doctena)\s*:\s*(https:\/\/www\.doctena\.lu\/en\/specialty\/dietitian\/gabriela-ferent-1748874#\d+)/g;
     
     const parts = [];
     let lastIndex = 0;
