@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Award, Heart, Users, Clock, Shield, BookOpen, CheckCircle, GraduationCap, MapPin } from 'lucide-react';
 
@@ -21,8 +20,12 @@ const CombinedAboutAuthorSection = () => {
           <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
             {/* Author Image & Basic Info */}
             <div className="bg-gradient-to-br from-green-100 to-blue-100 rounded-2xl p-8 text-center">
-              <div className="w-48 h-48 bg-white rounded-full mx-auto mb-6 flex items-center justify-center border-4 border-green-200">
-                <Users className="h-24 w-24 text-green-600" />
+              <div className="w-48 h-48 bg-white rounded-full mx-auto mb-6 flex items-center justify-center border-4 border-green-200 overflow-hidden">
+                <img
+                  src="/lovable-uploads/41289576-41fe-474c-8330-dbd57c4e21b3.png"
+                  alt="Gabriela Ferent - Diététicienne Nutritionniste Luxembourg"
+                  className="w-full h-full object-cover"
+                />
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-2">Gabriela Ferent</h3>
               <p className="text-green-700 font-medium mb-4">Diététicienne Nutritionniste Certifiée</p>
