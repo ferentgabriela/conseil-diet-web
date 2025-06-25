@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import { Star, Quote, Calendar, ExternalLink } from 'lucide-react';
 
@@ -28,7 +27,7 @@ const DoctenaTestimonialsSection = () => {
       treatment: "Accompagnement nutritionnel"
     },
     {
-      quote: "Le docteur est très professionniste. Elle prende le temps nécessaire pour écouter le patient et trouver la meilleure solution pour lui.",
+      quote: "Gabriela est très professionniste. Elle prende le temps nécessaire pour écouter le patient et trouver la meilleure solution pour lui.",
       author: "Diana",
       date: "Juillet 2024",
       rating: 5,
