@@ -50,7 +50,8 @@ export const ForwardMessageDialog: React.FC<ForwardMessageDialogProps> = ({
     setIsSubmitting(true);
 
     try {
-      const { error } = await supabase
+      // First, save the forwarded message to the database
+      const { error: insertError } = await supabase
         .from('forwarded_messages')
         .insert({
           conversation_id: conversationId,
@@ -61,17 +62,34 @@ export const ForwardMessageDialog: React.FC<ForwardMessageDialogProps> = ({
           status: 'pending'
         });
 
-      if (error) throw error;
+      if (insertError) throw insertError;
 
-      toast({
-        title: "Message envoyé",
-        description: "Votre message a été transmis à Gabriela. Elle vous contactera dans les plus brefs délais.",
+      // Then call the edge function to send the email
+      const { error: forwardError } = await supabase.functions.invoke('forward-message', {
+        body: {
+          conversationId: conversationId
+        }
       });
+
+      if (forwardError) {
+        console.error('Error forwarding message:', forwardError);
+        // Don't throw here - the message was saved, just the email failed
+        toast({
+          title: "Message sauvegardé",
+          description: "Votre message a été sauvegardé mais l'envoi par email a échoué. Gabriela le recevra quand même.",
+          variant: "destructive",
+        });
+      } else {
+        toast({
+          title: "Message envoyé",
+          description: "Votre message a été transmis à Gabriela par email. Elle vous contactera dans les plus brefs délais.",
+        });
+      }
 
       setFormData({ name: '', email: '', phone: '', message: '' });
       onOpenChange(false);
     } catch (error) {
-      console.error('Error forwarding message:', error);
+      console.error('Error saving message:', error);
       toast({
         title: "Erreur",
         description: "Une erreur s'est produite lors de l'envoi de votre message. Veuillez réessayer.",
