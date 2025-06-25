@@ -28,7 +28,7 @@ const Navigation = () => {
             </div>
           </div>
 
-          {/* Desktop Menu */}
+          {/* Desktop Menu - Story Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             <button
               onClick={() => scrollToSection('accueil')}
@@ -37,28 +37,28 @@ const Navigation = () => {
               Accueil
             </button>
             <button
+              onClick={() => scrollToSection('apropos')}
+              className="text-gray-700 hover:text-green-600 transition-colors"
+            >
+              Pourquoi
+            </button>
+            <button
+              onClick={() => scrollToSection('processus')}
+              className="text-gray-700 hover:text-green-600 transition-colors"
+            >
+              Processus
+            </button>
+            <button
+              onClick={() => scrollToSection('transformations')}
+              className="text-gray-700 hover:text-green-600 transition-colors"
+            >
+              Témoignages
+            </button>
+            <button
               onClick={() => scrollToSection('services')}
               className="text-gray-700 hover:text-green-600 transition-colors"
             >
               Services
-            </button>
-            <button
-              onClick={() => scrollToSection('cabinets')}
-              className="text-gray-700 hover:text-green-600 transition-colors"
-            >
-              Cabinets
-            </button>
-            <button
-              onClick={() => scrollToSection('apropos')}
-              className="text-gray-700 hover:text-green-600 transition-colors"
-            >
-              À propos
-            </button>
-            <button
-              onClick={() => scrollToSection('faq')}
-              className="text-gray-700 hover:text-green-600 transition-colors"
-            >
-              FAQ
             </button>
             <a
               href="https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874"
@@ -66,7 +66,7 @@ const Navigation = () => {
               rel="noopener noreferrer"
               className="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700 transition-colors font-semibold"
             >
-              Réserver maintenant
+              RDV disponible
             </a>
           </div>
 
@@ -102,28 +102,28 @@ const Navigation = () => {
                 Accueil
               </button>
               <button
+                onClick={() => scrollToSection('apropos')}
+                className="text-gray-700 hover:text-green-600 transition-colors text-left"
+              >
+                Pourquoi
+              </button>
+              <button
+                onClick={() => scrollToSection('processus')}
+                className="text-gray-700 hover:text-green-600 transition-colors text-left"
+              >
+                Processus
+              </button>
+              <button
+                onClick={() => scrollToSection('transformations')}
+                className="text-gray-700 hover:text-green-600 transition-colors text-left"
+              >
+                Témoignages
+              </button>
+              <button
                 onClick={() => scrollToSection('services')}
                 className="text-gray-700 hover:text-green-600 transition-colors text-left"
               >
                 Services
-              </button>
-              <button
-                onClick={() => scrollToSection('cabinets')}
-                className="text-gray-700 hover:text-green-600 transition-colors text-left"
-              >
-                Cabinets
-              </button>
-              <button
-                onClick={() => scrollToSection('apropos')}
-                className="text-gray-700 hover:text-green-600 transition-colors text-left"
-              >
-                À propos
-              </button>
-              <button
-                onClick={() => scrollToSection('faq')}
-                className="text-gray-700 hover:text-green-600 transition-colors text-left"
-              >
-                FAQ
               </button>
               
               {/* Mobile contact info */}
@@ -144,7 +144,7 @@ const Navigation = () => {
                 rel="noopener noreferrer"
                 className="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700 transition-colors text-center font-semibold"
               >
-                Réserver maintenant
+                RDV disponible
               </a>
             </div>
           </div>

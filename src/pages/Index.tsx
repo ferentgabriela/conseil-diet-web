@@ -3,15 +3,15 @@ import React, { useState } from 'react';
 import Navigation from '@/components/Navigation';
 import FAQSection from '@/components/FAQSection';
 import { ChatPopup } from '@/components/ChatPopup';
-import HeroSection from '@/components/HeroSection';
-import ServicesSection from '@/components/ServicesSection';
+import NarrativeHeroSection from '@/components/NarrativeHeroSection';
+import CombinedAboutAuthorSection from '@/components/CombinedAboutAuthorSection';
+import HowItWorksSection from '@/components/HowItWorksSection';
+import TransformationStoriesSection from '@/components/TransformationStoriesSection';
+import NarrativeServicesSection from '@/components/NarrativeServicesSection';
 import CabinetsSection from '@/components/CabinetsSection';
-import ResourcesSection from '@/components/ResourcesSection';
 import DoctenaTestimonialsSection from '@/components/DoctenaTestimonialsSection';
 import FloatingCTA from '@/components/FloatingCTA';
-import FAQBlogSection from '@/components/FAQBlogSection';
 import AISummaryBlock from '@/components/AISummaryBlock';
-import CombinedAboutAuthorSection from '@/components/CombinedAboutAuthorSection';
 
 const Index = () => {
   const [isChatOpen, setIsChatOpen] = useState(false);
@@ -27,15 +27,18 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-white">
       <Navigation />
-      <HeroSection />
-      <ServicesSection />
-      <CabinetsSection />
-      <CombinedAboutAuthorSection />
-      <FAQBlogSection />
-      <ResourcesSection />
-      <DoctenaTestimonialsSection />
-      <FAQSection onOpenChat={handleOpenChat} />
-      <AISummaryBlock />
+      
+      {/* Story Arc Structure */}
+      <NarrativeHeroSection />              {/* Problem → Agitate → Solve */}
+      <CombinedAboutAuthorSection />        {/* Why choose Gabriela */}
+      <HowItWorksSection />                 {/* How the process works */}
+      <TransformationStoriesSection />      {/* Real results & proof */}
+      <NarrativeServicesSection />          {/* Services after trust is built */}
+      <CabinetsSection />                   {/* Booking information */}
+      <DoctenaTestimonialsSection />        {/* Additional social proof */}
+      <FAQSection onOpenChat={handleOpenChat} />  {/* Address final concerns */}
+      <AISummaryBlock />                    {/* Final summary */}
+      
       <ChatPopup isOpen={isChatOpen} onToggle={handleToggleChat} />
       <FloatingCTA />
     </div>
