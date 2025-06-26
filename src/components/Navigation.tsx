@@ -67,13 +67,13 @@ const Navigation = () => {
   };
 
   return (
-    <>
+    <div className="fixed top-0 left-0 right-0 z-50">
       <TrustBar />
 
       {/* Main Navigation */}
-      <nav className={`bg-white shadow-lg fixed w-full z-40 transition-all duration-300 ${
+      <nav className={`bg-white shadow-lg transition-all duration-300 ${
         isScrolled ? 'backdrop-blur-md bg-white/95 shadow-xl' : ''
-      }`} style={{ top: '40px' }}>
+      }`}>
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center py-4">
             <NavigationLogo />
@@ -96,7 +96,7 @@ const Navigation = () => {
           />
         </div>
       </nav>
-    </>
+    </div>
   );
 };
 

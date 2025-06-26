@@ -100,7 +100,7 @@
 
   body {
     @apply bg-background text-foreground;
-    padding-top: 128px; /* Trust bar (40px) + Navigation (88px) */
+    padding-top: 120px; /* Adjusted for seamless header */
   }
 }
 
