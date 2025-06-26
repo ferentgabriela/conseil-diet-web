@@ -1,4 +1,3 @@
-
 import React, { useState, useRef, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -161,16 +160,7 @@ export const ChatPopup = ({ isOpen: externalIsOpen, onToggle }: ChatPopupProps) 
 
   if (!isOpen) {
     return (
-      <div className="fixed bottom-8 right-8 z-50 flex flex-col items-center">
-        {/* Enhanced CTA text with emotional appeal */}
-        <div className="mb-3 bg-gradient-to-r from-green-600 to-green-500 text-white px-4 py-2 rounded-2xl shadow-xl text-sm font-medium animate-pulse border border-green-400">
-          <div className="flex items-center gap-2">
-            <span>👋</span>
-            <span>Vous avez une question ? Je suis là</span>
-            <span>👩‍⚕️</span>
-          </div>
-        </div>
-        
+      <div className="fixed bottom-8 right-8 z-50 flex flex-col items-center">        
         {/* Human-centered Avatar Chat Button */}
         <div className="relative">
           <Button
@@ -214,8 +204,8 @@ export const ChatPopup = ({ isOpen: externalIsOpen, onToggle }: ChatPopupProps) 
             </div>
           </Button>
           
-          {/* Subtle helper text */}
-          <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-xs text-green-700 font-medium whitespace-nowrap opacity-75">
+          {/* Enlarged assistant text */}
+          <div className="absolute -bottom-10 left-1/2 transform -translate-x-1/2 text-sm text-green-700 font-semibold whitespace-nowrap opacity-90">
             Assistant nutritionnel
           </div>
         </div>
@@ -234,7 +224,7 @@ export const ChatPopup = ({ isOpen: externalIsOpen, onToggle }: ChatPopupProps) 
                 alt="Gabriela" 
                 className="object-cover"
               />
-              <AvatarFallback className="bg-green-100 text-green-600 font-bold text-sm">
+              <AvatarFallback className="bg-green-100 text-green-600 text-xs font-bold">
                 G
               </AvatarFallback>
             </Avatar>
