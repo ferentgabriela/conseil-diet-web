@@ -26,6 +26,14 @@ const NarrativeHeroSection = () => {
           {/* Left Column - Headline + CTA */}
           <div className="space-y-8">
             <div className="space-y-6">
+              {/* Badge accrocheur */}
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-green-100 to-emerald-100 rounded-full border border-green-200">
+                <span className="text-2xl">🔄</span>
+                <span className="text-sm font-medium text-green-800">
+                  Transformation garantie sans frustration
+                </span>
+              </div>
+
               <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
                 Reprenez le contrôle de votre alimentation.
               </h1>
@@ -48,6 +56,15 @@ const NarrativeHeroSection = () => {
               <p className="text-sm text-gray-600">
                 Remboursé jusqu'à 80 % par la CNS • Sans engagement
               </p>
+
+              {/* Crédentiels de Gabriela */}
+              <div className="flex items-center gap-2 pt-2">
+                <span className="text-2xl">👩‍⚕️</span>
+                <div className="text-sm">
+                  <p className="font-semibold text-gray-900">Gabriela Ferent – Diététicienne certifiée au Luxembourg</p>
+                  <p className="text-gray-600">1000+ patients satisfaits • 10+ années d'expérience</p>
+                </div>
+              </div>
             </div>
 
             {/* Secondary CTA */}
@@ -75,21 +92,22 @@ const NarrativeHeroSection = () => {
                 />
               </div>
               
-              {/* Floating testimonial */}
-              <div className="absolute -bottom-4 -left-4 bg-white rounded-xl p-4 shadow-lg border border-green-200 max-w-[280px]">
-                <p className="text-sm text-gray-700 font-medium italic">
-                  "-12 kg en 4 mois sans privation"
+              {/* Témoignage plus personnel */}
+              <div className="absolute -bottom-4 -left-4 bg-white rounded-xl p-4 shadow-lg border border-green-200 max-w-[300px]">
+                <p className="text-sm text-gray-700 font-medium italic leading-relaxed">
+                  "Grâce à Gabriela, j'ai enfin retrouvé mon énergie et perdu 12 kg sans me priver."
                 </p>
-                <p className="text-xs text-green-600 mt-1">
-                  - Marie, Luxembourg-Ville
+                <p className="text-xs text-green-600 mt-2 font-medium">
+                  — Marie, Luxembourg-Ville
                 </p>
               </div>
             </div>
 
-            {/* Minimized Chat Icon */}
+            {/* Bouton chat simplifié */}
             <div className="flex justify-end">
-              <div className="bg-green-600 hover:bg-green-700 text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 cursor-pointer">
-                <MessageCircle className="h-5 w-5" />
+              <div className="group bg-green-600 hover:bg-green-700 text-white px-4 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 cursor-pointer flex items-center gap-2">
+                <MessageCircle className="h-4 w-4" />
+                <span className="text-sm font-medium">Une question ?</span>
               </div>
             </div>
           </div>
