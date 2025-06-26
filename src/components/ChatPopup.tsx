@@ -7,6 +7,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { X, MessageCircle, Send, User, Bot, ExternalLink } from 'lucide-react';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { Badge } from '@/components/ui/badge';
+import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 import { useChatMessages } from '@/hooks/useChatMessages';
 import { ForwardMessageDialog } from './ForwardMessageDialog';
 
@@ -160,59 +161,95 @@ export const ChatPopup = ({ isOpen: externalIsOpen, onToggle }: ChatPopupProps) 
 
   if (!isOpen) {
     return (
-      <div className="fixed bottom-6 right-6 z-50 flex flex-col items-center">
-        {/* "Poser une question" text above the button with gentle fade animation */}
-        <div className="mb-2 bg-green-600 text-white px-3 py-1 rounded-lg shadow-lg text-sm font-medium animate-pulse">
-          Poser une question
+      <div className="fixed bottom-8 right-8 z-50 flex flex-col items-center">
+        {/* Enhanced CTA text with emotional appeal */}
+        <div className="mb-3 bg-gradient-to-r from-green-600 to-green-500 text-white px-4 py-2 rounded-2xl shadow-xl text-sm font-medium animate-pulse border border-green-400">
+          <div className="flex items-center gap-2">
+            <span>👋</span>
+            <span>Vous avez une question ? Je suis là</span>
+            <span>👩‍⚕️</span>
+          </div>
         </div>
         
-        {/* Dynamic Breathing Chat Button */}
-        <Button
-          onClick={toggleOpen}
-          className="h-16 w-16 rounded-full bg-green-600 hover:bg-green-700 shadow-2xl z-50 relative overflow-hidden group transition-all duration-500 hover:scale-110"
-          style={{
-            animation: 'breathing 3s ease-in-out infinite'
-          }}
-          size="icon"
-        >
-          {/* Gentle ripple effects */}
-          <div 
-            className="absolute inset-0 bg-green-400 rounded-full opacity-20"
-            style={{ animation: 'ripple 4s ease-out infinite' }}
-          ></div>
-          <div 
-            className="absolute inset-0 bg-green-500 rounded-full opacity-15"
-            style={{ animation: 'ripple 4s ease-out infinite 1s' }}
-          ></div>
-          
-          {/* Icon with gentle breathing animation */}
-          <MessageCircle 
-            className="h-9 w-9 relative z-10 group-hover:scale-110 transition-transform duration-300" 
-            style={{ animation: 'iconBreath 3s ease-in-out infinite' }}
-          />
-          
-          {/* Enhanced notification dot with subtle pulsing */}
-          <div 
-            className="absolute -top-1 -right-1 h-5 w-5 bg-red-500 rounded-full flex items-center justify-center"
-            style={{ animation: 'dotPulse 2s ease-in-out infinite' }}
+        {/* Human-centered Avatar Chat Button */}
+        <div className="relative">
+          <Button
+            onClick={toggleOpen}
+            className="h-20 w-20 rounded-2xl bg-gradient-to-br from-green-600 via-green-500 to-green-400 hover:from-green-700 hover:via-green-600 hover:to-green-500 shadow-2xl z-50 relative overflow-hidden group transition-all duration-500 hover:scale-110 border-2 border-green-300"
+            style={{
+              animation: 'gentleBreath 4s ease-in-out infinite'
+            }}
+            size="icon"
           >
-            <div className="h-2 w-2 bg-white rounded-full"></div>
+            {/* Gentle ripple effects */}
+            <div 
+              className="absolute inset-0 bg-green-300 rounded-2xl opacity-20"
+              style={{ animation: 'ripple 5s ease-out infinite' }}
+            ></div>
+            <div 
+              className="absolute inset-0 bg-green-400 rounded-2xl opacity-15"
+              style={{ animation: 'ripple 5s ease-out infinite 1.5s' }}
+            ></div>
+            
+            {/* Gabriela Avatar with fallback to icon */}
+            <div className="relative z-10 group-hover:scale-110 transition-transform duration-300">
+              <Avatar className="h-12 w-12">
+                <AvatarImage 
+                  src="/lovable-uploads/gabriela-avatar.jpg" 
+                  alt="Gabriela" 
+                  className="object-cover"
+                />
+                <AvatarFallback className="bg-white text-green-600 font-bold text-lg border-2 border-green-200">
+                  G
+                </AvatarFallback>
+              </Avatar>
+            </div>
+            
+            {/* Subtle online indicator instead of red dot */}
+            <div 
+              className="absolute -top-1 -right-1 h-6 w-6 bg-gradient-to-br from-emerald-400 to-green-500 rounded-full flex items-center justify-center border-2 border-white shadow-lg"
+              style={{ animation: 'gentlePulse 3s ease-in-out infinite' }}
+            >
+              <div className="h-2 w-2 bg-white rounded-full"></div>
+            </div>
+          </Button>
+          
+          {/* Subtle helper text */}
+          <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-xs text-green-700 font-medium whitespace-nowrap opacity-75">
+            Assistant nutritionnel
           </div>
-        </Button>
+        </div>
       </div>
     );
   }
 
   return (
     <>
-      <Card className="fixed bottom-6 right-6 w-[576px] h-[600px] shadow-2xl z-50 flex flex-col border-green-200">
-        <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2 flex-shrink-0 bg-gradient-to-r from-green-50 to-green-100 border-b border-green-200">
-          <CardTitle className="text-lg text-green-800">Assistant Diététique</CardTitle>
+      <Card className="fixed bottom-8 right-8 w-[576px] h-[600px] shadow-2xl z-50 flex flex-col border-green-200 rounded-2xl overflow-hidden">
+        <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-3 flex-shrink-0 bg-gradient-to-r from-green-50 to-emerald-50 border-b border-green-200">
+          <div className="flex items-center gap-3">
+            <Avatar className="h-8 w-8">
+              <AvatarImage 
+                src="/lovable-uploads/gabriela-avatar.jpg" 
+                alt="Gabriela" 
+                className="object-cover"
+              />
+              <AvatarFallback className="bg-green-100 text-green-600 font-bold text-sm">
+                G
+              </AvatarFallback>
+            </Avatar>
+            <div>
+              <CardTitle className="text-lg text-green-800">Gabriela</CardTitle>
+              <p className="text-xs text-green-600">
+                {isLoading ? "Gabriela répond..." : "Assistant nutritionnel"}
+              </p>
+            </div>
+          </div>
           <Button
             variant="ghost"
             size="icon"
             onClick={toggleOpen}
-            className="h-6 w-6 text-green-600 hover:text-green-700 hover:bg-green-100"
+            className="h-8 w-8 text-green-600 hover:text-green-700 hover:bg-green-100 rounded-xl"
           >
             <X className="h-4 w-4" />
           </Button>
@@ -221,19 +258,26 @@ export const ChatPopup = ({ isOpen: externalIsOpen, onToggle }: ChatPopupProps) 
         <CardContent className="flex-1 flex flex-col p-4 space-y-4 min-h-0">
           {messages.length === 0 && (
             <div className="space-y-3 flex-shrink-0">
-              <p className="text-sm text-muted-foreground">
-                Bonjour ! Je suis l'assistant de Gabriela Ferent, diététicienne au Luxembourg. 
-                Comment puis-je vous aider aujourd'hui ?
-              </p>
+              <div className="flex items-center gap-2 p-3 bg-green-50 rounded-2xl border border-green-200">
+                <Avatar className="h-6 w-6">
+                  <AvatarFallback className="bg-green-100 text-green-600 text-xs font-bold">
+                    G
+                  </AvatarFallback>
+                </Avatar>
+                <p className="text-sm text-green-800">
+                  <span className="font-medium">Bonjour !</span> Je suis l'assistant de Gabriela Ferent, diététicienne au Luxembourg. 
+                  Comment puis-je vous aider aujourd'hui ? 😊
+                </p>
+              </div>
               
               <div className="space-y-2">
-                <p className="text-xs font-medium text-muted-foreground">Actions rapides :</p>
+                <p className="text-xs font-medium text-muted-foreground">💡 Actions rapides :</p>
                 <div className="flex flex-wrap gap-2">
                   {quickActions.map((action, index) => (
                     <Badge
                       key={index}
                       variant="secondary"
-                      className="cursor-pointer hover:bg-green-100 text-xs bg-green-50 text-green-700 border-green-200"
+                      className="cursor-pointer hover:bg-green-100 text-xs bg-green-50 text-green-700 border-green-200 rounded-xl transition-all hover:scale-105"
                       onClick={action.action}
                     >
                       {action.text}
@@ -257,17 +301,23 @@ export const ChatPopup = ({ isOpen: externalIsOpen, onToggle }: ChatPopupProps) 
                         message.sender === 'user' ? 'flex-row-reverse space-x-reverse' : ''
                       }`}
                     >
-                      <div className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center ${
-                        message.sender === 'user' ? 'bg-green-600 text-white' : 'bg-green-100 text-green-600'
+                      <div className={`flex-shrink-0 ${
+                        message.sender === 'user' ? '' : ''
                       }`}>
                         {message.sender === 'user' ? (
-                          <User className="h-4 w-4" />
+                          <div className="w-8 h-8 rounded-full bg-green-600 text-white flex items-center justify-center">
+                            <User className="h-4 w-4" />
+                          </div>
                         ) : (
-                          <Bot className="h-4 w-4" />
+                          <Avatar className="h-8 w-8">
+                            <AvatarFallback className="bg-green-100 text-green-600 text-xs font-bold">
+                              G
+                            </AvatarFallback>
+                          </Avatar>
                         )}
                       </div>
                       <div
-                        className={`rounded-lg px-3 py-2 text-sm break-words overflow-hidden ${
+                        className={`rounded-2xl px-4 py-3 text-sm break-words overflow-hidden ${
                           message.sender === 'user'
                             ? 'bg-green-600 text-white'
                             : 'bg-green-50 text-green-900 border border-green-200'
@@ -284,14 +334,19 @@ export const ChatPopup = ({ isOpen: externalIsOpen, onToggle }: ChatPopupProps) 
                 {isLoading && (
                   <div className="flex justify-start">
                     <div className="flex items-start space-x-2">
-                      <div className="flex-shrink-0 w-8 h-8 rounded-full bg-green-100 text-green-600 flex items-center justify-center">
-                        <Bot className="h-4 w-4" />
-                      </div>
-                      <div className="bg-green-50 border border-green-200 rounded-lg px-3 py-2 text-sm">
-                        <div className="flex space-x-1">
-                          <div className="w-2 h-2 bg-green-600 rounded-full animate-bounce"></div>
-                          <div className="w-2 h-2 bg-green-600 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
-                          <div className="w-2 h-2 bg-green-600 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
+                      <Avatar className="h-8 w-8">
+                        <AvatarFallback className="bg-green-100 text-green-600 text-xs font-bold">
+                          G
+                        </AvatarFallback>
+                      </Avatar>
+                      <div className="bg-green-50 border border-green-200 rounded-2xl px-4 py-3 text-sm">
+                        <div className="flex items-center space-x-2">
+                          <div className="flex space-x-1">
+                            <div className="w-2 h-2 bg-green-600 rounded-full animate-bounce"></div>
+                            <div className="w-2 h-2 bg-green-600 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
+                            <div className="w-2 h-2 bg-green-600 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
+                          </div>
+                          <span className="text-green-700 text-xs">Gabriela répond...</span>
                         </div>
                       </div>
                     </div>
@@ -308,14 +363,14 @@ export const ChatPopup = ({ isOpen: externalIsOpen, onToggle }: ChatPopupProps) 
               onChange={(e) => setCurrentMessage(e.target.value)}
               onKeyPress={handleKeyPress}
               placeholder="Tapez votre message..."
-              className="flex-1 min-h-[40px] max-h-[100px] resize-none border-green-200 focus:border-green-400 focus:ring-green-400"
+              className="flex-1 min-h-[40px] max-h-[100px] resize-none border-green-200 focus:border-green-400 focus:ring-green-400 rounded-2xl"
               rows={1}
             />
             <Button
               onClick={handleSendMessage}
               disabled={!currentMessage.trim() || isLoading}
               size="icon"
-              className="flex-shrink-0 bg-green-600 hover:bg-green-700"
+              className="flex-shrink-0 bg-green-600 hover:bg-green-700 rounded-2xl"
             >
               <Send className="h-4 w-4" />
             </Button>
