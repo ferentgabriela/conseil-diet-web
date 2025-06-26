@@ -5,6 +5,7 @@ import FAQSection from '@/components/FAQSection';
 import { ChatPopup } from '@/components/ChatPopup';
 import NarrativeHeroSection from '@/components/NarrativeHeroSection';
 import CombinedAboutAuthorSection from '@/components/CombinedAboutAuthorSection';
+import VideoMessageSection from '@/components/VideoMessageSection';
 import HowItWorksSection from '@/components/HowItWorksSection';
 import TransformationStoriesSection from '@/components/TransformationStoriesSection';
 import NarrativeServicesSection from '@/components/NarrativeServicesSection';
@@ -31,6 +32,7 @@ const Index = () => {
       
       {/* Enhanced Story Arc Structure */}
       <NarrativeHeroSection />              {/* Problem → Emotional connection with lifestyle image */}
+      <VideoMessageSection />               {/* Personal video message from Gabriela */}
       <CombinedAboutAuthorSection />        {/* Why choose Gabriela */}
       <HowItWorksSection />                 {/* How the process works */}
       <TransformationStoriesSection />      {/* Real results & proof */}
