@@ -1,7 +1,7 @@
-
 import React from 'react';
 import { Clock, User, ArrowRight, BookOpen } from 'lucide-react';
 import { ScrollArea } from '@/components/ui/scroll-area';
+import { Link } from 'react-router-dom';
 
 const BlogSection = () => {
   const articles = [
@@ -138,10 +138,13 @@ const BlogSection = () => {
                         {article.excerpt}
                       </p>
                       
-                      <button className="inline-flex items-center gap-2 text-green-600 hover:text-green-700 font-medium transition-colors">
+                      <Link 
+                        to={`/articles/${article.slug}`}
+                        className="inline-flex items-center gap-2 text-green-600 hover:text-green-700 font-medium transition-colors"
+                      >
                         Lire l'article
                         <ArrowRight className="h-4 w-4" />
-                      </button>
+                      </Link>
                     </div>
                   </article>
                 ))}
