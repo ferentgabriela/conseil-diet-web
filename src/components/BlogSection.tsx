@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Clock, User, ArrowRight, BookOpen } from 'lucide-react';
+import { ScrollArea } from '@/components/ui/scroll-area';
 
 const BlogSection = () => {
   const articles = [
@@ -35,6 +36,38 @@ const BlogSection = () => {
       category: "Prévention",
       image: "https://images.unsplash.com/photo-1721322800607-8c38375eef04?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
       slug: "cholesterol-alimentation"
+    },
+    {
+      title: "Troubles Digestifs : Solutions Naturelles et Alimentation",
+      excerpt: "Ballonnements, reflux, constipation... Découvrez comment soulager vos troubles digestifs grâce à une alimentation adaptée et des remèdes naturels.",
+      readTime: "9 min",
+      category: "Digestion",
+      image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+      slug: "troubles-digestifs-solutions"
+    },
+    {
+      title: "Perte de Poids Après 40 ans : Stratégies Efficaces",
+      excerpt: "Votre métabolisme ralentit avec l'âge ? Adaptez votre approche nutritionnelle avec ces stratégies spécialement conçues pour les plus de 40 ans.",
+      readTime: "11 min",
+      category: "Minceur",
+      image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+      slug: "perte-poids-apres-40"
+    },
+    {
+      title: "Hypertension : Le Régime DASH Expliqué Simplement",
+      excerpt: "Réduisez votre tension artérielle naturellement avec le régime DASH. Guide complet avec menus types et conseils pratiques pour débuter.",
+      readTime: "10 min",
+      category: "Cardiovasculaire",
+      image: "https://images.unsplash.com/photo-1498837167922-ddd27525d352?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+      slug: "hypertension-regime-dash"
+    },
+    {
+      title: "Thyroïde et Alimentation : Ce qu'il Faut Savoir",
+      excerpt: "Hypothyroïdie ou hyperthyroïdie ? Découvrez comment adapter votre alimentation pour soutenir le bon fonctionnement de votre thyroïde.",
+      readTime: "13 min",
+      category: "Endocrinologie",
+      image: "https://images.unsplash.com/photo-1559757175-0eb30cd8c063?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+      slug: "thyroide-alimentation"
     }
   ];
 
@@ -66,49 +99,54 @@ const BlogSection = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 mb-12">
-            {articles.map((article, index) => (
-              <article key={index} className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 overflow-hidden group">
-                <div className="relative overflow-hidden">
-                  <img 
-                    src={article.image} 
-                    alt={article.title}
-                    className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
-                  />
-                  <div className="absolute top-4 left-4">
-                    <span className="bg-green-600 text-white px-3 py-1 rounded-full text-sm font-medium">
-                      {article.category}
-                    </span>
-                  </div>
-                </div>
-                
-                <div className="p-6">
-                  <div className="flex items-center gap-4 mb-3 text-sm text-gray-500">
-                    <div className="flex items-center gap-1">
-                      <User className="h-4 w-4" />
-                      <span>Gabriela Ferent</span>
+          {/* Scrollable Articles Area */}
+          <div className="mb-12">
+            <ScrollArea className="h-[600px] w-full rounded-2xl border bg-white/50 backdrop-blur-sm shadow-lg">
+              <div className="grid md:grid-cols-2 gap-6 p-6">
+                {articles.map((article, index) => (
+                  <article key={index} className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 overflow-hidden group">
+                    <div className="relative overflow-hidden">
+                      <img 
+                        src={article.image} 
+                        alt={article.title}
+                        className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
+                      />
+                      <div className="absolute top-4 left-4">
+                        <span className="bg-green-600 text-white px-3 py-1 rounded-full text-sm font-medium">
+                          {article.category}
+                        </span>
+                      </div>
                     </div>
-                    <div className="flex items-center gap-1">
-                      <Clock className="h-4 w-4" />
-                      <span>{article.readTime}</span>
+                    
+                    <div className="p-6">
+                      <div className="flex items-center gap-4 mb-3 text-sm text-gray-500">
+                        <div className="flex items-center gap-1">
+                          <User className="h-4 w-4" />
+                          <span>Gabriela Ferent</span>
+                        </div>
+                        <div className="flex items-center gap-1">
+                          <Clock className="h-4 w-4" />
+                          <span>{article.readTime}</span>
+                        </div>
+                      </div>
+                      
+                      <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
+                        {article.title}
+                      </h3>
+                      
+                      <p className="text-gray-600 mb-4 line-clamp-3">
+                        {article.excerpt}
+                      </p>
+                      
+                      <button className="inline-flex items-center gap-2 text-green-600 hover:text-green-700 font-medium transition-colors">
+                        Lire l'article
+                        <ArrowRight className="h-4 w-4" />
+                      </button>
                     </div>
-                  </div>
-                  
-                  <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
-                    {article.title}
-                  </h3>
-                  
-                  <p className="text-gray-600 mb-4 line-clamp-3">
-                    {article.excerpt}
-                  </p>
-                  
-                  <button className="inline-flex items-center gap-2 text-green-600 hover:text-green-700 font-medium transition-colors">
-                    Lire l'article
-                    <ArrowRight className="h-4 w-4" />
-                  </button>
-                </div>
-              </article>
-            ))}
+                  </article>
+                ))}
+              </div>
+            </ScrollArea>
           </div>
 
           {/* Call to Action */}
