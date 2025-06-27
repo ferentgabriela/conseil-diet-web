@@ -185,7 +185,7 @@ export const ChatPopup = ({ isOpen: externalIsOpen, onToggle }: ChatPopupProps) 
             <div className="relative z-10 group-hover:scale-110 transition-transform duration-300">
               <Avatar className="h-12 w-12">
                 <AvatarImage 
-                  src="/lovable-uploads/gabriela-avatar.jpg" 
+                  src="/lovable-uploads/d64f7102-b262-41a2-8c38-ce2367befbe9.png" 
                   alt="Gabriela" 
                   className="object-cover"
                 />
@@ -220,7 +220,7 @@ export const ChatPopup = ({ isOpen: externalIsOpen, onToggle }: ChatPopupProps) 
           <div className="flex items-center gap-3">
             <Avatar className="h-8 w-8">
               <AvatarImage 
-                src="/lovable-uploads/gabriela-avatar.jpg" 
+                src="/lovable-uploads/d64f7102-b262-41a2-8c38-ce2367befbe9.png" 
                 alt="Gabriela" 
                 className="object-cover"
               />
