@@ -7,6 +7,7 @@ import ServicesSection from '@/components/ServicesSection';
 import TestimonialsSection from '@/components/TestimonialsSection';
 import DoctenaTestimonialsSection from '@/components/DoctenaTestimonialsSection';
 import FAQSection from '@/components/FAQSection';
+import BlogSection from '@/components/BlogSection';
 import LocationsSection from '@/components/LocationsSection';
 import FinalCTASection from '@/components/FinalCTASection';
 import Footer from '@/components/Footer';
@@ -33,6 +34,7 @@ const Index = () => {
       <TestimonialsSection />
       <DoctenaTestimonialsSection />
       <FAQSection onOpenChat={handleOpenChat} />
+      <BlogSection />
       <LocationsSection />
       <FinalCTASection />
       
