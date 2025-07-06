@@ -6,6 +6,9 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
+import LocationLuxembourg from "./pages/LocationLuxembourg";
+import LocationEttelbruck from "./pages/LocationEttelbruck";
+import LocationInsenborn from "./pages/LocationInsenborn";
 import NutritionMenopause from "./pages/articles/NutritionMenopause";
 import AllaitementPertePoids from "./pages/articles/AllaitementPertePoids";
 import DiabeteAliments from "./pages/articles/DiabeteAliments";
@@ -25,6 +28,9 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/luxembourg" element={<LocationLuxembourg />} />
+          <Route path="/ettelbruck" element={<LocationEttelbruck />} />
+          <Route path="/insenborn" element={<LocationInsenborn />} />
           <Route path="/articles/nutrition-menopause-guide" element={<NutritionMenopause />} />
           <Route path="/articles/allaitement-perte-poids" element={<AllaitementPertePoids />} />
           <Route path="/articles/diabete-aliments-recommandes" element={<DiabeteAliments />} />

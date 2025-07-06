@@ -1,19 +1,15 @@
 
 import React, { useState } from 'react';
 import Navigation from '@/components/Navigation';
+import HeroSection from '@/components/HeroSection';
+import AboutPracticeSection from '@/components/AboutPracticeSection';
+import ServicesSection from '@/components/ServicesSection';
+import TestimonialsSection from '@/components/TestimonialsSection';
 import FAQSection from '@/components/FAQSection';
-import { ChatPopup } from '@/components/ChatPopup';
-import NarrativeHeroSection from '@/components/NarrativeHeroSection';
-import CombinedAboutAuthorSection from '@/components/CombinedAboutAuthorSection';
-import VideoMessageSection from '@/components/VideoMessageSection';
-import HowItWorksSection from '@/components/HowItWorksSection';
-import TransformationStoriesSection from '@/components/TransformationStoriesSection';
-import NarrativeServicesSection from '@/components/NarrativeServicesSection';
-import CabinetsSection from '@/components/CabinetsSection';
-import DoctenaTestimonialsSection from '@/components/DoctenaTestimonialsSection';
-import BlogSection from '@/components/BlogSection';
-import AISummaryBlock from '@/components/AISummaryBlock';
+import LocationsSection from '@/components/LocationsSection';
+import FinalCTASection from '@/components/FinalCTASection';
 import Footer from '@/components/Footer';
+import { ChatPopup } from '@/components/ChatPopup';
 
 const Index = () => {
   const [isChatOpen, setIsChatOpen] = useState(false);
@@ -30,20 +26,15 @@ const Index = () => {
     <div className="min-h-screen bg-white">
       <Navigation />
       
-      {/* Enhanced Story Arc Structure */}
-      <NarrativeHeroSection />              {/* Problem → Emotional connection with lifestyle image */}
-      <VideoMessageSection />               {/* Personal video message from Gabriela */}
-      <CombinedAboutAuthorSection />        {/* Why choose Gabriela */}
-      <HowItWorksSection />                 {/* How the process works */}
-      <TransformationStoriesSection />      {/* Real results & proof */}
-      <NarrativeServicesSection />          {/* Services after trust is built */}
-      <CabinetsSection />                   {/* Booking information */}
-      <DoctenaTestimonialsSection />        {/* Additional social proof */}
-      <BlogSection />                       {/* SEO-rich content & expertise */}
-      <FAQSection onOpenChat={handleOpenChat} />  {/* Address final concerns */}
-      <AISummaryBlock />                    {/* Final summary */}
+      <HeroSection />
+      <AboutPracticeSection />
+      <ServicesSection />
+      <TestimonialsSection />
+      <FAQSection onOpenChat={handleOpenChat} />
+      <LocationsSection />
+      <FinalCTASection />
       
-      <Footer />                            {/* Contact information at bottom */}
+      <Footer />
       
       <ChatPopup isOpen={isChatOpen} onToggle={handleToggleChat} />
     </div>
