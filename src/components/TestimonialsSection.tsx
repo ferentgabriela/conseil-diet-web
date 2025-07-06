@@ -47,7 +47,7 @@ const TestimonialsSection = () => {
           
           <div className="grid md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-gradient-to-br from-green-50 to-blue-50 rounded-xl p-6 shadow-lg relative">
+              <div key={index} className="bg-gradient-to-br from-green-50 to-blue-50 rounded-xl p-6 shadow-lg relative flex flex-col">
                 <div className="absolute top-4 right-4">
                   <Quote className="h-8 w-8 text-green-200" />
                 </div>
@@ -56,11 +56,11 @@ const TestimonialsSection = () => {
                   {renderStars(testimonial.rating)}
                 </div>
                 
-                <blockquote className="text-gray-700 mb-8 text-lg leading-relaxed">
+                <blockquote className="text-gray-700 mb-8 text-lg leading-relaxed flex-grow">
                   "{testimonial.text}"
                 </blockquote>
                 
-                <div className="border-t border-gray-200 pt-6">
+                <div className="border-t border-gray-200 pt-6 mt-auto">
                   <p className="font-semibold text-gray-900 text-lg">
                     {testimonial.author}
                   </p>
