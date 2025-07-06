@@ -56,18 +56,18 @@ const TestimonialsSection = () => {
                   {renderStars(testimonial.rating)}
                 </div>
                 
-                <blockquote className="text-gray-700 mb-6 text-lg leading-relaxed">
+                <blockquote className="text-gray-700 mb-8 text-lg leading-relaxed">
                   "{testimonial.text}"
                 </blockquote>
                 
-                <div className="border-t pt-4">
-                  <p className="font-semibold text-gray-900">
+                <div className="border-t border-gray-200 pt-6">
+                  <p className="font-semibold text-gray-900 text-lg">
                     {testimonial.author}
                   </p>
-                  <p className="text-sm text-gray-600">
+                  <p className="text-sm text-gray-600 mt-1">
                     {testimonial.location}
                   </p>
-                  <p className="text-xs text-gray-500 mt-1">
+                  <p className="text-xs text-gray-500 mt-2">
                     {testimonial.date}
                   </p>
                 </div>
