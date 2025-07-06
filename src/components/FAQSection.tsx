@@ -1,5 +1,6 @@
 import React from 'react';
 import { Euro, Shield, Calendar, Clock, Phone, HelpCircle, Stethoscope, ArrowRight } from 'lucide-react';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 
 interface FAQSectionProps {
   onOpenChat?: () => void;
@@ -80,25 +81,29 @@ const FAQSection = ({ onOpenChat }: FAQSectionProps) => {
             </p>
           </div>
           
-          <div className="space-y-8">
+          <Accordion type="single" collapsible className="w-full space-y-4">
             {faqs.map((faq, index) => {
               const IconComponent = faq.icon;
               return (
-                <div key={index} className="bg-white rounded-2xl shadow-lg overflow-hidden">
-                  {/* Header with icon and question */}
-                  <div className="bg-gradient-to-r from-green-600 to-teal-600 p-6">
-                    <div className="flex items-center gap-4">
-                      <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0">
-                        <IconComponent className="h-6 w-6 text-white" />
+                <AccordionItem 
+                  key={index} 
+                  value={`faq-${index}`}
+                  className="bg-white rounded-2xl shadow-lg border-0 overflow-hidden"
+                >
+                  <AccordionTrigger className="hover:no-underline p-0 [&[data-state=open]>div]:rounded-b-none">
+                    <div className="bg-gradient-to-r from-green-600 to-teal-600 p-6 w-full rounded-2xl">
+                      <div className="flex items-center gap-4">
+                        <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0">
+                          <IconComponent className="h-6 w-6 text-white" />
+                        </div>
+                        <h3 className="text-xl font-bold text-white text-left">
+                          {faq.question}
+                        </h3>
                       </div>
-                      <h3 className="text-xl font-bold text-white">
-                        {faq.question}
-                      </h3>
                     </div>
-                  </div>
+                  </AccordionTrigger>
                   
-                  {/* Content */}
-                  <div className="p-8">
+                  <AccordionContent className="p-8 pb-8">
                     <p className="text-gray-700 text-lg leading-relaxed mb-6">
                       {faq.answer}
                     </p>
@@ -143,11 +148,11 @@ const FAQSection = ({ onOpenChat }: FAQSectionProps) => {
                         Gabriela Fares • Diététicienne nutritionniste Luxembourg
                       </p>
                     </div>
-                  </div>
-                </div>
+                  </AccordionContent>
+                </AccordionItem>
               );
             })}
-          </div>
+          </Accordion>
         </div>
       </div>
     </section>
