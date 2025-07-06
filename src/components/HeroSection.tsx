@@ -27,11 +27,11 @@ const HeroSection = () => {
       
       <div className="container mx-auto px-4 text-center relative z-10">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-6xl md:text-8xl font-black text-white mb-6 leading-tight tracking-tight drop-shadow-2xl">
+          <h1 className="text-6xl md:text-8xl font-inter font-bold text-white mb-6 leading-tight tracking-tight drop-shadow-2xl">
             Atteignez Votre Santé Idéale avec une Diététicienne Certifiée Près de Chez Vous
           </h1>
           
-          <h2 className="text-xl md:text-2xl text-white/90 mb-8 font-normal drop-shadow-lg">
+          <h2 className="text-xl md:text-2xl text-white/90 mb-8 font-inter font-normal drop-shadow-lg">
             Trois cabinets accueillants à Luxembourg-Ville, Ettelbruck et Insenborn. 
             Accompagnement nutritionnel personnalisé selon vos objectifs.
           </h2>

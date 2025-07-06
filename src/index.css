@@ -106,7 +106,7 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-inter;
     padding-top: 136px; /* Trust bar (~32px) + Navigation (~88px) + extra spacing (16px) */
   }
 }
