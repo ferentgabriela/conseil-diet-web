@@ -114,7 +114,7 @@ const BlogSection = () => {
           {/* Fixed height container with scrolling */}
           <div className="bg-white rounded-3xl shadow-2xl p-8 h-[600px] overflow-hidden">
             <div className="h-full overflow-y-auto pr-4 custom-scrollbar">
-              <div className="grid md:grid-cols-2 gap-8">
+              <div className="grid md:grid-cols-3 gap-6">
                 {articles.map((article, index) => (
                   <Link
                     key={article.id}
@@ -122,47 +122,47 @@ const BlogSection = () => {
                     className="group bg-gradient-to-br from-white to-gray-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
                   >
                     {/* Article Image */}
-                    <div className="relative h-48 overflow-hidden">
+                    <div className="relative h-40 overflow-hidden">
                       <img
                         src={article.image}
                         alt={article.title}
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                       />
                       <div className="absolute top-4 left-4">
-                        <span className={`px-3 py-1 rounded-full text-xs font-semibold ${article.categoryColor}`}>
+                        <span className={`px-2 py-1 rounded-full text-xs font-semibold ${article.categoryColor}`}>
                           {article.category}
                         </span>
                       </div>
                     </div>
 
                     {/* Article Content */}
-                    <div className="p-6">
+                    <div className="p-4">
                       {/* Author & Reading Time */}
-                      <div className="flex items-center gap-4 text-sm text-gray-500 mb-3">
+                      <div className="flex items-center gap-3 text-xs text-gray-500 mb-2">
                         <div className="flex items-center gap-1">
-                          <User className="h-4 w-4" />
+                          <User className="h-3 w-3" />
                           <span>{article.author}</span>
                         </div>
                         <div className="flex items-center gap-1">
-                          <Clock className="h-4 w-4" />
+                          <Clock className="h-3 w-3" />
                           <span>{article.readTime}</span>
                         </div>
                       </div>
 
                       {/* Title */}
-                      <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-green-600 transition-colors line-clamp-2">
+                      <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-green-600 transition-colors line-clamp-2">
                         {article.title}
                       </h3>
 
                       {/* Description */}
-                      <p className="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-3">
+                      <p className="text-gray-600 text-xs leading-relaxed mb-3 line-clamp-2">
                         {article.description}
                       </p>
 
                       {/* Read More */}
-                      <div className="flex items-center gap-2 text-green-600 font-semibold text-sm group-hover:gap-3 transition-all">
+                      <div className="flex items-center gap-2 text-green-600 font-semibold text-xs group-hover:gap-3 transition-all">
                         <span>Lire l'article</span>
-                        <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                        <ArrowRight className="h-3 w-3 group-hover:translate-x-1 transition-transform" />
                       </div>
                     </div>
                   </Link>
