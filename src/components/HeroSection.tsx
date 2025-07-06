@@ -15,7 +15,7 @@ const HeroSection = () => {
 
   return (
     <section 
-      className="pt-24 pb-16 relative overflow-hidden bg-cover bg-center bg-no-repeat"
+      className="pt-16 pb-16 relative overflow-hidden bg-cover bg-center bg-no-repeat -mt-2"
       style={{
         backgroundImage: `url('/lovable-uploads/0a8ef731-1e37-42fe-9edc-6fab463ddcc2.png')`
       }}
