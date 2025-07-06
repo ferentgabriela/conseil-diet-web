@@ -1,5 +1,5 @@
 import React from 'react';
-import { MapPin, Calendar } from 'lucide-react';
+import { MapPin, Calendar, Clock, UserCheck, Lock } from 'lucide-react';
 
 const HeroSection = () => {
   const handleBookingClick = (location: string) => {
@@ -37,8 +37,9 @@ const HeroSection = () => {
           </h2>
           
           <div className="flex justify-center mb-6">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-red-600 text-white rounded-full text-sm font-bold shadow-lg animate-pulse">
-              🔥 Places limitées disponibles cette semaine
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 text-white rounded-full text-sm font-medium shadow-lg">
+              <Clock className="h-4 w-4 text-green-400" />
+              Places limitées disponibles cette semaine
             </div>
           </div>
           
@@ -77,16 +78,16 @@ const HeroSection = () => {
             </button>
           </div>
           
-          <div className="text-center mt-6 mb-4">
-            <p className="text-white/90 font-medium drop-shadow-lg">
-              ✨ Plus de 1,000 patients accompagnés avec succès
-            </p>
-          </div>
-          
-          <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-4 max-w-md mx-auto">
-            <p className="text-white font-medium text-sm">
-              🔒 Vos données sont traitées de manière confidentielle et sécurisée
-            </p>
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mt-6">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 text-white rounded-full text-sm font-medium shadow-lg">
+              <UserCheck className="h-4 w-4 text-green-400" />
+              Plus de 1,000 patients accompagnés
+            </div>
+            
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 text-white rounded-full text-sm font-medium shadow-lg">
+              <Lock className="h-4 w-4 text-green-400" />
+              Données traitées de manière sécurisée
+            </div>
           </div>
         </div>
       </div>
