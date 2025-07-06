@@ -1,7 +1,6 @@
 
 import React, { useState } from 'react';
 import Navigation from '@/components/Navigation';
-import StickyBookingBar from '@/components/StickyBookingBar';
 import HeroSection from '@/components/HeroSection';
 import AboutPracticeSection from '@/components/AboutPracticeSection';
 import ServicesSection from '@/components/ServicesSection';
@@ -28,7 +27,6 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-white">
       <Navigation />
-      <StickyBookingBar />
       
       <HeroSection />
       <AboutPracticeSection />

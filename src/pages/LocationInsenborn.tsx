@@ -1,6 +1,5 @@
 import React from 'react';
 import Navigation from '@/components/Navigation';
-import StickyBookingBar from '@/components/StickyBookingBar';
 import Footer from '@/components/Footer';
 import { MapPin, Calendar, Phone, Clock } from 'lucide-react';
 
@@ -13,7 +12,6 @@ const LocationInsenborn = () => {
   return (
     <div className="min-h-screen bg-white">
       <Navigation />
-      <StickyBookingBar />
       
       {/* Hero Section */}
       <section className="pt-24 pb-16 bg-gradient-to-br from-teal-50 via-green-50 to-teal-25">
