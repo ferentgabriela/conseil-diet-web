@@ -1,7 +1,6 @@
 import React from 'react';
 import { Euro, Shield, Calendar, Clock, Phone, HelpCircle, Stethoscope, ArrowRight } from 'lucide-react';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
-import { Link } from 'react-router-dom';
 
 interface FAQSectionProps {
   onOpenChat?: () => void;
@@ -218,14 +217,11 @@ const FAQSection = ({ onOpenChat }: FAQSectionProps) => {
                     
                     {/* CTA Button */}
                     <div className="text-center">
-                      <Link 
-                        to="/consultation-choice"
-                        className="inline-flex items-center gap-2 px-8 py-4 bg-green-600 text-white font-bold rounded-xl hover:bg-green-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
-                      >
+                      <button className="inline-flex items-center gap-2 px-8 py-4 bg-green-600 text-white font-bold rounded-xl hover:bg-green-700 transition-all duration-300 transform hover:scale-105 shadow-lg">
                         <Calendar className="h-5 w-5" />
                         Consultation personnalisée
                         <ArrowRight className="h-4 w-4" />
-                      </Link>
+                      </button>
                     </div>
                     
                     {/* Footer info */}
