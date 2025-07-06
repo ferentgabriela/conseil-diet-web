@@ -6,33 +6,33 @@ const ServicesSection = () => {
   const services = [
     {
       icon: Scale,
-      title: "Weight Management & Healthy Eating",
-      description: "Sustainable weight loss and healthy lifestyle changes"
+      title: "Gestion du Poids & Alimentation Saine",
+      description: "Perte de poids durable et changements de mode de vie sains"
     },
     {
       icon: Stethoscope,
-      title: "Nutrition for Medical Conditions",
-      description: "Specialized guidance for diabetes, hypertension, and digestive disorders"
+      title: "Nutrition pour Conditions Médicales",
+      description: "Accompagnement spécialisé pour diabète, hypertension et troubles digestifs"
     },
     {
       icon: Zap,
-      title: "Sports Nutrition & Performance",
-      description: "Optimize your athletic performance with proper nutrition"
+      title: "Nutrition Sportive & Performance",
+      description: "Optimisez vos performances athlétiques avec une nutrition appropriée"
     },
     {
       icon: Baby,
-      title: "Pediatric Nutrition",
-      description: "Supporting healthy growth and development in children"
+      title: "Nutrition Pédiatrique",
+      description: "Soutenir une croissance et un développement sains chez l'enfant"
     },
     {
       icon: Heart,
-      title: "Pre- and Post-Natal Nutrition",
-      description: "Nutritional support during pregnancy and breastfeeding"
+      title: "Nutrition Pré & Post-Natale",
+      description: "Soutien nutritionnel pendant la grossesse et l'allaitement"
     },
     {
       icon: Salad,
-      title: "Meal Planning & Education",
-      description: "Learn to make informed food choices for lasting health"
+      title: "Planification de Repas & Éducation",
+      description: "Apprenez à faire des choix alimentaires éclairés pour une santé durable"
     }
   ];
 
@@ -42,7 +42,7 @@ const ServicesSection = () => {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Our Services
+              Nos Services
             </h2>
           </div>
           
@@ -67,10 +67,10 @@ const ServicesSection = () => {
           
           <div className="text-center bg-white rounded-xl p-8 shadow-lg">
             <p className="text-lg text-gray-700 mb-4">
-              Not sure where to start? Book an introductory consultation to explore how we can help.
+              Vous ne savez pas par où commencer ? Réservez une consultation d'introduction pour explorer comment nous pouvons vous aider.
             </p>
             <button className="inline-flex items-center gap-2 px-6 py-3 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transition-colors">
-              Schedule a Consultation
+              Planifier une Consultation
             </button>
           </div>
         </div>

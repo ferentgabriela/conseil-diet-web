@@ -18,11 +18,11 @@ const LocationLuxembourg = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-              Dietician in Luxembourg City – Personalized Nutrition Plans
+              Diététicienne à Luxembourg-Ville – Plans Nutritionnels Personnalisés
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-700 mb-8 font-medium">
-              Welcome to our Luxembourg City clinic. Conveniently located and ready to help you achieve your health goals.
+              Bienvenue dans notre cabinet de Luxembourg-Ville. Idéalement situé et prêt à vous aider à atteindre vos objectifs santé.
             </p>
             
             <button
@@ -30,12 +30,12 @@ const LocationLuxembourg = () => {
               className="inline-flex items-center gap-3 px-10 py-5 bg-green-600 text-white font-bold rounded-xl hover:bg-green-700 transition-all duration-300 text-xl shadow-lg hover:shadow-xl transform hover:scale-105"
             >
               <Calendar className="h-6 w-6" />
-              Book in Luxembourg City
+              Réserver à Luxembourg-Ville
             </button>
             
             <div className="mt-6 bg-amber-50 border border-amber-200 rounded-lg p-4 max-w-md mx-auto">
               <p className="text-amber-800 font-medium text-sm">
-                ⚡ Limited appointments available weekly—reserve your spot now!
+                ⚡ Places limitées disponibles cette semaine—réservez votre créneau maintenant !
               </p>
             </div>
           </div>

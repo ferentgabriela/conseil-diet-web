@@ -4,19 +4,19 @@ import { Star, Quote } from 'lucide-react';
 const TestimonialsSection = () => {
   const testimonials = [
     {
-      text: "I finally feel in control of my eating habits. Thank you for the practical advice and encouragement!",
+      text: "Je me sens enfin maître de mes habitudes alimentaires. Merci pour les conseils pratiques et les encouragements !",
       author: "Sophie",
       location: "Luxembourg",
       rating: 5
     },
     {
-      text: "After years of trying different diets, I learned what really works for my body.",
+      text: "Après des années d'essais de différents régimes, j'ai appris ce qui fonctionne vraiment pour mon corps.",
       author: "Marc",
       location: "Ettelbruck",
       rating: 5
     },
     {
-      text: "Professional, kind, and effective. Highly recommend.",
+      text: "Professionnelle, bienveillante et efficace. Je recommande vivement.",
       author: "Claire",
       location: "Insenborn",
       rating: 5
@@ -35,10 +35,10 @@ const TestimonialsSection = () => {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              What Our Clients Say
+              Ce Que Disent Nos Clients
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Real stories from real people who have transformed their relationship with food and health.
+              Témoignages réels de personnes qui ont transformé leur relation avec la nourriture et la santé.
             </p>
           </div>
           
@@ -72,7 +72,7 @@ const TestimonialsSection = () => {
           <div className="text-center mt-12">
             <div className="inline-flex items-center gap-2 px-6 py-3 bg-green-100 text-green-800 rounded-full">
               <Star className="h-4 w-4 fill-current" />
-              <span className="font-medium">Join hundreds of satisfied clients</span>
+              <span className="font-medium">Rejoignez des centaines de clients satisfaits</span>
             </div>
           </div>
         </div>

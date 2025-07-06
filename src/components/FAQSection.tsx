@@ -10,33 +10,33 @@ interface FAQSectionProps {
 const FAQSection = ({ onOpenChat }: FAQSectionProps) => {
   const faqs = [
     {
-      question: "How much does a consultation cost?",
-      answer: "Session prices start at €80. We will confirm the cost before your booking. Different types of consultations may have varying prices, and we'll always be transparent about costs upfront.",
+      question: "Combien coûte une consultation ?",
+      answer: "Les consultations débutent à partir de 80€. Nous confirmerons le coût avant votre réservation. Différents types de consultations peuvent avoir des tarifs variables, et nous serons toujours transparents sur les coûts à l'avance.",
       icon: Euro
     },
     {
-      question: "Are your services reimbursed by insurance?",
-      answer: "Some insurance providers cover dietician consultations. Please check with your insurer for specific coverage details. We can provide you with the necessary documentation for reimbursement requests.",
+      question: "Vos services sont-ils remboursés par l'assurance ?",
+      answer: "Certaines compagnies d'assurance couvrent les consultations diététiques. Veuillez vérifier auprès de votre assureur pour les détails de couverture spécifiques. Nous pouvons vous fournir la documentation nécessaire pour les demandes de remboursement.",
       icon: Shield
     },
     {
-      question: "How do I book an appointment?",
-      answer: "Simply click the button for your preferred location to schedule via Doctena. You can choose from our three convenient locations: Luxembourg City, Ettelbruck, or Insenborn.",
+      question: "Comment puis-je prendre rendez-vous ?",
+      answer: "Cliquez simplement sur le bouton de votre localisation préférée pour planifier via Doctena. Vous pouvez choisir parmi nos trois emplacements pratiques : Luxembourg-Ville, Ettelbruck ou Insenborn.",
       icon: Calendar
     },
     {
-      question: "How long is a typical consultation?",
-      answer: "Initial consultations typically last 60-90 minutes, while follow-up sessions are usually 45-60 minutes. This allows us sufficient time to understand your needs and create a personalized plan.",
+      question: "Quelle est la durée d'une consultation type ?",
+      answer: "Les consultations initiales durent généralement 60-90 minutes, tandis que les séances de suivi durent habituellement 45-60 minutes. Cela nous permet de disposer d'un temps suffisant pour comprendre vos besoins et créer un plan personnalisé.",
       icon: Clock
     },
     {
-      question: "Do you offer online consultations?",
-      answer: "Yes, we offer both in-person and online consultations to accommodate your schedule and preferences. Online sessions are just as effective for many types of nutritional guidance.",
+      question: "Proposez-vous des consultations en ligne ?",
+      answer: "Oui, nous proposons des consultations en présentiel et en ligne pour s'adapter à votre horaire et vos préférences. Les séances en ligne sont tout aussi efficaces pour de nombreux types d'accompagnement nutritionnel.",
       icon: Phone
     },
     {
-      question: "What should I bring to my first appointment?",
-      answer: "Please bring a list of current medications, recent lab results if available, and a food diary if you've been keeping one. This helps us understand your current situation better.",
+      question: "Que dois-je apporter à mon premier rendez-vous ?",
+      answer: "Veuillez apporter une liste de vos médicaments actuels, des résultats d'analyses récentes si disponibles, et un journal alimentaire si vous en tenez un. Cela nous aide à mieux comprendre votre situation actuelle.",
       icon: HelpCircle
     }
   ];
@@ -47,10 +47,10 @@ const FAQSection = ({ onOpenChat }: FAQSectionProps) => {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Frequently Asked Questions
+              Questions Fréquemment Posées
             </h2>
             <p className="text-lg text-gray-600">
-              Have questions? We have answers. Don't see what you're looking for? Feel free to contact us.
+              Vous avez des questions ? Nous avons les réponses. Vous ne trouvez pas ce que vous cherchez ? N'hésitez pas à nous contacter.
             </p>
           </div>
           
@@ -83,7 +83,7 @@ const FAQSection = ({ onOpenChat }: FAQSectionProps) => {
           
           <div className="text-center mt-8">
             <p className="text-gray-600 mb-4">
-              Still have questions? Don't postpone your health any longer.
+              Vous avez encore des questions ? Ne remettez plus votre santé à plus tard.
             </p>
             {onOpenChat && (
               <button
@@ -91,7 +91,7 @@ const FAQSection = ({ onOpenChat }: FAQSectionProps) => {
                 className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
               >
                 <HelpCircle className="h-5 w-5" />
-                Ask a Question
+                Poser une Question
               </button>
             )}
           </div>
