@@ -33,11 +33,11 @@ const Index = () => {
       <HeroSection />
       <AboutPracticeSection />
       <ServicesSection />
+      <CabinetsSection />
       <TestimonialsSection />
       <DoctenaTestimonialsSection />
       <BlogSection />
       <FAQSection onOpenChat={handleOpenChat} />
-      <CabinetsSection />
       <LocationsSection />
       
       <Footer />
