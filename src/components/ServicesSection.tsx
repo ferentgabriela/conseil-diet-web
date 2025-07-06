@@ -65,13 +65,147 @@ const ServicesSection = () => {
             })}
           </div>
           
-          <div className="text-center bg-white rounded-xl p-8 shadow-lg">
-            <p className="text-lg text-gray-700 mb-4">
-              Vous ne savez pas par où commencer ? Réservez une consultation d'introduction pour explorer comment nous pouvons vous aider.
-            </p>
-            <button className="inline-flex items-center gap-2 px-6 py-3 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transition-colors">
-              Planifier une Consultation
-            </button>
+          <div className="bg-white rounded-xl p-8 shadow-lg">
+            <div className="text-center mb-8">
+              <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+                Choisissez votre type de consultation
+              </h3>
+              <p className="text-lg text-gray-600">
+                Deux options adaptées à vos besoins et votre situation
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-2 gap-8">
+              {/* Consultations CNS */}
+              <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-6 border-2 border-green-200">
+                <div className="text-center mb-6">
+                  <div className="w-16 h-16 bg-green-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+                    <div className="w-8 h-8 border-2 border-white rounded-lg flex items-center justify-center">
+                      <div className="w-3 h-3 bg-white rounded-sm"></div>
+                    </div>
+                  </div>
+                  <h4 className="text-xl font-bold text-gray-900 mb-2">Consultations CNS</h4>
+                  <span className="inline-block px-3 py-1 bg-green-600 text-white text-sm font-medium rounded-full">
+                    Remboursées à 80%
+                  </span>
+                </div>
+                
+                <p className="text-sm text-gray-600 mb-4 text-center">
+                  Sur prescription médicale pour les pathologies suivantes :
+                </p>
+                
+                <div className="space-y-3 mb-6">
+                  <div className="flex items-center gap-3">
+                    <div className="w-5 h-5 bg-green-600 rounded-full flex items-center justify-center">
+                      <div className="w-2 h-2 bg-white rounded-full"></div>
+                    </div>
+                    <span className="text-sm text-gray-700">Diabète type 1 & 2</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-5 h-5 bg-green-600 rounded-full flex items-center justify-center">
+                      <div className="w-2 h-2 bg-white rounded-full"></div>
+                    </div>
+                    <span className="text-sm text-gray-700">Obésité (IMC ≥ 30)</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-5 h-5 bg-green-600 rounded-full flex items-center justify-center">
+                      <div className="w-2 h-2 bg-white rounded-full"></div>
+                    </div>
+                    <span className="text-sm text-gray-700">Troubles alimentaires</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-5 h-5 bg-green-600 rounded-full flex items-center justify-center">
+                      <div className="w-2 h-2 bg-white rounded-full"></div>
+                    </div>
+                    <span className="text-sm text-gray-700">Hypertension artérielle</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-5 h-5 bg-green-600 rounded-full flex items-center justify-center">
+                      <div className="w-2 h-2 bg-white rounded-full"></div>
+                    </div>
+                    <span className="text-sm text-gray-700">Cholestérol élevé</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-5 h-5 bg-green-600 rounded-full flex items-center justify-center">
+                      <div className="w-2 h-2 bg-white rounded-full"></div>
+                    </div>
+                    <span className="text-sm text-gray-700">Syndrome métabolique</span>
+                  </div>
+                </div>
+                
+                <p className="text-xs text-green-700 text-center mb-4">
+                  <span className="font-semibold">Économisez jusqu'à 80%</span> avec le remboursement CNS
+                </p>
+                
+                <button className="w-full px-6 py-3 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transition-colors">
+                  Réserver ma consultation CNS
+                </button>
+              </div>
+              
+              {/* Consultations Privées */}
+              <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-6 border-2 border-blue-200">
+                <div className="text-center mb-6">
+                  <div className="w-16 h-16 bg-blue-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+                    <Heart className="h-8 w-8 text-white" />
+                  </div>
+                  <h4 className="text-xl font-bold text-gray-900 mb-2">Consultations Privées</h4>
+                  <span className="inline-block px-3 py-1 bg-blue-600 text-white text-sm font-medium rounded-full">
+                    Accès immédiat
+                  </span>
+                </div>
+                
+                <p className="text-sm text-gray-600 mb-4 text-center">
+                  Pour tous vos objectifs de santé et bien-être :
+                </p>
+                
+                <div className="space-y-3 mb-6">
+                  <div className="flex items-center gap-3">
+                    <div className="w-5 h-5 bg-blue-600 rounded-full flex items-center justify-center">
+                      <div className="w-2 h-2 bg-white rounded-full"></div>
+                    </div>
+                    <span className="text-sm text-gray-700">Perte de poids durable</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-5 h-5 bg-blue-600 rounded-full flex items-center justify-center">
+                      <div className="w-2 h-2 bg-white rounded-full"></div>
+                    </div>
+                    <span className="text-sm text-gray-700">Rééquilibrage alimentaire</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-5 h-5 bg-blue-600 rounded-full flex items-center justify-center">
+                      <div className="w-2 h-2 bg-white rounded-full"></div>
+                    </div>
+                    <span className="text-sm text-gray-700">Nutrition sportive</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-5 h-5 bg-blue-600 rounded-full flex items-center justify-center">
+                      <div className="w-2 h-2 bg-white rounded-full"></div>
+                    </div>
+                    <span className="text-sm text-gray-700">Allergies alimentaires</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-5 h-5 bg-blue-600 rounded-full flex items-center justify-center">
+                      <div className="w-2 h-2 bg-white rounded-full"></div>
+                    </div>
+                    <span className="text-sm text-gray-700">Grossesse & allaitement</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-5 h-5 bg-blue-600 rounded-full flex items-center justify-center">
+                      <div className="w-2 h-2 bg-white rounded-full"></div>
+                    </div>
+                    <span className="text-sm text-gray-700">Bien-être digestif</span>
+                  </div>
+                </div>
+                
+                <p className="text-xs text-blue-700 text-center mb-4">
+                  <span className="font-semibold">Rendez-vous cette semaine</span> sans prescription
+                </p>
+                
+                <button className="w-full px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors">
+                  Commencer dès maintenant
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
