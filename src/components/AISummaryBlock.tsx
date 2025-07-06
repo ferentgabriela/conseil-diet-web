@@ -96,7 +96,7 @@ const AISummaryBlock = ({ variant = 'default' }: AISummaryBlockProps) => {
   };
 
   return (
-    <div className="ai-summary bg-gradient-to-r from-green-50 to-blue-50 border-2 border-green-200 rounded-2xl p-6 my-8">
+    <div className="ai-summary p-6 my-8">
       {renderContent()}
     </div>
   );
