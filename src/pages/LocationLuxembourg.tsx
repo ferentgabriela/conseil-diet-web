@@ -1,41 +1,64 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import { MapPin, Calendar, Phone, Clock } from 'lucide-react';
+import { MapPin, Calendar, Phone, Clock, CheckCircle } from 'lucide-react';
+import { ChatPopup } from '@/components/ChatPopup';
 
 const LocationLuxembourg = () => {
+  const [isChatOpen, setIsChatOpen] = useState(false);
+
+  const handleToggleChat = () => {
+    setIsChatOpen(!isChatOpen);
+  };
+
   const handleBookingClick = () => {
     // Replace with actual Doctena URL for Luxembourg
     window.open('#', '_blank');
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <>
+      <Helmet>
+        <title>Diététicienne à Luxembourg-Ville - Gabriela Ferent | Consultation Nutritionnelle</title>
+        <meta name="description" content="Réservez votre consultation diététique à Luxembourg-Ville. Accompagnement nutritionnel personnalisé par Gabriela Ferent, diététicienne certifiée." />
+        <meta name="keywords" content="diététicienne Luxembourg-Ville, nutrition Luxembourg, consultation diététique, Gabriela Ferent" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-white">
       <Navigation />
       
       {/* Hero Section */}
       <section className="pt-24 pb-16 bg-gradient-to-br from-green-50 via-blue-50 to-green-25">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-100 text-green-800 rounded-full text-sm font-medium mb-6">
+              🏛️ Cabinet Luxembourg-Ville
+            </div>
+            
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-              Diététicienne à Luxembourg-Ville – Plans Nutritionnels Personnalisés
+              Diététicienne à Luxembourg-Ville
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-700 mb-8 font-medium">
-              Bienvenue dans notre cabinet de Luxembourg-Ville. Idéalement situé et prêt à vous aider à atteindre vos objectifs santé.
+              Cabinet moderne et accueillant au cœur de Luxembourg-Ville. 
+              Consultation nutritionnelle personnalisée pour atteindre vos objectifs santé.
             </p>
             
             <button
               onClick={handleBookingClick}
-              className="inline-flex items-center gap-3 px-10 py-5 bg-green-600 text-white font-bold rounded-xl hover:bg-green-700 transition-all duration-300 text-xl shadow-lg hover:shadow-xl transform hover:scale-105"
+              className="inline-flex items-center gap-3 px-10 py-5 bg-green-600 text-white font-bold rounded-xl hover:bg-green-700 transition-all duration-300 text-xl shadow-lg hover:shadow-xl transform hover:scale-105 mb-4 min-h-[64px]"
             >
-              <Calendar className="h-6 w-6" />
-              Réserver à Luxembourg-Ville
+              <div className="flex items-center gap-2">
+                <span className="text-2xl">🏛️</span>
+                <Calendar className="h-6 w-6" />
+              </div>
+              Réserver ma consultation à Luxembourg-Ville
             </button>
             
-            <div className="mt-6 bg-amber-50 border border-amber-200 rounded-lg p-4 max-w-md mx-auto">
-              <p className="text-amber-800 font-medium text-sm">
-                ⚡ Places limitées disponibles cette semaine—réservez votre créneau maintenant !
+            <div className="bg-green-50 border border-green-200 rounded-lg p-4 max-w-md mx-auto">
+              <p className="text-green-800 font-medium text-sm">
+                🔒 Vos données sont traitées de manière confidentielle et sécurisée
               </p>
             </div>
           </div>
@@ -146,8 +169,9 @@ const LocationLuxembourg = () => {
         </div>
       </section>
       
-      <Footer />
-    </div>
+        <ChatPopup isOpen={isChatOpen} onToggle={handleToggleChat} />
+      </div>
+    </>
   );
 };
 

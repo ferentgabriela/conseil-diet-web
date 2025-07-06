@@ -104,7 +104,7 @@ const BlogSection = () => {
               📚 Conseils d'Expert
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Guide Nutrition Luxembourg
+              Conseils Nutritionnels
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Découvrez mes conseils professionnels pour transformer votre alimentation et votre santé
@@ -179,10 +179,15 @@ const BlogSection = () => {
             <p className="text-gray-600 mb-6">
               Chaque situation est unique. Prenez rendez-vous pour un accompagnement sur-mesure adapté à vos besoins spécifiques.
             </p>
-            <button className="inline-flex items-center gap-2 px-8 py-4 bg-green-600 text-white font-bold rounded-xl hover:bg-green-700 transition-all duration-300 transform hover:scale-105 shadow-lg">
+            <button className="inline-flex items-center gap-2 px-8 py-4 bg-green-600 text-white font-bold rounded-xl hover:bg-green-700 transition-all duration-300 transform hover:scale-105 shadow-lg mb-4">
               <User className="h-5 w-5" />
-              Consultation personnalisée
+              Prendre rendez-vous pour un accompagnement personnalisé
             </button>
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 max-w-md mx-auto">
+              <p className="text-blue-800 font-medium text-sm">
+                👇 Pas encore prêt à réserver? Téléchargez mon guide nutrition gratuit
+              </p>
+            </div>
           </div>
         </div>
       </div>

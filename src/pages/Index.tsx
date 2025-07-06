@@ -32,8 +32,8 @@ const Index = () => {
       <ServicesSection />
       <TestimonialsSection />
       <DoctenaTestimonialsSection />
-      <FAQSection onOpenChat={handleOpenChat} />
       <BlogSection />
+      <FAQSection onOpenChat={handleOpenChat} />
       <LocationsSection />
       
       <Footer />
