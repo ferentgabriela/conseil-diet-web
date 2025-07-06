@@ -32,10 +32,10 @@ const LocationsSection = () => {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Our Locations
+              Nos Cabinets
             </h2>
             <p className="text-lg text-gray-600">
-              Three convenient locations across Luxembourg to serve you better.
+              Trois emplacements pratiques à travers le Luxembourg pour mieux vous servir.
             </p>
           </div>
           
@@ -52,7 +52,7 @@ const LocationsSection = () => {
                   <div className="flex items-start gap-3">
                     <MapPin className="h-5 w-5 text-green-600 mt-1 flex-shrink-0" />
                     <div>
-                      <p className="font-medium text-gray-900">Address</p>
+                      <p className="font-medium text-gray-900">Adresse</p>
                       <p className="text-gray-600">{location.address}</p>
                     </div>
                   </div>
@@ -60,7 +60,7 @@ const LocationsSection = () => {
                   <div className="flex items-start gap-3">
                     <Phone className="h-5 w-5 text-blue-600 mt-1 flex-shrink-0" />
                     <div>
-                      <p className="font-medium text-gray-900">Phone</p>
+                      <p className="font-medium text-gray-900">Téléphone</p>
                       <a href={`tel:${location.phone}`} className="text-blue-600 hover:text-blue-700">
                         {location.phone}
                       </a>
@@ -70,7 +70,7 @@ const LocationsSection = () => {
                   <div className="flex items-start gap-3">
                     <Clock className="h-5 w-5 text-teal-600 mt-1 flex-shrink-0" />
                     <div>
-                      <p className="font-medium text-gray-900">Hours</p>
+                      <p className="font-medium text-gray-900">Horaires</p>
                       <p className="text-gray-600 text-sm">{location.hours}</p>
                     </div>
                   </div>
@@ -82,7 +82,7 @@ const LocationsSection = () => {
                     className="w-full inline-flex items-center justify-center gap-2 px-4 py-3 bg-white text-gray-700 font-semibold rounded-lg border border-gray-300 hover:bg-gray-50 transition-colors"
                   >
                     <Navigation className="h-4 w-4" />
-                    View on Map
+                    Voir sur la carte
                   </button>
                 </div>
               </div>
@@ -91,20 +91,20 @@ const LocationsSection = () => {
           
           <div className="mt-12 bg-gradient-to-r from-green-50 to-blue-50 rounded-2xl p-8 text-center">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              Choose Your Preferred Location
+              Choisissez Votre Cabinet Préféré
             </h3>
             <p className="text-gray-700 mb-6">
-              All locations offer the same high-quality, personalized nutrition services.
+              Tous les cabinets offrent les mêmes services nutritionnels personnalisés de haute qualité.
             </p>
             <div className="flex flex-col md:flex-row justify-center gap-4">
               <button className="px-6 py-3 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transition-colors">
-                Book Luxembourg City
+                Réserver Luxembourg-Ville
               </button>
               <button className="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors">
-                Book Ettelbruck
+                Réserver Ettelbruck
               </button>
               <button className="px-6 py-3 bg-teal-600 text-white font-semibold rounded-lg hover:bg-teal-700 transition-colors">
-                Book Insenborn
+                Réserver Insenborn
               </button>
             </div>
           </div>
