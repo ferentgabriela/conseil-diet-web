@@ -14,16 +14,24 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="pt-24 pb-16 bg-gradient-to-br from-green-50 via-blue-50 to-green-25 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-green-100/20 to-blue-100/20"></div>
+    <section 
+      className="pt-24 pb-16 relative overflow-hidden bg-cover bg-center bg-no-repeat"
+      style={{
+        backgroundImage: `url('/lovable-uploads/0a8ef731-1e37-42fe-9edc-6fab463ddcc2.png')`
+      }}
+    >
+      {/* Dark overlay for text readability */}
+      <div className="absolute inset-0 bg-black/40"></div>
+      {/* Additional gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-r from-green-900/20 to-blue-900/20"></div>
       
       <div className="container mx-auto px-4 text-center relative z-10">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-6xl md:text-8xl font-black text-gray-900 mb-6 leading-tight tracking-tight">
+          <h1 className="text-6xl md:text-8xl font-black text-white mb-6 leading-tight tracking-tight drop-shadow-2xl">
             Atteignez Votre Santé Idéale avec une Diététicienne Certifiée Près de Chez Vous
           </h1>
           
-          <h2 className="text-xl md:text-2xl text-gray-500 mb-8 font-normal">
+          <h2 className="text-xl md:text-2xl text-white/90 mb-8 font-normal drop-shadow-lg">
             Trois cabinets accueillants à Luxembourg-Ville, Ettelbruck et Insenborn. 
             Accompagnement nutritionnel personnalisé selon vos objectifs.
           </h2>
@@ -70,13 +78,13 @@ const HeroSection = () => {
           </div>
           
           <div className="text-center mt-6 mb-4">
-            <p className="text-gray-600 font-medium">
+            <p className="text-white/90 font-medium drop-shadow-lg">
               ✨ Plus de 1,000 patients accompagnés avec succès
             </p>
           </div>
           
-          <div className="bg-green-50 border border-green-200 rounded-lg p-4 max-w-md mx-auto">
-            <p className="text-green-800 font-medium text-sm">
+          <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-4 max-w-md mx-auto">
+            <p className="text-white font-medium text-sm">
               🔒 Vos données sont traitées de manière confidentielle et sécurisée
             </p>
           </div>
