@@ -24,19 +24,19 @@ const MobileMenu = ({ isMenuOpen, scrollToSection, scrollToCabinets }: MobileMen
           onClick={() => scrollToSection('apropos')}
           className="text-gray-800 hover:text-green-600 transition-colors text-left font-semibold"
         >
-          Pourquoi Gabriela ?
+          Mon Approche
         </button>
         <button
           onClick={() => scrollToSection('processus')}
           className="text-gray-800 hover:text-green-600 transition-colors text-left font-semibold"
         >
-          Comment Ça Marche
+          Votre Parcours
         </button>
         <button
           onClick={() => scrollToSection('transformations')}
           className="text-gray-800 hover:text-green-600 transition-colors text-left font-semibold"
         >
-          Résultats de Patients
+          Témoignages
         </button>
         <button
           onClick={() => scrollToSection('services')}

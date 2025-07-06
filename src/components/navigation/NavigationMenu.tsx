@@ -18,19 +18,19 @@ const NavigationMenu = ({ scrollToSection }: NavigationMenuProps) => {
         onClick={() => scrollToSection('apropos')}
         className="nav-menu-item text-gray-800 hover:text-green-600 font-semibold text-lg px-4 py-2 rounded-md"
       >
-        Pourquoi Gabriela ?
+        Mon Approche
       </button>
       <button
         onClick={() => scrollToSection('processus')}
         className="nav-menu-item text-gray-800 hover:text-green-600 font-semibold text-lg px-4 py-2 rounded-md"
       >
-        Comment Ça Marche
+        Votre Parcours
       </button>
       <button
         onClick={() => scrollToSection('transformations')}
         className="nav-menu-item text-gray-800 hover:text-green-600 font-semibold text-lg px-4 py-2 rounded-md"
       >
-        Résultats de Patients
+        Témoignages
       </button>
       <button
         onClick={() => scrollToSection('services')}
