@@ -4,21 +4,24 @@ import { Star, Quote } from 'lucide-react';
 const TestimonialsSection = () => {
   const testimonials = [
     {
-      text: "Je me sens enfin maître de mes habitudes alimentaires. Merci pour les conseils pratiques et les encouragements !",
-      author: "Sophie",
-      location: "Luxembourg",
+      text: "Son professionnalisme, son approche personnalisée et ses conseils pratiques m'ont aidé à améliorer mes habitudes alimentaires de manière durable.",
+      author: "Pedro",
+      location: "Accompagnement nutritionnel",
+      date: "Février 2025",
       rating: 5
     },
     {
-      text: "Après des années d'essais de différents régimes, j'ai appris ce qui fonctionne vraiment pour mon corps.",
-      author: "Marc",
-      location: "Ettelbruck",
+      text: "Gabriela est très professionnelle. Elle prend le temps nécessaire pour écouter le patient et trouver la meilleure solution pour lui.",
+      author: "Diana",
+      location: "Consultation personnalisée",
+      date: "Juillet 2024",
       rating: 5
     },
     {
-      text: "Professionnelle, bienveillante et efficace. Je recommande vivement.",
-      author: "Claire",
-      location: "Insenborn",
+      text: "Gabriela est une experte dans son domaine et possède l'expertise nécessaire pour cela. J'ai été et suis très satisfaite de ses services. De plus, ses actions ont une direction précise et atteignent l'objectif souhaité. Merci !",
+      author: "Carmen",
+      location: "Suivi spécialisé",
+      date: "Juin 2024",
       rating: 5
     }
   ];
@@ -63,6 +66,9 @@ const TestimonialsSection = () => {
                   </p>
                   <p className="text-sm text-gray-600">
                     {testimonial.location}
+                  </p>
+                  <p className="text-xs text-gray-500 mt-1">
+                    {testimonial.date}
                   </p>
                 </div>
               </div>
