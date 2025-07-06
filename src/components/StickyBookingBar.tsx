@@ -44,8 +44,8 @@ const StickyBookingBar = () => {
     <>
       {/* Desktop Sticky Bar - Top (pushes content down) */}
       <div 
-        className={`hidden md:block fixed top-[128px] left-0 right-0 z-40 transition-all duration-300 ease-in-out ${
-          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full'
+        className={`hidden md:block fixed top-[128px] left-0 right-0 z-40 transition-all duration-700 ease-out ${
+          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-8'
         }`}
         style={{ 
           backgroundColor: '#2E8B57',
