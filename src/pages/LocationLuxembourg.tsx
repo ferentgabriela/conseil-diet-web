@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '@/components/Navigation';
+import StickyBookingBar from '@/components/StickyBookingBar';
 import Footer from '@/components/Footer';
 import { MapPin, Calendar, Phone, Clock, CheckCircle } from 'lucide-react';
 import { ChatPopup } from '@/components/ChatPopup';
@@ -27,6 +28,7 @@ const LocationLuxembourg = () => {
       
       <div className="min-h-screen bg-white">
       <Navigation />
+      <StickyBookingBar />
       
       {/* Hero Section */}
       <section className="pt-24 pb-16 bg-gradient-to-br from-green-50 via-blue-50 to-green-25">

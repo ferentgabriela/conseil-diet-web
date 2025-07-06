@@ -1,14 +1,12 @@
 
 import React from 'react';
-import { Calendar } from 'lucide-react';
 
 interface MobileMenuProps {
   isMenuOpen: boolean;
   scrollToSection: (sectionId: string) => void;
-  scrollToCabinets: () => void;
 }
 
-const MobileMenu = ({ isMenuOpen, scrollToSection, scrollToCabinets }: MobileMenuProps) => {
+const MobileMenu = ({ isMenuOpen, scrollToSection }: MobileMenuProps) => {
   if (!isMenuOpen) return null;
 
   return (
@@ -44,21 +42,6 @@ const MobileMenu = ({ isMenuOpen, scrollToSection, scrollToCabinets }: MobileMen
         >
           Consultations
         </button>
-        
-        <button
-          onClick={scrollToCabinets}
-          className="w-full inline-flex items-center gap-2 justify-center px-6 py-4 text-white font-semibold rounded-lg"
-          style={{ 
-            backgroundColor: 'hsl(var(--nav-cta-green))',
-            minHeight: '48px'
-          }}
-        >
-          <Calendar className="h-5 w-5" />
-          Réserver ma consultation
-        </button>
-        <div className="text-xs font-medium text-center" style={{ color: 'hsl(var(--nav-trust-text))' }}>
-          🔥 Places disponibles cette semaine
-        </div>
       </div>
     </div>
   );

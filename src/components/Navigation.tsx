@@ -5,7 +5,6 @@ import { useState, useEffect } from 'react';
 import TrustBar from './navigation/TrustBar';
 import NavigationLogo from './navigation/NavigationLogo';
 import NavigationMenu from './navigation/NavigationMenu';
-import NavigationCTA from './navigation/NavigationCTA';
 import MobileMenu from './navigation/MobileMenu';
 
 const Navigation = () => {
@@ -78,7 +77,6 @@ const Navigation = () => {
           <div className="flex justify-between items-center py-4">
             <NavigationLogo />
             <NavigationMenu scrollToSection={scrollToSection} />
-            <NavigationCTA scrollToCabinets={scrollToCabinets} />
 
             {/* Mobile Menu Button */}
             <button
@@ -92,7 +90,6 @@ const Navigation = () => {
           <MobileMenu 
             isMenuOpen={isMenuOpen}
             scrollToSection={scrollToSection}
-            scrollToCabinets={scrollToCabinets}
           />
         </div>
       </nav>
