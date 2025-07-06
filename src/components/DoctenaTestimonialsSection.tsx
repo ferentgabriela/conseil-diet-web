@@ -1,6 +1,6 @@
 
 import React, { useEffect } from 'react';
-import { Star, Quote, Calendar, ExternalLink, ArrowRight, Sparkles, Heart } from 'lucide-react';
+import { Star, Calendar, ArrowRight, Sparkles } from 'lucide-react';
 
 const DoctenaTestimonialsSection = () => {
   // Load Doctena testimonials script
@@ -26,116 +26,8 @@ const DoctenaTestimonialsSection = () => {
     }
   };
 
-  const highlightedTestimonials = [
-    {
-      quote: "Son professionnalisme, son approche personnalisée et ses conseils pratiques m'ont aidée à améliorer mes habitudes alimentaires de manière durable.",
-      author: "Pedro",
-      date: "Février 2025",
-      rating: 5,
-      treatment: "Accompagnement nutritionnel",
-      emoji: "🌟"
-    },
-    {
-      quote: "Gabriela est très professionnelle. Elle prend le temps nécessaire pour écouter le patient et trouver la meilleure solution pour lui.",
-      author: "Diana",
-      date: "Juillet 2024",
-      rating: 5,
-      treatment: "Consultation personnalisée",
-      emoji: "💪"
-    },
-    {
-      quote: "Gabriela est une experte dans son domaine et possède l'expertise nécessaire pour cela. J'ai été et suis très satisfaite de ses services. De plus, ses actions ont une direction précise et atteignent l'objectif souhaité. Merci !",
-      author: "Carmen",
-      date: "Juin 2024",
-      rating: 5,
-      treatment: "Suivi spécialisé",
-      emoji: "🎯"
-    }
-  ];
-
   return (
     <section className="relative overflow-hidden">
-      {/* Hero testimonials section */}
-      <div className="py-20 bg-gradient-to-br from-green-50 via-blue-25 to-green-25 relative">
-        <div className="absolute inset-0 bg-gradient-to-r from-green-100/20 to-blue-100/20"></div>
-        
-        {/* Floating decorative elements */}
-        <div className="absolute top-10 left-10 w-20 h-20 bg-green-200/30 rounded-full blur-xl animate-pulse"></div>
-        <div className="absolute bottom-10 right-10 w-16 h-16 bg-blue-200/30 rounded-full blur-lg animate-pulse delay-1000"></div>
-        
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-yellow-100 rounded-full mb-4">
-              <Sparkles className="h-4 w-4 text-yellow-600" />
-              <span className="text-sm font-medium text-yellow-700">Témoignages vérifiés</span>
-            </div>
-            
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Témoignages de Patients
-            </h2>
-            <div className="max-w-2xl mx-auto relative">
-              <p className="text-xl text-gray-600">
-                Découvrez les transformations réelles de patients qui ont fait confiance à mon accompagnement
-              </p>
-              
-              {/* Visual decorations */}
-              <div className="absolute -top-4 -right-8 text-2xl animate-bounce">❤️</div>
-              <div className="absolute -bottom-4 -left-8 text-2xl animate-pulse">⭐</div>
-            </div>
-          </div>
-
-          {/* Enhanced testimonials carousel */}
-          <div className="grid md:grid-cols-3 gap-8 mb-16 max-w-6xl mx-auto">
-            {highlightedTestimonials.map((testimonial, index) => (
-              <div key={index} className="group relative">
-                <div className="bg-white rounded-3xl p-8 shadow-xl border border-green-100 relative hover:shadow-2xl transition-all duration-500 hover:scale-105 flex flex-col overflow-hidden">
-                  {/* Background decoration */}
-                  <div className="absolute top-0 right-0 text-6xl opacity-10 transform rotate-12 group-hover:rotate-45 transition-transform duration-500">
-                    {testimonial.emoji}
-                  </div>
-                  
-                  {/* Quote icon with animation */}
-                  <div className="absolute -top-4 -left-4">
-                    <div className="w-10 h-10 bg-gradient-to-r from-green-600 to-green-700 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                      <Quote className="h-5 w-5 text-white" />
-                    </div>
-                  </div>
-                  
-                  {/* Enhanced star rating */}
-                  <div className="flex mb-4 pt-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400 animate-pulse" style={{animationDelay: `${i * 100}ms`}} />
-                    ))}
-                  </div>
-                  
-                  <blockquote className="text-lg text-gray-800 font-medium mb-6 leading-relaxed flex-grow relative z-10">
-                    "{testimonial.quote}"
-                  </blockquote>
-                  
-                  {/* Enhanced author section */}
-                  <div className="flex items-center justify-between mt-auto relative z-10">
-                    <div className="flex-1">
-                      <p className="font-bold text-gray-900">{testimonial.author}</p>
-                      <div className="flex items-center gap-1 mb-1">
-                        <Heart className="h-3 w-3 text-green-500" />
-                        <p className="text-sm text-green-600">{testimonial.treatment}</p>
-                      </div>
-                      <p className="text-xs text-gray-500">{testimonial.date}</p>
-                    </div>
-                    <div className="w-14 h-14 bg-gradient-to-br from-green-100 via-blue-100 to-purple-100 rounded-full flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
-                      <span className="text-2xl">{testimonial.emoji}</span>
-                    </div>
-                  </div>
-                </div>
-                
-                {/* Glow effect */}
-                <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-green-400/20 to-blue-400/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10 blur-xl"></div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
       {/* Full testimonials widget section */}
       <div className="py-20 bg-white">
         <div className="container mx-auto px-4">

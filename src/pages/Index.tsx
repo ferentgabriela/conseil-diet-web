@@ -4,6 +4,7 @@ import Navigation from '@/components/Navigation';
 import HeroSection from '@/components/HeroSection';
 import AboutPracticeSection from '@/components/AboutPracticeSection';
 import ServicesSection from '@/components/ServicesSection';
+import TestimonialsSection from '@/components/TestimonialsSection';
 import DoctenaTestimonialsSection from '@/components/DoctenaTestimonialsSection';
 import FAQSection from '@/components/FAQSection';
 import LocationsSection from '@/components/LocationsSection';
@@ -29,6 +30,7 @@ const Index = () => {
       <HeroSection />
       <AboutPracticeSection />
       <ServicesSection />
+      <TestimonialsSection />
       <DoctenaTestimonialsSection />
       <FAQSection onOpenChat={handleOpenChat} />
       <LocationsSection />
