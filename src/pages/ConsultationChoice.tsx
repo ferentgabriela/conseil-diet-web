@@ -18,6 +18,13 @@ const ConsultationChoice = () => {
           <div className="max-w-6xl mx-auto">
             {/* Header */}
             <div className="text-center mb-16">
+              <div className="mb-8">
+                <img
+                  src="/lovable-uploads/d6c589d8-1c79-4015-8eb9-4161eb6ba337.png"
+                  alt="Gabriela Ferent - Diététicienne nutritionniste Luxembourg"
+                  className="w-48 h-48 md:w-56 md:h-56 rounded-full object-cover mx-auto shadow-lg"
+                />
+              </div>
               <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
                 Choisissez votre type de consultation
               </h1>
