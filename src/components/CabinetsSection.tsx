@@ -1,7 +1,6 @@
 
 import React from 'react';
 import { ExternalLink, MapPin, Calendar, Clock, Phone } from 'lucide-react';
-import AISummaryBlock from './AISummaryBlock';
 
 const CabinetsSection = () => {
   return (
@@ -139,9 +138,6 @@ const CabinetsSection = () => {
             </div>
           </div>
         </div>
-
-        {/* AI Summary Block */}
-        <AISummaryBlock variant="cabinets" />
       </div>
     </section>
   );
