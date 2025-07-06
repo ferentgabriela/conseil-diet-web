@@ -19,11 +19,11 @@ const HeroSection = () => {
       
       <div className="container mx-auto px-4 text-center relative z-10">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-5xl md:text-7xl font-black text-gray-900 mb-6 leading-tight tracking-tight">
+          <h1 className="text-6xl md:text-8xl font-black text-gray-900 mb-6 leading-tight tracking-tight">
             Atteignez Votre Santé Idéale avec une Diététicienne Certifiée Près de Chez Vous
           </h1>
           
-          <h2 className="text-xl md:text-2xl text-gray-700 mb-8 font-medium">
+          <h2 className="text-xl md:text-2xl text-gray-500 mb-8 font-normal">
             Trois cabinets accueillants à Luxembourg-Ville, Ettelbruck et Insenborn. 
             Accompagnement nutritionnel personnalisé selon vos objectifs.
           </h2>
@@ -43,7 +43,7 @@ const HeroSection = () => {
                 <span className="text-2xl">🏛️</span>
                 <MapPin className="h-5 w-5" />
               </div>
-              Réservez votre première consultation à Luxembourg-Ville
+              Réserver Luxembourg-Ville
             </button>
             
             <button
@@ -54,7 +54,7 @@ const HeroSection = () => {
                 <span className="text-2xl">🏘️</span>
                 <MapPin className="h-5 w-5" />
               </div>
-              Réservez votre première consultation à Ettelbruck
+              Réserver Ettelbruck
             </button>
             
             <button
@@ -65,8 +65,14 @@ const HeroSection = () => {
                 <span className="text-2xl">🌿</span>
                 <MapPin className="h-5 w-5" />
               </div>
-              Réservez votre première consultation à Insenborn
+              Réserver Insenborn
             </button>
+          </div>
+          
+          <div className="text-center mt-6 mb-4">
+            <p className="text-gray-600 font-medium">
+              ✨ Plus de 1,000 patients accompagnés avec succès
+            </p>
           </div>
           
           <div className="bg-green-50 border border-green-200 rounded-lg p-4 max-w-md mx-auto">
