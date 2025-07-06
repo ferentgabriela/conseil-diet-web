@@ -71,8 +71,8 @@ const Navigation = () => {
       <TrustBar />
 
       {/* Main Navigation */}
-      <nav className={`bg-white shadow-lg transition-all duration-300 ${
-        isScrolled ? 'backdrop-blur-md bg-white/95 shadow-xl' : ''
+      <nav className={`bg-white nav-shadow transition-all duration-300 ${
+        isScrolled ? 'scrolled backdrop-blur-md bg-white/95' : ''
       }`}>
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center py-4">

@@ -11,12 +11,22 @@ const NavigationCTA = ({ scrollToCabinets }: NavigationCTAProps) => {
     <div className="hidden md:block">
       <button
         onClick={scrollToCabinets}
-        className="inline-flex items-center gap-2 px-6 py-3 bg-green-600 text-white font-bold rounded-xl hover:bg-green-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 hover-scale"
+        className="nav-cta-lift inline-flex items-center gap-2 px-5 py-3 text-white font-semibold rounded-lg"
+        style={{ 
+          backgroundColor: 'hsl(var(--nav-cta-green))',
+          minHeight: '48px'
+        }}
+        onMouseEnter={(e) => {
+          e.currentTarget.style.backgroundColor = 'hsl(var(--nav-cta-green-hover))';
+        }}
+        onMouseLeave={(e) => {
+          e.currentTarget.style.backgroundColor = 'hsl(var(--nav-cta-green))';
+        }}
       >
         <Calendar className="h-5 w-5" />
         Réserver ma consultation
       </button>
-      <div className="text-xs text-green-700 font-medium mt-1 text-center">
+      <div className="text-xs font-medium mt-1 text-center" style={{ color: 'hsl(var(--nav-trust-text))' }}>
         🔥 Places disponibles cette semaine
       </div>
     </div>

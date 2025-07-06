@@ -37,6 +37,13 @@
 
     --radius: 0.5rem;
 
+    /* Navigation specific colors */
+    --nav-trust-bar: 142 51% 89%; /* #E6F4EB */
+    --nav-trust-text: 142 65% 25%;
+    --nav-cta-green: 154 72% 32%; /* #2E8B57 */
+    --nav-cta-green-hover: 154 72% 28%;
+    --nav-menu-hover: 142 45% 95%; /* #F2F9F4 */
+
     --sidebar-background: 0 0% 98%;
 
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -108,6 +115,32 @@
   /* Hover Scale Animation */
   .hover-scale {
     @apply transition-transform duration-200 hover:scale-105;
+  }
+
+  /* Navigation animations */
+  .nav-shadow {
+    @apply shadow-sm;
+    transition: box-shadow 0.2s ease-in-out;
+  }
+  
+  .nav-shadow.scrolled {
+    @apply shadow-lg;
+  }
+
+  .nav-menu-item {
+    @apply transition-all duration-200;
+  }
+  
+  .nav-menu-item:hover {
+    background-color: hsl(var(--nav-menu-hover));
+  }
+
+  .nav-cta-lift {
+    @apply transition-all duration-200;
+  }
+  
+  .nav-cta-lift:hover {
+    @apply transform -translate-y-0.5 shadow-lg;
   }
 
   /* Custom scrollbar styles */

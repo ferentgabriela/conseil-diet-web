@@ -30,13 +30,13 @@ const MobileMenu = ({ isMenuOpen, scrollToSection, scrollToCabinets }: MobileMen
           onClick={() => scrollToSection('processus')}
           className="text-gray-800 hover:text-green-600 transition-colors text-left font-semibold"
         >
-          Comment ça marche
+          Comment Ça Marche
         </button>
         <button
           onClick={() => scrollToSection('transformations')}
           className="text-gray-800 hover:text-green-600 transition-colors text-left font-semibold"
         >
-          Résultats de patients
+          Résultats de Patients
         </button>
         <button
           onClick={() => scrollToSection('services')}
@@ -47,12 +47,16 @@ const MobileMenu = ({ isMenuOpen, scrollToSection, scrollToCabinets }: MobileMen
         
         <button
           onClick={scrollToCabinets}
-          className="inline-flex items-center gap-2 justify-center px-6 py-3 bg-green-600 text-white font-bold rounded-xl hover:bg-green-700 transition-all duration-300 shadow-lg"
+          className="w-full inline-flex items-center gap-2 justify-center px-6 py-4 text-white font-semibold rounded-lg"
+          style={{ 
+            backgroundColor: 'hsl(var(--nav-cta-green))',
+            minHeight: '48px'
+          }}
         >
           <Calendar className="h-5 w-5" />
           Réserver ma consultation
         </button>
-        <div className="text-xs text-green-700 font-medium text-center">
+        <div className="text-xs font-medium text-center" style={{ color: 'hsl(var(--nav-trust-text))' }}>
           🔥 Places disponibles cette semaine
         </div>
       </div>
