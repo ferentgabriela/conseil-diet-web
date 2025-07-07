@@ -181,18 +181,9 @@ export const ChatPopup = ({ isOpen: externalIsOpen, onToggle }: ChatPopupProps) 
               style={{ animation: 'ripple 5s ease-out infinite 1.5s' }}
             ></div>
             
-            {/* Gabriela Avatar with fallback to icon */}
+            {/* Send icon similar to screenshot */}
             <div className="relative z-10 group-hover:scale-110 transition-transform duration-300">
-              <Avatar className="h-12 w-12">
-                <AvatarImage 
-                  src="/lovable-uploads/d64f7102-b262-41a2-8c38-ce2367befbe9.png" 
-                  alt="Gabriela" 
-                  className="object-cover"
-                />
-                <AvatarFallback className="bg-white text-green-600 font-bold text-lg border-2 border-green-200">
-                  G
-                </AvatarFallback>
-              </Avatar>
+              <Send className="h-8 w-8 text-white" />
             </div>
             
             {/* Subtle online indicator instead of red dot */}
@@ -204,9 +195,9 @@ export const ChatPopup = ({ isOpen: externalIsOpen, onToggle }: ChatPopupProps) 
             </div>
           </Button>
           
-          {/* Enlarged assistant text */}
+          {/* Question text */}
           <div className="absolute -bottom-10 left-1/2 transform -translate-x-1/2 text-sm text-green-700 font-semibold whitespace-nowrap opacity-90">
-            Assistant nutritionnel
+            Question ? Parlez avec une diététicienne
           </div>
         </div>
       </div>
