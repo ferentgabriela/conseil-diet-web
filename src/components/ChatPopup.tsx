@@ -165,7 +165,7 @@ export const ChatPopup = ({ isOpen: externalIsOpen, onToggle }: ChatPopupProps) 
         <div className="relative">
           <Button
             onClick={toggleOpen}
-            className="h-20 w-20 rounded-2xl bg-gradient-to-br from-green-600 via-green-500 to-green-400 hover:from-green-700 hover:via-green-600 hover:to-green-500 shadow-2xl z-50 relative overflow-hidden group transition-all duration-500 hover:scale-110 border-2 border-green-300"
+            className="h-20 w-20 rounded-full bg-gradient-to-br from-green-600 via-green-500 to-green-400 hover:from-green-700 hover:via-green-600 hover:to-green-500 shadow-2xl z-50 relative overflow-hidden group transition-all duration-500 hover:scale-110 border-2 border-green-300"
             style={{
               animation: 'gentleBreath 4s ease-in-out infinite'
             }}
@@ -173,11 +173,11 @@ export const ChatPopup = ({ isOpen: externalIsOpen, onToggle }: ChatPopupProps) 
           >
             {/* Gentle ripple effects */}
             <div 
-              className="absolute inset-0 bg-green-300 rounded-2xl opacity-20"
+              className="absolute inset-0 bg-green-300 rounded-full opacity-20"
               style={{ animation: 'ripple 5s ease-out infinite' }}
             ></div>
             <div 
-              className="absolute inset-0 bg-green-400 rounded-2xl opacity-15"
+              className="absolute inset-0 bg-green-400 rounded-full opacity-15"
               style={{ animation: 'ripple 5s ease-out infinite 1.5s' }}
             ></div>
             
