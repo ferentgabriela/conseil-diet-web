@@ -76,7 +76,7 @@ const Navigation = () => {
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center py-4">
             <NavigationLogo />
-            <div className="hidden lg:flex absolute left-1/2 transform -translate-x-1/2">
+            <div className="hidden lg:flex absolute left-1/2 transform -translate-x-1/2 -ml-16">
               <NavigationMenu scrollToSection={scrollToSection} />
             </div>
 
