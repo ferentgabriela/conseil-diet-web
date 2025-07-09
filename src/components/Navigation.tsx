@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Menu, X, MapPin, Users, Euro } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import NavigationLogo from './navigation/NavigationLogo';
 import NavigationMenu from './navigation/NavigationMenu';
@@ -31,13 +31,30 @@ const Navigation = () => {
   const scrollToCabinets = () => {
     const cabinetsSection = document.getElementById('cabinets');
     if (cabinetsSection) {
+      // Calculate the actual heights of fixed elements
+      const trustBarElement = document.querySelector('div[class*="bg-green-50"]');
       const navigationElement = document.querySelector('nav');
+      
+      // Get actual heights
+      const trustBarHeight = trustBarElement ? trustBarElement.getBoundingClientRect().height : 40;
       const navigationHeight = navigationElement ? navigationElement.getBoundingClientRect().height : 88;
-      const extraPadding = 20;
-      const totalOffset = navigationHeight + extraPadding;
+      
+      // Add significant padding to ensure the title is fully visible
+      const extraPadding = 120; // Increased padding for better visibility
+      const totalOffset = trustBarHeight + navigationHeight + extraPadding;
 
+      console.log('Trust bar actual height:', trustBarHeight);
+      console.log('Navigation actual height:', navigationHeight);
+      console.log('Extra padding:', extraPadding);
+      console.log('Total offset:', totalOffset);
+
+      // Get the section's position and scroll with the calculated offset
       const elementPosition = cabinetsSection.getBoundingClientRect().top + window.scrollY;
       const targetPosition = Math.max(0, elementPosition - totalOffset);
+
+      console.log('Element position:', elementPosition);
+      console.log('Target scroll position:', targetPosition);
+      console.log('Current scroll position:', window.scrollY);
 
       window.scrollTo({
         top: targetPosition,
