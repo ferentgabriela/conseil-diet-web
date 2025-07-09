@@ -6,7 +6,7 @@ const TrustBar = () => {
   return (
     <>
       <div className="w-full" style={{ backgroundColor: 'hsl(var(--nav-trust-bar))' }}>
-        <div className="container mx-auto px-4 py-3">
+        <div className="container mx-auto px-4 py-4">
           <div className="flex flex-wrap justify-center items-center gap-4 md:gap-8 text-sm font-semibold" style={{ color: 'hsl(var(--nav-trust-text))' }}>
             <div className="flex items-center gap-2">
               <MapPin className="h-4 w-4" />
