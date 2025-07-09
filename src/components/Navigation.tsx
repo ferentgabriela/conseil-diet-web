@@ -76,7 +76,12 @@ const Navigation = () => {
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center py-4">
             <NavigationLogo />
-            <NavigationMenu scrollToSection={scrollToSection} />
+            <div className="hidden lg:flex absolute left-1/2 transform -translate-x-1/2">
+              <NavigationMenu scrollToSection={scrollToSection} />
+            </div>
+
+            {/* Spacer for desktop to balance layout */}
+            <div className="hidden lg:block w-16"></div>
 
             {/* Mobile Menu Button */}
             <button
