@@ -31,30 +31,13 @@ const Navigation = () => {
   const scrollToCabinets = () => {
     const cabinetsSection = document.getElementById('cabinets');
     if (cabinetsSection) {
-      // Calculate the actual heights of fixed elements
-      const trustBarElement = document.querySelector('div[class*="bg-green-50"]');
       const navigationElement = document.querySelector('nav');
-      
-      // Get actual heights
-      const trustBarHeight = trustBarElement ? trustBarElement.getBoundingClientRect().height : 40;
       const navigationHeight = navigationElement ? navigationElement.getBoundingClientRect().height : 88;
-      
-      // Add significant padding to ensure the title is fully visible
-      const extraPadding = 120; // Increased padding for better visibility
-      const totalOffset = trustBarHeight + navigationHeight + extraPadding;
+      const extraPadding = 20;
+      const totalOffset = navigationHeight + extraPadding;
 
-      console.log('Trust bar actual height:', trustBarHeight);
-      console.log('Navigation actual height:', navigationHeight);
-      console.log('Extra padding:', extraPadding);
-      console.log('Total offset:', totalOffset);
-
-      // Get the section's position and scroll with the calculated offset
       const elementPosition = cabinetsSection.getBoundingClientRect().top + window.scrollY;
       const targetPosition = Math.max(0, elementPosition - totalOffset);
-
-      console.log('Element position:', elementPosition);
-      console.log('Target scroll position:', targetPosition);
-      console.log('Current scroll position:', window.scrollY);
 
       window.scrollTo({
         top: targetPosition,
@@ -66,26 +49,6 @@ const Navigation = () => {
 
   return (
     <div className="fixed top-0 left-0 right-0 z-50 w-full">
-      {/* Trust Bar integrated with navigation */}
-      <div className="w-full h-12" style={{ backgroundColor: 'hsl(var(--nav-trust-bar))' }}>
-        <div className="container mx-auto px-4 h-full flex items-center">
-          <div className="flex flex-wrap justify-center items-center gap-4 md:gap-8 text-sm font-semibold w-full" style={{ color: 'hsl(var(--nav-trust-text))' }}>
-            <div className="flex items-center gap-2">
-              <MapPin className="h-4 w-4" />
-              <span>3 cabinets</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Users className="h-4 w-4" />
-              <span>1000+ patients satisfaits</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Euro className="h-4 w-4" />
-              <span>Remboursé jusqu'à 80%</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
       {/* Main Navigation */}
       <nav className={`nav-shadow transition-all duration-300 ${
         isScrolled ? 'scrolled backdrop-blur-md bg-white/95' : ''
