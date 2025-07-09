@@ -7,7 +7,7 @@ interface NavigationMenuProps {
 
 const NavigationMenu = ({ scrollToSection }: NavigationMenuProps) => {
   return (
-    <div className="hidden lg:flex items-center justify-center flex-1 space-x-2 ml-8">
+    <div className="hidden lg:flex items-center justify-center flex-1 space-x-2 ml-4">
       <button
         onClick={() => scrollToSection('accueil')}
         className="nav-menu-item text-gray-800 hover:text-green-600 font-semibold text-lg px-4 py-2 rounded-md"
