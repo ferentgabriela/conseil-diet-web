@@ -99,19 +99,31 @@ const ServicesSection = () => {
                     <div className="w-5 h-5 bg-green-600 rounded-full flex items-center justify-center">
                       <div className="w-2 h-2 bg-white rounded-full"></div>
                     </div>
-                    <span className="text-sm text-gray-700">Diabète type 1 & 2</span>
+                    <span className="text-sm text-gray-700">Diabète type 1 et type 2</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <div className="w-5 h-5 bg-green-600 rounded-full flex items-center justify-center">
                       <div className="w-2 h-2 bg-white rounded-full"></div>
                     </div>
-                    <span className="text-sm text-gray-700">Obésité (IMC ≥ 30)</span>
+                    <span className="text-sm text-gray-700">Diabète pendant la grossesse</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <div className="w-5 h-5 bg-green-600 rounded-full flex items-center justify-center">
                       <div className="w-2 h-2 bg-white rounded-full"></div>
                     </div>
-                    <span className="text-sm text-gray-700">Troubles alimentaires</span>
+                    <span className="text-sm text-gray-700">Pré-diabète</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-5 h-5 bg-green-600 rounded-full flex items-center justify-center">
+                      <div className="w-2 h-2 bg-white rounded-full"></div>
+                    </div>
+                    <span className="text-sm text-gray-700">Obésité adulte (IMC ≥30)</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-5 h-5 bg-green-600 rounded-full flex items-center justify-center">
+                      <div className="w-2 h-2 bg-white rounded-full"></div>
+                    </div>
+                    <span className="text-sm text-gray-700">Obésité enfant</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <div className="w-5 h-5 bg-green-600 rounded-full flex items-center justify-center">
@@ -130,6 +142,30 @@ const ServicesSection = () => {
                       <div className="w-2 h-2 bg-white rounded-full"></div>
                     </div>
                     <span className="text-sm text-gray-700">Syndrome métabolique</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-5 h-5 bg-green-600 rounded-full flex items-center justify-center">
+                      <div className="w-2 h-2 bg-white rounded-full"></div>
+                    </div>
+                    <span className="text-sm text-gray-700">Maladies intestinales</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-5 h-5 bg-green-600 rounded-full flex items-center justify-center">
+                      <div className="w-2 h-2 bg-white rounded-full"></div>
+                    </div>
+                    <span className="text-sm text-gray-700">Maladie cœliaque</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-5 h-5 bg-green-600 rounded-full flex items-center justify-center">
+                      <div className="w-2 h-2 bg-white rounded-full"></div>
+                    </div>
+                    <span className="text-sm text-gray-700">Intolérance au lactose ou fructose</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-5 h-5 bg-green-600 rounded-full flex items-center justify-center">
+                      <div className="w-2 h-2 bg-white rounded-full"></div>
+                    </div>
+                    <span className="text-sm text-gray-700">Anorexie</span>
                   </div>
                 </div>
                 
