@@ -59,8 +59,12 @@ const AboutPracticeSection = () => {
             </div>
             
             <div className="text-center">
-              <div className="bg-gray-200 rounded-2xl aspect-square flex items-center justify-center">
-                <p className="text-gray-500">Photo professionnelle de la diététicienne</p>
+              <div className="rounded-2xl aspect-square overflow-hidden">
+                <img 
+                  src="/lovable-uploads/439c16cb-316f-4141-90f1-f377e383bc31.png"
+                  alt="Photo professionnelle de Gabriela Ferent - Diététicienne"
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
           </div>
