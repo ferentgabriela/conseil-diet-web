@@ -26,7 +26,7 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white pt-[120px]">
       <Navigation />
       <StickyBookingBar />
       

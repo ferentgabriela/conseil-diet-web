@@ -5,8 +5,8 @@ import { MapPin, Users, Euro } from 'lucide-react';
 const TrustBar = () => {
   return (
     <>
-      <div className="w-full min-h-[2.5rem]" style={{ backgroundColor: 'hsl(var(--nav-trust-bar))' }}>
-        <div className="container mx-auto px-4 py-2 min-h-[2.5rem] flex items-center">
+      <div className="w-full h-12" style={{ backgroundColor: 'hsl(var(--nav-trust-bar))' }}>
+        <div className="container mx-auto px-4 h-full flex items-center">
           <div className="flex flex-wrap justify-center items-center gap-4 md:gap-8 text-sm font-semibold w-full" style={{ color: 'hsl(var(--nav-trust-text))' }}>
             <div className="flex items-center gap-2">
               <MapPin className="h-4 w-4" />
