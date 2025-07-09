@@ -26,9 +26,8 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white pt-[80px]">
+    <div className="min-h-screen bg-white pt-[120px]">
       <Navigation />
-      <StickyBookingBar />
       
       <HeroSection />
       <AboutPracticeSection />
