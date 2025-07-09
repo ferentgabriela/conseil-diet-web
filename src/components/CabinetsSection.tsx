@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { ExternalLink, MapPin, Calendar, Clock, Phone } from 'lucide-react';
 
 const CabinetsSection = () => {
@@ -41,16 +42,14 @@ const CabinetsSection = () => {
               </div>
             </div>
 
-            <a
-              href="https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874#22943"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              to="/luxembourg"
               className="inline-flex items-center gap-2 w-full justify-center px-6 py-4 bg-green-600 text-white font-bold rounded-xl hover:bg-green-700 transition-all duration-300 text-lg shadow-md hover:shadow-lg"
             >
               <Calendar className="h-5 w-5" />
               Prendre RDV
               <ExternalLink className="h-4 w-4" />
-            </a>
+            </Link>
           </div>
           
           {/* Ettelbruck */}
@@ -75,16 +74,14 @@ const CabinetsSection = () => {
               </div>
             </div>
 
-            <a
-              href="https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874#24538"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              to="/ettelbruck"
               className="inline-flex items-center gap-2 w-full justify-center px-6 py-4 bg-blue-600 text-white font-bold rounded-xl hover:bg-blue-700 transition-all duration-300 text-lg shadow-md hover:shadow-lg"
             >
               <Calendar className="h-5 w-5" />
               Prendre RDV
               <ExternalLink className="h-4 w-4" />
-            </a>
+            </Link>
           </div>
           
           {/* Insenborn */}
@@ -109,16 +106,14 @@ const CabinetsSection = () => {
               </div>
             </div>
 
-            <a
-              href="https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874#22919"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              to="/insenborn"
               className="inline-flex items-center gap-2 w-full justify-center px-6 py-4 bg-purple-600 text-white font-bold rounded-xl hover:bg-purple-700 transition-all duration-300 text-lg shadow-md hover:shadow-lg"
             >
               <Calendar className="h-5 w-5" />
               Prendre RDV
               <ExternalLink className="h-4 w-4" />
-            </a>
+            </Link>
           </div>
         </div>
 

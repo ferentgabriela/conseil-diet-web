@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { MapPin, Phone, Clock, Map } from 'lucide-react';
 
 const LocationsSection = () => {
@@ -98,9 +99,12 @@ const LocationsSection = () => {
                       <Map className="h-4 w-4" />
                     </button>
                     
-                    <button className={`w-full px-6 py-3 text-white font-semibold rounded-lg transition-colors ${getButtonColor(location.name)}`}>
+                    <Link 
+                      to={location.name === "Luxembourg City" ? "/luxembourg" : location.name === "Ettelbruck" ? "/ettelbruck" : "/insenborn"}
+                      className={`w-full px-6 py-3 text-white font-semibold rounded-lg transition-colors ${getButtonColor(location.name)} flex items-center justify-center`}
+                    >
                       Réserver {location.name === "Luxembourg City" ? "Luxembourg-Ville" : location.name}
-                    </button>
+                    </Link>
                   </div>
                 </div>
               );
