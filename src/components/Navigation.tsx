@@ -68,28 +68,23 @@ const Navigation = () => {
     <div className="fixed top-0 left-0 right-0 z-50 w-full">
       {/* Trust Bar integrated with navigation */}
       <div className="w-full h-12" style={{ backgroundColor: 'hsl(var(--nav-trust-bar))' }}>
-        <div className="container mx-auto px-4 h-full flex items-center justify-between">
-          {/* Left spacer to match logo width */}
-          <div className="w-16"></div>
-          
-          {/* Centered trust content */}
-          <div className="flex items-center gap-4 md:gap-8 text-sm font-semibold -ml-16" style={{ color: 'hsl(var(--nav-trust-text))' }}>
-            <div className="flex items-center gap-2">
-              <MapPin className="h-4 w-4" />
-              <span>3 cabinets</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Users className="h-4 w-4" />
-              <span>1000+ patients satisfaits</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Euro className="h-4 w-4" />
-              <span>Remboursé jusqu'à 80%</span>
+        <div className="container mx-auto px-4 h-full flex items-center justify-center">
+          <div className="absolute left-1/2 transform -translate-x-1/2 -ml-16">
+            <div className="flex items-center gap-4 md:gap-8 text-sm font-semibold" style={{ color: 'hsl(var(--nav-trust-text))' }}>
+              <div className="flex items-center gap-2">
+                <MapPin className="h-4 w-4" />
+                <span>3 cabinets</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Users className="h-4 w-4" />
+                <span>1000+ patients satisfaits</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Euro className="h-4 w-4" />
+                <span>Remboursé jusqu'à 80%</span>
+              </div>
             </div>
           </div>
-          
-          {/* Right spacer to balance layout */}
-          <div className="w-16"></div>
         </div>
       </div>
 
