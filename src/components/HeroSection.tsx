@@ -28,7 +28,10 @@ const HeroSection = () => {
       <div className="container mx-auto px-4 text-center relative z-10">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-6xl md:text-8xl font-inter font-bold text-white mb-6 leading-tight tracking-tight drop-shadow-2xl">
-            Atteignez Votre Santé Idéale avec une Diététicienne Certifiée Près de Chez Vous
+            <div>Atteignez Votre Santé Idéale</div>
+            <div>avec une</div>
+            <div>Diététicienne Certifiée</div>
+            <div>Près de Chez Vous</div>
           </h1>
           
           <h2 className="text-xl md:text-2xl text-white/90 mb-8 font-inter font-normal drop-shadow-lg">
