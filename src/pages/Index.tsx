@@ -26,7 +26,7 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white pt-[76px]">
+    <div className="min-h-screen bg-white pt-[64px]">
       <Navigation />
       
       <HeroSection />
