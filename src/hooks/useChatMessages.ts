@@ -78,7 +78,7 @@ export const useChatMessages = (sessionId: string) => {
         .from('chat_conversations')
         .select('id')
         .eq('session_id', sessionId)
-        .single();
+        .maybeSingle();
 
       if (!existingConv) {
         // Create new conversation
@@ -102,7 +102,7 @@ export const useChatMessages = (sessionId: string) => {
         .from('chat_conversations')
         .select('id')
         .eq('session_id', sessionId)
-        .single();
+        .maybeSingle();
 
       if (conversation) {
         const { data: messagesData, error } = await supabase
@@ -128,12 +128,15 @@ export const useChatMessages = (sessionId: string) => {
     setIsLoading(true);
 
     try {
+      // Ensure conversation exists first
+      await initializeConversation();
+      
       // Get conversation ID
       const { data: conversation } = await supabase
         .from('chat_conversations')
         .select('id')
         .eq('session_id', sessionId)
-        .single();
+        .maybeSingle();
 
       if (!conversation) {
         throw new Error('Conversation not found');
