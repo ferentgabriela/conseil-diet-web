@@ -1,5 +1,5 @@
 import React from 'react';
-import { Euro, Shield, Calendar, Clock, Phone, HelpCircle, Stethoscope, ArrowRight } from 'lucide-react';
+import { Euro, Shield, Calendar, Clock, Phone, HelpCircle, Stethoscope, ArrowRight, FileText } from 'lucide-react';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 
 interface FAQSectionProps {
@@ -38,6 +38,22 @@ const FAQSection = ({ onOpenChat }: FAQSectionProps) => {
         "Même qualité de service avec ou sans prescription"
       ],
       expert: "Mon conseil d'experte : Si vous avez une pathologie (surpoids, diabète, hypertension), demandez d'abord la prescription. Sinon, vous pouvez commencer directement et demander la prescription plus tard."
+    },
+    {
+      question: "Quelle différence entre consultations CNS et privées ?",
+      answer: "Les consultations CNS nécessitent une ordonnance médicale et concernent uniquement certaines pathologies définies par la CNS. Les consultations privées ne nécessitent pas d'ordonnance et s'adressent à tous les autres objectifs nutritionnels.",
+      icon: FileText,
+      details: [
+        "Consultations CNS : ordonnance médicale obligatoire",
+        "Pathologies spécifiques définies par la CNS uniquement",
+        "Remboursement à 80% selon nomenclature officielle",
+        "Rapports obligatoires au médecin prescripteur",
+        "Consultations privées : accès libre sans ordonnance",
+        "Tous objectifs nutritionnels (bien-être, performance, prévention)",
+        "Tarif privé, paiement direct",
+        "Même qualité de service et d'accompagnement"
+      ],
+      expert: "Mon conseil d'experte : Si vous avez une pathologie reconnue par la CNS, optez pour le remboursement. Pour les objectifs de bien-être général ou prévention, les consultations privées offrent plus de flexibilité."
     },
     {
       question: "Quelle est la différence entre une diététicienne et une nutritionniste ?",
