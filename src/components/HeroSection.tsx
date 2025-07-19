@@ -2,96 +2,43 @@ import React from 'react';
 import { MapPin, Calendar, Clock, UserCheck, Lock } from 'lucide-react';
 
 const HeroSection = () => {
-  const handleBookingClick = (location: string) => {
-    // Replace with actual Doctena URLs for each location
-    const bookingUrls = {
-      luxembourg: '#', // Replace with actual Doctena URL
-      ettelbruck: '#', // Replace with actual Doctena URL
-      insenborn: '#' // Replace with actual Doctena URL
-    };
-    
-    window.open(bookingUrls[location as keyof typeof bookingUrls], '_blank');
+  const handleBookingClick = () => {
+    // You can customize this to open a specific booking page
+    window.open('#', '_blank');
   };
 
   return (
     <section 
-      className="pt-16 pb-16 relative overflow-hidden bg-cover bg-center bg-no-repeat -mt-2"
+      className="pt-16 pb-16 relative overflow-hidden bg-cover bg-center bg-no-repeat min-h-[80vh] flex items-center -mt-2"
       style={{
-        backgroundImage: `url('/lovable-uploads/0a8ef731-1e37-42fe-9edc-6fab463ddcc2.png')`
+        backgroundImage: `url('/lovable-uploads/3c621b05-bfca-49e3-829a-a0d7198dbdc5.png')`
       }}
+      role="banner"
+      aria-label="Cadre circulaire coloré composé de fruits et légumes frais, symbolisant une alimentation saine"
     >
-      {/* Dark overlay for text readability */}
-      <div className="absolute inset-0 bg-black/40"></div>
-      {/* Additional gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-green-900/20 to-blue-900/20"></div>
+      {/* Subtle gradient overlay for better text readability */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
       
       <div className="container mx-auto px-4 text-center relative z-10">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-6xl font-inter font-bold text-white mb-6 leading-tight tracking-tight drop-shadow-2xl">
-            <div className="whitespace-nowrap">Atteignez Votre Santé Idéale</div>
-            <div className="whitespace-nowrap">avec une</div>
-            <div className="whitespace-nowrap">Diététicienne Certifiée</div>
-            <div className="whitespace-nowrap">Près de Chez Vous</div>
+          {/* Main Headline */}
+          <h1 className="text-[26px] md:text-[42px] font-bold text-white mb-4 leading-tight drop-shadow-2xl">
+            Reprenez le contrôle de votre santé dès aujourd'hui
           </h1>
           
-          <h2 className="text-xl md:text-2xl text-white/90 mb-8 font-inter font-normal drop-shadow-lg">
-            Trois cabinets accueillants à Luxembourg-Ville, Ettelbruck et Insenborn. 
-            Accompagnement nutritionnel personnalisé selon vos objectifs.
+          {/* Subheadline */}
+          <h2 className="text-[16px] md:text-[20px] font-normal text-white mb-8 drop-shadow-lg">
+            3 cabinets au Luxembourg – Consultations remboursées CNS & privées
           </h2>
           
-          <div className="flex justify-center mb-6">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 text-white rounded-full text-sm font-medium shadow-lg">
-              <Clock className="h-4 w-4 text-green-400" />
-              Places limitées disponibles cette semaine
-            </div>
-          </div>
-          
-          <div className="flex flex-col md:flex-row justify-center items-center gap-4 mb-8">
-            <button
-              onClick={() => handleBookingClick('luxembourg')}
-              className="inline-flex items-center gap-3 px-8 py-4 bg-green-600 text-white font-bold rounded-xl hover:bg-green-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 min-h-[64px]"
-            >
-              <div className="flex items-center gap-2">
-                <span className="text-2xl">🏛️</span>
-                <MapPin className="h-5 w-5" />
-              </div>
-              Réserver Luxembourg-Ville
-            </button>
-            
-            <button
-              onClick={() => handleBookingClick('ettelbruck')}
-              className="inline-flex items-center gap-3 px-8 py-4 bg-blue-600 text-white font-bold rounded-xl hover:bg-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 min-h-[64px]"
-            >
-              <div className="flex items-center gap-2">
-                <span className="text-2xl">🏘️</span>
-                <MapPin className="h-5 w-5" />
-              </div>
-              Réserver Ettelbruck
-            </button>
-            
-            <button
-              onClick={() => handleBookingClick('insenborn')}
-              className="inline-flex items-center gap-3 px-8 py-4 bg-teal-600 text-white font-bold rounded-xl hover:bg-teal-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 min-h-[64px]"
-            >
-              <div className="flex items-center gap-2">
-                <span className="text-2xl">🌿</span>
-                <MapPin className="h-5 w-5" />
-              </div>
-              Réserver Insenborn
-            </button>
-          </div>
-          
-          <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mt-6">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 text-white rounded-full text-sm font-medium shadow-lg">
-              <UserCheck className="h-4 w-4 text-green-400" />
-              Plus de 1,000 consultations et suivis réalisés
-            </div>
-            
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 text-white rounded-full text-sm font-medium shadow-lg">
-              <Lock className="h-4 w-4 text-green-400" />
-              Données traitées de manière sécurisée
-            </div>
-          </div>
+          {/* CTA Button */}
+          <button
+            onClick={handleBookingClick}
+            className="inline-flex items-center px-6 py-3 bg-[#4CAF50] text-white text-[16px] md:text-[18px] font-medium rounded-md hover:shadow-lg transition-all duration-300 transform hover:scale-105"
+            aria-label="Réserver une consultation de nutrition"
+          >
+            Je réserve ma consultation
+          </button>
         </div>
       </div>
     </section>
