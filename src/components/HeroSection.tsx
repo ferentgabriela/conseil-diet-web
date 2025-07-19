@@ -84,7 +84,7 @@ const HeroSection = () => {
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mt-6">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 text-white rounded-full text-sm font-medium shadow-lg">
               <UserCheck className="h-4 w-4 text-green-400" />
-              Plus de 1,000 patients accompagnés
+              Plus de 1,000 consultations et suivis réalisés
             </div>
             
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 text-white rounded-full text-sm font-medium shadow-lg">
