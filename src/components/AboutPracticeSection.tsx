@@ -22,6 +22,10 @@ const AboutPracticeSection = () => {
                 Que vous souhaitiez perdre du poids, gérer une condition médicale, ou simplement vous sentir au mieux, 
                 nous adaptons chaque séance à vos besoins uniques.
               </p>
+              
+              <p className="text-base md:text-lg text-gray-600 mt-6 font-medium">
+                Gabriela Ferent, Diététicienne agréée par le Ministère de la Santé et la CNS (Code Prestataire CNS : 361043-09)
+              </p>
             </div>
           </div>
           
