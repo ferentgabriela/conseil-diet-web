@@ -13,6 +13,7 @@ const FAQSection = ({ onOpenChat }: FAQSectionProps) => {
       answer: "Oui, la CNS rembourse 80% des consultations diététiques sur prescription médicale pour certaines pathologies spécifiques.",
       icon: Euro,
       details: [
+        "Les tarifs des consultations CNS respectent la nomenclature officielle fixée par la CNS Luxembourg",
         "Remboursement à 80% du tarif conventionnel avec prescription médicale",
         "Pathologies couvertes : diabète, obésité (IMC ≥30), troubles cardiovasculaires",
         "Hypertension, dyslipidemies et syndrome métabolique également couverts",
