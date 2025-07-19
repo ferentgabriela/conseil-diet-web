@@ -170,7 +170,7 @@ const ServicesSection = () => {
                 </div>
                 
                 <p className="text-xs text-green-700 text-center mb-4">
-                  <span className="font-semibold">Économisez jusqu'à 80%</span> avec le remboursement CNS
+                  Consultations remboursées à hauteur de 80% par la CNS selon la nomenclature officielle sur présentation d'une ordonnance médicale valide.
                 </p>
                 
                 <button className="w-full px-6 py-3 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transition-colors">
