@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { MapPin, Calendar, Clock, UserCheck, Lock } from 'lucide-react';
 
@@ -10,50 +9,15 @@ const HeroSection = () => {
 
   return (
     <section 
-      className="pt-16 pb-16 relative overflow-hidden min-h-[80vh] flex items-center -mt-2"
+      className="pt-16 pb-16 relative overflow-hidden bg-cover bg-center bg-no-repeat min-h-[80vh] flex items-center -mt-2"
+      style={{
+        backgroundImage: `url('/lovable-uploads/3c621b05-bfca-49e3-829a-a0d7198dbdc5.png')`
+      }}
       role="banner"
-      aria-label="Section hero avec vidéo de fruits et légumes frais en arrière-plan"
+      aria-label="Section hero avec image de fruits et légumes frais en arrière-plan"
     >
-      {/* Background Video */}
-      <video
-        className="absolute inset-0 w-full h-full object-cover"
-        autoPlay
-        muted
-        loop
-        playsInline
-        preload="metadata"
-        poster="/lovable-uploads/3c621b05-bfca-49e3-829a-a0d7198dbdc5.png"
-        aria-hidden="true"
-      >
-        {/* Add your video source here when available */}
-        <source src="/path/to/your/hero-video.mp4" type="video/mp4" />
-        <source src="/path/to/your/hero-video.webm" type="video/webm" />
-        {/* Fallback for browsers that don't support video */}
-        <div 
-          className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: `url('/lovable-uploads/3c621b05-bfca-49e3-829a-a0d7198dbdc5.png')`
-          }}
-        />
-      </video>
-
-      {/* Fallback background image for when video fails to load */}
-      <div 
-        className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat opacity-0 transition-opacity duration-500"
-        style={{
-          backgroundImage: `url('/lovable-uploads/3c621b05-bfca-49e3-829a-a0d7198dbdc5.png')`
-        }}
-        onError={() => {
-          // Show fallback image if video fails
-          const fallbackDiv = document.querySelector('.hero-fallback');
-          if (fallbackDiv) {
-            (fallbackDiv as HTMLElement).style.opacity = '1';
-          }
-        }}
-      />
-      
-      {/* Video overlay for better text readability */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-black/10 to-transparent"></div>
+      {/* Simplified single gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/25 to-transparent"></div>
       
       <div className="container mx-auto px-4 text-center relative z-10">
         <div className="max-w-4xl mx-auto">
@@ -78,7 +42,7 @@ const HeroSection = () => {
         </div>
       </div>
       
-      {/* Hidden image for accessibility and SEO */}
+      {/* Hidden image for accessibility */}
       <img 
         src="/lovable-uploads/3c621b05-bfca-49e3-829a-a0d7198dbdc5.png" 
         alt="Cadre circulaire coloré composé de fruits et légumes frais, symbolisant une alimentation saine"

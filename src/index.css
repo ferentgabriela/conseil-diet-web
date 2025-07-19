@@ -173,32 +173,6 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
   }
-
-  /* Hero Video Background Optimizations */
-  .hero-video-container video {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    /* Optimize for performance */
-    will-change: auto;
-    backface-visibility: hidden;
-    transform: translateZ(0);
-  }
-
-  /* Mobile video optimizations */
-  @media (max-width: 768px) {
-    .hero-video-container video {
-      /* Reduce quality on mobile for better performance */
-      filter: blur(0.5px);
-    }
-  }
-
-  /* Prefers reduced motion - pause video for accessibility */
-  @media (prefers-reduced-motion: reduce) {
-    .hero-video-container video {
-      animation-play-state: paused !important;
-    }
-  }
 }
 
 /* Enhanced Chat Button Animations */
