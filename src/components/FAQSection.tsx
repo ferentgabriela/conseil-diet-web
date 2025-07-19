@@ -15,6 +15,7 @@ const FAQSection = ({ onOpenChat }: FAQSectionProps) => {
       details: [
         "Les tarifs des consultations CNS respectent la nomenclature officielle fixée par la CNS Luxembourg",
         "Remboursement à 80% du tarif conventionnel avec prescription médicale",
+        "Chaque suivi diététique comprend un bilan nutritionnel initial et un rapport final envoyés systématiquement à votre médecin prescripteur selon les règles CNS",
         "Pathologies couvertes : diabète, obésité (IMC ≥30), troubles cardiovasculaires",
         "Hypertension, dyslipidemies et syndrome métabolique également couverts",
         "Prescription obligatoire de votre médecin traitant ou spécialiste",
