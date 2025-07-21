@@ -6,8 +6,7 @@ import { MapPin, Calendar, Phone, Clock } from 'lucide-react';
 
 const LocationEttelbruck = () => {
   const handleBookingClick = () => {
-    // Replace with actual Doctena URL for Ettelbruck
-    window.open('#', '_blank');
+    window.open('https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874#24538', '_blank');
   };
 
   return (

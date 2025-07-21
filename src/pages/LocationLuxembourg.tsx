@@ -14,8 +14,7 @@ const LocationLuxembourg = () => {
   };
 
   const handleBookingClick = () => {
-    // Replace with actual Doctena URL for Luxembourg
-    window.open('#', '_blank');
+    window.open('https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874#22943', '_blank');
   };
 
   return (

@@ -66,7 +66,13 @@ export const ChatPopup = ({ isOpen: externalIsOpen, onToggle }: ChatPopupProps) 
     },
     {
       text: "Prendre rendez-vous sur Doctena",
-      action: () => window.open('https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874', '_blank')
+      action: () => {
+        // For now, scroll to cabinets section so user can choose location
+        const cabinetsSection = document.getElementById('cabinets');
+        if (cabinetsSection) {
+          cabinetsSection.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
     },
     {
       text: "Contacter Gabriela",

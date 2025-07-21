@@ -3,11 +3,10 @@ import { Calendar, ArrowRight, Clock } from 'lucide-react';
 
 const FinalCTASection = () => {
   const handleBookingClick = (location: string) => {
-    // Replace with actual Doctena URLs for each location
     const bookingUrls = {
-      luxembourg: '#', // Replace with actual Doctena URL
-      ettelbruck: '#', // Replace with actual Doctena URL
-      insenborn: '#' // Replace with actual Doctena URL
+      luxembourg: 'https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874#22943',
+      ettelbruck: 'https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874#24538',
+      insenborn: 'https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874#22919'
     };
     
     window.open(bookingUrls[location as keyof typeof bookingUrls], '_blank');

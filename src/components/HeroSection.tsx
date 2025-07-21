@@ -2,9 +2,11 @@ import React from 'react';
 import { MapPin, Calendar, Clock, UserCheck, Lock } from 'lucide-react';
 
 const HeroSection = () => {
-  const handleBookingClick = () => {
-    // You can customize this to open a specific booking page
-    window.open('#', '_blank');
+  const scrollToCabinets = () => {
+    const cabinetsSection = document.getElementById('cabinets');
+    if (cabinetsSection) {
+      cabinetsSection.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   return (
@@ -33,7 +35,7 @@ const HeroSection = () => {
           
           {/* CTA Button with enhanced hover effects and fade-in animation */}
           <button
-            onClick={handleBookingClick}
+            onClick={scrollToCabinets}
             className="inline-flex items-center px-6 md:px-8 py-3 md:py-4 bg-[#4CAF50] text-white text-[14px] md:text-[18px] font-medium rounded-md transition-all duration-300 transform hover:scale-105 hover:shadow-lg animate-fade-in [animation-delay:0.4s]"
             aria-label="Réserver une consultation de nutrition"
           >

@@ -179,7 +179,15 @@ const BlogSection = () => {
             <p className="text-gray-600 mb-6">
               Chaque situation est unique. Prenez rendez-vous pour un accompagnement sur-mesure adapté à vos besoins spécifiques.
             </p>
-            <button className="inline-flex items-center gap-2 px-8 py-4 bg-green-600 text-white font-bold rounded-xl hover:bg-green-700 transition-all duration-300 transform hover:scale-105 shadow-lg mb-4">
+            <button 
+              onClick={() => {
+                const cabinetsSection = document.getElementById('cabinets');
+                if (cabinetsSection) {
+                  cabinetsSection.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
+              className="inline-flex items-center gap-2 px-8 py-4 bg-green-600 text-white font-bold rounded-xl hover:bg-green-700 transition-all duration-300 transform hover:scale-105 shadow-lg mb-4"
+            >
               <User className="h-5 w-5" />
               Prendre rendez-vous pour un accompagnement personnalisé
             </button>
