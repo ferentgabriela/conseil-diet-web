@@ -1,14 +1,33 @@
 
 import React from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const NavigationLogo = () => {
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const handleLogoClick = () => {
+    if (location.pathname === '/') {
+      // On homepage, scroll to top
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    } else {
+      // On other pages, navigate to homepage
+      navigate('/');
+    }
+  };
+
   return (
     <div className="flex items-center">
-      <img 
-        src="/lovable-uploads/179c4bde-bcf3-45a7-8ea4-73a54222deb3.png" 
-        alt="Conseil Diététique Logo" 
-        className="h-16 md:h-20 w-auto"
-      />
+      <button onClick={handleLogoClick} className="cursor-pointer">
+        <img 
+          src="/lovable-uploads/179c4bde-bcf3-45a7-8ea4-73a54222deb3.png" 
+          alt="Conseil Diététique Logo" 
+          className="h-12 md:h-16 lg:h-20 w-auto transition-transform hover:scale-105"
+        />
+      </button>
     </div>
   );
 };

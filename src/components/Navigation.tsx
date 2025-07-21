@@ -67,21 +67,24 @@ const Navigation = () => {
   return (
     <div className="fixed top-0 left-0 right-0 z-50 w-full">
       {/* Trust Bar with patient/location info */}
-      <div className="w-full h-12" style={{ backgroundColor: 'hsl(var(--nav-trust-bar))' }}>
-        <div className="container mx-auto px-4 h-full flex items-center justify-center">
-          <div className="absolute left-1/2 transform -translate-x-1/2 -ml-16">
-            <div className="flex items-center gap-4 md:gap-8 text-sm font-semibold" style={{ color: 'hsl(var(--nav-trust-text))' }}>
-              <div className="flex items-center gap-2">
-                <MapPin className="h-4 w-4" />
-                <span>3 cabinets</span>
+      <div className="w-full h-10 md:h-12" style={{ backgroundColor: 'hsl(var(--nav-trust-bar))' }}>
+        <div className="container mx-auto px-2 md:px-4 h-full flex items-center justify-center">
+          <div className="flex items-center justify-center w-full">
+            <div className="flex items-center gap-2 md:gap-4 lg:gap-8 text-xs md:text-sm font-semibold" style={{ color: 'hsl(var(--nav-trust-text))' }}>
+              <div className="flex items-center gap-1 md:gap-2">
+                <MapPin className="h-3 w-3 md:h-4 md:w-4" />
+                <span className="hidden sm:inline">3 cabinets</span>
+                <span className="sm:hidden">3 lieux</span>
               </div>
-              <div className="flex items-center gap-2">
-                <Users className="h-4 w-4" />
-                <span>1000+ patients satisfaits</span>
+              <div className="flex items-center gap-1 md:gap-2">
+                <Users className="h-3 w-3 md:h-4 md:w-4" />
+                <span className="hidden sm:inline">1000+ patients satisfaits</span>
+                <span className="sm:hidden">1000+ clients</span>
               </div>
-              <div className="flex items-center gap-2">
-                <Euro className="h-4 w-4" />
-                <span>Remboursé jusqu'à 80%</span>
+              <div className="flex items-center gap-1 md:gap-2">
+                <Euro className="h-3 w-3 md:h-4 md:w-4" />
+                <span className="hidden sm:inline">Remboursé jusqu'à 80%</span>
+                <span className="sm:hidden">Remboursé</span>
               </div>
             </div>
           </div>
@@ -92,10 +95,10 @@ const Navigation = () => {
       <nav className={`nav-shadow transition-all duration-300 ${
         isScrolled ? 'scrolled backdrop-blur-md bg-white/95' : ''
       }`} style={{ backgroundColor: 'hsl(var(--nav-background))' }}>
-        <div className="container mx-auto px-4">
-          <div className="flex justify-between items-center py-4">
+        <div className="container mx-auto px-2 md:px-4">
+          <div className="flex justify-between items-center py-2 md:py-4">
             <NavigationLogo />
-            <div className="hidden lg:flex absolute left-1/2 transform -translate-x-1/2 -ml-16">
+            <div className="hidden lg:flex absolute left-1/2 transform -translate-x-1/2">
               <NavigationMenu scrollToSection={scrollToSection} />
             </div>
 
@@ -104,10 +107,11 @@ const Navigation = () => {
 
             {/* Mobile Menu Button */}
             <button
-              className="lg:hidden"
+              className="lg:hidden p-2 rounded-md hover:bg-gray-100 transition-colors"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
+              aria-label={isMenuOpen ? 'Fermer le menu' : 'Ouvrir le menu'}
             >
-              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              {isMenuOpen ? <X className="h-5 w-5 md:h-6 md:w-6" /> : <Menu className="h-5 w-5 md:h-6 md:w-6" />}
             </button>
           </div>
 
