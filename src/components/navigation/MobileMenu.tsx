@@ -33,12 +33,6 @@ const MobileMenu = ({ isMenuOpen, scrollToSection }: MobileMenuProps) => {
     <div className="lg:hidden pb-4 animate-fade-in">
       <div className="flex flex-col space-y-4 px-2">
         <button
-          onClick={() => handleMenuClick('accueil')}
-          className="text-gray-800 hover:text-green-600 transition-colors text-left font-semibold py-2"
-        >
-          Accueil
-        </button>
-        <button
           onClick={() => handleMenuClick('apropos')}
           className="text-gray-800 hover:text-green-600 transition-colors text-left font-semibold py-2"
         >
@@ -57,10 +51,10 @@ const MobileMenu = ({ isMenuOpen, scrollToSection }: MobileMenuProps) => {
           Témoignages
         </button>
         <button
-          onClick={() => handleMenuClick('services')}
+          onClick={() => handleMenuClick('cabinets')}
           className="text-gray-800 hover:text-green-600 transition-colors text-left font-semibold py-2"
         >
-          Consultations
+          Choisissez votre cabinet
         </button>
       </div>
     </div>
