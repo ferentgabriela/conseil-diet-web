@@ -1,0 +1,32 @@
+{
+  "navigation": {
+    "home": "Acasă",
+    "about": "Abordarea Noastră",
+    "process": "Parcursul Dvs.",
+    "testimonials": "Mărturii",
+    "cabinets": "Alegeți cabinetul"
+  },
+  "hero": {
+    "title": "Preluați controlul asupra sănătății dvs. astăzi",
+    "subtitle": "3 cabinete în Luxemburg – Consultații rambursate CNS & private",
+    "cta": "Îmi rezerv consultația"
+  },
+  "trustBar": {
+    "cabinets": "3 cabinete",
+    "cabinetsMobile": "3 locații",
+    "patients": "1000+ pacienți mulțumiți",
+    "patientsMobile": "1000+ clienți",
+    "reimbursed": "Rambursat până la 80%",
+    "reimbursedMobile": "Rambursat"
+  },
+  "about": {
+    "title": "Partenerul Dvs. în Nutriție pe Viață",
+    "subtitle": "O abordare personalizată și atentă pentru a găsi echilibrul nutrițional durabil."
+  },
+  "language": {
+    "current": "Română",
+    "english": "English",
+    "french": "Français",
+    "romanian": "Română"
+  }
+}

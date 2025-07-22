@@ -1,0 +1,32 @@
+{
+  "navigation": {
+    "home": "Home",
+    "about": "Our Approach",
+    "process": "Your Journey",
+    "testimonials": "Testimonials",
+    "cabinets": "Choose your office"
+  },
+  "hero": {
+    "title": "Take control of your health today",
+    "subtitle": "3 offices in Luxembourg – CNS & private consultations reimbursed",
+    "cta": "Book my consultation"
+  },
+  "trustBar": {
+    "cabinets": "3 offices",
+    "cabinetsMobile": "3 locations",
+    "patients": "1000+ satisfied patients",
+    "patientsMobile": "1000+ clients",
+    "reimbursed": "Reimbursed up to 80%",
+    "reimbursedMobile": "Reimbursed"
+  },
+  "about": {
+    "title": "Your Nutrition Partner for Life",
+    "subtitle": "A personalized and caring approach to find lasting nutritional balance."
+  },
+  "language": {
+    "current": "English",
+    "english": "English",
+    "french": "Français",
+    "romanian": "Română"
+  }
+}

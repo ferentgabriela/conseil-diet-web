@@ -1,0 +1,32 @@
+{
+  "navigation": {
+    "home": "Accueil",
+    "about": "Notre Approche",
+    "process": "Votre Parcours",
+    "testimonials": "Témoignages",
+    "cabinets": "Choisissez votre cabinet"
+  },
+  "hero": {
+    "title": "Reprenez le contrôle de votre santé dès aujourd'hui",
+    "subtitle": "3 cabinets au Luxembourg – Consultations remboursées CNS & privées",
+    "cta": "Je réserve ma consultation"
+  },
+  "trustBar": {
+    "cabinets": "3 cabinets",
+    "cabinetsMobile": "3 lieux",
+    "patients": "1000+ patients satisfaits",
+    "patientsMobile": "1000+ clients",
+    "reimbursed": "Remboursé jusqu'à 80%",
+    "reimbursedMobile": "Remboursé"
+  },
+  "about": {
+    "title": "Votre Partenaire en Nutrition pour la Vie",
+    "subtitle": "Une approche personnalisée et bienveillante pour retrouver un équilibre alimentaire durable."
+  },
+  "language": {
+    "current": "Français",
+    "english": "English",
+    "french": "Français", 
+    "romanian": "Română"
+  }
+}

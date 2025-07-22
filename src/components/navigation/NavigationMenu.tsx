@@ -1,12 +1,14 @@
 
 import React from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 interface NavigationMenuProps {
   scrollToSection: (sectionId: string) => void;
 }
 
 const NavigationMenu = ({ scrollToSection }: NavigationMenuProps) => {
+  const { t } = useTranslation();
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -32,25 +34,25 @@ const NavigationMenu = ({ scrollToSection }: NavigationMenuProps) => {
         onClick={() => handleMenuClick('apropos')}
         className="nav-menu-item text-gray-800 hover:text-green-600 font-semibold text-sm lg:text-lg px-2 lg:px-4 py-2 rounded-md transition-colors"
       >
-        Notre Approche
+        {t('navigation.about')}
       </button>
       <button
         onClick={() => handleMenuClick('processus')}
         className="nav-menu-item text-gray-800 hover:text-green-600 font-semibold text-sm lg:text-lg px-2 lg:px-4 py-2 rounded-md transition-colors"
       >
-        Votre Parcours
+        {t('navigation.process')}
       </button>
       <button
         onClick={() => handleMenuClick('transformations')}
         className="nav-menu-item text-gray-800 hover:text-green-600 font-semibold text-sm lg:text-lg px-2 lg:px-4 py-2 rounded-md transition-colors"
       >
-        Témoignages
+        {t('navigation.testimonials')}
       </button>
       <button
         onClick={() => handleMenuClick('cabinets')}
         className="nav-menu-item text-gray-800 hover:text-green-600 font-semibold text-sm lg:text-lg px-2 lg:px-4 py-2 rounded-md transition-colors"
       >
-        Choisissez votre cabinet
+        {t('navigation.cabinets')}
       </button>
     </div>
   );

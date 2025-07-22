@@ -2,11 +2,14 @@
 import React from 'react';
 import { Menu, X, MapPin, Users, Euro } from 'lucide-react';
 import { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import NavigationLogo from './navigation/NavigationLogo';
 import NavigationMenu from './navigation/NavigationMenu';
 import MobileMenu from './navigation/MobileMenu';
+import LanguageSwitcher from './navigation/LanguageSwitcher';
 
 const Navigation = () => {
+  const { t } = useTranslation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -87,18 +90,18 @@ const Navigation = () => {
             <div className="flex items-center gap-2 md:gap-4 lg:gap-8 text-xs md:text-sm font-semibold" style={{ color: 'hsl(var(--nav-trust-text))' }}>
               <div className="flex items-center gap-1 md:gap-2">
                 <MapPin className="h-3 w-3 md:h-4 md:w-4" />
-                <span className="hidden sm:inline">3 cabinets</span>
-                <span className="sm:hidden">3 lieux</span>
+                <span className="hidden sm:inline">{t('trustBar.cabinets')}</span>
+                <span className="sm:hidden">{t('trustBar.cabinetsMobile')}</span>
               </div>
               <div className="flex items-center gap-1 md:gap-2">
                 <Users className="h-3 w-3 md:h-4 md:w-4" />
-                <span className="hidden sm:inline">1000+ patients satisfaits</span>
-                <span className="sm:hidden">1000+ clients</span>
+                <span className="hidden sm:inline">{t('trustBar.patients')}</span>
+                <span className="sm:hidden">{t('trustBar.patientsMobile')}</span>
               </div>
               <div className="flex items-center gap-1 md:gap-2">
                 <Euro className="h-3 w-3 md:h-4 md:w-4" />
-                <span className="hidden sm:inline">Remboursé jusqu'à 80%</span>
-                <span className="sm:hidden">Remboursé</span>
+                <span className="hidden sm:inline">{t('trustBar.reimbursed')}</span>
+                <span className="sm:hidden">{t('trustBar.reimbursedMobile')}</span>
               </div>
             </div>
           </div>
@@ -116,17 +119,22 @@ const Navigation = () => {
               <NavigationMenu scrollToSection={scrollToSection} />
             </div>
 
-            {/* Spacer for desktop to balance layout */}
-            <div className="hidden lg:block w-16"></div>
+            {/* Language Switcher - Desktop */}
+            <div className="hidden lg:block">
+              <LanguageSwitcher />
+            </div>
 
-            {/* Mobile Menu Button */}
-            <button
-              className="lg:hidden p-2 rounded-md hover:bg-gray-100 transition-colors"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              aria-label={isMenuOpen ? 'Fermer le menu' : 'Ouvrir le menu'}
-            >
-              {isMenuOpen ? <X className="h-5 w-5 md:h-6 md:w-6" /> : <Menu className="h-5 w-5 md:h-6 md:w-6" />}
-            </button>
+            {/* Mobile Section - Menu Button + Language Switcher */}
+            <div className="lg:hidden flex items-center gap-3">
+              <LanguageSwitcher />
+              <button
+                className="p-2 rounded-md hover:bg-gray-100 transition-colors"
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+                aria-label={isMenuOpen ? 'Fermer le menu' : 'Ouvrir le menu'}
+              >
+                {isMenuOpen ? <X className="h-5 w-5 md:h-6 md:w-6" /> : <Menu className="h-5 w-5 md:h-6 md:w-6" />}
+              </button>
+            </div>
           </div>
 
           <MobileMenu 

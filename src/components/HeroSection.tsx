@@ -1,7 +1,9 @@
 import React from 'react';
 import { MapPin, Calendar, Clock, UserCheck, Lock } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const HeroSection = () => {
+  const { t } = useTranslation();
   const scrollToCabinets = () => {
     const cabinetsSection = document.getElementById('cabinets');
     if (cabinetsSection) {
@@ -25,12 +27,12 @@ const HeroSection = () => {
         <div className="max-w-4xl mx-auto">
           {/* Main Headline with fade-in animation */}
           <h1 className="text-[32px] md:text-[48px] font-bold text-white mb-4 leading-tight drop-shadow-2xl animate-fade-in">
-            Reprenez le contrôle de votre santé dès aujourd'hui
+            {t('hero.title')}
           </h1>
           
           {/* Subheadline with margin-top and fade-in animation */}
           <h2 className="text-[16px] md:text-[20px] font-normal text-white mt-4 mb-8 drop-shadow-lg animate-fade-in [animation-delay:0.2s]">
-            3 cabinets au Luxembourg – Consultations remboursées CNS & privées
+            {t('hero.subtitle')}
           </h2>
           
           {/* CTA Button with enhanced hover effects and fade-in animation */}
@@ -39,7 +41,7 @@ const HeroSection = () => {
             className="inline-flex items-center px-6 md:px-8 py-3 md:py-4 bg-[#4CAF50] text-white text-[14px] md:text-[18px] font-medium rounded-md transition-all duration-300 transform hover:scale-105 hover:shadow-lg animate-fade-in [animation-delay:0.4s]"
             aria-label="Réserver une consultation de nutrition"
           >
-            Je réserve ma consultation
+            {t('hero.cta')}
           </button>
         </div>
       </div>

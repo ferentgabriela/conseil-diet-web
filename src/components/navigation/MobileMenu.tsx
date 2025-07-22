@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 interface MobileMenuProps {
   isMenuOpen: boolean;
@@ -8,6 +9,7 @@ interface MobileMenuProps {
 }
 
 const MobileMenu = ({ isMenuOpen, scrollToSection }: MobileMenuProps) => {
+  const { t } = useTranslation();
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -36,25 +38,25 @@ const MobileMenu = ({ isMenuOpen, scrollToSection }: MobileMenuProps) => {
           onClick={() => handleMenuClick('apropos')}
           className="text-gray-800 hover:text-green-600 transition-colors text-left font-semibold py-2"
         >
-          Notre Approche
+          {t('navigation.about')}
         </button>
         <button
           onClick={() => handleMenuClick('processus')}
           className="text-gray-800 hover:text-green-600 transition-colors text-left font-semibold py-2"
         >
-          Votre Parcours
+          {t('navigation.process')}
         </button>
         <button
           onClick={() => handleMenuClick('transformations')}
           className="text-gray-800 hover:text-green-600 transition-colors text-left font-semibold py-2"
         >
-          Témoignages
+          {t('navigation.testimonials')}
         </button>
         <button
           onClick={() => handleMenuClick('cabinets')}
           className="text-gray-800 hover:text-green-600 transition-colors text-left font-semibold py-2"
         >
-          Choisissez votre cabinet
+          {t('navigation.cabinets')}
         </button>
       </div>
     </div>
