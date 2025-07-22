@@ -42,7 +42,7 @@ const MobileMenu = ({ isMenuOpen, scrollToSection }: MobileMenuProps) => {
           onClick={() => handleMenuClick('apropos')}
           className="text-gray-800 hover:text-green-600 transition-colors text-left font-semibold py-2"
         >
-          Mon Approche
+          Notre Approche
         </button>
         <button
           onClick={() => handleMenuClick('processus')}

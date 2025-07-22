@@ -13,10 +13,10 @@ const HeroSection = () => {
     <section 
       className="pt-16 pb-16 relative overflow-hidden bg-cover bg-center bg-no-repeat min-h-[80vh] flex items-center -mt-2"
       style={{
-        backgroundImage: `url('/lovable-uploads/3c621b05-bfca-49e3-829a-a0d7198dbdc5.png')`
+        backgroundImage: `url('/lovable-uploads/1f309c72-ddb5-4bae-944e-68046c01bf90.png')`
       }}
       role="banner"
-      aria-label="Section hero avec image de fruits et légumes frais en arrière-plan"
+      aria-label="Section hero avec image de comptoir de cuisine et légumes frais en arrière-plan"
     >
       {/* Simplified single gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-t from-black/25 to-transparent"></div>
@@ -46,8 +46,8 @@ const HeroSection = () => {
       
       {/* Hidden image for accessibility */}
       <img 
-        src="/lovable-uploads/3c621b05-bfca-49e3-829a-a0d7198dbdc5.png" 
-        alt="Cadre circulaire coloré composé de fruits et légumes frais, symbolisant une alimentation saine"
+        src="/lovable-uploads/1f309c72-ddb5-4bae-944e-68046c01bf90.png" 
+        alt="Comptoir de cuisine moderne avec légumes frais colorés, symbolisant une alimentation saine et équilibrée"
         className="sr-only"
         aria-hidden="true"
       />
