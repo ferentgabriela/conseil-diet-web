@@ -10,7 +10,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section 
+    <section id="accueil" 
       className="pt-16 pb-16 relative overflow-hidden bg-cover bg-center bg-no-repeat min-h-[80vh] flex items-center -mt-2"
       style={{
         backgroundImage: `url('/lovable-uploads/1f309c72-ddb5-4bae-944e-68046c01bf90.png')`

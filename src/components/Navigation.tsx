@@ -23,7 +23,21 @@ const Navigation = () => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      // Calculate the exact offset for the fixed header
+      const trustBarElement = document.querySelector('div[class*="bg-green-50"]');
+      const navigationElement = document.querySelector('nav');
+      
+      const trustBarHeight = trustBarElement ? trustBarElement.getBoundingClientRect().height : 40;
+      const navigationHeight = navigationElement ? navigationElement.getBoundingClientRect().height : 88;
+      const totalOffset = trustBarHeight + navigationHeight + 20; // Added 20px padding
+      
+      const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+      const targetPosition = Math.max(0, elementPosition - totalOffset);
+      
+      window.scrollTo({
+        top: targetPosition,
+        behavior: 'smooth'
+      });
     }
     setIsMenuOpen(false);
   };

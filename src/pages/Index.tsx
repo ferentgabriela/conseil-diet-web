@@ -4,7 +4,9 @@ import Navigation from '@/components/Navigation';
 import StickyBookingBar from '@/components/StickyBookingBar';
 import HeroSection from '@/components/HeroSection';
 import AboutPracticeSection from '@/components/AboutPracticeSection';
+import HowItWorksSection from '@/components/HowItWorksSection';
 import ServicesSection from '@/components/ServicesSection';
+import TransformationStoriesSection from '@/components/TransformationStoriesSection';
 import TestimonialsSection from '@/components/TestimonialsSection';
 import DoctenaTestimonialsSection from '@/components/DoctenaTestimonialsSection';
 import FAQSection from '@/components/FAQSection';
@@ -31,7 +33,9 @@ const Index = () => {
       
       <HeroSection />
       <AboutPracticeSection />
+      <HowItWorksSection />
       <ServicesSection />
+      <TransformationStoriesSection />
       <CabinetsSection />
       <TestimonialsSection />
       <DoctenaTestimonialsSection />
