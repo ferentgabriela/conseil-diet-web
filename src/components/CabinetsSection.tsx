@@ -1,9 +1,17 @@
 
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { ExternalLink, MapPin, Calendar, Clock, Phone } from 'lucide-react';
 
 const CabinetsSection = () => {
+  const handleBookingClick = (location: string) => {
+    const bookingUrls = {
+      luxembourg: 'https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874#22943',
+      ettelbruck: 'https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874#24538',
+      insenborn: 'https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874#22919'
+    };
+    
+    window.open(bookingUrls[location as keyof typeof bookingUrls], '_blank');
+  };
   return (
     <section id="cabinets" className="py-20 bg-gradient-to-br from-green-50 via-blue-25 to-green-25 relative overflow-hidden">
       {/* Background decoration */}
@@ -42,14 +50,14 @@ const CabinetsSection = () => {
               </div>
             </div>
 
-            <Link
-              to="/luxembourg"
+            <button
+              onClick={() => handleBookingClick('luxembourg')}
               className="inline-flex items-center gap-2 w-full justify-center px-6 py-4 bg-green-600 text-white font-bold rounded-xl hover:bg-green-700 transition-all duration-300 text-lg shadow-md hover:shadow-lg"
             >
               <Calendar className="h-5 w-5" />
               Prendre RDV
               <ExternalLink className="h-4 w-4" />
-            </Link>
+            </button>
           </div>
           
           {/* Ettelbruck */}
@@ -74,14 +82,14 @@ const CabinetsSection = () => {
               </div>
             </div>
 
-            <Link
-              to="/ettelbruck"
+            <button
+              onClick={() => handleBookingClick('ettelbruck')}
               className="inline-flex items-center gap-2 w-full justify-center px-6 py-4 bg-blue-600 text-white font-bold rounded-xl hover:bg-blue-700 transition-all duration-300 text-lg shadow-md hover:shadow-lg"
             >
               <Calendar className="h-5 w-5" />
               Prendre RDV
               <ExternalLink className="h-4 w-4" />
-            </Link>
+            </button>
           </div>
           
           {/* Insenborn */}
@@ -106,14 +114,14 @@ const CabinetsSection = () => {
               </div>
             </div>
 
-            <Link
-              to="/insenborn"
+            <button
+              onClick={() => handleBookingClick('insenborn')}
               className="inline-flex items-center gap-2 w-full justify-center px-6 py-4 bg-purple-600 text-white font-bold rounded-xl hover:bg-purple-700 transition-all duration-300 text-lg shadow-md hover:shadow-lg"
             >
               <Calendar className="h-5 w-5" />
               Prendre RDV
               <ExternalLink className="h-4 w-4" />
-            </Link>
+            </button>
           </div>
         </div>
 
