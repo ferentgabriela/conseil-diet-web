@@ -6,7 +6,6 @@ import { useTranslation } from 'react-i18next';
 import NavigationLogo from './navigation/NavigationLogo';
 import NavigationMenu from './navigation/NavigationMenu';
 import MobileMenu from './navigation/MobileMenu';
-import LanguageSwitcher from './navigation/LanguageSwitcher';
 
 const Navigation = () => {
   const { t } = useTranslation();
@@ -119,14 +118,9 @@ const Navigation = () => {
               <NavigationMenu scrollToSection={scrollToSection} />
             </div>
 
-            {/* Language Switcher - Desktop */}
-            <div className="hidden lg:block">
-              <LanguageSwitcher />
-            </div>
 
-            {/* Mobile Section - Menu Button + Language Switcher */}
-            <div className="lg:hidden flex items-center gap-3">
-              <LanguageSwitcher />
+            {/* Mobile Section - Menu Button */}
+            <div className="lg:hidden flex items-center">
               <button
                 className="p-2 rounded-md hover:bg-gray-100 transition-colors"
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
