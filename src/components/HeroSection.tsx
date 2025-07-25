@@ -1,9 +1,25 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { MapPin, Calendar, Clock, UserCheck, Lock } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 const HeroSection = () => {
   const { t } = useTranslation();
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  
+  const images = [
+    '/lovable-uploads/1f309c72-ddb5-4bae-944e-68046c01bf90.png', // Original kitchen image
+    '/lovable-uploads/93b38569-b3fe-4bfa-bc2d-80b6a547847b.png', // Doctor with fruits
+    '/lovable-uploads/92b77484-49a9-4160-970e-545b241565c1.png', // Gym/fitness room
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 5000); // Change image every 5 seconds
+
+    return () => clearInterval(interval);
+  }, [images.length]);
+
   const scrollToCabinets = () => {
     const cabinetsSection = document.getElementById('cabinets');
     if (cabinetsSection) {
@@ -13,15 +29,23 @@ const HeroSection = () => {
 
   return (
     <section id="accueil" 
-      className="pt-16 pb-16 relative overflow-hidden bg-cover bg-center bg-no-repeat min-h-[80vh] flex items-center -mt-2"
-      style={{
-        backgroundImage: `url('/lovable-uploads/1f309c72-ddb5-4bae-944e-68046c01bf90.png')`
-      }}
+      className="pt-16 pb-16 relative overflow-hidden min-h-[80vh] flex items-center -mt-2"
       role="banner"
-      aria-label="Section hero avec image de comptoir de cuisine et légumes frais en arrière-plan"
+      aria-label="Section hero avec images de nutrition et bien-être en arrière-plan"
     >
-      {/* Simplified single gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/25 to-transparent"></div>
+      {/* Image slideshow */}
+      {images.map((image, index) => (
+        <div
+          key={image}
+          className={`absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-1000 ${
+            index === currentImageIndex ? 'opacity-100' : 'opacity-0'
+          }`}
+          style={{ backgroundImage: `url('${image}')` }}
+        />
+      ))}
+      
+      {/* Gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-black/10"></div>
       
       <div className="container mx-auto px-4 text-center relative z-10">
         <div className="max-w-4xl mx-auto">
