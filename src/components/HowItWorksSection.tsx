@@ -4,9 +4,14 @@ import { Calendar, FileText, TrendingUp, ArrowRight, Sparkles, Heart, CheckCircl
 
 const HowItWorksSection = () => {
   const scrollToCabinets = () => {
+    console.log('scrollToCabinets function called');
     const cabinetsSection = document.getElementById('cabinets');
+    console.log('cabinetsSection found:', cabinetsSection);
     if (cabinetsSection) {
+      console.log('Scrolling to cabinets section');
       cabinetsSection.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      console.log('Cabinets section not found!');
     }
   };
 
