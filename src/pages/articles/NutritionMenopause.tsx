@@ -7,115 +7,155 @@ import StickyBookingBar from '@/components/StickyBookingBar';
 
 const NutritionMenopause = () => {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-background">
       <Navigation />
       <StickyBookingBar />
-      <div className="container mx-auto px-4 py-8">
+      <article className="container mx-auto px-4 py-12">
         <div className="max-w-4xl mx-auto">
-          {/* Back button */}
+          {/* Back Navigation */}
           <Link 
             to="/#blog" 
-            className="inline-flex items-center gap-2 text-green-600 hover:text-green-700 mb-8 transition-colors"
+            className="inline-flex items-center gap-2 text-hsl(var(--blog-text-secondary)) hover:text-hsl(var(--primary)) mb-8 transition-colors group"
           >
-            <ArrowLeft className="h-4 w-4" />
+            <ArrowLeft className="h-4 w-4 transition-transform group-hover:-translate-x-1" />
             Retour au blog
           </Link>
 
-          {/* Article header */}
-          <div className="bg-white rounded-2xl shadow-lg overflow-hidden mb-8">
-            <img 
-              src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
-              alt="Nutrition et Ménopause"
-              className="w-full h-64 object-cover"
-            />
-            <div className="p-8">
-              <div className="flex items-center gap-4 mb-4 text-sm text-gray-500">
-                <div className="flex items-center gap-1">
+          {/* Hero Section */}
+          <div className="bg-hsl(var(--blog-content-bg)) rounded-3xl shadow-[var(--blog-shadow-medium)] overflow-hidden mb-12">
+            <div className="relative h-80 md:h-96">
+              <img 
+                src="https://images.unsplash.com/photo-1559526324-593bc073d938?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+                alt="Nutrition et Ménopause"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+            </div>
+            <div className="p-8 md:p-12">
+              {/* Article Meta */}
+              <div className="flex flex-wrap items-center gap-6 mb-6 text-sm text-hsl(var(--blog-text-secondary))">
+                <div className="flex items-center gap-2">
                   <User className="h-4 w-4" />
-                  <span>Gabriela Ferent</span>
+                  <span className="font-medium">Gabriela Ferent</span>
                 </div>
-                <div className="flex items-center gap-1">
+                <div className="flex items-center gap-2">
                   <Clock className="h-4 w-4" />
                   <span>8 min de lecture</span>
                 </div>
-                <div className="flex items-center gap-1">
+                <div className="flex items-center gap-2">
                   <Calendar className="h-4 w-4" />
                   <span>15 juin 2024</span>
                 </div>
               </div>
               
-              <span className="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-medium mb-4 inline-block">
+              {/* Category Badge */}
+              <span className="bg-hsl(var(--category-feminine)) text-hsl(var(--category-feminine-text)) px-4 py-2 rounded-full text-sm font-semibold mb-6 inline-block">
                 Nutrition Féminine
               </span>
               
-              <h1 className="text-4xl font-bold text-gray-900 mb-6">
+              {/* Title and Description */}
+              <h1 className="text-4xl md:text-5xl font-bold text-hsl(var(--blog-text-primary)) mb-6 leading-tight">
                 Nutrition et Ménopause : Guide Complet pour Maintenir son Poids
               </h1>
               
-              <p className="text-xl text-gray-600 leading-relaxed">
-                La ménopause bouleverse votre métabolisme ? Découvrez comment adapter votre alimentation pour maintenir un poids santé et réduire les symptômes.
+              <p className="text-xl text-hsl(var(--blog-text-secondary)) leading-relaxed">
+                La ménopause bouleverse votre métabolisme ? Découvrez comment adapter votre alimentation pour maintenir un poids santé et réduire les symptômes naturellement.
               </p>
             </div>
           </div>
 
-          {/* Article content */}
-          <div className="bg-white rounded-2xl shadow-lg p-8">
-            <div className="prose prose-lg max-w-none">
-              <h2>Introduction</h2>
-              <p>
-                La ménopause est une étape naturelle de la vie d'une femme, mais elle s'accompagne souvent de défis nutritionnels particuliers. Les changements hormonaux peuvent affecter le métabolisme, la répartition des graisses et l'appétit, rendant la gestion du poids plus complexe.
-              </p>
+          {/* Article Content */}
+          <div className="bg-hsl(var(--blog-content-bg)) rounded-3xl shadow-[var(--blog-shadow-medium)] overflow-hidden">
+            <div className="p-8 md:p-12">
+              <div className="prose prose-lg max-w-none prose-headings:text-hsl(var(--blog-text-primary)) prose-p:text-hsl(var(--blog-text-secondary)) prose-li:text-hsl(var(--blog-text-secondary)) prose-strong:text-hsl(var(--blog-text-primary))">
+                
+                {/* Introduction with visual emphasis */}
+                <div className="bg-hsl(var(--muted)) rounded-2xl p-6 mb-8 border-l-4 border-hsl(var(--primary))">
+                  <h2 className="text-2xl font-bold mb-4 text-hsl(var(--blog-text-primary))">Une transition naturelle</h2>
+                  <p className="text-lg">
+                    La ménopause est une étape naturelle de la vie d'une femme, mais elle s'accompagne souvent de défis nutritionnels particuliers. Les changements hormonaux peuvent affecter le métabolisme, la répartition des graisses et l'appétit.
+                  </p>
+                </div>
 
-              <h2>Les changements métaboliques pendant la ménopause</h2>
-              <p>
-                Pendant la ménopause, plusieurs facteurs influencent votre métabolisme :
-              </p>
-              <ul>
-                <li>Diminution des œstrogènes</li>
-                <li>Ralentissement du métabolisme de base</li>
-                <li>Changements dans la répartition des graisses</li>
-                <li>Perte de masse musculaire</li>
-              </ul>
+                <h2 className="text-3xl font-bold mb-6 text-hsl(var(--blog-text-primary))">Les changements métaboliques</h2>
+                
+                <div className="grid md:grid-cols-2 gap-4 mb-8">
+                  <div className="bg-hsl(var(--accent)) p-6 rounded-2xl">
+                    <h4 className="font-semibold text-hsl(var(--blog-text-primary)) mb-2">🔻 Diminution des œstrogènes</h4>
+                    <p>Impact direct sur le métabolisme</p>
+                  </div>
+                  <div className="bg-hsl(var(--accent)) p-6 rounded-2xl">
+                    <h4 className="font-semibold text-hsl(var(--blog-text-primary)) mb-2">🐌 Métabolisme ralenti</h4>
+                    <p>Baisse du métabolisme de base</p>
+                  </div>
+                  <div className="bg-hsl(var(--accent)) p-6 rounded-2xl">
+                    <h4 className="font-semibold text-hsl(var(--blog-text-primary)) mb-2">📍 Répartition des graisses</h4>
+                    <p>Changement vers la zone abdominale</p>
+                  </div>
+                  <div className="bg-hsl(var(--accent)) p-6 rounded-2xl">
+                    <h4 className="font-semibold text-hsl(var(--blog-text-primary)) mb-2">💪 Perte musculaire</h4>
+                    <p>Diminution progressive de la masse</p>
+                  </div>
+                </div>
 
-              <h2>Stratégies nutritionnelles adaptées</h2>
-              <p>
-                Pour maintenir un poids santé pendant la ménopause, voici mes recommandations principales :
-              </p>
+                <h2 className="text-3xl font-bold mb-6 text-hsl(var(--blog-text-primary))">Stratégies nutritionnelles adaptées</h2>
+                
+                <div className="space-y-6 mb-8">
+                  <div className="bg-gradient-to-r from-hsl(var(--category-feminine)) to-hsl(var(--accent)) p-6 rounded-2xl">
+                    <h3 className="text-xl font-bold mb-3 text-hsl(var(--blog-text-primary))">🥩 1. Privilégier les protéines</h3>
+                    <p>Les protéines sont essentielles pour maintenir la masse musculaire. Visez <strong>1,2 à 1,6g par kg</strong> de poids corporel par jour.</p>
+                  </div>
+                  
+                  <div className="bg-gradient-to-r from-hsl(var(--accent)) to-hsl(var(--category-feminine)) p-6 rounded-2xl">
+                    <h3 className="text-xl font-bold mb-3 text-hsl(var(--blog-text-primary))">🌾 2. Choisir les bons glucides</h3>
+                    <p>Optez pour des glucides complexes qui stabilisent la glycémie et procurent une satiété durable.</p>
+                  </div>
+                  
+                  <div className="bg-gradient-to-r from-hsl(var(--category-feminine)) to-hsl(var(--accent)) p-6 rounded-2xl">
+                    <h3 className="text-xl font-bold mb-3 text-hsl(var(--blog-text-primary))">🌸 3. Intégrer les phytoestrogènes</h3>
+                    <p>Les aliments riches en phytoestrogènes peuvent aider à compenser la baisse d'œstrogènes naturels.</p>
+                  </div>
+                </div>
 
-              <h3>1. Privilégier les protéines</h3>
-              <p>
-                Les protéines sont essentielles pour maintenir la masse musculaire. Visez 1,2 à 1,6g par kg de poids corporel par jour.
-              </p>
+                <h2 className="text-3xl font-bold mb-6 text-hsl(var(--blog-text-primary))">Plan alimentaire type</h2>
+                
+                <div className="bg-hsl(var(--muted)) p-8 rounded-2xl mb-8">
+                  <h3 className="text-xl font-semibold mb-6 text-hsl(var(--blog-text-primary))">🗓️ Exemple de journée adaptée</h3>
+                  <div className="space-y-4">
+                    <div className="flex items-start gap-4">
+                      <span className="bg-hsl(var(--primary)) text-hsl(var(--primary-foreground)) px-3 py-1 rounded-full text-sm font-semibold">Matin</span>
+                      <p>Flocons d'avoine avec fruits rouges et graines de lin</p>
+                    </div>
+                    <div className="flex items-start gap-4">
+                      <span className="bg-hsl(var(--primary)) text-hsl(var(--primary-foreground)) px-3 py-1 rounded-full text-sm font-semibold">Midi</span>
+                      <p>Saumon grillé avec quinoa et légumes verts</p>
+                    </div>
+                    <div className="flex items-start gap-4">
+                      <span className="bg-hsl(var(--primary)) text-hsl(var(--primary-foreground)) px-3 py-1 rounded-full text-sm font-semibold">16h</span>
+                      <p>Yaourt grec avec noix</p>
+                    </div>
+                    <div className="flex items-start gap-4">
+                      <span className="bg-hsl(var(--primary)) text-hsl(var(--primary-foreground)) px-3 py-1 rounded-full text-sm font-semibold">Soir</span>
+                      <p>Légumineuses avec légumes de saison</p>
+                    </div>
+                  </div>
+                </div>
 
-              <h3>2. Choisir les bons glucides</h3>
-              <p>
-                Optez pour des glucides complexes qui stabilisent la glycémie et procurent une satiété durable.
-              </p>
-
-              <h3>3. Intégrer les phytoestrogènes</h3>
-              <p>
-                Les aliments riches en phytoestrogènes peuvent aider à compenser la baisse d'œstrogènes naturels.
-              </p>
-
-              <h2>Plan alimentaire type</h2>
-              <p>
-                Voici un exemple de journée type adaptée à la ménopause :
-              </p>
-              <ul>
-                <li><strong>Petit-déjeuner :</strong> Flocons d'avoine avec fruits rouges et graines de lin</li>
-                <li><strong>Déjeuner :</strong> Saumon grillé avec quinoa et légumes verts</li>
-                <li><strong>Collation :</strong> Yaourt grec avec noix</li>
-                <li><strong>Dîner :</strong> Légumineuses avec légumes de saison</li>
-              </ul>
-
-              <h2>Conclusion</h2>
-              <p>
-                Adapter son alimentation pendant la ménopause demande patience et bienveillance envers soi-même. N'hésitez pas à consulter un professionnel pour un accompagnement personnalisé.
-              </p>
+                {/* Call-to-action conclusion */}
+                <div className="bg-hsl(var(--primary)) text-hsl(var(--primary-foreground)) p-8 rounded-2xl text-center">
+                  <h2 className="text-2xl font-bold mb-4">Patience et bienveillance</h2>
+                  <p className="text-lg mb-6">
+                    Adapter son alimentation pendant la ménopause demande patience et bienveillance envers soi-même. N'hésitez pas à consulter un professionnel pour un accompagnement personnalisé.
+                  </p>
+                  <div className="inline-flex items-center gap-2 bg-hsl(var(--primary-foreground)) text-hsl(var(--primary)) px-6 py-3 rounded-full font-semibold">
+                    💫 Besoin d'un accompagnement personnalisé ?
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </article>
     </div>
   );
 };
