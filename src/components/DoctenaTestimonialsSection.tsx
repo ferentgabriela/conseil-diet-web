@@ -34,10 +34,10 @@ const DoctenaTestimonialsSection = () => {
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-12">
               <h3 className="text-3xl font-bold text-gray-900 mb-4">
-                Tous les avis patients
+                Ce Que Disent Nos Clients
               </h3>
               <p className="text-gray-600">
-                Consultez l'ensemble des témoignages vérifiés via Doctena
+                Témoignages réels de personnes qui ont transformé leur relation avec la nourriture et la santé.
               </p>
             </div>
 
