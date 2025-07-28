@@ -15,6 +15,7 @@ import TroublesDigestifs from "./pages/articles/TroublesDigestifs";
 import PertePoidsApres40 from "./pages/articles/PertePoidsApres40";
 import HypertensionRegimeDash from "./pages/articles/HypertensionRegimeDash";
 import ThyroideAlimentation from "./pages/articles/ThyroideAlimentation";
+import MentionsLegales from "./pages/MentionsLegales";
 
 const queryClient = new QueryClient();
 
@@ -35,6 +36,7 @@ const App = () => (
           <Route path="/articles/perte-poids-apres-40" element={<PertePoidsApres40 />} />
           <Route path="/articles/hypertension-regime-dash" element={<HypertensionRegimeDash />} />
           <Route path="/articles/thyroide-alimentation" element={<ThyroideAlimentation />} />
+          <Route path="/mentions-legales" element={<MentionsLegales />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

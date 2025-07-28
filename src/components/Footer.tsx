@@ -15,6 +15,9 @@ const Footer = () => {
             <Mail className="h-4 w-4 mr-2" />
             <a href="mailto:gabriela.ferent@conseildietetique.lu">gabriela.ferent@conseildietetique.lu</a>
           </div>
+          <div className="hover:text-green-600 transition-colors">
+            <a href="/mentions-legales">Mentions légales</a>
+          </div>
         </div>
         <div className="text-center text-xs text-gray-500 mt-4">
           © 2024 Gabriela Ferent - Diététicienne agréée au Luxembourg
