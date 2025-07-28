@@ -87,30 +87,29 @@ export const CookieConsentBanner: React.FC<CookieConsentBannerProps> = ({ onCons
   if (!isVisible) return null;
 
   return (
-    <div className="fixed inset-0 bg-black/50 z-50 flex items-end lg:items-center justify-center p-4">
-      <Card className="w-full max-w-2xl bg-white border-2 shadow-xl">
-        <CardHeader className="pb-4">
+    <div className="fixed bottom-4 left-4 right-4 z-50 max-w-md mx-auto">
+      <Card className="bg-background/95 backdrop-blur-sm border shadow-lg">
+        <CardHeader className="pb-3 pt-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
-              <Cookie className="h-6 w-6 text-primary" />
-              <CardTitle className="text-xl">Gestion des cookies</CardTitle>
+              <Cookie className="h-4 w-4 text-primary" />
+              <CardTitle className="text-sm font-medium">Cookies</CardTitle>
             </div>
             <Button
               variant="ghost"
               size="sm"
               onClick={() => setIsVisible(false)}
-              className="h-8 w-8 p-0"
+              className="h-6 w-6 p-0"
             >
-              <X className="h-4 w-4" />
+              <X className="h-3 w-3" />
             </Button>
           </div>
         </CardHeader>
         
-        <CardContent className="space-y-4">
-          <p className="text-muted-foreground">
-            Nous utilisons des cookies pour améliorer votre expérience sur notre site, 
-            analyser le trafic et personnaliser le contenu. Vous pouvez choisir quels 
-            types de cookies accepter.
+        <CardContent className="space-y-3 pt-2">
+          <p className="text-xs text-muted-foreground">
+            Nous utilisons des cookies pour améliorer votre expérience. 
+            Vous pouvez les personnaliser ci-dessous.
           </p>
 
           {showDetails && (
@@ -164,27 +163,30 @@ export const CookieConsentBanner: React.FC<CookieConsentBannerProps> = ({ onCons
             </div>
           )}
 
-          <div className="flex flex-col sm:flex-row gap-3 pt-4 border-t">
+          <div className="flex flex-col sm:flex-row gap-2 pt-3 border-t">
             <Button
               variant="outline"
+              size="sm"
               onClick={() => setShowDetails(!showDetails)}
-              className="flex-1"
+              className="flex-1 text-xs"
             >
-              {showDetails ? 'Masquer les détails' : 'Personnaliser'}
+              {showDetails ? 'Masquer' : 'Personnaliser'}
             </Button>
             
             {showDetails ? (
               <>
                 <Button
                   variant="outline"
+                  size="sm"
                   onClick={handleRejectAll}
-                  className="flex-1"
+                  className="flex-1 text-xs"
                 >
                   Refuser tout
                 </Button>
                 <Button
+                  size="sm"
                   onClick={handleSavePreferences}
-                  className="flex-1"
+                  className="flex-1 text-xs"
                 >
                   Sauvegarder
                 </Button>
@@ -193,16 +195,18 @@ export const CookieConsentBanner: React.FC<CookieConsentBannerProps> = ({ onCons
               <>
                 <Button
                   variant="outline"
+                  size="sm"
                   onClick={handleRejectAll}
-                  className="flex-1"
+                  className="flex-1 text-xs"
                 >
                   Refuser
                 </Button>
                 <Button
+                  size="sm"
                   onClick={handleAcceptAll}
-                  className="flex-1"
+                  className="flex-1 text-xs"
                 >
-                  Tout accepter
+                  Accepter
                 </Button>
               </>
             )}
