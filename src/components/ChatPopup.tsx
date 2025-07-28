@@ -170,16 +170,10 @@ export const ChatPopup = ({
       <Card className="fixed bottom-8 right-8 w-[576px] h-[600px] shadow-2xl z-50 flex flex-col border-green-200 rounded-2xl overflow-hidden">
         <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-3 flex-shrink-0 bg-gradient-to-r from-green-50 to-emerald-50 border-b border-green-200">
           <div className="flex items-center gap-3">
-            <Avatar className="h-8 w-8">
-              <AvatarFallback className="bg-green-100 text-green-600 text-lg">
-                🤖
-              </AvatarFallback>
-            </Avatar>
+            
             <div>
-              <CardTitle className="text-lg text-green-800">Gabriela</CardTitle>
-              <p className="text-xs text-green-600">
-                {isLoading ? "Gabriela répond..." : "Assistant nutritionnel"}
-              </p>
+              
+              
             </div>
           </div>
           <Button variant="ghost" size="icon" onClick={toggleOpen} className="h-8 w-8 text-green-600 hover:text-green-700 hover:bg-green-100 rounded-xl">
