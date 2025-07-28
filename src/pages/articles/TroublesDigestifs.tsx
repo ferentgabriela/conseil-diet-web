@@ -22,7 +22,7 @@ const TroublesDigestifs = () => {
           <div className="bg-hsl(var(--blog-content-bg)) rounded-3xl shadow-[var(--blog-shadow-medium)] overflow-hidden mb-12">
             <div className="relative h-80 md:h-96">
               <img 
-                src="https://images.unsplash.com/photo-1551992336-b8dce36f3df9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+                src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
                 alt="Troubles Digestifs"
                 className="w-full h-full object-cover"
               />
