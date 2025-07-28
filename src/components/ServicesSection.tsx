@@ -3,6 +3,28 @@ import React from 'react';
 import { Scale, Heart, Zap, Baby, Salad, Stethoscope } from 'lucide-react';
 
 const ServicesSection = () => {
+  const scrollToCabinets = () => {
+    const cabinetsSection = document.getElementById('cabinets');
+    if (cabinetsSection) {
+      // Get accurate measurements of fixed header elements
+      const trustBarElement = document.querySelector('div[class*="bg-green-50"]') || 
+                              document.querySelector('[style*="nav-trust-bar"]');
+      const navigationElement = document.querySelector('nav');
+      
+      const trustBarHeight = trustBarElement ? trustBarElement.getBoundingClientRect().height : 40;
+      const navigationHeight = navigationElement ? navigationElement.getBoundingClientRect().height : 88;
+      const totalOffset = trustBarHeight + navigationHeight;
+      
+      const elementPosition = cabinetsSection.getBoundingClientRect().top + window.scrollY;
+      const targetPosition = Math.max(0, elementPosition - totalOffset);
+      
+      window.scrollTo({
+        top: targetPosition,
+        behavior: 'smooth'
+      });
+    }
+  };
+  
   const services = [
     {
       icon: Scale,
@@ -75,9 +97,9 @@ const ServicesSection = () => {
               </p>
             </div>
             
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="grid md:grid-cols-2 gap-8 h-full">
               {/* Consultations CNS */}
-              <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-6 border-2 border-green-200">
+              <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-6 border-2 border-green-200 flex flex-col h-full">
                 <div className="text-center mb-6">
                   <div className="w-16 h-16 bg-green-600 rounded-xl flex items-center justify-center mx-auto mb-4">
                     <div className="w-8 h-8 border-2 border-white rounded-lg flex items-center justify-center">
@@ -169,17 +191,22 @@ const ServicesSection = () => {
                   </div>
                 </div>
                 
+                <div className="mt-auto">
                 <p className="text-xs text-green-700 text-center mb-4">
                   Consultations remboursées à hauteur de 80% par la CNS selon la nomenclature officielle sur présentation d'une ordonnance médicale valide.
                 </p>
                 
-                <button className="w-full px-6 py-3 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transition-colors">
+                <button 
+                  onClick={scrollToCabinets}
+                  className="w-full px-6 py-3 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transition-colors"
+                >
                   Réserver ma consultation CNS
                 </button>
+                </div>
               </div>
               
               {/* Consultations Privées */}
-              <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-6 border-2 border-blue-200">
+              <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-6 border-2 border-blue-200 flex flex-col h-full">
                 <div className="text-center mb-6">
                   <div className="w-16 h-16 bg-blue-600 rounded-xl flex items-center justify-center mx-auto mb-4">
                     <Heart className="h-8 w-8 text-white" />
@@ -189,6 +216,8 @@ const ServicesSection = () => {
                     Accès immédiat
                   </span>
                 </div>
+                
+                <div className="flex-grow">
                 
                 <p className="text-sm text-gray-600 mb-4 text-center">
                   Pour tous vos objectifs de santé et bien-être :
@@ -268,14 +297,20 @@ const ServicesSection = () => {
                     <span className="text-sm text-gray-700">Ménopause et alimentation</span>
                   </div>
                 </div>
+                </div>
                 
+                <div className="mt-auto">
                 <p className="text-xs text-blue-700 text-center mb-4">
                   <span className="font-semibold">Rendez-vous cette semaine</span> sans prescription
                 </p>
                 
-                <button className="w-full px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors">
+                <button 
+                  onClick={scrollToCabinets}
+                  className="w-full px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
+                >
                   Commencer dès maintenant
                 </button>
+                </div>
               </div>
             </div>
           </div>
