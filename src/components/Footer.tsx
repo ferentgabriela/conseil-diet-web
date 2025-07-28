@@ -13,7 +13,7 @@ const Footer = () => {
           </div>
           <div className="flex items-center hover:text-green-600 transition-colors">
             <Mail className="h-4 w-4 mr-2" />
-            <a href="mailto:gabriela.ferent@conseildietetique.lu">gabriela.ferent@conseildietetique.lu</a>
+            <a href="mailto:dieteticienne@conseildietetique.lu">dieteticienne@conseildietetique.lu</a>
           </div>
         </div>
         

@@ -27,7 +27,7 @@ const MentionsLegales = () => {
                 <p><strong>Responsable du site :</strong> Gabriela Ferent, Diététicienne agréée par le Ministère de la Santé (Luxembourg)</p>
                 <p><strong>Autorisation d'exercer :</strong> N° [à compléter]</p>
                 <p><strong>Code prestataire CNS :</strong> 361043-09</p>
-                <p><strong>Email :</strong> gabriela.ferent@conseildietetique.lu</p>
+                <p><strong>Email :</strong> dieteticienne@conseildietetique.lu</p>
                 <p><strong>Tél. :</strong> +352 691 379 172</p>
                 
                 <div className="mt-4">
@@ -147,7 +147,7 @@ const MentionsLegales = () => {
                     <li>Droit de retrait de consentement</li>
                   </ul>
                   <div className="mt-4 p-4 bg-green-50 border border-green-200 rounded-lg">
-                    <p className="text-green-800">👉 Pour toute demande : contactez-nous à gabriela.ferent@conseildietetique.lu</p>
+                    <p className="text-green-800">👉 Pour toute demande : contactez-nous à dieteticienne@conseildietetique.lu</p>
                     <p className="text-green-800">👉 Vous pouvez également contacter la CNPD (www.cnpd.lu)</p>
                   </div>
                 </div>
@@ -211,7 +211,7 @@ const MentionsLegales = () => {
               <div className="text-gray-700">
                 <p className="mb-4">Pour toute question relative aux présentes conditions ou à l'utilisation de vos données personnelles :</p>
                 <div className="p-4 bg-gray-50 border border-gray-200 rounded-lg">
-                  <p>📧 gabriela.ferent@conseildietetique.lu</p>
+                  <p>📧 dieteticienne@conseildietetique.lu</p>
                   <p>📞 +352 691 379 172</p>
                 </div>
               </div>
