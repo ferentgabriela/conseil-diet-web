@@ -93,8 +93,8 @@ const TransformationStoriesSection = () => {
             </h3>
             <div className="grid md:grid-cols-3 gap-6 text-center">
               <div className="bg-green-50 rounded-2xl p-6 border border-green-100">
-                <p className="text-3xl font-bold text-green-600 mb-2">8-15kg</p>
-                <p className="text-gray-700">Perte de poids moyenne</p>
+                <p className="text-3xl font-bold text-green-600 mb-2">85%</p>
+                <p className="text-gray-700">Habitudes alimentaires améliorées</p>
               </div>
               <div className="bg-blue-50 rounded-2xl p-6 border border-blue-100">
                 <p className="text-3xl font-bold text-blue-600 mb-2">95%</p>
