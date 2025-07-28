@@ -50,18 +50,18 @@ const LocationsSection = () => {
                     </h3>
                   </div>
                   
-                  <div className="space-y-4 flex-grow">
-                    <div className="flex items-start gap-3">
+                  <div className="space-y-4 flex-grow flex flex-col">
+                    <div className="flex items-start gap-3 min-h-[4rem]">
                       <MapPin className="h-5 w-5 text-green-600 mt-1 flex-shrink-0" />
-                      <div>
+                      <div className="flex-1">
                         <p className="font-medium text-gray-900">Adresse</p>
                         <p className="text-gray-600">{location.address}</p>
                       </div>
                     </div>
                     
-                    <div className="flex items-start gap-3">
+                    <div className="flex items-start gap-3 min-h-[3rem]">
                       <Phone className="h-5 w-5 text-blue-600 mt-1 flex-shrink-0" />
-                      <div>
+                      <div className="flex-1">
                         <p className="font-medium text-gray-900">Téléphone</p>
                         <a href={`tel:${location.phone}`} className="text-blue-600 hover:text-blue-700">
                           {location.phone}
@@ -69,9 +69,9 @@ const LocationsSection = () => {
                       </div>
                     </div>
                     
-                    <div className="flex items-start gap-3">
+                    <div className="flex items-start gap-3 min-h-[3rem]">
                       <Clock className="h-5 w-5 text-teal-600 mt-1 flex-shrink-0" />
-                      <div>
+                      <div className="flex-1">
                         <p className="font-medium text-gray-900">Horaires</p>
                         <p className="text-gray-600 text-sm">{location.hours}</p>
                       </div>
