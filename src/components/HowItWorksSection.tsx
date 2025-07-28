@@ -1,8 +1,15 @@
 import React from 'react';
 import { Calendar, FileText, TrendingUp, ArrowRight, Sparkles, Heart, CheckCircle } from 'lucide-react';
 const HowItWorksSection = () => {
-  const scrollToCabinets = () => {
+  const scrollToCabinets = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    
+    console.log('Button clicked - attempting to scroll to cabinets');
+    
     const cabinetsSection = document.getElementById('cabinets');
+    console.log('Cabinets section found:', cabinetsSection);
+    
     if (cabinetsSection) {
       const trustBarHeight = 80;
       const navHeight = 96;
@@ -12,10 +19,14 @@ const HowItWorksSection = () => {
       const elementPosition = cabinetsSection.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.pageYOffset - offset;
 
+      console.log('Scrolling to position:', offsetPosition);
+      
       window.scrollTo({
         top: offsetPosition,
         behavior: 'smooth'
       });
+    } else {
+      console.error('Cabinets section not found in DOM');
     }
   };
   const steps = [{
@@ -130,7 +141,7 @@ const HowItWorksSection = () => {
               </p>
               
               <div className="relative inline-block group">
-                <button onClick={scrollToCabinets} className="relative inline-flex items-center gap-3 px-10 py-5 bg-gradient-to-r from-green-600 to-green-700 text-white font-bold rounded-2xl hover:from-green-700 hover:to-green-800 transition-all duration-500 text-xl shadow-xl hover:shadow-2xl transform hover:scale-110 overflow-hidden">
+                <button onClick={scrollToCabinets} className="relative inline-flex items-center gap-3 px-10 py-5 bg-gradient-to-r from-green-600 to-green-700 text-white font-bold rounded-2xl hover:from-green-700 hover:to-green-800 active:scale-105 transition-all duration-500 text-xl shadow-xl hover:shadow-2xl transform hover:scale-110 overflow-hidden">
                   {/* Animated shine effect */}
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent transform -skew-x-12 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
                   
