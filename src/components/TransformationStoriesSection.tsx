@@ -46,12 +46,12 @@ const TransformationStoriesSection = () => {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 mb-16">
-            {transformations.map((story, index) => <div key={index} className={`relative bg-gradient-to-br ${story.background} rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 overflow-hidden group`}>
+            {transformations.map((story, index) => <div key={index} className={`relative bg-gradient-to-br ${story.background} rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 overflow-hidden group h-full`}>
                 {/* Decorative elements */}
                 <div className="absolute top-0 right-0 w-24 h-24 bg-white/30 rounded-full -translate-y-12 translate-x-12"></div>
                 <div className="absolute bottom-0 left-0 w-16 h-16 bg-white/20 rounded-full translate-y-8 -translate-x-8"></div>
                 
-                <div className="relative z-10">
+                <div className="relative z-10 h-full flex flex-col">
                   {/* Quote icon */}
                   <div className="mb-4">
                     <Quote className="h-8 w-8 text-gray-400 opacity-50" />
@@ -69,13 +69,13 @@ const TransformationStoriesSection = () => {
                     {[...Array(5)].map((_, i) => <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />)}
                   </div>
 
-                  {/* Story */}
-                  <blockquote className="text-gray-700 text-center mb-6 leading-relaxed italic">
+                  {/* Story - flexible height to fill available space */}
+                  <blockquote className="text-gray-700 text-center mb-6 leading-relaxed italic flex-grow flex items-center justify-center">
                     "{story.story}"
                   </blockquote>
 
-                  {/* Author */}
-                  <div className="flex items-center justify-center gap-3">
+                  {/* Author - pinned to bottom */}
+                  <div className="flex items-center justify-center gap-3 mt-auto">
                     <div className="text-3xl">{story.avatar}</div>
                     <div>
                       <p className="font-bold text-gray-900">{story.name}</p>
