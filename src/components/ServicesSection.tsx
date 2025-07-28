@@ -89,12 +89,14 @@ const ServicesSection = () => {
           
           <div className="bg-white rounded-xl p-8 shadow-lg">
             <div className="text-center mb-8">
-              <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-                Choisissez votre type de consultation
-              </h3>
-              <p className="text-lg text-gray-600">
-                Deux options adaptées à vos besoins et votre situation
-              </p>
+              <div className="bg-green-100 border-2 border-green-500 rounded-xl p-6 mb-4">
+                <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+                  Choisissez votre type de consultation
+                </h3>
+                <p className="text-lg text-gray-600">
+                  Deux options adaptées à vos besoins et votre situation
+                </p>
+              </div>
             </div>
             
             <div className="grid md:grid-cols-2 gap-8 h-full">
@@ -107,9 +109,9 @@ const ServicesSection = () => {
                     </div>
                   </div>
                   <h4 className="text-xl font-bold text-gray-900 mb-2">Consultations CNS</h4>
-                  <span className="inline-block px-3 py-1 bg-green-600 text-white text-sm font-medium rounded-full">
-                    Remboursées à 80%
-                  </span>
+                   <span className="inline-block px-3 py-1 bg-green-600 text-white text-sm font-medium rounded-full">
+                     Remboursées à 80%*
+                   </span>
                 </div>
                 
                 <p className="text-sm text-gray-600 mb-4 text-center">
@@ -192,9 +194,9 @@ const ServicesSection = () => {
                 </div>
                 
                 <div className="mt-auto">
-                <p className="text-xs text-green-700 text-center mb-4">
-                  Consultations remboursées à hauteur de 80% par la CNS selon la nomenclature officielle sur présentation d'une ordonnance médicale valide.
-                </p>
+                 <p className="text-xs text-green-700 text-center mb-4">
+                   *Consultations remboursées à hauteur de 80% par la CNS selon la nomenclature officielle sur présentation d'une ordonnance médicale valide.
+                 </p>
                 
                 <button 
                   onClick={scrollToCabinets}
