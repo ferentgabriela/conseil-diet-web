@@ -17,7 +17,7 @@ import HypertensionRegimeDash from "./pages/articles/HypertensionRegimeDash";
 import ThyroideAlimentation from "./pages/articles/ThyroideAlimentation";
 import MentionsLegales from "./pages/MentionsLegales";
 import TarifsPriseEnCharge from "./pages/TarifsPriseEnCharge";
-import PolitiqueConfidentialite from "./pages/PolitiqueConfidentialite";
+
 import Transparence from "./pages/Transparence";
 
 const queryClient = new QueryClient();
@@ -41,7 +41,7 @@ const App = () => (
           <Route path="/articles/thyroide-alimentation" element={<ThyroideAlimentation />} />
           <Route path="/mentions-legales" element={<MentionsLegales />} />
           <Route path="/tarifs-prise-en-charge" element={<TarifsPriseEnCharge />} />
-          <Route path="/politique-confidentialite" element={<PolitiqueConfidentialite />} />
+          
           <Route path="/transparence" element={<Transparence />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
