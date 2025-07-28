@@ -15,6 +15,7 @@ import CabinetsSection from '@/components/CabinetsSection';
 import LocationsSection from '@/components/LocationsSection';
 import Footer from '@/components/Footer';
 import { ChatPopup } from '@/components/ChatPopup';
+import { ChatCTAPopup } from '@/components/ChatCTAPopup';
 import { CookieConsentBanner } from '@/components/CookieConsentBanner';
 import { usePatientTracking } from '@/hooks/usePatientTracking';
 
@@ -51,6 +52,7 @@ const Index = () => {
       <Footer />
       
       <ChatPopup isOpen={isChatOpen} onToggle={handleToggleChat} />
+      <ChatCTAPopup onOpenChat={handleOpenChat} />
       <CookieConsentBanner onConsentGiven={(consent) => {
         console.log('Cookie consent updated:', consent);
       }} />
