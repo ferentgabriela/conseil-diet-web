@@ -138,9 +138,7 @@ const TransformationStoriesSection = () => {
                 <Calendar className="h-6 w-6" />
                 Prendre rendez-vous maintenant
               </button>
-              <p className="text-sm text-green-200 mt-3">
-                🔥 Dernières places disponibles cette semaine
-              </p>
+              
             </div>
           </div>
         </div>
