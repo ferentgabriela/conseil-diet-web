@@ -2,16 +2,20 @@ import React from 'react';
 import { Calendar, FileText, TrendingUp, ArrowRight, Sparkles, Heart, CheckCircle } from 'lucide-react';
 const HowItWorksSection = () => {
   const scrollToCabinets = () => {
-    console.log('scrollToCabinets function called');
     const cabinetsSection = document.getElementById('cabinets');
-    console.log('cabinetsSection found:', cabinetsSection);
     if (cabinetsSection) {
-      console.log('Scrolling to cabinets section');
-      cabinetsSection.scrollIntoView({
+      const trustBarHeight = 80;
+      const navHeight = 96;
+      const stickyBarHeight = 60;
+      const offset = trustBarHeight + navHeight + stickyBarHeight;
+      
+      const elementPosition = cabinetsSection.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
         behavior: 'smooth'
       });
-    } else {
-      console.log('Cabinets section not found!');
     }
   };
   const steps = [{
