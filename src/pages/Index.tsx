@@ -15,16 +15,21 @@ import CabinetsSection from '@/components/CabinetsSection';
 import LocationsSection from '@/components/LocationsSection';
 import Footer from '@/components/Footer';
 import { ChatPopup } from '@/components/ChatPopup';
+import { CookieConsentBanner } from '@/components/CookieConsentBanner';
+import { usePatientTracking } from '@/hooks/usePatientTracking';
 
 const Index = () => {
   const [isChatOpen, setIsChatOpen] = useState(false);
+  const { trackInteraction, trackAppointmentAction, trackChatAction } = usePatientTracking();
 
   const handleOpenChat = () => {
     setIsChatOpen(true);
+    trackChatAction('opened');
   };
 
   const handleToggleChat = () => {
     setIsChatOpen(!isChatOpen);
+    trackChatAction(isChatOpen ? 'closed' : 'opened');
   };
 
   return (
@@ -46,6 +51,9 @@ const Index = () => {
       <Footer />
       
       <ChatPopup isOpen={isChatOpen} onToggle={handleToggleChat} />
+      <CookieConsentBanner onConsentGiven={(consent) => {
+        console.log('Cookie consent updated:', consent);
+      }} />
     </div>
   );
 };
