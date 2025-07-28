@@ -141,17 +141,17 @@ const HowItWorksSection = () => {
               </p>
               
               <div className="relative inline-block group">
-                <button onClick={scrollToCabinets} className="relative inline-flex items-center gap-3 px-10 py-5 bg-gradient-to-r from-green-600 to-green-700 text-white font-bold rounded-2xl hover:from-green-700 hover:to-green-800 active:scale-105 transition-all duration-500 text-xl shadow-xl hover:shadow-2xl transform hover:scale-110 overflow-hidden">
+                <button onClick={scrollToCabinets} className="relative inline-flex items-center gap-3 px-10 py-5 bg-gradient-to-r from-green-600 to-green-700 text-white font-bold rounded-2xl hover:from-green-700 hover:to-green-800 active:scale-105 transition-all duration-500 text-xl shadow-xl hover:shadow-2xl transform hover:scale-110 overflow-hidden z-20">
                   {/* Animated shine effect */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent transform -skew-x-12 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent transform -skew-x-12 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000 pointer-events-none"></div>
                   
-                  <Calendar className="h-6 w-6 relative z-10 group-hover:rotate-12 transition-transform duration-300" />
-                  <span className="relative z-10">Voir les disponibilités</span>
-                  <ArrowRight className="h-5 w-5 relative z-10 group-hover:translate-x-2 transition-transform duration-300" />
+                  <Calendar className="h-6 w-6 relative z-30 group-hover:rotate-12 transition-transform duration-300" />
+                  <span className="relative z-30">Voir les disponibilités</span>
+                  <ArrowRight className="h-5 w-5 relative z-30 group-hover:translate-x-2 transition-transform duration-300" />
                 </button>
                 
                 {/* Hover ring animation */}
-                <div className="absolute inset-0 rounded-2xl bg-green-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 rounded-2xl bg-green-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-10"></div>
               </div>
               
               <div className="flex items-center justify-center gap-2 mt-6 text-sm text-gray-600">
