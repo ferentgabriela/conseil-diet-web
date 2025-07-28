@@ -75,9 +75,7 @@ const HowItWorksSection = () => {
                     </div>
                     
                     {/* Step number with animation */}
-                    <div className="absolute -top-4 -left-4 w-12 h-12 bg-gradient-to-r from-gray-800 to-gray-900 text-white rounded-full flex items-center justify-center font-bold text-lg shadow-lg group-hover:scale-110 transition-transform duration-300">
-                      {index + 1}
-                    </div>
+                    
                     
                     {/* Icon with enhanced styling */}
                     <div className={`w-16 h-16 ${colorClasses[step.color]} rounded-xl flex items-center justify-center mb-6 border-2 group-hover:scale-110 transition-transform duration-300 relative z-10`}>
