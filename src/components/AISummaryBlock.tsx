@@ -37,7 +37,7 @@ const AISummaryBlock = ({ variant = 'default' }: AISummaryBlockProps) => {
                 <ul className="text-sm text-gray-700 space-y-1">
                   <li>• Perte de poids personnalisée</li>
                   <li>• Rééquilibrage alimentaire</li>
-                  <li>• Nutrition sportive et grossesse</li>
+                  <li>• Nutrition anti-inflammatoire et grossesse</li>
                   <li>• Allergies alimentaires</li>
                 </ul>
               </div>

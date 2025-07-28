@@ -38,8 +38,8 @@ const ServicesSection = () => {
     },
     {
       icon: Zap,
-      title: "Nutrition Sportive & Performance",
-      description: "Optimisez vos performances athlétiques avec une nutrition appropriée"
+      title: "Nutrition Anti-Inflammatoire & Vitalité",
+      description: "Réduisez l'inflammation et regagnez en énergie grâce à une alimentation ciblée"
     },
     {
       icon: Baby,

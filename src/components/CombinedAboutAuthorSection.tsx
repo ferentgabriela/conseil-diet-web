@@ -95,7 +95,7 @@ const CombinedAboutAuthorSection = () => {
                 'Troubles alimentaires',
                 'Hypertension artérielle',
                 'Cholestérol élevé',
-                'Nutrition sportive',
+                'Nutrition anti-inflammatoire',
                 'Allergies alimentaires'
               ].map((specialization, index) => (
                 <div key={index} className="bg-white rounded-lg p-3 text-center shadow-sm border border-green-100">

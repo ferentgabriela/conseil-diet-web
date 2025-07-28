@@ -115,7 +115,7 @@ const NarrativeServicesSection = () => {
                     {[
                       'Perte de poids durable',
                       'Rééquilibrage alimentaire',
-                      'Nutrition sportive',
+                      'Nutrition anti-inflammatoire',
                       'Allergies alimentaires',
                       'Grossesse & allaitement',
                       'Bien-être digestif'
