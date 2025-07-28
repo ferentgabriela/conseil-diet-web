@@ -12,7 +12,7 @@ const BlogSection = () => {
       categoryColor: 'bg-pink-100 text-pink-800',
       author: 'Gabriela Ferent',
       readTime: '8 min',
-      image: '/lovable-uploads/3db52de8-c224-45ab-8471-9f77daaeaaf9.png',
+      image: 'https://images.unsplash.com/photo-1559526324-593bc073d938?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
       link: '/articles/nutrition-menopause-guide'
     },
     {
@@ -23,7 +23,7 @@ const BlogSection = () => {
       categoryColor: 'bg-green-100 text-green-800',
       author: 'Gabriela Ferent',
       readTime: '10 min',
-      image: '/lovable-uploads/41289576-41fe-474c-8330-dbd57c4e21b3.png',
+      image: 'https://images.unsplash.com/photo-1476703993599-0035a21b17a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
       link: '/articles/allaitement-perte-poids'
     },
     {
@@ -34,7 +34,7 @@ const BlogSection = () => {
       categoryColor: 'bg-blue-100 text-blue-800',
       author: 'Gabriela Ferent',
       readTime: '12 min',
-      image: '/lovable-uploads/78e4cbae-9ecc-4ed6-808f-a5c42d697691.png',
+      image: 'https://images.unsplash.com/photo-1490645935967-10de6ba17061?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
       link: '/articles/diabete-aliments-recommandes'
     },
     {
@@ -45,7 +45,7 @@ const BlogSection = () => {
       categoryColor: 'bg-purple-100 text-purple-800',
       author: 'Gabriela Ferent',
       readTime: '7 min',
-      image: '/lovable-uploads/7aed0187-bfd8-4a87-9d19-94b89433ed0b.png',
+      image: 'https://images.unsplash.com/photo-1559757175-0eb30cd8c063?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
       link: '/articles/cholesterol-alimentation'
     },
     {
@@ -56,7 +56,7 @@ const BlogSection = () => {
       categoryColor: 'bg-pink-100 text-pink-800',
       author: 'Gabriela Ferent',
       readTime: '9 min',
-      image: '/lovable-uploads/b0d29e69-60af-4752-bce9-cc5a5a110812.png',
+      image: 'https://images.unsplash.com/photo-1594381898411-846e7d193883?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
       link: '/articles/perte-poids-apres-40'
     },
     {
@@ -67,7 +67,7 @@ const BlogSection = () => {
       categoryColor: 'bg-indigo-100 text-indigo-800',
       author: 'Gabriela Ferent',
       readTime: '11 min',
-      image: '/lovable-uploads/d64f7102-b262-41a2-8c38-ce2367befbe9.png',
+      image: 'https://images.unsplash.com/photo-1559757600-66d8c755d65e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
       link: '/articles/thyroide-alimentation'
     },
     {
@@ -78,7 +78,7 @@ const BlogSection = () => {
       categoryColor: 'bg-purple-100 text-purple-800',
       author: 'Gabriela Ferent',
       readTime: '8 min',
-      image: '/lovable-uploads/3db52de8-c224-45ab-8471-9f77daaeaaf9.png',
+      image: 'https://images.unsplash.com/photo-1505682634904-d7c8d95cdc50?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
       link: '/articles/hypertension-regime-dash'
     },
     {
@@ -89,7 +89,7 @@ const BlogSection = () => {
       categoryColor: 'bg-teal-100 text-teal-800',
       author: 'Gabriela Ferent',
       readTime: '10 min',
-      image: '/lovable-uploads/41289576-41fe-474c-8330-dbd57c4e21b3.png',
+      image: 'https://images.unsplash.com/photo-1551992336-b8dce36f3df9?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
       link: '/articles/troubles-digestifs-solutions'
     }
   ];
@@ -122,7 +122,7 @@ const BlogSection = () => {
                     className="group bg-gradient-to-br from-white to-gray-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
                   >
                     {/* Article Image */}
-                    <div className="relative h-40 overflow-hidden">
+                    <div className="relative h-24 overflow-hidden">
                       <img
                         src={article.image}
                         alt={article.title}
