@@ -20,9 +20,7 @@ const Footer = () => {
         <div className="text-center text-xs text-gray-500 mt-6 leading-snug">
           <p>
             Gabriela Ferent • Diététicienne autorisée<br />
-            Autorisation d'exercer n° A‑2024‑123 (11 jan 2024)<br />
-            Code prestataire CNS : 99 999 999 / Membre ANDL‑001234<br />
-            7, rue de la Santé – L‑2551 Luxembourg<br />
+            Code prestataire CNS : 361043-09 / Membre ANDL<br />
             <a href="/mentions-legales" className="underline hover:text-green-600 transition-colors">Mentions légales</a> | {' '}
             <a href="/tarifs-prise-en-charge" className="underline hover:text-green-600 transition-colors">Tarifs &amp; prise en charge</a> | {' '}
             <a href="/transparence" className="underline hover:text-green-600 transition-colors">Transparence</a>
