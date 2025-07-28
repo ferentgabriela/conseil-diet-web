@@ -7,6 +7,13 @@ interface FAQSectionProps {
 }
 
 const FAQSection = ({ onOpenChat }: FAQSectionProps) => {
+  const scrollToCabinets = () => {
+    const cabinetsSection = document.getElementById('cabinets');
+    if (cabinetsSection) {
+      cabinetsSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   const faqs = [
     {
       question: "Est-ce que les consultations sont remboursées par la CNS ?",
@@ -250,7 +257,10 @@ const FAQSection = ({ onOpenChat }: FAQSectionProps) => {
                     
                     {/* CTA Button */}
                     <div className="text-center">
-                      <button className="inline-flex items-center gap-2 px-8 py-4 bg-green-600 text-white font-bold rounded-xl hover:bg-green-700 transition-all duration-300 transform hover:scale-105 shadow-lg">
+                      <button 
+                        onClick={scrollToCabinets}
+                        className="inline-flex items-center gap-2 px-8 py-4 bg-green-600 text-white font-bold rounded-xl hover:bg-green-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
+                      >
                         <Calendar className="h-5 w-5" />
                         Consultation personnalisée
                         <ArrowRight className="h-4 w-4" />
