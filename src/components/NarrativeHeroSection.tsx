@@ -54,7 +54,7 @@ const NarrativeHeroSection = () => {
               </button>
               
               <p className="text-sm text-gray-600">
-                Remboursé jusqu'à 80 % par la CNS • Sans engagement
+                Prise en charge CNS possible • Sans engagement
               </p>
 
               {/* Crédentiels de Gabriela */}

@@ -95,7 +95,7 @@ const VideoMessageSection = () => {
             </Button>
             
             <p className="text-sm text-green-600 mt-3">
-              ✓ Remboursé par la CNS jusqu'à 80% • Sans engagement
+              ✓ Prise en charge CNS possible • Sans engagement
             </p>
           </div>
         </div>

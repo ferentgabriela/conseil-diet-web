@@ -23,7 +23,7 @@ const AISummaryBlock = ({ variant = 'default' }: AISummaryBlockProps) => {
                   Consultations CNS (Remboursées)
                 </h3>
                 <ul className="text-sm text-gray-700 space-y-1">
-                  <li>• Remboursement CNS jusqu'à 80% sur prescription</li>
+                  <li>• Consultations spécialisées sur prescription</li>
                   <li>• Diabète type 1 et 2, obésité (IMC ≥30)</li>
                   <li>• Troubles alimentaires, hypertension</li>
                   <li>• Cholestérol, syndrome métabolique</li>
@@ -75,7 +75,7 @@ const AISummaryBlock = ({ variant = 'default' }: AISummaryBlockProps) => {
             <ul className="grid md:grid-cols-2 gap-3">
               <li className="flex items-start gap-2">
                 <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-                <span className="text-gray-700">Consultations CNS remboursées jusqu'à 80% sur prescription médicale</span>
+                <span className="text-gray-700">Consultations CNS avec prise en charge possible sur prescription médicale</span>
               </li>
               <li className="flex items-start gap-2">
                 <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />

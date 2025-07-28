@@ -109,9 +109,9 @@ const ServicesSection = () => {
                     </div>
                   </div>
                   <h4 className="text-xl font-bold text-gray-900 mb-2">Consultations CNS</h4>
-                   <span className="inline-block px-3 py-1 bg-green-600 text-white text-sm font-medium rounded-full">
-                     Remboursées à 80%*
-                   </span>
+                    <span className="inline-block px-3 py-1 bg-green-600 text-white text-sm font-medium rounded-full">
+                      Prise en charge CNS*
+                    </span>
                 </div>
                 
                 <p className="text-sm text-gray-600 mb-4 text-center">
@@ -194,9 +194,9 @@ const ServicesSection = () => {
                 </div>
                 
                 <div className="mt-auto">
-                 <p className="text-xs text-green-700 text-center mb-4">
-                   *Consultations remboursées à hauteur de 80% par la CNS selon la nomenclature officielle sur présentation d'une ordonnance médicale valide.
-                 </p>
+                  <p className="text-xs text-green-700 text-center mb-4">
+                    *Consultations avec prise en charge CNS selon la nomenclature officielle sur présentation d'une ordonnance médicale valide.
+                  </p>
                 
                 <button 
                   onClick={scrollToCabinets}

@@ -132,7 +132,7 @@ const CombinedAboutAuthorSection = () => {
                   <Shield className="h-8 w-8 text-white" />
                 </div>
                 <h4 className="font-bold text-gray-900 mb-2">CNS Agréée</h4>
-                <p className="text-sm text-gray-600">Remboursements 80%</p>
+                <p className="text-sm text-gray-600">Prise en charge CNS</p>
               </div>
               
               <div className="text-center p-6 bg-orange-50 rounded-xl border border-orange-200">

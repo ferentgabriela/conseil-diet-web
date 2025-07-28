@@ -49,7 +49,7 @@ const NarrativeServicesSection = () => {
                   </div>
                   <h3 className="text-3xl font-bold text-gray-900 mb-2">Consultations CNS</h3>
                   <div className="bg-green-600 text-white px-4 py-2 rounded-full inline-block">
-                    <span className="font-bold">Remboursées à 80%</span>
+                    <span className="font-bold">Prise en charge CNS</span>
                   </div>
                 </div>
 
@@ -76,7 +76,7 @@ const NarrativeServicesSection = () => {
 
                 <div className="bg-white/80 backdrop-blur-sm rounded-xl p-4 mb-6 text-center border border-green-100">
                   <p className="text-sm text-gray-600">
-                    Consultations remboursées à hauteur de 80% par la CNS selon la nomenclature officielle sur présentation d'une ordonnance médicale valide.
+                    Consultations avec prise en charge CNS selon la nomenclature officielle sur présentation d'une ordonnance médicale valide.
                   </p>
                 </div>
 

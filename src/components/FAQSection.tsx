@@ -17,12 +17,12 @@ const FAQSection = ({ onOpenChat }: FAQSectionProps) => {
   const faqs = [
     {
       question: "Est-ce que les consultations sont remboursées par la CNS ?",
-      answer: "Oui, la CNS rembourse 80% des consultations diététiques sur prescription médicale pour certaines pathologies spécifiques.",
+      answer: "Le remboursement n'est **pas automatique**. Seules les pathologies reconnues par la CNS et munies d'une **ordonnance médicale de moins de 3 mois** peuvent bénéficier d'une prise en charge (voir page Tarifs).",
       icon: Euro,
       details: [
         "Les tarifs des consultations CNS respectent la nomenclature officielle fixée par la CNS Luxembourg",
-        "Remboursement à 80% du tarif conventionnel avec prescription médicale",
-        "Uniquement les pathologies inscrites dans la nomenclature CNS donnent droit au remboursement de 80%",
+        "Prescription médicale obligatoire datée de moins de 3 mois",
+        "Uniquement les pathologies inscrites dans la nomenclature CNS donnent droit au remboursement",
         "Chaque suivi diététique comprend un bilan nutritionnel initial et un rapport final envoyés systématiquement à votre médecin prescripteur selon les règles CNS",
         "Pathologies couvertes : diabète, obésité (IMC ≥30), troubles cardiovasculaires",
         "Hypertension, dyslipidemies et syndrome métabolique également couverts",
@@ -30,11 +30,11 @@ const FAQSection = ({ onOpenChat }: FAQSectionProps) => {
         "Durée généralement de 6-12 mois selon la pathologie",
         "Possibilité de renouvellement selon l'évolution de votre état"
       ],
-      expert: "Mon conseil d'experte : Dans 90% des cas, les conditions de remboursement sont remplies. N'hésitez pas à demander à votre médecin s'il peut vous prescrire des consultations diététiques !"
+      expert: "Mon conseil d'experte : N'hésitez pas à demander à votre médecin s'il peut vous prescrire des consultations diététiques si vous présentez une pathologie éligible !"
     },
     {
       question: "Faut-il une prescription médicale pour consulter ?",
-      answer: "Une prescription médicale est nécessaire uniquement pour le remboursement CNS. Vous pouvez consulter librement sans prescription.",
+      answer: "Sans ordonnance, la consultation est au **tarif privé non remboursable**. La prescription doit être obtenue *avant* la première séance visant un remboursement.",
       icon: Calendar,
       details: [
         "Consultation libre possible sans prescription (tarif privé)",
@@ -51,12 +51,10 @@ const FAQSection = ({ onOpenChat }: FAQSectionProps) => {
       answer: "Les consultations CNS nécessitent une ordonnance médicale et concernent uniquement certaines pathologies définies par la CNS. Les consultations privées ne nécessitent pas d'ordonnance et s'adressent à tous les autres objectifs nutritionnels.",
       icon: FileText,
       details: [
-        "Consultations CNS : ordonnance médicale obligatoire",
-        "Pathologies spécifiques définies par la CNS uniquement",
-        "Remboursement à 80% selon nomenclature officielle",
+        "Consultations CNS : ordonnance + pathologie éligible",
+        "Tarif fixé par la nomenclature",
+        "Consultations privées : accès libre, objectifs bien-être ou performance",
         "Rapports obligatoires au médecin prescripteur",
-        "Consultations privées : accès libre sans ordonnance",
-        "Tous objectifs nutritionnels (bien-être, performance, prévention)",
         "Tarif privé, paiement direct",
         "Même qualité de service et d'accompagnement"
       ],
@@ -116,7 +114,7 @@ const FAQSection = ({ onOpenChat }: FAQSectionProps) => {
         "Rééducation progressive sans choc psychologique",
         "Maintien de la vie sociale et des sorties"
       ],
-      expert: "Mon conseil d'experte : Les régimes restrictifs échouent dans 95% des cas. Mon approche bienveillante vous permet de perdre du poids durablement tout en gardant une relation saine avec la nourriture."
+      expert: "Mon conseil d'experte : Les régimes restrictifs échouent dans la majorité des cas. Mon approche bienveillante vous permet de perdre du poids durablement tout en gardant une relation saine avec la nourriture."
     },
     {
       question: "Quels résultats puis-je espérer et en combien de temps ?",
@@ -130,7 +128,7 @@ const FAQSection = ({ onOpenChat }: FAQSectionProps) => {
         "6 mois : transformation complète et stabilisation",
         "Résultats durables si respect du suivi personnalisé"
       ],
-      expert: "Mon conseil d'experte : La régularité des consultations est clé. Mes patients qui respectent le rythme de suivi atteignent leurs objectifs dans 95% des cas !"
+      expert: "Mon conseil d'experte : La régularité des consultations est clé. Données internes 2021-23 : Mes patients qui respectent le rythme de suivi atteignent leurs objectifs dans la majorité des cas !"
     },
     {
       question: "Travaillez-vous avec des personnes ayant du diabète, de l'hypertension ou d'autres pathologies ?",

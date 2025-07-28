@@ -18,7 +18,7 @@ const TrustBar = () => {
             </div>
             <div className="flex items-center gap-2">
               <Euro className="h-4 w-4" />
-              <span>Remboursé jusqu'à 80%</span>
+              <span>Prise en charge CNS</span>
             </div>
           </div>
         </div>

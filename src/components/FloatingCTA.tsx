@@ -35,7 +35,7 @@ const FloatingCTA = () => {
             </p>
           </div>
           <p className="text-xs text-green-100 mb-3">
-            Consultation cette semaine • Remboursée CNS 80%
+            Consultation cette semaine • Prise en charge CNS possible
           </p>
           
           <button

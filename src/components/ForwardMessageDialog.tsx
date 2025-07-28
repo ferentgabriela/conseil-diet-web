@@ -31,6 +31,7 @@ export const ForwardMessageDialog: React.FC<ForwardMessageDialogProps> = ({
     email: '',
     phone: '',
     message: '',
+    acceptTerms: false,
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
@@ -38,10 +39,10 @@ export const ForwardMessageDialog: React.FC<ForwardMessageDialogProps> = ({
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    if (!formData.name.trim() || !formData.message.trim()) {
+    if (!formData.name.trim() || !formData.message.trim() || !formData.acceptTerms) {
       toast({
         title: "Champs requis",
-        description: "Veuillez remplir votre nom et votre message.",
+        description: "Veuillez remplir votre nom, votre message et accepter les conditions.",
         variant: "destructive",
       });
       return;
@@ -86,7 +87,7 @@ export const ForwardMessageDialog: React.FC<ForwardMessageDialogProps> = ({
         });
       }
 
-      setFormData({ name: '', email: '', phone: '', message: '' });
+      setFormData({ name: '', email: '', phone: '', message: '', acceptTerms: false });
       onOpenChange(false);
     } catch (error) {
       console.error('Error saving message:', error);
@@ -100,7 +101,7 @@ export const ForwardMessageDialog: React.FC<ForwardMessageDialogProps> = ({
     }
   };
 
-  const handleInputChange = (field: string, value: string) => {
+  const handleInputChange = (field: string, value: string | boolean) => {
     setFormData(prev => ({ ...prev, [field]: value }));
   };
 
@@ -158,6 +159,20 @@ export const ForwardMessageDialog: React.FC<ForwardMessageDialogProps> = ({
               className="min-h-[100px]"
               required
             />
+          </div>
+
+          <div className="flex items-start gap-2 text-sm mt-4">
+            <input
+              type="checkbox"
+              id="acceptTerms"
+              checked={formData.acceptTerms}
+              onChange={(e) => handleInputChange('acceptTerms', e.target.checked)}
+              required
+              className="mt-1 accent-green-700"
+            />
+            <label htmlFor="acceptTerms" className="text-gray-700">
+              J'affirme disposer d'une ordonnance conforme <strong>ou</strong> j'accepte que la séance soit au tarif privé non remboursable.
+            </label>
           </div>
 
           <DialogFooter>
