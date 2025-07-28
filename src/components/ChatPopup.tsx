@@ -147,9 +147,6 @@ export const ChatPopup = ({
             <div className="absolute inset-0 bg-green-300 rounded-full opacity-20" style={{
             animation: 'ripple 5s ease-out infinite'
           }}></div>
-            <div className="absolute inset-0 bg-green-400 rounded-full opacity-15" style={{
-            animation: 'ripple 5s ease-out infinite 1.5s'
-          }}></div>
             
             {/* Send icon similar to screenshot */}
             <div className="relative z-10 group-hover:scale-110 transition-transform duration-300">
