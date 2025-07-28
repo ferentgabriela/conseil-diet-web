@@ -12,19 +12,12 @@ const AboutPracticeSection = () => {
             </h2>
             
             <div className="max-w-4xl mx-auto">
-              <p className="text-lg md:text-xl text-gray-700 mb-6 leading-relaxed">
-                Notre cabinet est dédié à vous aider à trouver clarté et confiance dans votre alimentation. 
-                Avec des années d'expérience et des certifications avancées, nous offrons un accompagnement 
-                nutritionnel bienveillant et basé sur les preuves pour adultes, enfants et familles.
+              <p className="text-lg md:text-xl text-gray-700 mb-6 leading-relaxed font-medium">
+                Clarté, bienveillance et expertise certifiée
               </p>
               
               <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
-                Que vous souhaitiez perdre du poids, gérer une condition médicale, ou simplement vous sentir au mieux, 
-                nous adaptons chaque séance à vos besoins uniques.
-              </p>
-              
-              <p className="text-base md:text-lg text-gray-600 mt-6 font-medium">
-                Gabriela Ferent, Diététicienne agréée par le Ministère de la Santé et la CNS (Code Prestataire CNS : 361043-09)
+                Gabriela Ferent vous accompagne à chaque étape de votre parcours nutritionnel. Avec une approche personnalisée et fondée sur la science, chaque consultation est conçue pour répondre à vos besoins uniques.
               </p>
             </div>
           </div>
