@@ -35,15 +35,15 @@ const Navigation = () => {
       
       // Section-specific padding adjustments for optimal positioning
       const sectionPadding = {
-        'accueil': 20,          // Hero section - minimal padding
-        'apropos': 80,          // About section - more padding to hide previous section
-        'processus': 100,       // Process section - extra padding for clean separation
-        'services': 80,         // Services section - more padding
-        'transformations': 120, // Testimonials section - extra padding for title visibility
-        'cabinets': 140,        // Cabinets section - maximum padding for clean presentation
-        'faq': 100,             // FAQ section - extra padding
-        'blog': 80,             // Blog section - more padding
-        'locations': 120,       // Locations section - extra padding
+        'accueil': 5,           // Hero section - minimal padding (20/4 = 5)
+        'apropos': 20,          // About section - quartered (80/4 = 20)
+        'processus': 25,        // Process section - quartered (100/4 = 25)
+        'services': 20,         // Services section - quartered (80/4 = 20)
+        'transformations': 30,  // Testimonials section - quartered (120/4 = 30)
+        'cabinets': 35,         // Cabinets section - quartered (140/4 = 35)
+        'faq': 25,              // FAQ section - quartered (100/4 = 25)
+        'blog': 20,             // Blog section - quartered (80/4 = 20)
+        'locations': 30,        // Locations section - quartered (120/4 = 30)
       } as const;
       
       const extraPadding = sectionPadding[sectionId as keyof typeof sectionPadding] || 40;
