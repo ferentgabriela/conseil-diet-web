@@ -139,8 +139,8 @@ const HowItWorksSection = () => {
                   <ArrowRight className="h-5 w-5 relative z-10 group-hover:translate-x-2 transition-transform duration-300" />
                 </button>
                 
-                {/* Pulsing ring animation */}
-                <div className="absolute inset-0 rounded-2xl bg-green-600/30 animate-ping opacity-75"></div>
+                {/* Hover ring animation */}
+                <div className="absolute inset-0 rounded-2xl bg-green-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
               
               <div className="flex items-center justify-center gap-2 mt-6 text-sm text-gray-600">
