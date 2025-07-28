@@ -9,7 +9,7 @@ const HeroSection = () => {
   const images = [
     '/lovable-uploads/1f309c72-ddb5-4bae-944e-68046c01bf90.png', // Original kitchen image
     '/lovable-uploads/93b38569-b3fe-4bfa-bc2d-80b6a547847b.png', // Doctor with fruits
-    '/lovable-uploads/92b77484-49a9-4160-970e-545b241565c1.png', // Gym/fitness room
+    '/lovable-uploads/6b584fa2-7cae-45b4-8d71-ff67ae89fad3.png', // Fresh vegetables
   ];
 
   useEffect(() => {
