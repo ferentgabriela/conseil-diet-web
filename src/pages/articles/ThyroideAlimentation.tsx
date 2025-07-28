@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { ArrowLeft, Clock, User, Calendar } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -6,220 +5,179 @@ import Navigation from '@/components/Navigation';
 
 const ThyroideAlimentation = () => {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-background">
       <Navigation />
-      <div className="container mx-auto px-4 py-8">
+      <article className="container mx-auto px-4 py-12">
         <div className="max-w-4xl mx-auto">
+          {/* Back Navigation */}
           <Link 
             to="/#blog" 
-            className="inline-flex items-center gap-2 text-green-600 hover:text-green-700 mb-8 transition-colors"
+            className="inline-flex items-center gap-2 text-hsl(var(--blog-text-secondary)) hover:text-hsl(var(--primary)) mb-8 transition-colors group"
           >
-            <ArrowLeft className="h-4 w-4" />
+            <ArrowLeft className="h-4 w-4 transition-transform group-hover:-translate-x-1" />
             Retour au blog
           </Link>
 
-          <div className="bg-white rounded-2xl shadow-lg overflow-hidden mb-8">
-            <img 
-              src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
-              alt="Thyroïde et Alimentation"
-              className="w-full h-64 object-cover"
-            />
-            <div className="p-8">
-              <div className="flex items-center gap-4 mb-4 text-sm text-gray-500">
-                <div className="flex items-center gap-1">
+          {/* Hero Section */}
+          <div className="bg-hsl(var(--blog-content-bg)) rounded-3xl shadow-[var(--blog-shadow-medium)] overflow-hidden mb-12">
+            <div className="relative h-80 md:h-96">
+              <img 
+                src="https://images.unsplash.com/photo-1559757600-66d8c755d65e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+                alt="Thyroïde et Alimentation"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+            </div>
+            <div className="p-8 md:p-12">
+              {/* Article Meta */}
+              <div className="flex flex-wrap items-center gap-6 mb-6 text-sm text-hsl(var(--blog-text-secondary))">
+                <div className="flex items-center gap-2">
                   <User className="h-4 w-4" />
-                  <span>Gabriela Ferent</span>
+                  <span className="font-medium">Gabriela Ferent</span>
                 </div>
-                <div className="flex items-center gap-1">
+                <div className="flex items-center gap-2">
                   <Clock className="h-4 w-4" />
                   <span>13 min de lecture</span>
                 </div>
-                <div className="flex items-center gap-1">
+                <div className="flex items-center gap-2">
                   <Calendar className="h-4 w-4" />
                   <span>30 mai 2024</span>
                 </div>
               </div>
               
-              <span className="bg-teal-100 text-teal-700 px-3 py-1 rounded-full text-sm font-medium mb-4 inline-block">
+              {/* Category Badge */}
+              <span className="bg-hsl(var(--category-endocrine)) text-hsl(var(--category-endocrine-text)) px-4 py-2 rounded-full text-sm font-semibold mb-6 inline-block">
                 Endocrinologie
               </span>
               
-              <h1 className="text-4xl font-bold text-gray-900 mb-6">
-                Thyroïde et Alimentation : Ce qu'il Faut Savoir
+              {/* Title and Description */}
+              <h1 className="text-4xl md:text-5xl font-bold text-hsl(var(--blog-text-primary)) mb-6 leading-tight">
+                Thyroïde et Alimentation : Guide Complet pour Optimiser Votre Santé
               </h1>
               
-              <p className="text-xl text-gray-600 leading-relaxed">
-                Hypothyroïdie ou hyperthyroïdie ? Découvrez comment adapter votre alimentation pour soutenir le bon fonctionnement de votre thyroïde.
+              <p className="text-xl text-hsl(var(--blog-text-secondary)) leading-relaxed">
+                Hypothyroïdie ou hyperthyroïdie ? Découvrez comment adapter précisément votre alimentation pour soutenir le bon fonctionnement de votre thyroïde et retrouver votre équilibre.
               </p>
             </div>
           </div>
 
-          <div className="bg-white rounded-2xl shadow-lg p-8">
-            <div className="prose prose-lg max-w-none">
-              <h2>Comprendre la thyroïde</h2>
-              <p>
-                La thyroïde est une petite glande en forme de papillon située dans le cou. Elle produit des hormones essentielles qui régulent le métabolisme, la température corporelle, et de nombreuses autres fonctions vitales.
-              </p>
+          {/* Article Content */}
+          <div className="bg-hsl(var(--blog-content-bg)) rounded-3xl shadow-[var(--blog-shadow-medium)] overflow-hidden">
+            <div className="p-8 md:p-12">
+              <div className="prose prose-lg max-w-none prose-headings:text-hsl(var(--blog-text-primary)) prose-p:text-hsl(var(--blog-text-secondary)) prose-li:text-hsl(var(--blog-text-secondary)) prose-strong:text-hsl(var(--blog-text-primary))">
+                
+                {/* Introduction */}
+                <div className="bg-hsl(var(--muted)) rounded-2xl p-6 mb-8 border-l-4 border-hsl(var(--primary))">
+                  <h2 className="text-2xl font-bold mb-4 text-hsl(var(--blog-text-primary))">🦋 Comprendre la thyroïde</h2>
+                  <p className="text-lg">
+                    La thyroïde est une petite glande en forme de papillon située dans le cou. Elle produit des hormones essentielles qui régulent le métabolisme, la température corporelle, et de nombreuses autres fonctions vitales.
+                  </p>
+                </div>
 
-              <h2>Hypothyroïdie : quand la thyroïde ralentit</h2>
-              <p>
-                L'hypothyroïdie se caractérise par une production insuffisante d'hormones thyroïdiennes. Symptômes courants :
-              </p>
-              <ul>
-                <li>Fatigue chronique</li>
-                <li>Prise de poids</li>
-                <li>Frilosité</li>
-                <li>Constipation</li>
-                <li>Cheveux et ongles fragiles</li>
-                <li>Dépression</li>
-              </ul>
+                {/* Hypothyroïdie Section */}
+                <div className="bg-gradient-to-r from-hsl(var(--category-endocrine)) to-hsl(var(--accent)) p-8 rounded-2xl mb-10">
+                  <h2 className="text-3xl font-bold mb-6 text-hsl(var(--blog-text-primary))">❄️ Hypothyroïdie : quand la thyroïde ralentit</h2>
+                  
+                  <div className="grid md:grid-cols-3 gap-4 mb-6">
+                    <div className="bg-white/70 p-4 rounded-xl text-center">
+                      <div className="text-2xl mb-2">😴</div>
+                      <p className="font-semibold">Fatigue chronique</p>
+                    </div>
+                    <div className="bg-white/70 p-4 rounded-xl text-center">
+                      <div className="text-2xl mb-2">⚖️</div>
+                      <p className="font-semibold">Prise de poids</p>
+                    </div>
+                    <div className="bg-white/70 p-4 rounded-xl text-center">
+                      <div className="text-2xl mb-2">🥶</div>
+                      <p className="font-semibold">Frilosité</p>
+                    </div>
+                  </div>
 
-              <h3>Alimentation pour l'hypothyroïdie</h3>
-              <p>
-                Voici les nutriments essentiels pour soutenir votre thyroïde :
-              </p>
-              
-              <h4>Iode (avec précaution)</h4>
-              <ul>
-                <li>Algues marines (modération)</li>
-                <li>Poissons et fruits de mer</li>
-                <li>Sel iodé (quantité raisonnable)</li>
-                <li>Produits laitiers</li>
-              </ul>
+                  <h3 className="text-xl font-bold mb-4 text-hsl(var(--blog-text-primary))">🍽️ Nutrition pour l'hypothyroïdie</h3>
+                  <div className="space-y-4">
+                    <div className="bg-white/50 p-4 rounded-xl">
+                      <h4 className="font-semibold mb-2">⚡ Iode (avec précaution)</h4>
+                      <p>Algues marines, poissons, fruits de mer, sel iodé en quantité raisonnable</p>
+                    </div>
+                    <div className="bg-white/50 p-4 rounded-xl">
+                      <h4 className="font-semibold mb-2">🛡️ Sélénium</h4>
+                      <p>1-2 noix du Brésil par jour, poissons gras, œufs, graines de tournesol</p>
+                    </div>
+                    <div className="bg-white/50 p-4 rounded-xl">
+                      <h4 className="font-semibold mb-2">⚙️ Zinc</h4>
+                      <p>Huîtres, viandes maigres, graines de citrouille, légumineuses</p>
+                    </div>
+                  </div>
+                </div>
 
-              <h4>Sélénium</h4>
-              <ul>
-                <li>Noix du Brésil (1-2 par jour)</li>
-                <li>Poissons gras</li>
-                <li>Œufs</li>
-                <li>Graines de tournesol</li>
-              </ul>
+                {/* Hyperthyroïdie Section */}
+                <div className="bg-gradient-to-r from-hsl(var(--accent)) to-hsl(var(--category-endocrine)) p-8 rounded-2xl mb-10">
+                  <h2 className="text-3xl font-bold mb-6 text-hsl(var(--blog-text-primary))">🔥 Hyperthyroïdie : quand la thyroïde s'emballe</h2>
+                  
+                  <div className="grid md:grid-cols-3 gap-4 mb-6">
+                    <div className="bg-white/70 p-4 rounded-xl text-center">
+                      <div className="text-2xl mb-2">💓</div>
+                      <p className="font-semibold">Palpitations</p>
+                    </div>
+                    <div className="bg-white/70 p-4 rounded-xl text-center">
+                      <div className="text-2xl mb-2">😰</div>
+                      <p className="font-semibold">Nervosité</p>
+                    </div>
+                    <div className="bg-white/70 p-4 rounded-xl text-center">
+                      <div className="text-2xl mb-2">💦</div>
+                      <p className="font-semibold">Transpiration</p>
+                    </div>
+                  </div>
 
-              <h4>Zinc</h4>
-              <ul>
-                <li>Huîtres et fruits de mer</li>
-                <li>Viandes maigres</li>
-                <li>Graines de citrouille</li>
-                <li>Légumineuses</li>
-              </ul>
+                  <h3 className="text-xl font-bold mb-4 text-hsl(var(--blog-text-primary))">🥛 Nutrition pour l'hyperthyroïdie</h3>
+                  <div className="space-y-4">
+                    <div className="bg-white/50 p-4 rounded-xl">
+                      <h4 className="font-semibold mb-2">🦴 Calcium & Magnésium</h4>
+                      <p>Produits laitiers, légumes verts, sardines, amandes, chocolat noir</p>
+                    </div>
+                    <div className="bg-white/50 p-4 rounded-xl">
+                      <h4 className="font-semibold mb-2">🥦 Crucifères bénéfiques</h4>
+                      <p>Chou, brocoli, chou-fleur, radis - peuvent aider à calmer la thyroïde</p>
+                    </div>
+                  </div>
+                </div>
 
-              <h4>Tyrosine</h4>
-              <ul>
-                <li>Avocat</li>
-                <li>Bananes</li>
-                <li>Amandes</li>
-                <li>Fromage</li>
-              </ul>
+                {/* Menus types */}
+                <div className="grid md:grid-cols-2 gap-8 mb-10">
+                  <div className="bg-hsl(var(--muted)) p-6 rounded-2xl">
+                    <h3 className="text-xl font-bold mb-4 text-hsl(var(--blog-text-primary))">📋 Menu Hypothyroïdie</h3>
+                    <div className="space-y-3">
+                      <div className="flex gap-3"><span className="font-semibold">🌅</span>Œufs + avocat + pain complet</div>
+                      <div className="flex gap-3"><span className="font-semibold">☀️</span>Saumon + quinoa + légumes verts</div>
+                      <div className="flex gap-3"><span className="font-semibold">🌙</span>Poulet + patate douce + haricots verts</div>
+                    </div>
+                  </div>
+                  
+                  <div className="bg-hsl(var(--muted)) p-6 rounded-2xl">
+                    <h3 className="text-xl font-bold mb-4 text-hsl(var(--blog-text-primary))">📋 Menu Hyperthyroïdie</h3>
+                    <div className="space-y-3">
+                      <div className="flex gap-3"><span className="font-semibold">🌅</span>Smoothie épinards + yaourt calcium</div>
+                      <div className="flex gap-3"><span className="font-semibold">☀️</span>Sardines + salade + crudités</div>
+                      <div className="flex gap-3"><span className="font-semibold">🌙</span>Brocolis + riz complet + légumineuses</div>
+                    </div>
+                  </div>
+                </div>
 
-              <h3>Aliments à limiter en cas d'hypothyroïdie</h3>
-              <ul>
-                <li>Crucifères crus en excès (chou, brocoli, radis)</li>
-                <li>Soja et produits dérivés</li>
-                <li>Millet</li>
-                <li>Aliments ultra-transformés</li>
-                <li>Excès de fibres qui peuvent gêner l'absorption des médicaments</li>
-              </ul>
-
-              <h2>Hyperthyroïdie : quand la thyroïde s'emballe</h2>
-              <p>
-                L'hyperthyroïdie résulte d'une surproduction d'hormones thyroïdiennes. Symptômes typiques :
-              </p>
-              <ul>
-                <li>Perte de poids malgré un appétit normal</li>
-                <li>Palpitations cardiaques</li>
-                <li>Nervosité, irritabilité</li>
-                <li>Transpiration excessive</li>
-                <li>Insomnie</li>
-                <li>Tremblements</li>
-              </ul>
-
-              <h3>Alimentation pour l'hyperthyroïdie</h3>
-              <p>
-                L'objectif est de calmer la thyroïde et de compenser les pertes nutritionnelles :
-              </p>
-              
-              <h4>Aliments riches en calcium</h4>
-              <ul>
-                <li>Produits laitiers</li>
-                <li>Légumes verts à feuilles</li>
-                <li>Sardines avec arêtes</li>
-                <li>Amandes</li>
-              </ul>
-
-              <h4>Aliments riches en magnésium</h4>
-              <ul>
-                <li>Légumes verts</li>
-                <li>Noix et graines</li>
-                <li>Chocolat noir</li>
-                <li>Céréales complètes</li>
-              </ul>
-
-              <h4>Crucifères (peuvent être bénéfiques)</h4>
-              <ul>
-                <li>Chou, brocoli, chou-fleur</li>
-                <li>Radis, navet</li>
-                <li>Cresson, roquette</li>
-              </ul>
-
-              <h3>Aliments à éviter en cas d'hyperthyroïdie</h3>
-              <ul>
-                <li>Iode en excès (algues, compléments iodés)</li>
-                <li>Caféine (café, thé, chocolat)</li>
-                <li>Alcool</li>
-                <li>Aliments épicés</li>
-                <li>Sucres raffinés</li>
-              </ul>
-
-              <h2>Conseils généraux pour la santé thyroïdienne</h2>
-              
-              <h3>Timing des repas et médicaments</h3>
-              <ul>
-                <li>Prendre les médicaments à jeun</li>
-                <li>Attendre 30-60 minutes avant de manger</li>
-                <li>Éviter café et thé près de la prise de médicaments</li>
-                <li>Espacer les compléments de calcium et fer</li>
-              </ul>
-
-              <h3>Gestion du stress</h3>
-              <ul>
-                <li>Techniques de relaxation</li>
-                <li>Sommeil de qualité</li>
-                <li>Activité physique adaptée</li>
-                <li>Méditation ou yoga</li>
-              </ul>
-
-              <h3>Suivi médical</h3>
-              <ul>
-                <li>Bilans thyroïdiens réguliers</li>
-                <li>Ajustement des traitements</li>
-                <li>Surveillance des symptômes</li>
-                <li>Communication avec l'équipe médicale</li>
-              </ul>
-
-              <h2>Menu type pour hypothyroïdie</h2>
-              <ul>
-                <li><strong>Petit-déjeuner :</strong> Œufs brouillés + avocat + pain complet</li>
-                <li><strong>Déjeuner :</strong> Saumon + quinoa + légumes verts cuits</li>
-                <li><strong>Collation :</strong> 1-2 noix du Brésil + fruit</li>
-                <li><strong>Dîner :</strong> Blanc de poulet + patate douce + haricots verts</li>
-              </ul>
-
-              <h2>Menu type pour hyperthyroïdie</h2>
-              <ul>
-                <li><strong>Petit-déjeuner :</strong> Smoothie banane-épinards + yaourt riche en calcium</li>
-                <li><strong>Déjeuner :</strong> Salade de légumes verts + sardines + crudités</li>
-                <li><strong>Collation :</strong> Amandes + fruit</li>
-                <li><strong>Dîner :</strong> Brocolis vapeur + riz complet + légumineuses</li>
-              </ul>
-
-              <h2>Conclusion</h2>
-              <p>
-                L'alimentation joue un rôle important dans la gestion des troubles thyroïdiens, mais elle ne remplace jamais un traitement médical approprié. Chaque cas est unique et nécessite un suivi personnalisé avec votre équipe médicale et un nutritionniste spécialisé.
-              </p>
+                {/* Conseils pratiques */}
+                <div className="bg-hsl(var(--primary)) text-hsl(var(--primary-foreground)) p-8 rounded-2xl text-center">
+                  <h2 className="text-2xl font-bold mb-4">⚕️ Suivi médical essentiel</h2>
+                  <p className="text-lg mb-6">
+                    L'alimentation joue un rôle important dans la gestion des troubles thyroïdiens, mais elle ne remplace jamais un traitement médical approprié. Chaque cas est unique et nécessite un suivi personnalisé.
+                  </p>
+                  <div className="inline-flex items-center gap-2 bg-hsl(var(--primary-foreground)) text-hsl(var(--primary)) px-6 py-3 rounded-full font-semibold">
+                    🎯 Consultation nutritionnelle spécialisée
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </article>
     </div>
   );
 };
