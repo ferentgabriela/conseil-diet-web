@@ -27,6 +27,7 @@ serve(async (req) => {
 Informations importantes :
 - Gabriela Ferent est diététicienne certifiée avec cabinets à Luxembourg-Ville, Ettelbruck et Insenborn
 - Email : dieteticienne@conseildietetique.lu
+- Téléphone : +352 691 379 172
 
 Consultations CNS (remboursées 80% sur prescription médicale) :
 - Diabète type 1 et 2
@@ -56,6 +57,7 @@ IMPORTANT : Réponds toujours en français, sois professionnel mais chaleureux, 
 Important Information:
 - Gabriela Ferent is a certified dietitian with clinics in Luxembourg City, Ettelbruck and Insenborn
 - Email: dieteticienne@conseildietetique.lu
+- Phone: +352 691 379 172
 
 CNS Consultations (80% reimbursed with medical prescription):
 - Diabetes type 1 and 2
@@ -85,6 +87,7 @@ IMPORTANT: Always respond in English, be professional but warm, and guide users 
 Informații importante:
 - Gabriela Ferent este dietetician certificat cu cabinete în Luxembourg, Ettelbruck și Insenborn
 - Email: dieteticienne@conseildietetique.lu
+- Telefon: +352 691 379 172
 
 Consultații CNS (rambursate 80% cu prescripție medicală):
 - Diabet tip 1 și 2
@@ -114,6 +117,7 @@ IMPORTANT: Răspunde întotdeauna în română, fii profesional dar cald, și gh
 Wichtige Informationen:
 - Gabriela Ferent ist eine zertifizierte Ernährungsberaterin mit Praxen in Luxemburg, Ettelbruck und Insenborn
 - E-Mail: dieteticienne@conseildietetique.lu
+- Telefon: +352 691 379 172
 
 CNS-Beratungen (80% erstattet mit ärztlicher Verschreibung):
 - Diabetes Typ 1 und 2
