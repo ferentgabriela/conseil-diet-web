@@ -5,7 +5,7 @@ const LocationsSection = () => {
   const locations = [
     {
       name: "Luxembourg-Ville",
-      address: "74, Avenue De La Faïencerie, 1510 Limpertsberg Luxembourg, Luxembourg",
+      address: "74, Avenue De La Faïencerie, 1510 Luxembourg",
       phone: "+352 691 379 172",
       hours: "Mercredi: 13h00-18h00",
       mapUrl: "https://www.google.com/maps/place/Cabinet+Di%C3%A9t%C3%A9ticienne+Gabriela+Ferent+-+Luxembourg/@49.6188034,6.1132753,17z/data=!3m1!4b1!4m6!3m5!1s0x47954f903aeab367:0x7409fab28a8304ed!8m2!3d49.6188!4d6.1181462!16s%2Fg%2F11xnmvzkc5?entry=ttu&g_ep=EgoyMDI1MDcyMy4wIKXMDSoASAFQAw%3D%3D"
