@@ -22,7 +22,7 @@ const ThyroideAlimentation = () => {
           <div className="bg-hsl(var(--blog-content-bg)) rounded-3xl shadow-[var(--blog-shadow-medium)] overflow-hidden mb-12">
             <div className="relative h-80 md:h-96">
               <img 
-                src="https://images.unsplash.com/photo-1559757600-66d8c755d65e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+                src="https://images.unsplash.com/photo-1559526324-4b87b5e36e44?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
                 alt="Thyroïde et Alimentation"
                 className="w-full h-full object-cover"
               />

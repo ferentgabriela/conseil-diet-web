@@ -67,7 +67,7 @@ const BlogSection = () => {
       categoryColor: 'bg-indigo-100 text-indigo-800',
       author: 'Gabriela Ferent',
       readTime: '11 min',
-      image: 'https://images.unsplash.com/photo-1559757600-66d8c755d65e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+      image: 'https://images.unsplash.com/photo-1559526324-4b87b5e36e44?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
       link: '/articles/thyroide-alimentation'
     },
     {
@@ -89,7 +89,7 @@ const BlogSection = () => {
       categoryColor: 'bg-teal-100 text-teal-800',
       author: 'Gabriela Ferent',
       readTime: '10 min',
-      image: 'https://images.unsplash.com/photo-1551992336-b8dce36f3df9?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+      image: 'https://images.unsplash.com/photo-1490645935967-10de6ba17061?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
       link: '/articles/troubles-digestifs-solutions'
     }
   ];
