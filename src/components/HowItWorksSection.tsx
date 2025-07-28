@@ -4,23 +4,17 @@ const HowItWorksSection = () => {
   const scrollToCabinets = (e: React.MouseEvent) => {
     e.preventDefault();
     e.stopPropagation();
-    
     console.log('Button clicked - attempting to scroll to cabinets');
-    
     const cabinetsSection = document.getElementById('cabinets');
     console.log('Cabinets section found:', cabinetsSection);
-    
     if (cabinetsSection) {
       const trustBarHeight = 80;
       const navHeight = 96;
       const stickyBarHeight = 60;
       const offset = trustBarHeight + navHeight + stickyBarHeight;
-      
       const elementPosition = cabinetsSection.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.pageYOffset - offset;
-
       console.log('Scrolling to position:', offsetPosition);
-      
       window.scrollTo({
         top: offsetPosition,
         behavior: 'smooth'
@@ -156,7 +150,7 @@ const HowItWorksSection = () => {
               
               <div className="flex items-center justify-center gap-2 mt-6 text-sm text-gray-600">
                 <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                <span>Consultation sans engagement • Remboursée CNS</span>
+                
               </div>
             </div>
           </div>
