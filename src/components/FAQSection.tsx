@@ -191,7 +191,7 @@ const FAQSection = ({ onOpenChat }: FAQSectionProps) => {
                   value={`faq-${index}`}
                   className="bg-white rounded-2xl shadow-lg border-0 overflow-hidden"
                 >
-                  <AccordionTrigger className="hover:no-underline p-0 [&[data-state=open]>div]:rounded-b-none group">
+                  <AccordionTrigger className="hover:no-underline p-0 [&[data-state=open]>div]:rounded-b-none [&>svg]:hidden group">
                     <div className="bg-gradient-to-r from-green-600 to-teal-600 p-4 w-full rounded-2xl relative">
                       <div className="flex items-center gap-4 justify-between">
                         <div className="flex items-center gap-4 flex-1">
