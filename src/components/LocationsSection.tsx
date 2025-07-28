@@ -7,21 +7,21 @@ const LocationsSection = () => {
       name: "Luxembourg-Ville",
       address: "74, Avenue De La Faïencerie, 1510 Limpertsberg Luxembourg, Luxembourg",
       phone: "+352 691 379 172",
-      hours: "Lun-Ven: 8:00-18:00",
+      hours: "Mercredi: 13h00-18h00",
       mapUrl: "https://www.google.com/maps/place/Cabinet+Di%C3%A9t%C3%A9ticienne+Gabriela+Ferent+-+Luxembourg/@49.6188034,6.1132753,17z/data=!3m1!4b1!4m6!3m5!1s0x47954f903aeab367:0x7409fab28a8304ed!8m2!3d49.6188!4d6.1181462!16s%2Fg%2F11xnmvzkc5?entry=ttu&g_ep=EgoyMDI1MDcyMy4wIKXMDSoASAFQAw%3D%3D"
     },
     {
       name: "Ettelbruck",
       address: "25, Grand-Rue, 9050 Ettelbruck",
       phone: "+352 691 379 172",
-      hours: "Lun-Ven: 8:00-18:00",
+      hours: "Mardi: 8h00-20h00",
       mapUrl: "https://www.google.com/maps/place/Cabinet+Di%C3%A9t%C3%A9ticienne+Gabriela+Ferent+-+Ettelbruck/@49.8463508,6.0958766,17z/data=!3m1!4b1!4m6!3m5!1s0x4795551cdb34d89b:0xc1452c1c5705ff8b!8m2!3d49.8463474!4d6.0984515!16s%2Fg%2F11xnm_lzpw?entry=ttu&g_ep=EgoyMDI1MDcyMy4wIKXMDSoASAFQAw%3D%3D"
     },
     {
       name: "Insenborn",
       address: "15, Burwiss, 9660 Insenborn, Luxembourg",
       phone: "+352 691 379 172",
-      hours: "Lun-Ven: 8:00-18:00",
+      hours: "Lun, Jeu, Ven: 9h00-19h00\nSam: 9h00-14h00",
       mapUrl: "https://maps.google.com/?q=15+Burwiss+9660+Insenborn+Luxembourg"
     }
   ];
@@ -73,7 +73,7 @@ const LocationsSection = () => {
                       <Clock className="h-5 w-5 text-teal-600 mt-1 flex-shrink-0" />
                       <div className="flex-1">
                         <p className="font-medium text-gray-900">Horaires</p>
-                        <p className="text-gray-600 text-sm">{location.hours}</p>
+                        <p className="text-gray-600 text-sm whitespace-pre-line">{location.hours}</p>
                       </div>
                     </div>
                   </div>
