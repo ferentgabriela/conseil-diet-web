@@ -171,9 +171,8 @@ export const ChatPopup = ({
         <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-3 flex-shrink-0 bg-gradient-to-r from-green-50 to-emerald-50 border-b border-green-200">
           <div className="flex items-center gap-3">
             <Avatar className="h-8 w-8">
-              <AvatarImage src="/lovable-uploads/d64f7102-b262-41a2-8c38-ce2367befbe9.png" alt="Gabriela" className="object-cover" />
-              <AvatarFallback className="bg-green-100 text-green-600 text-xs font-bold">
-                G
+              <AvatarFallback className="bg-green-100 text-green-600 text-lg">
+                🤖
               </AvatarFallback>
             </Avatar>
             <div>
@@ -192,8 +191,8 @@ export const ChatPopup = ({
           {messages.length === 0 && <div className="space-y-3 flex-shrink-0">
               <div className="flex items-center gap-2 p-3 bg-green-50 rounded-2xl border border-green-200">
                 <Avatar className="h-6 w-6">
-                  <AvatarFallback className="bg-green-100 text-green-600 text-xs font-bold">
-                    G
+                  <AvatarFallback className="bg-green-100 text-green-600 text-sm">
+                    🤖
                   </AvatarFallback>
                 </Avatar>
                 <p className="text-sm text-green-800">
@@ -221,8 +220,8 @@ export const ChatPopup = ({
                         {message.sender === 'user' ? <div className="w-8 h-8 rounded-full bg-green-600 text-white flex items-center justify-center">
                             <User className="h-4 w-4" />
                           </div> : <Avatar className="h-8 w-8">
-                            <AvatarFallback className="bg-green-100 text-green-600 text-xs font-bold">
-                              G
+                            <AvatarFallback className="bg-green-100 text-green-600 text-lg">
+                              🤖
                             </AvatarFallback>
                           </Avatar>}
                       </div>
@@ -237,8 +236,8 @@ export const ChatPopup = ({
                 {isLoading && <div className="flex justify-start">
                     <div className="flex items-start space-x-2">
                       <Avatar className="h-8 w-8">
-                        <AvatarFallback className="bg-green-100 text-green-600 text-xs font-bold">
-                          G
+                        <AvatarFallback className="bg-green-100 text-green-600 text-lg">
+                          🤖
                         </AvatarFallback>
                       </Avatar>
                       <div className="bg-green-50 border border-green-200 rounded-2xl px-4 py-3 text-sm">
