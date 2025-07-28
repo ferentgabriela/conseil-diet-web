@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { ArrowLeft, Clock, User, Calendar } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -6,184 +5,245 @@ import Navigation from '@/components/Navigation';
 
 const HypertensionRegimeDash = () => {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-background">
       <Navigation />
-      <div className="container mx-auto px-4 py-8">
+      <article className="container mx-auto px-4 py-12">
         <div className="max-w-4xl mx-auto">
+          {/* Back Navigation */}
           <Link 
             to="/#blog" 
-            className="inline-flex items-center gap-2 text-green-600 hover:text-green-700 mb-8 transition-colors"
+            className="inline-flex items-center gap-2 text-hsl(var(--blog-text-secondary)) hover:text-hsl(var(--primary)) mb-8 transition-colors group"
           >
-            <ArrowLeft className="h-4 w-4" />
+            <ArrowLeft className="h-4 w-4 transition-transform group-hover:-translate-x-1" />
             Retour au blog
           </Link>
 
-          <div className="bg-white rounded-2xl shadow-lg overflow-hidden mb-8">
-            <img 
-              src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
-              alt="Hypertension et Régime DASH"
-              className="w-full h-64 object-cover"
-            />
-            <div className="p-8">
-              <div className="flex items-center gap-4 mb-4 text-sm text-gray-500">
-                <div className="flex items-center gap-1">
+          {/* Hero Section */}
+          <div className="bg-hsl(var(--blog-content-bg)) rounded-3xl shadow-[var(--blog-shadow-medium)] overflow-hidden mb-12">
+            <div className="relative h-80 md:h-96">
+              <img 
+                src="https://images.unsplash.com/photo-1505682634904-d7c8d95cdc50?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+                alt="Hypertension et Régime DASH"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+            </div>
+            <div className="p-8 md:p-12">
+              {/* Article Meta */}
+              <div className="flex flex-wrap items-center gap-6 mb-6 text-sm text-hsl(var(--blog-text-secondary))">
+                <div className="flex items-center gap-2">
                   <User className="h-4 w-4" />
-                  <span>Gabriela Ferent</span>
+                  <span className="font-medium">Gabriela Ferent</span>
                 </div>
-                <div className="flex items-center gap-1">
+                <div className="flex items-center gap-2">
                   <Clock className="h-4 w-4" />
                   <span>10 min de lecture</span>
                 </div>
-                <div className="flex items-center gap-1">
+                <div className="flex items-center gap-2">
                   <Calendar className="h-4 w-4" />
                   <span>1 juin 2024</span>
                 </div>
               </div>
               
-              <span className="bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full text-sm font-medium mb-4 inline-block">
+              {/* Category Badge */}
+              <span className="bg-hsl(var(--category-cardio)) text-hsl(var(--category-cardio-text)) px-4 py-2 rounded-full text-sm font-semibold mb-6 inline-block">
                 Cardiovasculaire
               </span>
               
-              <h1 className="text-4xl font-bold text-gray-900 mb-6">
-                Hypertension : Le Régime DASH Expliqué Simplement
+              {/* Title and Description */}
+              <h1 className="text-4xl md:text-5xl font-bold text-hsl(var(--blog-text-primary)) mb-6 leading-tight">
+                Hypertension : Le Régime DASH Expliqué Simplement et Efficacement
               </h1>
               
-              <p className="text-xl text-gray-600 leading-relaxed">
-                Réduisez votre tension artérielle naturellement avec le régime DASH. Guide complet avec menus types et conseils pratiques pour débuter.
+              <p className="text-xl text-hsl(var(--blog-text-secondary)) leading-relaxed">
+                Réduisez votre tension artérielle naturellement avec le régime DASH scientifiquement prouvé. Guide complet avec menus types et conseils pratiques pour débuter dès aujourd'hui.
               </p>
             </div>
           </div>
 
-          <div className="bg-white rounded-2xl shadow-lg p-8">
-            <div className="prose prose-lg max-w-none">
-              <h2>Qu'est-ce que le régime DASH ?</h2>
-              <p>
-                DASH signifie "Dietary Approaches to Stop Hypertension" (Approches Diététiques pour Stopper l'Hypertension). C'est un plan alimentaire scientifiquement prouvé pour réduire la tension artérielle.
-              </p>
+          {/* Article Content */}
+          <div className="bg-hsl(var(--blog-content-bg)) rounded-3xl shadow-[var(--blog-shadow-medium)] overflow-hidden">
+            <div className="p-8 md:p-12">
+              <div className="prose prose-lg max-w-none prose-headings:text-hsl(var(--blog-text-primary)) prose-p:text-hsl(var(--blog-text-secondary)) prose-li:text-hsl(var(--blog-text-secondary)) prose-strong:text-hsl(var(--blog-text-primary))">
+                
+                {/* Introduction DASH */}
+                <div className="bg-hsl(var(--muted)) rounded-2xl p-6 mb-8 border-l-4 border-hsl(var(--primary))">
+                  <h2 className="text-2xl font-bold mb-4 text-hsl(var(--blog-text-primary))">🎯 Qu'est-ce que le régime DASH ?</h2>
+                  <p className="text-lg">
+                    <strong>DASH</strong> signifie "Dietary Approaches to Stop Hypertension" (Approches Diététiques pour Stopper l'Hypertension). C'est un plan alimentaire scientifiquement prouvé pour réduire la tension artérielle de manière naturelle et durable.
+                  </p>
+                </div>
 
-              <h2>Principes fondamentaux du régime DASH</h2>
-              <p>
-                Le régime DASH se base sur plusieurs principes clés :
-              </p>
-              <ul>
-                <li>Réduction du sodium (moins de 2300mg/jour)</li>
-                <li>Augmentation du potassium, magnésium et calcium</li>
-                <li>Privilégier les aliments entiers et non transformés</li>
-                <li>Limiter les graisses saturées</li>
-                <li>Contrôler les portions</li>
-              </ul>
+                {/* Principes DASH */}
+                <div className="bg-gradient-to-r from-hsl(var(--category-cardio)) to-hsl(var(--accent)) p-8 rounded-2xl mb-10">
+                  <h2 className="text-3xl font-bold mb-6 text-hsl(var(--blog-text-primary))">📋 Principes fondamentaux du régime DASH</h2>
+                  
+                  <div className="grid md:grid-cols-2 gap-4 mb-6">
+                    <div className="bg-white/70 p-4 rounded-xl text-center">
+                      <div className="text-2xl mb-2">🧂</div>
+                      <p className="font-semibold">Réduction du sodium</p>
+                      <p className="text-sm">Moins de 2300mg/jour</p>
+                    </div>
+                    <div className="bg-white/70 p-4 rounded-xl text-center">
+                      <div className="text-2xl mb-2">⚡</div>
+                      <p className="font-semibold">Plus de minéraux</p>
+                      <p className="text-sm">Potassium, magnésium, calcium</p>
+                    </div>
+                    <div className="bg-white/70 p-4 rounded-xl text-center">
+                      <div className="text-2xl mb-2">🌿</div>
+                      <p className="font-semibold">Aliments entiers</p>
+                      <p className="text-sm">Non transformés</p>
+                    </div>
+                    <div className="bg-white/70 p-4 rounded-xl text-center">
+                      <div className="text-2xl mb-2">📏</div>
+                      <p className="font-semibold">Portions contrôlées</p>
+                      <p className="text-sm">Équilibre des quantités</p>
+                    </div>
+                  </div>
+                </div>
 
-              <h2>Aliments à privilégier</h2>
-              <p>
-                Voici les aliments stars du régime DASH :
-              </p>
-              
-              <h3>Légumes et fruits (8-10 portions/jour)</h3>
-              <ul>
-                <li>Légumes verts à feuilles</li>
-                <li>Tomates, poivrons, brocolis</li>
-                <li>Bananes, oranges, baies</li>
-                <li>Melons, raisins, pommes</li>
-              </ul>
+                {/* Aliments à privilégier */}
+                <h2 className="text-3xl font-bold mb-8 text-hsl(var(--blog-text-primary))">🥗 Aliments stars du régime DASH</h2>
+                
+                <div className="space-y-6 mb-10">
+                  <div className="bg-hsl(var(--accent)) p-6 rounded-2xl">
+                    <h3 className="text-xl font-bold mb-4 text-hsl(var(--blog-text-primary)) flex items-center gap-2">
+                      <span>🥬</span> Légumes et fruits (8-10 portions/jour)
+                    </h3>
+                    <div className="grid md:grid-cols-2 gap-4">
+                      <div className="space-y-2">
+                        <div className="flex items-center gap-2">
+                          <span className="text-lg">🥬</span>
+                          <span>Légumes verts à feuilles</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <span className="text-lg">🍅</span>
+                          <span>Tomates, poivrons, brocolis</span>
+                        </div>
+                      </div>
+                      <div className="space-y-2">
+                        <div className="flex items-center gap-2">
+                          <span className="text-lg">🍌</span>
+                          <span>Bananes, oranges, baies</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <span className="text-lg">🍈</span>
+                          <span>Melons, raisins, pommes</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="bg-hsl(var(--muted)) p-6 rounded-2xl">
+                    <h3 className="text-xl font-bold mb-4 text-hsl(var(--blog-text-primary)) flex items-center gap-2">
+                      <span>🌾</span> Céréales complètes (6-8 portions/jour)
+                    </h3>
+                    <div className="grid md:grid-cols-2 gap-2">
+                      <div className="flex items-center gap-2">
+                        <span className="text-lg">🥣</span>
+                        <span>Avoine, quinoa, riz brun</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <span className="text-lg">🍞</span>
+                        <span>Pain et pâtes complètes</span>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="bg-hsl(var(--accent)) p-6 rounded-2xl">
+                    <h3 className="text-xl font-bold mb-4 text-hsl(var(--blog-text-primary)) flex items-center gap-2">
+                      <span>🐟</span> Protéines maigres (2-3 portions/jour)
+                    </h3>
+                    <div className="grid md:grid-cols-2 gap-2">
+                      <div className="flex items-center gap-2">
+                        <span className="text-lg">🐠</span>
+                        <span>Poissons et fruits de mer</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <span className="text-lg">🐔</span>
+                        <span>Volaille sans peau</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
 
-              <h3>Céréales complètes (6-8 portions/jour)</h3>
-              <ul>
-                <li>Avoine, quinoa, riz brun</li>
-                <li>Pain complet</li>
-                <li>Pâtes complètes</li>
-                <li>Orge, sarrasin</li>
-              </ul>
+                {/* Menu 3 jours */}
+                <h2 className="text-3xl font-bold mb-8 text-hsl(var(--blog-text-primary))">📅 Menu type sur 3 jours</h2>
+                
+                <div className="grid gap-6 mb-10">
+                  <div className="bg-gradient-to-r from-hsl(var(--category-cardio)) to-hsl(var(--accent)) p-6 rounded-2xl">
+                    <h3 className="text-xl font-bold mb-4 text-hsl(var(--blog-text-primary))">📅 Jour 1</h3>
+                    <div className="grid md:grid-cols-2 gap-4">
+                      <div className="space-y-2">
+                        <div><strong>🌅 Matin :</strong> Porridge d'avoine aux baies + lait écrémé</div>
+                        <div><strong>🌞 16h :</strong> Yaourt nature + amandes</div>
+                      </div>
+                      <div className="space-y-2">
+                        <div><strong>☀️ Midi :</strong> Salade quinoa + saumon grillé</div>
+                        <div><strong>🌙 Soir :</strong> Blanc de poulet + brocolis + riz brun</div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="bg-gradient-to-r from-hsl(var(--accent)) to-hsl(var(--category-cardio)) p-6 rounded-2xl">
+                    <h3 className="text-xl font-bold mb-4 text-hsl(var(--blog-text-primary))">📅 Jour 2</h3>
+                    <div className="grid md:grid-cols-2 gap-4">
+                      <div className="space-y-2">
+                        <div><strong>🌅 Matin :</strong> Smoothie banane-épinards + pain complet</div>
+                        <div><strong>🌞 16h :</strong> Pomme + noix</div>
+                      </div>
+                      <div className="space-y-2">
+                        <div><strong>☀️ Midi :</strong> Soupe de lentilles + salade verte</div>
+                        <div><strong>🌙 Soir :</strong> Poisson blanc + légumes rôtis + patate douce</div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="bg-hsl(var(--muted)) p-6 rounded-2xl">
+                    <h3 className="text-xl font-bold mb-4 text-hsl(var(--blog-text-primary))">📅 Jour 3</h3>
+                    <div className="grid md:grid-cols-2 gap-4">
+                      <div className="space-y-2">
+                        <div><strong>🌅 Matin :</strong> Œufs brouillés + légumes + toast complet</div>
+                        <div><strong>🌞 16h :</strong> Yaourt aux fruits</div>
+                      </div>
+                      <div className="space-y-2">
+                        <div><strong>☀️ Midi :</strong> Salade méditerranéenne + pois chiches</div>
+                        <div><strong>🌙 Soir :</strong> Dinde aux légumes + quinoa</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
 
-              <h3>Protéines maigres (2-3 portions/jour)</h3>
-              <ul>
-                <li>Poissons et fruits de mer</li>
-                <li>Volaille sans peau</li>
-                <li>Légumineuses</li>
-                <li>Œufs (avec modération)</li>
-              </ul>
-
-              <h3>Produits laitiers allégés (2-3 portions/jour)</h3>
-              <ul>
-                <li>Lait écrémé ou demi-écrémé</li>
-                <li>Yaourt nature</li>
-                <li>Fromage allégé</li>
-              </ul>
-
-              <h3>Noix et graines (4-5 portions/semaine)</h3>
-              <ul>
-                <li>Amandes, noix, pistaches</li>
-                <li>Graines de tournesol</li>
-                <li>Graines de lin</li>
-                <li>Beurres de noix naturels</li>
-              </ul>
-
-              <h2>Aliments à limiter</h2>
-              <ul>
-                <li>Sel de table et aliments salés</li>
-                <li>Viandes rouges grasses</li>
-                <li>Charcuteries</li>
-                <li>Produits laitiers entiers</li>
-                <li>Aliments transformés</li>
-                <li>Boissons sucrées</li>
-                <li>Alcool (maximum 2 verres/jour pour les hommes, 1 pour les femmes)</li>
-              </ul>
-
-              <h2>Menu type sur 3 jours</h2>
-              
-              <h3>Jour 1</h3>
-              <ul>
-                <li><strong>Petit-déjeuner :</strong> Porridge d'avoine aux baies + lait écrémé</li>
-                <li><strong>Déjeuner :</strong> Salade de quinoa aux légumes + saumon grillé</li>
-                <li><strong>Collation :</strong> Yaourt nature + amandes</li>
-                <li><strong>Dîner :</strong> Blanc de poulet + brocolis vapeur + riz brun</li>
-              </ul>
-
-              <h3>Jour 2</h3>
-              <ul>
-                <li><strong>Petit-déjeuner :</strong> Smoothie banane-épinards + pain complet</li>
-                <li><strong>Déjeuner :</strong> Soupe de lentilles + salade verte</li>
-                <li><strong>Collation :</strong> Pomme + noix</li>
-                <li><strong>Dîner :</strong> Poisson blanc + légumes rôtis + patate douce</li>
-              </ul>
-
-              <h3>Jour 3</h3>
-              <ul>
-                <li><strong>Petit-déjeuner :</strong> Œufs brouillés + légumes + toast complet</li>
-                <li><strong>Déjeuner :</strong> Salade méditerranéenne + pois chiches</li>
-                <li><strong>Collation :</strong> Yaourt aux fruits</li>
-                <li><strong>Dîner :</strong> Dinde aux légumes + quinoa</li>
-              </ul>
-
-              <h2>Conseils pour réussir</h2>
-              <ul>
-                <li>Commencez graduellement</li>
-                <li>Lisez les étiquettes nutritionnelles</li>
-                <li>Cuisinez à la maison</li>
-                <li>Utilisez des épices et herbes pour assaisonner</li>
-                <li>Buvez beaucoup d'eau</li>
-                <li>Restez actif physiquement</li>
-              </ul>
-
-              <h2>Résultats attendus</h2>
-              <p>
-                Avec le régime DASH, vous pouvez espérer :
-              </p>
-              <ul>
-                <li>Réduction de 8-14 mmHg de la tension systolique</li>
-                <li>Amélioration en 2-4 semaines</li>
-                <li>Benefits cardiovasculaires durables</li>
-                <li>Perte de poids si nécessaire</li>
-                <li>Amélioration de l'énergie générale</li>
-              </ul>
-
-              <h2>Conclusion</h2>
-              <p>
-                Le régime DASH n'est pas seulement efficace contre l'hypertension, c'est un mode de vie alimentaire sain pour toute la famille. Sa flexibilité et ses bases scientifiques solides en font un choix excellent pour une santé cardiovasculaire optimale.
-              </p>
+                {/* Résultats attendus */}
+                <div className="bg-hsl(var(--primary)) text-hsl(var(--primary-foreground)) p-8 rounded-2xl text-center">
+                  <h2 className="text-2xl font-bold mb-4">📊 Résultats scientifiquement prouvés</h2>
+                  <div className="grid md:grid-cols-2 gap-6 mb-6">
+                    <div className="text-left">
+                      <h3 className="font-semibold mb-2">🎯 Effets sur la tension</h3>
+                      <ul className="space-y-1 text-sm">
+                        <li>• Réduction de 8-14 mmHg</li>
+                        <li>• Amélioration en 2-4 semaines</li>
+                        <li>• Bénéfices durables</li>
+                      </ul>
+                    </div>
+                    <div className="text-left">
+                      <h3 className="font-semibold mb-2">✨ Autres bénéfices</h3>
+                      <ul className="space-y-1 text-sm">
+                        <li>• Perte de poids si nécessaire</li>
+                        <li>• Amélioration de l'énergie</li>
+                        <li>• Santé cardiovasculaire globale</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <p className="text-lg">
+                    Le régime DASH n'est pas seulement efficace contre l'hypertension, c'est un mode de vie alimentaire sain pour toute la famille. Sa flexibilité et ses bases scientifiques solides en font un choix excellent pour une santé cardiovasculaire optimale.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </article>
     </div>
   );
 };

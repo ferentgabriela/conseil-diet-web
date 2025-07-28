@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { ArrowLeft, Clock, User, Calendar } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -6,160 +5,284 @@ import Navigation from '@/components/Navigation';
 
 const TroublesDigestifs = () => {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-background">
       <Navigation />
-      <div className="container mx-auto px-4 py-8">
+      <article className="container mx-auto px-4 py-12">
         <div className="max-w-4xl mx-auto">
+          {/* Back Navigation */}
           <Link 
             to="/#blog" 
-            className="inline-flex items-center gap-2 text-green-600 hover:text-green-700 mb-8 transition-colors"
+            className="inline-flex items-center gap-2 text-hsl(var(--blog-text-secondary)) hover:text-hsl(var(--primary)) mb-8 transition-colors group"
           >
-            <ArrowLeft className="h-4 w-4" />
+            <ArrowLeft className="h-4 w-4 transition-transform group-hover:-translate-x-1" />
             Retour au blog
           </Link>
 
-          <div className="bg-white rounded-2xl shadow-lg overflow-hidden mb-8">
-            <img 
-              src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
-              alt="Troubles Digestifs"
-              className="w-full h-64 object-cover"
-            />
-            <div className="p-8">
-              <div className="flex items-center gap-4 mb-4 text-sm text-gray-500">
-                <div className="flex items-center gap-1">
+          {/* Hero Section */}
+          <div className="bg-hsl(var(--blog-content-bg)) rounded-3xl shadow-[var(--blog-shadow-medium)] overflow-hidden mb-12">
+            <div className="relative h-80 md:h-96">
+              <img 
+                src="https://images.unsplash.com/photo-1551992336-b8dce36f3df9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+                alt="Troubles Digestifs"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+            </div>
+            <div className="p-8 md:p-12">
+              {/* Article Meta */}
+              <div className="flex flex-wrap items-center gap-6 mb-6 text-sm text-hsl(var(--blog-text-secondary))">
+                <div className="flex items-center gap-2">
                   <User className="h-4 w-4" />
-                  <span>Gabriela Ferent</span>
+                  <span className="font-medium">Gabriela Ferent</span>
                 </div>
-                <div className="flex items-center gap-1">
+                <div className="flex items-center gap-2">
                   <Clock className="h-4 w-4" />
                   <span>9 min de lecture</span>
                 </div>
-                <div className="flex items-center gap-1">
+                <div className="flex items-center gap-2">
                   <Calendar className="h-4 w-4" />
                   <span>5 juin 2024</span>
                 </div>
               </div>
               
-              <span className="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-sm font-medium mb-4 inline-block">
+              {/* Category Badge */}
+              <span className="bg-hsl(var(--category-digestion)) text-hsl(var(--category-digestion-text)) px-4 py-2 rounded-full text-sm font-semibold mb-6 inline-block">
                 Digestion
               </span>
               
-              <h1 className="text-4xl font-bold text-gray-900 mb-6">
-                Troubles Digestifs : Solutions Naturelles et Alimentation
+              {/* Title and Description */}
+              <h1 className="text-4xl md:text-5xl font-bold text-hsl(var(--blog-text-primary)) mb-6 leading-tight">
+                Troubles Digestifs : Solutions Naturelles et Rééquilibrage Alimentaire
               </h1>
               
-              <p className="text-xl text-gray-600 leading-relaxed">
-                Ballonnements, reflux, constipation... Découvrez comment soulager vos troubles digestifs grâce à une alimentation adaptée et des remèdes naturels.
+              <p className="text-xl text-hsl(var(--blog-text-secondary)) leading-relaxed">
+                Ballonnements, reflux, constipation... Découvrez comment soulager efficacement vos troubles digestifs grâce à une alimentation adaptée et des remèdes naturels éprouvés.
               </p>
             </div>
           </div>
 
-          <div className="bg-white rounded-2xl shadow-lg p-8">
-            <div className="prose prose-lg max-w-none">
-              <h2>Les troubles digestifs les plus fréquents</h2>
-              <p>
-                Les troubles digestifs touchent une grande partie de la population. Voici les plus courants :
-              </p>
-              <ul>
-                <li>Ballonnements et gaz</li>
-                <li>Reflux gastro-œsophagien</li>
-                <li>Constipation</li>
-                <li>Diarrhées</li>
-                <li>Syndrome de l'intestin irritable</li>
-              </ul>
+          {/* Article Content */}
+          <div className="bg-hsl(var(--blog-content-bg)) rounded-3xl shadow-[var(--blog-shadow-medium)] overflow-hidden">
+            <div className="p-8 md:p-12">
+              <div className="prose prose-lg max-w-none prose-headings:text-hsl(var(--blog-text-primary)) prose-p:text-hsl(var(--blog-text-secondary)) prose-li:text-hsl(var(--blog-text-secondary)) prose-strong:text-hsl(var(--blog-text-primary))">
+                
+                {/* Introduction */}
+                <div className="bg-hsl(var(--muted)) rounded-2xl p-6 mb-8 border-l-4 border-hsl(var(--primary))">
+                  <h2 className="text-2xl font-bold mb-4 text-hsl(var(--blog-text-primary))">🎯 Les troubles digestifs les plus fréquents</h2>
+                  <p className="text-lg mb-4">Les troubles digestifs touchent une grande partie de la population. Voici les plus courants :</p>
+                  <div className="grid md:grid-cols-2 gap-3">
+                    <div className="flex items-center gap-3">
+                      <span className="text-xl">💨</span>
+                      <span>Ballonnements et gaz</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <span className="text-xl">🔥</span>
+                      <span>Reflux gastro-œsophagien</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <span className="text-xl">🐌</span>
+                      <span>Constipation</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <span className="text-xl">💧</span>
+                      <span>Diarrhées</span>
+                    </div>
+                  </div>
+                </div>
 
-              <h2>Ballonnements : causes et solutions</h2>
-              <p>
-                Les ballonnements peuvent avoir plusieurs origines :
-              </p>
-              
-              <h3>Aliments à éviter</h3>
-              <ul>
-                <li>Légumineuses non trempées</li>
-                <li>Crucifères (chou, brocoli) si sensibilité</li>
-                <li>Édulcorants artificiels</li>
-                <li>Boissons gazeuses</li>
-              </ul>
+                {/* Ballonnements */}
+                <div className="bg-gradient-to-r from-hsl(var(--category-digestion)) to-hsl(var(--accent)) p-8 rounded-2xl mb-10">
+                  <h2 className="text-3xl font-bold mb-6 text-hsl(var(--blog-text-primary))">💨 Ballonnements : causes et solutions</h2>
+                  
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div className="bg-white/70 p-6 rounded-xl">
+                      <h3 className="text-xl font-bold mb-4 text-red-700">🚫 Aliments à éviter</h3>
+                      <div className="space-y-3">
+                        <div className="flex items-center gap-3">
+                          <span className="text-lg">🫘</span>
+                          <span>Légumineuses non trempées</span>
+                        </div>
+                        <div className="flex items-center gap-3">
+                          <span className="text-lg">🥦</span>
+                          <span>Crucifères si sensibilité</span>
+                        </div>
+                        <div className="flex items-center gap-3">
+                          <span className="text-lg">🧪</span>
+                          <span>Édulcorants artificiels</span>
+                        </div>
+                        <div className="flex items-center gap-3">
+                          <span className="text-lg">🥤</span>
+                          <span>Boissons gazeuses</span>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div className="bg-white/70 p-6 rounded-xl">
+                      <h3 className="text-xl font-bold mb-4 text-green-700">✅ Solutions naturelles</h3>
+                      <div className="space-y-3">
+                        <div className="flex items-center gap-3">
+                          <span className="text-lg">🌿</span>
+                          <span>Infusions de fenouil ou menthe</span>
+                        </div>
+                        <div className="flex items-center gap-3">
+                          <span className="text-lg">🌰</span>
+                          <span>Graines de carvi</span>
+                        </div>
+                        <div className="flex items-center gap-3">
+                          <span className="text-lg">💆</span>
+                          <span>Massage abdominal</span>
+                        </div>
+                        <div className="flex items-center gap-3">
+                          <span className="text-lg">🚶</span>
+                          <span>Marche après les repas</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
 
-              <h3>Solutions naturelles</h3>
-              <ul>
-                <li>Infusions de fenouil ou menthe</li>
-                <li>Graines de carvi</li>
-                <li>Massage abdominal</li>
-                <li>Marche après les repas</li>
-              </ul>
+                {/* Reflux */}
+                <div className="bg-gradient-to-r from-hsl(var(--accent)) to-hsl(var(--category-digestion)) p-8 rounded-2xl mb-10">
+                  <h2 className="text-3xl font-bold mb-6 text-hsl(var(--blog-text-primary))">🔥 Reflux gastro-œsophagien</h2>
+                  
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div className="bg-white/70 p-6 rounded-xl">
+                      <h3 className="text-xl font-bold mb-4 text-hsl(var(--blog-text-primary))">🍽️ Conseils alimentaires</h3>
+                      <ul className="space-y-2">
+                        <li>• Éviter les repas copieux</li>
+                        <li>• Limiter les aliments acides</li>
+                        <li>• Réduire le café et l'alcool</li>
+                        <li>• Manger lentement</li>
+                      </ul>
+                    </div>
+                    
+                    <div className="bg-white/70 p-6 rounded-xl">
+                      <h3 className="text-xl font-bold mb-4 text-hsl(var(--blog-text-primary))">🌿 Remèdes naturels</h3>
+                      <ul className="space-y-2">
+                        <li>• Jus d'aloe vera</li>
+                        <li>• Camomille</li>
+                        <li>• Bicarbonate (occasionnellement)</li>
+                        <li>• Surélever la tête du lit</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
 
-              <h2>Reflux gastro-œsophagien</h2>
-              <p>
-                Pour soulager les reflux :
-              </p>
-              
-              <h3>Conseils alimentaires</h3>
-              <ul>
-                <li>Éviter les repas copieux</li>
-                <li>Limiter les aliments acides (tomates, agrumes)</li>
-                <li>Réduire le café et l'alcool</li>
-                <li>Manger lentement</li>
-              </ul>
+                {/* Constipation */}
+                <div className="bg-hsl(var(--muted)) p-8 rounded-2xl mb-10">
+                  <h2 className="text-3xl font-bold mb-6 text-hsl(var(--blog-text-primary))">🐌 Constipation : solutions douces</h2>
+                  
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div className="bg-white p-6 rounded-xl border-l-4 border-hsl(var(--primary))">
+                      <h3 className="text-xl font-bold mb-4 text-hsl(var(--blog-text-primary))">🌾 Aliments riches en fibres</h3>
+                      <div className="space-y-2">
+                        <div className="flex items-center gap-3">
+                          <span className="text-lg">🟣</span>
+                          <span>Pruneaux et figues</span>
+                        </div>
+                        <div className="flex items-center gap-3">
+                          <span className="text-lg">🥬</span>
+                          <span>Légumes verts à feuilles</span>
+                        </div>
+                        <div className="flex items-center gap-3">
+                          <span className="text-lg">🌰</span>
+                          <span>Graines de lin moulues</span>
+                        </div>
+                        <div className="flex items-center gap-3">
+                          <span className="text-lg">🌾</span>
+                          <span>Céréales complètes</span>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div className="bg-white p-6 rounded-xl border-l-4 border-hsl(var(--primary))">
+                      <h3 className="text-xl font-bold mb-4 text-hsl(var(--blog-text-primary))">💧 Hydratation et mouvement</h3>
+                      <div className="space-y-2">
+                        <div className="flex items-center gap-3">
+                          <span className="text-lg">💧</span>
+                          <span>1,5 à 2L d'eau par jour</span>
+                        </div>
+                        <div className="flex items-center gap-3">
+                          <span className="text-lg">🍋</span>
+                          <span>Eau tiède citronnée le matin</span>
+                        </div>
+                        <div className="flex items-center gap-3">
+                          <span className="text-lg">🏃</span>
+                          <span>Activité physique régulière</span>
+                        </div>
+                        <div className="flex items-center gap-3">
+                          <span className="text-lg">💆</span>
+                          <span>Massage abdominal circulaire</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
 
-              <h3>Remèdes naturels</h3>
-              <ul>
-                <li>Jus d'aloe vera</li>
-                <li>Camomille</li>
-                <li>Bicarbonate de soude (occasionnellement)</li>
-                <li>Surélever la tête du lit</li>
-              </ul>
+                {/* Programme 14 jours */}
+                <h2 className="text-3xl font-bold mb-8 text-hsl(var(--blog-text-primary))">📅 Programme de rééquilibrage digestif (14 jours)</h2>
+                
+                <div className="grid md:grid-cols-2 gap-6 mb-10">
+                  <div className="bg-hsl(var(--category-digestion)) p-6 rounded-2xl">
+                    <h3 className="text-xl font-bold mb-4 text-hsl(var(--blog-text-primary))">🌟 Semaine 1 : Détox douce</h3>
+                    <div className="space-y-3">
+                      <div className="flex items-start gap-3">
+                        <span className="text-lg">🚫</span>
+                        <span>Éliminer les aliments transformés</span>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <span className="text-lg">🥕</span>
+                        <span>Privilégier les légumes cuits</span>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <span className="text-lg">🍵</span>
+                        <span>Boire des tisanes digestives</span>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <span className="text-lg">🧘</span>
+                        <span>Manger dans le calme</span>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="bg-hsl(var(--accent)) p-6 rounded-2xl">
+                    <h3 className="text-xl font-bold mb-4 text-hsl(var(--blog-text-primary))">🔄 Semaine 2 : Réintroduction</h3>
+                    <div className="space-y-3">
+                      <div className="flex items-start gap-3">
+                        <span className="text-lg">🥗</span>
+                        <span>Réintroduire les crudités</span>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <span className="text-lg">🫘</span>
+                        <span>Tester les légumineuses</span>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <span className="text-lg">👀</span>
+                        <span>Surveiller les réactions</span>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <span className="text-lg">📝</span>
+                        <span>Tenir un journal alimentaire</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
 
-              <h2>Constipation : solutions douces</h2>
-              <p>
-                La constipation peut être soulagée naturellement :
-              </p>
-              
-              <h3>Aliments riches en fibres</h3>
-              <ul>
-                <li>Pruneaux et figues</li>
-                <li>Légumes verts à feuilles</li>
-                <li>Graines de lin moulues</li>
-                <li>Céréales complètes</li>
-              </ul>
-
-              <h3>Hydratation et mouvement</h3>
-              <ul>
-                <li>Boire 1,5 à 2L d'eau par jour</li>
-                <li>Eau tiède citronnée le matin</li>
-                <li>Activité physique régulière</li>
-                <li>Massage abdominal circulaire</li>
-              </ul>
-
-              <h2>Programme de rééquilibrage digestif</h2>
-              <p>
-                Voici un programme sur 14 jours pour améliorer votre digestion :
-              </p>
-              
-              <h3>Semaine 1 : Détox douce</h3>
-              <ul>
-                <li>Éliminer les aliments transformés</li>
-                <li>Privilégier les légumes cuits</li>
-                <li>Boire des tisanes digestives</li>
-                <li>Manger dans le calme</li>
-              </ul>
-
-              <h3>Semaine 2 : Réintroduction progressive</h3>
-              <ul>
-                <li>Réintroduire les crudités</li>
-                <li>Tester les légumineuses</li>
-                <li>Surveiller les réactions</li>
-                <li>Tenir un journal alimentaire</li>
-              </ul>
-
-              <h2>Conclusion</h2>
-              <p>
-                Chaque système digestif est unique. Il est important d'identifier vos propres déclencheurs et d'adapter votre alimentation en conséquence. N'hésitez pas à consulter un professionnel si les troubles persistent.
-              </p>
+                {/* Conclusion */}
+                <div className="bg-hsl(var(--primary)) text-hsl(var(--primary-foreground)) p-8 rounded-2xl text-center">
+                  <h2 className="text-2xl font-bold mb-4">🎯 Votre système digestif est unique</h2>
+                  <p className="text-lg mb-6">
+                    Chaque système digestif est unique. Il est important d'identifier vos propres déclencheurs et d'adapter votre alimentation en conséquence. N'hésitez pas à consulter un professionnel si les troubles persistent.
+                  </p>
+                  <div className="inline-flex items-center gap-2 bg-hsl(var(--primary-foreground)) text-hsl(var(--primary)) px-6 py-3 rounded-full font-semibold">
+                    🌟 Accompagnement digestif personnalisé
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </article>
     </div>
   );
 };
