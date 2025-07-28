@@ -1,10 +1,7 @@
-
 import React from 'react';
 import { Phone, Mail } from 'lucide-react';
-
 const Footer = () => {
-  return (
-    <footer className="bg-gray-50 border-t border-gray-200">
+  return <footer className="bg-gray-50 border-t border-gray-200">
       <div className="container mx-auto px-4 py-6">
         <div className="flex flex-col sm:flex-row justify-center items-center space-y-3 sm:space-y-0 sm:space-x-8 text-sm text-gray-600">
           <div className="flex items-center hover:text-green-600 transition-colors cursor-pointer">
@@ -27,15 +24,11 @@ const Footer = () => {
           </p>
         </div>
         
-        <div className="text-center text-xs text-gray-500 mt-4">
-          © 2024 Gabriela Ferent - Diététicienne agréée au Luxembourg
-        </div>
+        
         <div className="text-center text-xs text-gray-500 mt-2">
           Vos données sont traitées en conformité avec la réglementation RGPD en vigueur au Luxembourg.
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
