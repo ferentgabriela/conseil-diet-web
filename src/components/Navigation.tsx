@@ -25,55 +25,42 @@ const Navigation = () => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      // Calculate the exact offset for the fixed header
-      const trustBarElement = document.querySelector('div[class*="bg-green-50"]');
+      // Get accurate measurements of fixed header elements
+      const trustBarElement = document.querySelector('div[class*="bg-green-50"]') || 
+                              document.querySelector('[style*="nav-trust-bar"]');
       const navigationElement = document.querySelector('nav');
       
       const trustBarHeight = trustBarElement ? trustBarElement.getBoundingClientRect().height : 40;
       const navigationHeight = navigationElement ? navigationElement.getBoundingClientRect().height : 88;
-      const totalOffset = trustBarHeight + navigationHeight + 20; // Added 20px padding
       
+      // Section-specific padding adjustments for optimal positioning
+      const sectionPadding = {
+        'accueil': 0,           // Hero section - no extra padding needed
+        'apropos': 40,          // About section - moderate padding
+        'processus': 60,        // Process section - a bit more padding  
+        'services': 40,         // Services section - moderate padding
+        'transformations': 60,  // Testimonials section - more padding for title visibility
+        'cabinets': 80,         // Cabinets section - extra padding for clean presentation
+        'faq': 40,              // FAQ section - moderate padding
+        'blog': 40,             // Blog section - moderate padding
+        'locations': 60,        // Locations section - more padding
+      } as const;
+      
+      const extraPadding = sectionPadding[sectionId as keyof typeof sectionPadding] || 40;
+      const totalOffset = trustBarHeight + navigationHeight + extraPadding;
+      
+      // Calculate precise scroll position
       const elementPosition = element.getBoundingClientRect().top + window.scrollY;
       const targetPosition = Math.max(0, elementPosition - totalOffset);
       
-      window.scrollTo({
-        top: targetPosition,
-        behavior: 'smooth'
-      });
-    }
-    setIsMenuOpen(false);
-  };
-
-  const scrollToCabinets = () => {
-    const cabinetsSection = document.getElementById('cabinets');
-    if (cabinetsSection) {
-      // Calculate the actual heights of fixed elements
-      const trustBarElement = document.querySelector('div[class*="bg-green-50"]');
-      const navigationElement = document.querySelector('nav');
+      // Ensure we don't scroll past the bottom of the page
+      const documentHeight = document.documentElement.scrollHeight;
+      const windowHeight = window.innerHeight;
+      const maxScrollPosition = documentHeight - windowHeight;
+      const finalPosition = Math.min(targetPosition, maxScrollPosition);
       
-      // Get actual heights
-      const trustBarHeight = trustBarElement ? trustBarElement.getBoundingClientRect().height : 40;
-      const navigationHeight = navigationElement ? navigationElement.getBoundingClientRect().height : 88;
-      
-      // Add significant padding to ensure the title is fully visible
-      const extraPadding = 120; // Increased padding for better visibility
-      const totalOffset = trustBarHeight + navigationHeight + extraPadding;
-
-      console.log('Trust bar actual height:', trustBarHeight);
-      console.log('Navigation actual height:', navigationHeight);
-      console.log('Extra padding:', extraPadding);
-      console.log('Total offset:', totalOffset);
-
-      // Get the section's position and scroll with the calculated offset
-      const elementPosition = cabinetsSection.getBoundingClientRect().top + window.scrollY;
-      const targetPosition = Math.max(0, elementPosition - totalOffset);
-
-      console.log('Element position:', elementPosition);
-      console.log('Target scroll position:', targetPosition);
-      console.log('Current scroll position:', window.scrollY);
-
       window.scrollTo({
-        top: targetPosition,
+        top: finalPosition,
         behavior: 'smooth'
       });
     }
