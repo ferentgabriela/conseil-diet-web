@@ -183,7 +183,7 @@ const FAQSection = ({ onOpenChat }: FAQSectionProps) => {
               Vos Questions, Mes Réponses d'Experte
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Avec plus de 10 ans d'expérience, je réponds aux débats sur questions les plus fréquentes de mes patients au Luxembourg
+              Avec plus de 15 ans d'expérience, je réponds aux débats sur questions les plus fréquentes de mes patients au Luxembourg
             </p>
           </div>
           
