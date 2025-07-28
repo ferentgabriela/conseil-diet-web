@@ -12,7 +12,7 @@ const AboutPracticeSection = () => {
             </h2>
             
             <div className="max-w-4xl mx-auto">
-              <p className="text-lg md:text-xl text-gray-700 mb-6 leading-relaxed font-medium">
+              <p className="text-xl md:text-2xl text-gray-600 mb-6 leading-relaxed font-semibold">
                 Clarté, bienveillance et expertise certifiée
               </p>
               
