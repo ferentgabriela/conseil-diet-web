@@ -10,27 +10,21 @@ const TransformationStoriesSection = () => {
     }
   };
   const transformations = [{
-    name: "Sarah",
-    result: "-12kg",
-    timeframe: "en 4 mois",
-    story: "J'ai retrouvé confiance en moi sans me priver. Gabriela m'a accompagnée avec patience et bienveillance. Aujourd'hui, je me sens à nouveau bien dans ma peau.",
-    condition: "Perte de poids post-grossesse",
-    avatar: "👩‍💼",
-    background: "from-pink-50 to-rose-100"
+    name: "Pedro",
+    result: "Des conseils clairs et applicables",
+    story: "Son professionnalisme, son approche personnalisée et ses conseils pratiques m'ont aidé à améliorer mes habitudes alimentaires de manière durable.",
+    avatar: "👨‍💼",
+    background: "from-red-50 to-rose-100"
   }, {
-    name: "Michel",
-    result: "-8kg",
-    timeframe: "en 3 mois",
-    story: "Mon diabète est maintenant stabilisé. Les conseils de Gabriela ont transformé ma relation à l'alimentation. Plus de frustration, que du plaisir de bien manger.",
-    condition: "Diabète type 2",
-    avatar: "👨‍💻",
+    name: "Diana",
+    result: "Une écoute attentive et motivante",
+    story: "Gabriela est très professionnelle. Elle prend le temps nécessaire pour écouter le patient et trouver la meilleure solution pour lui.",
+    avatar: "👩‍💻",
     background: "from-blue-50 to-cyan-100"
   }, {
-    name: "Claire",
-    result: "-15kg",
-    timeframe: "en 6 mois",
-    story: "Fini l'hypertension ! J'ai appris à manger sainement tout en gardant le plaisir de cuisiner. Mes analyses sont parfaites et je déborde d'énergie.",
-    condition: "Hypertension",
+    name: "Carmen",
+    result: "Des habitudes durables, sans frustration",
+    story: "Gabriela est une experte dans son domaine et possède l'expertise nécessaire pour cela. J'ai été et suis très satisfaite de ses services. De plus, ses actions ont une direction précise et atteignent l'objectif souhaité. Merci !",
     avatar: "👩‍🍳",
     background: "from-green-50 to-emerald-100"
   }];
@@ -63,16 +57,11 @@ const TransformationStoriesSection = () => {
                     <Quote className="h-8 w-8 text-gray-400 opacity-50" />
                   </div>
 
-                  {/* Results highlight */}
+                  {/* Testimonial highlight */}
                   <div className="text-center mb-6">
-                    <div className="text-5xl font-bold text-green-600 mb-2 flex items-center justify-center gap-2">
-                      <TrendingDown className="h-8 w-8" />
+                    <h3 className="text-2xl font-bold text-gray-800 mb-4">
                       {story.result}
-                    </div>
-                    <p className="text-lg text-gray-600 font-medium">{story.timeframe}</p>
-                    <p className="text-sm text-blue-600 font-medium bg-white/50 rounded-full px-3 py-1 inline-block mt-2">
-                      {story.condition}
-                    </p>
+                    </h3>
                   </div>
 
                   {/* Star rating */}
