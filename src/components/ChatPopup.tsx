@@ -181,8 +181,7 @@ export const ChatPopup = ({
                   </AvatarFallback>
                 </Avatar>
                 <p className="text-sm text-green-800">
-                  <span className="font-medium">Bonjour !</span> Je suis l'assistant de Gabriela Ferent, diététicienne au Luxembourg. 
-                  Comment puis-je vous aider aujourd'hui ? 😊
+                  Je suis l'assistant de votre diététicienne. Posez-moi une question ou choisissez une action rapide ci-dessous.
                 </p>
               </div>
               
