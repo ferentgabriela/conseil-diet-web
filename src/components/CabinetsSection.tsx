@@ -45,7 +45,7 @@ const CabinetsSection = () => {
                 <span>Mercredi: 13h00-18h00</span>
               </div>
               <div className="flex items-center gap-3 text-sm text-gray-600">
-                <Phone className="h-4 w-4 text-green-600" />
+                <Car className="h-4 w-4 text-green-600" />
                 <span>Accessible en bus et tram</span>
               </div>
             </div>
