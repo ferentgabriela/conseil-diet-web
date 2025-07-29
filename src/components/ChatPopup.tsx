@@ -147,7 +147,7 @@ export const ChatPopup = ({
             <img 
               src="/lovable-uploads/e9106196-b403-4c7a-aad5-0dd2fde0d7c1.png" 
               alt="Chat with Gabriela"
-              className="w-full h-full object-contain transition-all duration-300 group-hover:drop-shadow-lg"
+              className="w-full h-full object-contain transition-all duration-300"
               style={{ background: 'transparent' }}
             />
           </Button>
