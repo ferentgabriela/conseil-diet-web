@@ -148,9 +148,14 @@ export const ChatPopup = ({
             animation: 'ripple 5s ease-out infinite'
           }}></div>
             
-            {/* Send icon similar to screenshot */}
+            {/* Chat bubble with leaf */}
             <div className="relative z-10 group-hover:scale-110 transition-transform duration-300">
-              <Send className="h-8 w-8 text-white" />
+              <div className="relative">
+                <MessageCircle className="h-8 w-8 text-white fill-white/20" />
+                <div className="absolute -top-1 -right-1 w-3 h-3 text-white/80">
+                  🌱
+                </div>
+              </div>
             </div>
             
             {/* Subtle online indicator instead of red dot */}
