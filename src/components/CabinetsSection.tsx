@@ -1,7 +1,5 @@
-
 import React from 'react';
 import { ExternalLink, MapPin, Calendar, Clock, Phone, Car } from 'lucide-react';
-
 const CabinetsSection = () => {
   const handleBookingClick = (location: string) => {
     const bookingUrls = {
@@ -9,11 +7,9 @@ const CabinetsSection = () => {
       ettelbruck: 'https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874#24538',
       insenborn: 'https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874#22919'
     };
-    
     window.open(bookingUrls[location as keyof typeof bookingUrls], '_blank');
   };
-  return (
-    <section id="cabinets" className="py-20 bg-green-50 relative overflow-hidden">
+  return <section id="cabinets" className="py-20 bg-green-50 relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 bg-green-100/30"></div>
       
@@ -36,7 +32,7 @@ const CabinetsSection = () => {
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-2">Luxembourg-Ville</h3>
               <p className="text-green-600 font-medium mb-2">Centre-ville</p>
-              <p className="text-sm text-gray-600">Facilement accessible en transport</p>
+              
             </div>
 
             <div className="space-y-3 mb-6 flex-grow">
@@ -45,15 +41,12 @@ const CabinetsSection = () => {
                 <span>Mercredi: 13h00-18h00</span>
               </div>
               <div className="flex items-center gap-3 text-sm text-gray-600">
-                <Car className="h-4 w-4 text-green-600" />
+                <Phone className="h-4 w-4 text-green-600" />
                 <span>Accessible en bus et tram</span>
               </div>
             </div>
 
-            <button
-              onClick={() => handleBookingClick('luxembourg')}
-              className="inline-flex items-center gap-2 w-full justify-center px-6 py-4 bg-green-600 text-white font-bold rounded-xl hover:bg-green-700 transition-all duration-300 text-lg shadow-md hover:shadow-lg"
-            >
+            <button onClick={() => handleBookingClick('luxembourg')} className="inline-flex items-center gap-2 w-full justify-center px-6 py-4 bg-green-600 text-white font-bold rounded-xl hover:bg-green-700 transition-all duration-300 text-lg shadow-md hover:shadow-lg">
               <Calendar className="h-5 w-5" />
               Prendre RDV
               <ExternalLink className="h-4 w-4" />
@@ -68,7 +61,7 @@ const CabinetsSection = () => {
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-2">Ettelbruck</h3>
               <p className="text-blue-600 font-medium mb-2">Nord du Luxembourg</p>
-              <p className="text-sm text-gray-600">Idéal pour le nord du pays</p>
+              
             </div>
 
             <div className="space-y-3 mb-6 flex-grow">
@@ -82,10 +75,7 @@ const CabinetsSection = () => {
               </div>
             </div>
 
-            <button
-              onClick={() => handleBookingClick('ettelbruck')}
-              className="inline-flex items-center gap-2 w-full justify-center px-6 py-4 bg-blue-600 text-white font-bold rounded-xl hover:bg-blue-700 transition-all duration-300 text-lg shadow-md hover:shadow-lg"
-            >
+            <button onClick={() => handleBookingClick('ettelbruck')} className="inline-flex items-center gap-2 w-full justify-center px-6 py-4 bg-blue-600 text-white font-bold rounded-xl hover:bg-blue-700 transition-all duration-300 text-lg shadow-md hover:shadow-lg">
               <Calendar className="h-5 w-5" />
               Prendre RDV
               <ExternalLink className="h-4 w-4" />
@@ -100,7 +90,7 @@ const CabinetsSection = () => {
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-2">Insenborn</h3>
               <p className="text-purple-600 font-medium mb-2">Ouest du Luxembourg</p>
-              <p className="text-sm text-gray-600">Cadre calme et verdoyant</p>
+              
             </div>
 
             <div className="space-y-3 mb-6 flex-grow">
@@ -114,10 +104,7 @@ const CabinetsSection = () => {
               </div>
             </div>
 
-            <button
-              onClick={() => handleBookingClick('insenborn')}
-              className="inline-flex items-center gap-2 w-full justify-center px-6 py-4 bg-purple-600 text-white font-bold rounded-xl hover:bg-purple-700 transition-all duration-300 text-lg shadow-md hover:shadow-lg"
-            >
+            <button onClick={() => handleBookingClick('insenborn')} className="inline-flex items-center gap-2 w-full justify-center px-6 py-4 bg-purple-600 text-white font-bold rounded-xl hover:bg-purple-700 transition-all duration-300 text-lg shadow-md hover:shadow-lg">
               <Calendar className="h-5 w-5" />
               Prendre RDV
               <ExternalLink className="h-4 w-4" />
@@ -142,8 +129,6 @@ const CabinetsSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default CabinetsSection;
