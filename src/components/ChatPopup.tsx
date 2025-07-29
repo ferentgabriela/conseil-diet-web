@@ -140,7 +140,7 @@ export const ChatPopup = ({
     return <div className="fixed bottom-8 right-8 z-50 flex flex-col items-center">        
         {/* Human-centered Avatar Chat Button */}
         <div className="relative">
-          <Button onClick={toggleOpen} className="h-20 w-20 relative bg-transparent hover:bg-transparent shadow-none hover:shadow-none z-50 overflow-visible group transition-all duration-500 hover:scale-125 border-0 p-0 hover:shadow-[0_0_0_3px_rgba(34,197,94,0.5)]" style={{
+          <Button onClick={toggleOpen} className="h-20 w-20 relative bg-transparent hover:bg-transparent shadow-none hover:shadow-none z-50 overflow-visible group transition-all duration-500 hover:scale-125 border-0 p-0" style={{
           animation: 'gentleBreath 4s ease-in-out infinite'
         }} size="icon">
             {/* Leaf image with transparent background */}
