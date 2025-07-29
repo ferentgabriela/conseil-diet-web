@@ -140,25 +140,32 @@ export const ChatPopup = ({
     return <div className="fixed bottom-8 right-8 z-50 flex flex-col items-center">        
         {/* Human-centered Avatar Chat Button */}
         <div className="relative">
-          <Button onClick={toggleOpen} className="h-20 w-20 rounded-full bg-gradient-to-br from-green-600 via-green-500 to-green-400 hover:from-green-700 hover:via-green-600 hover:to-green-500 shadow-2xl z-50 relative overflow-hidden group transition-all duration-500 hover:scale-110 border-2 border-green-300" style={{
+          <Button onClick={toggleOpen} className="h-20 w-20 relative bg-transparent hover:bg-transparent shadow-2xl z-50 overflow-hidden group transition-all duration-500 hover:scale-110 border-0 p-0" style={{
           animation: 'gentleBreath 4s ease-in-out infinite'
         }} size="icon">
-            {/* Gentle ripple effects */}
-            <div className="absolute inset-0 bg-green-300 rounded-full opacity-20" style={{
-            animation: 'ripple 5s ease-out infinite'
-          }}></div>
-            
-            {/* Chat bubble with leaf */}
-            <div className="relative z-10 group-hover:scale-110 transition-transform duration-300">
-              <div className="relative">
-                <MessageCircle className="h-8 w-8 text-white fill-white/20" />
-                <div className="absolute -top-1 -right-1 w-3 h-3 text-white/80">
-                  🌱
-                </div>
-              </div>
+            {/* Leaf-shaped background */}
+            <div className="absolute inset-0 bg-gradient-to-br from-green-500 via-green-600 to-green-700 opacity-90 group-hover:opacity-100 transition-opacity duration-300" 
+                 style={{
+                   clipPath: 'polygon(50% 0%, 80% 20%, 100% 50%, 85% 80%, 50% 100%, 15% 80%, 0% 50%, 20% 20%)',
+                   transform: 'rotate(-45deg)'
+                 }}>
             </div>
             
-            {/* Subtle online indicator instead of red dot */}
+            {/* Leaf vein detail */}
+            <div className="absolute inset-0 opacity-30" 
+                 style={{
+                   background: 'linear-gradient(135deg, transparent 45%, rgba(255,255,255,0.3) 50%, transparent 55%)',
+                   clipPath: 'polygon(50% 0%, 80% 20%, 100% 50%, 85% 80%, 50% 100%, 15% 80%, 0% 50%, 20% 20%)',
+                   transform: 'rotate(-45deg)'
+                 }}>
+            </div>
+            
+            {/* Chat icon */}
+            <div className="relative z-10 group-hover:scale-110 transition-transform duration-300">
+              <MessageCircle className="h-8 w-8 text-white" />
+            </div>
+            
+            {/* Subtle online indicator */}
             <div className="absolute -top-1 -right-1 h-6 w-6 bg-gradient-to-br from-emerald-400 to-green-500 rounded-full flex items-center justify-center border-2 border-white shadow-lg" style={{
             animation: 'gentlePulse 3s ease-in-out infinite'
           }}>
