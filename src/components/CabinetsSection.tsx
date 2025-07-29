@@ -99,7 +99,7 @@ const CabinetsSection = () => {
                 <MapPin className="h-8 w-8 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-2">Insenborn</h3>
-              <p className="text-purple-600 font-medium mb-2">Proche d'Ettelbruck</p>
+              <p className="text-purple-600 font-medium mb-2">Ouest du Luxembourg</p>
               <p className="text-sm text-gray-600">Cadre calme et verdoyant</p>
             </div>
 
