@@ -27,9 +27,9 @@ const CabinetsSection = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto items-stretch">
           {/* Luxembourg-Ville */}
-          <div className="group bg-gradient-to-br from-white to-green-50 border-2 border-green-200 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 hover:border-green-300">
+          <div className="group bg-gradient-to-br from-white to-green-50 border-2 border-green-200 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 hover:border-green-300 flex flex-col h-full">
             <div className="text-center mb-6">
               <div className="w-16 h-16 bg-green-600 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-green-700 transition-colors">
                 <MapPin className="h-8 w-8 text-white" />
@@ -39,7 +39,7 @@ const CabinetsSection = () => {
               <p className="text-sm text-gray-600">Facilement accessible en transport</p>
             </div>
 
-            <div className="space-y-3 mb-6">
+            <div className="space-y-3 mb-6 flex-grow">
               <div className="flex items-center gap-3 text-sm text-gray-600">
                 <Clock className="h-4 w-4 text-green-600" />
                 <span>Mercredi: 13h00-18h00</span>
@@ -61,7 +61,7 @@ const CabinetsSection = () => {
           </div>
           
           {/* Ettelbruck */}
-          <div className="group bg-gradient-to-br from-white to-blue-50 border-2 border-blue-200 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 hover:border-blue-300">
+          <div className="group bg-gradient-to-br from-white to-blue-50 border-2 border-blue-200 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 hover:border-blue-300 flex flex-col h-full">
             <div className="text-center mb-6">
               <div className="w-16 h-16 bg-blue-600 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-700 transition-colors">
                 <MapPin className="h-8 w-8 text-white" />
@@ -71,7 +71,7 @@ const CabinetsSection = () => {
               <p className="text-sm text-gray-600">Idéal pour le nord du pays</p>
             </div>
 
-            <div className="space-y-3 mb-6">
+            <div className="space-y-3 mb-6 flex-grow">
               <div className="flex items-center gap-3 text-sm text-gray-600">
                 <Clock className="h-4 w-4 text-blue-600" />
                 <span>Mardi: 8h00-20h00</span>
@@ -93,7 +93,7 @@ const CabinetsSection = () => {
           </div>
           
           {/* Insenborn */}
-          <div className="group bg-gradient-to-br from-white to-purple-50 border-2 border-purple-200 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 hover:border-purple-300">
+          <div className="group bg-gradient-to-br from-white to-purple-50 border-2 border-purple-200 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 hover:border-purple-300 flex flex-col h-full">
             <div className="text-center mb-6">
               <div className="w-16 h-16 bg-purple-600 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-purple-700 transition-colors">
                 <MapPin className="h-8 w-8 text-white" />
@@ -103,7 +103,7 @@ const CabinetsSection = () => {
               <p className="text-sm text-gray-600">Cadre calme et verdoyant</p>
             </div>
 
-            <div className="space-y-3 mb-6">
+            <div className="space-y-3 mb-6 flex-grow">
               <div className="flex items-center gap-3 text-sm text-gray-600">
                 <Clock className="h-4 w-4 text-purple-600" />
                 <span>Lun, Jeu, Ven: 9h00-19h00<br />Sam: 9h00-14h00</span>
