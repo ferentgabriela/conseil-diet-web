@@ -18,10 +18,10 @@ export const ChatCTAPopup = ({ onOpenChat }: ChatCTAPopupProps) => {
       return;
     }
 
-    // Show popup after 20 seconds
+    // Show popup after 10 seconds
     const timer = setTimeout(() => {
       setIsVisible(true);
-    }, 20000);
+    }, 10000);
 
     return () => clearTimeout(timer);
   }, []);
