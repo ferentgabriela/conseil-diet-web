@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { ExternalLink, MapPin, Calendar, Clock, Phone } from 'lucide-react';
+import { ExternalLink, MapPin, Calendar, Clock, Phone, Car } from 'lucide-react';
 
 const CabinetsSection = () => {
   const handleBookingClick = (location: string) => {
@@ -77,8 +77,8 @@ const CabinetsSection = () => {
                 <span>Mardi: 8h00-20h00</span>
               </div>
               <div className="flex items-center gap-3 text-sm text-gray-600">
-                <Phone className="h-4 w-4 text-blue-600" />
-                <span>Parking disponible</span>
+                <Car className="h-4 w-4 text-blue-600" />
+                <span>Parking à proximité immédiate</span>
               </div>
             </div>
 
@@ -109,8 +109,8 @@ const CabinetsSection = () => {
                 <span>Lun, Jeu, Ven: 9h00-19h00<br />Sam: 9h00-14h00</span>
               </div>
               <div className="flex items-center gap-3 text-sm text-gray-600">
-                <Phone className="h-4 w-4 text-purple-600" />
-                <span>Environnement paisible</span>
+                <Car className="h-4 w-4 text-purple-600" />
+                <span>Parking disponible sur place</span>
               </div>
             </div>
 
