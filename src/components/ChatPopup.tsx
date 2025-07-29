@@ -140,22 +140,16 @@ export const ChatPopup = ({
     return <div className="fixed bottom-8 right-8 z-50 flex flex-col items-center">        
         {/* Human-centered Avatar Chat Button */}
         <div className="relative">
-          <Button onClick={toggleOpen} className="h-20 w-20 relative bg-transparent hover:bg-transparent shadow-2xl z-50 overflow-hidden group transition-all duration-500 hover:scale-125 border-0 p-0 hover:shadow-[0_0_0_3px_rgba(34,197,94,0.5)]" style={{
+          <Button onClick={toggleOpen} className="h-20 w-20 relative bg-transparent hover:bg-transparent shadow-none hover:shadow-none z-50 overflow-visible group transition-all duration-500 hover:scale-125 border-0 p-0 hover:shadow-[0_0_0_3px_rgba(34,197,94,0.5)]" style={{
           animation: 'gentleBreath 4s ease-in-out infinite'
         }} size="icon">
-            {/* Leaf image */}
+            {/* Leaf image with transparent background */}
             <img 
               src="/lovable-uploads/e9106196-b403-4c7a-aad5-0dd2fde0d7c1.png" 
               alt="Chat with Gabriela"
               className="w-full h-full object-contain transition-all duration-300 group-hover:drop-shadow-lg"
+              style={{ background: 'transparent' }}
             />
-            
-            {/* Subtle online indicator */}
-            <div className="absolute -top-1 -right-1 h-6 w-6 bg-gradient-to-br from-emerald-400 to-green-500 rounded-full flex items-center justify-center border-2 border-white shadow-lg" style={{
-            animation: 'gentlePulse 3s ease-in-out infinite'
-          }}>
-              <div className="h-2 w-2 bg-white rounded-full"></div>
-            </div>
           </Button>
           
           {/* Question text */}
