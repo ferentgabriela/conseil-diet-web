@@ -7,7 +7,7 @@ import AboutPracticeSection from '@/components/AboutPracticeSection';
 import HowItWorksSection from '@/components/HowItWorksSection';
 import ServicesSection from '@/components/ServicesSection';
 import TransformationStoriesSection from '@/components/TransformationStoriesSection';
-import TestimonialsSection from '@/components/TestimonialsSection';
+
 import DoctenaTestimonialsSection from '@/components/DoctenaTestimonialsSection';
 import FAQSection from '@/components/FAQSection';
 import BlogSection from '@/components/BlogSection';
@@ -43,7 +43,7 @@ const Index = () => {
       <ServicesSection />
       <TransformationStoriesSection />
       <CabinetsSection />
-      <TestimonialsSection />
+      
       <DoctenaTestimonialsSection />
       <BlogSection />
       <FAQSection onOpenChat={handleOpenChat} />
