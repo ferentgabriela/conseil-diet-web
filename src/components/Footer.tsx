@@ -25,9 +25,7 @@ const Footer = () => {
         </div>
         
         
-        <div className="text-center text-xs text-gray-500 mt-2">
-          Vos données sont traitées en conformité avec la réglementation RGPD en vigueur au Luxembourg.
-        </div>
+        
       </div>
     </footer>;
 };
