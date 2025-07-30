@@ -225,9 +225,14 @@ const FAQSection = ({ onOpenChat }: FAQSectionProps) => {
                   
                    <AccordionContent className="p-8 pb-8">
                      <div className="text-gray-700 text-lg leading-relaxed mb-6">
-                       {faq.answer.split('**').map((part, index) => 
-                         index % 2 === 0 ? part : <strong key={index}>{part}</strong>
-                       )}
+                       {faq.answer.split(/(\*\*.*?\*\*|\*.*?\*)/).map((part, index) => {
+                         if (part.startsWith('**') && part.endsWith('**')) {
+                           return <strong key={index}>{part.slice(2, -2)}</strong>;
+                         } else if (part.startsWith('*') && part.endsWith('*')) {
+                           return <em key={index} className="font-semibold">{part.slice(1, -1)}</em>;
+                         }
+                         return part;
+                       })}
                      </div>
                     
                     {/* Details list */}
