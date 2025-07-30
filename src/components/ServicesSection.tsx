@@ -195,7 +195,7 @@ const ServicesSection = () => {
                 
                 <div className="mt-auto">
                   <p className="text-xs text-green-700 text-center mb-4">
-                    *Consultations avec prise en charge CNS selon la nomenclature officielle sur présentation d'une ordonnance médicale valide.
+                    Consultations avec <span className="font-bold">prise en charge CNS</span> selon la nomenclature officielle sur présentation d'une ordonnance médicale valide.
                   </p>
                 
                 <button 
