@@ -41,8 +41,8 @@ const CabinetsSection = () => {
                 <span>Mercredi: 13h00-18h00</span>
               </div>
               <div className="flex items-center gap-3 text-sm text-gray-600">
-                <Car className="h-4 w-4 text-green-600" />
-                <span>Accessible en bus et tram</span>
+                <Car className="h-4 w-4 text-green-600 flex-shrink-0" />
+                <span className="flex-1">Parking disponible en centre-ville</span>
               </div>
             </div>
 
@@ -70,8 +70,8 @@ const CabinetsSection = () => {
                 <span>Mardi: 8h00-20h00</span>
               </div>
               <div className="flex items-center gap-3 text-sm text-gray-600">
-                <Car className="h-4 w-4 text-blue-600" />
-                <span>Parking à proximité immédiate</span>
+                <Car className="h-4 w-4 text-blue-600 flex-shrink-0" />
+                <span className="flex-1">Parking à proximité immédiate</span>
               </div>
             </div>
 
@@ -99,8 +99,8 @@ const CabinetsSection = () => {
                 <span>Lun, Jeu, Ven: 9h00-19h00<br />Sam: 9h00-14h00</span>
               </div>
               <div className="flex items-center gap-3 text-sm text-gray-600">
-                <Car className="h-4 w-4 text-purple-600" />
-                <span>Parking disponible sur place</span>
+                <Car className="h-4 w-4 text-purple-600 flex-shrink-0" />
+                <span className="flex-1">Parking disponible sur place</span>
               </div>
             </div>
 
