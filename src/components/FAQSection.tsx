@@ -229,7 +229,7 @@ const FAQSection = ({ onOpenChat }: FAQSectionProps) => {
                          if (part.startsWith('**') && part.endsWith('**')) {
                            return <strong key={index}>{part.slice(2, -2)}</strong>;
                          } else if (part.startsWith('*') && part.endsWith('*')) {
-                           return <em key={index} className="font-semibold">{part.slice(1, -1)}</em>;
+                           return <strong key={index}>{part.slice(1, -1)}</strong>;
                          }
                          return part;
                        })}
