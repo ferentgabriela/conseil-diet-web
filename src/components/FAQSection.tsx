@@ -163,9 +163,9 @@ const FAQSection = ({ onOpenChat }: FAQSectionProps) => {
       answer: "Je consulte dans 3 cabinets au Luxembourg : Luxembourg-Ville, Ettelbruck et Insenborn. Prise de rendez-vous simple et flexible selon votre localisation.",
       icon: Calendar,
       details: [
-        "Luxembourg-Ville : centre-ville, parking disponible",
-        "Ettelbruck : idéal pour le Nord du pays, facilement accessible",
-        "Insenborn : parfait pour l'Ouest, cadre intimiste",
+        "Luxembourg-Ville : centre-ville",
+        "Ettelbruck : idéal pour le Nord du pays",
+        "Insenborn : parfait pour l'Ouest",
         "Même équipement et approche dans tous les cabinets",
         "Possibilité de changer de cabinet selon vos besoins",
         "Prise de rendez-vous en ligne ou par téléphone"
