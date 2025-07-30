@@ -54,10 +54,15 @@ const HeroSection = () => {
             {t('hero.title')}
           </h1>
           
-          {/* Subheadline with margin-top and fade-in animation */}
-          <h2 className="text-[16px] md:text-[20px] font-normal text-white mt-4 mb-8 drop-shadow-lg animate-fade-in [animation-delay:0.2s]">
-            {t('hero.subtitle')}
+          {/* First subtitle with larger size */}
+          <h2 className="text-[18px] md:text-[24px] font-medium text-white mt-4 mb-2 drop-shadow-lg animate-fade-in [animation-delay:0.2s]">
+            3 cabinets au Luxembourg
           </h2>
+          
+          {/* Second subtitle with smaller size */}
+          <h3 className="text-[14px] md:text-[18px] font-normal text-white mb-8 drop-shadow-lg animate-fade-in [animation-delay:0.3s]">
+            Des consultations adaptées à votre santé, avec ou sans ordonnance
+          </h3>
           
           {/* CTA Button with enhanced hover effects and fade-in animation */}
           <button
