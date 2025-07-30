@@ -34,7 +34,7 @@ const FAQSection = ({ onOpenChat }: FAQSectionProps) => {
     },
     {
       question: "Faut-il une prescription médicale pour consulter ?",
-      answer: "Sans ordonnance, la consultation est au **tarif privé non remboursable**. La prescription doit être obtenue *avant* la première séance visant un remboursement.",
+      answer: "Sans ordonnance, la consultation est au <strong>tarif privé non remboursable</strong>. La prescription doit être obtenue *avant* la première séance visant un remboursement.",
       icon: Calendar,
       details: [
         "Consultation libre possible sans prescription (tarif privé)",
