@@ -170,7 +170,7 @@ const FAQSection = ({ onOpenChat }: FAQSectionProps) => {
         "Possibilité de changer de cabinet selon vos besoins",
         "Prise de rendez-vous en ligne ou par téléphone"
       ],
-      expert: "Mon conseil d'experte : Choisissez le cabinet le plus pratique pour vous - proximité domicile ou travail. La régularité des rendez-vous est plus importante que la localisation !"
+      expert: "Mon conseil d'experte : Choisissez le cabinet qui vous convient le mieux, que ce soit près de votre domicile ou de votre lieu de travail. Ce qui compte le plus, c'est la régularité des rendez-vous."
     }
   ];
 
