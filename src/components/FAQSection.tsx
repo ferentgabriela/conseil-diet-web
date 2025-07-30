@@ -114,7 +114,7 @@ const FAQSection = ({ onOpenChat }: FAQSectionProps) => {
         "Rééducation progressive sans choc psychologique",
         "Maintien de la vie sociale et des sorties"
       ],
-      expert: "Mon conseil d'experte : Les régimes restrictifs échouent dans la majorité des cas. Mon approche bienveillante vous permet de perdre du poids durablement tout en gardant une relation saine avec la nourriture."
+      expert: "Mon conseil d'experte : Les régimes restrictifs échouent dans la majorité des cas. Mon approche bienveillante peut favoriser une perte de poids durable tout en gardant une relation saine avec la nourriture."
     },
     {
       question: "Quels résultats puis-je espérer et en combien de temps ?",
