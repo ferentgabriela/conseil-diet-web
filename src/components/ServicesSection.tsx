@@ -110,7 +110,7 @@ const ServicesSection = () => {
                   </div>
                   <h4 className="text-xl font-bold text-gray-900 mb-2">Consultations CNS</h4>
                     <span className="inline-block px-3 py-1 bg-green-600 text-white text-sm font-medium rounded-full">
-                      Prise en charge CNS*
+                      Approche 100% personnalisée
                     </span>
                 </div>
                 
