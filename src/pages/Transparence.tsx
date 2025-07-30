@@ -30,8 +30,7 @@ const Transparence = () => {
             <div className="mt-8 text-center">
               <p className="text-sm text-gray-500">
                 Gabriela Ferent<br />
-                Diététicienne autorisée<br />
-                Autorisation d'exercer n° A-2024-123
+                Diététicienne autorisée
               </p>
             </div>
           </div>
