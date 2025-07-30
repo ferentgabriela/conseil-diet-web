@@ -17,7 +17,7 @@ const FAQSection = ({ onOpenChat }: FAQSectionProps) => {
   const faqs = [
     {
       question: "Est-ce que les consultations sont remboursées par la CNS ?",
-      answer: "Le remboursement n'est **pas automatique**. Seules les pathologies reconnues par la CNS et munies d'une **ordonnance médicale de moins de 3 mois** peuvent bénéficier d'une prise en charge (voir page Tarifs).",
+      answer: "Le remboursement n'est <strong>pas automatique</strong>. Seules les pathologies reconnues par la CNS et munies d'une <strong>ordonnance médicale de moins de 3 mois</strong> peuvent bénéficier d'une prise en charge (voir page Tarifs).",
       icon: Euro,
       details: [
         "Les tarifs des consultations CNS respectent la nomenclature officielle fixée par la CNS Luxembourg",
