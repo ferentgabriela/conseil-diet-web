@@ -17,7 +17,7 @@ const FAQSection = ({ onOpenChat }: FAQSectionProps) => {
   const faqs = [
     {
       question: "Est-ce que les consultations sont remboursées par la CNS ?",
-      answer: "Le remboursement n'est <strong>pas automatique</strong>. Seules les pathologies reconnues par la CNS et munies d'une <strong>ordonnance médicale de moins de 3 mois</strong> peuvent bénéficier d'une prise en charge (voir page Tarifs).",
+      answer: "Le remboursement n'est **pas automatique**. Seules les pathologies reconnues par la CNS et munies d'une **ordonnance médicale de moins de 3 mois** peuvent bénéficier d'une prise en charge (voir page Tarifs).",
       icon: Euro,
       details: [
         "Les tarifs des consultations CNS respectent la nomenclature officielle fixée par la CNS Luxembourg",
@@ -34,7 +34,7 @@ const FAQSection = ({ onOpenChat }: FAQSectionProps) => {
     },
     {
       question: "Faut-il une prescription médicale pour consulter ?",
-      answer: "Sans ordonnance, la consultation est au <strong>tarif privé non remboursable</strong>. La prescription doit être obtenue *avant* la première séance visant un remboursement.",
+      answer: "Sans ordonnance, la consultation est au **tarif privé non remboursable**. La prescription doit être obtenue *avant* la première séance visant un remboursement.",
       icon: Calendar,
       details: [
         "Consultation libre possible sans prescription (tarif privé)",
@@ -223,10 +223,12 @@ const FAQSection = ({ onOpenChat }: FAQSectionProps) => {
                     </div>
                   </AccordionTrigger>
                   
-                  <AccordionContent className="p-8 pb-8">
-                    <p className="text-gray-700 text-lg leading-relaxed mb-6">
-                      {faq.answer}
-                    </p>
+                   <AccordionContent className="p-8 pb-8">
+                     <div className="text-gray-700 text-lg leading-relaxed mb-6">
+                       {faq.answer.split('**').map((part, index) => 
+                         index % 2 === 0 ? part : <strong key={index}>{part}</strong>
+                       )}
+                     </div>
                     
                     {/* Details list */}
                     <div className="mb-6">
