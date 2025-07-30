@@ -268,7 +268,7 @@ const FAQSection = ({ onOpenChat }: FAQSectionProps) => {
                     {/* Footer info */}
                     <div className="mt-4 text-center">
                       <p className="text-sm text-gray-500">
-                        Gabriela Fares • Diététicienne nutritionniste Luxembourg
+                        Gabriela Ferent • Diététicienne autorisée au Luxembourg
                       </p>
                     </div>
                   </AccordionContent>
