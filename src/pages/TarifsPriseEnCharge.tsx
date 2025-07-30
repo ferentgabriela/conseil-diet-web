@@ -118,7 +118,6 @@ const TarifsPriseEnCharge = () => {
                   <thead>
                     <tr className="bg-blue-100">
                       <th className="border border-gray-300 px-4 py-3 text-left font-semibold text-blue-800">Consultation</th>
-                      <th className="border border-gray-300 px-4 py-3 text-left font-semibold text-blue-800">Code</th>
                       <th className="border border-gray-300 px-4 py-3 text-left font-semibold text-blue-800">Durée</th>
                       <th className="border border-gray-300 px-4 py-3 text-left font-semibold text-blue-800">Tarif</th>
                     </tr>
@@ -126,37 +125,31 @@ const TarifsPriseEnCharge = () => {
                   <tbody>
                     <tr className="bg-white">
                       <td className="border border-gray-300 px-4 py-3">Anamnèse & diagnostic nutritionnel</td>
-                      <td className="border border-gray-300 px-4 py-3">ZD11</td>
                       <td className="border border-gray-300 px-4 py-3">60 min</td>
                       <td className="border border-gray-300 px-4 py-3 font-semibold text-blue-600">106 €</td>
                     </tr>
                     <tr className="bg-gray-50">
                       <td className="border border-gray-300 px-4 py-3">Conseil & remise du plan nutritionnel</td>
-                      <td className="border border-gray-300 px-4 py-3">ZD12</td>
                       <td className="border border-gray-300 px-4 py-3">45 min</td>
                       <td className="border border-gray-300 px-4 py-3 font-semibold text-blue-600">132 €</td>
                     </tr>
                     <tr className="bg-white">
                       <td className="border border-gray-300 px-4 py-3">Suivi (présentiel)</td>
-                      <td className="border border-gray-300 px-4 py-3">ZD13</td>
                       <td className="border border-gray-300 px-4 py-3">30 min</td>
                       <td className="border border-gray-300 px-4 py-3 font-semibold text-blue-600">79,86 €</td>
                     </tr>
                     <tr className="bg-gray-50">
                       <td className="border border-gray-300 px-4 py-3">Suivi (en ligne)</td>
-                      <td className="border border-gray-300 px-4 py-3">ZD13</td>
                       <td className="border border-gray-300 px-4 py-3">30 min</td>
                       <td className="border border-gray-300 px-4 py-3 font-semibold text-blue-600">98 €</td>
                     </tr>
                     <tr className="bg-white">
                       <td className="border border-gray-300 px-4 py-3">Bilan nutritionnel + génétique (3 séances)</td>
-                      <td className="border border-gray-300 px-4 py-3">GEN</td>
                       <td className="border border-gray-300 px-4 py-3">45 min</td>
                       <td className="border border-gray-300 px-4 py-3 font-semibold text-blue-600">480 €</td>
                     </tr>
                     <tr className="bg-gray-50">
                       <td className="border border-gray-300 px-4 py-3">Update test génétique</td>
-                      <td className="border border-gray-300 px-4 py-3">GEN</td>
                       <td className="border border-gray-300 px-4 py-3">45 min</td>
                       <td className="border border-gray-300 px-4 py-3 font-semibold text-blue-600">90 €</td>
                     </tr>
