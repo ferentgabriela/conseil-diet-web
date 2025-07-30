@@ -235,7 +235,7 @@ export const ChatPopup = ({
                           animationDelay: '0.2s'
                         }}></div>
                           </div>
-                          <span className="text-green-700 text-xs">Gabriela répond...</span>
+                          <span className="text-green-700 text-xs">en train de penser...</span>
                         </div>
                       </div>
                     </div>
