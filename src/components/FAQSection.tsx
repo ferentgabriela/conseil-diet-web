@@ -121,11 +121,11 @@ const FAQSection = ({ onOpenChat }: FAQSectionProps) => {
       answer: "Les premiers résultats apparaissent dans les 2-4 semaines. Une transformation durable s'observe généralement sur 3-6 mois selon vos objectifs.",
       icon: Clock,
       details: [
-        "1-2 semaines : amélioration de l'énergie et du sommeil",
-        "3-4 semaines : perte de poids visible (1-2kg), moins de fringales",
-        "6-8 semaines : amélioration des analyses (cholestérol, glycémie)",
-        "3 mois : perte de 6-12kg, nouvelles habitudes ancrées",
-        "6 mois : transformation complète et stabilisation",
+        "1–2 semaines : énergie et sommeil souvent améliorés",
+        "3–4 semaines : diminution des fringales, meilleures habitudes de repas",
+        "6–8 semaines : paramètres biologiques souvent mieux orientés (profil lipidique, glycémie), selon le contexte médical",
+        "3 mois : habitudes ancrées, progression mesurable",
+        "6 mois : stabilisation et consolidation",
         "Résultats durables si respect du suivi personnalisé"
       ],
       expert: "Mon conseil d'experte : La régularité des consultations est clé. Données internes 2021-23 : Mes patients qui respectent le rythme de suivi atteignent leurs objectifs dans la majorité des cas !"
