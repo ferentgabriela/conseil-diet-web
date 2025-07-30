@@ -128,7 +128,7 @@ const FAQSection = ({ onOpenChat }: FAQSectionProps) => {
         "6 mois : stabilisation et consolidation",
         "Résultats durables si respect du suivi personnalisé"
       ],
-      expert: "Mon conseil d'experte : Données internes 2021–23 : les patients assidus progressent dans la majorité des cas. Les résultats varient selon la situation de chacun."
+      expert: "Mon conseil d'experte : Les patients assidus progressent dans la majorité des cas. Les résultats varient selon la situation de chacun."
     },
     {
       question: "Travaillez-vous avec des personnes ayant du diabète, de l'hypertension ou d'autres pathologies ?",
