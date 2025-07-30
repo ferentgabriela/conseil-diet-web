@@ -87,7 +87,7 @@ export const CookieConsentBanner: React.FC<CookieConsentBannerProps> = ({ onCons
   if (!isVisible) return null;
 
   return (
-    <div className="fixed bottom-4 right-4 z-50 max-w-xs">
+    <div className="fixed bottom-4 left-4 z-50 max-w-xs">
       <Card className="bg-background/90 backdrop-blur-sm border shadow-md hover:shadow-lg transition-shadow">
         <CardHeader className="pb-2 pt-3 px-4">
           <div className="flex items-center justify-between">
