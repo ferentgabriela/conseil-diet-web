@@ -142,7 +142,7 @@ const FAQSection = ({ onOpenChat }: FAQSectionProps) => {
         "Pathologies rénales et hépatiques : expertise spécialisée",
         "Collaboration avec votre équipe médicale"
       ],
-      expert: "Mon conseil d'experte : L'alimentation peut considérablement améliorer vos paramètres de santé. Certains de mes patients ont pu réduire leurs médicaments grâce aux changements nutritionnels !"
+      expert: "Mon conseil d'experte : L'alimentation peut considérablement améliorer vos paramètres de santé. Une amélioration des paramètres de santé peut, selon avis médical, conduire à une adaptation du traitement par votre médecin."
     },
     {
       question: "Vos conseils prennent-ils en compte mes habitudes et mon emploi du temps ?",
