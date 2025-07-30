@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { MapPin, Users, Euro } from 'lucide-react';
+import { MapPin, Users, Award } from 'lucide-react';
 
 const TrustBar = () => {
   return (
@@ -17,8 +17,8 @@ const TrustBar = () => {
               <span>1000+ patients satisfaits</span>
             </div>
             <div className="flex items-center gap-2">
-              <Euro className="h-4 w-4" />
-              <span>Prise en charge CNS</span>
+              <Award className="h-4 w-4" />
+              <span>15+ ans d'expertise</span>
             </div>
           </div>
         </div>
