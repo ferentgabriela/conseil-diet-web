@@ -134,12 +134,7 @@ const TarifsPriseEnCharge = () => {
                       <td className="border border-gray-300 px-4 py-3 font-semibold text-blue-600">132 €</td>
                     </tr>
                     <tr className="bg-white">
-                      <td className="border border-gray-300 px-4 py-3">Suivi (présentiel)</td>
-                      <td className="border border-gray-300 px-4 py-3">30 min</td>
-                      <td className="border border-gray-300 px-4 py-3 font-semibold text-blue-600">79,86 €</td>
-                    </tr>
-                    <tr className="bg-gray-50">
-                      <td className="border border-gray-300 px-4 py-3">Suivi (en ligne)</td>
+                      <td className="border border-gray-300 px-4 py-3">Suivi</td>
                       <td className="border border-gray-300 px-4 py-3">30 min</td>
                       <td className="border border-gray-300 px-4 py-3 font-semibold text-blue-600">98 €</td>
                     </tr>
