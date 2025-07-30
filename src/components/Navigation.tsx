@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Menu, X, MapPin, Users, Euro } from 'lucide-react';
+import { Menu, X, MapPin, Users, Award } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import NavigationLogo from './navigation/NavigationLogo';
@@ -85,7 +85,7 @@ const Navigation = () => {
                 <span className="sm:hidden">{t('trustBar.patientsMobile')}</span>
               </div>
               <div className="flex items-center gap-1 md:gap-2">
-                <Euro className="h-3 w-3 md:h-4 md:w-4" />
+                <Award className="h-3 w-3 md:h-4 md:w-4" />
                 <span className="hidden sm:inline">{t('trustBar.reimbursed')}</span>
                 <span className="sm:hidden">{t('trustBar.reimbursedMobile')}</span>
               </div>
