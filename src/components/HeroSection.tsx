@@ -49,29 +49,32 @@ const HeroSection = () => {
       
       <div className="container mx-auto px-4 text-center relative z-10">
         <div className="max-w-4xl mx-auto">
-          {/* Main Headline with fade-in animation */}
-          <h1 className="text-[40px] md:text-[56px] font-bold text-white mb-4 leading-tight drop-shadow-2xl animate-fade-in">
-            {t('hero.title')}
-          </h1>
-          
-          {/* First subtitle with larger size */}
-          <h2 className="text-[22px] md:text-[28px] font-medium text-white mt-4 mb-2 drop-shadow-lg animate-fade-in [animation-delay:0.2s]">
-            3 cabinets au Luxembourg
-          </h2>
-          
-          {/* Second subtitle with smaller size */}
-          <h3 className="text-[16px] md:text-[20px] font-normal text-white mb-8 drop-shadow-lg animate-fade-in [animation-delay:0.3s]">
-            Des consultations adaptées à votre santé, avec ou sans ordonnance
-          </h3>
-          
-          {/* CTA Button with enhanced hover effects and fade-in animation */}
-          <button
-            onClick={scrollToCabinets}
-            className="inline-flex items-center px-8 md:px-10 py-4 md:py-5 bg-[#4CAF50] text-white text-[16px] md:text-[20px] font-medium rounded-md transition-all duration-300 transform hover:scale-105 hover:shadow-lg animate-fade-in [animation-delay:0.4s]"
-            aria-label="Réserver une consultation de nutrition"
-          >
-            {t('hero.cta')}
-          </button>
+          {/* Text background overlay for better readability */}
+          <div className="bg-black/30 backdrop-blur-sm rounded-2xl p-8 md:p-12">
+            {/* Main Headline with fade-in animation */}
+            <h1 className="text-[40px] md:text-[56px] font-bold text-white mb-4 leading-tight drop-shadow-2xl animate-fade-in" style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.8), 0 0 16px rgba(0,0,0,0.6)' }}>
+              {t('hero.title')}
+            </h1>
+            
+            {/* First subtitle with larger size */}
+            <h2 className="text-[22px] md:text-[28px] font-medium text-white mt-4 mb-2 drop-shadow-lg animate-fade-in [animation-delay:0.2s]" style={{ textShadow: '1px 1px 6px rgba(0,0,0,0.8), 0 0 12px rgba(0,0,0,0.5)' }}>
+              3 cabinets au Luxembourg
+            </h2>
+            
+            {/* Second subtitle with smaller size */}
+            <h3 className="text-[16px] md:text-[20px] font-normal text-white mb-8 drop-shadow-lg animate-fade-in [animation-delay:0.3s]" style={{ textShadow: '1px 1px 6px rgba(0,0,0,0.8), 0 0 12px rgba(0,0,0,0.5)' }}>
+              Des consultations adaptées à votre santé, avec ou sans ordonnance
+            </h3>
+            
+            {/* CTA Button with enhanced hover effects and fade-in animation */}
+            <button
+              onClick={scrollToCabinets}
+              className="inline-flex items-center px-8 md:px-10 py-4 md:py-5 bg-[#4CAF50] text-white text-[16px] md:text-[20px] font-medium rounded-md transition-all duration-300 transform hover:scale-105 hover:shadow-lg animate-fade-in [animation-delay:0.4s] shadow-2xl"
+              aria-label="Réserver une consultation de nutrition"
+            >
+              {t('hero.cta')}
+            </button>
+          </div>
         </div>
       </div>
       
