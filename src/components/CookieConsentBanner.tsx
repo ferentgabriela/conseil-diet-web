@@ -87,29 +87,28 @@ export const CookieConsentBanner: React.FC<CookieConsentBannerProps> = ({ onCons
   if (!isVisible) return null;
 
   return (
-    <div className="fixed bottom-4 left-4 right-4 z-50 max-w-md mx-auto">
-      <Card className="bg-background/95 backdrop-blur-sm border shadow-lg">
-        <CardHeader className="pb-3 pt-4">
+    <div className="fixed bottom-4 right-4 z-50 max-w-xs">
+      <Card className="bg-background/90 backdrop-blur-sm border shadow-md hover:shadow-lg transition-shadow">
+        <CardHeader className="pb-2 pt-3 px-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
-              <Cookie className="h-4 w-4 text-primary" />
-              <CardTitle className="text-sm font-medium">Cookies</CardTitle>
+              <Cookie className="h-3 w-3 text-primary" />
+              <CardTitle className="text-xs font-medium">Cookies</CardTitle>
             </div>
             <Button
               variant="ghost"
               size="sm"
               onClick={() => setIsVisible(false)}
-              className="h-6 w-6 p-0"
+              className="h-5 w-5 p-0 hover:bg-muted"
             >
-              <X className="h-3 w-3" />
+              <X className="h-2.5 w-2.5" />
             </Button>
           </div>
         </CardHeader>
         
-        <CardContent className="space-y-3 pt-2">
-          <p className="text-xs text-muted-foreground">
-            Nous utilisons des cookies pour améliorer votre expérience. 
-            Vous pouvez les personnaliser ci-dessous.
+        <CardContent className="space-y-2 pt-1 px-4 pb-4">
+          <p className="text-xs text-muted-foreground leading-relaxed">
+            Nous utilisons des cookies pour améliorer votre expérience.
           </p>
 
           {showDetails && (
@@ -163,52 +162,52 @@ export const CookieConsentBanner: React.FC<CookieConsentBannerProps> = ({ onCons
             </div>
           )}
 
-          <div className="flex flex-col sm:flex-row gap-2 pt-3 border-t">
+          <div className="flex flex-col gap-1.5 pt-2 border-t">
             <Button
               variant="outline"
               size="sm"
               onClick={() => setShowDetails(!showDetails)}
-              className="flex-1 text-xs"
+              className="w-full text-xs h-7"
             >
               {showDetails ? 'Masquer' : 'Personnaliser'}
             </Button>
             
             {showDetails ? (
-              <>
+              <div className="flex gap-1.5">
                 <Button
                   variant="outline"
                   size="sm"
                   onClick={handleRejectAll}
-                  className="flex-1 text-xs"
+                  className="flex-1 text-xs h-7"
                 >
                   Refuser tout
                 </Button>
                 <Button
                   size="sm"
                   onClick={handleSavePreferences}
-                  className="flex-1 text-xs"
+                  className="flex-1 text-xs h-7"
                 >
                   Sauvegarder
                 </Button>
-              </>
+              </div>
             ) : (
-              <>
+              <div className="flex gap-1.5">
                 <Button
                   variant="outline"
                   size="sm"
                   onClick={handleRejectAll}
-                  className="flex-1 text-xs"
+                  className="flex-1 text-xs h-7"
                 >
                   Refuser
                 </Button>
                 <Button
                   size="sm"
                   onClick={handleAcceptAll}
-                  className="flex-1 text-xs"
+                  className="flex-1 text-xs h-7"
                 >
                   Accepter
                 </Button>
-              </>
+              </div>
             )}
           </div>
         </CardContent>
