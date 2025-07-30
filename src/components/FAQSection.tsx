@@ -128,7 +128,7 @@ const FAQSection = ({ onOpenChat }: FAQSectionProps) => {
         "6 mois : stabilisation et consolidation",
         "Résultats durables si respect du suivi personnalisé"
       ],
-      expert: "Mon conseil d'experte : La régularité des consultations est clé. Données internes 2021-23 : Mes patients qui respectent le rythme de suivi atteignent leurs objectifs dans la majorité des cas !"
+      expert: "Mon conseil d'experte : Données internes 2021–23 : les patients assidus progressent dans la majorité des cas. Les résultats varient selon la situation de chacun."
     },
     {
       question: "Travaillez-vous avec des personnes ayant du diabète, de l'hypertension ou d'autres pathologies ?",
