@@ -56,6 +56,7 @@ export const ForwardMessageDialog: React.FC<ForwardMessageDialogProps> = ({
         .from('forwarded_messages')
         .insert({
           conversation_id: conversationId,
+          session_id: conversationId, // Use conversationId as session_id for security
           user_name: formData.name.trim(),
           user_email: formData.email.trim() || null,
           user_phone: formData.phone.trim() || null,

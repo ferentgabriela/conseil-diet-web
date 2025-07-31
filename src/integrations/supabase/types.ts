@@ -82,6 +82,7 @@ export type Database = {
           created_at: string
           id: string
           message: string
+          session_id: string | null
           status: string | null
           user_email: string | null
           user_name: string
@@ -92,6 +93,7 @@ export type Database = {
           created_at?: string
           id?: string
           message: string
+          session_id?: string | null
           status?: string | null
           user_email?: string | null
           user_name: string
@@ -102,6 +104,7 @@ export type Database = {
           created_at?: string
           id?: string
           message?: string
+          session_id?: string | null
           status?: string | null
           user_email?: string | null
           user_name?: string
