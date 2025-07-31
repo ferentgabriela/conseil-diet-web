@@ -32,6 +32,7 @@ serve(async (req) => {
       .from('forwarded_messages')
       .select('*')
       .eq('conversation_id', conversationId)
+      .eq('session_id', conversationId) // Add session_id filter for security
       .eq('status', 'pending')
       .order('created_at', { ascending: false })
       .limit(1)
