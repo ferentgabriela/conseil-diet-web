@@ -26,7 +26,7 @@ export const ChatPopup = ({
 }: ChatPopupProps) => {
   const [internalIsOpen, setInternalIsOpen] = useState(false);
   const [currentMessage, setCurrentMessage] = useState('');
-  const [sessionId] = useState(() => crypto.randomUUID());
+  const [sessionId] = useState(() => self.crypto?.randomUUID?.() || Math.random().toString(36).substring(2, 10));
   const [showForwardDialog, setShowForwardDialog] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const isOpen = externalIsOpen !== undefined ? externalIsOpen : internalIsOpen;
