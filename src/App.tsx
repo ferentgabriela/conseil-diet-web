@@ -9,6 +9,8 @@ import { HelmetProvider } from "react-helmet-async";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/react";
 import Index from "./pages/Index";
+import Custom404 from "./pages/Custom404";
+import Admin404s from "./pages/Admin404s";
 import NotFound from "./pages/NotFound";
 import NutritionMenopause from "./pages/articles/NutritionMenopause";
 import AllaitementPertePoids from "./pages/articles/AllaitementPertePoids";
@@ -45,12 +47,13 @@ const App = () => (
           <Route path="/articles/perte-poids-apres-40" element={<PertePoidsApres40 />} />
           <Route path="/articles/hypertension-regime-dash" element={<HypertensionRegimeDash />} />
           <Route path="/articles/thyroide-alimentation" element={<ThyroideAlimentation />} />
+          <Route path="/admin/404s" element={<Admin404s />} />
           <Route path="/mentions-legales" element={<MentionsLegales />} />
           <Route path="/tarifs-prise-en-charge" element={<TarifsPriseEnCharge />} />
           
           <Route path="/transparence" element={<Transparence />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
+          <Route path="*" element={<Custom404 />} />
         </Routes>
       </BrowserRouter>
       </TooltipProvider>

@@ -1,0 +1,3 @@
+# This directory will contain the 404 report JSON files
+# 404-report.json - Main crawl results
+# 404-live.json - Live 404 logging
