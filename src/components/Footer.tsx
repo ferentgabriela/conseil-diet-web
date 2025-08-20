@@ -6,20 +6,32 @@ const Footer = () => {
         <div className="flex flex-col sm:flex-row justify-center items-center space-y-3 sm:space-y-0 sm:space-x-8 text-sm text-gray-600">
           <div className="flex items-center hover:text-green-600 transition-colors cursor-pointer">
             <Phone className="h-4 w-4 mr-2" />
-            <a href="tel:+352691379172">+352 691 379 172</a>
+            <a href="tel:+352691379172" itemProp="telephone">+352 691 379 172</a>
           </div>
           <div className="text-center sm:text-left">
-            <div className="text-gray-600">15, Burwiss, 9660 Luxembourg</div>
+            <div className="text-gray-600" itemProp="address">
+              <span itemProp="streetAddress">15, Burwiss</span>, 
+              <span itemProp="postalCode">9660</span> <span itemProp="addressLocality">Luxembourg</span>
+            </div>
           </div>
           <div className="flex items-center hover:text-green-600 transition-colors">
             <Mail className="h-4 w-4 mr-2" />
-            <a href="mailto:dieteticienne@conseildietetique.lu">dieteticienne@conseildietetique.lu</a>
+            <span 
+              itemProp="email"
+              className="cursor-pointer" 
+              onClick={() => {
+                const email = 'dieteticienne' + '@' + 'conseildietetique.lu';
+                window.location.href = 'mailto:' + email;
+              }}
+            >
+              dieteticienne [at] conseildietetique.lu
+            </span>
           </div>
         </div>
         
         <div className="text-center text-xs text-gray-500 mt-6 leading-snug">
           <p>
-            Gabriela Ferent • Diététicienne autorisée<br />
+            <span itemProp="name">Gabriela Ferent</span> • Diététicienne autorisée<br />
             Code prestataire CNS : 361043-09 / <a href="https://www.andl.lu/project/ferent-gabriela/" target="_blank" rel="noopener noreferrer" className="underline hover:text-green-600 transition-colors">Membre ANDL</a><br />
             <a href="/mentions-legales" className="underline hover:text-green-600 transition-colors">Mentions légales</a> | {' '}
             <a href="/tarifs-prise-en-charge" className="underline hover:text-green-600 transition-colors">Tarifs &amp; prise en charge</a> | {' '}

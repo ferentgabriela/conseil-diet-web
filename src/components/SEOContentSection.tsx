@@ -13,11 +13,11 @@ const SEOContentSection = () => {
     <section className="py-12 bg-white">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
-          {/* Main H1 heading */}
+          {/* Remove duplicate H1 - already in hero */}
           <header className="text-center mb-8">
-            <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Diététicienne à Luxembourg — Gabriela Ferent
-            </h1>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Gabriela Ferent, diététicienne nutritionniste diplômée et agréée au Luxembourg, vous accompagne dans votre parcours de santé avec des consultations personnalisées et bienveillantes.
+            </p>
           </header>
 
           {/* Consultations sur prescription médicale */}
@@ -37,7 +37,7 @@ const SEOContentSection = () => {
           {/* Spécialisations */}
           <section className="mb-8">
             <h2 className="text-2xl md:text-3xl font-semibold text-gray-900 mb-6">
-              Spécialisations
+              Spécialisations: Perte de poids, diabète, obésité
             </h2>
             <div className="grid md:grid-cols-2 gap-4">
               <ul className="space-y-3">

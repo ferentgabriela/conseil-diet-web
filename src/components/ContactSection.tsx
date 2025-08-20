@@ -23,12 +23,15 @@ const ContactSection = ({ onOpenChat }: ContactSectionProps) => {
             >
               Poser une question
             </button>
-            <a
-              href="mailto:dieteticienne@conseildietetique.lu"
+            <button
+              onClick={() => {
+                const email = 'dieteticienne' + '@' + 'conseildietetique.lu';
+                window.location.href = 'mailto:' + email;
+              }}
               className="inline-flex items-center gap-2 px-6 py-3 border border-green-600 text-green-600 font-semibold rounded-lg hover:bg-green-50 transition-colors"
             >
               Email direct
-            </a>
+            </button>
           </div>
         </div>
       </div>

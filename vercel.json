@@ -17,6 +17,10 @@
         {
           "key": "X-Robots-Tag",
           "value": "index, follow"
+        },
+        {
+          "key": "X-Powered-By",
+          "value": ""
         }
       ]
     }
