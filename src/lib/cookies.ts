@@ -9,11 +9,13 @@ export interface CookieConsentState {
 export const COOKIE_CONSENT_KEY = 'cookie-consent';
 export const PATIENT_ACTIVITY_KEY = 'patient-activity';
 
-// Basic cookie functions
+// Basic cookie functions - now with secure flag detection
 export const setCookie = (name: string, value: string, days: number = 365) => {
   const expires = new Date();
   expires.setTime(expires.getTime() + days * 24 * 60 * 60 * 1000);
-  document.cookie = `${name}=${value};expires=${expires.toUTCString()};path=/;SameSite=Lax`;
+  const isSecure = window.location.protocol === 'https:';
+  const secureFlag = isSecure ? ';Secure' : '';
+  document.cookie = `${name}=${value};expires=${expires.toUTCString()};path=/;SameSite=Lax${secureFlag}`;
 };
 
 export const getCookie = (name: string): string | null => {

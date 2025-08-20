@@ -88,7 +88,7 @@ serve(async (req) => {
       });
     }
 
-    console.log('Received chat request:', { message, language });
+    console.log('Processing chat request for language:', language);
 
     // Create a system prompt based on the detected language
     const systemPrompts = {

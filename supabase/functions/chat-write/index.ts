@@ -319,7 +319,7 @@ Beende immer mit dem Vorschlag, einen Termin zu vereinbaren, falls angemessen.`
       throw new Error('Failed to save AI response');
     }
 
-    console.log('Chat exchange completed successfully');
+    console.log('Chat exchange completed successfully for session');
 
     return new Response(JSON.stringify({ 
       response: aiResponse

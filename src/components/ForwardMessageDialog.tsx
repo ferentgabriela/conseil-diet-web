@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import {
   Dialog,
@@ -51,20 +50,18 @@ export const ForwardMessageDialog: React.FC<ForwardMessageDialogProps> = ({
     setIsSubmitting(true);
 
     try {
-      // First, save the forwarded message to the database
-      const { error: insertError } = await supabase
-        .from('forwarded_messages')
-        .insert({
-          conversation_id: conversationId,
-          session_id: conversationId, // Use conversationId as session_id for security
-          user_name: formData.name.trim(),
-          user_email: formData.email.trim() || null,
-          user_phone: formData.phone.trim() || null,
-          message: formData.message.trim(),
-          status: 'pending'
-        });
+      // Use secure edge function instead of direct database access
+      const { error: createError } = await supabase.functions.invoke('forward-message-create', {
+        body: {
+          sessionId: conversationId,
+          userName: formData.name.trim(),
+          userEmail: formData.email.trim() || null,
+          userPhone: formData.phone.trim() || null,
+          message: formData.message.trim()
+        }
+      });
 
-      if (insertError) throw insertError;
+      if (createError) throw createError;
 
       // Then call the edge function to send the email
       const { error: forwardError } = await supabase.functions.invoke('forward-message', {

@@ -7,7 +7,8 @@ import { X, MessageCircle, Send, User, Bot, ExternalLink } from 'lucide-react';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { Badge } from '@/components/ui/badge';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
-import { useChatMessages } from '@/hooks/useChatMessages';
+import { useChatHistory } from '@/hooks/useChatHistory';
+import { useChatSend } from '@/hooks/useChatSend';
 import { ForwardMessageDialog } from './ForwardMessageDialog';
 interface Message {
   id: string;
@@ -26,16 +27,22 @@ export const ChatPopup = ({
 }: ChatPopupProps) => {
   const [internalIsOpen, setInternalIsOpen] = useState(false);
   const [currentMessage, setCurrentMessage] = useState('');
-  const [sessionId] = useState(() => self.crypto?.randomUUID?.() || Math.random().toString(36).substring(2, 10));
+  const [sessionId] = useState(() => {
+    if (self.crypto?.randomUUID) {
+      return self.crypto.randomUUID();
+    }
+    // Secure fallback that generates >= 10 characters
+    return 'sec-' + Date.now().toString(36) + '-' + Math.random().toString(36).substring(2);
+  });
   const [showForwardDialog, setShowForwardDialog] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const isOpen = externalIsOpen !== undefined ? externalIsOpen : internalIsOpen;
   const toggleOpen = onToggle || (() => setInternalIsOpen(!internalIsOpen));
-  const {
-    messages,
-    sendMessage,
-    isLoading
-  } = useChatMessages(sessionId);
+  const { messages, setMessages, isLoading: historyLoading } = useChatHistory(sessionId);
+  const { sendMessage, isLoading: sendLoading } = useChatSend(sessionId, (newMessage) => {
+    setMessages(prev => [...prev, newMessage]);
+  });
+  const isLoading = historyLoading || sendLoading;
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({
       behavior: 'smooth'
@@ -211,7 +218,7 @@ export const ChatPopup = ({
                       </div>
                       <div className={`rounded-2xl px-4 py-3 text-sm break-words overflow-hidden ${message.sender === 'user' ? 'bg-green-600 text-white' : 'bg-green-50 text-green-900 border border-green-200'}`}>
                         <div className="whitespace-pre-wrap break-words text-wrap leading-relaxed">
-                          {message.sender === 'ai' ? formatMessageWithLinks(message.message) : message.message}
+                          {message.sender === 'assistant' ? formatMessageWithLinks(message.message) : message.message}
                         </div>
                       </div>
                     </div>
