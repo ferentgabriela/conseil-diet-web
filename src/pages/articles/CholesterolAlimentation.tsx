@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { ArrowLeft, Clock, User, Calendar } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Navigation from '@/components/Navigation';
+import cholesterolImage from '@/assets/cholesterol-foods-optimized.webp';
 
 const CholesterolAlimentation = () => {
   return (
@@ -27,8 +28,8 @@ const CholesterolAlimentation = () => {
           <div className="bg-hsl(var(--blog-content-bg)) rounded-3xl shadow-[var(--blog-shadow-medium)] overflow-hidden mb-12">
             <div className="relative h-80 md:h-96">
               <img 
-                src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
-                alt="Cholestérol et Alimentation"
+                src={cholesterolImage}
+                alt="Cholestérol et Alimentation - Aliments pour réduire le cholestérol naturellement"
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />

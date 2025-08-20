@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { ArrowLeft, Clock, User, Calendar } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Navigation from '@/components/Navigation';
+import dashDietImage from '@/assets/dash-diet-foods-optimized.webp';
 
 const HypertensionRegimeDash = () => {
   return (
@@ -27,8 +28,8 @@ const HypertensionRegimeDash = () => {
           <div className="bg-hsl(var(--blog-content-bg)) rounded-3xl shadow-[var(--blog-shadow-medium)] overflow-hidden mb-12">
             <div className="relative h-80 md:h-96">
               <img 
-                src="https://images.unsplash.com/photo-1505682634904-d7c8d95cdc50?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
-                alt="Hypertension et Régime DASH"
+                src={dashDietImage}
+                alt="Hypertension et Régime DASH - Aliments recommandés pour réduire la tension"
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />

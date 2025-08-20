@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { ArrowLeft, Clock, User, Calendar } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Navigation from '@/components/Navigation';
+import thyroidImage from '@/assets/thyroid-nutrition-optimized.webp';
 
 const ThyroideAlimentation = () => {
   return (
@@ -27,8 +28,8 @@ const ThyroideAlimentation = () => {
           <div className="bg-hsl(var(--blog-content-bg)) rounded-3xl shadow-[var(--blog-shadow-medium)] overflow-hidden mb-12">
             <div className="relative h-80 md:h-96">
               <img 
-                src="https://images.unsplash.com/photo-1559526324-4b87b5e36e44?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
-                alt="Thyroïde et Alimentation"
+                src={thyroidImage}
+                alt="Thyroïde et Alimentation - Aliments pour optimiser la fonction thyroïdienne"
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
