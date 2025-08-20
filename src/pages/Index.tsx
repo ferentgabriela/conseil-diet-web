@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import Navigation from '@/components/Navigation';
 import StickyBookingBar from '@/components/StickyBookingBar';
 import HeroSection from '@/components/HeroSection';
+import SEOContentSection from '@/components/SEOContentSection';
 import AboutPracticeSection from '@/components/AboutPracticeSection';
 import HowItWorksSection from '@/components/HowItWorksSection';
 import ServicesSection from '@/components/ServicesSection';
@@ -11,6 +12,7 @@ import TransformationStoriesSection from '@/components/TransformationStoriesSect
 import DoctenaTestimonialsSection from '@/components/DoctenaTestimonialsSection';
 import FAQSection from '@/components/FAQSection';
 import BlogSection from '@/components/BlogSection';
+import ArticlesPopulairesSection from '@/components/ArticlesPopulairesSection';
 import CabinetsSection from '@/components/CabinetsSection';
 import LocationsSection from '@/components/LocationsSection';
 import Footer from '@/components/Footer';
@@ -35,9 +37,18 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-white pt-[34px]">
+      {/* Noscript content for SEO */}
+      <noscript>
+        <div className="container mx-auto px-4 py-8">
+          <h1>Diététicienne à Luxembourg — Gabriela Ferent</h1>
+          <p>Gabriela Ferent, diététicienne nutritionniste diplômée, vous accompagne dans votre parcours de santé au Luxembourg. Consultations sur prescription médicale prises en charge par la CNS pour diabète, obésité, troubles alimentaires, hypertension et dyslipidémies. 3 cabinets : Luxembourg-Ville, Ettelbruck, Insenborn. Rendez-vous via Doctena. Spécialisations : perte de poids, diabète, cholestérol, ménopause, thyroïde, troubles digestifs.</p>
+        </div>
+      </noscript>
+      
       <Navigation />
       
       <HeroSection />
+      <SEOContentSection />
       <AboutPracticeSection />
       <HowItWorksSection />
       <ServicesSection />
@@ -46,6 +57,7 @@ const Index = () => {
       
       <DoctenaTestimonialsSection />
       <BlogSection />
+      <ArticlesPopulairesSection />
       <FAQSection onOpenChat={handleOpenChat} />
       <LocationsSection />
       

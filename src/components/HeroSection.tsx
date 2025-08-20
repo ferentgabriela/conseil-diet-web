@@ -52,9 +52,9 @@ const HeroSection = () => {
           {/* Text background overlay for better readability */}
           <div className="bg-black/30 backdrop-blur-sm rounded-2xl p-8 md:p-12">
             {/* Main Headline with fade-in animation */}
-            <h1 className="text-[40px] md:text-[56px] font-bold text-white mb-4 leading-tight animate-fade-in">
+            <div className="text-[40px] md:text-[56px] font-bold text-white mb-4 leading-tight animate-fade-in">
               {t('hero.title')}
-            </h1>
+            </div>
             
             {/* First subtitle with larger size */}
             <h2 className="text-[22px] md:text-[28px] font-medium text-white mt-4 mb-2 animate-fade-in [animation-delay:0.2s]">
