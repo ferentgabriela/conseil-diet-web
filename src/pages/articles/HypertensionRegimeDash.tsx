@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { ArrowLeft, Clock, User, Calendar } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Navigation from '@/components/Navigation';
@@ -6,6 +7,10 @@ import Navigation from '@/components/Navigation';
 const HypertensionRegimeDash = () => {
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Hypertension : Le Régime DASH Expliqué Simplement et Efficacement — Gabriela Ferent Diététicienne</title>
+        <meta name="description" content="Le régime DASH pour réduire l'hypertension expliqué simplement. Guide complet de Gabriela Ferent, diététicienne nutritionniste au Luxembourg." />
+      </Helmet>
       <Navigation />
       <article className="container mx-auto px-4 py-12">
         <div className="max-w-4xl mx-auto">

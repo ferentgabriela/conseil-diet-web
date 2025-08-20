@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { ArrowLeft, Clock, User, Calendar } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Navigation from '@/components/Navigation';
@@ -6,6 +7,10 @@ import Navigation from '@/components/Navigation';
 const TroublesDigestifs = () => {
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Troubles Digestifs : Solutions Naturelles et Rééquilibrage Alimentaire — Gabriela Ferent Diététicienne</title>
+        <meta name="description" content="Solutions naturelles pour les troubles digestifs et rééquilibrage alimentaire. Guide pratique de Gabriela Ferent, diététicienne au Luxembourg." />
+      </Helmet>
       <Navigation />
       <article className="container mx-auto px-4 py-12">
         <div className="max-w-4xl mx-auto">

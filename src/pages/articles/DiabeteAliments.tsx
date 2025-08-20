@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { ArrowLeft, Clock, User, Calendar } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Navigation from '@/components/Navigation';
@@ -7,6 +8,10 @@ import Navigation from '@/components/Navigation';
 const DiabeteAliments = () => {
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Diabète Type 2 : 10 Aliments à Privilégier au Quotidien — Gabriela Ferent Diététicienne</title>
+        <meta name="description" content="Guide alimentaire pour le diabète type 2. Découvrez les aliments recommandés par Gabriela Ferent, diététicienne nutritionniste au Luxembourg." />
+      </Helmet>
       <Navigation />
       <article className="container mx-auto px-4 py-12">
         <div className="max-w-4xl mx-auto">

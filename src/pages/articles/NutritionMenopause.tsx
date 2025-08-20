@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { ArrowLeft, Clock, User, Calendar } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Navigation from '@/components/Navigation';
@@ -8,6 +9,10 @@ import StickyBookingBar from '@/components/StickyBookingBar';
 const NutritionMenopause = () => {
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Nutrition et Ménopause : Guide Complet pour Maintenir son Poids — Gabriela Ferent Diététicienne</title>
+        <meta name="description" content="Guide nutritionnel pour la ménopause et le maintien du poids. Conseils adaptés de Gabriela Ferent, diététicienne nutritionniste au Luxembourg." />
+      </Helmet>
       <Navigation />
       <StickyBookingBar />
       <article className="container mx-auto px-4 py-12">

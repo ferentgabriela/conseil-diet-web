@@ -7,8 +7,8 @@ const TarifsPriseEnCharge = () => {
   return (
     <>
       <Helmet>
-        <title>Tarifs & prise en charge CNS - Gabriela Ferent Diététicienne</title>
-        <meta name="description" content="Consultez les tarifs officiels et conditions de remboursement CNS pour les consultations diététiques au Luxembourg." />
+        <title>Tarifs & prise en charge — Gabriela Ferent Diététicienne</title>
+        <meta name="description" content="Tarifs des consultations et informations sur la prise en charge sur prescription médicale au Luxembourg. Rendez-vous à Luxembourg-Ville, Ettelbruck, Insenborn." />
       </Helmet>
       
       <Navigation />
@@ -27,13 +27,13 @@ const TarifsPriseEnCharge = () => {
               </h2>
               
               <p className="text-gray-700 mb-6 leading-relaxed">
-                Certaines consultations peuvent être prises en charge par la CNS sur présentation d'une ordonnance médicale valide, selon la nomenclature officielle.
+                Consultations sur prescription médicale pour certaines pathologies : diabète, obésité (IMC ≥ 30), troubles du comportement alimentaire, hypertension, dyslipidémies et syndrome métabolique."
               </p>
 
               <div className="bg-blue-50 border-l-4 border-blue-400 p-6 mb-6">
                 <h3 className="text-lg font-bold text-gray-900 mb-3">💡 À savoir :</h3>
                 <ul className="space-y-2 text-gray-700">
-                  <li>• Une prescription médicale est obligatoire pour bénéficier du tarif remboursé.</li>
+                  <li>• Une prescription médicale est obligatoire pour bénéficier de la prise en charge.</li>
                   <li>• Ces consultations sont exclusivement réservées aux patients présentant des pathologies reconnues (ex : diabète, obésité, maladies intestinales…).</li>
                 </ul>
               </div>
@@ -46,7 +46,7 @@ const TarifsPriseEnCharge = () => {
                       <th className="border border-gray-300 px-4 py-3 text-left font-semibold text-green-800">Code</th>
                       <th className="border border-gray-300 px-4 py-3 text-left font-semibold text-green-800">Durée</th>
                       <th className="border border-gray-300 px-4 py-3 text-left font-semibold text-green-800">Tarif intégral</th>
-                      <th className="border border-gray-300 px-4 py-3 text-left font-semibold text-green-800">Tarif CNS réduit</th>
+                      <th className="border border-gray-300 px-4 py-3 text-left font-semibold text-green-800">Participation patiente</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -96,11 +96,11 @@ const TarifsPriseEnCharge = () => {
                 </table>
               </div>
 
-              <div className="bg-green-50 border-l-4 border-green-400 p-4 rounded-lg">
-                <p className="text-sm text-green-800 font-medium">
-                  📌 Consultations remboursées selon la Convention CNS–ANDL, uniquement sur ordonnance médicale valide.
-                </p>
-              </div>
+               <div className="bg-green-50 border-l-4 border-green-400 p-4 rounded-lg">
+                 <p className="text-sm text-green-800 font-medium">
+                   📌 Consultations sur prescription médicale selon la Convention CNS–ANDL.
+                 </p>
+               </div>
             </div>
 
             {/* Consultations Privées Section */}

@@ -7,8 +7,8 @@ const Transparence = () => {
   return (
     <>
       <Helmet>
-        <title>Transparence - Gabriela Ferent Diététicienne</title>
-        <meta name="description" content="Déclaration de transparence concernant les liens d'intérêts et l'indépendance professionnelle." />
+        <title>Transparence — Gabriela Ferent Diététicienne</title>
+        <meta name="description" content="Déclaration de transparence et informations légales de Gabriela Ferent, diététicienne nutritionniste au Luxembourg." />
       </Helmet>
       
       <Navigation />
