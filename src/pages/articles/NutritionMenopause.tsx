@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet-async';
 import { ArrowLeft, Clock, User, Calendar } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Navigation from '@/components/Navigation';
+import StickyBookingBar from '@/components/StickyBookingBar';
 import nutritionMenopause from '@/assets/nutrition-menopause-optimized.webp';
 
 const NutritionMenopause = () => {
