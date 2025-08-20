@@ -40,6 +40,18 @@ pop3_port = 54326
 [functions.ai-chat]
 verify_jwt = false
 
+[functions.forward-message]
+verify_jwt = false
+
+[functions.forward-message-create]
+verify_jwt = false
+
+[functions.chat-history]
+verify_jwt = false
+
+[functions.chat-write]
+verify_jwt = false
+
 [storage]
 enabled = true
 port = 54325

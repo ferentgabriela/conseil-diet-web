@@ -1,13 +1,60 @@
 
 import "https://deno.land/x/xhr@0.1.0/mod.ts";
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
+import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
 
 const openAIApiKey = Deno.env.get('OPENAI_API_KEY');
 
 const corsHeaders = {
-  'Access-Control-Allow-Origin': '*',
+  'Access-Control-Allow-Origin': 'https://conseildietetique.vercel.app',
   'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
+  'Access-Control-Allow-Methods': 'POST, OPTIONS',
 };
+
+// Rate limiting helper
+async function checkRateLimit(supabase: any, identifier: string, endpoint: string, maxRequests = 15, windowMinutes = 10): Promise<boolean> {
+  const windowStart = new Date(Date.now() - windowMinutes * 60 * 1000);
+  
+  // Clean old entries
+  await supabase
+    .from('rate_limits')
+    .delete()
+    .lt('window_start', windowStart.toISOString());
+  
+  // Check current usage
+  const { data: existing } = await supabase
+    .from('rate_limits')
+    .select('request_count')
+    .eq('identifier', identifier)
+    .eq('endpoint', endpoint)
+    .gte('window_start', windowStart.toISOString())
+    .single();
+  
+  if (existing && existing.request_count >= maxRequests) {
+    return false;
+  }
+  
+  // Update or create rate limit entry
+  if (existing) {
+    await supabase
+      .from('rate_limits')
+      .update({ request_count: existing.request_count + 1 })
+      .eq('identifier', identifier)
+      .eq('endpoint', endpoint)
+      .gte('window_start', windowStart.toISOString());
+  } else {
+    await supabase
+      .from('rate_limits')
+      .insert({
+        identifier,
+        endpoint,
+        request_count: 1,
+        window_start: new Date().toISOString()
+      });
+  }
+  
+  return true;
+}
 
 serve(async (req) => {
   // Handle CORS preflight requests
@@ -17,6 +64,29 @@ serve(async (req) => {
 
   try {
     const { message, language } = await req.json();
+
+    if (!message || typeof message !== 'string' || message.trim().length === 0) {
+      return new Response(JSON.stringify({ error: 'Invalid message' }), {
+        status: 400,
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+      });
+    }
+
+    // Initialize Supabase client for rate limiting
+    const supabaseUrl = Deno.env.get('SUPABASE_URL')!;
+    const supabaseServiceKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!;
+    const supabase = createClient(supabaseUrl, supabaseServiceKey);
+
+    // Rate limiting
+    const clientIP = req.headers.get('x-forwarded-for') || req.headers.get('x-real-ip') || 'unknown';
+    const rateLimitOk = await checkRateLimit(supabase, clientIP, 'ai-chat', 15, 10);
+    
+    if (!rateLimitOk) {
+      return new Response(JSON.stringify({ error: 'Rate limit exceeded. Please wait before sending more messages.' }), {
+        status: 429,
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+      });
+    }
 
     console.log('Received chat request:', { message, language });
 
@@ -167,15 +237,15 @@ WICHTIG: Antworte immer auf Deutsch, sei professionell aber herzlich, und führe
     }
 
     const data = await response.json();
-    console.log('OpenAI response received');
+    console.log('AI chat request processed successfully');
     
     const aiResponse = data.choices[0].message.content;
 
-    return new Response(JSON.stringify({ response: aiResponse }), {
+    return new Response(JSON.stringify({ generatedText: aiResponse }), {
       headers: { ...corsHeaders, 'Content-Type': 'application/json' },
     });
   } catch (error) {    
-    console.error('Error in ai-chat function:', error);
+    console.error('Error in ai-chat function:', error.message);
     return new Response(JSON.stringify({ error: error.message }), {
       status: 500,
       headers: { ...corsHeaders, 'Content-Type': 'application/json' },

@@ -7,9 +7,62 @@ import { Resend } from "npm:resend@2.0.0";
 const resend = new Resend(Deno.env.get('RESEND_API_KEY'));
 
 const corsHeaders = {
-  'Access-Control-Allow-Origin': '*',
+  'Access-Control-Allow-Origin': 'https://conseildietetique.vercel.app',
   'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
+  'Access-Control-Allow-Methods': 'POST, OPTIONS',
 };
+
+// HTML escaping helper to prevent XSS
+function escapeHtml(text: string): string {
+  const div = new DOMParser().parseFromString('<!DOCTYPE html><html><body></body></html>', 'text/html').createElement('div');
+  div.textContent = text;
+  return div.innerHTML;
+}
+
+// Rate limiting helper
+async function checkRateLimit(supabase: any, identifier: string, endpoint: string, maxRequests = 3, windowMinutes = 60): Promise<boolean> {
+  const windowStart = new Date(Date.now() - windowMinutes * 60 * 1000);
+  
+  // Clean old entries
+  await supabase
+    .from('rate_limits')
+    .delete()
+    .lt('window_start', windowStart.toISOString());
+  
+  // Check current usage
+  const { data: existing } = await supabase
+    .from('rate_limits')
+    .select('request_count')
+    .eq('identifier', identifier)
+    .eq('endpoint', endpoint)
+    .gte('window_start', windowStart.toISOString())
+    .single();
+  
+  if (existing && existing.request_count >= maxRequests) {
+    return false;
+  }
+  
+  // Update or create rate limit entry
+  if (existing) {
+    await supabase
+      .from('rate_limits')
+      .update({ request_count: existing.request_count + 1 })
+      .eq('identifier', identifier)
+      .eq('endpoint', endpoint)
+      .gte('window_start', windowStart.toISOString());
+  } else {
+    await supabase
+      .from('rate_limits')
+      .insert({
+        identifier,
+        endpoint,
+        request_count: 1,
+        window_start: new Date().toISOString()
+      });
+  }
+  
+  return true;
+}
 
 serve(async (req) => {
   // Handle CORS preflight requests
@@ -20,19 +73,36 @@ serve(async (req) => {
   try {
     const { conversationId } = await req.json();
 
-    console.log('Processing forward message request for conversation:', conversationId);
+    if (!conversationId || typeof conversationId !== 'string' || conversationId.length < 10) {
+      return new Response(JSON.stringify({ error: 'Invalid conversation ID' }), {
+        status: 400,
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+      });
+    }
+
+    console.log('Processing forward message request for session:', conversationId);
 
     // Initialize Supabase client
     const supabaseUrl = Deno.env.get('SUPABASE_URL')!;
     const supabaseServiceKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!;
     const supabase = createClient(supabaseUrl, supabaseServiceKey);
 
-    // Get the forwarded message details
+    // Rate limiting
+    const clientIP = req.headers.get('x-forwarded-for') || req.headers.get('x-real-ip') || 'unknown';
+    const rateLimitOk = await checkRateLimit(supabase, `${clientIP}:${conversationId}`, 'forward-message', 2, 60);
+    
+    if (!rateLimitOk) {
+      return new Response(JSON.stringify({ error: 'Rate limit exceeded. Only 2 messages per hour allowed.' }), {
+        status: 429,
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+      });
+    }
+
+    // Get the forwarded message details by session_id (conversationId is actually sessionId)
     const { data: forwardedMessage, error: messageError } = await supabase
       .from('forwarded_messages')
       .select('*')
-      .eq('conversation_id', conversationId)
-      .eq('session_id', conversationId) // Add session_id filter for security
+      .eq('session_id', conversationId)
       .eq('status', 'pending')
       .order('created_at', { ascending: false })
       .limit(1)
@@ -52,47 +122,52 @@ serve(async (req) => {
 
     if (convError || !conversation) {
       console.error('Error fetching conversation:', convError);
-      throw new Error('Conversation not found');
+      // Still proceed even without conversation context
     }
 
-    const { data: messages, error: messagesError } = await supabase
-      .from('chat_messages')
-      .select('*')
-      .eq('conversation_id', conversation.id)
-      .order('created_at', { ascending: true });
+    let messages = [];
+    if (conversation) {
+      const { data: messageData, error: messagesError } = await supabase
+        .from('chat_messages')
+        .select('message, sender, created_at')
+        .eq('conversation_id', conversation.id)
+        .order('created_at', { ascending: true })
+        .limit(20); // Limit for performance
 
-    if (messagesError) {
-      console.error('Error fetching messages:', messagesError);
-      throw new Error('Error fetching conversation history');
+      if (!messagesError && messageData) {
+        messages = messageData;
+      }
     }
 
-    // Format conversation history
+    // Format conversation history with proper escaping
     const conversationHistory = messages
-      .map(msg => `${msg.sender === 'user' ? 'Patient' : 'Assistant'}: ${msg.message}`)
-      .join('\n\n');
+      .map(msg => `${msg.sender === 'user' ? 'Patient' : 'Assistant'}: ${escapeHtml(msg.message)}`)
+      .join('<br><br>');
 
-    // Create email content
-    const emailSubject = `Nouveau message patient - ${forwardedMessage.user_name}`;
+    // Create email content with proper HTML escaping
+    const emailSubject = `Nouveau message patient - ${escapeHtml(forwardedMessage.user_name)}`;
     
     const emailHTML = `
       <h2>Nouveau message d'un patient</h2>
       
       <h3>Informations du patient:</h3>
       <ul>
-        <li><strong>Nom:</strong> ${forwardedMessage.user_name}</li>
-        ${forwardedMessage.user_email ? `<li><strong>Email:</strong> ${forwardedMessage.user_email}</li>` : ''}
-        ${forwardedMessage.user_phone ? `<li><strong>Téléphone:</strong> ${forwardedMessage.user_phone}</li>` : ''}
+        <li><strong>Nom:</strong> ${escapeHtml(forwardedMessage.user_name)}</li>
+        ${forwardedMessage.user_email ? `<li><strong>Email:</strong> ${escapeHtml(forwardedMessage.user_email)}</li>` : ''}
+        ${forwardedMessage.user_phone ? `<li><strong>Téléphone:</strong> ${escapeHtml(forwardedMessage.user_phone)}</li>` : ''}
       </ul>
       
       <h3>Message du patient:</h3>
       <div style="background-color: #f5f5f5; padding: 15px; border-radius: 5px; margin: 10px 0;">
-        ${forwardedMessage.message.replace(/\n/g, '<br>')}
+        ${escapeHtml(forwardedMessage.message).replace(/\n/g, '<br>')}
       </div>
       
+      ${conversationHistory ? `
       <h3>Historique de la conversation:</h3>
       <div style="background-color: #f9f9f9; padding: 15px; border-radius: 5px; margin: 10px 0; font-family: monospace; font-size: 12px;">
-        ${conversationHistory.replace(/\n/g, '<br>')}
+        ${conversationHistory}
       </div>
+      ` : ''}
       
       <hr>
       <p><em>Ce message a été envoyé automatiquement depuis votre assistant IA.</em></p>
