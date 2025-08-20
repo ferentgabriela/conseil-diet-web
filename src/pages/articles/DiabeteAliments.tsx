@@ -18,7 +18,7 @@ const DiabeteAliments = () => {
         <div className="max-w-4xl mx-auto">
           {/* Back Navigation */}
           <Link 
-            to="/#blog" 
+            to="/" 
             className="inline-flex items-center gap-2 text-hsl(var(--blog-text-secondary)) hover:text-hsl(var(--primary)) mb-8 transition-colors group"
           >
             <ArrowLeft className="h-4 w-4 transition-transform group-hover:-translate-x-1" />
