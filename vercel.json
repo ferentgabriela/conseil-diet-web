@@ -1,60 +1,14 @@
 {
+  "version": 2,
   "redirects": [
-    {
-      "source": "/blog/:slug",
-      "destination": "/articles/:slug",
-      "permanent": true
-    },
-    {
-      "source": "/article/:slug", 
-      "destination": "/articles/:slug",
-      "permanent": true
-    },
-    {
-      "source": "/posts/:slug",
-      "destination": "/articles/:slug", 
-      "permanent": true
-    },
-    {
-      "source": "/tarifs",
-      "destination": "/tarifs-prise-en-charge",
-      "permanent": true
-    },
-    {
-      "source": "/pricing",
-      "destination": "/tarifs-prise-en-charge",
-      "permanent": true
-    },
-    {
-      "source": "/mentions",
-      "destination": "/mentions-legales",
-      "permanent": true
-    },
-    {
-      "source": "/transparency",
-      "destination": "/transparence", 
-      "permanent": true
-    },
-    {
-      "source": "/index.html",
-      "destination": "/",
-      "permanent": true
-    },
-    {
-      "source": "/home",
-      "destination": "/",
-      "permanent": true
-    }
-  ],
-  "domains": [
-    {
-      "domain": "*.lovable.app",
-      "redirect": "https://conseildietetique.lu/$1"
-    },
-    {
-      "domain": "*.vercel.app", 
-      "redirect": "https://conseildietetique.lu/$1"
-    }
+    { "source": "/blog/:slug", "destination": "/articles/:slug", "permanent": true },
+    { "source": "/article/:slug", "destination": "/articles/:slug", "permanent": true },
+    { "source": "/posts/:slug", "destination": "/articles/:slug", "permanent": true },
+    { "source": "/tarifs", "destination": "/tarifs-prise-en-charge", "permanent": true },
+    { "source": "/pricing", "destination": "/tarifs-prise-en-charge", "permanent": true },
+    { "source": "/mentions", "destination": "/mentions-legales", "permanent": true },
+    { "source": "/transparency", "destination": "/transparence", "permanent": true },
+    { "source": "/index.html", "destination": "/", "permanent": true }
   ],
   "headers": [
     {
