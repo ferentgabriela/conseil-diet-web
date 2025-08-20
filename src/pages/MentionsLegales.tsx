@@ -36,10 +36,6 @@ const MentionsLegales = () => {
                     <li>25, Grand-Rue, 9050 Ettelbruck</li>
                     <li>15, Burwiss, 9660 Insenborn</li>
                   </ul>
-                </div>
-                
-                <p><strong>Hébergeur du site :</strong> Vercel</p>
-              </div>
             </section>
 
             {/* Section 2 */}
