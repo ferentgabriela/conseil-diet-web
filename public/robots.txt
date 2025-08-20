@@ -32,7 +32,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://gabriela-ferent-dieticienne.lovable.app/sitemap.xml
+Sitemap: https://conseildietetique.lu/sitemap.xml
 
 # Crawl-delay for better server performance
 Crawl-delay: 1
