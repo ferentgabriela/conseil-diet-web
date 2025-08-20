@@ -27,7 +27,7 @@ const NavigationCTA = ({ scrollToCabinets }: NavigationCTAProps) => {
         Réserver ma consultation
       </button>
       <div className="text-xs font-medium mt-1 text-center" style={{ color: 'hsl(var(--nav-trust-text))' }}>
-        🔥 Places disponibles cette semaine
+        Places disponibles cette semaine
       </div>
     </div>
   );

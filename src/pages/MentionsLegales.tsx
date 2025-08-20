@@ -25,7 +25,6 @@ const MentionsLegales = () => {
               </h2>
               <div className="space-y-4 text-gray-700">
                 <p><strong>Responsable du site :</strong> Gabriela Ferent, Diététicienne agréée par le Ministère de la Santé (Luxembourg)</p>
-                <p><strong>Autorisation d'exercer :</strong> N° [à compléter]</p>
                 <p><strong>Code prestataire CNS :</strong> 361043-09</p>
                 <p><strong>Email :</strong> dieteticienne@conseildietetique.lu</p>
                 <p><strong>Tél. :</strong> +352 691 379 172</p>
@@ -39,7 +38,7 @@ const MentionsLegales = () => {
                   </ul>
                 </div>
                 
-                <p><strong>Hébergeur du site :</strong> [Nom de l'hébergeur utilisé — ex. Netlify, OVH, etc.]</p>
+                <p><strong>Hébergeur du site :</strong> Vercel</p>
               </div>
             </section>
 
