@@ -8,27 +8,69 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://conseildietetique.lu/#cns</loc>
-    <lastmod>2024-12-25</lastmod>
+    <loc>https://conseildietetique.lu/articles/nutrition-menopause-guide</loc>
+    <lastmod>2024-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://conseildietetique.lu/#prive</loc>
-    <lastmod>2024-12-25</lastmod>
+    <loc>https://conseildietetique.lu/articles/allaitement-perte-poids</loc>
+    <lastmod>2024-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://conseildietetique.lu/#cabinets</loc>
-    <lastmod>2024-12-25</lastmod>
+    <loc>https://conseildietetique.lu/articles/diabete-aliments-recommandes</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://conseildietetique.lu/articles/cholesterol-alimentation</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://conseildietetique.lu/articles/troubles-digestifs-solutions</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://conseildietetique.lu/articles/perte-poids-apres-40</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://conseildietetique.lu/articles/hypertension-regime-dash</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://conseildietetique.lu/articles/thyroide-alimentation</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://conseildietetique.lu/mentions-legales</loc>
+    <lastmod>2024-01-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://conseildietetique.lu/tarifs-prise-en-charge</loc>
+    <lastmod>2024-01-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://conseildietetique.lu/#contact</loc>
-    <lastmod>2024-12-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <loc>https://conseildietetique.lu/transparence</loc>
+    <lastmod>2024-01-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
   </url>
 </urlset>

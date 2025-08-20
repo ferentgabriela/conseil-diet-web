@@ -46,6 +46,16 @@
       "permanent": true
     }
   ],
+  "domains": [
+    {
+      "domain": "*.lovable.app",
+      "redirect": "https://conseildietetique.lu/$1"
+    },
+    {
+      "domain": "*.vercel.app", 
+      "redirect": "https://conseildietetique.lu/$1"
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)",
