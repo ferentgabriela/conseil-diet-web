@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import NavigationLogo from './navigation/NavigationLogo';
 import NavigationMenu from './navigation/NavigationMenu';
+import NavigationCTA from './navigation/NavigationCTA';
 import MobileMenu from './navigation/MobileMenu';
 
 const Navigation = () => {
@@ -67,6 +68,10 @@ const Navigation = () => {
     setIsMenuOpen(false);
   };
 
+  const scrollToCabinets = () => {
+    scrollToSection('cabinets');
+  };
+
   return (
     <div className="fixed top-0 left-0 right-0 z-50 w-full">
       {/* Trust Bar with patient/location info */}
@@ -103,6 +108,11 @@ const Navigation = () => {
             <NavigationLogo />
             <div className="hidden lg:flex absolute left-1/2 transform -translate-x-1/2">
               <NavigationMenu scrollToSection={scrollToSection} />
+            </div>
+            
+            {/* Desktop CTA Button */}
+            <div className="hidden lg:block">
+              <NavigationCTA scrollToCabinets={scrollToCabinets} />
             </div>
 
 

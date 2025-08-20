@@ -8,6 +8,9 @@ const Footer = () => {
             <Phone className="h-4 w-4 mr-2" />
             <a href="tel:+352691379172">+352 691 379 172</a>
           </div>
+          <div className="text-center sm:text-left">
+            <div className="text-gray-600">15, Burwiss, 9660 Luxembourg</div>
+          </div>
           <div className="flex items-center hover:text-green-600 transition-colors">
             <Mail className="h-4 w-4 mr-2" />
             <a href="mailto:dieteticienne@conseildietetique.lu">dieteticienne@conseildietetique.lu</a>
