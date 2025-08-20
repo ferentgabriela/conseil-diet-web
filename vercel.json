@@ -1,0 +1,60 @@
+{
+  "redirects": [
+    {
+      "source": "/blog/:slug",
+      "destination": "/articles/:slug",
+      "permanent": true
+    },
+    {
+      "source": "/article/:slug", 
+      "destination": "/articles/:slug",
+      "permanent": true
+    },
+    {
+      "source": "/posts/:slug",
+      "destination": "/articles/:slug", 
+      "permanent": true
+    },
+    {
+      "source": "/tarifs",
+      "destination": "/tarifs-prise-en-charge",
+      "permanent": true
+    },
+    {
+      "source": "/pricing",
+      "destination": "/tarifs-prise-en-charge",
+      "permanent": true
+    },
+    {
+      "source": "/mentions",
+      "destination": "/mentions-legales",
+      "permanent": true
+    },
+    {
+      "source": "/transparency",
+      "destination": "/transparence", 
+      "permanent": true
+    },
+    {
+      "source": "/index.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/home",
+      "destination": "/",
+      "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "index, follow"
+        }
+      ]
+    }
+  ]
+}

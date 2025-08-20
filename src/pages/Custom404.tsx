@@ -2,9 +2,19 @@ import React, { useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Search, Home, BookOpen, Phone, ArrowRight } from 'lucide-react';
 import { supabase } from '@/integrations/supabase/client';
+import { checkGonePage, createGoneResponse } from '@/middleware/gonePages';
 
 const Custom404 = () => {
   const location = useLocation();
+  
+  // Check if this should be a 410 Gone instead of 404
+  useEffect(() => {
+    if (checkGonePage(location.pathname)) {
+      // This would ideally be handled by server middleware
+      // For now, we'll just show a different message
+      console.log('This page should return 410 Gone');
+    }
+  }, [location.pathname]);
   
   useEffect(() => {
     // Log the 404 to our tracking system
@@ -24,6 +34,8 @@ const Custom404 = () => {
     
     log404();
   }, [location.pathname]);
+  
+  const isGonePage = checkGonePage(location.pathname);
   
   const topArticles = [
     {
@@ -51,14 +63,19 @@ const Custom404 = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-50 to-blue-50 flex items-center justify-center px-4">
       <div className="max-w-2xl w-full text-center">
-        {/* 404 Hero */}
+        {/* 404/410 Hero */}
         <div className="mb-8">
-          <div className="text-8xl font-bold text-green-600 mb-4">404</div>
+          <div className={`text-8xl font-bold mb-4 ${isGonePage ? 'text-red-600' : 'text-green-600'}`}>
+            {isGonePage ? '410' : '404'}
+          </div>
           <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Page non trouvée
+            {isGonePage ? 'Page supprimée' : 'Page non trouvée'}
           </h1>
           <p className="text-xl text-gray-600 mb-2">
-            Désolé, la page que vous recherchez n'existe pas ou a été déplacée.
+            {isGonePage 
+              ? 'Cette page a été intentionnellement supprimée et ne reviendra pas.'
+              : 'Désolé, la page que vous recherchez n\'existe pas ou a été déplacée.'
+            }
           </p>
           <p className="text-gray-500">
             Chemin demandé : <code className="bg-gray-100 px-2 py-1 rounded text-sm">{location.pathname}</code>

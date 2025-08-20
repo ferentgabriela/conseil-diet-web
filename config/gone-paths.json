@@ -1,0 +1,10 @@
+{
+  "gonePaths": [
+    "/old-blog",
+    "/legacy-section",
+    "/discontinued-service",
+    "/temp-page",
+    "/beta-features"
+  ],
+  "description": "Paths that should return 410 Gone status - these are intentionally removed pages that once existed but are no longer available and won't be coming back"
+}
