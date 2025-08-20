@@ -81,7 +81,7 @@ const HeroSection = () => {
       {/* Hidden image for accessibility */}
       <img 
         src="/lovable-uploads/1f309c72-ddb5-4bae-944e-68046c01bf90.png" 
-        alt="Comptoir de cuisine moderne avec légumes frais colorés, symbolisant une alimentation saine et équilibrée"
+        alt="Consultation de diététique en cours avec équipements de mesure corporelle professionnels"
         className="sr-only"
         aria-hidden="true"
       />

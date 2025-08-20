@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Calendar, ArrowRight, MessageCircle } from 'lucide-react';
+import cabinetModerne from '@/assets/cabinet-moderne-optimized.webp';
 
 const NarrativeHeroSection = () => {
   const scrollToAbout = () => {
@@ -87,7 +88,7 @@ const NarrativeHeroSection = () => {
                 <div 
                   className="w-full h-full bg-cover bg-center bg-no-repeat"
                   style={{
-                    backgroundImage: `url('https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80')`
+                    backgroundImage: `url('${cabinetModerne}')`
                   }}
                 />
               </div>

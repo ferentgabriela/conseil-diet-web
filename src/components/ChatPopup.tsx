@@ -146,7 +146,7 @@ export const ChatPopup = ({
             {/* Leaf image with transparent background */}
             <img 
               src="/lovable-uploads/e9106196-b403-4c7a-aad5-0dd2fde0d7c1.png" 
-              alt="Chat with Gabriela"
+              alt="Assistant IA de Gabriela Ferent pour répondre aux questions nutritionnelles"
               className="w-full h-full object-contain transition-all duration-300"
               style={{ background: 'transparent' }}
             />

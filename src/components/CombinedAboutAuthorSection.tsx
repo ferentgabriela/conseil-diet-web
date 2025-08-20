@@ -1,5 +1,7 @@
 import React from 'react';
-import { Award, Heart, Users, Clock, Shield, BookOpen, CheckCircle, GraduationCap, MapPin } from 'lucide-react';
+import { ArrowRight, Users, Star, Shield, CheckCircle, Award, MapPin, GraduationCap, BookOpen, Heart, Clock } from 'lucide-react';
+import { Button } from "@/components/ui/button";
+import cabinetModerne from '@/assets/cabinet-moderne-optimized.webp';
 
 const CombinedAboutAuthorSection = () => {
   return (
@@ -181,8 +183,8 @@ const CombinedAboutAuthorSection = () => {
           {/* Professional Image */}
           <div className="text-center">
             <img
-              src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
-              alt="Cabinet de diététique moderne Gabriela Ferent Luxembourg"
+              src={cabinetModerne}
+              alt="Cabinet de diététique moderne Gabriela Ferent Luxembourg avec équipements professionnels"
               className="rounded-2xl shadow-2xl w-full max-w-2xl mx-auto h-80 object-cover"
             />
             <p className="text-gray-600 mt-4 text-sm">

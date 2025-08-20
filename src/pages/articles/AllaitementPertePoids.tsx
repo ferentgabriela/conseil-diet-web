@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet-async';
 import { ArrowLeft, Clock, User, Calendar } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Navigation from '@/components/Navigation';
+import allaitementImage from '@/assets/allaitement-optimized.webp';
 
 const AllaitementPertePoids = () => {
   return (
@@ -28,8 +29,8 @@ const AllaitementPertePoids = () => {
           <div className="bg-hsl(var(--blog-content-bg)) rounded-3xl shadow-[var(--blog-shadow-medium)] overflow-hidden mb-12">
             <div className="relative h-80 md:h-96">
               <img 
-                src="https://images.unsplash.com/photo-1476703993599-0035a21b17a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
-                alt="Allaitement et Perte de Poids"
+                src={allaitementImage}
+                alt="Allaitement et Perte de Poids - Guide complet pour maman allaitante"
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />

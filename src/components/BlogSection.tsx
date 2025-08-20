@@ -1,6 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Clock, User, ArrowRight } from 'lucide-react';
+import nutritionMenopause from '@/assets/nutrition-menopause-optimized.webp';
+import allaitement from '@/assets/allaitement-optimized.webp';
+import diabeteAliments from '@/assets/diabete-aliments-optimized.webp';
+import cholesterol from '@/assets/cholesterol-optimized.webp';
+import pertePoidsApres40 from '@/assets/perte-poids-40-optimized.webp';
+import thyroide from '@/assets/thyroide-optimized.webp';
+import hypertensionDash from '@/assets/hypertension-dash-optimized.webp';
 const BlogSection = () => {
   const articles = [{
     id: 'nutrition-menopause',
@@ -10,7 +17,7 @@ const BlogSection = () => {
     categoryColor: 'bg-pink-100 text-pink-800',
     author: 'Gabriela Ferent',
     readTime: '8 min',
-    image: 'https://images.unsplash.com/photo-1559526324-593bc073d938?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+    image: nutritionMenopause,
     link: '/articles/nutrition-menopause-guide'
   }, {
     id: 'allaitement-perte-poids',
@@ -20,7 +27,7 @@ const BlogSection = () => {
     categoryColor: 'bg-green-100 text-green-800',
     author: 'Gabriela Ferent',
     readTime: '10 min',
-    image: 'https://images.unsplash.com/photo-1476703993599-0035a21b17a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+    image: allaitement,
     link: '/articles/allaitement-perte-poids'
   }, {
     id: 'diabete-aliments',
@@ -30,7 +37,7 @@ const BlogSection = () => {
     categoryColor: 'bg-blue-100 text-blue-800',
     author: 'Gabriela Ferent',
     readTime: '12 min',
-    image: 'https://images.unsplash.com/photo-1490645935967-10de6ba17061?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+    image: diabeteAliments,
     link: '/articles/diabete-aliments-recommandes'
   }, {
     id: 'cholesterol-alimentation',
@@ -40,7 +47,7 @@ const BlogSection = () => {
     categoryColor: 'bg-purple-100 text-purple-800',
     author: 'Gabriela Ferent',
     readTime: '7 min',
-    image: 'https://images.unsplash.com/photo-1559757175-0eb30cd8c063?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+    image: cholesterol,
     link: '/articles/cholesterol-alimentation'
   }, {
     id: 'perte-poids-apres-40',
@@ -50,7 +57,7 @@ const BlogSection = () => {
     categoryColor: 'bg-pink-100 text-pink-800',
     author: 'Gabriela Ferent',
     readTime: '9 min',
-    image: 'https://images.unsplash.com/photo-1594381898411-846e7d193883?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+    image: pertePoidsApres40,
     link: '/articles/perte-poids-apres-40'
   }, {
     id: 'thyroide-alimentation',
@@ -60,7 +67,7 @@ const BlogSection = () => {
     categoryColor: 'bg-indigo-100 text-indigo-800',
     author: 'Gabriela Ferent',
     readTime: '11 min',
-    image: 'https://images.unsplash.com/photo-1559526324-4b87b5e36e44?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+    image: thyroide,
     link: '/articles/thyroide-alimentation'
   }, {
     id: 'hypertension-regime-dash',
@@ -70,7 +77,7 @@ const BlogSection = () => {
     categoryColor: 'bg-purple-100 text-purple-800',
     author: 'Gabriela Ferent',
     readTime: '8 min',
-    image: 'https://images.unsplash.com/photo-1505682634904-d7c8d95cdc50?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+    image: hypertensionDash,
     link: '/articles/hypertension-regime-dash'
   }, {
     id: 'troubles-digestifs',
@@ -80,7 +87,7 @@ const BlogSection = () => {
     categoryColor: 'bg-teal-100 text-teal-800',
     author: 'Gabriela Ferent',
     readTime: '10 min',
-    image: 'https://images.unsplash.com/photo-1490645935967-10de6ba17061?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+    image: diabeteAliments,
     link: '/articles/troubles-digestifs-solutions'
   }];
   return <section id="blog" className="py-20 bg-gradient-to-br from-green-25 to-blue-25">
@@ -106,7 +113,7 @@ const BlogSection = () => {
                 {articles.map((article, index) => <Link key={article.id} to={article.link} className="group bg-gradient-to-br from-white to-gray-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
                     {/* Article Image */}
                     <div className="relative h-24 overflow-hidden">
-                      <img src={article.image} alt={article.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                      <img src={article.image} alt={`Image illustrative pour l'article: ${article.title}`} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
                       <div className="absolute top-4 left-4">
                         <span className={`px-2 py-1 rounded-full text-xs font-semibold ${article.categoryColor}`}>
                           {article.category}
