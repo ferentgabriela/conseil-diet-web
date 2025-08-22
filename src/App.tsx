@@ -8,6 +8,7 @@ import { ScrollRestoration } from "./components/ScrollRestoration";
 import { HelmetProvider } from "react-helmet-async";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/react";
+import ErrorBoundary from '@/components/ErrorBoundary';
 import Index from "./pages/Index";
 import NotFound from "./pages/404";
 import Admin404s from "./pages/Admin404s";
@@ -31,13 +32,14 @@ const App = () => (
   <QueryClientProvider client={queryClient}>
     <HelmetProvider>
       <TooltipProvider>
-        <Toaster />
-        <Sonner />
-        <Analytics />
-        <SpeedInsights />
-        <BrowserRouter>
-          <ScrollRestoration />
-        <Routes>
+        <ErrorBoundary>
+          <Toaster />
+          <Sonner />
+          <Analytics />
+          <SpeedInsights />
+          <BrowserRouter>
+            <ScrollRestoration />
+          <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/articles/nutrition-menopause-guide" element={<NutritionMenopause />} />
           <Route path="/articles/allaitement-perte-poids" element={<AllaitementPertePoids />} />
@@ -56,6 +58,7 @@ const App = () => (
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
+      </ErrorBoundary>
       </TooltipProvider>
     </HelmetProvider>
   </QueryClientProvider>
