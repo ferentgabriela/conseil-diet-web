@@ -14,11 +14,12 @@ const NavigationMenu = ({ scrollToSection }: NavigationMenuProps) => {
 
   const handleMenuClick = (sectionId: string) => {
     if (location.pathname === '/') {
-      // On homepage, scroll to section
+      // On homepage, scroll to section and update URL hash
       scrollToSection(sectionId);
+      window.history.pushState(null, '', `#${sectionId}`);
     } else {
-      // On other pages, navigate to homepage then scroll
-      navigate('/');
+      // On other pages, navigate to homepage with hash
+      navigate(`/#${sectionId}`);
       setTimeout(() => {
         const element = document.getElementById(sectionId);
         if (element) {
