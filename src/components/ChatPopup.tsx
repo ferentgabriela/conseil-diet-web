@@ -104,7 +104,7 @@ export const ChatPopup = ({
       const [fullMatch, city, linkText, url] = match;
       parts.push(<span key={match.index}>
           {city} - 
-          <a href={url} target="_blank" rel="noopener noreferrer" className="text-green-600 hover:text-green-700 underline inline-flex items-center gap-1 ml-1">
+          <a href={url} target="_blank" rel="noopener noreferrer" className="text-green-600 hover:text-green-700 underline inline-flex items-center gap-1 ml-1" title={`Voir l'adresse du cabinet de ${city} sur la carte`}>
             {linkText}
             <ExternalLink className="h-3 w-3" />
           </a>

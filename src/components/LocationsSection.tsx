@@ -63,7 +63,7 @@ const LocationsSection = () => {
                       <Phone className="h-5 w-5 text-blue-600 mt-1 flex-shrink-0" />
                       <div className="flex-1">
                         <p className="font-medium text-gray-900">Téléphone</p>
-                        <a href={`tel:${location.phone}`} className="text-blue-600 hover:text-blue-700">
+                        <a href={`tel:${location.phone}`} className="text-blue-600 hover:text-blue-700" title={`Appeler le cabinet de ${location.name}`}>
                           {location.phone}
                         </a>
                       </div>

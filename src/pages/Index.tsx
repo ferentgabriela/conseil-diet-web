@@ -44,10 +44,10 @@ const Index = () => {
             <h1 className="text-3xl font-bold mb-4">Diététicienne à Luxembourg — Gabriela Ferent</h1>
             <nav className="mb-6">
               <ul className="flex flex-wrap gap-4">
-                <li><a href="#apropos" className="text-green-600 underline">À propos</a></li>
-                <li><a href="#services" className="text-green-600 underline">Services</a></li>
-                <li><a href="#cabinets" className="text-green-600 underline">Cabinets</a></li>
-                <li><a href="#contact" className="text-green-600 underline">Contact</a></li>
+                <li><a href="#apropos" className="text-green-600 underline" title="En savoir plus sur notre approche">À propos</a></li>
+                <li><a href="#services" className="text-green-600 underline" title="Découvrir nos services nutritionnels">Services</a></li>
+                <li><a href="#cabinets" className="text-green-600 underline" title="Choisir votre cabinet de consultation">Cabinets</a></li>
+                <li><a href="#contact" className="text-green-600 underline" title="Nous contacter pour plus d'informations">Contact</a></li>
               </ul>
             </nav>
           </header>
@@ -76,20 +76,20 @@ const Index = () => {
                 <div>
                   <h3 className="font-semibold">Luxembourg-Ville</h3>
                   <p>24, Boulevard de la Pétrusse, L-2320 Luxembourg</p>
-                  <p>Téléphone: <a href="tel:+352521226" className="text-green-600">52 12 26</a></p>
+                  <p>Téléphone: <a href="tel:+352521226" className="text-green-600" title="Appeler le cabinet de Luxembourg-Ville">52 12 26</a></p>
                 </div>
                 <div>
                   <h3 className="font-semibold">Ettelbruck</h3>
                   <p>19, Rue du Marché, L-9280 Diekirch</p>
-                  <p>Téléphone: <a href="tel:+352621479503" className="text-green-600">621 479 503</a></p>
+                  <p>Téléphone: <a href="tel:+352621479503" className="text-green-600" title="Appeler le cabinet d'Ettelbruck">621 479 503</a></p>
                 </div>
                 <div>
                   <h3 className="font-semibold">Insenborn</h3>  
                   <p>11, Duerfstrooss, L-8413 Insenborn</p>
-                  <p>Téléphone: <a href="tel:+352621479503" className="text-green-600">621 479 503</a></p>
+                  <p>Téléphone: <a href="tel:+352621479503" className="text-green-600" title="Appeler le cabinet d'Insenborn">621 479 503</a></p>
                 </div>
               </div>
-              <p className="mt-4"><strong>Rendez-vous via <a href="https://www.doctena.lu" className="text-green-600 underline" target="_blank" rel="noopener">Doctena</a></strong></p>
+              <p className="mt-4"><strong>Rendez-vous via <a href="https://www.doctena.lu" className="text-green-600 underline" target="_blank" rel="noopener" title="Réserver en ligne sur Doctena">Doctena</a></strong></p>
             </section>
           </main>
         </div>

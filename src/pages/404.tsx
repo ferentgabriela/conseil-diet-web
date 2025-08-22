@@ -132,7 +132,7 @@ const NotFound = () => {
             <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-8">
               <div className="flex items-center text-gray-600">
                 <Phone className="h-5 w-5 mr-2 text-green-600" />
-                <a href="tel:+352691379172" className="hover:text-green-600 transition-colors">
+                <a href="tel:+352691379172" className="hover:text-green-600 transition-colors" title="Appeler pour une consultation">
                   +352 691 379 172
                 </a>
               </div>

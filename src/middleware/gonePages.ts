@@ -27,9 +27,9 @@ export function createGoneResponse(): Response {
         <p>Cette page a été intentionnellement supprimée et ne reviendra pas.</p>
         <p>Vous pouvez :</p>
         <ul style="text-align: left; max-width: 300px; margin: 1rem auto;">
-          <li><a href="/">Retourner à l'accueil</a></li>
-          <li><a href="/#blog">Consulter nos articles</a></li>
-          <li><a href="/#cabinets">Prendre rendez-vous</a></li>
+          <li><a href="/" title="Retourner à la page d'accueil">Retourner à l'accueil</a></li>
+          <li><a href="/#blog" title="Lire nos articles sur la nutrition">Consulter nos articles</a></li>
+          <li><a href="/#cabinets" title="Réserver une consultation">Prendre rendez-vous</a></li>
         </ul>
       </div>
     </body>
