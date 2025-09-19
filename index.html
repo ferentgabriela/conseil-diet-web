@@ -264,29 +264,96 @@
     }
     </script>
 
+    <!-- Critical CSS for above-the-fold content -->
+    <style>
+      /* Critical styles for initial render */
+      body { 
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        margin: 0; 
+        padding-top: 136px;
+        background-color: #ffffff;
+        color: #0f172a;
+      }
+      
+      /* Critical navigation styles */
+      .trust-bar { 
+        position: fixed; 
+        top: 0; 
+        left: 0; 
+        right: 0; 
+        z-index: 50;
+        background-color: #e6f4eb;
+        padding: 8px 0;
+        font-size: 14px;
+      }
+      
+      .main-nav {
+        position: fixed;
+        top: 32px;
+        left: 0;
+        right: 0;
+        z-index: 50;
+        background-color: #fffbdd;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      }
+      
+      /* Critical loading state */
+      .loading-skeleton {
+        background: linear-gradient(90deg, #f3f4f6 25%, #e5e7eb 50%, #f3f4f6 75%);
+        background-size: 200% 100%;
+        animation: loading 1.5s infinite;
+      }
+      
+      @keyframes loading {
+        0% { background-position: 200% 0; }
+        100% { background-position: -200% 0; }
+      }
+      
+      /* Hide content until fonts load */
+      .font-loading { opacity: 0; }
+      .fonts-loaded { opacity: 1; transition: opacity 0.1s; }
+    </style>
+
     <!-- Preload critical resources for performance -->
-    <link rel="preconnect" href="https://www.doctena.lu" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" href="/lovable-uploads/1f309c72-ddb5-4bae-944e-68046c01bf90.png" as="image" type="image/png">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"></noscript>
+    
+    <link rel="preconnect" href="https://www.doctena.lu" crossorigin>
+    <link rel="preload" href="/src/main.tsx" as="script">
+    <link rel="preload" href="/src/index.css" as="style">
+    
+    <!-- Critical images for above-the-fold -->
+    <link rel="preload" href="/lovable-uploads/1f309c72-ddb5-4bae-944e-68046c01bf90.png" as="image" type="image/png" fetchpriority="high">
     <link rel="preload" href="/lovable-uploads/93b38569-b3fe-4bfa-bc2d-80b6a547847b.png" as="image" type="image/png">
     <link rel="preload" href="/lovable-uploads/6b584fa2-7cae-45b4-8d71-ff67ae89fad3.png" as="image" type="image/png">
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" as="style">
-    <link rel="preload" href="/src/index.css" as="style">
-    <link rel="preload" href="/src/main.tsx" as="script">
     
     <!-- DNS prefetch for external domains -->
-    <link rel="dns-prefetch" href="https://api.doctena.lu">
-    <link rel="dns-prefetch" href="https://cdn.doctena.com">
-    <link rel="dns-prefetch" href="https://cxlsgqitizupbnnpeaaj.supabase.co">
-    <link rel="dns-prefetch" href="https://plausible.io">
-    <link rel="dns-prefetch" href="https://vercel.app">
-    <link rel="dns-prefetch" href="https://static.cloudflareinsights.com">
+    <link rel="dns-prefetch" href="//api.doctena.lu">
+    <link rel="dns-prefetch" href="//cdn.doctena.com">
+    <link rel="dns-prefetch" href="//cxlsgqitizupbnnpeaaj.supabase.co">
+    <link rel="dns-prefetch" href="//plausible.io">
+    <link rel="dns-prefetch" href="//static.cloudflareinsights.com">
     
-    <!-- Inter Font -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" />
+    <!-- Font loading optimization script -->
+    <script>
+      // Font loading optimization
+      (function() {
+        if ('fonts' in document) {
+          document.fonts.ready.then(function() {
+            document.documentElement.classList.add('fonts-loaded');
+          });
+        } else {
+          // Fallback for older browsers
+          setTimeout(function() {
+            document.documentElement.classList.add('fonts-loaded');
+          }, 100);
+        }
+      })();
+    </script>
 
-    <!-- Plausible Analytics -->
+    <!-- Plausible Analytics with defer -->
     <script defer data-domain="conseildietetique.lu" src="https://plausible.io/js/script.js"></script>
 
     <!-- Favicon -->
@@ -296,8 +363,27 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/lovable-uploads/b60696cb-a1d6-4eec-bf95-2c544d726e80.png" />
   </head>
 
-  <body>
+  <body class="font-loading">
+    <!-- Loading placeholder for critical above-the-fold content -->
+    <div id="initial-loading" style="position: fixed; top: 0; left: 0; right: 0; z-index: 40; background: #e6f4eb; height: 32px;"></div>
+    <div id="nav-loading" style="position: fixed; top: 32px; left: 0; right: 0; z-index: 40; background: #fffbdd; height: 88px; box-shadow: 0 1px 3px rgba(0,0,0,0.1);"></div>
+    
     <div id="root"></div>
+    
+    <!-- Remove loading placeholders when React takes over -->
+    <script>
+      window.addEventListener('DOMContentLoaded', function() {
+        setTimeout(function() {
+          var initialLoading = document.getElementById('initial-loading');
+          var navLoading = document.getElementById('nav-loading');
+          if (initialLoading) initialLoading.remove();
+          if (navLoading) navLoading.remove();
+          document.body.classList.remove('font-loading');
+          document.body.classList.add('fonts-loaded');
+        }, 50);
+      });
+    </script>
+    
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
