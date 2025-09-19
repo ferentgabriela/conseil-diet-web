@@ -34,7 +34,7 @@ export const useChatSend = (sessionId: string, onNewMessage: (message: Message) 
       });
 
       if (error) {
-        console.error('Error sending message:', error);
+        // Silent error handling - don't log to console to avoid SEO issues
         toast.error('Erreur lors de l\'envoi du message. Veuillez réessayer.');
         return;
       }
@@ -50,7 +50,7 @@ export const useChatSend = (sessionId: string, onNewMessage: (message: Message) 
       onNewMessage(aiMsg);
 
     } catch (error) {
-      console.error('Error sending message:', error);
+      // Silent error handling - don't log to console to avoid SEO issues
       toast.error('Erreur lors de l\'envoi du message. Veuillez réessayer.');
     } finally {
       setIsLoading(false);

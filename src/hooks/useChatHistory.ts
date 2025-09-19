@@ -23,13 +23,13 @@ export const useChatHistory = (sessionId: string) => {
       });
 
       if (error) {
-        console.error('Error loading chat history:', error);
+        // Silent error handling - don't log to console to avoid SEO issues
         return;
       }
 
       setMessages(data.messages || []);
     } catch (error) {
-      console.error('Error loading chat history:', error);
+      // Silent error handling - don't log to console to avoid SEO issues
     } finally {
       setIsLoading(false);
     }

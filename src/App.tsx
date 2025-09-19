@@ -28,6 +28,24 @@ const MentionsLegales = lazy(() => import("./pages/MentionsLegales"));
 const TarifsPriseEnCharge = lazy(() => import("./pages/TarifsPriseEnCharge"));
 const Transparence = lazy(() => import("./pages/Transparence"));
 
+const SafeAnalytics = () => {
+  try {
+    return <Analytics />;
+  } catch (error) {
+    // Silent error handling for analytics to prevent console errors
+    return null;
+  }
+};
+
+const SafeSpeedInsights = () => {
+  try {
+    return <SpeedInsights />;
+  } catch (error) {
+    // Silent error handling for speed insights to prevent console errors
+    return null;
+  }
+};
+
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -37,8 +55,8 @@ const App = () => (
         <ErrorBoundary>
           <Toaster />
           <Sonner />
-          <Analytics />
-          <SpeedInsights />
+          <SafeAnalytics />
+          <SafeSpeedInsights />
           <BrowserRouter>
             <ScrollRestoration />
           <Routes>

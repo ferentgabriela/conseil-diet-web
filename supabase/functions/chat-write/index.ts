@@ -5,7 +5,7 @@ import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
 const openAIApiKey = Deno.env.get('OPENAI_API_KEY');
 
 const corsHeaders = {
-  'Access-Control-Allow-Origin': 'https://conseildietetique.vercel.app',
+  'Access-Control-Allow-Origin': '*',
   'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
   'Access-Control-Allow-Methods': 'POST, OPTIONS',
 };
@@ -319,7 +319,7 @@ Beende immer mit dem Vorschlag, einen Termin zu vereinbaren, falls angemessen.`
       throw new Error('Failed to save AI response');
     }
 
-    console.log('Chat exchange completed successfully for session');
+    console.log('Chat exchange completed successfully');
 
     return new Response(JSON.stringify({ 
       response: aiResponse
