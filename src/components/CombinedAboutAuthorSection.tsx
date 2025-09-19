@@ -27,6 +27,8 @@ const CombinedAboutAuthorSection = () => {
                   src="/lovable-uploads/41289576-41fe-474c-8330-dbd57c4e21b3.png"
                   alt="Gabriela Ferent - Diététicienne Nutritionniste Luxembourg"
                   className="w-full h-full object-cover"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-2">Gabriela Ferent</h3>
@@ -186,6 +188,8 @@ const CombinedAboutAuthorSection = () => {
               src={cabinetModerne}
               alt="Cabinet de diététique moderne Gabriela Ferent Luxembourg avec équipements professionnels"
               className="rounded-2xl shadow-2xl w-full max-w-2xl mx-auto h-80 object-cover"
+              loading="lazy"
+              decoding="async"
             />
             <p className="text-gray-600 mt-4 text-sm">
               Cabinet moderne équipé pour vos consultations nutritionnelles au Luxembourg

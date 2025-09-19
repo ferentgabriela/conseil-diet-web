@@ -37,6 +37,8 @@ const AllaitementPertePoids = () => {
                 src={allaitementImage}
                 alt="Allaitement et Perte de Poids - Guide complet pour maman allaitante"
                 className="w-full h-full object-cover"
+                loading="eager"
+                decoding="sync"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
             </div>

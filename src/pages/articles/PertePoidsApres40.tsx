@@ -31,6 +31,8 @@ const PertePoidsApres40 = () => {
                 src={weightLossImage}
                 alt="Perte de Poids Après 40 ans - Stratégies efficaces et durables"
                 className="w-full h-full object-cover"
+                loading="eager"
+                decoding="sync"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
             </div>

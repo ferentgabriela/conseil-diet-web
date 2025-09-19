@@ -31,6 +31,8 @@ const ThyroideAlimentation = () => {
                 src={thyroidImage}
                 alt="Thyroïde et Alimentation - Aliments pour optimiser la fonction thyroïdienne"
                 className="w-full h-full object-cover"
+                loading="eager"
+                decoding="sync"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
             </div>

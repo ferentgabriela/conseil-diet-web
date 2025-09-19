@@ -31,6 +31,8 @@ const CholesterolAlimentation = () => {
                 src={cholesterolImage}
                 alt="Cholestérol et Alimentation - Aliments pour réduire le cholestérol naturellement"
                 className="w-full h-full object-cover"
+                loading="eager"
+                decoding="sync"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
             </div>

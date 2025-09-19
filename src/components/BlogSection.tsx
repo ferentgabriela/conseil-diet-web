@@ -113,7 +113,7 @@ const BlogSection = () => {
                 {articles.map((article, index) => <Link key={article.id} to={article.link} className="group bg-gradient-to-br from-white to-gray-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
                     {/* Article Image */}
                     <div className="relative h-24 overflow-hidden">
-                      <img src={article.image} alt={`Image illustrative pour l'article: ${article.title}`} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                      <img src={article.image} alt={`Image illustrative pour l'article: ${article.title}`} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" decoding="async" />
                       <div className="absolute top-4 left-4">
                         <span className={`px-2 py-1 rounded-full text-xs font-semibold ${article.categoryColor}`}>
                           {article.category}

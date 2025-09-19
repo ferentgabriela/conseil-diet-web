@@ -61,6 +61,8 @@ const AboutPracticeSection = () => {
                   src="/lovable-uploads/439c16cb-316f-4141-90f1-f377e383bc31.png"
                   alt="Photo de Gabriela Ferent, diététicienne nutritionniste professionnelle au Luxembourg"
                   className="w-full h-full object-cover"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
             </div>

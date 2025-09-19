@@ -31,6 +31,8 @@ const HypertensionRegimeDash = () => {
                 src={dashDietImage}
                 alt="Hypertension et Régime DASH - Aliments recommandés pour réduire la tension"
                 className="w-full h-full object-cover"
+                loading="eager"
+                decoding="sync"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
             </div>
