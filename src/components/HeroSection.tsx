@@ -51,34 +51,32 @@ const HeroSection = () => {
       {/* Gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-black/10"></div>
       
-      <div className="container mx-auto px-4 text-center relative z-10">
-        <div className="max-w-4xl mx-auto">
-          {/* Text background overlay for better readability */}
-          <div className="bg-black/30 backdrop-blur-sm rounded-2xl p-8 md:p-12">
-            {/* Main H1 heading with fade-in animation */}
-            <h1 className="text-[40px] md:text-[56px] font-bold text-white mb-4 leading-tight animate-fade-in">
-              Diététicienne à Luxembourg — Gabriela Ferent
-            </h1>
-            
-            {/* First subtitle with larger size */}
-            <h2 className="text-[22px] md:text-[28px] font-medium text-white mt-4 mb-2 animate-fade-in [animation-delay:0.2s]">
-              3 cabinets au Luxembourg
-            </h2>
-            
-            {/* Second subtitle with smaller size */}
-            <h3 className="text-[16px] md:text-[20px] font-normal text-white mb-8 animate-fade-in [animation-delay:0.3s]">
-              Des consultations adaptées à votre santé, avec ou sans ordonnance
-            </h3>
-            
-            {/* CTA Button with enhanced hover effects and fade-in animation */}
-            <button
-              onClick={scrollToCabinets}
-              className="inline-flex items-center px-8 md:px-10 py-4 md:py-5 bg-green-700 text-white text-[16px] md:text-[20px] font-medium rounded-md transition-all duration-300 transform hover:scale-105 hover:shadow-lg animate-fade-in [animation-delay:0.4s]"
-              aria-label="Je réserve ma consultation de nutrition"
-            >
-              {t('hero.cta')}
-            </button>
-          </div>
+      <div className="hero-content">
+        {/* Text background overlay for better readability */}
+        <div className="hero-text-overlay">
+          {/* Main H1 heading with fade-in animation */}
+          <h1 className="hero-title">
+            Diététicienne à Luxembourg — Gabriela Ferent
+          </h1>
+          
+          {/* First subtitle with larger size */}
+          <h2 className="hero-subtitle">
+            3 cabinets au Luxembourg
+          </h2>
+          
+          {/* Second subtitle with smaller size */}
+          <h3 className="hero-description">
+            Des consultations adaptées à votre santé, avec ou sans ordonnance
+          </h3>
+          
+          {/* CTA Button with enhanced hover effects and fade-in animation */}
+          <button
+            onClick={scrollToCabinets}
+            className="hero-cta transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
+            aria-label="Je réserve ma consultation de nutrition"
+          >
+            {t('hero.cta')}
+          </button>
         </div>
       </div>
       
