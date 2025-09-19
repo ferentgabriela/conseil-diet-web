@@ -18,6 +18,26 @@ const DoctenaTestimonialsSection = () => {
           script.src = 'https://api.doctena.lu/js/widgetRatings/calendar/build.php';
           script.async = true;
           document.head.appendChild(script);
+
+          // Add iframe title after Doctena widget loads
+          const checkAndAddIframeTitle = () => {
+            const iframe = document.querySelector('#doctena-reviews-widget iframe');
+            if (iframe && !iframe.hasAttribute('title')) {
+              iframe.setAttribute('title', 'Avis patients vérifiés Doctena - Témoignages consultation diététique');
+            }
+          };
+
+          // Check for iframe periodically after script loads
+          const titleChecker = setInterval(() => {
+            checkAndAddIframeTitle();
+            const iframe = document.querySelector('#doctena-reviews-widget iframe');
+            if (iframe && iframe.hasAttribute('title')) {
+              clearInterval(titleChecker);
+            }
+          }, 500);
+
+          // Clear checker after 10 seconds to avoid infinite checking
+          setTimeout(() => clearInterval(titleChecker), 10000);
         }
       },
       { rootMargin: '100px' }
