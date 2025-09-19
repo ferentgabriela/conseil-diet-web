@@ -21,7 +21,6 @@ export default defineConfig(({ mode }) => ({
           query: ['@tanstack/react-query'],
           i18n: ['i18next', 'react-i18next', 'i18next-browser-languagedetector'],
           lucide: ['lucide-react'],
-          analytics: ['@vercel/analytics', '@vercel/speed-insights'],
           forms: ['react-hook-form', '@hookform/resolvers', 'zod'],
         }
       }
