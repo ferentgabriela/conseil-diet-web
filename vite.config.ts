@@ -25,7 +25,8 @@ export default defineConfig(({ mode }) => ({
           forms: ['react-hook-form', '@hookform/resolvers', 'zod'],
         }
       }
-    }
+    },
+    chunkSizeWarningLimit: 1000
   },
   plugins: [
     react(),

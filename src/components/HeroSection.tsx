@@ -33,14 +33,18 @@ const HeroSection = () => {
       role="banner"
       aria-label="Section hero avec images de nutrition et bien-être en arrière-plan"
     >
-      {/* Image slideshow */}
+      {/* Image slideshow with optimized loading */}
       {images.map((image, index) => (
-        <div
+        <img
           key={image}
-          className={`absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-1000 ${
+          src={image}
+          alt={index === 0 ? "Consultation de diététique en cours avec équipements de mesure corporelle professionnels" : "Images de nutrition et bien-être"}
+          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
             index === currentImageIndex ? 'opacity-100' : 'opacity-0'
           }`}
-          style={{ backgroundImage: `url('${image}')` }}
+          loading={index === 0 ? "eager" : "lazy"}
+          fetchPriority={index === 0 ? "high" : "low"}
+          decoding={index === 0 ? "sync" : "async"}
         />
       ))}
       
@@ -78,13 +82,6 @@ const HeroSection = () => {
         </div>
       </div>
       
-      {/* Hidden image for accessibility */}
-      <img 
-        src="/lovable-uploads/1f309c72-ddb5-4bae-944e-68046c01bf90.png" 
-        alt="Consultation de diététique en cours avec équipements de mesure corporelle professionnels"
-        className="sr-only"
-        aria-hidden="true"
-      />
     </section>
   );
 };
