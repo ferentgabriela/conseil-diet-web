@@ -8,16 +8,21 @@ const HowItWorksSection = () => {
     const cabinetsSection = document.getElementById('cabinets');
     console.log('Cabinets section found:', cabinetsSection);
     if (cabinetsSection) {
+      // Use fixed measurements to avoid getBoundingClientRect calls that cause reflows
       const trustBarHeight = 80;
       const navHeight = 96;
       const stickyBarHeight = 60;
       const offset = trustBarHeight + navHeight + stickyBarHeight;
-      const elementPosition = cabinetsSection.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - offset;
-      console.log('Scrolling to position:', offsetPosition);
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth'
+      
+      // Use requestAnimationFrame to avoid forced reflow when reading position
+      requestAnimationFrame(() => {
+        const elementTop = cabinetsSection.offsetTop;
+        const offsetPosition = elementTop - offset;
+        console.log('Scrolling to position:', offsetPosition);
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
       });
     } else {
       console.error('Cabinets section not found in DOM');

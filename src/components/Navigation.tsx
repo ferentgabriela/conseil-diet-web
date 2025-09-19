@@ -16,23 +16,22 @@ const Navigation = () => {
   // Handle scroll for sticky header effects
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
+      // Use requestAnimationFrame to avoid forced reflows
+      requestAnimationFrame(() => {
+        setIsScrolled(window.scrollY > 20);
+      });
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      // Get accurate measurements of fixed header elements
-      const trustBarElement = document.querySelector('div[class*="bg-green-50"]') || 
-                              document.querySelector('[style*="nav-trust-bar"]');
-      const navigationElement = document.querySelector('nav');
-      
-      const trustBarHeight = trustBarElement ? trustBarElement.getBoundingClientRect().height : 40;
-      const navigationHeight = navigationElement ? navigationElement.getBoundingClientRect().height : 88;
+      // Use fixed measurements to avoid getBoundingClientRect calls that cause reflows
+      const trustBarHeight = 40;  // Fixed height for performance
+      const navigationHeight = 88; // Fixed height for performance
       
       // Section-specific padding adjustments for optimal positioning
       const sectionPadding = {
@@ -50,19 +49,15 @@ const Navigation = () => {
       const extraPadding = sectionPadding[sectionId as keyof typeof sectionPadding] || 40;
       const totalOffset = trustBarHeight + navigationHeight + extraPadding;
       
-      // Calculate precise scroll position
-      const elementPosition = element.getBoundingClientRect().top + window.scrollY;
-      const targetPosition = Math.max(0, elementPosition - totalOffset);
-      
-      // Ensure we don't scroll past the bottom of the page
-      const documentHeight = document.documentElement.scrollHeight;
-      const windowHeight = window.innerHeight;
-      const maxScrollPosition = documentHeight - windowHeight;
-      const finalPosition = Math.min(targetPosition, maxScrollPosition);
-      
-      window.scrollTo({
-        top: finalPosition,
-        behavior: 'smooth'
+      // Use requestAnimationFrame to avoid forced reflow when reading position
+      requestAnimationFrame(() => {
+        const elementTop = element.offsetTop;
+        const targetPosition = Math.max(0, elementTop - totalOffset);
+        
+        window.scrollTo({
+          top: targetPosition,
+          behavior: 'smooth'
+        });
       });
     }
     setIsMenuOpen(false);

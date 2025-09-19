@@ -6,21 +6,20 @@ const ServicesSection = () => {
   const scrollToCabinets = () => {
     const cabinetsSection = document.getElementById('cabinets');
     if (cabinetsSection) {
-      // Get accurate measurements of fixed header elements
-      const trustBarElement = document.querySelector('div[class*="bg-green-50"]') || 
-                              document.querySelector('[style*="nav-trust-bar"]');
-      const navigationElement = document.querySelector('nav');
-      
-      const trustBarHeight = trustBarElement ? trustBarElement.getBoundingClientRect().height : 40;
-      const navigationHeight = navigationElement ? navigationElement.getBoundingClientRect().height : 88;
+      // Use fixed measurements to avoid getBoundingClientRect calls that cause reflows
+      const trustBarHeight = 40;
+      const navigationHeight = 88;
       const totalOffset = trustBarHeight + navigationHeight;
       
-      const elementPosition = cabinetsSection.getBoundingClientRect().top + window.scrollY;
-      const targetPosition = Math.max(0, elementPosition - totalOffset);
-      
-      window.scrollTo({
-        top: targetPosition,
-        behavior: 'smooth'
+      // Use requestAnimationFrame to avoid forced reflow when reading position
+      requestAnimationFrame(() => {
+        const elementTop = cabinetsSection.offsetTop;
+        const targetPosition = Math.max(0, elementTop - totalOffset);
+        
+        window.scrollTo({
+          top: targetPosition,
+          behavior: 'smooth'
+        });
       });
     }
   };

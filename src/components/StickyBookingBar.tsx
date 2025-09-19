@@ -6,34 +6,37 @@ const StickyBookingBar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollPosition = window.scrollY;
-      setIsVisible(scrollPosition > 250);
+      // Use requestAnimationFrame to avoid forced reflows
+      requestAnimationFrame(() => {
+        const scrollPosition = window.scrollY;
+        setIsVisible(scrollPosition > 250);
+      });
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const scrollToCabinets = () => {
     const cabinetsSection = document.getElementById('cabinets');
     if (cabinetsSection) {
-      const trustBarElement = document.querySelector('div[class*="bg-green-50"]');
-      const navigationElement = document.querySelector('nav');
-      const stickyBarElement = document.querySelector('[data-sticky-booking-bar]');
-      
-      const trustBarHeight = trustBarElement ? trustBarElement.getBoundingClientRect().height : 40;
-      const navigationHeight = navigationElement ? navigationElement.getBoundingClientRect().height : 88;
-      const stickyBarHeight = stickyBarElement ? stickyBarElement.getBoundingClientRect().height : 60;
+      // Use fixed measurements to avoid getBoundingClientRect calls that cause reflows
+      const trustBarHeight = 40;
+      const navigationHeight = 88;
+      const stickyBarHeight = 60;
       const extraPadding = 20;
       
       const totalOffset = trustBarHeight + navigationHeight + stickyBarHeight + extraPadding;
       
-      const elementPosition = cabinetsSection.getBoundingClientRect().top + window.scrollY;
-      const targetPosition = Math.max(0, elementPosition - totalOffset);
+      // Use requestAnimationFrame to avoid forced reflow when reading position
+      requestAnimationFrame(() => {
+        const elementTop = cabinetsSection.offsetTop;
+        const targetPosition = Math.max(0, elementTop - totalOffset);
 
-      window.scrollTo({
-        top: targetPosition,
-        behavior: 'smooth'
+        window.scrollTo({
+          top: targetPosition,
+          behavior: 'smooth'
+        });
       });
     }
   };
