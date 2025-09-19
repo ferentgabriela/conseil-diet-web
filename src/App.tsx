@@ -32,18 +32,28 @@ const Contact = lazy(() => import("./pages/Contact"));
 
 const SafeAnalytics = () => {
   try {
-    return <Analytics />;
+    // Only load analytics in production to prevent console errors in development
+    if (typeof window !== 'undefined' && window.location.hostname !== 'localhost') {
+      return <Analytics mode="production" />;
+    }
+    return null;
   } catch (error) {
     // Silent error handling for analytics to prevent console errors
+    console.warn('Analytics failed to load:', error);
     return null;
   }
 };
 
 const SafeSpeedInsights = () => {
   try {
-    return <SpeedInsights />;
+    // Only load speed insights in production to prevent console errors in development
+    if (typeof window !== 'undefined' && window.location.hostname !== 'localhost') {
+      return <SpeedInsights />;
+    }
+    return null;
   } catch (error) {
     // Silent error handling for speed insights to prevent console errors
+    console.warn('Speed insights failed to load:', error);
     return null;
   }
 };
