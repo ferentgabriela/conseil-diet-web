@@ -23,7 +23,7 @@ const NavigationLogo = () => {
     <div className="flex items-center">
       <button onClick={handleLogoClick} className="cursor-pointer">
         <img 
-          src="/assets/logo-optimized.webp" 
+          src="/lovable-uploads/179c4bde-bcf3-45a7-8ea4-73a54222deb3.png" 
           alt="Logo Conseil Diététique Luxembourg - Gabriela Ferent" 
           className="h-12 md:h-16 lg:h-20 w-auto transition-transform hover:scale-105"
         />

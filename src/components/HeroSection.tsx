@@ -7,9 +7,9 @@ const HeroSection = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   
   const images = [
-    '/assets/hero-kitchen-optimized.webp', // Original kitchen image
-    '/assets/hero-doctor-optimized.webp', // Doctor with fruits
-    '/assets/hero-vegetables-optimized.webp', // Fresh vegetables
+    '/lovable-uploads/1f309c72-ddb5-4bae-944e-68046c01bf90.png', // Original kitchen image
+    '/lovable-uploads/93b38569-b3fe-4bfa-bc2d-80b6a547847b.png', // Doctor with fruits
+    '/lovable-uploads/6b584fa2-7cae-45b4-8d71-ff67ae89fad3.png', // Fresh vegetables
   ];
 
   useEffect(() => {
@@ -80,7 +80,7 @@ const HeroSection = () => {
       
       {/* Hidden image for accessibility */}
       <img 
-        src="/assets/hero-kitchen-optimized.webp" 
+        src="/lovable-uploads/1f309c72-ddb5-4bae-944e-68046c01bf90.png" 
         alt="Consultation de diététique en cours avec équipements de mesure corporelle professionnels"
         className="sr-only"
         aria-hidden="true"
