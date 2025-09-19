@@ -1,6 +1,7 @@
 import React from 'react';
 import { Euro, Shield, Calendar, Clock, Phone, HelpCircle, Stethoscope, ArrowRight, FileText } from 'lucide-react';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
+import { scrollToElement } from '../utils/scrollUtils';
 
 interface FAQSectionProps {
   onOpenChat?: () => void;
@@ -8,10 +9,7 @@ interface FAQSectionProps {
 
 const FAQSection = ({ onOpenChat }: FAQSectionProps) => {
   const scrollToCabinets = () => {
-    const cabinetsSection = document.getElementById('cabinets');
-    if (cabinetsSection) {
-      cabinetsSection.scrollIntoView({ behavior: 'smooth' });
-    }
+    scrollToElement('cabinets');
   };
 
   const faqs = [

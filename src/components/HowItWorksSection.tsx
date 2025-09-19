@@ -1,33 +1,14 @@
 import React from 'react';
 import { Calendar, FileText, TrendingUp, ArrowRight, Sparkles, Heart, CheckCircle } from 'lucide-react';
+import { scrollToElement } from '../utils/scrollUtils';
+
 const HowItWorksSection = () => {
   const scrollToCabinets = (e: React.MouseEvent) => {
     e.preventDefault();
     e.stopPropagation();
-    console.log('Button clicked - attempting to scroll to cabinets');
-    const cabinetsSection = document.getElementById('cabinets');
-    console.log('Cabinets section found:', cabinetsSection);
-    if (cabinetsSection) {
-      // Use fixed measurements to avoid getBoundingClientRect calls that cause reflows
-      const trustBarHeight = 80;
-      const navHeight = 96;
-      const stickyBarHeight = 60;
-      const offset = trustBarHeight + navHeight + stickyBarHeight;
-      
-      // Use requestAnimationFrame to avoid forced reflow when reading position
-      requestAnimationFrame(() => {
-        const elementTop = cabinetsSection.offsetTop;
-        const offsetPosition = elementTop - offset;
-        console.log('Scrolling to position:', offsetPosition);
-        window.scrollTo({
-          top: offsetPosition,
-          behavior: 'smooth'
-        });
-      });
-    } else {
-      console.error('Cabinets section not found in DOM');
-    }
+    scrollToElement('cabinets', 60); // Add extra offset for sticky bar
   };
+
   const steps = [{
     icon: Calendar,
     title: "RDV Initial + Évaluation",

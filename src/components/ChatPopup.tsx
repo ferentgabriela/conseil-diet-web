@@ -8,6 +8,7 @@ import { ScrollArea } from '@/components/ui/scroll-area';
 import { Badge } from '@/components/ui/badge';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 import { useChatHistory } from '@/hooks/useChatHistory';
+import { scrollToElement } from '../utils/scrollUtils';
 import { useChatSend } from '@/hooks/useChatSend';
 import { ForwardMessageDialog } from './ForwardMessageDialog';
 interface Message {
@@ -44,8 +45,10 @@ export const ChatPopup = ({
   });
   const isLoading = historyLoading || sendLoading;
   const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({
-      behavior: 'smooth'
+    requestAnimationFrame(() => {
+      messagesEndRef.current?.scrollIntoView({
+        behavior: 'smooth'
+      });
     });
   };
   useEffect(() => {
@@ -70,12 +73,7 @@ export const ChatPopup = ({
     text: "Prendre rendez-vous sur Doctena",
     action: () => {
       // For now, scroll to cabinets section so user can choose location
-      const cabinetsSection = document.getElementById('cabinets');
-      if (cabinetsSection) {
-        cabinetsSection.scrollIntoView({
-          behavior: 'smooth'
-        });
-      }
+      scrollToElement('cabinets');
     }
   }, {
     text: "Contacter Gabriela",

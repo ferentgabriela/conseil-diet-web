@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { MapPin, Calendar, Clock, UserCheck, Lock } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import { scrollToElement } from '../utils/scrollUtils';
 
 const HeroSection = () => {
   const { t } = useTranslation();
@@ -21,10 +22,7 @@ const HeroSection = () => {
   }, [images.length]);
 
   const scrollToCabinets = () => {
-    const cabinetsSection = document.getElementById('cabinets');
-    if (cabinetsSection) {
-      cabinetsSection.scrollIntoView({ behavior: 'smooth' });
-    }
+    scrollToElement('cabinets');
   };
 
   return (

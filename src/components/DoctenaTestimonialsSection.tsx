@@ -1,6 +1,7 @@
 
 import React, { useEffect, useState, useRef } from 'react';
 import { Star, Calendar, ArrowRight, Sparkles } from 'lucide-react';
+import { scrollToElement } from '../utils/scrollUtils';
 
 const DoctenaTestimonialsSection = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -58,10 +59,7 @@ const DoctenaTestimonialsSection = () => {
   }, [isVisible]);
 
   const scrollToCabinets = () => {
-    const cabinetsSection = document.getElementById('cabinets');
-    if (cabinetsSection) {
-      cabinetsSection.scrollIntoView({ behavior: 'smooth' });
-    }
+    scrollToElement('cabinets');
   };
 
   return (

@@ -1,27 +1,20 @@
 
 import React, { useState, useEffect } from 'react';
 import { Calendar, ExternalLink, Clock } from 'lucide-react';
+import { scrollToElement, createThrottledScrollListener } from '../utils/scrollUtils';
 
 const FloatingCTA = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      // Use requestAnimationFrame to avoid forced reflows
-      requestAnimationFrame(() => {
-        setIsVisible(window.scrollY > 300);
-      });
-    };
+    const handleScroll = createThrottledScrollListener(setIsVisible, 300);
 
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const scrollToCabinets = () => {
-    const cabinetsSection = document.getElementById('cabinets');
-    if (cabinetsSection) {
-      cabinetsSection.scrollIntoView({ behavior: 'smooth' });
-    }
+    scrollToElement('cabinets');
   };
 
   if (!isVisible) return null;

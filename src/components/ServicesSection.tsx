@@ -1,27 +1,11 @@
 
 import React from 'react';
 import { Scale, Heart, Zap, Baby, Salad, Stethoscope } from 'lucide-react';
+import { scrollToElement } from '../utils/scrollUtils';
 
 const ServicesSection = () => {
   const scrollToCabinets = () => {
-    const cabinetsSection = document.getElementById('cabinets');
-    if (cabinetsSection) {
-      // Use fixed measurements to avoid getBoundingClientRect calls that cause reflows
-      const trustBarHeight = 40;
-      const navigationHeight = 88;
-      const totalOffset = trustBarHeight + navigationHeight;
-      
-      // Use requestAnimationFrame to avoid forced reflow when reading position
-      requestAnimationFrame(() => {
-        const elementTop = cabinetsSection.offsetTop;
-        const targetPosition = Math.max(0, elementTop - totalOffset);
-        
-        window.scrollTo({
-          top: targetPosition,
-          behavior: 'smooth'
-        });
-      });
-    }
+    scrollToElement('cabinets');
   };
   
   const services = [

@@ -1,44 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import { Calendar } from 'lucide-react';
+import { scrollToElement, createThrottledScrollListener } from '../utils/scrollUtils';
 
 const StickyBookingBar = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      // Use requestAnimationFrame to avoid forced reflows
-      requestAnimationFrame(() => {
-        const scrollPosition = window.scrollY;
-        setIsVisible(scrollPosition > 250);
-      });
-    };
+    const handleScroll = createThrottledScrollListener((scrolled) => {
+      setIsVisible(scrolled);
+    }, 250); // Show after scrolling 250px
 
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const scrollToCabinets = () => {
-    const cabinetsSection = document.getElementById('cabinets');
-    if (cabinetsSection) {
-      // Use fixed measurements to avoid getBoundingClientRect calls that cause reflows
-      const trustBarHeight = 40;
-      const navigationHeight = 88;
-      const stickyBarHeight = 60;
-      const extraPadding = 20;
-      
-      const totalOffset = trustBarHeight + navigationHeight + stickyBarHeight + extraPadding;
-      
-      // Use requestAnimationFrame to avoid forced reflow when reading position
-      requestAnimationFrame(() => {
-        const elementTop = cabinetsSection.offsetTop;
-        const targetPosition = Math.max(0, elementTop - totalOffset);
-
-        window.scrollTo({
-          top: targetPosition,
-          behavior: 'smooth'
-        });
-      });
-    }
+    scrollToElement('cabinets', 60); // Add extra offset for sticky bar
   };
 
   if (!isVisible) return null;

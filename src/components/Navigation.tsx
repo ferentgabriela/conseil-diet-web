@@ -7,59 +7,23 @@ import NavigationLogo from './navigation/NavigationLogo';
 import NavigationMenu from './navigation/NavigationMenu';
 import NavigationCTA from './navigation/NavigationCTA';
 import MobileMenu from './navigation/MobileMenu';
+import { scrollToElement, createThrottledScrollListener } from '../utils/scrollUtils';
 
 const Navigation = () => {
   const { t } = useTranslation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
-  // Handle scroll for sticky header effects
+  // Handle scroll for sticky header effects with throttling
   useEffect(() => {
-    const handleScroll = () => {
-      // Use requestAnimationFrame to avoid forced reflows
-      requestAnimationFrame(() => {
-        setIsScrolled(window.scrollY > 20);
-      });
-    };
-
+    const handleScroll = createThrottledScrollListener(setIsScrolled);
+    
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      // Use fixed measurements to avoid getBoundingClientRect calls that cause reflows
-      const trustBarHeight = 40;  // Fixed height for performance
-      const navigationHeight = 88; // Fixed height for performance
-      
-      // Section-specific padding adjustments for optimal positioning
-      const sectionPadding = {
-        'accueil': 0,           // Hero section - no extra padding
-        'apropos': 0,           // About section - no extra padding
-        'processus': 0,         // Process section - no extra padding
-        'services': 0,          // Services section - no extra padding
-        'transformations': 0,   // Testimonials section - no extra padding
-        'cabinets': 0,          // Cabinets section - no extra padding
-        'faq': 0,               // FAQ section - no extra padding
-        'blog': 0,              // Blog section - no extra padding
-        'locations': 0,         // Locations section - no extra padding
-      } as const;
-      
-      const extraPadding = sectionPadding[sectionId as keyof typeof sectionPadding] || 40;
-      const totalOffset = trustBarHeight + navigationHeight + extraPadding;
-      
-      // Use requestAnimationFrame to avoid forced reflow when reading position
-      requestAnimationFrame(() => {
-        const elementTop = element.offsetTop;
-        const targetPosition = Math.max(0, elementTop - totalOffset);
-        
-        window.scrollTo({
-          top: targetPosition,
-          behavior: 'smooth'
-        });
-      });
-    }
+    scrollToElement(sectionId);
     setIsMenuOpen(false);
   };
 
