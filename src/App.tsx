@@ -28,6 +28,7 @@ const MentionsLegales = lazy(() => import("./pages/MentionsLegales"));
 const TarifsPriseEnCharge = lazy(() => import("./pages/TarifsPriseEnCharge"));
 const Prestations = lazy(() => import("./pages/Prestations"));
 const Transparence = lazy(() => import("./pages/Transparence"));
+const Contact = lazy(() => import("./pages/Contact"));
 
 const SafeAnalytics = () => {
   try {
@@ -75,6 +76,7 @@ const App = () => (
           <Route path="/tarifs-prise-en-charge" element={<Suspense fallback={<div>Chargement...</div>}><TarifsPriseEnCharge /></Suspense>} />
           <Route path="/prestations" element={<Suspense fallback={<div>Chargement...</div>}><Prestations /></Suspense>} />
           <Route path="/transparence" element={<Suspense fallback={<div>Chargement...</div>}><Transparence /></Suspense>} />
+          <Route path="/contact" element={<Suspense fallback={<div>Chargement...</div>}><Contact /></Suspense>} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<Suspense fallback={<div>Chargement...</div>}><NotFound /></Suspense>} />
         </Routes>
