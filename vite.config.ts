@@ -11,8 +11,18 @@ export default defineConfig(({ mode }) => ({
   },
   build: {
     sourcemap: true,
+    cssCodeSplit: true,
     rollupOptions: {
       output: {
+        // Extract CSS to separate files for async loading
+        assetFileNames: (assetInfo) => {
+          if (!assetInfo.name) return 'assets/[name]-[hash][extname]';
+          let extType = assetInfo.name.split('.').at(1);
+          if (extType && /png|jpe?g|svg|gif|tiff|bmp|ico/i.test(extType)) {
+            extType = 'img';
+          }
+          return `assets/${extType || 'misc'}/[name]-[hash][extname]`;
+        },
         manualChunks: {
           // Core React chunks
           'react-core': ['react', 'react-dom'],

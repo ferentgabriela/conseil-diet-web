@@ -435,10 +435,45 @@
     <link rel="dns-prefetch" href="//plausible.io">
     <link rel="dns-prefetch" href="//static.cloudflareinsights.com">
     
-    <!-- Font loading optimization script -->
+    <!-- CSS Loading Optimization Script -->
     <script>
-      // Font loading optimization
+      // Load CSS asynchronously to prevent render blocking
       (function() {
+        // Intercept Vite's automatic CSS injection to make it async
+        const observer = new MutationObserver(function(mutations) {
+          mutations.forEach(function(mutation) {
+            mutation.addedNodes.forEach(function(node) {
+              if (node.nodeType === 1 && node.tagName === 'LINK' && 
+                  node.rel === 'stylesheet' && node.href && 
+                  node.href.includes('/assets/') && node.href.includes('.css')) {
+                
+                // Make the CSS load asynchronously
+                node.media = 'print';
+                node.onload = function() {
+                  this.media = 'all';
+                  this.onload = null;
+                };
+                
+                // Fallback for browsers that don't support onload for links
+                setTimeout(function() {
+                  if (node.media === 'print') {
+                    node.media = 'all';
+                  }
+                }, 50);
+              }
+            });
+          });
+        });
+        
+        // Start observing
+        observer.observe(document.head, { childList: true });
+        
+        // Stop observing after page load
+        window.addEventListener('load', function() {
+          observer.disconnect();
+        }, { once: true });
+        
+        // Font loading optimization
         if ('fonts' in document) {
           document.fonts.ready.then(function() {
             document.documentElement.classList.add('fonts-loaded');
