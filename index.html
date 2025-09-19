@@ -304,6 +304,25 @@
         animation: loading 1.5s infinite;
       }
       
+      /* Critical hero styles */
+      #accueil {
+        position: relative;
+        min-height: 80vh;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        margin-top: -8px;
+      }
+      
+      #accueil img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      
       @keyframes loading {
         0% { background-position: 200% 0; }
         100% { background-position: -200% 0; }
@@ -328,11 +347,17 @@
     
     <!-- Critical images for above-the-fold with high priority -->
     <link rel="preload" href="/lovable-uploads/1f309c72-ddb5-4bae-944e-68046c01bf90.png" as="image" type="image/png" fetchpriority="high">
+    <link rel="preload" href="/lovable-uploads/93b38569-b3fe-4bfa-bc2d-80b6a547847b.png" as="image" type="image/png" fetchpriority="high">
+    <link rel="preload" href="/lovable-uploads/6b584fa2-7cae-45b4-8d71-ff67ae89fad3.png" as="image" type="image/png" fetchpriority="low">
+    <link rel="preload" href="/lovable-uploads/179c4bde-bcf3-45a7-8ea4-73a54222deb3.png" as="image" type="image/png" fetchpriority="high">
     <link rel="modulepreload" href="/src/main.tsx">
     <link rel="modulepreload" href="/src/App.tsx">
     <link rel="modulepreload" href="/src/pages/Index.tsx">
     <link rel="modulepreload" href="/src/components/HeroSection.tsx">
     <link rel="modulepreload" href="/src/components/Navigation.tsx">
+    <link rel="modulepreload" href="/src/utils/scrollUtils.tsx">
+    <link rel="prefetch" href="/src/components/BlogSection.tsx">
+    <link rel="prefetch" href="/src/components/ServicesSection.tsx">
     
     <!-- DNS prefetch for external domains -->
     <link rel="dns-prefetch" href="//api.doctena.lu">
