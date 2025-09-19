@@ -6,8 +6,6 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ScrollRestoration } from "./components/ScrollRestoration";
 import { HelmetProvider } from "react-helmet-async";
-import { Analytics } from "@vercel/analytics/react";
-import { SpeedInsights } from "@vercel/speed-insights/react";
 import ErrorBoundary from '@/components/ErrorBoundary';
 import { Suspense, lazy } from "react";
 
@@ -30,33 +28,6 @@ const Prestations = lazy(() => import("./pages/Prestations"));
 const Transparence = lazy(() => import("./pages/Transparence"));
 const Contact = lazy(() => import("./pages/Contact"));
 
-const SafeAnalytics = () => {
-  try {
-    // Only load analytics in production to prevent console errors in development
-    if (typeof window !== 'undefined' && window.location.hostname !== 'localhost') {
-      return <Analytics mode="production" />;
-    }
-    return null;
-  } catch (error) {
-    // Silent error handling for analytics to prevent console errors
-    console.warn('Analytics failed to load:', error);
-    return null;
-  }
-};
-
-const SafeSpeedInsights = () => {
-  try {
-    // Only load speed insights in production to prevent console errors in development
-    if (typeof window !== 'undefined' && window.location.hostname !== 'localhost') {
-      return <SpeedInsights />;
-    }
-    return null;
-  } catch (error) {
-    // Silent error handling for speed insights to prevent console errors
-    console.warn('Speed insights failed to load:', error);
-    return null;
-  }
-};
 
 const queryClient = new QueryClient();
 
@@ -67,8 +38,6 @@ const App = () => (
         <ErrorBoundary>
           <Toaster />
           <Sonner />
-          <SafeAnalytics />
-          <SafeSpeedInsights />
           <BrowserRouter>
             <ScrollRestoration />
           <Routes>
