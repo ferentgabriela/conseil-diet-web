@@ -1,23 +1,41 @@
 
-import React, { useEffect } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { Star, Calendar, ArrowRight, Sparkles } from 'lucide-react';
 
 const DoctenaTestimonialsSection = () => {
-  // Load Doctena testimonials script
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef<HTMLElement>(null);
+
+  // Load Doctena testimonials script only when section is visible
   useEffect(() => {
-    const script = document.createElement('script');
-    script.src = 'https://api.doctena.lu/js/widgetRatings/calendar/build.php';
-    script.async = true;
-    document.head.appendChild(script);
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting && !isVisible) {
+          setIsVisible(true);
+          
+          // Load script only when visible
+          const script = document.createElement('script');
+          script.src = 'https://api.doctena.lu/js/widgetRatings/calendar/build.php';
+          script.async = true;
+          document.head.appendChild(script);
+        }
+      },
+      { rootMargin: '100px' }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
 
     return () => {
+      observer.disconnect();
       // Cleanup script on unmount
       const existingScript = document.querySelector('script[src="https://api.doctena.lu/js/widgetRatings/calendar/build.php"]');
       if (existingScript) {
         existingScript.remove();
       }
     };
-  }, []);
+  }, [isVisible]);
 
   const scrollToCabinets = () => {
     const cabinetsSection = document.getElementById('cabinets');
@@ -27,7 +45,7 @@ const DoctenaTestimonialsSection = () => {
   };
 
   return (
-    <section className="relative overflow-hidden">
+    <section ref={sectionRef} className="relative overflow-hidden">
       {/* Full testimonials widget section */}
       <div className="py-20 bg-white">
         <div className="container mx-auto px-4">

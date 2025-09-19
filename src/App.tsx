@@ -9,22 +9,24 @@ import { HelmetProvider } from "react-helmet-async";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/react";
 import ErrorBoundary from '@/components/ErrorBoundary';
-import Index from "./pages/Index";
-import NotFound from "./pages/404";
-import Admin404s from "./pages/Admin404s";
-import Custom404 from "./pages/Custom404";
-import NutritionMenopause from "./pages/articles/NutritionMenopause";
-import AllaitementPertePoids from "./pages/articles/AllaitementPertePoids";
-import DiabeteAliments from "./pages/articles/DiabeteAliments";
-import CholesterolAlimentation from "./pages/articles/CholesterolAlimentation";
-import TroublesDigestifs from "./pages/articles/TroublesDigestifs";
-import PertePoidsApres40 from "./pages/articles/PertePoidsApres40";
-import HypertensionRegimeDash from "./pages/articles/HypertensionRegimeDash";
-import ThyroideAlimentation from "./pages/articles/ThyroideAlimentation";
-import MentionsLegales from "./pages/MentionsLegales";
-import TarifsPriseEnCharge from "./pages/TarifsPriseEnCharge";
+import { Suspense, lazy } from "react";
 
-import Transparence from "./pages/Transparence";
+// Lazy load all page components
+const Index = lazy(() => import("./pages/Index"));
+const NotFound = lazy(() => import("./pages/404"));
+const Admin404s = lazy(() => import("./pages/Admin404s"));
+const Custom404 = lazy(() => import("./pages/Custom404"));
+const NutritionMenopause = lazy(() => import("./pages/articles/NutritionMenopause"));
+const AllaitementPertePoids = lazy(() => import("./pages/articles/AllaitementPertePoids"));
+const DiabeteAliments = lazy(() => import("./pages/articles/DiabeteAliments"));
+const CholesterolAlimentation = lazy(() => import("./pages/articles/CholesterolAlimentation"));
+const TroublesDigestifs = lazy(() => import("./pages/articles/TroublesDigestifs"));
+const PertePoidsApres40 = lazy(() => import("./pages/articles/PertePoidsApres40"));
+const HypertensionRegimeDash = lazy(() => import("./pages/articles/HypertensionRegimeDash"));
+const ThyroideAlimentation = lazy(() => import("./pages/articles/ThyroideAlimentation"));
+const MentionsLegales = lazy(() => import("./pages/MentionsLegales"));
+const TarifsPriseEnCharge = lazy(() => import("./pages/TarifsPriseEnCharge"));
+const Transparence = lazy(() => import("./pages/Transparence"));
 
 const queryClient = new QueryClient();
 
@@ -40,22 +42,22 @@ const App = () => (
           <BrowserRouter>
             <ScrollRestoration />
           <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/articles/nutrition-menopause-guide" element={<NutritionMenopause />} />
-          <Route path="/articles/allaitement-perte-poids" element={<AllaitementPertePoids />} />
-          <Route path="/articles/diabete-aliments-recommandes" element={<DiabeteAliments />} />
-          <Route path="/articles/cholesterol-alimentation" element={<CholesterolAlimentation />} />
-          <Route path="/articles/troubles-digestifs-solutions" element={<TroublesDigestifs />} />
-          <Route path="/articles/perte-poids-apres-40" element={<PertePoidsApres40 />} />
-          <Route path="/articles/hypertension-regime-dash" element={<HypertensionRegimeDash />} />
-          <Route path="/articles/thyroide-alimentation" element={<ThyroideAlimentation />} />
-          <Route path="/admin/404s" element={<Admin404s />} />
-          <Route path="/mentions-legales" element={<MentionsLegales />} />
-          <Route path="/tarifs-prise-en-charge" element={<TarifsPriseEnCharge />} />
+          <Route path="/" element={<Suspense fallback={<div>Chargement...</div>}><Index /></Suspense>} />
+          <Route path="/articles/nutrition-menopause-guide" element={<Suspense fallback={<div>Chargement...</div>}><NutritionMenopause /></Suspense>} />
+          <Route path="/articles/allaitement-perte-poids" element={<Suspense fallback={<div>Chargement...</div>}><AllaitementPertePoids /></Suspense>} />
+          <Route path="/articles/diabete-aliments-recommandes" element={<Suspense fallback={<div>Chargement...</div>}><DiabeteAliments /></Suspense>} />
+          <Route path="/articles/cholesterol-alimentation" element={<Suspense fallback={<div>Chargement...</div>}><CholesterolAlimentation /></Suspense>} />
+          <Route path="/articles/troubles-digestifs-solutions" element={<Suspense fallback={<div>Chargement...</div>}><TroublesDigestifs /></Suspense>} />
+          <Route path="/articles/perte-poids-apres-40" element={<Suspense fallback={<div>Chargement...</div>}><PertePoidsApres40 /></Suspense>} />
+          <Route path="/articles/hypertension-regime-dash" element={<Suspense fallback={<div>Chargement...</div>}><HypertensionRegimeDash /></Suspense>} />
+          <Route path="/articles/thyroide-alimentation" element={<Suspense fallback={<div>Chargement...</div>}><ThyroideAlimentation /></Suspense>} />
+          <Route path="/admin/404s" element={<Suspense fallback={<div>Chargement...</div>}><Admin404s /></Suspense>} />
+          <Route path="/mentions-legales" element={<Suspense fallback={<div>Chargement...</div>}><MentionsLegales /></Suspense>} />
+          <Route path="/tarifs-prise-en-charge" element={<Suspense fallback={<div>Chargement...</div>}><TarifsPriseEnCharge /></Suspense>} />
           
-          <Route path="/transparence" element={<Transparence />} />
+          <Route path="/transparence" element={<Suspense fallback={<div>Chargement...</div>}><Transparence /></Suspense>} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
+          <Route path="*" element={<Suspense fallback={<div>Chargement...</div>}><NotFound /></Suspense>} />
         </Routes>
       </BrowserRouter>
       </ErrorBoundary>
