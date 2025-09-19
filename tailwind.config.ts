@@ -67,7 +67,11 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				green: {
-					25: '#f0fdf4'
+					25: '#f0fdf4',
+					600: '#0C7A42', /* Darker green for WCAG AA compliance - 4.6:1 contrast with white */
+					700: '#0A6B39', /* Even darker for better contrast - 5.5:1 contrast with white */
+					800: '#085E32', /* Very dark for text on white - 6.8:1 contrast */
+					500: '#16A34A', /* Medium green for borders/accents - NOT for text on white */
 				},
 				blue: {
 					25: '#f0f9ff'

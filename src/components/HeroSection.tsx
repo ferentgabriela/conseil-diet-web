@@ -69,7 +69,7 @@ const HeroSection = () => {
             {/* CTA Button with enhanced hover effects and fade-in animation */}
             <button
               onClick={scrollToCabinets}
-              className="inline-flex items-center px-8 md:px-10 py-4 md:py-5 bg-[#4CAF50] text-white text-[16px] md:text-[20px] font-medium rounded-md transition-all duration-300 transform hover:scale-105 hover:shadow-lg animate-fade-in [animation-delay:0.4s]"
+              className="inline-flex items-center px-8 md:px-10 py-4 md:py-5 bg-green-700 text-white text-[16px] md:text-[20px] font-medium rounded-md transition-all duration-300 transform hover:scale-105 hover:shadow-lg animate-fade-in [animation-delay:0.4s]"
               aria-label="Réserver une consultation de nutrition"
             >
               {t('hero.cta')}

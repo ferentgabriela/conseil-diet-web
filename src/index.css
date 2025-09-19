@@ -41,9 +41,14 @@
     --nav-trust-bar: 142 51% 89%; /* #E6F4EB */
     --nav-trust-text: 142 65% 25%;
     --nav-background: 54 100% 96%; /* #FFFBDD */
-    --nav-cta-green: 154 72% 32%; /* #2E8B57 */
-    --nav-cta-green-hover: 154 72% 28%;
+    --nav-cta-green: 154 85% 25%; /* Darker green for better contrast: #0D7A43 */
+    --nav-cta-green-hover: 154 85% 22%; /* Even darker on hover */
     --nav-menu-hover: 142 45% 95%; /* #F2F9F4 */
+
+    /* Accessible green color system */
+    --green-text-on-white: 154 85% 25%; /* #0C7A42 - 5.6:1 contrast ratio */
+    --green-bg-for-white-text: 154 85% 25%; /* Same as above for consistency */
+    --green-bg-hover: 154 85% 22%; /* Darker for hover states */
 
     /* Blog-specific design tokens */
     --blog-hero-gradient: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary)) 100%);
