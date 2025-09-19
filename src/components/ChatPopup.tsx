@@ -174,7 +174,7 @@ export const ChatPopup = ({
               
             </div>
           </div>
-          <Button variant="ghost" size="icon" onClick={toggleOpen} className="h-8 w-8 text-green-600 hover:text-green-700 hover:bg-green-100 rounded-xl">
+          <Button variant="ghost" size="icon" onClick={toggleOpen} className="h-8 w-8 text-green-600 hover:text-green-700 hover:bg-green-100 rounded-xl" aria-label="Fermer la conversation">
             <X className="h-4 w-4" />
           </Button>
         </CardHeader>
@@ -254,7 +254,7 @@ export const ChatPopup = ({
 
           <div className="flex space-x-2 flex-shrink-0">
             <Textarea value={currentMessage} onChange={e => setCurrentMessage(e.target.value)} onKeyPress={handleKeyPress} placeholder="Tapez votre message..." className="flex-1 min-h-[40px] max-h-[100px] resize-none border-green-200 focus:border-green-400 focus:ring-green-400 rounded-2xl" rows={1} />
-            <Button onClick={handleSendMessage} disabled={!currentMessage.trim() || isLoading} size="icon" className="flex-shrink-0 bg-green-600 hover:bg-green-700 rounded-2xl">
+            <Button onClick={handleSendMessage} disabled={!currentMessage.trim() || isLoading} size="icon" className="flex-shrink-0 bg-green-600 hover:bg-green-700 rounded-2xl" aria-label="Envoyer le message">
               <Send className="h-4 w-4" />
             </Button>
           </div>
