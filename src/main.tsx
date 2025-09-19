@@ -1,6 +1,8 @@
 import { createRoot } from 'react-dom/client'
-import './i18n'; // Initialize i18n before the app
 import App from './App.tsx'
 import './index.css'
 
-createRoot(document.getElementById("root")!).render(<App />);
+// Initialize i18n asynchronously to avoid blocking main thread
+import('./i18n').then(() => {
+  createRoot(document.getElementById("root")!).render(<App />);
+});

@@ -14,14 +14,26 @@ export default defineConfig(({ mode }) => ({
     rollupOptions: {
       output: {
         manualChunks: {
-          vendor: ['react', 'react-dom'],
-          router: ['react-router-dom'],
-          ui: ['@radix-ui/react-accordion', '@radix-ui/react-dialog', '@radix-ui/react-toast', '@radix-ui/react-popover'],
-          supabase: ['@supabase/supabase-js'],
-          query: ['@tanstack/react-query'],
-          i18n: ['i18next', 'react-i18next', 'i18next-browser-languagedetector'],
-          lucide: ['lucide-react'],
-          forms: ['react-hook-form', '@hookform/resolvers', 'zod'],
+          // Core React chunks
+          'react-core': ['react', 'react-dom'],
+          'react-router': ['react-router-dom'],
+          
+          // UI libraries - split for better caching
+          'radix-core': ['@radix-ui/react-slot', '@radix-ui/react-accordion', '@radix-ui/react-dialog'],
+          'radix-forms': ['@radix-ui/react-checkbox', '@radix-ui/react-select', '@radix-ui/react-radio-group'],
+          'radix-overlay': ['@radix-ui/react-toast', '@radix-ui/react-popover', '@radix-ui/react-tooltip'],
+          
+          // Backend and data
+          'supabase': ['@supabase/supabase-js'],
+          'query': ['@tanstack/react-query'],
+          
+          // Utilities and forms
+          'utils': ['class-variance-authority', 'clsx', 'tailwind-merge'],
+          'forms': ['react-hook-form', '@hookform/resolvers', 'zod'],
+          'icons': ['lucide-react'],
+          
+          // i18n - separate chunk for better loading
+          'i18n': ['i18next', 'react-i18next', 'i18next-browser-languagedetector'],
         }
       }
     },
