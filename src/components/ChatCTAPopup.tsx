@@ -51,6 +51,7 @@ export const ChatCTAPopup = ({ onOpenChat }: ChatCTAPopupProps) => {
           size="icon"
           onClick={handleDismiss}
           className="absolute top-2 right-2 h-6 w-6 text-gray-400 hover:text-gray-600"
+          aria-label="Fermer la notification"
         >
           <X className="h-4 w-4" />
         </Button>

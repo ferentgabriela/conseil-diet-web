@@ -100,6 +100,7 @@ export const CookieConsentBanner: React.FC<CookieConsentBannerProps> = ({ onCons
               size="sm"
               onClick={() => setIsVisible(false)}
               className="h-5 w-5 p-0 hover:bg-muted"
+              aria-label="Fermer la bannière de cookies"
             >
               <X className="h-2.5 w-2.5" />
             </Button>
