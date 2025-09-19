@@ -2,6 +2,15 @@
 <!DOCTYPE html>
 <html lang="fr-LU" itemscope itemtype="https://schema.org/WebPage">
   <head>
+    <!-- Critical network optimizations - must be early in head -->
+    <link rel="preconnect" href="https://plausible.io" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cxlsgqitizupbnnpeaaj.supabase.co" crossorigin>
+    <link rel="dns-prefetch" href="//www.doctena.lu">
+    <link rel="dns-prefetch" href="//api.doctena.lu">
+    <link rel="dns-prefetch" href="//cdn.doctena.com">
+    
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Diététicienne Luxembourg | Gabriela Ferent</title>
@@ -399,41 +408,27 @@
       .fonts-loaded { opacity: 1; transition: opacity 0.1s; }
     </style>
 
-    <!-- Preload critical resources for performance -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://plausible.io" crossorigin>
-    <link rel="preconnect" href="https://cxlsgqitizupbnnpeaaj.supabase.co" crossorigin>
-    <link rel="preconnect" href="https://www.doctena.lu" crossorigin>
+    <!-- Resource hints optimized for critical request chains -->
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"></noscript>
-    
-    <link rel="preload" href="/src/main.tsx" as="script">
-    <link rel="preload" href="/src/index.css" as="style">
-    
-    <!-- Preload critical hero text for immediate rendering -->
-    <link rel="preload" href="/src/i18n/locales/fr.json" as="fetch" crossorigin="anonymous">
     
     <!-- Critical images for above-the-fold with high priority -->
     <link rel="preload" href="/lovable-uploads/1f309c72-ddb5-4bae-944e-68046c01bf90.png" as="image" type="image/png" fetchpriority="high">
     <link rel="preload" href="/lovable-uploads/93b38569-b3fe-4bfa-bc2d-80b6a547847b.png" as="image" type="image/png" fetchpriority="high">
-    <link rel="preload" href="/lovable-uploads/6b584fa2-7cae-45b4-8d71-ff67ae89fad3.png" as="image" type="image/png" fetchpriority="low">
     <link rel="preload" href="/lovable-uploads/179c4bde-bcf3-45a7-8ea4-73a54222deb3.png" as="image" type="image/png" fetchpriority="high">
+    
+    <!-- Module preloading for critical path optimization -->
     <link rel="modulepreload" href="/src/main.tsx">
     <link rel="modulepreload" href="/src/App.tsx">
     <link rel="modulepreload" href="/src/pages/Index.tsx">
     <link rel="modulepreload" href="/src/components/HeroSection.tsx">
     <link rel="modulepreload" href="/src/components/Navigation.tsx">
-    <link rel="modulepreload" href="/src/utils/scrollUtils.tsx">
+    
+    <!-- Prefetch non-critical resources -->
+    <link rel="prefetch" href="/lovable-uploads/6b584fa2-7cae-45b4-8d71-ff67ae89fad3.png">
+    <link rel="prefetch" href="/src/i18n/locales/fr.json">
     <link rel="prefetch" href="/src/components/BlogSection.tsx">
     <link rel="prefetch" href="/src/components/ServicesSection.tsx">
-    
-    <!-- DNS prefetch for external domains -->
-    <link rel="dns-prefetch" href="//api.doctena.lu">
-    <link rel="dns-prefetch" href="//cdn.doctena.com">
-    <link rel="dns-prefetch" href="//cxlsgqitizupbnnpeaaj.supabase.co">
-    <link rel="dns-prefetch" href="//plausible.io">
-    <link rel="dns-prefetch" href="//static.cloudflareinsights.com">
     
     <!-- CSS Loading Optimization Script -->
     <script>
