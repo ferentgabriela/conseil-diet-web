@@ -63,7 +63,14 @@
       ]
     },
     {
-      "source": "/(.*\\.(js|css|png|jpg|jpeg|webp|svg|woff|woff2|ttf|otf|eot|ico|avif))",
+      "source": "/(.*\\.(js|jsx|ts|tsx|mjs))",
+      "headers": [
+        { "key": "Content-Type", "value": "application/javascript; charset=utf-8" },
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
+    },
+    {
+      "source": "/(.*\\.(css|png|jpg|jpeg|webp|svg|woff|woff2|ttf|otf|eot|ico|avif))",
       "headers": [
         { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
       ]
