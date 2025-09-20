@@ -4,6 +4,8 @@
   <head>
     <!-- Critical network optimizations - must be early in head -->
     <link rel="preconnect" href="https://plausible.io" crossorigin>
+    <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+    <link rel="preconnect" href="https://www.google-analytics.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cxlsgqitizupbnnpeaaj.supabase.co" crossorigin>
@@ -484,6 +486,16 @@
 
     <!-- Plausible Analytics with defer -->
     <script defer data-domain="conseildietetique.lu" src="https://plausible.io/js/script.js"></script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F2VZD927EE"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-F2VZD927EE');
+    </script>
 
     <!-- Favicon -->
     <link rel="icon" href="/lovable-uploads/b60696cb-a1d6-4eec-bf95-2c544d726e80.png" type="image/png" />
