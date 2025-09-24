@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { MapPin, Calendar, Clock, UserCheck, Lock } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { scrollToElement } from '../utils/scrollUtils';
+import LazyImage from '@/components/LazyImage';
 
 const HeroSection = () => {
   const { t } = useTranslation();
@@ -33,16 +34,14 @@ const HeroSection = () => {
     >
       {/* Image slideshow with optimized loading */}
       {images.map((image, index) => (
-        <img
+        <LazyImage
           key={image}
           src={image}
           alt={index === 0 ? "Consultation de diététique en cours avec équipements de mesure corporelle professionnels" : "Images de nutrition et bien-être"}
-          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
+          priority={index === 0}
+          className={`absolute inset-0 transition-opacity duration-1000 ${
             index === currentImageIndex ? 'opacity-100' : 'opacity-0'
           }`}
-          loading={index === 0 ? "eager" : "lazy"}
-          fetchPriority={index === 0 ? "high" : "low"}
-          decoding={index === 0 ? "sync" : "async"}
           width="1200"
           height="800"
         />

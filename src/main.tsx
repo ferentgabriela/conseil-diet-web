@@ -2,7 +2,10 @@ import { createRoot } from 'react-dom/client'
 import App from './App.tsx'
 import './index.css'
 
-// Initialize i18n asynchronously to avoid blocking main thread
-import('./i18n').then(() => {
-  createRoot(document.getElementById("root")!).render(<App />);
-});
+const root = createRoot(document.getElementById("root")!);
+
+// Initialize app immediately with minimal loading state
+root.render(<App />);
+
+// Initialize i18n in background without blocking main thread
+import('./i18n').catch(console.error);
