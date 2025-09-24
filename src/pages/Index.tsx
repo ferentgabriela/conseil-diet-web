@@ -48,7 +48,7 @@ const Index = () => {
                 <li><a href="#services" className="text-green-600 underline" title="Découvrir nos services nutritionnels">Services</a></li>
                 
                 <li><a href="#cabinets" className="text-green-600 underline" title="Choisir votre cabinet de consultation">Cabinets</a></li>
-                <li><a href="#contact" className="text-green-600 underline" title="Nous contacter pour plus d'informations">Contact</a></li>
+                
               </ul>
             </nav>
           </header>
