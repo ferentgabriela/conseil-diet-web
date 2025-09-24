@@ -30,10 +30,7 @@ const SEOContentSection = () => {
               En tant que diététicienne nutritionniste diplômée et agréée au Luxembourg, je vous accompagne dans votre parcours de santé grâce à une approche personnalisée et bienveillante. Mes consultations sur prescription médicale sont prises en charge par la CNS pour diverses pathologies nécessitant un suivi nutritionnel professionnel.
             </p>
             <p className="text-lg text-gray-700 mb-4">
-              Mon approche thérapeutique se base sur l'écoute, l'éducation nutritionnelle et l'accompagnement progressif vers de nouvelles habitudes alimentaires durables. Je reçois dans 3 cabinets stratégiquement situés au Luxembourg pour faciliter l'accès aux soins : Luxembourg-Ville, Ettelbruck et Insenborn. 
-              <a href="/prestations" className="text-green-600 hover:text-green-700 underline font-medium" title="Découvrir toutes nos prestations diététiques en détail">
-                Découvrez le détail de toutes nos prestations
-              </a>.
+              Mon approche thérapeutique se base sur l'écoute, l'éducation nutritionnelle et l'accompagnement progressif vers de nouvelles habitudes alimentaires durables. Je reçois dans 3 cabinets stratégiquement situés au Luxembourg pour faciliter l'accès aux soins : Luxembourg-Ville, Ettelbruck et Insenborn.
             </p>
           </section>
 

@@ -34,7 +34,7 @@ const Footer = () => {
             <span itemProp="name">Gabriela Ferent</span> • Diététicienne autorisée<br />
             Code prestataire CNS : 361043-09 / <a href="https://www.andl.lu/project/ferent-gabriela/" target="_blank" rel="noopener noreferrer" className="underline hover:text-green-600 transition-colors" title="Voir le profil professionnel sur l'Association des Diététiciens">Membre ANDL</a><br />
             <a href="/mentions-legales" className="underline hover:text-green-600 transition-colors" title="Consulter les mentions légales du site">Mentions légales</a> | {' '}
-            <a href="/prestations" className="underline hover:text-green-600 transition-colors" title="Découvrir toutes nos prestations diététiques">Nos prestations</a> | {' '}
+            
             <a href="/tarifs-prise-en-charge" className="underline hover:text-green-600 transition-colors" title="Voir les tarifs et informations de remboursement">Tarifs &amp; prise en charge</a> | {' '}
             <a href="/transparence" className="underline hover:text-green-600 transition-colors" title="Consulter la politique de transparence">Transparence</a>
           </p>
