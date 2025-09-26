@@ -311,7 +311,7 @@ Beende immer mit dem Vorschlag, einen Termin zu vereinbaren, falls angemessen.`
       .insert({
         conversation_id: conversation.id,
         message: aiResponse,
-        sender: 'assistant'
+        sender: 'ai'
       });
 
     if (aiMessageError) {

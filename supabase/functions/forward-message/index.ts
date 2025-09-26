@@ -2,7 +2,7 @@
 import "https://deno.land/x/xhr@0.1.0/mod.ts";
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
 import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
-import { Resend } from "npm:resend@2.0.0";
+import { Resend } from "https://esm.sh/resend@2.0.0";
 
 const resend = new Resend(Deno.env.get('RESEND_API_KEY'));
 
@@ -14,9 +14,12 @@ const corsHeaders = {
 
 // HTML escaping helper to prevent XSS
 function escapeHtml(text: string): string {
-  const div = new DOMParser().parseFromString('<!DOCTYPE html><html><body></body></html>', 'text/html').createElement('div');
-  div.textContent = text;
-  return div.innerHTML;
+  return text
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#x27;');
 }
 
 // Rate limiting helper
@@ -125,7 +128,7 @@ serve(async (req) => {
       // Still proceed even without conversation context
     }
 
-    let messages = [];
+    let messages: Array<{message: string, sender: string, created_at: string}> = [];
     if (conversation) {
       const { data: messageData, error: messagesError } = await supabase
         .from('chat_messages')
@@ -200,10 +203,10 @@ serve(async (req) => {
       headers: { ...corsHeaders, 'Content-Type': 'application/json' },
     });
 
-  } catch (error) {
+  } catch (error: any) {
     console.error('Error in forward-message function:', error);
     return new Response(JSON.stringify({ 
-      error: error.message 
+      error: error?.message || 'Unknown error'
     }), {
       status: 500,
       headers: { ...corsHeaders, 'Content-Type': 'application/json' },

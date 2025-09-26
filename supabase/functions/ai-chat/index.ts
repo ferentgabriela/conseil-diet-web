@@ -213,7 +213,7 @@ WICHTIG für Standorte: Wenn du die Praxen erwähnst, verwende genau dieses Form
 WICHTIG: Antworte immer auf Deutsch, sei professionell aber herzlich, und führe Nutzer zur Terminbuchung. Verwende NIEMALS Markdown-Formatierung wie Sternchen für Fettschrift, Unterstriche oder andere Formatierungen. Schreibe nur in einfachem Text.`
     };
 
-    const systemPrompt = systemPrompts[language as keyof typeof systemPrompts] || systemPrompts[language] || systemPrompts.fr;
+    const systemPrompt = systemPrompts[language as keyof typeof systemPrompts] || systemPrompts.en;
 
     const response = await fetch('https://api.openai.com/v1/chat/completions', {
       method: 'POST',
@@ -244,9 +244,9 @@ WICHTIG: Antworte immer auf Deutsch, sei professionell aber herzlich, und führe
     return new Response(JSON.stringify({ generatedText: aiResponse }), {
       headers: { ...corsHeaders, 'Content-Type': 'application/json' },
     });
-  } catch (error) {    
-    console.error('Error in ai-chat function:', error.message);
-    return new Response(JSON.stringify({ error: error.message }), {
+  } catch (error: any) {    
+    console.error('Error in ai-chat function:', error?.message || 'Unknown error');
+    return new Response(JSON.stringify({ error: error?.message || 'Unknown error' }), {
       status: 500,
       headers: { ...corsHeaders, 'Content-Type': 'application/json' },
     });

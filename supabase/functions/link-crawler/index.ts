@@ -121,8 +121,8 @@ async function checkUrl(url: string): Promise<{ status: number; error?: string }
     }
     
     return { status: response.status };
-  } catch (error) {
-    return { status: 0, error: error.message };
+  } catch (error: any) {
+    return { status: 0, error: error?.message || 'Unknown error' };
   }
 }
 
@@ -274,9 +274,9 @@ Deno.serve(async (req) => {
     return new Response(JSON.stringify(result), {
       headers: { ...corsHeaders, 'Content-Type': 'application/json' },
     });
-  } catch (error) {
+  } catch (error: any) {
     console.error('Crawl error:', error);
-    return new Response(JSON.stringify({ error: 'Crawl failed', details: error.message }), {
+    return new Response(JSON.stringify({ error: 'Crawl failed', details: error?.message || 'Unknown error' }), {
       status: 500,
       headers: { ...corsHeaders, 'Content-Type': 'application/json' },
     });
