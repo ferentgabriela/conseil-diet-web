@@ -87,28 +87,28 @@ export const CookieConsentBanner: React.FC<CookieConsentBannerProps> = ({ onCons
   if (!isVisible) return null;
 
   return (
-    <div className="fixed bottom-4 left-4 z-50 max-w-xs">
-      <Card className="bg-background/90 backdrop-blur-sm border shadow-md hover:shadow-lg transition-shadow">
-        <CardHeader className="pb-2 pt-3 px-4">
+    <div className="fixed bottom-2 left-2 z-50 max-w-[280px]">
+      <Card className="bg-background/80 backdrop-blur-sm border shadow-sm hover:shadow-md transition-shadow">
+        <CardHeader className="pb-1 pt-2 px-3">
           <div className="flex items-center justify-between">
-            <div className="flex items-center gap-2">
-              <Cookie className="h-3 w-3 text-primary" />
+            <div className="flex items-center gap-1.5">
+              <Cookie className="h-2.5 w-2.5 text-primary" />
               <CardTitle className="text-xs font-medium">Cookies</CardTitle>
             </div>
             <Button
               variant="ghost"
               size="sm"
               onClick={() => setIsVisible(false)}
-              className="h-5 w-5 p-0 hover:bg-muted"
+              className="h-4 w-4 p-0 hover:bg-muted"
               aria-label="Fermer la bannière de cookies"
             >
-              <X className="h-2.5 w-2.5" />
+              <X className="h-2 w-2" />
             </Button>
           </div>
         </CardHeader>
         
-        <CardContent className="space-y-2 pt-1 px-4 pb-4">
-          <p className="text-xs text-muted-foreground leading-relaxed">
+        <CardContent className="space-y-1.5 pt-0 px-3 pb-3">
+          <p className="text-xs text-muted-foreground leading-snug">
             Nous utilisons des cookies pour améliorer votre expérience.
           </p>
 
