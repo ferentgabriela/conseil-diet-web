@@ -8,12 +8,6 @@ const Footer = () => {
             <Phone className="h-4 w-4 mr-2" />
             <a href="tel:+352691379172" itemProp="telephone" title="Appeler Gabriela Ferent diététicienne">+352 691 379 172</a>
           </div>
-          <div className="text-center sm:text-left">
-            <div className="text-gray-600" itemProp="address">
-              <span itemProp="streetAddress">15, Burwiss</span>, 
-              <span itemProp="postalCode">9660</span> <span itemProp="addressLocality">Luxembourg</span>
-            </div>
-          </div>
           <div className="flex items-center hover:text-green-600 transition-colors">
             <Mail className="h-4 w-4 mr-2" />
             <span 
