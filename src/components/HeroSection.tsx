@@ -56,7 +56,7 @@ const HeroSection = () => {
         <div className="hero-text-overlay">
           {/* Main H1 heading with fade-in animation */}
           <h1 className="hero-title">
-            Diététicienne à Luxembourg — Gabriela Ferent
+            Diététicienne à Luxembourg Gabriela Ferent
           </h1>
           
           {/* First subtitle with larger size */}
