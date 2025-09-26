@@ -12,7 +12,7 @@ import TransformationStoriesSection from '@/components/TransformationStoriesSect
 import DoctenaTestimonialsSection from '@/components/DoctenaTestimonialsSection';
 import FAQSection from '@/components/FAQSection';
 import BlogSection from '@/components/BlogSection';
-import ArticlesPopulairesSection from '@/components/ArticlesPopulairesSection';
+
 import CabinetsSection from '@/components/CabinetsSection';
 import LocationsSection from '@/components/LocationsSection';
 import Footer from '@/components/Footer';
@@ -108,7 +108,7 @@ const Index = () => {
       
       <DoctenaTestimonialsSection />
       <BlogSection />
-      <ArticlesPopulairesSection />
+      
       <FAQSection onOpenChat={handleOpenChat} />
       <LocationsSection />
       
