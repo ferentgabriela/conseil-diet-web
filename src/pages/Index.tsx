@@ -46,9 +46,9 @@ const Index = () => {
               <ul className="flex flex-wrap gap-4">
                 <li><a href="#apropos" className="text-green-600 underline" title="En savoir plus sur notre approche">À propos</a></li>
                 <li><a href="#services" className="text-green-600 underline" title="Découvrir nos services nutritionnels">Services</a></li>
-                
+                <li><a href="/prestations" className="text-green-600 underline" title="Voir toutes nos prestations diététiques">Prestations</a></li>
                 <li><a href="#cabinets" className="text-green-600 underline" title="Choisir votre cabinet de consultation">Cabinets</a></li>
-                
+                <li><a href="#contact" className="text-green-600 underline" title="Nous contacter pour plus d'informations">Contact</a></li>
               </ul>
             </nav>
           </header>

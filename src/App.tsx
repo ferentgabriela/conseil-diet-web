@@ -25,9 +25,9 @@ const HypertensionRegimeDash = lazy(() => import("./pages/articles/HypertensionR
 const ThyroideAlimentation = lazy(() => import("./pages/articles/ThyroideAlimentation"));
 const MentionsLegales = lazy(() => import("./pages/MentionsLegales"));
 const TarifsPriseEnCharge = lazy(() => import("./pages/TarifsPriseEnCharge"));
-
+const Prestations = lazy(() => import("./pages/Prestations"));
 const Transparence = lazy(() => import("./pages/Transparence"));
-
+const Contact = lazy(() => import("./pages/Contact"));
 
 
 const queryClient = new QueryClient();
@@ -54,9 +54,9 @@ const App = () => (
           <Route path="/admin/404s" element={<Suspense fallback={<LoadingFallback />}><Admin404s /></Suspense>} />
           <Route path="/mentions-legales" element={<Suspense fallback={<LoadingFallback />}><MentionsLegales /></Suspense>} />
           <Route path="/tarifs-prise-en-charge" element={<Suspense fallback={<LoadingFallback />}><TarifsPriseEnCharge /></Suspense>} />
-          
+          <Route path="/prestations" element={<Suspense fallback={<LoadingFallback />}><Prestations /></Suspense>} />
           <Route path="/transparence" element={<Suspense fallback={<LoadingFallback />}><Transparence /></Suspense>} />
-          
+          <Route path="/contact" element={<Suspense fallback={<LoadingFallback />}><Contact /></Suspense>} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<Suspense fallback={<LoadingFallback />}><NotFound /></Suspense>} />
         </Routes>
