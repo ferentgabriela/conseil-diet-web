@@ -24,7 +24,7 @@ const Footer = () => {
                 window.location.href = 'mailto:' + email;
               }}
             >
-              dieteticienne [at] conseildietetique.lu
+              dieteticienne@conseildietetique.lu
             </span>
           </div>
         </div>
