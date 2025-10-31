@@ -12,6 +12,11 @@ const DiabeteAliments = () => {
       <Helmet>
         <title>Diabète Type 2 : 10 Aliments à Privilégier au Quotidien — Gabriela Ferent Diététicienne</title>
         <meta name="description" content="Guide alimentaire pour le diabète type 2. Découvrez les aliments recommandés par Gabriela Ferent, diététicienne nutritionniste au Luxembourg." />
+        <link rel="canonical" href="https://conseildietetique.lu/articles/diabete-aliments-recommandes" />
+        <meta property="og:title" content="Diabète Type 2 : 10 Aliments à Privilégier au Quotidien" />
+        <meta property="og:description" content="Guide alimentaire pour le diabète type 2. Découvrez les aliments recommandés par Gabriela Ferent, diététicienne nutritionniste au Luxembourg." />
+        <meta property="og:url" content="https://conseildietetique.lu/articles/diabete-aliments-recommandes" />
+        <meta property="og:type" content="article" />
       </Helmet>
       <Navigation />
       <article className="container mx-auto px-4 py-12">

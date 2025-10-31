@@ -62,6 +62,18 @@ const routes = [
     lastmod: '2024-01-15'
   },
   {
+    url: '/contact',
+    changefreq: 'monthly',
+    priority: '0.7',
+    lastmod: new Date().toISOString().split('T')[0]
+  },
+  {
+    url: '/prestations',
+    changefreq: 'monthly',
+    priority: '0.8',
+    lastmod: new Date().toISOString().split('T')[0]
+  },
+  {
     url: '/mentions-legales',
     changefreq: 'yearly',
     priority: '0.3',

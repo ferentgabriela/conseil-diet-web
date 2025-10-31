@@ -9,6 +9,11 @@ const Transparence = () => {
       <Helmet>
         <title>Transparence — Gabriela Ferent Diététicienne</title>
         <meta name="description" content="Déclaration de transparence et informations légales de Gabriela Ferent, diététicienne nutritionniste au Luxembourg." />
+        <link rel="canonical" href="https://conseildietetique.lu/transparence" />
+        <meta property="og:title" content="Transparence — Gabriela Ferent Diététicienne" />
+        <meta property="og:description" content="Déclaration de transparence et informations légales de Gabriela Ferent, diététicienne nutritionniste au Luxembourg." />
+        <meta property="og:url" content="https://conseildietetique.lu/transparence" />
+        <meta property="og:type" content="website" />
       </Helmet>
       
       <Navigation />

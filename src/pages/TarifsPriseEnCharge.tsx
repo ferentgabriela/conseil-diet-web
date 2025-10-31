@@ -9,6 +9,11 @@ const TarifsPriseEnCharge = () => {
       <Helmet>
         <title>Tarifs & prise en charge — Gabriela Ferent Diététicienne</title>
         <meta name="description" content="Tarifs des consultations et informations sur la prise en charge sur prescription médicale au Luxembourg. Rendez-vous à Luxembourg-Ville, Ettelbruck, Insenborn." />
+        <link rel="canonical" href="https://conseildietetique.lu/tarifs-prise-en-charge" />
+        <meta property="og:title" content="Tarifs & prise en charge — Gabriela Ferent Diététicienne" />
+        <meta property="og:description" content="Tarifs des consultations et informations sur la prise en charge sur prescription médicale au Luxembourg." />
+        <meta property="og:url" content="https://conseildietetique.lu/tarifs-prise-en-charge" />
+        <meta property="og:type" content="website" />
       </Helmet>
       
       <Navigation />

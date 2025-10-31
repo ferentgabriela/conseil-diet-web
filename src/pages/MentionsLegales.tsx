@@ -1,10 +1,20 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 
 const MentionsLegales = () => {
   return (
     <div className="min-h-screen bg-white pt-[34px]">
+      <Helmet>
+        <title>Mentions Légales, CGU & Politique de Confidentialité — Gabriela Ferent Diététicienne</title>
+        <meta name="description" content="Mentions légales, conditions générales d'utilisation et politique de confidentialité du site conseildietetique.lu. Gabriela Ferent, diététicienne au Luxembourg." />
+        <link rel="canonical" href="https://conseildietetique.lu/mentions-legales" />
+        <meta property="og:title" content="Mentions Légales — Gabriela Ferent Diététicienne" />
+        <meta property="og:description" content="Mentions légales et politique de confidentialité du cabinet de diététique de Gabriela Ferent au Luxembourg." />
+        <meta property="og:url" content="https://conseildietetique.lu/mentions-legales" />
+        <meta property="og:type" content="website" />
+      </Helmet>
       <Navigation />
       
       <div className="container mx-auto px-4 py-16">

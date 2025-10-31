@@ -11,6 +11,11 @@ const TroublesDigestifs = () => {
       <Helmet>
         <title>Troubles Digestifs : Solutions Naturelles et Rééquilibrage Alimentaire — Gabriela Ferent Diététicienne</title>
         <meta name="description" content="Solutions naturelles pour les troubles digestifs et rééquilibrage alimentaire. Guide pratique de Gabriela Ferent, diététicienne au Luxembourg." />
+        <link rel="canonical" href="https://conseildietetique.lu/articles/troubles-digestifs-solutions" />
+        <meta property="og:title" content="Troubles Digestifs : Solutions Naturelles et Rééquilibrage Alimentaire" />
+        <meta property="og:description" content="Solutions naturelles pour les troubles digestifs et rééquilibrage alimentaire. Guide pratique de Gabriela Ferent, diététicienne au Luxembourg." />
+        <meta property="og:url" content="https://conseildietetique.lu/articles/troubles-digestifs-solutions" />
+        <meta property="og:type" content="article" />
       </Helmet>
       <Navigation />
       <article className="container mx-auto px-4 py-12">
