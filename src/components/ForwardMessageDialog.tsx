@@ -13,6 +13,7 @@ import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
 import { supabase } from '@/integrations/supabase/client';
+import { forwardMessageSchema } from '@/lib/validation';
 
 interface ForwardMessageDialogProps {
   open: boolean;
@@ -38,10 +39,21 @@ export const ForwardMessageDialog: React.FC<ForwardMessageDialogProps> = ({
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    if (!formData.name.trim() || !formData.message.trim() || !formData.acceptTerms) {
+    // Validate all form data with Zod
+    const validationResult = forwardMessageSchema.safeParse({
+      name: formData.name,
+      email: formData.email,
+      phone: formData.phone,
+      message: formData.message,
+      acceptTerms: formData.acceptTerms,
+      sessionId: conversationId
+    });
+
+    if (!validationResult.success) {
+      const firstError = validationResult.error.errors[0];
       toast({
-        title: "Champs requis",
-        description: "Veuillez remplir votre nom, votre message et accepter les conditions.",
+        title: "Erreur de validation",
+        description: firstError.message,
         variant: "destructive",
       });
       return;

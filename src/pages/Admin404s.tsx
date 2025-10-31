@@ -23,22 +23,48 @@ interface CrawlResult {
 }
 
 const Admin404s = () => {
-  const [searchParams] = useSearchParams();
   const [crawlData, setCrawlData] = useState<CrawlResult | null>(null);
   const [loading, setLoading] = useState(true);
   const [crawling, setCrawling] = useState(false);
   const [searchTerm, setSearchTerm] = useState('');
   const [activeTab, setActiveTab] = useState<'404s' | '5xx' | 'orphans' | 'all'>('404s');
-  
-  // Simple authentication check
-  const secretKey = searchParams.get('key');
-  const isAuthenticated = secretKey === 'admin-404-report-2024';
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [password, setPassword] = useState('');
+  const [authenticating, setAuthenticating] = useState(false);
+  const [authError, setAuthError] = useState('');
   
   useEffect(() => {
     if (isAuthenticated) {
       loadCrawlData();
     }
   }, [isAuthenticated]);
+
+  const handleLogin = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setAuthenticating(true);
+    setAuthError('');
+
+    try {
+      const { data, error } = await supabase.functions.invoke('admin-auth', {
+        body: { password }
+      });
+
+      if (error) throw error;
+
+      if (data.authenticated) {
+        setIsAuthenticated(true);
+        // Store session token in sessionStorage for this session only
+        sessionStorage.setItem('admin_session', data.sessionToken);
+      } else {
+        setAuthError(data.error || 'Invalid password');
+      }
+    } catch (error) {
+      console.error('Authentication error:', error);
+      setAuthError('Authentication failed. Please try again.');
+    } finally {
+      setAuthenticating(false);
+    }
+  };
   
   const loadCrawlData = async () => {
     try {
@@ -78,16 +104,47 @@ const Admin404s = () => {
     return (
       <div className="min-h-screen bg-gray-100 flex items-center justify-center">
         <div className="bg-white p-8 rounded-lg shadow-md max-w-md w-full">
-          <div className="text-center">
-            <AlertTriangle className="h-12 w-12 text-red-500 mx-auto mb-4" />
-            <h1 className="text-2xl font-bold text-gray-900 mb-2">Access Restricted</h1>
-            <p className="text-gray-600 mb-4">
-              This admin panel requires authentication. Please provide the correct key parameter.
-            </p>
-            <p className="text-sm text-gray-500">
-              Usage: /admin/404s?key=YOUR_SECRET_KEY
-            </p>
-          </div>
+          <form onSubmit={handleLogin}>
+            <div className="text-center mb-6">
+              <AlertTriangle className="h-12 w-12 text-red-500 mx-auto mb-4" />
+              <h1 className="text-2xl font-bold text-gray-900 mb-2">Admin Authentication</h1>
+              <p className="text-gray-600">
+                This admin panel requires secure authentication.
+              </p>
+            </div>
+            
+            <div className="space-y-4">
+              <div>
+                <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-2">
+                  Password
+                </label>
+                <input
+                  type="password"
+                  id="password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                  placeholder="Enter admin password"
+                  required
+                  autoFocus
+                />
+              </div>
+              
+              {authError && (
+                <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg text-sm">
+                  {authError}
+                </div>
+              )}
+              
+              <button
+                type="submit"
+                disabled={authenticating}
+                className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                {authenticating ? 'Authenticating...' : 'Login'}
+              </button>
+            </div>
+          </form>
         </div>
       </div>
     );
