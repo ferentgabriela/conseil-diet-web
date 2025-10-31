@@ -59,6 +59,10 @@ verify_jwt = false
 [functions.admin-auth]
 verify_jwt = false
 
+# Link crawler function - public for admin access
+[functions.link-crawler]
+verify_jwt = false
+
 [storage]
 enabled = true
 port = 54325

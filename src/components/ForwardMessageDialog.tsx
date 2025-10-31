@@ -32,6 +32,7 @@ export const ForwardMessageDialog: React.FC<ForwardMessageDialogProps> = ({
     phone: '',
     message: '',
     acceptTerms: false,
+    website: '', // Honeypot field for bot detection
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
@@ -39,14 +40,15 @@ export const ForwardMessageDialog: React.FC<ForwardMessageDialogProps> = ({
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Validate all form data with Zod
+    // Validate all form data with Zod (including honeypot check)
     const validationResult = forwardMessageSchema.safeParse({
       name: formData.name,
       email: formData.email,
       phone: formData.phone,
       message: formData.message,
       acceptTerms: formData.acceptTerms,
-      sessionId: conversationId
+      sessionId: conversationId,
+      website: formData.website
     });
 
     if (!validationResult.success) {
@@ -97,7 +99,7 @@ export const ForwardMessageDialog: React.FC<ForwardMessageDialogProps> = ({
         });
       }
 
-      setFormData({ name: '', email: '', phone: '', message: '', acceptTerms: false });
+      setFormData({ name: '', email: '', phone: '', message: '', acceptTerms: false, website: '' });
       onOpenChange(false);
     } catch (error) {
       console.error('Error saving message:', error);
@@ -156,6 +158,19 @@ export const ForwardMessageDialog: React.FC<ForwardMessageDialogProps> = ({
               value={formData.phone}
               onChange={(e) => handleInputChange('phone', e.target.value)}
               placeholder="+352 XX XX XX XX"
+            />
+          </div>
+
+          {/* Honeypot field - hidden from users, filled by bots */}
+          <div className="hidden" aria-hidden="true">
+            <Input
+              id="website"
+              name="website"
+              type="text"
+              value={formData.website}
+              onChange={(e) => handleInputChange('website', e.target.value)}
+              tabIndex={-1}
+              autoComplete="off"
             />
           </div>
 

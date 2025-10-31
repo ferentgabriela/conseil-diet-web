@@ -59,7 +59,16 @@ serve(async (req) => {
   }
 
   try {
-    const { sessionId, userName, userEmail, userPhone, message } = await req.json();
+    const { sessionId, userName, userEmail, userPhone, message, website } = await req.json();
+    
+    // Honeypot check - if website field is filled, it's likely a bot
+    if (website && website.trim().length > 0) {
+      console.log('Bot detected via honeypot field');
+      return new Response(JSON.stringify({ error: 'Invalid request' }), {
+        status: 400,
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+      });
+    }
     
     if (!sessionId || typeof sessionId !== 'string' || sessionId.length < 10) {
       return new Response(JSON.stringify({ error: 'Invalid session ID' }), {

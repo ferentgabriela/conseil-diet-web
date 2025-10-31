@@ -1,4 +1,50 @@
 import { corsHeaders } from '../_shared/cors.ts';
+import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
+
+// Rate limiting helper - limit crawls to prevent abuse
+async function checkRateLimit(supabase: any, identifier: string, endpoint: string, maxRequests = 1, windowMinutes = 5): Promise<boolean> {
+  const windowStart = new Date(Date.now() - windowMinutes * 60 * 1000);
+  
+  // Clean old entries
+  await supabase
+    .from('rate_limits')
+    .delete()
+    .lt('window_start', windowStart.toISOString());
+  
+  // Check current usage
+  const { data: existing } = await supabase
+    .from('rate_limits')
+    .select('request_count')
+    .eq('identifier', identifier)
+    .eq('endpoint', endpoint)
+    .gte('window_start', windowStart.toISOString())
+    .single();
+  
+  if (existing && existing.request_count >= maxRequests) {
+    return false;
+  }
+  
+  // Update or create rate limit entry
+  if (existing) {
+    await supabase
+      .from('rate_limits')
+      .update({ request_count: existing.request_count + 1 })
+      .eq('identifier', identifier)
+      .eq('endpoint', endpoint)
+      .gte('window_start', windowStart.toISOString());
+  } else {
+    await supabase
+      .from('rate_limits')
+      .insert({
+        identifier,
+        endpoint,
+        request_count: 1,
+        window_start: new Date().toISOString()
+      });
+  }
+  
+  return true;
+}
 
 interface LinkCheck {
   url: string;
@@ -267,6 +313,25 @@ Deno.serve(async (req) => {
   }
   
   try {
+    // Initialize Supabase for rate limiting
+    const supabaseUrl = Deno.env.get('SUPABASE_URL')!;
+    const supabaseServiceKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!;
+    const supabase = createClient(supabaseUrl, supabaseServiceKey);
+    
+    // Rate limiting: 1 crawl per 5 minutes per IP
+    const clientIP = req.headers.get('x-forwarded-for') || req.headers.get('x-real-ip') || 'unknown';
+    const rateLimitOk = await checkRateLimit(supabase, clientIP, 'link-crawler', 1, 5);
+    
+    if (!rateLimitOk) {
+      console.log('Rate limit exceeded for IP:', clientIP);
+      return new Response(JSON.stringify({ 
+        error: 'Rate limit exceeded. Only 1 crawl per 5 minutes allowed.' 
+      }), {
+        status: 429,
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+      });
+    }
+    
     console.log('Starting link crawl...');
     const result = await crawlLinks();
     console.log(`Crawl completed: ${result.totalChecked} links checked, ${result.errors404.length} 404s found`);
@@ -276,7 +341,7 @@ Deno.serve(async (req) => {
     });
   } catch (error: any) {
     console.error('Crawl error:', error);
-    return new Response(JSON.stringify({ error: 'Crawl failed', details: error?.message || 'Unknown error' }), {
+    return new Response(JSON.stringify({ error: 'Crawl failed' }), {
       status: 500,
       headers: { ...corsHeaders, 'Content-Type': 'application/json' },
     });

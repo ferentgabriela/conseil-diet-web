@@ -72,6 +72,17 @@ serve(async (req) => {
       });
     }
 
+    // Security: Validate message length to prevent token exhaustion
+    const MAX_MESSAGE_LENGTH = 1000;
+    if (message.length > MAX_MESSAGE_LENGTH) {
+      return new Response(JSON.stringify({ 
+        error: `Message trop long. Maximum ${MAX_MESSAGE_LENGTH} caractères autorisés.` 
+      }), {
+        status: 400,
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+      });
+    }
+
     // Initialize Supabase client for rate limiting
     const supabaseUrl = Deno.env.get('SUPABASE_URL')!;
     const supabaseServiceKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!;

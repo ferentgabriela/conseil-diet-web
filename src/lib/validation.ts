@@ -29,7 +29,12 @@ export const forwardMessageSchema = z.object({
     .refine(val => val === true, { message: "Vous devez accepter les conditions" }),
   
   sessionId: z.string()
-    .min(10, { message: "Session ID invalide" })
+    .min(10, { message: "Session ID invalide" }),
+  
+  // Honeypot field for bot detection - must be empty
+  website: z.string()
+    .optional()
+    .refine(val => !val || val === '', { message: "Bot detected" })
 });
 
 export type ForwardMessageInput = z.infer<typeof forwardMessageSchema>;
