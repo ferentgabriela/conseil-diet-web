@@ -18,9 +18,15 @@ Allow: /
 # Traditional Search Engines
 User-agent: Googlebot
 Allow: /
+Disallow: /assets/
+Disallow: /lovable-uploads/
+Disallow: /_vercel/
 
 User-agent: Bingbot
 Allow: /
+Disallow: /assets/
+Disallow: /lovable-uploads/
+Disallow: /_vercel/
 
 User-agent: Twitterbot
 Allow: /
@@ -30,6 +36,13 @@ Allow: /
 
 User-agent: *
 Allow: /
+Disallow: /assets/
+Disallow: /lovable-uploads/
+Disallow: /_vercel/
+
+# Block directory listings (individual files are still accessible via direct URLs)
+User-agent: *
+Disallow: /*/
 
 # Sitemap
 Sitemap: https://conseildietetique.lu/sitemap.xml

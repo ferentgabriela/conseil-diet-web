@@ -108,8 +108,50 @@ ${routes.map(route => `  <url>
 }
 
 function generateRobotsTxt() {
-  return `User-agent: *
+  return `# AI Bot Access
+User-agent: PerplexityBot
 Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Bard
+Allow: /
+
+# Traditional Search Engines
+User-agent: Googlebot
+Allow: /
+Disallow: /assets/
+Disallow: /lovable-uploads/
+Disallow: /_vercel/
+
+User-agent: Bingbot
+Allow: /
+Disallow: /assets/
+Disallow: /lovable-uploads/
+Disallow: /_vercel/
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: *
+Allow: /
+Disallow: /assets/
+Disallow: /lovable-uploads/
+Disallow: /_vercel/
+
+# Block directory listings (individual files are still accessible via direct URLs)
+User-agent: *
+Disallow: /*/
 
 # Sitemaps
 Sitemap: ${BASE_URL}/sitemap.xml
@@ -117,7 +159,10 @@ Sitemap: ${BASE_URL}/sitemap.xml
 # Disallow admin and temporary paths
 Disallow: /admin/
 Disallow: /temp/
-Disallow: /*?key=*`;
+Disallow: /*?key=*
+
+# Crawl-delay for better server performance
+Crawl-delay: 1`;
 }
 
 // Generate and save sitemap
