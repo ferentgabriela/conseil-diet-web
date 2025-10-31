@@ -10,7 +10,6 @@ import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 import { useChatHistory } from '@/hooks/useChatHistory';
 import { scrollToElement } from '../utils/scrollUtils';
 import { useChatSend } from '@/hooks/useChatSend';
-import { ForwardMessageDialog } from './ForwardMessageDialog';
 interface Message {
   id: string;
   message: string;
@@ -35,7 +34,6 @@ export const ChatPopup = ({
     // Secure fallback that generates >= 10 characters
     return 'sec-' + Date.now().toString(36) + '-' + Math.random().toString(36).substring(2);
   });
-  const [showForwardDialog, setShowForwardDialog] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const isOpen = externalIsOpen !== undefined ? externalIsOpen : internalIsOpen;
   const toggleOpen = onToggle || (() => setInternalIsOpen(!internalIsOpen));
@@ -75,9 +73,6 @@ export const ChatPopup = ({
       // For now, scroll to cabinets section so user can choose location
       scrollToElement('cabinets');
     }
-  }, {
-    text: "Contacter Gabriela",
-    action: () => setShowForwardDialog(true)
   }, {
     text: "Types de pathologies traitées",
     action: () => sendMessage("Quels types de pathologies et troubles alimentaires traitez-vous ?")
@@ -260,7 +255,5 @@ export const ChatPopup = ({
           </div>
         </CardContent>
       </Card>
-
-      <ForwardMessageDialog open={showForwardDialog} onOpenChange={setShowForwardDialog} conversationId={sessionId} />
     </>;
 };
