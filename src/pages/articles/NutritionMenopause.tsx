@@ -160,9 +160,13 @@ const NutritionMenopause = () => {
                   <p className="text-lg mb-6">
                     Adapter son alimentation pendant la ménopause demande patience et bienveillance envers soi-même. N'hésitez pas à consulter un professionnel pour un accompagnement personnalisé.
                   </p>
-                  <div className="inline-flex items-center gap-2 bg-hsl(var(--primary-foreground)) text-hsl(var(--primary)) px-6 py-3 rounded-full font-semibold">
+                  <a 
+                    href="/prestations" 
+                    className="inline-flex items-center gap-2 bg-hsl(var(--primary-foreground)) text-hsl(var(--primary)) px-6 py-3 rounded-full font-semibold hover:opacity-90 transition-opacity"
+                    title="Découvrir nos prestations diététiques pour la ménopause"
+                  >
                     💫 Besoin d'un accompagnement personnalisé ?
-                  </div>
+                  </a>
                 </div>
               </div>
             </div>

@@ -317,9 +317,13 @@ const PertePoidsApres40 = () => {
                   <p className="text-lg mb-6">
                     Perdre du poids après 40 ans demande une approche différente, plus patiente et plus globale. L'important est de créer un mode de vie durable qui respecte les besoins de votre corps à cette étape de la vie.
                   </p>
-                  <div className="inline-flex items-center gap-2 bg-hsl(var(--primary-foreground)) text-hsl(var(--primary)) px-6 py-3 rounded-full font-semibold">
+                  <a 
+                    href="/prestations" 
+                    className="inline-flex items-center gap-2 bg-hsl(var(--primary-foreground)) text-hsl(var(--primary)) px-6 py-3 rounded-full font-semibold hover:opacity-90 transition-opacity"
+                    title="Découvrir nos prestations pour la perte de poids après 40 ans"
+                  >
                     ✨ Prêt(e) pour un accompagnement personnalisé ?
-                  </div>
+                  </a>
                 </div>
               </div>
             </div>

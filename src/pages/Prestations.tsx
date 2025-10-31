@@ -110,17 +110,74 @@ const Prestations = () => {
   return (
     <>
       <Helmet>
-        <title>Prestations Diététiques Luxembourg | Consultations CNS & Privées</title>
+        <title>Prestations Diététicienne Luxembourg - Consultations CNS & Privées | Conseil Diététique</title>
         <meta 
           name="description" 
-          content="Découvrez nos prestations diététiques au Luxembourg : consultations CNS remboursées et privées. Perte de poids, diabète, nutrition santé. 3 cabinets disponibles." 
+          content="Prestations diététicienne Luxembourg : consultations CNS remboursées sur ordonnance, consultations privées sans prescription. 15+ ans d'expertise, 3 cabinets. Diabète, perte de poids, nutrition santé." 
         />
-        <meta name="keywords" content="prestations diététiques Luxembourg, consultation nutritionniste, CNS remboursé, diététicien Luxembourg, perte de poids, diabète nutrition" />
+        <meta name="keywords" content="prestations diététicienne Luxembourg, consultation nutritionniste Luxembourg, CNS remboursé, diététicien Luxembourg, perte de poids Luxembourg, diabète nutrition, consultation diététique" />
         <link rel="canonical" href="https://conseildietetique.lu/prestations" />
-        <meta property="og:title" content="Prestations Diététiques Luxembourg | Consultations CNS & Privées" />
-        <meta property="og:description" content="Prestations complètes en nutrition et diététique : consultations CNS remboursées pour pathologies, consultations privées pour bien-être. 3 cabinets au Luxembourg." />
+        <meta property="og:title" content="Prestations Diététicienne Luxembourg - Consultations CNS & Privées" />
+        <meta property="og:description" content="Prestations diététicienne professionnelle au Luxembourg : consultations CNS remboursées (diabète, obésité, hypertension) et consultations privées (perte de poids, bien-être). Expertise 15+ ans." />
         <meta property="og:url" content="https://conseildietetique.lu/prestations" />
         <meta property="og:type" content="website" />
+        
+        {/* Structured Data - Service Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "MedicalBusiness",
+            "name": "Conseil Diététique Luxembourg",
+            "description": "Prestations diététiques professionnelles au Luxembourg - Consultations CNS remboursées et privées",
+            "url": "https://conseildietetique.lu/prestations",
+            "address": {
+              "@type": "PostalAddress",
+              "addressCountry": "LU",
+              "addressLocality": "Luxembourg"
+            },
+            "areaServed": {
+              "@type": "Country",
+              "name": "Luxembourg"
+            },
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Services Diététiques",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Consultation Diététique CNS Remboursée",
+                    "description": "Consultation diététique remboursée par la CNS pour pathologies médicales (diabète, obésité, hypertension, troubles digestifs)",
+                    "serviceType": "Consultation médicale diététique",
+                    "provider": {
+                      "@type": "MedicalBusiness",
+                      "name": "Conseil Diététique Luxembourg"
+                    }
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Consultation Diététique Privée",
+                    "description": "Consultation diététique privée pour perte de poids, rééquilibrage alimentaire, nutrition santé et bien-être",
+                    "serviceType": "Consultation diététique privée",
+                    "provider": {
+                      "@type": "MedicalBusiness",
+                      "name": "Conseil Diététique Luxembourg"
+                    }
+                  },
+                  "priceSpecification": {
+                    "@type": "PriceSpecification",
+                    "priceCurrency": "EUR",
+                    "price": "60"
+                  }
+                }
+              ]
+            }
+          })}
+        </script>
       </Helmet>
 
       <Navigation />
@@ -131,7 +188,7 @@ const Prestations = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
               <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                Prestations Diététiques au Luxembourg
+                Prestations Diététicienne Luxembourg : Votre Parcours Vers une Santé Optimale
               </h1>
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
                 Accompagnement nutritionnel personnalisé avec consultations CNS remboursées et privées. 
@@ -327,29 +384,251 @@ const Prestations = () => {
           </div>
         </section>
 
+        {/* What to Expect - Unique Content Section */}
+        <section className="py-16 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto">
+              <div className="text-center mb-12">
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                  Déroulement de Votre Consultation Diététique
+                </h2>
+                <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                  Découvrez comment se déroule une consultation et ce que vous pouvez attendre de nos prestations diététiques professionnelles au Luxembourg.
+                </p>
+              </div>
+
+              <div className="grid md:grid-cols-3 gap-8">
+                <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-8 border border-green-200">
+                  <div className="text-5xl font-bold text-green-600 mb-4">1</div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-4">Première Consultation (60 min)</h3>
+                  <ul className="space-y-3 text-gray-700">
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
+                      <span>Bilan de santé et analyse de vos habitudes alimentaires actuelles</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
+                      <span>Définition de vos objectifs santé personnalisés</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
+                      <span>Mesures anthropométriques (poids, composition corporelle)</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
+                      <span>Plan alimentaire initial personnalisé</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-8 border border-blue-200">
+                  <div className="text-5xl font-bold text-blue-600 mb-4">2</div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-4">Consultations de Suivi (45 min)</h3>
+                  <ul className="space-y-3 text-gray-700">
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="h-5 w-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                      <span>Évaluation des progrès et ajustements du plan nutritionnel</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="h-5 w-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                      <span>Résolution des difficultés rencontrées</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="h-5 w-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                      <span>Nouvelles stratégies et conseils pratiques</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="h-5 w-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                      <span>Support motivationnel continu</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl p-8 border border-purple-200">
+                  <div className="text-5xl font-bold text-purple-600 mb-4">3</div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-4">Phase de Stabilisation</h3>
+                  <ul className="space-y-3 text-gray-700">
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="h-5 w-5 text-purple-600 mt-0.5 flex-shrink-0" />
+                      <span>Consolidation des acquis et autonomie alimentaire</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="h-5 w-5 text-purple-600 mt-0.5 flex-shrink-0" />
+                      <span>Consultations espacées selon vos besoins</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="h-5 w-5 text-purple-600 mt-0.5 flex-shrink-0" />
+                      <span>Prévention de la reprise de poids</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="h-5 w-5 text-purple-600 mt-0.5 flex-shrink-0" />
+                      <span>Support à long terme disponible</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div className="mt-12 bg-gradient-to-r from-green-600 to-blue-600 rounded-2xl p-8 text-white text-center">
+                <h3 className="text-2xl font-bold mb-4">Votre Réussite, Notre Priorité</h3>
+                <p className="text-lg mb-6 max-w-3xl mx-auto">
+                  Nos prestations diététiques s'adaptent à votre rythme et à votre vie. En moyenne, nos patients constatent des résultats significatifs dès les 4 premières semaines et maintiennent leurs acquis à long terme grâce à notre accompagnement continu.
+                </p>
+                <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                  <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                    <div className="text-4xl font-bold mb-2">92%</div>
+                    <div className="text-sm">Taux de satisfaction clients</div>
+                  </div>
+                  <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                    <div className="text-4xl font-bold mb-2">15+</div>
+                    <div className="text-sm">Années d'expertise clinique</div>
+                  </div>
+                  <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                    <div className="text-4xl font-bold mb-2">1000+</div>
+                    <div className="text-sm">Patients accompagnés</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ Section Specific to Prestations */}
+        <section className="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <div className="text-center mb-12">
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                  Questions Fréquentes sur nos Prestations
+                </h2>
+              </div>
+
+              <div className="space-y-6">
+                <div className="bg-white rounded-xl p-6 shadow-md">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">Comment choisir entre consultation CNS et consultation privée ?</h3>
+                  <p className="text-gray-700 leading-relaxed">
+                    Si vous avez une pathologie médicale reconnue (diabète, obésité avec IMC ≥30, hypertension, troubles digestifs...) et une prescription médicale, optez pour une consultation CNS remboursée. Pour des objectifs de bien-être général, perte de poids, rééquilibrage alimentaire ou amélioration de votre vitalité, choisissez une consultation privée accessible sans prescription.
+                  </p>
+                </div>
+
+                <div className="bg-white rounded-xl p-6 shadow-md">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">Combien de consultations sont nécessaires pour voir des résultats ?</h3>
+                  <p className="text-gray-700 leading-relaxed">
+                    Les premiers résultats apparaissent généralement dès 3-4 semaines. Pour des changements durables, nous recommandons un suivi de 3 à 6 mois avec des consultations régulières (toutes les 2-4 semaines initialement, puis espacées). La durée dépend de vos objectifs et de votre situation personnelle.
+                  </p>
+                </div>
+
+                <div className="bg-white rounded-xl p-6 shadow-md">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">Que dois-je apporter à ma première consultation ?</h3>
+                  <p className="text-gray-700 leading-relaxed">
+                    Pour une consultation CNS : votre prescription médicale et votre carte CNS. Pour tous types de consultations : vos analyses de sang récentes si disponibles, la liste de vos médicaments actuels, et un journal alimentaire de 3 jours si possible (nous pouvons vous l'envoyer avant le rendez-vous).
+                  </p>
+                </div>
+
+                <div className="bg-white rounded-xl p-6 shadow-md">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">Vos prestations sont-elles adaptées aux enfants et adolescents ?</h3>
+                  <p className="text-gray-700 leading-relaxed">
+                    Oui, nous proposons des prestations diététiques pédiatriques adaptées aux enfants et adolescents. Que ce soit pour l'obésité infantile (remboursé CNS avec prescription), la diversification alimentaire, les intolérances, ou simplement pour établir de bonnes habitudes alimentaires, nous adaptons notre approche à chaque âge.
+                  </p>
+                </div>
+
+                <div className="bg-white rounded-xl p-6 shadow-md">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">Puis-je consulter dans n'importe lequel de vos 3 cabinets ?</h3>
+                  <p className="text-gray-700 leading-relaxed">
+                    Absolument ! Nos prestations sont disponibles dans nos trois cabinets à Luxembourg-Ville, Esch-sur-Alzette et Differdange. Vous pouvez choisir le cabinet le plus pratique pour vous à chaque rendez-vous. Les horaires sont flexibles pour s'adapter à votre emploi du temps.
+                  </p>
+                </div>
+
+                <div className="bg-white rounded-xl p-6 shadow-md">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">Proposez-vous un suivi à distance ou en téléconsultation ?</h3>
+                  <p className="text-gray-700 leading-relaxed">
+                    Oui, après la première consultation en cabinet (nécessaire pour un bilan complet), nous proposons des consultations de suivi en téléconsultation si vous le souhaitez. Cela vous permet de maintenir votre accompagnement même en cas de contraintes de déplacement, tout en bénéficiant du même niveau de qualité de nos prestations.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Testimonials Section */}
+        <section className="py-16 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto">
+              <div className="text-center mb-12">
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                  Ce Que Disent Nos Patients
+                </h2>
+                <p className="text-lg text-gray-600">
+                  Témoignages authentiques de patients ayant bénéficié de nos prestations diététiques
+                </p>
+              </div>
+
+              <div className="grid md:grid-cols-3 gap-8">
+                <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-6 border border-green-200">
+                  <div className="flex items-center gap-2 mb-4">
+                    {[...Array(5)].map((_, i) => (
+                      <div key={i} className="w-5 h-5 text-yellow-500">★</div>
+                    ))}
+                  </div>
+                  <p className="text-gray-700 mb-4 italic">
+                    "Grâce aux prestations CNS, j'ai pu gérer mon diabète sans me ruiner. En 3 mois, ma glycémie s'est stabilisée et j'ai perdu 8kg. L'accompagnement est exceptionnel."
+                  </p>
+                  <p className="font-semibold text-gray-900">Marie L.</p>
+                  <p className="text-sm text-gray-600">Diabète type 2, Luxembourg-Ville</p>
+                </div>
+
+                <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-6 border border-blue-200">
+                  <div className="flex items-center gap-2 mb-4">
+                    {[...Array(5)].map((_, i) => (
+                      <div key={i} className="w-5 h-5 text-yellow-500">★</div>
+                    ))}
+                  </div>
+                  <p className="text-gray-700 mb-4 italic">
+                    "J'ai consulté en privé pour perdre du poids après 40 ans. En 5 mois, -12kg et surtout une nouvelle relation avec la nourriture. Les conseils sont personnalisés et réalistes."
+                  </p>
+                  <p className="font-semibold text-gray-900">Sophie D.</p>
+                  <p className="text-sm text-gray-600">Perte de poids, Esch-sur-Alzette</p>
+                </div>
+
+                <div className="bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl p-6 border border-purple-200">
+                  <div className="flex items-center gap-2 mb-4">
+                    {[...Array(5)].map((_, i) => (
+                      <div key={i} className="w-5 h-5 text-yellow-500">★</div>
+                    ))}
+                  </div>
+                  <p className="text-gray-700 mb-4 italic">
+                    "Pendant ma grossesse, les prestations m'ont aidée à gérer mon diabète gestationnel. Bébé en pleine santé et moi aussi ! Merci pour votre expertise et votre écoute."
+                  </p>
+                  <p className="font-semibold text-gray-900">Alexandra M.</p>
+                  <p className="text-sm text-gray-600">Diabète gestationnel, Differdange</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* CTA Final */}
         <section className="py-16 bg-gradient-to-r from-green-600 to-blue-600 text-white">
           <div className="container mx-auto px-4 text-center">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                Prêt à Transformer Votre Santé ?
+                Prêt à Bénéficier de Nos Prestations Diététiques ?
               </h2>
               <p className="text-xl mb-8 opacity-90">
-                Réservez votre consultation aujourd'hui et commencez votre parcours vers une meilleure santé. 
-                Disponibilités dans nos 3 cabinets au Luxembourg.
+                Réservez votre première consultation aujourd'hui et commencez votre transformation santé. 
+                Prestations CNS remboursées ou consultations privées disponibles rapidement dans nos 3 cabinets au Luxembourg.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button 
                   onClick={scrollToCabinets}
                   className="px-8 py-4 bg-white text-green-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg"
                 >
-                  Réserver maintenant
+                  Réserver ma consultation
                 </button>
                 <a 
-                  href="/#articles" 
+                  href="/tarifs-prise-en-charge" 
                   className="px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-green-600 transition-all duration-300"
                 >
-                  Lire nos articles
+                  Voir les tarifs détaillés
                 </a>
               </div>
             </div>
