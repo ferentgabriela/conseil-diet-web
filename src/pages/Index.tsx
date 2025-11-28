@@ -13,6 +13,7 @@ import DoctenaTestimonialsSection from '@/components/DoctenaTestimonialsSection'
 import FAQSection from '@/components/FAQSection';
 import BlogSection from '@/components/BlogSection';
 import CabinetsSection from '@/components/CabinetsSection';
+import TrustBadgesSection from '@/components/TrustBadgesSection';
 import Footer from '@/components/Footer';
 import MobileStickyBooking from '@/components/MobileStickyBooking';
 import { ChatPopup } from '@/components/ChatPopup';
@@ -110,6 +111,7 @@ const Index = () => {
       
       <FAQSection onOpenChat={handleOpenChat} />
       
+      <TrustBadgesSection />
       <Footer />
       
       <MobileStickyBooking />
