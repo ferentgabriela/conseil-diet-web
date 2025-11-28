@@ -103,9 +103,9 @@ const Index = () => {
       <HowItWorksSection />
       <ServicesSection />
       <TransformationStoriesSection />
+      <CabinetsSection />
       
       <DoctenaTestimonialsSection />
-      <CabinetsSection />
       <BlogSection />
       
       <FAQSection onOpenChat={handleOpenChat} />
