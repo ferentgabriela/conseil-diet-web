@@ -1,9 +1,7 @@
 import React from 'react';
 import { ShieldCheck, Microscope } from 'lucide-react';
-
 const IndependenceSection = () => {
-  return (
-    <section className="py-16 bg-gradient-to-br from-green-50 via-white to-blue-50">
+  return <section className="py-16 bg-gradient-to-br from-green-50 via-white to-blue-50">
       <div className="container mx-auto px-5">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-6">
@@ -47,17 +45,9 @@ const IndependenceSection = () => {
           </div>
 
           {/* Additional Info */}
-          <div className="mt-8 bg-gray-50 border-l-4 border-green-400 p-6 rounded-lg">
-            <p className="text-gray-800 leading-relaxed">
-              <strong>Mon engagement :</strong> Je certifie ne percevoir aucun avantage financier ou en nature 
-              de l'industrie agro-alimentaire ou des fabricants de compléments. Mes seuls revenus proviennent 
-              de mes consultations diététiques.
-            </p>
-          </div>
+          
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default IndependenceSection;
