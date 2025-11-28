@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 
 // Simple link checker for build-time validation
-const BASE_URL = 'https://conseildietetique.lu';
+const BASE_URL = 'https://www.conseildietetique.lu';
 
 // Routes that should exist (from our app routing)
 const expectedRoutes = [

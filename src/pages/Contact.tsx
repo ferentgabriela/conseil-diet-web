@@ -22,10 +22,10 @@ const Contact = () => {
           content="Contactez Gabriela Ferent, diététicienne nutritionniste au Luxembourg. 3 cabinets : Luxembourg-Ville, Esch-sur-Alzette, Differdange. Rendez-vous disponibles rapidement." 
         />
         <meta name="keywords" content="contact diététicienne Luxembourg, rendez-vous nutritionniste, consultation diététique Luxembourg, Gabriela Ferent contact" />
-        <link rel="canonical" href="https://conseildietetique.lu/contact" />
+        <link rel="canonical" href="https://www.conseildietetique.lu/contact" />
         <meta property="og:title" content="Contact Diététicienne Luxembourg | Gabriela Ferent" />
         <meta property="og:description" content="Contactez votre diététicienne au Luxembourg. 3 cabinets disponibles pour vos consultations nutritionnelles. Prise de rendez-vous rapide." />
-        <meta property="og:url" content="https://conseildietetique.lu/contact" />
+        <meta property="og:url" content="https://www.conseildietetique.lu/contact" />
         <meta property="og:type" content="website" />
       </Helmet>
 

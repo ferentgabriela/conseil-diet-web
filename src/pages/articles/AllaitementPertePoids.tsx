@@ -12,10 +12,10 @@ const AllaitementPertePoids = () => {
       <Helmet>
         <title>Allaitement et Perte de Poids : Ce que Vous Devez Savoir — Gabriela Ferent Diététicienne</title>
         <meta name="description" content="Guide nutritionnel pour l'allaitement et la perte de poids post-grossesse. Conseils de Gabriela Ferent, diététicienne nutritionniste au Luxembourg." />
-        <link rel="canonical" href="https://conseildietetique.lu/articles/allaitement-perte-poids" />
+        <link rel="canonical" href="https://www.conseildietetique.lu/articles/allaitement-perte-poids" />
         <meta property="og:title" content="Allaitement et Perte de Poids : Ce que Vous Devez Savoir" />
         <meta property="og:description" content="Guide nutritionnel pour l'allaitement et la perte de poids post-grossesse. Conseils de Gabriela Ferent, diététicienne nutritionniste au Luxembourg." />
-        <meta property="og:url" content="https://conseildietetique.lu/articles/allaitement-perte-poids" />
+        <meta property="og:url" content="https://www.conseildietetique.lu/articles/allaitement-perte-poids" />
         <meta property="og:type" content="article" />
       </Helmet>
       <Navigation />

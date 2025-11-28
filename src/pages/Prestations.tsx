@@ -116,10 +116,10 @@ const Prestations = () => {
           content="Prestations diététicienne Luxembourg : consultations CNS remboursées sur ordonnance, consultations privées sans prescription. 15+ ans d'expertise, 3 cabinets. Diabète, perte de poids, nutrition santé." 
         />
         <meta name="keywords" content="prestations diététicienne Luxembourg, consultation nutritionniste Luxembourg, CNS remboursé, diététicien Luxembourg, perte de poids Luxembourg, diabète nutrition, consultation diététique" />
-        <link rel="canonical" href="https://conseildietetique.lu/prestations" />
+        <link rel="canonical" href="https://www.conseildietetique.lu/prestations" />
         <meta property="og:title" content="Prestations Diététicienne Luxembourg - Consultations CNS & Privées" />
         <meta property="og:description" content="Prestations diététicienne professionnelle au Luxembourg : consultations CNS remboursées (diabète, obésité, hypertension) et consultations privées (perte de poids, bien-être). Expertise 15+ ans." />
-        <meta property="og:url" content="https://conseildietetique.lu/prestations" />
+        <meta property="og:url" content="https://www.conseildietetique.lu/prestations" />
         <meta property="og:type" content="website" />
         
         {/* Structured Data - Service Schema */}
@@ -129,7 +129,7 @@ const Prestations = () => {
             "@type": "MedicalBusiness",
             "name": "Conseil Diététique Luxembourg",
             "description": "Prestations diététiques professionnelles au Luxembourg - Consultations CNS remboursées et privées",
-            "url": "https://conseildietetique.lu/prestations",
+            "url": "https://www.conseildietetique.lu/prestations",
             "address": {
               "@type": "PostalAddress",
               "addressCountry": "LU",

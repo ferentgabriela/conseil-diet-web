@@ -45,7 +45,7 @@ User-agent: *
 Disallow: /*/
 
 # Sitemap
-Sitemap: https://conseildietetique.lu/sitemap.xml
+Sitemap: https://www.conseildietetique.lu/sitemap.xml
 
 # Crawl-delay for better server performance
 Crawl-delay: 1
