@@ -28,6 +28,28 @@
       "has": [
         {
           "type": "host",
+          "value": "conseildietetique.be"
+        }
+      ],
+      "destination": "https://www.conseildietetique.lu/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.conseildietetique.be"
+        }
+      ],
+      "destination": "https://www.conseildietetique.lu/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
           "value": "conseildietetique.lu"
         }
       ],
