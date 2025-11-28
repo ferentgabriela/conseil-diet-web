@@ -46,6 +46,147 @@
     <meta name="geo.placename" content="Luxembourg" />
     <meta name="geo.position" content="49.6116;6.1319" />
     
+    <!-- JSON-LD Structured Data for Medical Business with 3 Distinct Locations -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalBusiness",
+      "@id": "https://www.conseildietetique.lu/#organization",
+      "name": "Cabinet de Diététique Gabriela Ferent",
+      "description": "Diététicienne autorisée proposant des consultations diététiques sur ordonnance et privées au Luxembourg",
+      "url": "https://www.conseildietetique.lu",
+      "logo": "https://www.conseildietetique.lu/og-image-dietician-luxembourg.jpg",
+      "image": "https://www.conseildietetique.lu/og-image-dietician-luxembourg.jpg",
+      "telephone": "+352691379172",
+      "email": "dieteticienne@conseildietetique.lu",
+      "priceRange": "€€",
+      "medicalSpecialty": "Dietetics",
+      "availableService": [
+        {
+          "@type": "MedicalTherapy",
+          "name": "Consultation Diététique sur Ordonnance",
+          "description": "Consultations remboursées par la CNS (88-100%) pour diabète, obésité, troubles alimentaires, hypertension, dyslipidémies"
+        },
+        {
+          "@type": "MedicalTherapy",
+          "name": "Consultation Diététique Privée",
+          "description": "Consultations personnalisées pour perte de poids, bien-être digestif, nutrition sportive"
+        }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Services de Diététique",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Anamnèse & diagnostic nutritionnel",
+              "description": "Première consultation de 60 minutes avec évaluation complète"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Conseil & plan nutritionnel",
+              "description": "Consultation de 45 minutes avec remise du plan personnalisé"
+            }
+          }
+        ]
+      },
+      "location": [
+        {
+          "@type": "MedicalClinic",
+          "@id": "https://www.conseildietetique.lu/#limpertsberg",
+          "name": "Cabinet de Diététique - Luxembourg-Ville (Limpertsberg)",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "126 Avenue de la Faïencerie",
+            "addressLocality": "Luxembourg",
+            "postalCode": "1511",
+            "addressCountry": "LU"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "49.6244",
+            "longitude": "6.1267"
+          },
+          "telephone": "+352691379172",
+          "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "Wednesday",
+            "opens": "13:00",
+            "closes": "18:00"
+          },
+          "hasMap": "https://maps.app.goo.gl/hWQUNvnAqGR9gF1K8"
+        },
+        {
+          "@type": "MedicalClinic",
+          "@id": "https://www.conseildietetique.lu/#ettelbruck",
+          "name": "Cabinet de Diététique - Ettelbruck",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "34 Avenue Salentiny",
+            "addressLocality": "Ettelbruck",
+            "postalCode": "9080",
+            "addressCountry": "LU"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "49.8474",
+            "longitude": "6.1042"
+          },
+          "telephone": "+352691379172",
+          "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "Tuesday",
+            "opens": "08:00",
+            "closes": "20:00"
+          },
+          "hasMap": "https://maps.app.goo.gl/BskmffZY7iEYCEEi7"
+        },
+        {
+          "@type": "MedicalClinic",
+          "@id": "https://www.conseildietetique.lu/#insenborn",
+          "name": "Cabinet de Diététique - Insenborn",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "1 an der Sang",
+            "addressLocality": "Insenborn",
+            "postalCode": "8384",
+            "addressCountry": "LU"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "49.7147",
+            "longitude": "5.9311"
+          },
+          "telephone": "+352691379172",
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday", "Thursday", "Friday"],
+              "opens": "09:00",
+              "closes": "19:00"
+            },
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": "Saturday",
+              "opens": "09:00",
+              "closes": "14:00"
+            }
+          ],
+          "hasMap": "https://maps.app.goo.gl/aDhyAe8LhGMiRxVh8"
+        }
+      ],
+      "sameAs": [
+        "https://www.andl.lu/project/ferent-gabriela/",
+        "https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874"
+      ]
+    }
+    </script>
+    
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Conseil Diététique Luxembourg">

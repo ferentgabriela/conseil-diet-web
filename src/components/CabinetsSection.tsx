@@ -116,7 +116,7 @@ const CabinetsSection = () => {
         <div className="text-center mt-12">
           <div className="bg-white/80 rounded-2xl p-6 max-w-2xl mx-auto shadow-lg border border-green-200">
             <h4 className="text-lg font-bold text-gray-900 mb-3">Informations Pratiques</h4>
-            <div className="grid md:grid-cols-2 gap-4 text-sm text-gray-600">
+            <div className="grid md:grid-cols-2 gap-4 text-sm text-gray-600 mb-4">
               <div className="flex items-center gap-2">
                 <Calendar className="h-4 w-4 text-green-600" />
                 <span>Rendez-vous en ligne 24h/24</span>
@@ -125,6 +125,12 @@ const CabinetsSection = () => {
                 <Phone className="h-4 w-4 text-green-600" />
                 <span>Confirmation immédiate</span>
               </div>
+            </div>
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mt-4">
+              <p className="text-sm text-blue-800">
+                <strong>Aucune disponibilité en ligne ?</strong><br />
+                Contactez-nous directement au <a href="tel:+352691379172" className="font-bold text-blue-600 underline hover:text-blue-700">+352 691 379 172</a> ou par <a href="#contact" className="font-bold text-blue-600 underline hover:text-blue-700">formulaire de contact</a> pour trouver un créneau adapté.
+              </p>
             </div>
           </div>
         </div>
