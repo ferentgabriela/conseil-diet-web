@@ -2,6 +2,7 @@
 import React from 'react';
 import { Scale, Heart, Zap, Baby, Salad, Stethoscope } from 'lucide-react';
 import { scrollToElement } from '../utils/scrollUtils';
+import CNSReimbursementBadge from './CNSReimbursementBadge';
 
 const ServicesSection = () => {
   const scrollToContact = () => {
@@ -184,6 +185,9 @@ const ServicesSection = () => {
                 </div>
                 
                 <div className="mt-auto">
+                  {/* CNS Badge */}
+                  <CNSReimbursementBadge variant="compact" className="mb-4" />
+                  
                   <p className="text-xs text-green-700 text-center mb-4">
                     Consultations avec <span className="font-bold">prise en charge CNS</span> selon la nomenclature officielle sur présentation d'une ordonnance médicale valide.
                   </p>

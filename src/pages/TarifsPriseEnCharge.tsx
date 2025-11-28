@@ -2,6 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
+import CNSReimbursementBadge from '@/components/CNSReimbursementBadge';
 
 const TarifsPriseEnCharge = () => {
   return (
@@ -30,6 +31,9 @@ const TarifsPriseEnCharge = () => {
               <h2 className="text-2xl font-bold text-green-800 mb-6">
                 Consultations Diététiques Réglementées (avec ordonnance médicale)
               </h2>
+              
+              {/* CNS Badge */}
+              <CNSReimbursementBadge variant="full" className="mb-6 animate-fade-in" />
               
               <p className="text-gray-700 mb-6 leading-relaxed">
                 Consultations sur prescription médicale pour certaines pathologies : diabète, obésité (IMC ≥ 30), troubles du comportement alimentaire, hypertension, dyslipidémies et syndrome métabolique."
