@@ -14,8 +14,8 @@ const StickyBookingBar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const scrollToCabinets = () => {
-    scrollToElement('cabinets', 60); // Add extra offset for sticky bar
+  const scrollToContact = () => {
+    scrollToElement('contact', 60); // Add extra offset for sticky bar
   };
 
   if (!isVisible) return null;
@@ -39,13 +39,13 @@ const StickyBookingBar = () => {
               📅 Réservez votre consultation nutritionnelle – Disponibilités cette semaine
             </span>
             <button
-              onClick={scrollToCabinets}
+              onClick={scrollToContact}
               className="inline-flex items-center gap-2 px-4 py-2 bg-white font-semibold rounded-md hover:bg-gray-100 transition-colors duration-200"
               style={{ color: '#2E8B57' }}
-              aria-label="Choisir votre cabinet pour réserver votre consultation"
+              aria-label="Nous contacter pour réserver votre consultation"
             >
               <Calendar className="h-4 w-4" />
-              Choisir mon cabinet
+              Nous contacter
             </button>
           </div>
         </div>
@@ -68,13 +68,13 @@ const StickyBookingBar = () => {
             </span>
           </div>
           <button
-            onClick={scrollToCabinets}
+            onClick={scrollToContact}
             className="w-full inline-flex items-center justify-center gap-2 px-6 py-3 bg-white font-semibold rounded-md hover:bg-gray-100 transition-colors duration-200 min-h-[48px]"
             style={{ color: '#2E8B57' }}
-            aria-label="Choisir votre cabinet pour réserver votre consultation"
+            aria-label="Nous contacter pour réserver votre consultation"
           >
             <Calendar className="h-5 w-5" />
-            Choisir mon cabinet
+            Nous contacter
           </button>
         </div>
       </div>

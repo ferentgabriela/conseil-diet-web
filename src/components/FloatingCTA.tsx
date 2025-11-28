@@ -13,8 +13,8 @@ const FloatingCTA = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const scrollToCabinets = () => {
-    scrollToElement('cabinets');
+  const scrollToContact = () => {
+    scrollToElement('contact');
   };
 
   if (!isVisible) return null;
@@ -34,11 +34,11 @@ const FloatingCTA = () => {
           </p>
           
           <button
-            onClick={scrollToCabinets}
+            onClick={scrollToContact}
             className="inline-flex items-center gap-2 w-full justify-center px-4 py-3 bg-white text-green-700 font-bold rounded-xl hover:bg-gray-100 transition-all duration-300 text-sm shadow-md transform hover:scale-105"
           >
             <Calendar className="h-4 w-4" />
-            Réserver maintenant
+            Nous contacter
           </button>
         </div>
       </div>
