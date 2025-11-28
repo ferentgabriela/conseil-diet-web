@@ -13,7 +13,6 @@ import DoctenaTestimonialsSection from '@/components/DoctenaTestimonialsSection'
 import FAQSection from '@/components/FAQSection';
 import BlogSection from '@/components/BlogSection';
 
-import CabinetsSection from '@/components/CabinetsSection';
 import LocationsSection from '@/components/LocationsSection';
 import Footer from '@/components/Footer';
 import { ChatPopup } from '@/components/ChatPopup';
@@ -47,7 +46,6 @@ const Index = () => {
                 <li><a href="#apropos" className="text-green-600 underline" title="En savoir plus sur notre approche">À propos</a></li>
                 <li><a href="#services" className="text-green-600 underline" title="Découvrir nos services nutritionnels">Services</a></li>
                 <li><a href="/prestations" className="text-green-600 underline" title="Voir toutes nos prestations diététiques">Prestations</a></li>
-                <li><a href="#cabinets" className="text-green-600 underline" title="Choisir votre cabinet de consultation">Cabinets</a></li>
                 <li><a href="#contact" className="text-green-600 underline" title="Nous contacter pour plus d'informations">Contact</a></li>
               </ul>
             </nav>
@@ -104,7 +102,6 @@ const Index = () => {
       <HowItWorksSection />
       <ServicesSection />
       <TransformationStoriesSection />
-      <CabinetsSection />
       
       <DoctenaTestimonialsSection />
       <BlogSection />
