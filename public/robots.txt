@@ -44,6 +44,10 @@ Disallow: /_vercel/
 User-agent: *
 Disallow: /*/
 
+# Block RSS feeds from indexing
+Disallow: /feed/
+Disallow: /feed
+
 # Sitemap
 Sitemap: https://www.conseildietetique.lu/sitemap.xml
 

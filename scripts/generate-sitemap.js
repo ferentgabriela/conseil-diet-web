@@ -153,6 +153,10 @@ Disallow: /_vercel/
 User-agent: *
 Disallow: /*/
 
+# Block RSS feeds from indexing
+Disallow: /feed/
+Disallow: /feed
+
 # Sitemaps
 Sitemap: ${BASE_URL}/sitemap.xml
 
