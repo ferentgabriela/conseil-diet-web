@@ -5,16 +5,16 @@ import StickyBookingBar from '@/components/StickyBookingBar';
 import HeroSection from '@/components/HeroSection';
 import SEOContentSection from '@/components/SEOContentSection';
 import AboutPracticeSection from '@/components/AboutPracticeSection';
+import IndependenceSection from '@/components/IndependenceSection';
 import HowItWorksSection from '@/components/HowItWorksSection';
 import ServicesSection from '@/components/ServicesSection';
 import TransformationStoriesSection from '@/components/TransformationStoriesSection';
-
 import DoctenaTestimonialsSection from '@/components/DoctenaTestimonialsSection';
 import FAQSection from '@/components/FAQSection';
 import BlogSection from '@/components/BlogSection';
-
 import LocationsSection from '@/components/LocationsSection';
 import Footer from '@/components/Footer';
+import MobileStickyBooking from '@/components/MobileStickyBooking';
 import { ChatPopup } from '@/components/ChatPopup';
 import { ChatCTAPopup } from '@/components/ChatCTAPopup';
 import { CookieConsentBanner } from '@/components/CookieConsentBanner';
@@ -99,6 +99,7 @@ const Index = () => {
       <HeroSection />
       <SEOContentSection />
       <AboutPracticeSection />
+      <IndependenceSection />
       <HowItWorksSection />
       <ServicesSection />
       <TransformationStoriesSection />
@@ -111,6 +112,7 @@ const Index = () => {
       
       <Footer />
       
+      <MobileStickyBooking />
       <ChatPopup isOpen={isChatOpen} onToggle={handleToggleChat} />
       <ChatCTAPopup onOpenChat={handleOpenChat} />
       <CookieConsentBanner onConsentGiven={(consent) => {

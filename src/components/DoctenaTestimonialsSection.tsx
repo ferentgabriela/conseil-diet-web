@@ -2,6 +2,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { Star, Calendar, ArrowRight, Sparkles } from 'lucide-react';
 import { scrollToElement } from '../utils/scrollUtils';
+import CNSReimbursementBadge from './CNSReimbursementBadge';
 
 const DoctenaTestimonialsSection = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -58,8 +59,8 @@ const DoctenaTestimonialsSection = () => {
     };
   }, [isVisible]);
 
-  const scrollToCabinets = () => {
-    scrollToElement('cabinets');
+  const scrollToContact = () => {
+    scrollToElement('contact');
   };
 
   return (
@@ -112,7 +113,10 @@ const DoctenaTestimonialsSection = () => {
             </div>
 
             {/* Enhanced CTA after reviews */}
-            <div className="mt-12">
+            <div className="mt-12 space-y-6">
+              {/* CNS Reimbursement Badge */}
+              <CNSReimbursementBadge variant="full" className="animate-fade-in" />
+              
               <div className="relative bg-gradient-to-r from-green-600 to-green-700 text-white rounded-3xl p-8 overflow-hidden">
                 {/* Background pattern */}
                 <div className="absolute inset-0 opacity-20">
@@ -128,10 +132,15 @@ const DoctenaTestimonialsSection = () => {
                   <p className="text-xl text-green-100 mb-6">
                     Rejoignez les centaines de clients satisfaits qui ont déjà transformé leur vie au Luxembourg
                   </p>
-                  <button onClick={scrollToCabinets} className="inline-flex items-center gap-3 px-8 py-4 bg-white text-green-700 font-bold rounded-xl hover:bg-gray-100 transition-all duration-300 text-lg shadow-lg hover:shadow-xl transform hover:scale-105">
+                  <a 
+                    href="https://www.doctena.lu/fr/praticien/gabriela_ferent-4479925"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-3 px-8 py-4 bg-white text-green-700 font-bold rounded-xl hover:bg-gray-100 transition-all duration-300 text-lg shadow-lg hover:shadow-xl transform hover:scale-105"
+                  >
                     <Calendar className="h-6 w-6" />
-                    Prendre rendez-vous maintenant
-                  </button>
+                    Prendre rendez-vous sur Doctena
+                  </a>
                 </div>
               </div>
             </div>
