@@ -4,12 +4,29 @@ import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
 
 const openAIApiKey = Deno.env.get('OPENAI_API_KEY');
 
-// Restrict CORS to production domain only to prevent unauthorized access
-const corsHeaders = {
-  'Access-Control-Allow-Origin': 'https://conseildietetique.vercel.app',
-  'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
-  'Access-Control-Allow-Methods': 'POST, OPTIONS',
-};
+// Helper to get CORS headers with dynamic origin
+function getCorsHeaders(origin: string | null) {
+  const allowedOrigins = [
+    'https://conseildietetique.vercel.app',
+    'https://conseildietetique.lu',
+  ];
+  
+  // Allow Lovable preview domains
+  const isLovablePreview = origin && (
+    origin.includes('.lovableproject.com') || 
+    origin.includes('.lovable.app')
+  );
+  
+  const allowOrigin = (origin && (allowedOrigins.includes(origin) || isLovablePreview)) 
+    ? origin 
+    : 'https://conseildietetique.vercel.app';
+  
+  return {
+    'Access-Control-Allow-Origin': allowOrigin,
+    'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
+    'Access-Control-Allow-Methods': 'POST, OPTIONS',
+  };
+}
 
 // Rate limiting helper
 async function checkRateLimit(supabase: any, identifier: string, endpoint: string, maxRequests = 5, windowMinutes = 5): Promise<boolean> {
@@ -72,6 +89,9 @@ function detectLanguage(text: string): string {
 }
 
 serve(async (req) => {
+  const origin = req.headers.get('origin');
+  const corsHeaders = getCorsHeaders(origin);
+  
   if (req.method === 'OPTIONS') {
     return new Response(null, { headers: corsHeaders });
   }
