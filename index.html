@@ -338,6 +338,7 @@
         margin-top: -8px;
         background-color: #f3f4f6;
         padding: 4rem 1rem;
+        contain: layout style paint;
       }
       
       #accueil img {
@@ -348,10 +349,11 @@
         height: 100%;
         object-fit: cover;
         will-change: opacity;
+        content-visibility: auto;
       }
       
       #accueil img[fetchpriority="high"] {
-        content-visibility: auto;
+        content-visibility: visible;
       }
       
       /* Critical text styles for above-the-fold */
@@ -427,13 +429,12 @@
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"></noscript>
     
-    <!-- Critical images for above-the-fold with high priority -->
+    <!-- Critical image - only preload the first visible hero image -->
     <link rel="preload" href="/lovable-uploads/1f309c72-ddb5-4bae-944e-68046c01bf90.png" as="image" type="image/png" fetchpriority="high">
-    <link rel="preload" href="/lovable-uploads/93b38569-b3fe-4bfa-bc2d-80b6a547847b.png" as="image" type="image/png" fetchpriority="high">
-    <link rel="preload" href="/lovable-uploads/179c4bde-bcf3-45a7-8ea4-73a54222deb3.png" as="image" type="image/png" fetchpriority="high">
     
-    <!-- Prefetch non-critical resources -->
-    <link rel="prefetch" href="/lovable-uploads/6b584fa2-7cae-45b4-8d71-ff67ae89fad3.png">
+    <!-- Prefetch carousel images and other non-critical resources -->
+    <link rel="prefetch" href="/lovable-uploads/93b38569-b3fe-4bfa-bc2d-80b6a547847b.png" as="image">
+    <link rel="prefetch" href="/lovable-uploads/6b584fa2-7cae-45b4-8d71-ff67ae89fad3.png" as="image">
     <link rel="prefetch" href="/src/i18n/locales/fr.json">
     
     <!-- CSS Loading Optimization Script -->
