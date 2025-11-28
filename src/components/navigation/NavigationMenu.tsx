@@ -29,6 +29,10 @@ const NavigationMenu = ({ scrollToSection }: NavigationMenuProps) => {
     }
   };
 
+  const handlePageClick = (path: string) => {
+    navigate(path);
+  };
+
   return (
     <div className="flex items-center space-x-1 lg:space-x-2">
       <button
@@ -36,6 +40,13 @@ const NavigationMenu = ({ scrollToSection }: NavigationMenuProps) => {
         className="nav-menu-item text-gray-800 hover:text-green-600 font-semibold text-sm lg:text-lg px-2 lg:px-4 py-2 rounded-md transition-colors"
       >
         {t('navigation.about')}
+      </button>
+      <button
+        onClick={() => handlePageClick('/prestations')}
+        className="nav-menu-item text-gray-800 hover:text-green-600 font-semibold text-sm lg:text-lg px-2 lg:px-4 py-2 rounded-md transition-colors"
+        title="Découvrir nos prestations diététiques"
+      >
+        Prestations
       </button>
       <button
         onClick={() => handleMenuClick('processus')}
@@ -48,6 +59,13 @@ const NavigationMenu = ({ scrollToSection }: NavigationMenuProps) => {
         className="nav-menu-item text-gray-800 hover:text-green-600 font-semibold text-sm lg:text-lg px-2 lg:px-4 py-2 rounded-md transition-colors"
       >
         {t('navigation.testimonials')}
+      </button>
+      <button
+        onClick={() => handlePageClick('/contact')}
+        className="nav-menu-item text-gray-800 hover:text-green-600 font-semibold text-sm lg:text-lg px-2 lg:px-4 py-2 rounded-md transition-colors"
+        title="Contactez votre diététicienne"
+      >
+        Contact
       </button>
       <button
         onClick={() => handleMenuClick('cabinets')}

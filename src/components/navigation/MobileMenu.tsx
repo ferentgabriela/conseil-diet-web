@@ -30,6 +30,10 @@ const MobileMenu = ({ isMenuOpen, scrollToSection }: MobileMenuProps) => {
     }
   };
 
+  const handlePageClick = (path: string) => {
+    navigate(path);
+  };
+
   if (!isMenuOpen) return null;
 
   return (
@@ -42,6 +46,12 @@ const MobileMenu = ({ isMenuOpen, scrollToSection }: MobileMenuProps) => {
           {t('navigation.about')}
         </button>
         <button
+          onClick={() => handlePageClick('/prestations')}
+          className="text-gray-800 hover:text-green-600 transition-colors text-left font-semibold py-2"
+        >
+          Prestations
+        </button>
+        <button
           onClick={() => handleMenuClick('processus')}
           className="text-gray-800 hover:text-green-600 transition-colors text-left font-semibold py-2"
         >
@@ -52,6 +62,12 @@ const MobileMenu = ({ isMenuOpen, scrollToSection }: MobileMenuProps) => {
           className="text-gray-800 hover:text-green-600 transition-colors text-left font-semibold py-2"
         >
           {t('navigation.testimonials')}
+        </button>
+        <button
+          onClick={() => handlePageClick('/contact')}
+          className="text-gray-800 hover:text-green-600 transition-colors text-left font-semibold py-2"
+        >
+          Contact
         </button>
         <button
           onClick={() => handleMenuClick('cabinets')}
