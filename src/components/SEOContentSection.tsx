@@ -2,10 +2,10 @@ import React from 'react';
 import { Stethoscope, Calendar, MapPin } from 'lucide-react';
 
 const SEOContentSection = () => {
-  const scrollToCabinets = () => {
-    const cabinetsSection = document.getElementById('cabinets');
-    if (cabinetsSection) {
-      cabinetsSection.scrollIntoView({ behavior: 'smooth' });
+  const scrollToContact = () => {
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
@@ -95,11 +95,11 @@ const SEOContentSection = () => {
               Consultations CNS remboursées sur prescription • Consultations privées disponibles immédiatement
             </p>
             <button
-              onClick={scrollToCabinets}
+              onClick={scrollToContact}
               className="inline-flex items-center gap-2 px-8 py-4 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               <Calendar className="h-5 w-5" />
-              Choisir mon cabinet et réserver
+              Nous contacter
             </button>
           </section>
         </div>

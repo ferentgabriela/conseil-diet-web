@@ -4,8 +4,8 @@ import { Scale, Heart, Zap, Baby, Salad, Stethoscope } from 'lucide-react';
 import { scrollToElement } from '../utils/scrollUtils';
 
 const ServicesSection = () => {
-  const scrollToCabinets = () => {
-    scrollToElement('cabinets');
+  const scrollToContact = () => {
+    scrollToElement('contact');
   };
   
   const services = [
@@ -189,10 +189,10 @@ const ServicesSection = () => {
                   </p>
                 
                 <button 
-                  onClick={scrollToCabinets}
+                  onClick={scrollToContact}
                   className="w-full px-6 py-3 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transition-colors"
                 >
-                  Réserver ma consultation CNS
+                  Nous contacter
                 </button>
                 </div>
               </div>
@@ -297,10 +297,10 @@ const ServicesSection = () => {
                 </p>
                 
                 <button 
-                  onClick={scrollToCabinets}
+                  onClick={scrollToContact}
                   className="w-full px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
                 >
-                  Commencer dès maintenant
+                  Nous contacter
                 </button>
                 </div>
               </div>
