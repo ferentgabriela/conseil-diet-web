@@ -1,5 +1,5 @@
 import React from 'react';
-import { Shield, Award, Heart } from 'lucide-react';
+import { Shield, Award } from 'lucide-react';
 
 const TrustBadgesSection = () => {
   const badges = [
@@ -19,14 +19,6 @@ const TrustBadgesSection = () => {
       color: 'text-green-600',
       bgColor: 'bg-green-50',
       borderColor: 'border-green-200'
-    },
-    {
-      name: 'Maison du Diabète',
-      icon: Heart,
-      description: 'Partenaire santé',
-      color: 'text-purple-600',
-      bgColor: 'bg-purple-50',
-      borderColor: 'border-purple-200'
     }
   ];
 
@@ -42,7 +34,7 @@ const TrustBadgesSection = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
           {badges.map((badge) => {
             const IconComponent = badge.icon;
             const content = (
