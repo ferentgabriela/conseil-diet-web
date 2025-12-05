@@ -51,7 +51,7 @@ const CNSReimbursementBadge = ({ variant = 'full', className = '' }: CNSReimburs
               Voir les tarifs complets
             </a>
             <a 
-              href="https://cns.public.lu/fr.html"
+              href="https://cns.public.lu/fr/assure/remboursements/prestations-remboursees/prestations-paramedicales/dieteticiens.html"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 text-white text-sm font-semibold rounded-lg hover:bg-blue-700 transition-colors"
