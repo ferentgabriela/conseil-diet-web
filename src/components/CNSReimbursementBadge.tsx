@@ -24,20 +24,6 @@ const CNSReimbursementBadge = ({ variant = 'full', className = '' }: CNSReimburs
           <h3 className="font-bold text-green-900 text-lg mb-2">
             Consultations sur ordonnance remboursées par la CNS
           </h3>
-          <div className="bg-white/60 rounded-lg p-4 mb-3 border border-green-200">
-            <table className="w-full text-sm">
-              <tbody>
-                <tr className="border-b border-green-100">
-                  <td className="py-2 font-semibold text-gray-700">Avec carte de mutuelle</td>
-                  <td className="py-2 text-right text-green-700 font-bold">100%</td>
-                </tr>
-                <tr>
-                  <td className="py-2 font-semibold text-gray-700">Sans carte de mutuelle</td>
-                  <td className="py-2 text-right text-green-700 font-bold">88%</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
           <p className="text-gray-700 text-sm mb-3">
             Pathologies reconnues : diabète, obésité (IMC ≥ 30), troubles alimentaires, hypertension, dyslipidémies, syndrome métabolique.
           </p>
