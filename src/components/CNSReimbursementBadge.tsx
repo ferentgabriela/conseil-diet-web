@@ -25,7 +25,7 @@ const CNSReimbursementBadge = ({ variant = 'full', className = '' }: CNSReimburs
             Consultations sur ordonnance remboursées par la CNS
           </h3>
           <p className="text-gray-700 text-sm mb-3">
-            Pathologies reconnues : diabète, obésité (IMC ≥ 30), troubles alimentaires, hypertension, dyslipidémies, syndrome métabolique.
+            Consultations avec prise en charge CNS selon la nomenclature officielle sur présentation d'une ordonnance médicale valide.
           </p>
           <div className="flex flex-wrap gap-3">
             <a 
