@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { useSearchParams, Link } from 'react-router-dom';
-import { Search, RefreshCw, ExternalLink, AlertTriangle, Info, Clock, ArrowLeft } from 'lucide-react';
+import React, { useState, useEffect, useCallback } from 'react';
+import { Link } from 'react-router-dom';
+import { Search, RefreshCw, ExternalLink, AlertTriangle, Info, Clock, ArrowLeft, LogOut } from 'lucide-react';
 import { supabase } from '@/integrations/supabase/client';
 
 interface LinkCheck {
@@ -22,6 +22,11 @@ interface CrawlResult {
   allLinks: LinkCheck[];
 }
 
+interface SessionData {
+  token: string;
+  expiresAt: number;
+}
+
 const Admin404s = () => {
   const [crawlData, setCrawlData] = useState<CrawlResult | null>(null);
   const [loading, setLoading] = useState(true);
@@ -32,12 +37,93 @@ const Admin404s = () => {
   const [password, setPassword] = useState('');
   const [authenticating, setAuthenticating] = useState(false);
   const [authError, setAuthError] = useState('');
+  const [sessionExpiry, setSessionExpiry] = useState<Date | null>(null);
   
+  // Get stored session
+  const getStoredSession = useCallback((): SessionData | null => {
+    try {
+      const sessionStr = sessionStorage.getItem('admin_session');
+      if (!sessionStr) return null;
+      return JSON.parse(sessionStr);
+    } catch {
+      return null;
+    }
+  }, []);
+
+  // Store session
+  const storeSession = useCallback((token: string, expiresAt: number) => {
+    const sessionData: SessionData = { token, expiresAt };
+    sessionStorage.setItem('admin_session', JSON.stringify(sessionData));
+    setSessionExpiry(new Date(expiresAt * 1000));
+  }, []);
+
+  // Clear session
+  const clearSession = useCallback(() => {
+    sessionStorage.removeItem('admin_session');
+    setIsAuthenticated(false);
+    setSessionExpiry(null);
+    setCrawlData(null);
+  }, []);
+
+  // Validate stored session on mount
+  useEffect(() => {
+    const validateStoredSession = async () => {
+      const session = getStoredSession();
+      
+      if (!session) {
+        setLoading(false);
+        return;
+      }
+      
+      // Check if session is expired locally first
+      if (session.expiresAt < Date.now() / 1000) {
+        clearSession();
+        setLoading(false);
+        return;
+      }
+      
+      // Validate token with server
+      try {
+        const { data, error } = await supabase.functions.invoke('admin-auth', {
+          body: { action: 'validate', token: session.token }
+        });
+        
+        if (error || !data?.valid) {
+          clearSession();
+        } else {
+          setIsAuthenticated(true);
+          setSessionExpiry(new Date(session.expiresAt * 1000));
+        }
+      } catch {
+        clearSession();
+      }
+      
+      setLoading(false);
+    };
+    
+    validateStoredSession();
+  }, [getStoredSession, clearSession]);
+  
+  // Load crawl data when authenticated
   useEffect(() => {
     if (isAuthenticated) {
       loadCrawlData();
     }
   }, [isAuthenticated]);
+
+  // Session expiry countdown
+  useEffect(() => {
+    if (!sessionExpiry) return;
+    
+    const checkExpiry = setInterval(() => {
+      if (new Date() >= sessionExpiry) {
+        clearSession();
+        setAuthError('Session expired. Please login again.');
+      }
+    }, 10000); // Check every 10 seconds
+    
+    return () => clearInterval(checkExpiry);
+  }, [sessionExpiry, clearSession]);
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -52,18 +138,21 @@ const Admin404s = () => {
       if (error) throw error;
 
       if (data.authenticated) {
+        storeSession(data.sessionToken, data.expiresAt);
         setIsAuthenticated(true);
-        // Store session token in sessionStorage for this session only
-        sessionStorage.setItem('admin_session', data.sessionToken);
       } else {
         setAuthError(data.error || 'Invalid password');
       }
     } catch (error) {
-      console.error('Authentication error:', error);
       setAuthError('Authentication failed. Please try again.');
     } finally {
       setAuthenticating(false);
+      setPassword('');
     }
+  };
+
+  const handleLogout = () => {
+    clearSession();
   };
   
   const loadCrawlData = async () => {
@@ -75,30 +164,69 @@ const Admin404s = () => {
         setCrawlData(data);
       }
     } catch (error) {
-      console.error('Error loading crawl data:', error);
+      // No cached data available
     } finally {
       setLoading(false);
     }
   };
   
   const runCrawl = async () => {
+    const session = getStoredSession();
+    if (!session) {
+      setAuthError('Session expired. Please login again.');
+      clearSession();
+      return;
+    }
+    
     setCrawling(true);
     try {
-      const { data, error } = await supabase.functions.invoke('link-crawler');
+      const { data, error } = await supabase.functions.invoke('link-crawler', {
+        headers: {
+          Authorization: `Bearer ${session.token}`
+        }
+      });
       
-      if (error) throw error;
+      if (error) {
+        if (error.message?.includes('401') || error.message?.includes('Unauthorized')) {
+          clearSession();
+          setAuthError('Session expired. Please login again.');
+          return;
+        }
+        throw error;
+      }
       
       setCrawlData(data);
-      
-      // In a real implementation, you would save this to public/admin/404-report.json
-      // For now, we'll just update the state
-    } catch (error) {
-      console.error('Crawl failed:', error);
-      alert('Crawl failed. Check console for details.');
+    } catch (error: any) {
+      if (error?.message?.includes('expired') || error?.message?.includes('Unauthorized')) {
+        clearSession();
+        setAuthError('Session expired. Please login again.');
+      } else {
+        alert('Crawl failed. Check console for details.');
+      }
     } finally {
       setCrawling(false);
     }
   };
+
+  // Format remaining session time
+  const getSessionTimeRemaining = () => {
+    if (!sessionExpiry) return '';
+    const remaining = sessionExpiry.getTime() - Date.now();
+    if (remaining <= 0) return 'Expired';
+    const minutes = Math.floor(remaining / 60000);
+    return `${minutes}m remaining`;
+  };
+  
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-gray-100 flex items-center justify-center">
+        <div className="text-center">
+          <RefreshCw className="h-8 w-8 animate-spin mx-auto mb-4 text-blue-500" />
+          <p className="text-gray-600">Validating session...</p>
+        </div>
+      </div>
+    );
+  }
   
   if (!isAuthenticated) {
     return (
@@ -145,17 +273,6 @@ const Admin404s = () => {
               </button>
             </div>
           </form>
-        </div>
-      </div>
-    );
-  }
-  
-  if (loading) {
-    return (
-      <div className="min-h-screen bg-gray-100 flex items-center justify-center">
-        <div className="text-center">
-          <RefreshCw className="h-8 w-8 animate-spin mx-auto mb-4 text-blue-500" />
-          <p className="text-gray-600">Loading crawl data...</p>
         </div>
       </div>
     );
@@ -210,14 +327,27 @@ const Admin404s = () => {
               <div className="w-px h-6 bg-gray-300" />
               <h1 className="text-3xl font-bold text-gray-900">404 & Broken Links Report</h1>
             </div>
-            <button
-              onClick={runCrawl}
-              disabled={crawling}
-              className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50"
-            >
-              <RefreshCw className={`h-5 w-5 ${crawling ? 'animate-spin' : ''}`} />
-              {crawling ? 'Crawling...' : 'Re-run Crawl'}
-            </button>
+            <div className="flex items-center gap-4">
+              <div className="text-sm text-gray-500">
+                {getSessionTimeRemaining()}
+              </div>
+              <button
+                onClick={handleLogout}
+                className="flex items-center gap-2 px-3 py-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-lg transition-colors"
+                title="Logout"
+              >
+                <LogOut className="h-5 w-5" />
+                Logout
+              </button>
+              <button
+                onClick={runCrawl}
+                disabled={crawling}
+                className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50"
+              >
+                <RefreshCw className={`h-5 w-5 ${crawling ? 'animate-spin' : ''}`} />
+                {crawling ? 'Crawling...' : 'Re-run Crawl'}
+              </button>
+            </div>
           </div>
           
           {crawlData && (

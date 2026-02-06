@@ -1,5 +1,46 @@
 import { corsHeaders } from '../_shared/cors.ts';
 import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
+import { verify } from "https://deno.land/x/djwt@v2.8/mod.ts";
+
+// Get JWT key for token validation
+async function getJWTKey(): Promise<CryptoKey> {
+  const ADMIN_PASSWORD = Deno.env.get('ADMIN_PANEL_PASSWORD');
+  const encoder = new TextEncoder();
+  const keyMaterial = await crypto.subtle.importKey(
+    "raw",
+    encoder.encode(ADMIN_PASSWORD || 'temp-key'),
+    { name: "HMAC", hash: "SHA-256" },
+    false,
+    ["sign", "verify"]
+  );
+  return keyMaterial;
+}
+
+// Validate admin session token
+async function validateAdminSession(req: Request): Promise<{ valid: boolean; error?: string }> {
+  const authHeader = req.headers.get('Authorization');
+  
+  if (!authHeader || !authHeader.startsWith('Bearer ')) {
+    return { valid: false, error: 'Missing authorization header' };
+  }
+  
+  const token = authHeader.replace('Bearer ', '');
+  
+  try {
+    const key = await getJWTKey();
+    const payload = await verify(token, key);
+    
+    // Check if token is expired
+    if (payload.exp && payload.exp < Date.now() / 1000) {
+      return { valid: false, error: 'Session expired' };
+    }
+    
+    return { valid: true };
+  } catch (error) {
+    console.error('Token validation error:', error);
+    return { valid: false, error: 'Invalid session token' };
+  }
+}
 
 // Rate limiting helper - limit crawls to prevent abuse
 async function checkRateLimit(supabase: any, identifier: string, endpoint: string, maxRequests = 1, windowMinutes = 5): Promise<boolean> {
@@ -313,6 +354,18 @@ Deno.serve(async (req) => {
   }
   
   try {
+    // Validate admin session before allowing crawl
+    const sessionValidation = await validateAdminSession(req);
+    if (!sessionValidation.valid) {
+      console.log('Unauthorized crawl attempt:', sessionValidation.error);
+      return new Response(JSON.stringify({ 
+        error: sessionValidation.error || 'Unauthorized' 
+      }), {
+        status: 401,
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+      });
+    }
+    
     // Initialize Supabase for rate limiting
     const supabaseUrl = Deno.env.get('SUPABASE_URL')!;
     const supabaseServiceKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!;
