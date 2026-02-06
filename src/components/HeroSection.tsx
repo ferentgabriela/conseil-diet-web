@@ -31,7 +31,7 @@ const HeroSection = () => {
       role="banner"
       aria-label="Section hero avec images de nutrition et bien-être en arrière-plan"
     >
-      {/* Image slideshow with optimized loading */}
+      {/* Image slideshow with optimized loading - only render first image initially */}
       {images.map((image, index) => (
         <img
           key={image}
@@ -43,8 +43,9 @@ const HeroSection = () => {
           loading={index === 0 ? "eager" : "lazy"}
           fetchPriority={index === 0 ? "high" : "low"}
           decoding={index === 0 ? "sync" : "async"}
-          width="1200"
-          height="800"
+          sizes="100vw"
+          width="1335"
+          height="890"
         />
       ))}
       
