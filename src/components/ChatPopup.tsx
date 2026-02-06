@@ -149,6 +149,8 @@ export const ChatPopup = ({
               alt="Assistant IA de Gabriela Ferent pour répondre aux questions nutritionnelles"
               className="w-full h-full object-contain transition-all duration-300"
               style={{ background: 'transparent' }}
+              width="80"
+              height="80"
               loading="lazy"
               decoding="async"
             />
