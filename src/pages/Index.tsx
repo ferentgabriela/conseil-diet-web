@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React, { useState, lazy, Suspense } from 'react';
 import Navigation from '@/components/Navigation';
 import StickyBookingBar from '@/components/StickyBookingBar';
 import HeroSection from '@/components/HeroSection';
@@ -9,17 +9,19 @@ import IndependenceSection from '@/components/IndependenceSection';
 import HowItWorksSection from '@/components/HowItWorksSection';
 import ServicesSection from '@/components/ServicesSection';
 import TransformationStoriesSection from '@/components/TransformationStoriesSection';
-import DoctenaTestimonialsSection from '@/components/DoctenaTestimonialsSection';
-import FAQSection from '@/components/FAQSection';
-import BlogSection from '@/components/BlogSection';
-import CabinetsSection from '@/components/CabinetsSection';
-import TrustBadgesSection from '@/components/TrustBadgesSection';
 import Footer from '@/components/Footer';
 import MobileStickyBooking from '@/components/MobileStickyBooking';
-import { ChatPopup } from '@/components/ChatPopup';
-import { ChatCTAPopup } from '@/components/ChatCTAPopup';
-import { CookieConsentBanner } from '@/components/CookieConsentBanner';
 import { usePatientTracking } from '@/hooks/usePatientTracking';
+
+// Lazy-load below-fold components that use Radix UI (causes forced reflows on mount)
+const DoctenaTestimonialsSection = lazy(() => import('@/components/DoctenaTestimonialsSection'));
+const FAQSection = lazy(() => import('@/components/FAQSection'));
+const BlogSection = lazy(() => import('@/components/BlogSection'));
+const CabinetsSection = lazy(() => import('@/components/CabinetsSection'));
+const TrustBadgesSection = lazy(() => import('@/components/TrustBadgesSection'));
+const ChatPopup = lazy(() => import('@/components/ChatPopup').then(m => ({ default: m.ChatPopup })));
+const ChatCTAPopup = lazy(() => import('@/components/ChatCTAPopup').then(m => ({ default: m.ChatCTAPopup })));
+const CookieConsentBanner = lazy(() => import('@/components/CookieConsentBanner').then(m => ({ default: m.CookieConsentBanner })));
 
 const Index = () => {
   const [isChatOpen, setIsChatOpen] = useState(false);
@@ -104,22 +106,32 @@ const Index = () => {
       <HowItWorksSection />
       <ServicesSection />
       <TransformationStoriesSection />
-      <CabinetsSection />
+      <Suspense fallback={null}>
+        <CabinetsSection />
+      </Suspense>
       
-      <DoctenaTestimonialsSection />
-      <BlogSection />
+      <Suspense fallback={null}>
+        <DoctenaTestimonialsSection />
+        <BlogSection />
+      </Suspense>
       
-      <FAQSection onOpenChat={handleOpenChat} />
+      <Suspense fallback={null}>
+        <FAQSection onOpenChat={handleOpenChat} />
+      </Suspense>
       
-      <TrustBadgesSection />
+      <Suspense fallback={null}>
+        <TrustBadgesSection />
+      </Suspense>
       <Footer />
       
       <MobileStickyBooking />
-      <ChatPopup isOpen={isChatOpen} onToggle={handleToggleChat} />
-      <ChatCTAPopup onOpenChat={handleOpenChat} />
-      <CookieConsentBanner onConsentGiven={(consent) => {
-        console.log('Cookie consent updated:', consent);
-      }} />
+      <Suspense fallback={null}>
+        <ChatPopup isOpen={isChatOpen} onToggle={handleToggleChat} />
+        <ChatCTAPopup onOpenChat={handleOpenChat} />
+        <CookieConsentBanner onConsentGiven={(consent) => {
+          console.log('Cookie consent updated:', consent);
+        }} />
+      </Suspense>
     </div>
   );
 };
