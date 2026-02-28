@@ -630,8 +630,18 @@
       })();
     </script>
 
-    <!-- Plausible Analytics with defer -->
-    <script defer data-domain="conseildietetique.lu" src="https://plausible.io/js/script.js"></script>
+    <!-- Plausible Analytics - loaded after page interactive to avoid forced reflow -->
+    <script>
+      window.addEventListener('load', function() {
+        setTimeout(function() {
+          var s = document.createElement('script');
+          s.defer = true;
+          s.dataset.domain = 'conseildietetique.lu';
+          s.src = 'https://plausible.io/js/script.js';
+          document.head.appendChild(s);
+        }, 2000);
+      }, { once: true });
+    </script>
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-F2VZD927EE"></script>
