@@ -16,13 +16,13 @@ const Contact = () => {
       city: "Luxembourg-Ville",
       address: "74, Avenue De La Faïencerie, 1510 Luxembourg",
       color: "green",
-      mapUrl: "https://www.google.com/maps/place/Cabinet+Di%C3%A9t%C3%A9ticienne+Gabriela+Ferent+-+Luxembourg/@49.6188034,6.1132753,17z"
+      mapUrl: "https://www.google.com/maps/place/Cabinet+Di%C3%A9t%C3%A9ticienne+Gabriela+Ferent+-+Luxembourg/@49.6188034,6.1132753,17z/data=!3m1!4b1!4m6!3m5!1s0x47954f903aeab367:0x7409fab28a8304ed!8m2!3d49.6188!4d6.1181462!16s%2Fg%2F11xnmvzkc5?entry=ttu&g_ep=EgoyMDI1MDcyMy4wIKXMDSoASAFQAw%3D%3D"
     },
     {
       city: "Ettelbruck",
       address: "25, Grand-Rue, 9050 Ettelbruck, Luxembourg",
       color: "blue",
-      mapUrl: "https://www.google.com/maps/place/Cabinet+Di%C3%A9t%C3%A9ticienne+Gabriela+Ferent+-+Ettelbruck/@49.8463508,6.0958766,17z"
+      mapUrl: "https://www.google.com/maps/place/Cabinet+Di%C3%A9t%C3%A9ticienne+Gabriela+Ferent+-+Ettelbruck/@49.8463508,6.0958766,17z/data=!3m1!4b1!4m6!3m5!1s0x4795551cdb34d89b:0xc1452c1c5705ff8b!8m2!3d49.8463474!4d6.0984515!16s%2Fg%2F11xnm_lzpw?entry=ttu&g_ep=EgoyMDI1MDcyMy4wIKXMDSoASAFQAw%3D%3D"
     },
     {
       city: "Insenborn",
