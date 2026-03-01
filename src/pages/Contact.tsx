@@ -182,30 +182,22 @@ const Contact = () => {
                   <div>
                     <h3 className="text-xl font-semibold text-gray-900 mb-4">Luxembourg-Ville</h3>
                     <div className="space-y-2 text-gray-600">
-                      <div className="flex justify-between">
-                        <span>Lundi, Mercredi, Vendredi:</span>
-                      </div>
-                      <div className="flex justify-end">
-                        <span>13h00 - 18h00</span>
-                      </div>
+                      <p className="font-medium">Lundi, Mercredi, Vendredi</p>
+                      <p>13h00 - 18h00</p>
                     </div>
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold text-gray-900 mb-4">Ettelbruck</h3>
                     <div className="space-y-2 text-gray-600">
-                      <div className="flex justify-between">
-                        <span>Mardi:</span>
-                        <span>8h00 - 20h00</span>
-                      </div>
+                      <p className="font-medium">Mardi</p>
+                      <p>8h00 - 20h00</p>
                     </div>
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold text-gray-900 mb-4">Insenborn</h3>
                     <div className="space-y-2 text-gray-600">
-                      <div className="flex justify-between">
-                        <span>Samedi:</span>
-                        <span>9h00 - 14h00</span>
-                      </div>
+                      <p className="font-medium">Samedi</p>
+                      <p>9h00 - 14h00</p>
                     </div>
                   </div>
                 </div>
