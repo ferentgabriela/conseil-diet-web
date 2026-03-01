@@ -1,5 +1,5 @@
 
-import React, { useState, lazy, Suspense } from 'react';
+import React, { lazy, Suspense } from 'react';
 import Navigation from '@/components/Navigation';
 import StickyBookingBar from '@/components/StickyBookingBar';
 import HeroSection from '@/components/HeroSection';
@@ -11,7 +11,6 @@ import ServicesSection from '@/components/ServicesSection';
 import TransformationStoriesSection from '@/components/TransformationStoriesSection';
 import Footer from '@/components/Footer';
 import MobileStickyBooking from '@/components/MobileStickyBooking';
-import { usePatientTracking } from '@/hooks/usePatientTracking';
 
 // Lazy-load below-fold components that use Radix UI (causes forced reflows on mount)
 const DoctenaTestimonialsSection = lazy(() => import('@/components/DoctenaTestimonialsSection'));
@@ -19,24 +18,9 @@ const FAQSection = lazy(() => import('@/components/FAQSection'));
 const BlogSection = lazy(() => import('@/components/BlogSection'));
 const CabinetsSection = lazy(() => import('@/components/CabinetsSection'));
 const TrustBadgesSection = lazy(() => import('@/components/TrustBadgesSection'));
-const ChatPopup = lazy(() => import('@/components/ChatPopup').then(m => ({ default: m.ChatPopup })));
-const ChatCTAPopup = lazy(() => import('@/components/ChatCTAPopup').then(m => ({ default: m.ChatCTAPopup })));
 const CookieConsentBanner = lazy(() => import('@/components/CookieConsentBanner').then(m => ({ default: m.CookieConsentBanner })));
 
 const Index = () => {
-  const [isChatOpen, setIsChatOpen] = useState(false);
-  const { trackInteraction, trackAppointmentAction, trackChatAction } = usePatientTracking();
-
-  const handleOpenChat = () => {
-    setIsChatOpen(true);
-    trackChatAction('opened');
-  };
-
-  const handleToggleChat = () => {
-    setIsChatOpen(!isChatOpen);
-    trackChatAction(isChatOpen ? 'closed' : 'opened');
-  };
-
   return (
     <div className="min-h-screen bg-white pt-[34px]">
       {/* Noscript content for accessibility and Google Ads compliance */}
@@ -116,7 +100,7 @@ const Index = () => {
       </Suspense>
       
       <Suspense fallback={null}>
-        <FAQSection onOpenChat={handleOpenChat} />
+        <FAQSection />
       </Suspense>
       
       <Suspense fallback={null}>
@@ -126,8 +110,6 @@ const Index = () => {
       
       <MobileStickyBooking />
       <Suspense fallback={null}>
-        <ChatPopup isOpen={isChatOpen} onToggle={handleToggleChat} />
-        <ChatCTAPopup onOpenChat={handleOpenChat} />
         <CookieConsentBanner onConsentGiven={(consent) => {
           console.log('Cookie consent updated:', consent);
         }} />

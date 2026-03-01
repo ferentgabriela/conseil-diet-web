@@ -37,30 +37,16 @@ port = 54324
 smtp_port = 54325
 pop3_port = 54326
 
-# Public-facing chatbot functions - JWT verification disabled intentionally
-# These functions are designed to be publicly accessible for website visitors
-# Security measures: Rate limiting, CORS restrictions, input validation
-[functions.ai-chat]
-verify_jwt = false
-
-[functions.forward-message]
-verify_jwt = false
-
-[functions.forward-message-create]
-verify_jwt = false
-
-[functions.chat-history]
-verify_jwt = false
-
-[functions.chat-write]
-verify_jwt = false
-
 # Admin authentication function
 [functions.admin-auth]
 verify_jwt = false
 
 # Link crawler function - public for admin access
 [functions.link-crawler]
+verify_jwt = false
+
+# 404 logging function
+[functions.log-404]
 verify_jwt = false
 
 [storage]

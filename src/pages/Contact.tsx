@@ -1,15 +1,12 @@
 
-import React, { useState } from 'react';
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import ContactSection from '@/components/ContactSection';
-import { ChatPopup } from '@/components/ChatPopup';
-import { Phone, Mail, MapPin, Clock, MessageCircle, Calendar } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, Calendar } from 'lucide-react';
 
 const Contact = () => {
-  const [isChatOpen, setIsChatOpen] = useState(false);
-
   const scrollToCabinets = () => {
     window.location.href = '/#cabinets';
   };
@@ -65,22 +62,13 @@ const Contact = () => {
                 Prêt à transformer votre santé ? Contactez Gabriela Ferent pour un accompagnement nutritionnel personnalisé. 
                 Consultations disponibles dans nos 3 cabinets au Luxembourg.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button 
-                  onClick={scrollToCabinets}
-                  className="px-8 py-4 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center gap-2"
-                >
-                  <Calendar className="h-5 w-5" />
-                  Réserver un rendez-vous
-                </button>
-                <button
-                  onClick={() => setIsChatOpen(true)}
-                  className="px-8 py-4 bg-white text-green-600 font-semibold rounded-lg border-2 border-green-600 hover:bg-green-50 transition-all duration-300 flex items-center justify-center gap-2"
-                >
-                  <MessageCircle className="h-5 w-5" />
-                  Poser une question
-                </button>
-              </div>
+              <button 
+                onClick={scrollToCabinets}
+                className="px-8 py-4 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center gap-2 mx-auto"
+              >
+                <Calendar className="h-5 w-5" />
+                Réserver un rendez-vous
+              </button>
             </div>
           </div>
         </section>
@@ -98,7 +86,7 @@ const Contact = () => {
                 </p>
               </div>
 
-              <div className="grid md:grid-cols-3 gap-8 mb-16">
+              <div className="grid md:grid-cols-2 gap-8 mb-16 max-w-3xl mx-auto">
                 <div className="text-center p-8 bg-gradient-to-br from-green-50 to-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300">
                   <div className="w-16 h-16 bg-green-600 text-white rounded-2xl flex items-center justify-center mx-auto mb-4">
                     <Phone className="h-8 w-8" />
@@ -129,20 +117,6 @@ const Contact = () => {
                     dieteticienne@conseildietetique.lu
                   </button>
                 </div>
-
-                <div className="text-center p-8 bg-gradient-to-br from-purple-50 to-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300">
-                  <div className="w-16 h-16 bg-purple-600 text-white rounded-2xl flex items-center justify-center mx-auto mb-4">
-                    <MessageCircle className="h-8 w-8" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">Chat en ligne</h3>
-                  <p className="text-gray-600 mb-4">Posez vos questions via notre chat</p>
-                  <button
-                    onClick={() => setIsChatOpen(true)}
-                    className="text-purple-600 font-semibold hover:text-purple-700 transition-colors"
-                  >
-                    Ouvrir le chat
-                  </button>
-                </div>
               </div>
             </div>
           </div>
@@ -164,9 +138,9 @@ const Contact = () => {
               <div className="grid md:grid-cols-3 gap-8">
                 {locations.map((location, index) => {
                   const colorClasses = {
-                    green: { bg: 'bg-green-600', from: 'from-green-50', text: 'text-green-600' },
-                    blue: { bg: 'bg-blue-600', from: 'from-blue-50', text: 'text-blue-600' },
-                    purple: { bg: 'bg-purple-600', from: 'from-purple-50', text: 'text-purple-600' }
+                    green: { bg: 'bg-green-600', from: 'from-green-50' },
+                    blue: { bg: 'bg-blue-600', from: 'from-blue-50' },
+                    purple: { bg: 'bg-purple-600', from: 'from-purple-50' }
                   }[location.color]!;
                   
                   return (
@@ -240,17 +214,10 @@ const Contact = () => {
           </div>
         </section>
 
-        <ContactSection onOpenChat={() => setIsChatOpen(true)} />
+        <ContactSection />
       </main>
 
       <Footer />
-      
-      {isChatOpen && (
-        <ChatPopup 
-          isOpen={isChatOpen} 
-          onToggle={() => setIsChatOpen(false)} 
-        />
-      )}
     </>
   );
 };

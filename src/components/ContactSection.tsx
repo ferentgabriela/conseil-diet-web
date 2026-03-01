@@ -1,11 +1,7 @@
 
 import React from 'react';
 
-interface ContactSectionProps {
-  onOpenChat: () => void;
-}
-
-const ContactSection = ({ onOpenChat }: ContactSectionProps) => {
+const ContactSection = () => {
   return (
     <section className="py-12 bg-gray-50 border-t">
       <div className="container mx-auto px-4 text-center">
@@ -17,12 +13,12 @@ const ContactSection = ({ onOpenChat }: ContactSectionProps) => {
             N'hésitez pas à nous contacter pour plus d'informations
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button
-              onClick={onOpenChat}
+            <a
+              href="tel:+352691379172"
               className="inline-flex items-center gap-2 px-6 py-3 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transition-colors"
             >
-              Poser une question
-            </button>
+              Appeler maintenant
+            </a>
             <button
               onClick={() => {
                 const email = 'dieteticienne' + '@' + 'conseildietetique.lu';
