@@ -3,11 +3,7 @@ import { Euro, Shield, Calendar, Clock, Phone, HelpCircle, Stethoscope, ArrowRig
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { scrollToElement } from '../utils/scrollUtils';
 
-interface FAQSectionProps {
-  onOpenChat?: () => void;
-}
-
-const FAQSection = ({ onOpenChat }: FAQSectionProps) => {
+const FAQSection = () => {
   const scrollToCabinets = () => {
     scrollToElement('cabinets');
   };
