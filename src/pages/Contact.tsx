@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '@/components/Navigation';
@@ -13,13 +14,34 @@ const Contact = () => {
     window.location.href = '/#cabinets';
   };
 
+  const locations = [
+    {
+      city: "Luxembourg-Ville",
+      address: "74, Avenue De La Faïencerie, 1510 Luxembourg",
+      color: "green",
+      mapUrl: "https://www.google.com/maps/place/Cabinet+Di%C3%A9t%C3%A9ticienne+Gabriela+Ferent+-+Luxembourg/@49.6188034,6.1132753,17z"
+    },
+    {
+      city: "Ettelbruck",
+      address: "25, Grand-Rue, 9050 Ettelbruck, Luxembourg",
+      color: "blue",
+      mapUrl: "https://www.google.com/maps/place/Cabinet+Di%C3%A9t%C3%A9ticienne+Gabriela+Ferent+-+Ettelbruck/@49.8463508,6.0958766,17z"
+    },
+    {
+      city: "Insenborn",
+      address: "15, Burwiss, 9660 Insenborn, Luxembourg",
+      color: "purple",
+      mapUrl: "https://maps.google.com/?q=15+Burwiss+9660+Insenborn+Luxembourg"
+    }
+  ];
+
   return (
     <>
       <Helmet>
         <title>Contact Diététicienne Luxembourg | Gabriela Ferent</title>
         <meta 
           name="description" 
-          content="Contactez Gabriela Ferent, diététicienne nutritionniste au Luxembourg. 3 cabinets : Luxembourg-Ville, Esch-sur-Alzette, Differdange. Rendez-vous disponibles rapidement." 
+          content="Contactez Gabriela Ferent, diététicienne nutritionniste au Luxembourg. 3 cabinets : Luxembourg-Ville, Ettelbruck, Insenborn. Rendez-vous disponibles rapidement." 
         />
         <meta name="keywords" content="contact diététicienne Luxembourg, rendez-vous nutritionniste, consultation diététique Luxembourg, Gabriela Ferent contact" />
         <link rel="canonical" href="https://www.conseildietetique.lu/contact" />
@@ -84,10 +106,10 @@ const Contact = () => {
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">Téléphone</h3>
                   <p className="text-gray-600 mb-4">Appelez-nous directement pour prendre rendez-vous</p>
                   <a 
-                    href="tel:+35220882531" 
+                    href="tel:+352691379172" 
                     className="text-green-600 font-semibold hover:text-green-700 transition-colors"
                   >
-                    +352 20 88 25 31
+                    +352 691 379 172
                   </a>
                 </div>
 
@@ -140,45 +162,25 @@ const Contact = () => {
               </div>
 
               <div className="grid md:grid-cols-3 gap-8">
-                {[
-                  {
-                    city: "Luxembourg-Ville",
-                    address: "Centre médical, Luxembourg",
-                    icon: MapPin,
-                    color: "green"
-                  },
-                  {
-                    city: "Esch-sur-Alzette", 
-                    address: "Cabinet médical, Esch-sur-Alzette",
-                    icon: MapPin,
-                    color: "blue"
-                  },
-                  {
-                    city: "Differdange",
-                    address: "Centre de santé, Differdange", 
-                    icon: MapPin,
-                    color: "purple"
-                  }
-                ].map((location, index) => {
-                  const IconComponent = location.icon;
+                {locations.map((location, index) => {
                   const colorClasses = {
-                    green: 'bg-green-600 text-white from-green-50',
-                    blue: 'bg-blue-600 text-white from-blue-50', 
-                    purple: 'bg-purple-600 text-white from-purple-50'
-                  }[location.color];
+                    green: { bg: 'bg-green-600', from: 'from-green-50', text: 'text-green-600' },
+                    blue: { bg: 'bg-blue-600', from: 'from-blue-50', text: 'text-blue-600' },
+                    purple: { bg: 'bg-purple-600', from: 'from-purple-50', text: 'text-purple-600' }
+                  }[location.color]!;
                   
                   return (
-                    <div key={index} className={`bg-gradient-to-br ${colorClasses.split(' ')[2]} to-white rounded-xl p-8 shadow-md hover:shadow-lg transition-all duration-300`}>
-                      <div className={`w-16 h-16 ${colorClasses.split(' ').slice(0, 2).join(' ')} rounded-2xl flex items-center justify-center mx-auto mb-4`}>
-                        <IconComponent className="h-8 w-8" />
+                    <div key={index} className={`bg-gradient-to-br ${colorClasses.from} to-white rounded-xl p-8 shadow-md hover:shadow-lg transition-all duration-300`}>
+                      <div className={`w-16 h-16 ${colorClasses.bg} text-white rounded-2xl flex items-center justify-center mx-auto mb-4`}>
+                        <MapPin className="h-8 w-8" />
                       </div>
                       <h3 className="text-xl font-semibold text-gray-900 mb-3 text-center">{location.city}</h3>
                       <p className="text-gray-600 text-center mb-6">{location.address}</p>
                       <button
-                        onClick={scrollToCabinets}
-                        className={`w-full px-6 py-3 ${colorClasses.split(' ').slice(0, 2).join(' ')} font-semibold rounded-lg hover:opacity-90 transition-all duration-300`}
+                        onClick={() => window.open(location.mapUrl, '_blank')}
+                        className={`w-full px-6 py-3 ${colorClasses.bg} text-white font-semibold rounded-lg hover:opacity-90 transition-all duration-300`}
                       >
-                        Réserver ici
+                        Voir sur la carte
                       </button>
                     </div>
                   );
@@ -202,30 +204,33 @@ const Contact = () => {
                 Nous offrons des horaires flexibles pour s'adapter à votre emploi du temps
               </p>
               <div className="bg-gradient-to-br from-green-50 to-white rounded-xl p-8 shadow-md">
-                <div className="grid md:grid-cols-2 gap-8 text-left">
+                <div className="grid md:grid-cols-3 gap-8 text-left">
                   <div>
                     <h3 className="text-xl font-semibold text-gray-900 mb-4">Luxembourg-Ville</h3>
                     <div className="space-y-2 text-gray-600">
                       <div className="flex justify-between">
-                        <span>Lundi - Vendredi:</span>
-                        <span>8h00 - 18h00</span>
+                        <span>Lundi, Mercredi, Vendredi:</span>
                       </div>
-                      <div className="flex justify-between">
-                        <span>Samedi:</span>
-                        <span>9h00 - 14h00</span>
+                      <div className="flex justify-end">
+                        <span>13h00 - 18h00</span>
                       </div>
                     </div>
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-4">Esch & Differdange</h3>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-4">Ettelbruck</h3>
                     <div className="space-y-2 text-gray-600">
                       <div className="flex justify-between">
-                        <span>Lundi - Vendredi:</span>
-                        <span>9h00 - 17h00</span>
+                        <span>Mardi:</span>
+                        <span>8h00 - 20h00</span>
                       </div>
+                    </div>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-4">Insenborn</h3>
+                    <div className="space-y-2 text-gray-600">
                       <div className="flex justify-between">
                         <span>Samedi:</span>
-                        <span>Sur rendez-vous</span>
+                        <span>9h00 - 14h00</span>
                       </div>
                     </div>
                   </div>
