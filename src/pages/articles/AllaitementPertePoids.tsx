@@ -10,7 +10,7 @@ const AllaitementPertePoids = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Allaitement et Perte de Poids : Ce que Vous Devez Savoir — Gabriela Ferent Diététicienne</title>
+        <title>Allaitement et Perte de Poids : Guide Pratique</title>
         <meta name="description" content="Guide nutritionnel pour l'allaitement et la perte de poids post-grossesse. Conseils de Gabriela Ferent, diététicienne nutritionniste au Luxembourg." />
         <link rel="canonical" href="https://www.conseildietetique.lu/articles/allaitement-perte-poids" />
         <meta property="og:title" content="Allaitement et Perte de Poids : Ce que Vous Devez Savoir" />
