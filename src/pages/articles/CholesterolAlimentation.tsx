@@ -9,7 +9,7 @@ const CholesterolAlimentation = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Cholestérol : Guide Complet des Aliments à Éviter et à Privilégier — Gabriela Ferent Diététicienne</title>
+        <title>Cholestérol : Aliments à Éviter et à Privilégier</title>
         <meta name="description" content="Guide alimentaire pour réduire le cholestérol naturellement. Conseils nutritionnels de Gabriela Ferent, diététicienne au Luxembourg." />
         <link rel="canonical" href="https://www.conseildietetique.lu/articles/cholesterol-alimentation" />
         <meta property="og:title" content="Cholestérol : Guide Complet des Aliments à Éviter et à Privilégier" />
