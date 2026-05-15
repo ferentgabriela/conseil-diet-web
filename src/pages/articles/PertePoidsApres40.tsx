@@ -16,6 +16,17 @@ const PertePoidsApres40 = () => {
         <meta property="og:description" content="Découvrez des stratégies nutritionnelles adaptées pour perdre du poids après 40 ans. Conseils pratiques et durables de Gabriela Ferent, diététicienne au Luxembourg." />
         <meta property="og:url" content="https://www.conseildietetique.lu/articles/perte-poids-apres-40" />
         <meta property="og:type" content="article" />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": "Perte de Poids Après 40 ans : Stratégies Durables",
+          "datePublished": "2024-01-15",
+          "dateModified": "2024-01-15",
+          "author": { "@type": "Person", "name": "Gabriela Ferent" },
+          "publisher": { "@type": "Organization", "name": "Conseil Diététique Luxembourg" },
+          "mainEntityOfPage": "https://www.conseildietetique.lu/articles/perte-poids-apres-40"
+        })}</script>
+
       </Helmet>
       <Navigation />
       <article className="container mx-auto px-4 py-12">

@@ -18,6 +18,17 @@ const NutritionMenopause = () => {
         <meta property="og:description" content="Guide nutritionnel pour la ménopause et le maintien du poids. Conseils adaptés de Gabriela Ferent, diététicienne nutritionniste au Luxembourg." />
         <meta property="og:url" content="https://www.conseildietetique.lu/articles/nutrition-menopause-guide" />
         <meta property="og:type" content="article" />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": "Nutrition et Ménopause : Maintenir son Poids",
+          "datePublished": "2024-01-15",
+          "dateModified": "2024-01-15",
+          "author": { "@type": "Person", "name": "Gabriela Ferent" },
+          "publisher": { "@type": "Organization", "name": "Conseil Diététique Luxembourg" },
+          "mainEntityOfPage": "https://www.conseildietetique.lu/articles/nutrition-menopause-guide"
+        })}</script>
+
       </Helmet>
       <Navigation />
       <StickyBookingBar />

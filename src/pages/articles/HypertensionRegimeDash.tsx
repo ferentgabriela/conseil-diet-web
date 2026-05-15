@@ -16,6 +16,17 @@ const HypertensionRegimeDash = () => {
         <meta property="og:description" content="Le régime DASH pour réduire l'hypertension expliqué simplement. Guide complet de Gabriela Ferent, diététicienne nutritionniste au Luxembourg." />
         <meta property="og:url" content="https://www.conseildietetique.lu/articles/hypertension-regime-dash" />
         <meta property="og:type" content="article" />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": "Hypertension : Le Régime DASH Expliqué Simplement",
+          "datePublished": "2024-01-15",
+          "dateModified": "2024-01-15",
+          "author": { "@type": "Person", "name": "Gabriela Ferent" },
+          "publisher": { "@type": "Organization", "name": "Conseil Diététique Luxembourg" },
+          "mainEntityOfPage": "https://www.conseildietetique.lu/articles/hypertension-regime-dash"
+        })}</script>
+
       </Helmet>
       <Navigation />
       <article className="container mx-auto px-4 py-12">
