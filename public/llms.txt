@@ -1,0 +1,23 @@
+# Conseil Diététique Luxembourg
+
+> Cabinet de diététique et nutrition au Luxembourg dirigé par Gabriela Ferent, diététicienne nutritionniste avec 15+ ans d'expérience. Consultations CNS remboursées sur ordonnance et consultations privées dans 3 cabinets : Luxembourg-Ville, Ettelbruck et Insenborn.
+
+## Pages
+
+- [Accueil](/): Présentation du cabinet, services, témoignages et prise de rendez-vous.
+- [Prestations](/prestations): Détail des consultations CNS et privées proposées.
+- [Tarifs et prise en charge](/tarifs-prise-en-charge): Tarifs des consultations et conditions de remboursement CNS.
+- [Contact](/contact): Coordonnées, horaires et adresses des trois cabinets.
+- [Transparence](/transparence): Informations sur la pratique et l'indépendance professionnelle.
+- [Mentions légales](/mentions-legales): Mentions légales du site.
+
+## Articles
+
+- [Perte de poids après 40 ans](/articles/perte-poids-apres-40): Stratégies nutritionnelles durables.
+- [Diabète type 2 : aliments à privilégier](/articles/diabete-aliments-recommandes): Guide alimentaire pour le diabète.
+- [Cholestérol et alimentation](/articles/cholesterol-alimentation): Aliments à éviter et à privilégier.
+- [Hypertension et régime DASH](/articles/hypertension-regime-dash): Le régime DASH expliqué simplement.
+- [Nutrition et ménopause](/articles/nutrition-menopause-guide): Maintenir son poids à la ménopause.
+- [Troubles digestifs](/articles/troubles-digestifs-solutions): Solutions naturelles et rééquilibrage alimentaire.
+- [Thyroïde et alimentation](/articles/thyroide-alimentation): Optimiser la fonction thyroïdienne.
+- [Allaitement et perte de poids](/articles/allaitement-perte-poids): Nutrition post-grossesse.
