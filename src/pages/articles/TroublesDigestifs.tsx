@@ -16,6 +16,17 @@ const TroublesDigestifs = () => {
         <meta property="og:description" content="Solutions naturelles pour les troubles digestifs et rééquilibrage alimentaire. Guide pratique de Gabriela Ferent, diététicienne au Luxembourg." />
         <meta property="og:url" content="https://www.conseildietetique.lu/articles/troubles-digestifs-solutions" />
         <meta property="og:type" content="article" />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": "Troubles Digestifs : Solutions Naturelles",
+          "datePublished": "2024-01-15",
+          "dateModified": "2024-01-15",
+          "author": { "@type": "Person", "name": "Gabriela Ferent" },
+          "publisher": { "@type": "Organization", "name": "Conseil Diététique Luxembourg" },
+          "mainEntityOfPage": "https://www.conseildietetique.lu/articles/troubles-digestifs-solutions"
+        })}</script>
+
       </Helmet>
       <Navigation />
       <article className="container mx-auto px-4 py-12">

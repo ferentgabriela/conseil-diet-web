@@ -9,13 +9,24 @@ const CholesterolAlimentation = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Cholestérol : Guide Complet des Aliments à Éviter et à Privilégier — Gabriela Ferent Diététicienne</title>
+        <title>Cholestérol : Aliments à Éviter et à Privilégier</title>
         <meta name="description" content="Guide alimentaire pour réduire le cholestérol naturellement. Conseils nutritionnels de Gabriela Ferent, diététicienne au Luxembourg." />
         <link rel="canonical" href="https://www.conseildietetique.lu/articles/cholesterol-alimentation" />
         <meta property="og:title" content="Cholestérol : Guide Complet des Aliments à Éviter et à Privilégier" />
         <meta property="og:description" content="Guide alimentaire pour réduire le cholestérol naturellement. Conseils nutritionnels de Gabriela Ferent, diététicienne au Luxembourg." />
         <meta property="og:url" content="https://www.conseildietetique.lu/articles/cholesterol-alimentation" />
         <meta property="og:type" content="article" />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": "Cholestérol : Aliments à Éviter et à Privilégier",
+          "datePublished": "2024-01-15",
+          "dateModified": "2024-01-15",
+          "author": { "@type": "Person", "name": "Gabriela Ferent" },
+          "publisher": { "@type": "Organization", "name": "Conseil Diététique Luxembourg" },
+          "mainEntityOfPage": "https://www.conseildietetique.lu/articles/cholesterol-alimentation"
+        })}</script>
+
       </Helmet>
       <Navigation />
       <article className="container mx-auto px-4 py-12">

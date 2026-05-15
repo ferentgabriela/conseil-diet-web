@@ -16,6 +16,17 @@ const ThyroideAlimentation = () => {
         <meta property="og:description" content="Guide alimentaire pour optimiser la fonction thyroïdienne. Conseils nutritionnels de Gabriela Ferent, diététicienne au Luxembourg." />
         <meta property="og:url" content="https://www.conseildietetique.lu/articles/thyroide-alimentation" />
         <meta property="og:type" content="article" />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": "Thyroïde et Alimentation : Guide Pratique",
+          "datePublished": "2024-01-15",
+          "dateModified": "2024-01-15",
+          "author": { "@type": "Person", "name": "Gabriela Ferent" },
+          "publisher": { "@type": "Organization", "name": "Conseil Diététique Luxembourg" },
+          "mainEntityOfPage": "https://www.conseildietetique.lu/articles/thyroide-alimentation"
+        })}</script>
+
       </Helmet>
       <Navigation />
       <article className="container mx-auto px-4 py-12">
