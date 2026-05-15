@@ -110,10 +110,10 @@ const Prestations = () => {
   return (
     <>
       <Helmet>
-        <title>Prestations Diététicienne Luxembourg - Consultations CNS & Privées | Conseil Diététique</title>
+        <title>Prestations Diététicienne Luxembourg | CNS & Privées</title>
         <meta 
           name="description" 
-          content="Prestations diététicienne Luxembourg : consultations CNS remboursées sur ordonnance, consultations privées sans prescription. 15+ ans d'expertise, 3 cabinets. Diabète, perte de poids, nutrition santé." 
+          content="Diététicienne au Luxembourg : consultations CNS remboursées sur ordonnance et consultations privées. 15+ ans d'expertise, 3 cabinets." 
         />
         <meta name="keywords" content="prestations diététicienne Luxembourg, consultation nutritionniste Luxembourg, CNS remboursé, diététicien Luxembourg, perte de poids Luxembourg, diabète nutrition, consultation diététique" />
         <link rel="canonical" href="https://www.conseildietetique.lu/prestations" />
