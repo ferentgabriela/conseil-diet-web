@@ -1,31 +1,10 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { Home, Calendar, BookOpen, Phone, Mail } from 'lucide-react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import { supabase } from '@/integrations/supabase/client';
 
 const NotFound = () => {
-  useEffect(() => {
-    // Log 404 for analysis
-    const logError = async () => {
-      try {
-        const currentPath = window.location.pathname;
-        await supabase.functions.invoke('log-404', {
-          body: { 
-            path: currentPath,
-            referrer: document.referrer || null,
-            userAgent: navigator.userAgent
-          }
-        });
-      } catch (error) {
-        console.error('Failed to log 404:', error);
-      }
-    };
-
-    logError();
-  }, []);
-
   const scrollToCabinets = () => {
     window.location.href = '/#cabinets';
   };
