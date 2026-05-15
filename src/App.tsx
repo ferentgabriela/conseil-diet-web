@@ -13,8 +13,6 @@ import LoadingFallback from "./components/LoadingFallback";
 // Lazy load all page components
 const Index = lazy(() => import("./pages/Index"));
 const NotFound = lazy(() => import("./pages/404"));
-const Admin404s = lazy(() => import("./pages/Admin404s"));
-const Custom404 = lazy(() => import("./pages/Custom404"));
 const NutritionMenopause = lazy(() => import("./pages/articles/NutritionMenopause"));
 const AllaitementPertePoids = lazy(() => import("./pages/articles/AllaitementPertePoids"));
 const DiabeteAliments = lazy(() => import("./pages/articles/DiabeteAliments"));
@@ -51,7 +49,6 @@ const App = () => (
           <Route path="/articles/perte-poids-apres-40" element={<Suspense fallback={<LoadingFallback />}><PertePoidsApres40 /></Suspense>} />
           <Route path="/articles/hypertension-regime-dash" element={<Suspense fallback={<LoadingFallback />}><HypertensionRegimeDash /></Suspense>} />
           <Route path="/articles/thyroide-alimentation" element={<Suspense fallback={<LoadingFallback />}><ThyroideAlimentation /></Suspense>} />
-          <Route path="/admin/404s" element={<Suspense fallback={<LoadingFallback />}><Admin404s /></Suspense>} />
           <Route path="/mentions-legales" element={<Suspense fallback={<LoadingFallback />}><MentionsLegales /></Suspense>} />
           <Route path="/tarifs-prise-en-charge" element={<Suspense fallback={<LoadingFallback />}><TarifsPriseEnCharge /></Suspense>} />
           <Route path="/prestations" element={<Suspense fallback={<LoadingFallback />}><Prestations /></Suspense>} />
