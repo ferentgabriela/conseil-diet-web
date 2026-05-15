@@ -61,6 +61,18 @@
       "email": "dieteticienne@conseildietetique.lu",
       "priceRange": "€€",
       "medicalSpecialty": "Dietetics",
+      "founder": {
+        "@type": "Person",
+        "name": "Gabriela Ferent",
+        "jobTitle": "Diététicienne Nutritionniste"
+      },
+      "areaServed": [
+        { "@type": "City", "name": "Luxembourg" },
+        { "@type": "City", "name": "Ettelbruck" },
+        { "@type": "City", "name": "Insenborn" }
+      ],
+      "paymentAccepted": ["CNS", "Privé", "EUR"],
+      "currenciesAccepted": "EUR",
       "availableService": [
         {
           "@type": "MedicalTherapy",
@@ -102,9 +114,9 @@
           "name": "Cabinet de Diététique - Luxembourg-Ville (Limpertsberg)",
           "address": {
             "@type": "PostalAddress",
-            "streetAddress": "126 Avenue de la Faïencerie",
+            "streetAddress": "74 Avenue de la Faïencerie",
             "addressLocality": "Luxembourg",
-            "postalCode": "1511",
+            "postalCode": "1510",
             "addressCountry": "LU"
           },
           "geo": {
@@ -127,9 +139,9 @@
           "name": "Cabinet de Diététique - Ettelbruck",
           "address": {
             "@type": "PostalAddress",
-            "streetAddress": "34 Avenue Salentiny",
+            "streetAddress": "25 Grand-Rue",
             "addressLocality": "Ettelbruck",
-            "postalCode": "9080",
+            "postalCode": "9050",
             "addressCountry": "LU"
           },
           "geo": {
@@ -152,9 +164,9 @@
           "name": "Cabinet de Diététique - Insenborn",
           "address": {
             "@type": "PostalAddress",
-            "streetAddress": "1 an der Sang",
+            "streetAddress": "15 Burwiss",
             "addressLocality": "Insenborn",
-            "postalCode": "8384",
+            "postalCode": "9660",
             "addressCountry": "LU"
           },
           "geo": {
@@ -201,186 +213,51 @@
     <meta name="twitter:description" content="Diététicienne nutritionniste au Luxembourg. Consultations sur prescription médicale. Perte de poids, diabète, obésité. RDV à Luxembourg-Ville, Ettelbruck, Insenborn.">
     <meta name="twitter:image" content="https://conseildietetique.lu/og-image-dietician-luxembourg.jpg">
 
-    <!-- Enhanced Schema.org JSON-LD with Person Schema for AI Authority -->
+    <!-- FAQ Schema mirrored from FAQSection -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "MedicalBusiness",
-      "@id": "https://conseildietetique.lu/#business",
-      "name": "Gabriela Ferent - Diététicienne Nutritionniste Luxembourg",
-      "description": "Consultations diététiques au Luxembourg sur prescription médicale. Perte de poids, diabète, obésité, troubles alimentaires.",
-      "url": "https://conseildietetique.lu",
-      "logo": "https://conseildietetique.lu/logo.png",
-      "image": "https://conseildietetique.lu/og-image-dietician-luxembourg.jpg",
-      "telephone": "+352 691 379 172",
-      "email": "gabriela@conseildietetique.lu",
-      "founder": {
-        "@type": "Person",
-        "name": "Gabriela Ferent",
-        "jobTitle": "Diététicienne Nutritionniste",
-        "worksFor": {
-          "@type": "Organization",
-          "name": "Gabriela Ferent Nutrition Luxembourg"
-        },
-        "knowsAbout": [
-          "Nutrition Therapy",
-          "Weight Loss",
-          "Diabetes Management", 
-          "Prenatal Nutrition",
-          "Sports Nutrition",
-          "Eating Disorders"
-        ],
-        "alumniOf": "Université de Nutrition (diplôme reconnu UE)",
-        "hasOccupation": {
-          "@type": "Occupation",
-          "name": "Diététicienne",
-          "occupationLocation": {
-            "@type": "Country",
-            "name": "Luxembourg"
-          }
-        }
-      },
-      "address": [
-        {
-          "@type": "PostalAddress",
-          "streetAddress": "Cabinet Luxembourg-Ville",
-          "addressLocality": "Luxembourg",
-          "postalCode": "1234",
-          "addressCountry": "LU"
-        },
-        {
-          "@type": "PostalAddress", 
-          "streetAddress": "Cabinet Ettelbruck",
-          "addressLocality": "Ettelbruck",
-          "postalCode": "9001",
-          "addressCountry": "LU"
-        },
-        {
-          "@type": "PostalAddress",
-          "streetAddress": "15, Burwiss",
-          "addressLocality": "Insenborn",
-          "postalCode": "9660",
-          "addressCountry": "LU"
-        }
-      ],
-      "geo": [
-        {
-          "@type": "GeoCoordinates",
-          "latitude": "49.6116",
-          "longitude": "6.1319"
-        },
-        {
-          "@type": "GeoCoordinates", 
-          "latitude": "49.8477",
-          "longitude": "6.1045"
-        },
-        {
-          "@type": "GeoCoordinates",
-          "latitude": "49.8234",
-          "longitude": "5.9845"
-        }
-      ],
-      "openingHours": ["Mo-Fr 08:00-18:00"],
-      "priceRange": "Sur prescription médicale",
-      "paymentAccepted": ["CNS", "Privé", "EUR"],
-      "currenciesAccepted": "EUR",
-      "areaServed": [
-        {
-          "@type": "City",
-          "name": "Luxembourg"
-        },
-        {
-          "@type": "City", 
-          "name": "Ettelbruck"
-        },
-        {
-          "@type": "City",
-          "name": "Insenborn"
-        }
-      ],
-      "serviceType": ["Nutrition Counseling", "Weight Loss", "Diabetes Management", "Obesity Treatment"],
-      "medicalSpecialty": ["Dietitian", "Nutritionist"],
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Services de nutrition Luxembourg",
-        "itemListElement": [
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Consultation diététique sur prescription Luxembourg",
-              "description": "Suivi nutritionnel sur prescription médicale pour diabète, obésité, troubles alimentaires"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service", 
-              "name": "Consultation diététique privée Luxembourg",
-              "description": "Consultation nutritionnelle directe pour perte de poids, rééquilibrage alimentaire, nutrition sportive"
-            }
-          }
-        ]
-      },
-      "sameAs": [
-        "https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874"
-      ]
-    }
-    </script>
-
-    <!-- Enhanced FAQ Schema with AI-Friendly Questions -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org", 
       "@type": "FAQPage",
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "Comment obtenir une consultation diététique sur prescription médicale au Luxembourg ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Les consultations diététiques sont accessibles sur prescription médicale pour certaines pathologies : diabète, obésité (IMC ≥ 30), troubles du comportement alimentaire, hypertension, dyslipidémies et syndrome métabolique.",
-            "author": {
-              "@type": "Person",
-              "name": "Gabriela Ferent"
-            }
-          }
+          "name": "Est-ce que les consultations sont remboursées par la CNS ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Le remboursement n'est pas automatique. Seules les pathologies reconnues par la CNS et munies d'une ordonnance médicale de moins de 3 mois peuvent bénéficier d'une prise en charge." }
         },
         {
           "@type": "Question",
-          "name": "Comment perdre du poids après la grossesse ?",
-          "acceptedAnswer": {
-            "@type": "Answer", 
-            "text": "La perte de poids post-grossesse nécessite une approche progressive. Attendez 6-8 semaines après l'accouchement, reprenez une alimentation équilibrée, maintenez une bonne hydratation et intégrez une activité physique douce.",
-            "author": {
-              "@type": "Person",
-              "name": "Gabriela Ferent"
-            }
-          }
+          "name": "Faut-il une prescription médicale pour consulter ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Sans ordonnance, la consultation est au tarif privé non remboursable. La prescription doit être obtenue avant la première séance visant un remboursement." }
         },
         {
           "@type": "Question",
-          "name": "Quels aliments éviter pour réduire le cholestérol ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Pour réduire le cholestérol, limitez les graisses saturées, évitez les aliments ultra-transformés, privilégiez les fibres solubles comme l'avoine et consommez des oméga-3 via les poissons gras.",
-            "author": {
-              "@type": "Person", 
-              "name": "Gabriela Ferent"
-            }
-          }
+          "name": "Quelle différence entre consultations CNS et privées ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Les consultations CNS nécessitent une ordonnance médicale et concernent uniquement certaines pathologies définies par la CNS. Les consultations privées ne nécessitent pas d'ordonnance et s'adressent à tous les autres objectifs nutritionnels." }
         },
         {
           "@type": "Question",
-          "name": "Où se trouvent les cabinets de diététique au Luxembourg ?",
-          "acceptedAnswer": {
-            "@type": "Answer", 
-            "text": "Gabriela Ferent reçoit dans 3 cabinets au Luxembourg : Luxembourg-Ville, Ettelbruck et Insenborn. Tous les rendez-vous se prennent via Doctena.",
-            "author": {
-              "@type": "Person",
-              "name": "Gabriela Ferent"
-            }
-          }
+          "name": "Quelle est la différence entre une diététicienne et une nutritionniste ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "La diététicienne a une formation spécialisée reconnue et un titre protégé, contrairement au terme « nutritionniste » qui peut être utilisé sans formation officielle." }
+        },
+        {
+          "@type": "Question",
+          "name": "À quoi dois-je m'attendre lors de ma première consultation ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "La première consultation dure 60 minutes et comprend un bilan complet de votre situation, vos habitudes alimentaires et l'établissement d'un plan personnalisé." }
+        },
+        {
+          "@type": "Question",
+          "name": "Proposez-vous des plans alimentaires personnalisés ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Chaque patient reçoit un plan alimentaire entièrement personnalisé, adapté à ses goûts, contraintes, pathologies et objectifs spécifiques." }
+        },
+        {
+          "@type": "Question",
+          "name": "Quels résultats puis-je espérer et en combien de temps ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Les premiers résultats apparaissent dans les 2 à 4 semaines. Une transformation durable s'observe généralement sur 3 à 6 mois selon vos objectifs." }
+        },
+        {
+          "@type": "Question",
+          "name": "Dans quelles villes se trouvent vos cabinets et comment prendre rendez-vous ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Je consulte dans 3 cabinets au Luxembourg : Luxembourg-Ville, Ettelbruck et Insenborn. La prise de rendez-vous se fait via Doctena selon votre localisation." }
         }
       ]
     }
