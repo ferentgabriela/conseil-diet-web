@@ -8,9 +8,9 @@ const HeroSection = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   
   const images = [
-    '/lovable-uploads/1f309c72-ddb5-4bae-944e-68046c01bf90.png', // Original kitchen image
-    '/lovable-uploads/93b38569-b3fe-4bfa-bc2d-80b6a547847b.png', // Doctor with fruits
-    '/lovable-uploads/6b584fa2-7cae-45b4-8d71-ff67ae89fad3.png', // Fresh vegetables
+    '/lovable-uploads/1f309c72-ddb5-4bae-944e-68046c01bf90.webp', // Original kitchen image
+    '/lovable-uploads/93b38569-b3fe-4bfa-bc2d-80b6a547847b.webp', // Doctor with fruits
+    '/lovable-uploads/6b584fa2-7cae-45b4-8d71-ff67ae89fad3.webp', // Fresh vegetables
   ];
 
   useEffect(() => {

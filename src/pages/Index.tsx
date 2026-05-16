@@ -83,6 +83,7 @@ const Index = () => {
       
       <Navigation />
       
+      <main>
       <HeroSection />
       <SEOContentSection />
       <AboutPracticeSection />
@@ -106,6 +107,7 @@ const Index = () => {
       <Suspense fallback={null}>
         <TrustBadgesSection />
       </Suspense>
+      </main>
       <Footer />
       
       <MobileStickyBooking />
