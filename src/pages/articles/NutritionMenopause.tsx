@@ -172,7 +172,7 @@ const NutritionMenopause = () => {
                     Adapter son alimentation pendant la ménopause demande patience et bienveillance envers soi-même. N'hésitez pas à consulter un professionnel pour un accompagnement personnalisé.
                   </p>
                   <a 
-                    href="/prestations" 
+                    href="/#services" 
                     className="inline-flex items-center gap-2 bg-hsl(var(--primary-foreground)) text-hsl(var(--primary)) px-6 py-3 rounded-full font-semibold hover:opacity-90 transition-opacity"
                     title="Découvrir nos prestations diététiques pour la ménopause"
                   >

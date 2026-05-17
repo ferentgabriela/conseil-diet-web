@@ -190,7 +190,7 @@ const AllaitementPertePoids = () => {
                     La période d'allaitement n'est pas le moment idéal pour des régimes restrictifs. Privilégiez une approche douce et bienveillante qui respecte vos besoins nutritionnels et ceux de votre bébé.
                   </p>
                   <a 
-                    href="/prestations" 
+                    href="/#services" 
                     className="inline-flex items-center gap-2 bg-hsl(var(--primary-foreground)) text-hsl(var(--primary)) px-6 py-3 rounded-full font-semibold hover:opacity-90 transition-opacity"
                     title="Découvrir nos prestations nutrition pour l'allaitement"
                   >
