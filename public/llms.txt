@@ -5,7 +5,6 @@
 ## Pages
 
 - [Accueil](/): Présentation du cabinet, services, témoignages et prise de rendez-vous.
-- [Prestations](/prestations): Détail des consultations CNS et privées proposées.
 - [Tarifs et prise en charge](/tarifs-prise-en-charge): Tarifs des consultations et conditions de remboursement CNS.
 - [Contact](/contact): Coordonnées, horaires et adresses des trois cabinets.
 - [Transparence](/transparence): Informations sur la pratique et l'indépendance professionnelle.

@@ -42,7 +42,7 @@ const NavigationMenu = ({ scrollToSection }: NavigationMenuProps) => {
         {t('navigation.about')}
       </button>
       <button
-        onClick={() => handlePageClick('/prestations')}
+        onClick={() => handleMenuClick('services')}
         className="nav-menu-item text-gray-800 hover:text-green-600 font-semibold text-sm lg:text-lg px-2 lg:px-4 py-2 rounded-md transition-colors"
         title="Découvrir nos prestations diététiques"
       >

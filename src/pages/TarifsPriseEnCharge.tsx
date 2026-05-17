@@ -120,7 +120,7 @@ const TarifsPriseEnCharge = () => {
               
               <p className="text-gray-700 mb-6 leading-relaxed">
                 Ces consultations sont accessibles sans prescription médicale et adaptées à vos objectifs personnels : perte de poids, bien-être digestif, vitalité, alimentation pendant la grossesse, etc. 
-                <a href="/prestations" className="text-blue-600 hover:text-blue-700 underline font-medium ml-1" title="Découvrir toutes nos prestations diététiques en détail">
+                <a href="/#services" className="text-blue-600 hover:text-blue-700 underline font-medium ml-1" title="Découvrir toutes nos prestations diététiques en détail">
                   Consultez notre page prestations pour découvrir tous nos accompagnements
                 </a>.
               </p>

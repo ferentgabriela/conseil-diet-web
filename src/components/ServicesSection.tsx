@@ -80,13 +80,6 @@ const ServicesSection = () => {
                 <p className="text-lg text-gray-600 mb-3">
                   Deux options adaptées à vos besoins et votre situation
                 </p>
-                <a 
-                  href="/prestations" 
-                  className="inline-flex items-center text-green-600 hover:text-green-700 font-medium"
-                  title="Découvrir toutes nos prestations diététiques en détail"
-                >
-                  Voir toutes nos prestations →
-                </a>
               </div>
             </div>
             
