@@ -49,7 +49,7 @@ Disallow: /feed/
 Disallow: /feed
 
 # Sitemap
-Sitemap: https://www.conseildietetique.lu/sitemap.xml
+Sitemap: https://conseildietetique.lu/sitemap.xml
 
 # Crawl-delay for better server performance
 Crawl-delay: 1

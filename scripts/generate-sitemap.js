@@ -3,7 +3,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const BASE_URL = 'https://www.conseildietetique.lu';
+const BASE_URL = 'https://conseildietetique.lu';
 
 // Define all current routes from the app
 const routes = [
