@@ -33,7 +33,7 @@ const TarifsPriseEnCharge = () => {
               </h2>
               
               {/* CNS Badge */}
-              <CNSReimbursementBadge variant="full" className="mb-6 animate-fade-in" />
+              <CNSReimbursementBadge variant="full" showTarifsButton={false} className="mb-6 animate-fade-in" />
               
               <p className="text-gray-700 mb-6 leading-relaxed">
                 Consultations sur prescription médicale pour certaines pathologies : diabète, obésité (IMC ≥ 30), troubles du comportement alimentaire, hypertension, dyslipidémies et syndrome métabolique."
