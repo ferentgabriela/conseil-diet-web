@@ -129,7 +129,7 @@ const CabinetsSection = () => {
             <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mt-4">
               <p className="text-sm text-blue-800">
                 <strong>Aucune disponibilité en ligne ?</strong><br />
-                Contactez-nous directement au <a href="tel:+352691379172" className="font-bold text-blue-600 underline hover:text-blue-700">+352 691 379 172</a> ou par <a href="#contact" className="font-bold text-blue-600 underline hover:text-blue-700">formulaire de contact</a> pour trouver un créneau adapté.
+                Contactez-nous directement au <a href="tel:+352691379172" className="font-bold text-blue-600 underline hover:text-blue-700">+352 691 379 172</a> ou sur <a href="https://www.doctena.lu/fr/praticien/gabriela_ferent-4479925" target="_blank" rel="noopener noreferrer" className="font-bold text-blue-600 underline hover:text-blue-700">doctena.lu</a> pour trouver un créneau adapté.
               </p>
             </div>
           </div>
