@@ -4,9 +4,10 @@ import { CheckCircle2, Download, ExternalLink } from 'lucide-react';
 interface CNSReimbursementBadgeProps {
   variant?: 'compact' | 'full';
   className?: string;
+  showTarifsButton?: boolean;
 }
 
-const CNSReimbursementBadge = ({ variant = 'full', className = '' }: CNSReimbursementBadgeProps) => {
+const CNSReimbursementBadge = ({ variant = 'full', className = '', showTarifsButton = true }: CNSReimbursementBadgeProps) => {
   if (variant === 'compact') {
     return (
       <div className={`inline-flex items-center gap-2 bg-green-50 border border-green-300 text-green-800 px-4 py-2 rounded-full ${className}`}>
@@ -28,14 +29,14 @@ const CNSReimbursementBadge = ({ variant = 'full', className = '' }: CNSReimburs
             Consultations avec prise en charge CNS selon la nomenclature officielle sur présentation d'une ordonnance médicale valide.
           </p>
           <div className="flex flex-wrap gap-3">
-            <a 
+            {showTarifsButton && <a 
               href="/tarifs-prise-en-charge"
               className="inline-flex items-center gap-2 px-4 py-2 bg-green-600 text-white text-sm font-semibold rounded-lg hover:bg-green-700 transition-colors"
               title="Consulter le tableau détaillé des tarifs"
             >
               <Download className="h-4 w-4" />
               Voir les tarifs complets
-            </a>
+            </a>}
             <a 
               href="https://cns.public.lu/fr/assure/remboursements/prestations-remboursees/prestations-paramedicales/dieteticiens.html"
               target="_blank"
