@@ -11,10 +11,10 @@ const NutritionMenopause = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Nutrition et Ménopause : Guide Complet pour Maintenir son Poids — Gabriela Ferent Diététicienne</title>
+        <title>Nutrition et Ménopause : Guide pour Maintenir son Poids</title>
         <meta name="description" content="Guide nutritionnel pour la ménopause et le maintien du poids. Conseils adaptés de Gabriela Ferent, diététicienne nutritionniste au Luxembourg." />
         <link rel="canonical" href="https://www.conseildietetique.lu/articles/nutrition-menopause-guide" />
-        <meta property="og:title" content="Nutrition et Ménopause : Guide Complet pour Maintenir son Poids" />
+        <meta property="og:title" content="Nutrition et Ménopause : Guide pour Maintenir son Poids" />
         <meta property="og:description" content="Guide nutritionnel pour la ménopause et le maintien du poids. Conseils adaptés de Gabriela Ferent, diététicienne nutritionniste au Luxembourg." />
         <meta property="og:url" content="https://www.conseildietetique.lu/articles/nutrition-menopause-guide" />
         <meta property="og:type" content="article" />

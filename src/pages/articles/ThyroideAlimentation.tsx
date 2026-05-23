@@ -9,10 +9,10 @@ const ThyroideAlimentation = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Thyroïde et Alimentation : Guide Complet pour Optimiser Votre Santé — Gabriela Ferent Diététicienne</title>
+        <title>Thyroïde et Alimentation : Guide Complet</title>
         <meta name="description" content="Guide alimentaire pour optimiser la fonction thyroïdienne. Conseils nutritionnels de Gabriela Ferent, diététicienne au Luxembourg." />
         <link rel="canonical" href="https://www.conseildietetique.lu/articles/thyroide-alimentation" />
-        <meta property="og:title" content="Thyroïde et Alimentation : Guide Complet pour Optimiser Votre Santé" />
+        <meta property="og:title" content="Thyroïde et Alimentation : Guide Complet" />
         <meta property="og:description" content="Guide alimentaire pour optimiser la fonction thyroïdienne. Conseils nutritionnels de Gabriela Ferent, diététicienne au Luxembourg." />
         <meta property="og:url" content="https://www.conseildietetique.lu/articles/thyroide-alimentation" />
         <meta property="og:type" content="article" />
