@@ -9,10 +9,10 @@ const TroublesDigestifs = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Troubles Digestifs : Solutions Naturelles et Rééquilibrage Alimentaire — Gabriela Ferent Diététicienne</title>
+        <title>Troubles Digestifs : Solutions et Rééquilibrage</title>
         <meta name="description" content="Solutions naturelles pour les troubles digestifs et rééquilibrage alimentaire. Guide pratique de Gabriela Ferent, diététicienne au Luxembourg." />
         <link rel="canonical" href="https://www.conseildietetique.lu/articles/troubles-digestifs-solutions" />
-        <meta property="og:title" content="Troubles Digestifs : Solutions Naturelles et Rééquilibrage Alimentaire" />
+        <meta property="og:title" content="Troubles Digestifs : Solutions et Rééquilibrage" />
         <meta property="og:description" content="Solutions naturelles pour les troubles digestifs et rééquilibrage alimentaire. Guide pratique de Gabriela Ferent, diététicienne au Luxembourg." />
         <meta property="og:url" content="https://www.conseildietetique.lu/articles/troubles-digestifs-solutions" />
         <meta property="og:type" content="article" />

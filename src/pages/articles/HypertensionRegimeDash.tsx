@@ -9,10 +9,10 @@ const HypertensionRegimeDash = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Hypertension : Le Régime DASH Expliqué Simplement et Efficacement — Gabriela Ferent Diététicienne</title>
+        <title>Hypertension : Le Régime DASH Expliqué</title>
         <meta name="description" content="Le régime DASH pour réduire l'hypertension expliqué simplement. Guide complet de Gabriela Ferent, diététicienne nutritionniste au Luxembourg." />
         <link rel="canonical" href="https://www.conseildietetique.lu/articles/hypertension-regime-dash" />
-        <meta property="og:title" content="Hypertension : Le Régime DASH Expliqué Simplement et Efficacement" />
+        <meta property="og:title" content="Hypertension : Le Régime DASH Expliqué" />
         <meta property="og:description" content="Le régime DASH pour réduire l'hypertension expliqué simplement. Guide complet de Gabriela Ferent, diététicienne nutritionniste au Luxembourg." />
         <meta property="og:url" content="https://www.conseildietetique.lu/articles/hypertension-regime-dash" />
         <meta property="og:type" content="article" />
