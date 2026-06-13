@@ -79,7 +79,7 @@ const HowItWorksSection = () => {
                     
                     {/* Content */}
                     <h3 className="text-2xl font-bold text-gray-900 mb-4 relative z-10">{step.title}</h3>
-                    <p className="text-gray-700 mb-6 flex-grow leading-relaxed relative z-10">{step.description}</p>
+                                        <p className="text-gray-700 mb-6 flex-grow leading-relaxed relative z-10 text-left">{step.description}</p>
                     
                     {/* Enhanced patient quote */}
                     <div className="bg-gradient-to-r from-gray-50 to-green-50 rounded-lg p-4 border-l-4 border-green-500 relative z-10 group-hover:from-green-50 group-hover:to-blue-50 transition-colors duration-300">
@@ -121,7 +121,7 @@ const HowItWorksSection = () => {
               </p>
               
               <div className="relative inline-block group">
-                <button onClick={scrollToCabinets} className="relative inline-flex items-center gap-3 px-10 py-5 bg-gradient-to-r from-green-600 to-green-700 text-white font-bold rounded-2xl hover:from-green-700 hover:to-green-800 active:scale-105 transition-all duration-500 text-xl shadow-xl hover:shadow-2xl transform hover:scale-110 overflow-hidden z-20">
+                <button onClick={scrollToCabinets} className="relative inline-flex items-center gap-3 px-10 py-5 bg-gradient-to-r from-green-600 to-green-700 text-white font-bold rounded-2xl hover:from-green-700 hover:to-green-800 active:scale-105 transition-all duration-500 text-xl shadow-2xl shadow-green-600/30 hover:shadow-green-600/50 transform hover:scale-110 overflow-hidden z-20">
                   {/* Animated shine effect */}
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent transform -skew-x-12 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000 pointer-events-none"></div>
                   
