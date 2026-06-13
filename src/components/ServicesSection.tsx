@@ -5,8 +5,8 @@ import { scrollToElement } from '../utils/scrollUtils';
 import CNSReimbursementBadge from './CNSReimbursementBadge';
 
 const ServicesSection = () => {
-  const scrollToContact = () => {
-    scrollToElement('contact');
+  const scrollToCabinets = () => {
+    scrollToElement('cabinets');
   };
   
   const services = [
@@ -186,7 +186,7 @@ const ServicesSection = () => {
                   </p>
                 
                 <button 
-                  onClick={scrollToContact}
+                  onClick={scrollToCabinets}
                   className="w-full px-6 py-3 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transition-colors"
                 >
                   Nous contacter
@@ -294,7 +294,7 @@ const ServicesSection = () => {
                 </p>
                 
                 <button 
-                  onClick={scrollToContact}
+                  onClick={scrollToCabinets}
                   className="w-full px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
                 >
                   Nous contacter
