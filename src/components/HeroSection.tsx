@@ -83,7 +83,7 @@ const HeroSection = () => {
           
                     {/* Key info — consultations with/without prescription */}
                     <p className="hero-description font-semibold">
-                      Consultations avec ou sans ordonnance — Prise en charge CNS
+                      Consultations avec ou sans ordonnance
                     </p>
           
           {/* CTA Button with enhanced hover effects and fade-in animation */}
