@@ -65,19 +65,19 @@ const HeroSection = () => {
         {/* Text background overlay for better readability */}
         <div className="hero-text-overlay">
           {/* Main H1 heading with fade-in animation */}
-          <h1 className="hero-title">
-            Diététicienne à Luxembourg Gabriela Ferent
-          </h1>
+                    <h1 className="hero-title">
+                      Reprenez le contrôle de votre santé
+                    </h1>
           
-          {/* First subtitle with larger size */}
-          <h2 className="hero-subtitle">
-            3 cabinets au Luxembourg
-          </h2>
+                    {/* First subtitle with larger size */}
+                    <h2 className="hero-subtitle">
+                      Gabriela Ferent — Diététicienne nutritionniste au Luxembourg
+                    </h2>
           
-          {/* Second subtitle with smaller size */}
-          <h3 className="hero-description">
-            Des consultations adaptées à votre santé, avec ou sans ordonnance
-          </h3>
+                    {/* Second subtitle with smaller size */}
+                    <h3 className="hero-description">
+                      3 cabinets : Luxembourg-Ville, Ettelbruck, Insenborn • Consultations avec ou sans ordonnance
+                    </h3>
           
           {/* CTA Button with enhanced hover effects and fade-in animation */}
           <button
