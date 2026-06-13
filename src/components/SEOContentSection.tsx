@@ -40,11 +40,16 @@ const SEOContentSection = () => {
       desc: "Solutions nutritionnelles pour le confort intestinal"
     },
     {
-      icon: Baby,
-      title: "Grossesse & Allaitement",
-      desc: "Suivi nutritionnel périnatal personnalisé"
-    }
-  ];
+          icon: Baby,
+          title: "Grossesse & Allaitement",
+          desc: "Suivi nutritionnel périnatal personnalisé"
+        },
+        {
+          icon: ShieldCheck,
+          title: "Allergies & Intolérances",
+          desc: "Prise en charge des allergies et intolérances alimentaires"
+        }
+      ];
 
   return (
     <section className="py-12 bg-white">
@@ -90,12 +95,12 @@ const SEOContentSection = () => {
                 width="128"
                 height="128"
               />
-              <p className="text-lg font-bold text-gray-900 mb-1">
-                Gabriela Ferent
-              </p>
-              <p className="text-sm text-green-700 mb-3">
-                Diététicienne nutritionniste agréée CNS
-              </p>
+              <p className="text-xl font-bold text-gray-900 mb-1">
+                              Gabriela Ferent
+                            </p>
+                            <p className="text-base text-green-700 mb-3">
+                              Diététicienne nutritionniste agréée CNS
+                            </p>
               <div className="flex items-center gap-1.5 text-sm text-green-600 mb-3">
                 <Star className="h-4 w-4 fill-green-600" />
                 <Star className="h-4 w-4 fill-green-600" />
