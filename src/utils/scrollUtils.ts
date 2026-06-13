@@ -67,10 +67,10 @@ export const createThrottledScrollListener = (callback: (scrolled: boolean) => v
 export const restoreScrollPosition = (hash?: string) => {
   if (hash) {
     const elementId = hash.slice(1);
-    // Delay to ensure DOM is ready
+    // Delay to ensure DOM is ready — increased for lazy-loaded sections
     setTimeout(() => {
       scrollToElement(elementId);
-    }, 100);
+    }, 300);
   } else {
     // Use requestAnimationFrame for smooth scroll to top
     requestAnimationFrame(() => {
