@@ -11,10 +11,10 @@ const PertePoidsApres40 = () => {
       <Helmet>
         <title>Perte de Poids Après 40 ans : Stratégies</title>
         <meta name="description" content="Découvrez des stratégies nutritionnelles adaptées pour perdre du poids après 40 ans. Conseils pratiques et durables de Gabriela Ferent, diététicienne au Luxembourg." />
-        <link rel="canonical" href="https://www.conseildietetique.lu/articles/perte-poids-apres-40" />
+        <link rel="canonical" href="https://conseildietetique.lu/articles/perte-poids-apres-40" />
         <meta property="og:title" content="Perte de Poids Après 40 ans : Stratégies" />
         <meta property="og:description" content="Découvrez des stratégies nutritionnelles adaptées pour perdre du poids après 40 ans. Conseils pratiques et durables de Gabriela Ferent, diététicienne au Luxembourg." />
-        <meta property="og:url" content="https://www.conseildietetique.lu/articles/perte-poids-apres-40" />
+        <meta property="og:url" content="https://conseildietetique.lu/articles/perte-poids-apres-40" />
         <meta property="og:type" content="article" />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
@@ -24,7 +24,7 @@ const PertePoidsApres40 = () => {
           "dateModified": "2024-01-15",
           "author": { "@type": "Person", "name": "Gabriela Ferent" },
           "publisher": { "@type": "Organization", "name": "Conseil Diététique Luxembourg" },
-          "mainEntityOfPage": "https://www.conseildietetique.lu/articles/perte-poids-apres-40"
+          "mainEntityOfPage": "https://conseildietetique.lu/articles/perte-poids-apres-40"
         })}</script>
 
       </Helmet>

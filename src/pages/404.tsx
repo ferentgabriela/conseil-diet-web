@@ -39,10 +39,10 @@ const NotFound = () => {
           <title>Page non trouvée – Conseil Diététique Luxembourg</title>
           <meta name="description" content="La page que vous recherchez n'existe pas ou a été déplacée. Retournez à l'accueil ou parcourez nos articles." />
           <meta name="robots" content="noindex, follow" />
-          <link rel="canonical" href="https://www.conseildietetique.lu/404" />
+          <link rel="canonical" href="https://conseildietetique.lu/404" />
           <meta property="og:title" content="Page non trouvée – Conseil Diététique Luxembourg" />
           <meta property="og:description" content="La page que vous recherchez n'existe pas ou a été déplacée." />
-          <meta property="og:url" content="https://www.conseildietetique.lu/404" />
+          <meta property="og:url" content="https://conseildietetique.lu/404" />
         </Helmet>
         <Navigation />
       

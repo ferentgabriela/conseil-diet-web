@@ -11,10 +11,10 @@ const TroublesDigestifs = () => {
       <Helmet>
         <title>Troubles Digestifs : Solutions et Rééquilibrage</title>
         <meta name="description" content="Solutions naturelles pour les troubles digestifs et rééquilibrage alimentaire. Guide pratique de Gabriela Ferent, diététicienne au Luxembourg." />
-        <link rel="canonical" href="https://www.conseildietetique.lu/articles/troubles-digestifs-solutions" />
+        <link rel="canonical" href="https://conseildietetique.lu/articles/troubles-digestifs-solutions" />
         <meta property="og:title" content="Troubles Digestifs : Solutions et Rééquilibrage" />
         <meta property="og:description" content="Solutions naturelles pour les troubles digestifs et rééquilibrage alimentaire. Guide pratique de Gabriela Ferent, diététicienne au Luxembourg." />
-        <meta property="og:url" content="https://www.conseildietetique.lu/articles/troubles-digestifs-solutions" />
+        <meta property="og:url" content="https://conseildietetique.lu/articles/troubles-digestifs-solutions" />
         <meta property="og:type" content="article" />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
@@ -24,7 +24,7 @@ const TroublesDigestifs = () => {
           "dateModified": "2024-01-15",
           "author": { "@type": "Person", "name": "Gabriela Ferent" },
           "publisher": { "@type": "Organization", "name": "Conseil Diététique Luxembourg" },
-          "mainEntityOfPage": "https://www.conseildietetique.lu/articles/troubles-digestifs-solutions"
+          "mainEntityOfPage": "https://conseildietetique.lu/articles/troubles-digestifs-solutions"
         })}</script>
 
       </Helmet>

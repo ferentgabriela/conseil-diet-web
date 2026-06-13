@@ -11,10 +11,10 @@ const ThyroideAlimentation = () => {
       <Helmet>
         <title>Thyroïde et Alimentation : Guide Complet</title>
         <meta name="description" content="Guide alimentaire pour optimiser la fonction thyroïdienne. Conseils nutritionnels de Gabriela Ferent, diététicienne au Luxembourg." />
-        <link rel="canonical" href="https://www.conseildietetique.lu/articles/thyroide-alimentation" />
+        <link rel="canonical" href="https://conseildietetique.lu/articles/thyroide-alimentation" />
         <meta property="og:title" content="Thyroïde et Alimentation : Guide Complet" />
         <meta property="og:description" content="Guide alimentaire pour optimiser la fonction thyroïdienne. Conseils nutritionnels de Gabriela Ferent, diététicienne au Luxembourg." />
-        <meta property="og:url" content="https://www.conseildietetique.lu/articles/thyroide-alimentation" />
+        <meta property="og:url" content="https://conseildietetique.lu/articles/thyroide-alimentation" />
         <meta property="og:type" content="article" />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
@@ -24,7 +24,7 @@ const ThyroideAlimentation = () => {
           "dateModified": "2024-01-15",
           "author": { "@type": "Person", "name": "Gabriela Ferent" },
           "publisher": { "@type": "Organization", "name": "Conseil Diététique Luxembourg" },
-          "mainEntityOfPage": "https://www.conseildietetique.lu/articles/thyroide-alimentation"
+          "mainEntityOfPage": "https://conseildietetique.lu/articles/thyroide-alimentation"
         })}</script>
 
       </Helmet>

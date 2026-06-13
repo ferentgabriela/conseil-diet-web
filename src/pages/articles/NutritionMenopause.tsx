@@ -13,10 +13,10 @@ const NutritionMenopause = () => {
       <Helmet>
         <title>Nutrition et Ménopause : Guide pour Maintenir son Poids</title>
         <meta name="description" content="Guide nutritionnel pour la ménopause et le maintien du poids. Conseils adaptés de Gabriela Ferent, diététicienne nutritionniste au Luxembourg." />
-        <link rel="canonical" href="https://www.conseildietetique.lu/articles/nutrition-menopause-guide" />
+        <link rel="canonical" href="https://conseildietetique.lu/articles/nutrition-menopause-guide" />
         <meta property="og:title" content="Nutrition et Ménopause : Guide pour Maintenir son Poids" />
         <meta property="og:description" content="Guide nutritionnel pour la ménopause et le maintien du poids. Conseils adaptés de Gabriela Ferent, diététicienne nutritionniste au Luxembourg." />
-        <meta property="og:url" content="https://www.conseildietetique.lu/articles/nutrition-menopause-guide" />
+        <meta property="og:url" content="https://conseildietetique.lu/articles/nutrition-menopause-guide" />
         <meta property="og:type" content="article" />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
@@ -26,7 +26,7 @@ const NutritionMenopause = () => {
           "dateModified": "2024-01-15",
           "author": { "@type": "Person", "name": "Gabriela Ferent" },
           "publisher": { "@type": "Organization", "name": "Conseil Diététique Luxembourg" },
-          "mainEntityOfPage": "https://www.conseildietetique.lu/articles/nutrition-menopause-guide"
+          "mainEntityOfPage": "https://conseildietetique.lu/articles/nutrition-menopause-guide"
         })}</script>
 
       </Helmet>

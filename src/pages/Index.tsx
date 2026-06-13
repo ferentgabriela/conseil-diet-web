@@ -26,7 +26,7 @@ const Index = () => {
       <noscript>
         <div className="container mx-auto px-4 py-8 bg-white text-gray-900">
           <header>
-            <h1 className="text-3xl font-bold mb-4">Diététicienne à Luxembourg — Gabriela Ferent</h1>
+            <h2 className="text-3xl font-bold mb-4">Diététicienne à Luxembourg — Gabriela Ferent</h2>
             <nav className="mb-6">
               <ul className="flex flex-wrap gap-4">
                 <li><a href="#apropos" className="text-green-600 underline" title="En savoir plus sur notre approche">À propos</a></li>

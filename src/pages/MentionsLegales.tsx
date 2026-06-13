@@ -9,10 +9,10 @@ const MentionsLegales = () => {
       <Helmet>
         <title>Mentions Légales, CGU & Politique de Confidentialité — Gabriela Ferent Diététicienne</title>
         <meta name="description" content="Mentions légales, conditions générales d'utilisation et politique de confidentialité du site conseildietetique.lu. Gabriela Ferent, diététicienne au Luxembourg." />
-        <link rel="canonical" href="https://www.conseildietetique.lu/mentions-legales" />
+        <link rel="canonical" href="https://conseildietetique.lu/mentions-legales" />
         <meta property="og:title" content="Mentions Légales — Gabriela Ferent Diététicienne" />
         <meta property="og:description" content="Mentions légales et politique de confidentialité du cabinet de diététique de Gabriela Ferent au Luxembourg." />
-        <meta property="og:url" content="https://www.conseildietetique.lu/mentions-legales" />
+        <meta property="og:url" content="https://conseildietetique.lu/mentions-legales" />
         <meta property="og:type" content="website" />
       </Helmet>
       <Navigation />
