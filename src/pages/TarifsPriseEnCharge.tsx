@@ -9,7 +9,7 @@ const TarifsPriseEnCharge = () => {
     <>
       <Helmet>
         <title>Tarifs & prise en charge — Gabriela Ferent Diététicienne</title>
-        <meta name="description" content="Tarifs des consultations et informations sur la prise en charge sur prescription médicale au Luxembourg. Rendez-vous à Luxembourg-Ville, Ettelbruck, Insenborn." />
+        <meta name="description" content="Tarifs des consultations et informations sur la prise en charge sur prescription médicale au Luxembourg. Tarifs CNS mis à jour au 01.06.2026." />
         <link rel="canonical" href="https://conseildietetique.lu/tarifs-prise-en-charge" />
         <meta property="og:title" content="Tarifs & prise en charge — Gabriela Ferent Diététicienne" />
         <meta property="og:description" content="Tarifs des consultations et informations sur la prise en charge sur prescription médicale au Luxembourg." />
@@ -63,43 +63,43 @@ const TarifsPriseEnCharge = () => {
                       <td className="border border-gray-300 px-4 py-3">Anamnèse & diagnostic nutritionnel</td>
                       <td className="border border-gray-300 px-4 py-3">ZD11</td>
                       <td className="border border-gray-300 px-4 py-3">60 min</td>
-                      <td className="border border-gray-300 px-4 py-3 font-semibold">106,14 €</td>
-                      <td className="border border-gray-300 px-4 py-3 font-semibold text-green-600">12,74 €</td>
+                      <td className="border border-gray-300 px-4 py-3 font-semibold">108,79 €</td>
+                      <td className="border border-gray-300 px-4 py-3 font-semibold text-green-600">13,05 €</td>
                     </tr>
                     <tr className="bg-gray-50">
                       <td className="border border-gray-300 px-4 py-3">Conseil & remise du plan nutritionnel</td>
                       <td className="border border-gray-300 px-4 py-3">ZD12</td>
                       <td className="border border-gray-300 px-4 py-3">45 min</td>
-                      <td className="border border-gray-300 px-4 py-3 font-semibold">132,29 €</td>
-                      <td className="border border-gray-300 px-4 py-3 font-semibold text-green-600">15,92 €</td>
+                      <td className="border border-gray-300 px-4 py-3 font-semibold">135,99 €</td>
+                      <td className="border border-gray-300 px-4 py-3 font-semibold text-green-600">16,32 €</td>
                     </tr>
                     <tr className="bg-white">
                       <td className="border border-gray-300 px-4 py-3">Suivi 1ère séance</td>
                       <td className="border border-gray-300 px-4 py-3">ZD13</td>
                       <td className="border border-gray-300 px-4 py-3">30 min</td>
-                      <td className="border border-gray-300 px-4 py-3 font-semibold">64,72 €</td>
-                      <td className="border border-gray-300 px-4 py-3 font-semibold text-green-600">7,77 €</td>
+                      <td className="border border-gray-300 px-4 py-3 font-semibold">68,00 €</td>
+                      <td className="border border-gray-300 px-4 py-3 font-semibold text-green-600">8,16 €</td>
                     </tr>
                     <tr className="bg-gray-50">
                       <td className="border border-gray-300 px-4 py-3">Suivi 2ème séance</td>
                       <td className="border border-gray-300 px-4 py-3">ZD13</td>
                       <td className="border border-gray-300 px-4 py-3">30 min</td>
-                      <td className="border border-gray-300 px-4 py-3 font-semibold">64,72 €</td>
-                      <td className="border border-gray-300 px-4 py-3 font-semibold text-green-600">7,77 €</td>
+                      <td className="border border-gray-300 px-4 py-3 font-semibold">68,00 €</td>
+                      <td className="border border-gray-300 px-4 py-3 font-semibold text-green-600">8,16 €</td>
                     </tr>
                     <tr className="bg-white">
                       <td className="border border-gray-300 px-4 py-3">Suivi 3ème séance</td>
                       <td className="border border-gray-300 px-4 py-3">ZD13</td>
                       <td className="border border-gray-300 px-4 py-3">30 min</td>
-                      <td className="border border-gray-300 px-4 py-3 font-semibold">64,72 €</td>
-                      <td className="border border-gray-300 px-4 py-3 font-semibold text-green-600">7,77 €</td>
+                      <td className="border border-gray-300 px-4 py-3 font-semibold">68,00 €</td>
+                      <td className="border border-gray-300 px-4 py-3 font-semibold text-green-600">8,16 €</td>
                     </tr>
                     <tr className="bg-gray-50">
                       <td className="border border-gray-300 px-4 py-3">Suivi 4ème séance</td>
                       <td className="border border-gray-300 px-4 py-3">ZD13</td>
                       <td className="border border-gray-300 px-4 py-3">30 min</td>
-                      <td className="border border-gray-300 px-4 py-3 font-semibold">64,72 €</td>
-                      <td className="border border-gray-300 px-4 py-3 font-semibold text-green-600">7,77 €</td>
+                      <td className="border border-gray-300 px-4 py-3 font-semibold">68,00 €</td>
+                      <td className="border border-gray-300 px-4 py-3 font-semibold text-green-600">8,16 €</td>
                     </tr>
                   </tbody>
                 </table>
@@ -138,12 +138,12 @@ const TarifsPriseEnCharge = () => {
                     <tr className="bg-white">
                       <td className="border border-gray-300 px-4 py-3">Anamnèse & diagnostic nutritionnel</td>
                       <td className="border border-gray-300 px-4 py-3">60 min</td>
-                      <td className="border border-gray-300 px-4 py-3 font-semibold text-blue-600">106 €</td>
+                      <td className="border border-gray-300 px-4 py-3 font-semibold text-blue-600">109 €</td>
                     </tr>
                     <tr className="bg-gray-50">
                       <td className="border border-gray-300 px-4 py-3">Conseil & remise du plan nutritionnel</td>
                       <td className="border border-gray-300 px-4 py-3">45 min</td>
-                      <td className="border border-gray-300 px-4 py-3 font-semibold text-blue-600">132 €</td>
+                      <td className="border border-gray-300 px-4 py-3 font-semibold text-blue-600">136 €</td>
                     </tr>
                     <tr className="bg-white">
                       <td className="border border-gray-300 px-4 py-3">Suivi</td>
