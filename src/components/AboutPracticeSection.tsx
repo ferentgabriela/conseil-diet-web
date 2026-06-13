@@ -30,7 +30,7 @@ const AboutPracticeSection = () => {
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">Accompagnement Bienveillant</h3>
-                  <p className="text-gray-600">Approche personnalisée qui respecte votre mode de vie et vos préférences.</p>
+                  <p className="text-gray-600 text-base">Approche personnalisée qui respecte votre mode de vie et vos préférences.</p>
                 </div>
               </div>
               
@@ -40,7 +40,7 @@ const AboutPracticeSection = () => {
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">Basé sur les Preuves</h3>
-                  <p className="text-gray-600">Dernières avancées scientifiques appliquées à des solutions pratiques et durables</p>
+                  <p className="text-gray-600 text-base">Dernières avancées scientifiques appliquées à des solutions pratiques et durables</p>
                 </div>
               </div>
               
@@ -50,7 +50,7 @@ const AboutPracticeSection = () => {
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">Tous Âges Bienvenus</h3>
-                  <p className="text-gray-600">Soins spécialisés pour adultes, enfants et familles à chaque étape de la vie</p>
+                  <p className="text-gray-600 text-base">Soins spécialisés pour adultes, enfants et familles à chaque étape de la vie</p>
                 </div>
               </div>
             </div>

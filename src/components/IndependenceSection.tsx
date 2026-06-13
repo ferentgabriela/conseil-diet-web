@@ -22,10 +22,10 @@ const IndependenceSection = () => {
                         Indépendance Totale
                       </h3>
                     </div>
-                    <p className="text-gray-700 leading-relaxed flex-1 text-sm" style={{ hyphens: 'none' }}>
-                      Je ne vends <strong>aucun complément alimentaire</strong> ni produit commercial. 
-                      Mes conseils sont libres de tout conflit d'intérêts financiers avec l'industrie agro-alimentaire.
-                    </p>
+                    <p className="text-gray-700 leading-relaxed flex-1 text-base" style={{ hyphens: 'none' }}>
+                                          Je ne vends <strong>aucun complément alimentaire</strong> ni produit commercial. 
+                                          Mes conseils sont libres de tout conflit d'intérêts financiers avec l'industrie agro-alimentaire.
+                                        </p>
                   </div>
 
                   {/* Science-Based Card */}
@@ -38,9 +38,9 @@ const IndependenceSection = () => {
                         100% basé sur la science
                       </h3>
                     </div>
-                    <p className="text-gray-700 leading-relaxed flex-1 text-sm" style={{ hyphens: 'none' }}>
-                      Toutes mes recommandations nutritionnelles s'appuient sur les <strong>données scientifiques actuelles</strong> et votre évaluation médicale personnalisée.
-                    </p>
+                    <p className="text-gray-700 leading-relaxed flex-1 text-base" style={{ hyphens: 'none' }}>
+                                          Toutes mes recommandations nutritionnelles s'appuient sur les <strong>données scientifiques actuelles</strong> et votre évaluation médicale personnalisée.
+                                        </p>
                   </div>
                 </div>
 
