@@ -76,7 +76,7 @@ const HeroSection = () => {
           
                     {/* Locations with pin icons */}
                     <div className="flex flex-wrap justify-center gap-x-6 gap-y-1 mb-3 hero-description">
-                      <span className="inline-flex items-center gap-1.5">📍 Luxembourg-Ville</span>
+                      <span className="inline-flex items-center gap-1.5">📍 Luxembourg</span>
                       <span className="inline-flex items-center gap-1.5">📍 Ettelbruck</span>
                       <span className="inline-flex items-center gap-1.5">📍 Insenborn</span>
                     </div>
