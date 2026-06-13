@@ -1,6 +1,7 @@
 import React from 'react';
-import { Stethoscope, Calendar, MapPin, Scale, Heart, Zap, Droplets, Brain, Apple, Baby, ShieldCheck, ExternalLink } from 'lucide-react';
+import { Stethoscope, Calendar, MapPin, Scale, Heart, Zap, Droplets, Brain, Apple, Baby, ShieldCheck, ExternalLink, Star } from 'lucide-react';
 import { scrollToElement } from '../utils/scrollUtils';
+import gabrielaPortrait from '@/assets/gabriela-ferent-portrait.webp';
 
 const SEOContentSection = () => {
   const scrollToCabinets = () => {
@@ -79,17 +80,30 @@ const SEOContentSection = () => {
                 </div>
               </div>
             </div>
-            {/* Right: Professional image / visual card */}
-            <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-8 border border-green-200 flex flex-col items-center justify-center text-center min-h-[250px]">
-              <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mb-4">
-                <Stethoscope className="h-8 w-8 text-white" />
-              </div>
-              <p className="text-lg font-semibold text-gray-900 mb-2">
+            {/* Right: Professional photo card */}
+            <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-8 border border-green-200 flex flex-col items-center text-center min-h-[300px]">
+              <img 
+                src={gabrielaPortrait} 
+                alt="Gabriela Ferent, diététicienne nutritionniste au Luxembourg" 
+                className="w-32 h-32 rounded-full object-cover mb-4 border-4 border-green-200 shadow-md"
+                loading="lazy"
+                width="128"
+                height="128"
+              />
+              <p className="text-lg font-bold text-gray-900 mb-1">
                 Gabriela Ferent
               </p>
               <p className="text-sm text-green-700 mb-3">
                 Diététicienne nutritionniste agréée CNS
               </p>
+              <div className="flex items-center gap-1.5 text-sm text-green-600 mb-3">
+                <Star className="h-4 w-4 fill-green-600" />
+                <Star className="h-4 w-4 fill-green-600" />
+                <Star className="h-4 w-4 fill-green-600" />
+                <Star className="h-4 w-4 fill-green-600" />
+                <Star className="h-4 w-4 fill-green-600" />
+                <span className="ml-1 font-semibold">4.8/5</span>
+              </div>
               <div className="flex items-center gap-2 text-sm text-green-600">
                 <MapPin className="h-4 w-4" />
                 <span>Luxembourg • Ettelbruck • Insenborn</span>
