@@ -75,15 +75,15 @@ const HeroSection = () => {
                     </h2>
           
                     {/* Locations with pin icons */}
-                    <div className="flex flex-wrap justify-center gap-x-6 gap-y-1 mb-3 hero-description">
+                    <div className="flex flex-wrap justify-center gap-x-6 gap-y-1 mb-4 hero-description">
                       <span className="inline-flex items-center gap-1.5">📍 Luxembourg</span>
                       <span className="inline-flex items-center gap-1.5">📍 Ettelbruck</span>
                       <span className="inline-flex items-center gap-1.5">📍 Insenborn</span>
                     </div>
           
                     {/* Key info — consultations with/without prescription */}
-                    <p className="hero-description font-semibold">
-                      Consultations avec ou sans ordonnance
+                    <p className="hero-description">
+                                          Consultations avec ou sans ordonnance
                     </p>
           
           {/* CTA Button with enhanced hover effects and fade-in animation */}
