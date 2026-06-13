@@ -199,31 +199,31 @@ const FAQSection = () => {
                       className="bg-white rounded-2xl shadow-lg border-0 overflow-hidden"
                     >
                       <AccordionTrigger className="hover:no-underline p-0 [&[data-state=open]>div]:rounded-b-none [&>svg]:hidden group">
-                        <div className="bg-gradient-to-r from-green-600 to-teal-600 p-4 w-full rounded-2xl relative">
-                          <div className="flex items-center gap-4 justify-between">
-                            <div className="flex items-center gap-4 flex-1">
-                              <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0">
-                                <IconComponent className="h-5 w-5 text-white" />
-                              </div>
-                              <h3 className="text-lg font-bold text-white text-left">
-                                {faq.question}
-                              </h3>
-                            </div>
-                            <div className="flex-shrink-0 ml-4">
-                              <div className="w-8 h-8 bg-white/25 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/40 group-hover:bg-white/40 group-hover:border-white/60 transition-all duration-300 group-hover:scale-110">
-                                <svg 
-                                  className="w-4 h-4 text-white transform transition-transform duration-300 group-data-[state=open]:rotate-180" 
-                                  fill="none" 
-                                  stroke="currentColor" 
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                                </svg>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </AccordionTrigger>
+                                              <div className="bg-white border border-green-200 group-hover:border-green-300 group-hover:bg-green-50 group-data-[state=open]:bg-gradient-to-r group-data-[state=open]:from-green-600 group-data-[state=open]:to-teal-600 p-4 w-full rounded-2xl relative transition-all duration-300">
+                                                <div className="flex items-center gap-4 justify-between">
+                                                  <div className="flex items-center gap-4 flex-1">
+                                                    <div className="w-10 h-10 bg-green-100 group-data-[state=open]:bg-white/20 rounded-full flex items-center justify-center flex-shrink-0 transition-all duration-300">
+                                                      <IconComponent className="h-5 w-5 text-green-600 group-data-[state=open]:text-white transition-colors duration-300" />
+                                                    </div>
+                                                    <h3 className="text-lg font-bold text-gray-900 group-data-[state=open]:text-white text-left transition-colors duration-300">
+                                                      {faq.question}
+                                                    </h3>
+                                                  </div>
+                                                  <div className="flex-shrink-0 ml-4">
+                                                    <div className="w-8 h-8 bg-green-100 group-data-[state=open]:bg-white/25 backdrop-blur-sm rounded-full flex items-center justify-center border border-green-300 group-data-[state=open]:border-white/40 transition-all duration-300 group-hover:scale-110">
+                                                      <svg 
+                                                        className="w-4 h-4 text-green-600 group-data-[state=open]:text-white transform transition-transform duration-300 group-data-[state=open]:rotate-180" 
+                                                        fill="none" 
+                                                        stroke="currentColor" 
+                                                        viewBox="0 0 24 24"
+                                                      >
+                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                                                      </svg>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </AccordionTrigger>
                       
                       <AccordionContent className="p-8 pb-8">
                         <div className="text-gray-700 text-lg leading-relaxed mb-6">
@@ -310,31 +310,31 @@ const FAQSection = () => {
                       className="bg-white rounded-2xl shadow-lg border-0 overflow-hidden"
                     >
                       <AccordionTrigger className="hover:no-underline p-0 [&[data-state=open]>div]:rounded-b-none [&>svg]:hidden group">
-                        <div className="bg-gradient-to-r from-green-600 to-teal-600 p-4 w-full rounded-2xl relative">
-                          <div className="flex items-center gap-4 justify-between">
-                            <div className="flex items-center gap-4 flex-1">
-                              <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0">
-                                <IconComponent className="h-5 w-5 text-white" />
-                              </div>
-                              <h3 className="text-lg font-bold text-white text-left">
-                                {faq.question}
-                              </h3>
-                            </div>
-                            <div className="flex-shrink-0 ml-4">
-                              <div className="w-8 h-8 bg-white/25 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/40 group-hover:bg-white/40 group-hover:border-white/60 transition-all duration-300 group-hover:scale-110">
-                                <svg 
-                                  className="w-4 h-4 text-white transform transition-transform duration-300 group-data-[state=open]:rotate-180" 
-                                  fill="none" 
-                                  stroke="currentColor" 
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                                </svg>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </AccordionTrigger>
+                                              <div className="bg-white border border-green-200 group-hover:border-green-300 group-hover:bg-green-50 group-data-[state=open]:bg-gradient-to-r group-data-[state=open]:from-green-600 group-data-[state=open]:to-teal-600 p-4 w-full rounded-2xl relative transition-all duration-300">
+                                                <div className="flex items-center gap-4 justify-between">
+                                                  <div className="flex items-center gap-4 flex-1">
+                                                    <div className="w-10 h-10 bg-green-100 group-data-[state=open]:bg-white/20 rounded-full flex items-center justify-center flex-shrink-0 transition-all duration-300">
+                                                      <IconComponent className="h-5 w-5 text-green-600 group-data-[state=open]:text-white transition-colors duration-300" />
+                                                    </div>
+                                                    <h3 className="text-lg font-bold text-gray-900 group-data-[state=open]:text-white text-left transition-colors duration-300">
+                                                      {faq.question}
+                                                    </h3>
+                                                  </div>
+                                                  <div className="flex-shrink-0 ml-4">
+                                                    <div className="w-8 h-8 bg-green-100 group-data-[state=open]:bg-white/25 backdrop-blur-sm rounded-full flex items-center justify-center border border-green-300 group-data-[state=open]:border-white/40 transition-all duration-300 group-hover:scale-110">
+                                                      <svg 
+                                                        className="w-4 h-4 text-green-600 group-data-[state=open]:text-white transform transition-transform duration-300 group-data-[state=open]:rotate-180" 
+                                                        fill="none" 
+                                                        stroke="currentColor" 
+                                                        viewBox="0 0 24 24"
+                                                      >
+                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                                                      </svg>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </AccordionTrigger>
                       
                       <AccordionContent className="p-8 pb-8">
                         <div className="text-gray-700 text-lg leading-relaxed mb-6">
