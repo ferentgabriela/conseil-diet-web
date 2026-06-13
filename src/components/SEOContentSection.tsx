@@ -86,21 +86,23 @@ const SEOContentSection = () => {
               </div>
             </div>
             {/* Right: Professional photo card */}
-            <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-8 border border-green-200 flex flex-col items-center text-center min-h-[300px]">
-              <img 
-                src={gabrielaPortrait} 
-                alt="Gabriela Ferent, diététicienne nutritionniste au Luxembourg" 
-                className="w-32 h-32 rounded-full object-cover object-top mb-4 border-4 border-green-200 shadow-md"
-                loading="lazy"
-                width="128"
-                height="128"
-              />
+            <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-8 border border-green-200 flex flex-col items-center text-center min-h-[300px] overflow-hidden">
+              <div className="w-32 h-32 rounded-full border-4 border-green-200 shadow-md overflow-hidden mb-4">
+                <img 
+                  src={gabrielaPortrait} 
+                  alt="Gabriela Ferent, diététicienne nutritionniste au Luxembourg" 
+                  className="w-full h-full object-cover object-[50%_20%] scale-105"
+                  loading="lazy"
+                  width="128"
+                  height="128"
+                />
+              </div>
               <p className="text-xl font-bold text-gray-900 mb-1">
-                              Gabriela Ferent
-                            </p>
-                            <p className="text-base text-green-700 mb-3">
-                              Diététicienne nutritionniste agréée CNS
-                            </p>
+                Gabriela Ferent
+              </p>
+              <p className="text-base text-green-700 mb-3">
+                Diététicienne nutritionniste agréée CNS
+              </p>
               <div className="flex items-center gap-1.5 text-sm text-green-600 mb-3">
                 <Star className="h-4 w-4 fill-green-600" />
                 <Star className="h-4 w-4 fill-green-600" />
