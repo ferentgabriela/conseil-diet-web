@@ -128,13 +128,13 @@ const FAQSection = () => {
       answer: "Oui, je suis spécialisée en nutrition thérapeutique et j'accompagne régulièrement des patients avec diverses pathologies chroniques.",
       icon: Stethoscope,
       details: [
-        "Diabète type 1 et 2 : gestion glycémique optimisée",
-        "Hypertension : approche nutritionnelle pour réduire la tension",
-        "Dyslipidémies : Optimisation et équilibre des bilans de cholestérol et triglycérides.",
-        "Obésité et surpoids : accompagnement personnalisé",
-        "Troubles digestifs : adaptation alimentaire personnalisée",
-        "Pathologies rénales et hépatiques : expertise spécialisée",
-        "Collaboration avec votre équipe médicale"
+              "**Diabète** type 1 et 2 : gestion glycémique optimisée",
+              "**Hypertension** : approche nutritionnelle pour réduire la tension",
+              "**Dyslipidémies** : Stratégies nutritionnelles pour équilibrer les bilans de cholestérol (LDL/HDL) et de triglycérides.",
+              "**Obésité** et surpoids : accompagnement personnalisé",
+              "**Troubles digestifs** : adaptation alimentaire personnalisée",
+              "**Pathologies rénales et hépatiques** : expertise spécialisée",
+              "Collaboration avec votre équipe médicale"
       ],
       expert: "Mon conseil d'experte : Une alimentation ciblée peut améliorer vos paramètres de santé et, dans certains cas, permettre une réduction des traitements médicamenteux sur avis médical."
     },
@@ -158,11 +158,11 @@ const FAQSection = () => {
       icon: Calendar,
       details: [
         "Luxembourg-Ville : centre-ville",
-        "Ettelbruck : idéal pour le Nord du pays",
-        "Insenborn : parfait pour l'Ouest",
+        "Ettelbruck : Idéal pour le Nord du Luxembourg",
+                "Insenborn : Parfait pour l'Ouest du Luxembourg",
         "Même équipement et approche dans tous les cabinets",
         "Possibilité de changer de cabinet selon vos besoins",
-        "Prise de rendez-vous en ligne ou par téléphone"
+        "Réservation flexible : Prise de rendez-vous immédiate en ligne via Doctena ou par téléphone."
       ],
       expert: "Mon conseil d'experte : Choisissez le cabinet qui vous convient le mieux, que ce soit près de votre domicile ou de votre lieu de travail. Ce qui compte le plus, c'est la régularité des rendez-vous."
     }
@@ -240,13 +240,23 @@ const FAQSection = () => {
                         <div className="mb-6">
                           <h4 className="font-semibold text-gray-900 mb-4">Dans le détail :</h4>
                           <ul className="space-y-3">
-                            {faq.details.map((detail, detailIndex) => (
-                              <li key={detailIndex} className="flex items-start gap-3">
-                                <div className="w-2 h-2 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
-                                <span className="text-gray-700">{detail}</span>
-                              </li>
-                            ))}
-                          </ul>
+                                                      {faq.details.map((detail, detailIndex) => {
+                                                        const parts = detail.split(/(\*\*.*?\*\*)/);
+                                                        return (
+                                                          <li key={detailIndex} className="flex items-start gap-3">
+                                                            <div className="w-2 h-2 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
+                                                            <span className="text-gray-700">
+                                                              {parts.map((part, i) => {
+                                                                if (part.startsWith('**') && part.endsWith('**')) {
+                                                                  return <strong key={i}>{part.slice(2, -2)}</strong>;
+                                                                }
+                                                                return part;
+                                                              })}
+                                                            </span>
+                                                          </li>
+                                                        );
+                                                      })}
+                                                    </ul>
                         </div>
                         
                         <div className="bg-blue-50 rounded-lg p-4 mb-6">
@@ -341,13 +351,23 @@ const FAQSection = () => {
                         <div className="mb-6">
                           <h4 className="font-semibold text-gray-900 mb-4">Dans le détail :</h4>
                           <ul className="space-y-3">
-                            {faq.details.map((detail, detailIndex) => (
-                              <li key={detailIndex} className="flex items-start gap-3">
-                                <div className="w-2 h-2 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
-                                <span className="text-gray-700">{detail}</span>
-                              </li>
-                            ))}
-                          </ul>
+                                                      {faq.details.map((detail, detailIndex) => {
+                                                        const parts = detail.split(/(\*\*.*?\*\*)/);
+                                                        return (
+                                                          <li key={detailIndex} className="flex items-start gap-3">
+                                                            <div className="w-2 h-2 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
+                                                            <span className="text-gray-700">
+                                                              {parts.map((part, i) => {
+                                                                if (part.startsWith('**') && part.endsWith('**')) {
+                                                                  return <strong key={i}>{part.slice(2, -2)}</strong>;
+                                                                }
+                                                                return part;
+                                                              })}
+                                                            </span>
+                                                          </li>
+                                                        );
+                                                      })}
+                                                    </ul>
                         </div>
                         
                         <div className="bg-blue-50 rounded-lg p-4 mb-6">

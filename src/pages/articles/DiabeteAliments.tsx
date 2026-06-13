@@ -222,6 +222,7 @@ const DiabeteAliments = () => {
                       Restez actif après les repas
                     </div>
                   </div>
+                </div>
 
                 {/* Consultation CTA */}
                 <div className="bg-hsl(var(--primary)) text-hsl(var(--primary-foreground)) p-8 rounded-2xl text-center">
