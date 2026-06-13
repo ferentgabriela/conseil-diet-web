@@ -14,28 +14,27 @@ const FAQSection = () => {
       answer: "Le remboursement n'est **pas automatique**. Seules les pathologies reconnues par la CNS et munies d'une **ordonnance médicale de moins de 3 mois** peuvent bénéficier d'une prise en charge (voir page Tarifs).",
       icon: Euro,
       details: [
-        "Les tarifs des consultations CNS respectent la nomenclature officielle fixée par la CNS Luxembourg",
-        "Prescription médicale obligatoire datée de moins de 3 mois",
+        "Les tarifs des consultations CNS respectent la nomenclature officielle fixée par la CNS",
+        "Prescription médicale obligatoire datée de **moins de 3 mois**",
         "Uniquement les pathologies inscrites dans la nomenclature CNS donnent droit au remboursement",
         "Chaque suivi diététique comprend un bilan nutritionnel initial et un rapport final envoyés systématiquement à votre médecin prescripteur selon les règles CNS",
-        "Pathologies couvertes : diabète, obésité (IMC ≥30), troubles cardiovasculaires",
-        "Hypertension, dyslipidemies et syndrome métabolique également couverts",
+        "Pathologies couvertes par la nomenclature CNS : diabète, obésité (IMC ≥30), troubles cardiovasculaires, hypertension, dyslipidémies et syndrome métabolique",
         "Prescription obligatoire de votre médecin traitant ou spécialiste",
-        "Durée généralement de 6-12 mois selon la pathologie",
+        "Durée généralement de 6 à 12 mois selon la pathologie",
         "Possibilité de renouvellement selon l'évolution de votre état"
       ],
       expert: "Mon conseil d'experte : N'hésitez pas à demander à votre médecin s'il peut vous prescrire des consultations diététiques si vous présentez une pathologie éligible !"
     },
     {
       question: "Faut-il une prescription médicale pour consulter ?",
-      answer: "Sans ordonnance, la consultation est au **tarif privé non remboursable**. La prescription doit être obtenue *avant* la première séance visant un remboursement.",
+      answer: "Sans ordonnance, la consultation est au **tarif privé non remboursable**. La prescription doit être obtenue **avant** la première séance visant un remboursement.",
       icon: Calendar,
       details: [
         "Consultation libre possible sans prescription (tarif privé)",
-        "Prescription nécessaire UNIQUEMENT pour le remboursement CNS",
+        "Prescription nécessaire **uniquement** pour le remboursement CNS",
         "Votre médecin traitant peut facilement établir la prescription",
         "Spécialistes (endocrinologue, cardiologue) peuvent aussi prescrire",
-        "Pas de délai d'attente si vous consultez directement",
+        "Accès immédiat : Vous pouvez planifier votre rendez-vous directement, sans attendre d'obtenir un document médical.",
         "Même qualité de service avec ou sans prescription"
       ],
       expert: "Mon conseil d'experte : Si vous avez une pathologie (surpoids, diabète, hypertension), demandez d'abord la prescription. Sinon, vous pouvez commencer directement et demander la prescription plus tard."
@@ -46,10 +45,10 @@ const FAQSection = () => {
       icon: FileText,
       details: [
         "Consultations CNS : ordonnance + pathologie éligible",
-        "Tarif fixé par la nomenclature",
-        "Consultations privées : accès libre, objectifs bien-être ou performance",
         "Rapports obligatoires au médecin prescripteur",
-        "Tarif privé, paiement direct",
+        "Tarif fixé par la nomenclature CNS",
+        "Consultations privées : accès libre, objectifs bien-être ou performance",
+        "Règlement direct : Honoraires à la charge du patient (non soumis au tiers payant).",
         "Même qualité de service et d'accompagnement"
       ],
       expert: "Mon conseil d'experte : Si vous avez une pathologie reconnue par la CNS, optez pour le remboursement. Pour les objectifs de bien-être général ou prévention, les consultations privées offrent plus de flexibilité."
@@ -60,10 +59,10 @@ const FAQSection = () => {
       icon: Shield,
       details: [
         "Diététicienne : formation universitaire de 3-4 ans minimum",
-        "Titre protégé par la loi, inscription obligatoire au Ministère de la Santé",
+        "Titre protégé par la loi : Profession de santé réglementée avec autorisation d'exercer délivrée par le Ministère de la Santé.",
         "Formation en physiologie, pathologie, biochimie nutritionnelle",
         "Compétence en nutrition clinique et thérapeutique",
-        "Nutritionniste : terme générique, pas de formation obligatoire",
+        "Nutritionniste : Terme générique non réglementé au Luxembourg, n'ouvrant pas droit aux remboursements de la CNS.",
         "Seule la diététicienne peut pratiquer la nutrition médicale"
       ],
       expert: "Mon conseil d'experte : Vérifiez toujours les qualifications de votre professionnel. Ma formation universitaire et mon inscription officielle vous garantissent une prise en charge sérieuse et sécurisée."
@@ -74,9 +73,9 @@ const FAQSection = () => {
       icon: HelpCircle,
       details: [
         "Durée : 60 minutes complètes, sans précipitation",
-        "Anamnèse complète : santé, habitudes, histoire pondérale",
+        "Bilan initial global (Anamnèse) : Échange approfondi sur votre historique médical, vos habitudes de vie...",
         "Analyse de vos habitudes alimentaires actuelles",
-        "Mesures anthropométriques (poids, composition corporelle)",
+        "Mesures anthropométriques par bio-impédance (poids, masse grasse, masse musculaire)",
         "Définition d'objectifs réalistes et personnalisés",
         "Premiers conseils pratiques et plan d'action immédiat"
       ],
@@ -87,12 +86,12 @@ const FAQSection = () => {
       answer: "Chaque patient reçoit un plan alimentaire entièrement personnalisé, adapté à ses goûts, contraintes, pathologies et objectifs spécifiques.",
       icon: Calendar,
       details: [
-        "Plan 100% personnalisé selon vos goûts et aversions",
+        "Plan **100% personnalisé** selon vos goûts et aversions",
         "Adaptation à vos contraintes professionnelles et familiales",
+        "Liste de courses et conseils pratiques fournis",
         "Prise en compte des pathologies et intolérances",
         "Menus variés et recettes pratiques incluses",
-        "Ajustements réguliers selon vos progrès",
-        "Liste de courses et conseils pratiques fournis"
+        "Ajustements réguliers selon vos progrès"
       ],
       expert: "Mon conseil d'experte : Un bon plan alimentaire doit s'adapter à votre vie, pas l'inverse ! Je crée des programmes que vous pouvez suivre même avec une vie bien remplie."
     },
@@ -106,7 +105,7 @@ const FAQSection = () => {
         "Conservation du plaisir de manger et de partager",
         "Techniques pour gérer les envies et les écarts",
         "Rééducation progressive sans choc psychologique",
-        "Maintien de la vie sociale et des sorties"
+        "Préservation de la vie sociale : Votre plan s'adapte à vos repas au restaurant, événements de famille et sorties."
       ],
       expert: "Mon conseil d'experte : Les régimes restrictifs échouent dans la majorité des cas. Mon approche bienveillante peut favoriser une perte de poids durable tout en gardant une relation saine avec la nourriture."
     },
@@ -117,7 +116,7 @@ const FAQSection = () => {
       details: [
         "1–2 semaines : énergie et sommeil souvent améliorés",
         "3–4 semaines : diminution des fringales, meilleures habitudes de repas",
-        "6–8 semaines : paramètres biologiques souvent mieux orientés (profil lipidique, glycémie), selon le contexte médical",
+        "6–8 semaines : Amélioration des marqueurs biologiques (glycémie à jeun, profil lipidique/cholestérol) validée par votre médecin.",
         "3 mois : habitudes ancrées, progression mesurable",
         "6 mois : stabilisation et consolidation",
         "Résultats durables si respect du suivi personnalisé"
@@ -131,7 +130,8 @@ const FAQSection = () => {
       details: [
         "Diabète type 1 et 2 : gestion glycémique optimisée",
         "Hypertension : approche nutritionnelle pour réduire la tension",
-        "Dyslipidémies : stratégies pour améliorer le bilan lipidique",
+        "Dyslipidémies : Optimisation et équilibre des bilans de cholestérol et triglycérides.",
+        "Obésité et surpoids : accompagnement personnalisé",
         "Troubles digestifs : adaptation alimentaire personnalisée",
         "Pathologies rénales et hépatiques : expertise spécialisée",
         "Collaboration avec votre équipe médicale"
@@ -143,10 +143,10 @@ const FAQSection = () => {
       answer: "Absolument ! Je m'adapte entièrement à votre rythme de vie, vos contraintes professionnelles et familiales pour créer un plan réalisable au quotidien.",
       icon: Phone,
       details: [
+        "Solutions pour les repas d'affaires et déplacements professionnels",
         "Adaptation aux horaires de travail atypiques",
-        "Solutions pour les repas d'affaires et déplacements",
         "Conseils pratiques pour les familles avec enfants",
-        "Meal prep et organisation pour gagner du temps",
+        "Organisation & Meal Prep : Des clés concrètes pour planifier vos repas efficacement malgré un agenda chargé.",
         "Alternatives pour les contraintes budgétaires",
         "Maintien de votre vie sociale et sorties"
       ],
@@ -177,213 +177,213 @@ const FAQSection = () => {
               Vos Questions, Mes Réponses d'Experte
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                          Avec plus de 15 ans d'expérience, je réponds aux questions les plus fréquentes de mes patients au Luxembourg
-                        </p>
+              Avec plus de 15 ans d'expérience, je réponds aux questions les plus fréquentes de mes patients au Luxembourg
+            </p>
           </div>
           
           <Accordion type="single" collapsible className="w-full space-y-4">
-                      {/* Groupe 1 : Administratif & Remboursements */}
-                      <div>
-                        <h3 className="text-lg font-semibold text-gray-500 uppercase tracking-wider mb-4 flex items-center gap-2">
-                          <span className="w-8 h-0.5 bg-gray-300"></span>
-                          Administratif &amp; Remboursements
-                          <span className="flex-1 h-0.5 bg-gray-300"></span>
-                        </h3>
-                        <div className="space-y-4">
-                          {faqs.slice(0, 4).map((faq, index) => {
-                            const IconComponent = faq.icon;
-                            return (
-                              <AccordionItem 
-                                key={index} 
-                                value={`faq-${index}`}
-                                className="bg-white rounded-2xl shadow-lg border-0 overflow-hidden"
-                              >
-                                <AccordionTrigger className="hover:no-underline p-0 [&[data-state=open]>div]:rounded-b-none [&>svg]:hidden group">
-                                  <div className="bg-gradient-to-r from-green-600 to-teal-600 p-4 w-full rounded-2xl relative">
-                                    <div className="flex items-center gap-4 justify-between">
-                                      <div className="flex items-center gap-4 flex-1">
-                                        <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0">
-                                          <IconComponent className="h-5 w-5 text-white" />
-                                        </div>
-                                        <h3 className="text-lg font-bold text-white text-left">
-                                          {faq.question}
-                                        </h3>
-                                      </div>
-                                      <div className="flex-shrink-0 ml-4">
-                                        <div className="w-8 h-8 bg-white/25 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/40 group-hover:bg-white/40 group-hover:border-white/60 transition-all duration-300 group-hover:scale-110">
-                                          <svg 
-                                            className="w-4 h-4 text-white transform transition-transform duration-300 group-data-[state=open]:rotate-180" 
-                                            fill="none" 
-                                            stroke="currentColor" 
-                                            viewBox="0 0 24 24"
-                                          >
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                                          </svg>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </AccordionTrigger>
+            {/* Groupe 1 : Administratif & Remboursements */}
+            <div>
+              <h3 className="text-lg font-semibold text-gray-500 uppercase tracking-wider mb-4 flex items-center gap-2">
+                <span className="w-8 h-0.5 bg-gray-300"></span>
+                Administratif &amp; Remboursements
+                <span className="flex-1 h-0.5 bg-gray-300"></span>
+              </h3>
+              <div className="space-y-4">
+                {faqs.slice(0, 4).map((faq, index) => {
+                  const IconComponent = faq.icon;
+                  return (
+                    <AccordionItem 
+                      key={index} 
+                      value={`faq-${index}`}
+                      className="bg-white rounded-2xl shadow-lg border-0 overflow-hidden"
+                    >
+                      <AccordionTrigger className="hover:no-underline p-0 [&[data-state=open]>div]:rounded-b-none [&>svg]:hidden group">
+                        <div className="bg-gradient-to-r from-green-600 to-teal-600 p-4 w-full rounded-2xl relative">
+                          <div className="flex items-center gap-4 justify-between">
+                            <div className="flex items-center gap-4 flex-1">
+                              <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0">
+                                <IconComponent className="h-5 w-5 text-white" />
+                              </div>
+                              <h3 className="text-lg font-bold text-white text-left">
+                                {faq.question}
+                              </h3>
+                            </div>
+                            <div className="flex-shrink-0 ml-4">
+                              <div className="w-8 h-8 bg-white/25 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/40 group-hover:bg-white/40 group-hover:border-white/60 transition-all duration-300 group-hover:scale-110">
+                                <svg 
+                                  className="w-4 h-4 text-white transform transition-transform duration-300 group-data-[state=open]:rotate-180" 
+                                  fill="none" 
+                                  stroke="currentColor" 
+                                  viewBox="0 0 24 24"
+                                >
+                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                                </svg>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </AccordionTrigger>
                       
-                                <AccordionContent className="p-8 pb-8">
-                                  <div className="text-gray-700 text-lg leading-relaxed mb-6">
-                                    {faq.answer.split(/(\*\*.*?\*\*|\*.*?\*)/).map((part, index) => {
-                                      if (part.startsWith('**') && part.endsWith('**')) {
-                                        return <strong key={index}>{part.slice(2, -2)}</strong>;
-                                      } else if (part.startsWith('*') && part.endsWith('*')) {
-                                        return <strong key={index}>{part.slice(1, -1)}</strong>;
-                                      }
-                                      return part;
-                                    })}
-                                  </div>
-                      
-                                  <div className="mb-6">
-                                    <h4 className="font-semibold text-gray-900 mb-4">Dans le détail :</h4>
-                                    <ul className="space-y-3">
-                                      {faq.details.map((detail, detailIndex) => (
-                                        <li key={detailIndex} className="flex items-start gap-3">
-                                          <div className="w-2 h-2 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
-                                          <span className="text-gray-700">{detail}</span>
-                                        </li>
-                                      ))}
-                                    </ul>
-                                  </div>
-                        
-                                  <div className="bg-blue-50 rounded-lg p-4 mb-6">
-                                    <div className="flex items-start gap-3">
-                                      <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
-                                        <span className="text-blue-600 font-bold text-sm">💡</span>
-                                      </div>
-                                      <p className="text-blue-800 font-medium">
-                                        {faq.expert}
-                                      </p>
-                                    </div>
-                                  </div>
-                        
-                                  <div className="text-center">
-                                    <button 
-                                      onClick={scrollToCabinets}
-                                      className="inline-flex items-center gap-2 px-8 py-4 bg-green-600 text-white font-bold rounded-xl hover:bg-green-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
-                                    >
-                                      <Calendar className="h-5 w-5" />
-                                      Consultation personnalisée
-                                      <ArrowRight className="h-4 w-4" />
-                                    </button>
-                                  </div>
-                        
-                                  <div className="mt-4 text-center">
-                                    <p className="text-sm text-gray-500">
-                                      Gabriela Ferent • Diététicienne autorisée au Luxembourg
-                                    </p>
-                                  </div>
-                                </AccordionContent>
-                              </AccordionItem>
-                            );
+                      <AccordionContent className="p-8 pb-8">
+                        <div className="text-gray-700 text-lg leading-relaxed mb-6">
+                          {faq.answer.split(/(\*\*.*?\*\*|\*.*?\*)/).map((part, index) => {
+                            if (part.startsWith('**') && part.endsWith('**')) {
+                              return <strong key={index}>{part.slice(2, -2)}</strong>;
+                            } else if (part.startsWith('*') && part.endsWith('*')) {
+                              return <strong key={index}>{part.slice(1, -1)}</strong>;
+                            }
+                            return part;
                           })}
                         </div>
-                      </div>
+                      
+                        <div className="mb-6">
+                          <h4 className="font-semibold text-gray-900 mb-4">Dans le détail :</h4>
+                          <ul className="space-y-3">
+                            {faq.details.map((detail, detailIndex) => (
+                              <li key={detailIndex} className="flex items-start gap-3">
+                                <div className="w-2 h-2 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
+                                <span className="text-gray-700">{detail}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                        
+                        <div className="bg-blue-50 rounded-lg p-4 mb-6">
+                          <div className="flex items-start gap-3">
+                            <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
+                              <span className="text-blue-600 font-bold text-sm">💡</span>
+                            </div>
+                            <p className="text-blue-800 font-medium">
+                              {faq.expert}
+                            </p>
+                          </div>
+                        </div>
+                        
+                        <div className="text-center mt-8">
+                          <button 
+                            onClick={scrollToCabinets}
+                            className="inline-flex items-center gap-2 px-8 py-4 bg-green-600 text-white font-bold rounded-xl hover:bg-green-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
+                          >
+                            <Calendar className="h-5 w-5" />
+                            Consultation personnalisée
+                            <ArrowRight className="h-4 w-4" />
+                          </button>
+                        </div>
+                        
+                        <div className="mt-4 text-center">
+                          <p className="text-sm text-gray-500">
+                            Gabriela Ferent • Diététicienne autorisée au Luxembourg
+                          </p>
+                        </div>
+                      </AccordionContent>
+                    </AccordionItem>
+                  );
+                })}
+              </div>
+            </div>
 
-                      {/* Groupe 2 : Ma Philosophie & Accompagnement */}
-                      <div className="mt-10">
-                        <h3 className="text-lg font-semibold text-gray-500 uppercase tracking-wider mb-4 flex items-center gap-2">
-                          <span className="w-8 h-0.5 bg-gray-300"></span>
-                          Ma Philosophie &amp; Accompagnement
-                          <span className="flex-1 h-0.5 bg-gray-300"></span>
-                        </h3>
-                        <div className="space-y-4">
-                          {faqs.slice(4).map((faq, index) => {
-                            const IconComponent = faq.icon;
-                            return (
-                              <AccordionItem 
-                                key={index} 
-                                value={`faq-${index + 4}`}
-                                className="bg-white rounded-2xl shadow-lg border-0 overflow-hidden"
-                              >
-                                <AccordionTrigger className="hover:no-underline p-0 [&[data-state=open]>div]:rounded-b-none [&>svg]:hidden group">
-                                  <div className="bg-gradient-to-r from-green-600 to-teal-600 p-4 w-full rounded-2xl relative">
-                                    <div className="flex items-center gap-4 justify-between">
-                                      <div className="flex items-center gap-4 flex-1">
-                                        <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0">
-                                          <IconComponent className="h-5 w-5 text-white" />
-                                        </div>
-                                        <h3 className="text-lg font-bold text-white text-left">
-                                          {faq.question}
-                                        </h3>
-                                      </div>
-                                      <div className="flex-shrink-0 ml-4">
-                                        <div className="w-8 h-8 bg-white/25 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/40 group-hover:bg-white/40 group-hover:border-white/60 transition-all duration-300 group-hover:scale-110">
-                                          <svg 
-                                            className="w-4 h-4 text-white transform transition-transform duration-300 group-data-[state=open]:rotate-180" 
-                                            fill="none" 
-                                            stroke="currentColor" 
-                                            viewBox="0 0 24 24"
-                                          >
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                                          </svg>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </AccordionTrigger>
+            {/* Groupe 2 : Ma Philosophie & Accompagnement */}
+            <div className="mt-10">
+              <h3 className="text-lg font-semibold text-gray-500 uppercase tracking-wider mb-4 flex items-center gap-2">
+                <span className="w-8 h-0.5 bg-gray-300"></span>
+                Ma Philosophie &amp; Accompagnement
+                <span className="flex-1 h-0.5 bg-gray-300"></span>
+              </h3>
+              <div className="space-y-4">
+                {faqs.slice(4).map((faq, index) => {
+                  const IconComponent = faq.icon;
+                  return (
+                    <AccordionItem 
+                      key={index} 
+                      value={`faq-${index + 4}`}
+                      className="bg-white rounded-2xl shadow-lg border-0 overflow-hidden"
+                    >
+                      <AccordionTrigger className="hover:no-underline p-0 [&[data-state=open]>div]:rounded-b-none [&>svg]:hidden group">
+                        <div className="bg-gradient-to-r from-green-600 to-teal-600 p-4 w-full rounded-2xl relative">
+                          <div className="flex items-center gap-4 justify-between">
+                            <div className="flex items-center gap-4 flex-1">
+                              <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0">
+                                <IconComponent className="h-5 w-5 text-white" />
+                              </div>
+                              <h3 className="text-lg font-bold text-white text-left">
+                                {faq.question}
+                              </h3>
+                            </div>
+                            <div className="flex-shrink-0 ml-4">
+                              <div className="w-8 h-8 bg-white/25 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/40 group-hover:bg-white/40 group-hover:border-white/60 transition-all duration-300 group-hover:scale-110">
+                                <svg 
+                                  className="w-4 h-4 text-white transform transition-transform duration-300 group-data-[state=open]:rotate-180" 
+                                  fill="none" 
+                                  stroke="currentColor" 
+                                  viewBox="0 0 24 24"
+                                >
+                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                                </svg>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </AccordionTrigger>
                       
-                                <AccordionContent className="p-8 pb-8">
-                                  <div className="text-gray-700 text-lg leading-relaxed mb-6">
-                                    {faq.answer.split(/(\*\*.*?\*\*|\*.*?\*)/).map((part, index) => {
-                                      if (part.startsWith('**') && part.endsWith('**')) {
-                                        return <strong key={index}>{part.slice(2, -2)}</strong>;
-                                      } else if (part.startsWith('*') && part.endsWith('*')) {
-                                        return <strong key={index}>{part.slice(1, -1)}</strong>;
-                                      }
-                                      return part;
-                                    })}
-                                  </div>
-                      
-                                  <div className="mb-6">
-                                    <h4 className="font-semibold text-gray-900 mb-4">Dans le détail :</h4>
-                                    <ul className="space-y-3">
-                                      {faq.details.map((detail, detailIndex) => (
-                                        <li key={detailIndex} className="flex items-start gap-3">
-                                          <div className="w-2 h-2 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
-                                          <span className="text-gray-700">{detail}</span>
-                                        </li>
-                                      ))}
-                                    </ul>
-                                  </div>
-                        
-                                  <div className="bg-blue-50 rounded-lg p-4 mb-6">
-                                    <div className="flex items-start gap-3">
-                                      <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
-                                        <span className="text-blue-600 font-bold text-sm">💡</span>
-                                      </div>
-                                      <p className="text-blue-800 font-medium">
-                                        {faq.expert}
-                                      </p>
-                                    </div>
-                                  </div>
-                        
-                                  <div className="text-center">
-                                    <button 
-                                      onClick={scrollToCabinets}
-                                      className="inline-flex items-center gap-2 px-8 py-4 bg-green-600 text-white font-bold rounded-xl hover:bg-green-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
-                                    >
-                                      <Calendar className="h-5 w-5" />
-                                      Consultation personnalisée
-                                      <ArrowRight className="h-4 w-4" />
-                                    </button>
-                                  </div>
-                        
-                                  <div className="mt-4 text-center">
-                                    <p className="text-sm text-gray-500">
-                                      Gabriela Ferent • Diététicienne autorisée au Luxembourg
-                                    </p>
-                                  </div>
-                                </AccordionContent>
-                              </AccordionItem>
-                            );
+                      <AccordionContent className="p-8 pb-8">
+                        <div className="text-gray-700 text-lg leading-relaxed mb-6">
+                          {faq.answer.split(/(\*\*.*?\*\*|\*.*?\*)/).map((part, index) => {
+                            if (part.startsWith('**') && part.endsWith('**')) {
+                              return <strong key={index}>{part.slice(2, -2)}</strong>;
+                            } else if (part.startsWith('*') && part.endsWith('*')) {
+                              return <strong key={index}>{part.slice(1, -1)}</strong>;
+                            }
+                            return part;
                           })}
                         </div>
-                      </div>
-                    </Accordion>
+                      
+                        <div className="mb-6">
+                          <h4 className="font-semibold text-gray-900 mb-4">Dans le détail :</h4>
+                          <ul className="space-y-3">
+                            {faq.details.map((detail, detailIndex) => (
+                              <li key={detailIndex} className="flex items-start gap-3">
+                                <div className="w-2 h-2 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
+                                <span className="text-gray-700">{detail}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                        
+                        <div className="bg-blue-50 rounded-lg p-4 mb-6">
+                          <div className="flex items-start gap-3">
+                            <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
+                              <span className="text-blue-600 font-bold text-sm">💡</span>
+                            </div>
+                            <p className="text-blue-800 font-medium">
+                              {faq.expert}
+                            </p>
+                          </div>
+                        </div>
+                        
+                        <div className="text-center mt-8">
+                          <button 
+                            onClick={scrollToCabinets}
+                            className="inline-flex items-center gap-2 px-8 py-4 bg-green-600 text-white font-bold rounded-xl hover:bg-green-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
+                          >
+                            <Calendar className="h-5 w-5" />
+                            Consultation personnalisée
+                            <ArrowRight className="h-4 w-4" />
+                          </button>
+                        </div>
+                        
+                        <div className="mt-4 text-center">
+                          <p className="text-sm text-gray-500">
+                            Gabriela Ferent • Diététicienne autorisée au Luxembourg
+                          </p>
+                        </div>
+                      </AccordionContent>
+                    </AccordionItem>
+                  );
+                })}
+              </div>
+            </div>
+          </Accordion>
         </div>
       </div>
     </section>
