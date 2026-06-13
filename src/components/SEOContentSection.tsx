@@ -47,7 +47,7 @@ const SEOContentSection = () => {
         {
           icon: ShieldCheck,
           title: "Allergies & Intolérances",
-          desc: "Prise en charge des allergies et intolérances alimentaires"
+          desc: "Prise en charge des intolérances alimentaires avérées (lactose, fructose, gluten)"
         }
       ];
 
