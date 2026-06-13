@@ -120,15 +120,15 @@ const ThyroideAlimentation = () => {
                   <h3 className="text-xl font-bold mb-4 text-hsl(var(--blog-text-primary))">🍽️ Nutrition pour l'hypothyroïdie</h3>
                   <div className="space-y-4">
                     <div className="bg-white/50 p-4 rounded-xl">
-                      <h4 className="font-semibold mb-2">⚡ Iode (avec précaution)</h4>
+                      <h3 className="font-semibold mb-2">⚡ Iode (avec précaution)</h3>
                       <p>Algues marines, poissons, fruits de mer, sel iodé en quantité raisonnable</p>
                     </div>
                     <div className="bg-white/50 p-4 rounded-xl">
-                      <h4 className="font-semibold mb-2">🛡️ Sélénium</h4>
+                      <h3 className="font-semibold mb-2">🛡️ Sélénium</h3>
                       <p>1-2 noix du Brésil par jour, poissons gras, œufs, graines de tournesol</p>
                     </div>
                     <div className="bg-white/50 p-4 rounded-xl">
-                      <h4 className="font-semibold mb-2">⚙️ Zinc</h4>
+                      <h3 className="font-semibold mb-2">⚙️ Zinc</h3>
                       <p>Huîtres, viandes maigres, graines de citrouille, légumineuses</p>
                     </div>
                   </div>
@@ -156,11 +156,11 @@ const ThyroideAlimentation = () => {
                   <h3 className="text-xl font-bold mb-4 text-hsl(var(--blog-text-primary))">🥛 Nutrition pour l'hyperthyroïdie</h3>
                   <div className="space-y-4">
                     <div className="bg-white/50 p-4 rounded-xl">
-                      <h4 className="font-semibold mb-2">🦴 Calcium & Magnésium</h4>
+                      <h3 className="font-semibold mb-2">🦴 Calcium & Magnésium</h3>
                       <p>Produits laitiers, légumes verts, sardines, amandes, chocolat noir</p>
                     </div>
                     <div className="bg-white/50 p-4 rounded-xl">
-                      <h4 className="font-semibold mb-2">🥦 Crucifères bénéfiques</h4>
+                      <h3 className="font-semibold mb-2">🥦 Crucifères bénéfiques</h3>
                       <p>Chou, brocoli, chou-fleur, radis - peuvent aider à calmer la thyroïde</p>
                     </div>
                   </div>

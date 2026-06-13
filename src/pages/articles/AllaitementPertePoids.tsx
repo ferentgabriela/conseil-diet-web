@@ -106,19 +106,19 @@ const AllaitementPertePoids = () => {
                 
                 <div className="grid md:grid-cols-2 gap-4 mb-8">
                   <div className="bg-hsl(var(--accent)) p-6 rounded-2xl">
-                    <h4 className="font-semibold text-hsl(var(--blog-text-primary)) mb-2">🍽️ Calories minimales</h4>
+                    <h3 className="font-semibold text-hsl(var(--blog-text-primary)) mb-2">🍽️ Calories minimales</h3>
                     <p>Ne pas descendre sous 1800 calories par jour</p>
                   </div>
                   <div className="bg-hsl(var(--accent)) p-6 rounded-2xl">
-                    <h4 className="font-semibold text-hsl(var(--blog-text-primary)) mb-2">⚖️ Perte progressive</h4>
+                    <h3 className="font-semibold text-hsl(var(--blog-text-primary)) mb-2">⚖️ Perte progressive</h3>
                     <p>Viser 0,5 à 1 kg par semaine maximum</p>
                   </div>
                   <div className="bg-hsl(var(--accent)) p-6 rounded-2xl">
-                    <h4 className="font-semibold text-hsl(var(--blog-text-primary)) mb-2">💧 Hydratation</h4>
+                    <h3 className="font-semibold text-hsl(var(--blog-text-primary)) mb-2">💧 Hydratation</h3>
                     <p>Maintenir une hydratation optimale</p>
                   </div>
                   <div className="bg-hsl(var(--accent)) p-6 rounded-2xl">
-                    <h4 className="font-semibold text-hsl(var(--blog-text-primary)) mb-2">🥗 Nutrition</h4>
+                    <h3 className="font-semibold text-hsl(var(--blog-text-primary)) mb-2">🥗 Nutrition</h3>
                     <p>Privilégier les aliments nutritifs</p>
                   </div>
                 </div>
@@ -132,28 +132,28 @@ const AllaitementPertePoids = () => {
                   <div className="flex items-start gap-4 p-4 bg-hsl(var(--accent)) rounded-xl">
                     <div className="text-2xl">🌾</div>
                     <div>
-                      <h4 className="font-semibold text-hsl(var(--blog-text-primary))">Avoine</h4>
+                      <h3 className="font-semibold text-hsl(var(--blog-text-primary))">Avoine</h3>
                       <p>Riche en fibres et peut stimuler la production de lait</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4 p-4 bg-hsl(var(--accent)) rounded-xl">
                     <div className="text-2xl">🐟</div>
                     <div>
-                      <h4 className="font-semibold text-hsl(var(--blog-text-primary))">Saumon</h4>
+                      <h3 className="font-semibold text-hsl(var(--blog-text-primary))">Saumon</h3>
                       <p>Excellente source d'oméga-3 et de protéines de qualité</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4 p-4 bg-hsl(var(--accent)) rounded-xl">
                     <div className="text-2xl">🥬</div>
                     <div>
-                      <h4 className="font-semibold text-hsl(var(--blog-text-primary))">Épinards</h4>
+                      <h3 className="font-semibold text-hsl(var(--blog-text-primary))">Épinards</h3>
                       <p>Riches en fer et folates essentiels</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4 p-4 bg-hsl(var(--accent)) rounded-xl">
                     <div className="text-2xl">🌰</div>
                     <div>
-                      <h4 className="font-semibold text-hsl(var(--blog-text-primary))">Graines de lin</h4>
+                      <h3 className="font-semibold text-hsl(var(--blog-text-primary))">Graines de lin</h3>
                       <p>Source d'oméga-3 végétaux et de fibres</p>
                     </div>
                   </div>

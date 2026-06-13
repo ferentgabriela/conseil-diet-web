@@ -105,19 +105,19 @@ const CholesterolAlimentation = () => {
                   
                   <div className="grid md:grid-cols-2 gap-4">
                     <div className="bg-white/70 p-4 rounded-xl border-l-4 border-red-400">
-                      <h4 className="font-semibold text-red-800 mb-2">🥓 Viandes grasses</h4>
+                      <h3 className="font-semibold text-red-800 mb-2">🥓 Viandes grasses</h3>
                       <p className="text-red-700">Charcuteries, viandes rouges grasses</p>
                     </div>
                     <div className="bg-white/70 p-4 rounded-xl border-l-4 border-red-400">
-                      <h4 className="font-semibold text-red-800 mb-2">🧀 Produits laitiers entiers</h4>
+                      <h3 className="font-semibold text-red-800 mb-2">🧀 Produits laitiers entiers</h3>
                       <p className="text-red-700">Fromages gras, crème, beurre</p>
                     </div>
                     <div className="bg-white/70 p-4 rounded-xl border-l-4 border-red-400">
-                      <h4 className="font-semibold text-red-800 mb-2">🍟 Fritures et transformés</h4>
+                      <h3 className="font-semibold text-red-800 mb-2">🍟 Fritures et transformés</h3>
                       <p className="text-red-700">Aliments frits, plats préparés</p>
                     </div>
                     <div className="bg-white/70 p-4 rounded-xl border-l-4 border-red-400">
-                      <h4 className="font-semibold text-red-800 mb-2">🥐 Pâtisseries</h4>
+                      <h3 className="font-semibold text-red-800 mb-2">🥐 Pâtisseries</h3>
                       <p className="text-red-700">Viennoiseries, gâteaux industriels</p>
                     </div>
                   </div>

@@ -7,7 +7,7 @@ const MentionsLegales = () => {
   return (
     <div className="min-h-screen bg-white pt-[34px]">
       <Helmet>
-        <title>Mentions Légales, CGU & Politique de Confidentialité — Gabriela Ferent Diététicienne</title>
+        <title>Mentions Légales & CGU — Gabriela Ferent Diététicienne</title>
         <meta name="description" content="Mentions légales, conditions générales d'utilisation et politique de confidentialité du site conseildietetique.lu. Gabriela Ferent, diététicienne au Luxembourg." />
         <link rel="canonical" href="https://conseildietetique.lu/mentions-legales" />
         <meta property="og:title" content="Mentions Légales — Gabriela Ferent Diététicienne" />

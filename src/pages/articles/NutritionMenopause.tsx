@@ -105,19 +105,19 @@ const NutritionMenopause = () => {
                 
                 <div className="grid md:grid-cols-2 gap-4 mb-8">
                   <div className="bg-hsl(var(--accent)) p-6 rounded-2xl">
-                    <h4 className="font-semibold text-hsl(var(--blog-text-primary)) mb-2">🔻 Diminution des œstrogènes</h4>
+                    <h3 className="font-semibold text-hsl(var(--blog-text-primary)) mb-2">🔻 Diminution des œstrogènes</h3>
                     <p>Impact direct sur le métabolisme</p>
                   </div>
                   <div className="bg-hsl(var(--accent)) p-6 rounded-2xl">
-                    <h4 className="font-semibold text-hsl(var(--blog-text-primary)) mb-2">🐌 Métabolisme ralenti</h4>
+                    <h3 className="font-semibold text-hsl(var(--blog-text-primary)) mb-2">🐌 Métabolisme ralenti</h3>
                     <p>Baisse du métabolisme de base</p>
                   </div>
                   <div className="bg-hsl(var(--accent)) p-6 rounded-2xl">
-                    <h4 className="font-semibold text-hsl(var(--blog-text-primary)) mb-2">📍 Répartition des graisses</h4>
+                    <h3 className="font-semibold text-hsl(var(--blog-text-primary)) mb-2">📍 Répartition des graisses</h3>
                     <p>Changement vers la zone abdominale</p>
                   </div>
                   <div className="bg-hsl(var(--accent)) p-6 rounded-2xl">
-                    <h4 className="font-semibold text-hsl(var(--blog-text-primary)) mb-2">💪 Perte musculaire</h4>
+                    <h3 className="font-semibold text-hsl(var(--blog-text-primary)) mb-2">💪 Perte musculaire</h3>
                     <p>Diminution progressive de la masse</p>
                   </div>
                 </div>

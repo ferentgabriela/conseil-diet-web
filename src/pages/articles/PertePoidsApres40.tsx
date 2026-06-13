@@ -10,7 +10,7 @@ const PertePoidsApres40 = () => {
     <div className="min-h-screen bg-background">
       <Helmet>
         <title>Perte de Poids Après 40 ans : Stratégies</title>
-        <meta name="description" content="Découvrez des stratégies nutritionnelles adaptées pour perdre du poids après 40 ans. Conseils pratiques et durables de Gabriela Ferent, diététicienne au Luxembourg." />
+        <meta name="description" content="Découvrez des stratégies nutritionnelles adaptées pour perdre du poids après 40 ans. Conseils pratiques et durables de Gabriela Ferent, diététicienne." />
         <link rel="canonical" href="https://conseildietetique.lu/articles/perte-poids-apres-40" />
         <meta property="og:title" content="Perte de Poids Après 40 ans : Stratégies" />
         <meta property="og:description" content="Découvrez des stratégies nutritionnelles adaptées pour perdre du poids après 40 ans. Conseils pratiques et durables de Gabriela Ferent, diététicienne au Luxembourg." />
