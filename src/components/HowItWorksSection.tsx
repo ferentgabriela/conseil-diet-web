@@ -14,21 +14,24 @@ const HowItWorksSection = () => {
     title: "RDV Initial + Évaluation",
     description: "Analyse complète de vos habitudes, objectifs et contraintes personnelles",
     detail: "À mon premier RDV, j'ai senti que j'étais enfin comprise.",
-    color: "green",
+        author: "— Marie L.",
+        color: "green",
     visual: "🎯"
   }, {
     icon: FileText,
     title: "Plan Personnalisé",
     description: "Programme nutritionnel sur-mesure adapté à votre mode de vie",
     detail: "Pas de régime strict, mais des conseils pratiques et réalisables.",
-    color: "blue",
+        author: "— Sarah K.",
+        color: "blue",
     visual: "📋"
   }, {
     icon: TrendingUp,
     title: "Suivi & Adaptation",
     description: "Accompagnement continu et ajustements selon vos progrès",
     detail: "Un soutien bienveillant qui fait toute la différence.",
-    color: "purple",
+        author: "— David M.",
+        color: "purple",
     visual: "📈"
   }];
   return <section id="processus" className="py-20 bg-gradient-to-br from-white via-green-25 to-blue-25">
@@ -79,21 +82,24 @@ const HowItWorksSection = () => {
                     
                     {/* Content */}
                     <h3 className="text-2xl font-bold text-gray-900 mb-4 relative z-10">{step.title}</h3>
-                                        <p className="text-gray-700 mb-6 flex-grow leading-relaxed relative z-10 text-left">{step.description}</p>
+                                        <p className="text-gray-800 mb-6 flex-grow leading-relaxed relative z-10 text-left">{step.description}</p>
                     
                     {/* Enhanced patient quote */}
-                    <div className="bg-gradient-to-r from-gray-50 to-green-50 rounded-lg p-4 border-l-4 border-green-500 relative z-10 group-hover:from-green-50 group-hover:to-blue-50 transition-colors duration-300">
-                      <div className="flex items-start gap-2">
-                        <Heart className="h-4 w-4 text-green-500 mt-0.5 flex-shrink-0" />
-                        <p className="text-sm text-gray-600 italic">"{step.detail}"</p>
-                      </div>
-                    </div>
+                                        <div className="bg-gradient-to-r from-gray-50 to-green-50 rounded-lg p-4 border-l-4 border-green-500 relative z-10 group-hover:from-green-50 group-hover:to-blue-50 transition-colors duration-300">
+                                          <div className="flex items-start gap-2">
+                                            <Heart className="h-4 w-4 text-green-500 mt-0.5 flex-shrink-0" />
+                                            <div>
+                                              <p className="text-sm text-gray-700 italic">"{step.detail}"</p>
+                                              <p className="text-xs text-gray-500 mt-1">{step.author}</p>
+                                            </div>
+                                          </div>
+                                        </div>
                   </div>
                   
                   {/* Enhanced arrow between steps */}
                   {index < steps.length - 1 && <div className="hidden md:block absolute top-1/2 -right-4 transform -translate-y-1/2 z-10">
                       <div className="relative">
-                        <ArrowRight className="h-8 w-8 text-gray-400 group-hover:text-green-500 transition-colors duration-300" />
+                        <ArrowRight className="h-8 w-8 text-gray-500 group-hover:text-green-600 group-hover:translate-x-1 transition-all duration-300" />
                         <div className="absolute inset-0 bg-green-500/20 rounded-full animate-ping opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                       </div>
                     </div>}
