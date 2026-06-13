@@ -2,6 +2,7 @@
 import React from 'react';
 import { Menu, X, MapPin, Users, Award } from 'lucide-react';
 import { useState, useEffect } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import NavigationLogo from './navigation/NavigationLogo';
 import NavigationMenu from './navigation/NavigationMenu';
@@ -11,6 +12,8 @@ import { scrollToElement, createThrottledScrollListener } from '../utils/scrollU
 
 const Navigation = () => {
   const { t } = useTranslation();
+  const location = useLocation();
+  const navigate = useNavigate();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -28,7 +31,11 @@ const Navigation = () => {
   };
 
   const scrollToCabinets = () => {
-    scrollToSection('cabinets');
+    if (location.pathname === '/') {
+      scrollToSection('cabinets');
+    } else {
+      navigate('/#cabinets');
+    }
   };
 
   return (
