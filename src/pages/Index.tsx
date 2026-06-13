@@ -10,7 +10,6 @@ import HowItWorksSection from '@/components/HowItWorksSection';
 import ServicesSection from '@/components/ServicesSection';
 import TransformationStoriesSection from '@/components/TransformationStoriesSection';
 import Footer from '@/components/Footer';
-import MobileStickyBooking from '@/components/MobileStickyBooking';
 
 // Lazy-load below-fold components that use Radix UI (causes forced reflows on mount)
 const DoctenaTestimonialsSection = lazy(() => import('@/components/DoctenaTestimonialsSection'));
@@ -110,7 +109,7 @@ const Index = () => {
       </main>
       <Footer />
       
-      <MobileStickyBooking />
+      <StickyBookingBar />
       <Suspense fallback={null}>
         <CookieConsentBanner onConsentGiven={(consent) => {
           console.log('Cookie consent updated:', consent);
