@@ -30,10 +30,6 @@ const MobileMenu = ({ isMenuOpen, scrollToSection }: MobileMenuProps) => {
     }
   };
 
-  const handlePageClick = (path: string) => {
-    navigate(path);
-  };
-
   if (!isMenuOpen) return null;
 
   return (
@@ -64,7 +60,7 @@ const MobileMenu = ({ isMenuOpen, scrollToSection }: MobileMenuProps) => {
           {t('navigation.testimonials')}
         </button>
         <button
-          onClick={() => handlePageClick('/contact')}
+          onClick={() => handleMenuClick('cabinets')}
           className="text-gray-800 hover:text-green-600 transition-colors text-left font-semibold py-2"
         >
           Contact
