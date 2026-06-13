@@ -362,7 +362,7 @@
       }
       
       .hero-text-overlay {
-        background: rgba(0, 0, 0, 0.3);
+        background: rgba(0, 0, 0, 0.45);
         backdrop-filter: blur(4px);
         border-radius: 1rem;
         padding: 2rem;
@@ -375,6 +375,7 @@
         color: white;
         margin-bottom: 1rem;
         line-height: 1.1;
+        text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
       }
       
       .hero-subtitle {
@@ -393,12 +394,12 @@
       .hero-cta {
         display: inline-flex;
         align-items: center;
-        padding: 1rem 2rem;
+        padding: 1.25rem 2.5rem;
         background-color: #047857;
         color: white;
         font-size: 1rem;
-        font-weight: 500;
-        border-radius: 0.375rem;
+        font-weight: 600;
+        border-radius: 0.75rem;
         text-decoration: none;
         border: none;
         cursor: pointer;
@@ -413,9 +414,9 @@
       }
       
       /* Fluid typography — smooth scaling without line-break jumps */
-      .hero-title { font-size: clamp(2.5rem, 1.55rem + 0.25vw, 3.5rem); text-wrap: balance; }
-      .hero-subtitle { font-size: clamp(1.375rem, 1rem + 0.1vw, 1.75rem); }
-      .hero-description { font-size: clamp(1rem, 0.75rem + 0.07vw, 1.25rem); text-wrap: balance; }
+      .hero-title { font-size: clamp(2.5rem, 1.55rem + 0.25vw, 3.5rem); text-shadow: 0 2px 8px rgba(0,0,0,0.3); text-wrap: balance; }
+      .hero-subtitle { font-size: clamp(1.375rem, 1rem + 0.1vw, 1.75rem); text-shadow: 0 1px 4px rgba(0,0,0,0.2); }
+      .hero-description { font-size: clamp(1rem, 0.75rem + 0.07vw, 1.25rem); text-shadow: 0 1px 4px rgba(0,0,0,0.2); text-wrap: balance; }
       
       @keyframes loading {
         0% { background-position: 200% 0; }
