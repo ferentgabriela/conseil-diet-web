@@ -10,24 +10,24 @@ const TransformationStoriesSection = () => {
     }
   };
   const transformations = [{
-    name: "Pedro",
-    result: "Des conseils clairs et applicables",
-    story: "Son professionnalisme, son approche personnalisée et ses conseils pratiques m'ont aidé à améliorer mes habitudes alimentaires de manière durable.",
-    avatar: "👨‍💼",
-    background: "from-red-50 to-rose-100"
-  }, {
-    name: "Diana",
-    result: "Une écoute attentive et motivante",
-    story: "Gabriela est très professionnelle. Elle prend le temps nécessaire pour écouter le patient et trouver la meilleure solution pour lui.",
-    avatar: "👩‍💻",
-    background: "from-blue-50 to-cyan-100"
-  }, {
-    name: "Carmen",
-    result: "Des habitudes durables, sans frustration",
-    story: "Gabriela est une experte dans son domaine et possède l'expertise nécessaire pour cela. J'ai été et suis très satisfaite de ses services. De plus, ses actions ont une direction précise et atteignent l'objectif souhaité. Merci !",
-    avatar: "👩‍🍳",
-    background: "from-green-50 to-emerald-100"
-  }];
+      name: "Pedro",
+      result: "Des conseils clairs et applicables",
+      story: "Son professionnalisme, son approche personnalisée et ses conseils pratiques m'ont aidé à améliorer mes habitudes alimentaires de manière durable.",
+      avatarColor: "bg-pink-500",
+      background: "from-red-50 to-rose-100"
+    }, {
+      name: "Diana",
+      result: "Une écoute attentive et motivante",
+      story: "Gabriela est très professionnelle. Elle prend le temps nécessaire pour écouter le patient et trouver la meilleure solution pour lui.",
+      avatarColor: "bg-blue-500",
+      background: "from-blue-50 to-cyan-100"
+    }, {
+      name: "Carmen",
+      result: "Des habitudes durables, sans frustration",
+      story: "Gabriela est une experte dans son domaine et possède l'expertise nécessaire pour cela. J'ai été et suis très satisfaite de ses services. De plus, ses actions ont une direction précise et atteignent l'objectif souhaité. Merci !",
+      avatarColor: "bg-emerald-500",
+      background: "from-green-50 to-emerald-100"
+    }];
   return <section id="transformations" className="relative py-20 bg-white">
       {/* Curved top transition */}
       <div className="absolute top-0 left-0 w-full overflow-hidden">
@@ -38,8 +38,8 @@ const TransformationStoriesSection = () => {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Ils l'ont fait, vous aussi vous pouvez y arriver
-            </h2>
+                          Ils l'ont fait. Vous aussi, vous pouvez y arriver !
+                        </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               Découvrez les transformations réelles de patients qui ont repris le contrôle de leur santé avec mon accompagnement
             </p>
@@ -70,13 +70,13 @@ const TransformationStoriesSection = () => {
                   </div>
 
                   {/* Story - flexible height to fill available space */}
-                  <blockquote className="text-gray-700 text-center mb-6 leading-relaxed italic flex-grow flex items-center justify-center">
-                    "{story.story}"
-                  </blockquote>
+                  <blockquote className="text-gray-600 text-center mb-6 leading-relaxed flex-grow flex items-center justify-center">
+                                      "{story.story}"
+                                    </blockquote>
 
                   {/* Author - pinned to bottom */}
                   <div className="flex items-center justify-center gap-3 mt-auto">
-                    <div className="text-3xl">{story.avatar}</div>
+                    <div className={`w-10 h-10 ${story.avatarColor} rounded-full flex items-center justify-center text-white font-bold text-base`}>{story.name.charAt(0)}</div>
                     <div>
                       <p className="font-bold text-gray-900">{story.name}</p>
                       <p className="text-sm text-gray-500">Patient vérifié</p>
