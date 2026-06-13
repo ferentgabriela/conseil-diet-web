@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Scale, Heart, Zap, Baby, Salad, Stethoscope } from 'lucide-react';
 import { scrollToElement } from '../utils/scrollUtils';
@@ -107,73 +106,73 @@ const ServicesSection = () => {
                     <div className="w-5 h-5 bg-green-600 rounded-full flex items-center justify-center">
                       <div className="w-2 h-2 bg-white rounded-full"></div>
                     </div>
-                    <span className="text-sm text-gray-700">Diabète type 1 et type 2</span>
+                    <span className="text-sm text-gray-700"><strong>Diabète</strong> type 1 et type 2</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <div className="w-5 h-5 bg-green-600 rounded-full flex items-center justify-center">
                       <div className="w-2 h-2 bg-white rounded-full"></div>
                     </div>
-                    <span className="text-sm text-gray-700">Diabète pendant la grossesse</span>
+                    <span className="text-sm text-gray-700"><strong>Diabète</strong> pendant la grossesse</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <div className="w-5 h-5 bg-green-600 rounded-full flex items-center justify-center">
                       <div className="w-2 h-2 bg-white rounded-full"></div>
                     </div>
-                    <span className="text-sm text-gray-700">Pré-diabète</span>
+                    <span className="text-sm text-gray-700"><strong>Pré-diabète</strong></span>
                   </div>
                   <div className="flex items-center gap-3">
                     <div className="w-5 h-5 bg-green-600 rounded-full flex items-center justify-center">
                       <div className="w-2 h-2 bg-white rounded-full"></div>
                     </div>
-                    <span className="text-sm text-gray-700">Obésité adulte (IMC ≥30)</span>
+                    <span className="text-sm text-gray-700"><strong>Obésité</strong> adulte (IMC ≥30)</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <div className="w-5 h-5 bg-green-600 rounded-full flex items-center justify-center">
                       <div className="w-2 h-2 bg-white rounded-full"></div>
                     </div>
-                    <span className="text-sm text-gray-700">Obésité enfant</span>
+                    <span className="text-sm text-gray-700"><strong>Obésité</strong> enfant</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <div className="w-5 h-5 bg-green-600 rounded-full flex items-center justify-center">
                       <div className="w-2 h-2 bg-white rounded-full"></div>
                     </div>
-                    <span className="text-sm text-gray-700">Hypertension artérielle</span>
+                    <span className="text-sm text-gray-700"><strong>Hypertension</strong> artérielle</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <div className="w-5 h-5 bg-green-600 rounded-full flex items-center justify-center">
                       <div className="w-2 h-2 bg-white rounded-full"></div>
                     </div>
-                    <span className="text-sm text-gray-700">Cholestérol élevé</span>
+                    <span className="text-sm text-gray-700"><strong>Cholestérol</strong> élevé</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <div className="w-5 h-5 bg-green-600 rounded-full flex items-center justify-center">
                       <div className="w-2 h-2 bg-white rounded-full"></div>
                     </div>
-                    <span className="text-sm text-gray-700">Syndrome métabolique</span>
+                    <span className="text-sm text-gray-700"><strong>Syndrome</strong> métabolique</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <div className="w-5 h-5 bg-green-600 rounded-full flex items-center justify-center">
                       <div className="w-2 h-2 bg-white rounded-full"></div>
                     </div>
-                    <span className="text-sm text-gray-700">Maladies intestinales</span>
+                    <span className="text-sm text-gray-700"><strong>Maladies</strong> intestinales</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <div className="w-5 h-5 bg-green-600 rounded-full flex items-center justify-center">
                       <div className="w-2 h-2 bg-white rounded-full"></div>
                     </div>
-                    <span className="text-sm text-gray-700">Maladie cœliaque</span>
+                    <span className="text-sm text-gray-700"><strong>Maladie cœliaque</strong></span>
                   </div>
                   <div className="flex items-center gap-3">
                     <div className="w-5 h-5 bg-green-600 rounded-full flex items-center justify-center">
                       <div className="w-2 h-2 bg-white rounded-full"></div>
                     </div>
-                    <span className="text-sm text-gray-700">Intolérance au lactose ou fructose</span>
+                    <span className="text-sm text-gray-700"><strong>Intolérance</strong> au lactose ou fructose</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <div className="w-5 h-5 bg-green-600 rounded-full flex items-center justify-center">
                       <div className="w-2 h-2 bg-white rounded-full"></div>
                     </div>
-                    <span className="text-sm text-gray-700">Anorexie</span>
+                    <span className="text-sm text-gray-700"><strong>Anorexie</strong></span>
                   </div>
                 </div>
                 
@@ -181,7 +180,7 @@ const ServicesSection = () => {
                   {/* CNS Badge */}
                   <CNSReimbursementBadge variant="compact" className="mb-4" />
                   
-                  <p className="text-xs text-green-700 text-center mb-4">
+                  <p className="text-xs text-gray-600 text-center mb-4">
                     Consultations avec <span className="font-bold">prise en charge CNS</span> selon la nomenclature officielle sur présentation d'une ordonnance médicale valide.
                   </p>
                 
@@ -189,7 +188,7 @@ const ServicesSection = () => {
                   onClick={scrollToCabinets}
                   className="w-full px-6 py-3 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transition-colors"
                 >
-                  Nous contacter
+                  Prendre RDV (avec ordonnance)
                 </button>
                 </div>
               </div>
@@ -217,79 +216,79 @@ const ServicesSection = () => {
                     <div className="w-5 h-5 bg-blue-600 rounded-full flex items-center justify-center">
                       <div className="w-2 h-2 bg-white rounded-full"></div>
                     </div>
-                    <span className="text-sm text-gray-700">Perte de poids durable</span>
+                    <span className="text-sm text-gray-700"><strong>Perte de poids</strong> durable</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <div className="w-5 h-5 bg-blue-600 rounded-full flex items-center justify-center">
                       <div className="w-2 h-2 bg-white rounded-full"></div>
                     </div>
-                    <span className="text-sm text-gray-700">Rééquilibrage alimentaire</span>
+                    <span className="text-sm text-gray-700"><strong>Rééquilibrage</strong> alimentaire</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <div className="w-5 h-5 bg-blue-600 rounded-full flex items-center justify-center">
                       <div className="w-2 h-2 bg-white rounded-full"></div>
                     </div>
-                    <span className="text-sm text-gray-700">Vitalité et énergie</span>
+                    <span className="text-sm text-gray-700"><strong>Vitalité</strong> et énergie</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <div className="w-5 h-5 bg-blue-600 rounded-full flex items-center justify-center">
                       <div className="w-2 h-2 bg-white rounded-full"></div>
                     </div>
-                    <span className="text-sm text-gray-700">Soutien personnalisé et éducation nutritionnelle</span>
+                    <span className="text-sm text-gray-700"><strong>Soutien</strong> personnalisé et éducation nutritionnelle</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <div className="w-5 h-5 bg-blue-600 rounded-full flex items-center justify-center">
                       <div className="w-2 h-2 bg-white rounded-full"></div>
                     </div>
-                    <span className="text-sm text-gray-700">Gestion du stress par l'alimentation</span>
+                    <span className="text-sm text-gray-700"><strong>Gestion du stress</strong> par l'alimentation</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <div className="w-5 h-5 bg-blue-600 rounded-full flex items-center justify-center">
                       <div className="w-2 h-2 bg-white rounded-full"></div>
                     </div>
-                    <span className="text-sm text-gray-700">Bien-être digestif</span>
+                    <span className="text-sm text-gray-700"><strong>Bien-être</strong> digestif</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <div className="w-5 h-5 bg-blue-600 rounded-full flex items-center justify-center">
                       <div className="w-2 h-2 bg-white rounded-full"></div>
                     </div>
-                    <span className="text-sm text-gray-700">Allergies alimentaires</span>
+                    <span className="text-sm text-gray-700"><strong>Allergies</strong> alimentaires</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <div className="w-5 h-5 bg-blue-600 rounded-full flex items-center justify-center">
                       <div className="w-2 h-2 bg-white rounded-full"></div>
                     </div>
-                    <span className="text-sm text-gray-700">Intolérances alimentaires</span>
+                    <span className="text-sm text-gray-700"><strong>Intolérances</strong> alimentaires</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <div className="w-5 h-5 bg-blue-600 rounded-full flex items-center justify-center">
                       <div className="w-2 h-2 bg-white rounded-full"></div>
                     </div>
-                    <span className="text-sm text-gray-700">Préparation à la grossesse</span>
+                    <span className="text-sm text-gray-700"><strong>Préparation</strong> à la grossesse</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <div className="w-5 h-5 bg-blue-600 rounded-full flex items-center justify-center">
                       <div className="w-2 h-2 bg-white rounded-full"></div>
                     </div>
-                    <span className="text-sm text-gray-700">Grossesse & allaitement</span>
+                    <span className="text-sm text-gray-700"><strong>Grossesse</strong> & allaitement</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <div className="w-5 h-5 bg-blue-600 rounded-full flex items-center justify-center">
                       <div className="w-2 h-2 bg-white rounded-full"></div>
                     </div>
-                    <span className="text-sm text-gray-700">Alimentation de l'enfant</span>
+                    <span className="text-sm text-gray-700"><strong>Alimentation</strong> de l'enfant</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <div className="w-5 h-5 bg-blue-600 rounded-full flex items-center justify-center">
                       <div className="w-2 h-2 bg-white rounded-full"></div>
                     </div>
-                    <span className="text-sm text-gray-700">Ménopause et alimentation</span>
+                    <span className="text-sm text-gray-700"><strong>Ménopause</strong> et alimentation</span>
                   </div>
                 </div>
                 </div>
                 
                 <div className="mt-auto">
-                <p className="text-xs text-blue-700 text-center mb-4">
+                <p className="text-xs text-gray-600 text-center mb-4">
                   <span className="font-semibold">Rendez-vous cette semaine</span> sans prescription
                 </p>
                 
@@ -297,7 +296,7 @@ const ServicesSection = () => {
                   onClick={scrollToCabinets}
                   className="w-full px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
                 >
-                  Nous contacter
+                  Prendre RDV immédiatement
                 </button>
                 </div>
               </div>
