@@ -136,7 +136,7 @@ const DoctenaTestimonialsSection = () => {
                     href="https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-3 px-8 py-4 bg-white text-green-700 font-bold rounded-xl hover:bg-gray-100 transition-all duration-300 text-lg shadow-lg hover:shadow-xl transform hover:scale-105"
+                    className="inline-flex items-center gap-4 px-8 py-4 bg-white text-green-700 font-bold rounded-xl hover:bg-gray-100 transition-all duration-300 text-lg shadow-lg hover:shadow-xl transform hover:scale-105"
                   >
                     <Calendar className="h-6 w-6" />
                     Prendre rendez-vous sur Doctena
