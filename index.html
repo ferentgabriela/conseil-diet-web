@@ -1,521 +1,522 @@
-
-<!DOCTYPE html>
-<html lang="fr-LU" itemscope itemtype="https://schema.org/WebPage">
-  <head>
-    <!-- Critical network optimizations - must be early in head -->
-    <!-- Preconnect with dns-prefetch fallback for analytics -->
-    <link rel="dns-prefetch" href="https://plausible.io">
-    <link rel="preconnect" href="https://plausible.io" crossorigin="anonymous">
-    
-    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
-    <link rel="preconnect" href="https://www.googletagmanager.com">
-    
-    <!-- Preconnect for fonts (critical for above-the-fold) -->
-    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="anonymous">
-    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
-    
-    <!-- Preconnect for Doctena booking widget -->
-    <link rel="dns-prefetch" href="https://www.doctena.lu">
-    <link rel="preconnect" href="https://www.doctena.lu" crossorigin="anonymous">
-    <link rel="dns-prefetch" href="https://api.doctena.lu">
-    <link rel="dns-prefetch" href="https://cdn.doctena.com">
-    
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="google-site-verification" content="1FykrPJA41s-utVL-wQJj26KcjkhA39r7ZBdLwVTbiM" />
-    <title>Diététicienne Luxembourg | Gabriela Ferent</title>
-    <meta name="description" content="Gabriela Ferent, diététicienne nutritionniste au Luxembourg. Consultations sur prescription médicale. Perte de poids, diabète, obésité. 3 cabinets." />
-    <meta name="keywords" content="diététicienne, Luxembourg, nutritionniste, perte de poids, diabète, cholestérol, obésité, hypertension, ménopause, thyroïde, troubles digestifs, Gabriela Ferent, Doctena Luxembourg, consultation diététique" />
-    <meta name="author" content="Gabriela Ferent" />
-    <meta name="robots" content="index, follow" />
-    
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://conseildietetique.lu/" />
-    
-    <!-- Hreflang for locale clarity -->
-    <link rel="alternate" hreflang="fr-LU" href="https://conseildietetique.lu/" />
-    <link rel="alternate" hreflang="x-default" href="https://conseildietetique.lu/" />
-    <!-- Language and Location -->
-    <meta name="geo.region" content="LU" />
-    <meta name="geo.placename" content="Luxembourg" />
-    <meta name="geo.position" content="49.6116;6.1319" />
-    
-    <!-- JSON-LD Structured Data for Medical Business with 3 Distinct Locations -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "MedicalBusiness",
-      "@id": "https://www.conseildietetique.lu/#organization",
-      "name": "Cabinet de Diététique Gabriela Ferent",
-      "description": "Diététicienne autorisée proposant des consultations diététiques sur ordonnance et privées au Luxembourg",
-      "url": "https://www.conseildietetique.lu",
-      "logo": "https://www.conseildietetique.lu/og-image-dietician-luxembourg.jpg",
-      "image": "https://www.conseildietetique.lu/og-image-dietician-luxembourg.jpg",
-      "telephone": "+352691379172",
-      "email": "dieteticienne@conseildietetique.lu",
-      "priceRange": "€€",
-      "medicalSpecialty": "Dietetics",
-      "founder": {
-        "@type": "Person",
-        "name": "Gabriela Ferent",
-        "jobTitle": "Diététicienne Nutritionniste"
-      },
-      "areaServed": [
-        { "@type": "City", "name": "Luxembourg" },
-        { "@type": "City", "name": "Ettelbruck" },
-        { "@type": "City", "name": "Insenborn" }
-      ],
-      "paymentAccepted": ["CNS", "Privé", "EUR"],
-      "currenciesAccepted": "EUR",
-      "availableService": [
-        {
-          "@type": "MedicalTherapy",
-          "name": "Consultation Diététique sur Ordonnance",
-          "description": "Consultations remboursées par la CNS (88-100%) pour diabète, obésité, troubles alimentaires, hypertension, dyslipidémies"
-        },
-        {
-          "@type": "MedicalTherapy",
-          "name": "Consultation Diététique Privée",
-          "description": "Consultations personnalisées pour perte de poids, bien-être digestif, nutrition sportive"
-        }
-      ],
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Services de Diététique",
-        "itemListElement": [
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Anamnèse & diagnostic nutritionnel",
-              "description": "Première consultation de 60 minutes avec évaluation complète"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Conseil & plan nutritionnel",
-              "description": "Consultation de 45 minutes avec remise du plan personnalisé"
-            }
-          }
-        ]
-      },
-      "location": [
-        {
-          "@type": "MedicalClinic",
-          "@id": "https://www.conseildietetique.lu/#limpertsberg",
-          "name": "Cabinet de Diététique - Luxembourg-Ville (Limpertsberg)",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "74 Avenue de la Faïencerie",
-            "addressLocality": "Luxembourg",
-            "postalCode": "1510",
-            "addressCountry": "LU"
-          },
-          "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": "49.6244",
-            "longitude": "6.1267"
-          },
-          "telephone": "+352691379172",
-          "openingHoursSpecification": {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": "Wednesday",
-            "opens": "13:00",
-            "closes": "18:00"
-          },
-          "hasMap": "https://maps.app.goo.gl/hWQUNvnAqGR9gF1K8"
-        },
-        {
-          "@type": "MedicalClinic",
-          "@id": "https://www.conseildietetique.lu/#ettelbruck",
-          "name": "Cabinet de Diététique - Ettelbruck",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "25 Grand-Rue",
-            "addressLocality": "Ettelbruck",
-            "postalCode": "9050",
-            "addressCountry": "LU"
-          },
-          "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": "49.8474",
-            "longitude": "6.1042"
-          },
-          "telephone": "+352691379172",
-          "openingHoursSpecification": {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": "Tuesday",
-            "opens": "08:00",
-            "closes": "20:00"
-          },
-          "hasMap": "https://maps.app.goo.gl/BskmffZY7iEYCEEi7"
-        },
-        {
-          "@type": "MedicalClinic",
-          "@id": "https://www.conseildietetique.lu/#insenborn",
-          "name": "Cabinet de Diététique - Insenborn",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "15 Burwiss",
-            "addressLocality": "Insenborn",
-            "postalCode": "9660",
-            "addressCountry": "LU"
-          },
-          "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": "49.7147",
-            "longitude": "5.9311"
-          },
-          "telephone": "+352691379172",
-          "openingHoursSpecification": [
-            {
-              "@type": "OpeningHoursSpecification",
-              "dayOfWeek": ["Monday", "Thursday", "Friday"],
-              "opens": "09:00",
-              "closes": "19:00"
-            },
-            {
-              "@type": "OpeningHoursSpecification",
-              "dayOfWeek": "Saturday",
-              "opens": "09:00",
-              "closes": "14:00"
-            }
-          ],
-          "hasMap": "https://maps.app.goo.gl/aDhyAe8LhGMiRxVh8"
-        }
-      ],
-      "sameAs": [
-        "https://www.andl.lu/project/ferent-gabriela/",
-        "https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874"
-      ]
-    }
-    </script>
-    
-    <!-- Open Graph -->
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Conseil Diététique Luxembourg">
-    <meta property="og:title" content="Diététicienne Luxembourg | Gabriela Ferent – Consultations sur prescription">
-    <meta property="og:description" content="Diététicienne nutritionniste au Luxembourg. Consultations sur prescription médicale. Perte de poids, diabète, obésité. RDV à Luxembourg-Ville, Ettelbruck, Insenborn.">
-    <meta property="og:url" content="https://conseildietetique.lu/">
-    <meta property="og:image" content="https://conseildietetique.lu/og-image-dietician-luxembourg.jpg">
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Diététicienne Luxembourg | Gabriela Ferent – Consultations sur prescription">
-    <meta name="twitter:description" content="Diététicienne nutritionniste au Luxembourg. Consultations sur prescription médicale. Perte de poids, diabète, obésité. RDV à Luxembourg-Ville, Ettelbruck, Insenborn.">
-    <meta name="twitter:image" content="https://conseildietetique.lu/og-image-dietician-luxembourg.jpg">
-
-    <!-- FAQ Schema mirrored from FAQSection -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Est-ce que les consultations sont remboursées par la CNS ?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Le remboursement n'est pas automatique. Seules les pathologies reconnues par la CNS et munies d'une ordonnance médicale de moins de 3 mois peuvent bénéficier d'une prise en charge." }
-        },
-        {
-          "@type": "Question",
-          "name": "Faut-il une prescription médicale pour consulter ?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Sans ordonnance, la consultation est au tarif privé non remboursable. La prescription doit être obtenue avant la première séance visant un remboursement." }
-        },
-        {
-          "@type": "Question",
-          "name": "Quelle différence entre consultations CNS et privées ?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Les consultations CNS nécessitent une ordonnance médicale et concernent uniquement certaines pathologies définies par la CNS. Les consultations privées ne nécessitent pas d'ordonnance et s'adressent à tous les autres objectifs nutritionnels." }
-        },
-        {
-          "@type": "Question",
-          "name": "Quelle est la différence entre une diététicienne et une nutritionniste ?",
-          "acceptedAnswer": { "@type": "Answer", "text": "La diététicienne a une formation spécialisée reconnue et un titre protégé, contrairement au terme « nutritionniste » qui peut être utilisé sans formation officielle." }
-        },
-        {
-          "@type": "Question",
-          "name": "À quoi dois-je m'attendre lors de ma première consultation ?",
-          "acceptedAnswer": { "@type": "Answer", "text": "La première consultation dure 60 minutes et comprend un bilan complet de votre situation, vos habitudes alimentaires et l'établissement d'un plan personnalisé." }
-        },
-        {
-          "@type": "Question",
-          "name": "Proposez-vous des plans alimentaires personnalisés ?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Chaque patient reçoit un plan alimentaire entièrement personnalisé, adapté à ses goûts, contraintes, pathologies et objectifs spécifiques." }
-        },
-        {
-          "@type": "Question",
-          "name": "Quels résultats puis-je espérer et en combien de temps ?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Les premiers résultats apparaissent dans les 2 à 4 semaines. Une transformation durable s'observe généralement sur 3 à 6 mois selon vos objectifs." }
-        },
-        {
-          "@type": "Question",
-          "name": "Dans quelles villes se trouvent vos cabinets et comment prendre rendez-vous ?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Je consulte dans 3 cabinets au Luxembourg : Luxembourg-Ville, Ettelbruck et Insenborn. La prise de rendez-vous se fait via Doctena selon votre localisation." }
-        }
-      ]
-    }
-    </script>
-
-    <!-- Article Schema for AI Content Authority -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "MedicalWebPage",
-      "name": "Guide Nutrition Luxembourg - Gabriela Ferent",
-      "description": "Conseils nutritionnels professionnels pour la perte de poids, diabète et bien-être au Luxembourg",
-      "author": {
-        "@type": "Person",
-        "name": "Gabriela Ferent",
-        "jobTitle": "Diététicienne Nutritionniste",
-        "worksFor": {
-          "@type": "Organization",
-          "name": "Cabinet Gabriela Ferent Luxembourg"
-        }
-      },
-      "datePublished": "2024-01-01",
-      "dateModified": "2024-12-25",
-      "publisher": {
-        "@type": "Organization",
-        "name": "Gabriela Ferent Nutrition Luxembourg"
-      },
-      "medicalAudience": {
-        "@type": "PeopleAudience",
-        "suggestedMinAge": 18
-      },
-      "about": [
-        {
-          "@type": "MedicalCondition",
-          "name": "Obesity"
-        },
-        {
-          "@type": "MedicalCondition", 
-          "name": "Diabetes"
-        },
-        {
-          "@type": "MedicalCondition",
-          "name": "Hypertension"
-        }
-      ]
-    }
-    </script>
-
-    <!-- Critical CSS for above-the-fold content -->
-    <style>
-      /* Critical styles for initial render */
-      body { 
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-        font-size-adjust: 0.5;
-        margin: 0; 
-        padding-top: 136px;
-        background-color: #ffffff;
-        color: #0f172a;
-      }
-      
-      /* Critical navigation styles */
-      .trust-bar { 
-        position: fixed; 
-        top: 0; 
-        left: 0; 
-        right: 0; 
-        z-index: 50;
-        background-color: #e6f4eb;
-        padding: 8px 0;
-        font-size: 14px;
-      }
-      
-      .main-nav {
-        position: fixed;
-        top: 32px;
-        left: 0;
-        right: 0;
-        z-index: 50;
-        background-color: #fffbdd;
-        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-      }
-      
-      /* Critical loading state */
-      .loading-skeleton {
-        background: linear-gradient(90deg, #f3f4f6 25%, #e5e7eb 50%, #f3f4f6 75%);
-        background-size: 200% 100%;
-        animation: loading 1.5s infinite;
-      }
-      
-      /* Critical hero styles */
-      #accueil {
-        position: relative;
-        min-height: 80vh;
-        overflow: hidden;
-        display: flex;
-        align-items: center;
-        margin-top: -8px;
-        background-color: #f3f4f6;
-        padding: 4rem 1rem;
-        contain: layout style paint;
-      }
-      
-      #accueil img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        will-change: opacity;
-        content-visibility: auto;
-        aspect-ratio: 1335 / 890;
-      }
-      
-      #accueil img[fetchpriority="high"] {
-        content-visibility: visible;
-      }
-      
-      /* Critical text styles for above-the-fold */
-      .hero-content {
-        position: relative;
-        z-index: 10;
-        max-width: 64rem;
-        margin: 0 auto;
-        text-align: center;
-      }
-      
-      .hero-text-overlay {
-        background: rgba(0, 0, 0, 0.3);
-        backdrop-filter: blur(4px);
-        border-radius: 1rem;
-        padding: 2rem;
-        min-height: 200px;
-      }
-      
-      .hero-title {
-        font-size: 2.5rem;
-        font-weight: 700;
-        color: white;
-        margin-bottom: 1rem;
-        line-height: 1.1;
-      }
-      
-      .hero-subtitle {
-        font-size: 1.375rem;
-        font-weight: 500;
-        color: white;
-        margin-bottom: 0.5rem;
-      }
-      
-      .hero-description {
-        font-size: 1rem;
-        color: white;
-        margin-bottom: 2rem;
-      }
-      
-      .hero-cta {
-        display: inline-flex;
-        align-items: center;
-        padding: 1rem 2rem;
-        background-color: #047857;
-        color: white;
-        font-size: 1rem;
-        font-weight: 500;
-        border-radius: 0.375rem;
-        text-decoration: none;
-        border: none;
-        cursor: pointer;
-      }
-      
-      @media (min-width: 768px) {
-        .hero-title { font-size: 3.5rem; }
-        .hero-subtitle { font-size: 1.75rem; }
-        .hero-description { font-size: 1.25rem; }
-        .hero-cta { font-size: 1.25rem; padding: 1.25rem 2.5rem; }
-        .hero-text-overlay { padding: 3rem; }
-      }
-      
-      @keyframes loading {
-        0% { background-position: 200% 0; }
-        100% { background-position: -200% 0; }
-      }
-      
-      /* Content visible immediately in fallback font, swaps to Inter when loaded */
-    </style>
-
-    <!-- Resource hints optimized for critical request chains -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"></noscript>
-    
-    <!-- Critical image - only preload the first visible hero image -->
-    <link rel="preload" href="/lovable-uploads/1f309c72-ddb5-4bae-944e-68046c01bf90.webp" as="image" type="image/webp" fetchpriority="high">
-    
-    <!-- Prefetch carousel images and other non-critical resources -->
-    <link rel="prefetch" href="/lovable-uploads/93b38569-b3fe-4bfa-bc2d-80b6a547847b.webp" as="image">
-    <link rel="prefetch" href="/lovable-uploads/6b584fa2-7cae-45b4-8d71-ff67ae89fad3.webp" as="image">
-    <link rel="prefetch" href="/src/i18n/locales/fr.json">
-    
-    <!-- Plausible Analytics - loaded after page interactive to avoid forced reflow -->
-    <script>
-      window.addEventListener('load', function() {
-        setTimeout(function() {
-          var s = document.createElement('script');
-          s.defer = true;
-          s.dataset.domain = 'conseildietetique.lu';
-          s.src = 'https://plausible.io/js/script.js';
-          document.head.appendChild(s);
-        }, 2000);
-      }, { once: true });
-    </script>
-
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F2VZD927EE"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-F2VZD927EE');
-    </script>
-
-    <!-- Favicon -->
-    <link rel="icon" href="/lovable-uploads/b60696cb-a1d6-4eec-bf95-2c544d726e80.png" type="image/png" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/lovable-uploads/b60696cb-a1d6-4eec-bf95-2c544d726e80.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/lovable-uploads/b60696cb-a1d6-4eec-bf95-2c544d726e80.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/lovable-uploads/b60696cb-a1d6-4eec-bf95-2c544d726e80.png" />
-  </head>
-
-  <body>
-    <!-- Loading placeholder for critical above-the-fold content -->
-    <div id="initial-loading" style="position: fixed; top: 0; left: 0; right: 0; z-index: 40; background: #e6f4eb; height: 32px;"></div>
-    <div id="nav-loading" style="position: fixed; top: 32px; left: 0; right: 0; z-index: 40; background: #fffbdd; height: 88px; box-shadow: 0 1px 3px rgba(0,0,0,0.1);"></div>
-    
-    <!-- Static hero content — visible immediately in initial HTML, superseded by React on mount -->
-    <div id="hero-shell" style="position:relative;min-height:80vh;display:flex;align-items:center;justify-content:center;margin-top:-8px;background:linear-gradient(to bottom,rgba(0,0,0,0.1),rgba(0,0,0,0.4)),url(/lovable-uploads/1f309c72-ddb5-4bae-944e-68046c01bf90.webp) center/cover no-repeat;">
-      <div style="background:rgba(0,0,0,0.3);backdrop-filter:blur(4px);border-radius:1rem;padding:2rem;max-width:64rem;margin:0 auto;text-align:center;">
-        <h1 style="font-size:2.5rem;font-weight:700;color:white;margin-bottom:1rem;line-height:1.1;">Diététicienne à Luxembourg Gabriela Ferent</h1>
-        <p style="font-size:1.375rem;font-weight:500;color:white;margin-bottom:0.5rem;">3 cabinets au Luxembourg</p>
-        <p style="font-size:1rem;color:white;margin-bottom:2rem;">Des consultations adaptées à votre santé, avec ou sans ordonnance</p>
-        <div style="display:inline-flex;align-items:center;padding:1rem 2rem;background-color:#047857;color:white;font-size:1rem;font-weight:500;border-radius:0.375rem;border:none;">Je réserve ma consultation</div>
-      </div>
-    </div>
-    
-    <div id="root"></div>
-    
-    <!-- Remove loading placeholders and static hero shell when React takes over -->
-    <script>
-      window.addEventListener('DOMContentLoaded', function() {
-        setTimeout(function() {
-          var initialLoading = document.getElementById('initial-loading');
-          var navLoading = document.getElementById('nav-loading');
-          var heroShell = document.getElementById('hero-shell');
-          if (initialLoading) initialLoading.remove();
-          if (navLoading) navLoading.remove();
-          // Hide hero shell after a short delay (React should have mounted by then)
-          if (heroShell) {
-            heroShell.style.display = 'none';
-          }
-        }, 50);
-      });
-    </script>
-    
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
-</html>
+1|
+2|<!DOCTYPE html>
+3|<html lang="fr-LU" itemscope itemtype="https://schema.org/WebPage">
+4|  <head>
+5|    <!-- Critical network optimizations - must be early in head -->
+6|    <!-- Preconnect with dns-prefetch fallback for analytics -->
+7|    <link rel="dns-prefetch" href="https://plausible.io">
+8|    <link rel="preconnect" href="https://plausible.io" crossorigin="anonymous">
+9|    
+10|    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+11|    <link rel="preconnect" href="https://www.googletagmanager.com">
+12|    
+13|    <!-- Preconnect for fonts (critical for above-the-fold) -->
+14|    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+15|    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="anonymous">
+16|    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+17|    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+18|    
+19|    <!-- Preconnect for Doctena booking widget -->
+20|    <link rel="dns-prefetch" href="https://www.doctena.lu">
+21|    <link rel="preconnect" href="https://www.doctena.lu" crossorigin="anonymous">
+22|    <link rel="dns-prefetch" href="https://api.doctena.lu">
+23|    <link rel="dns-prefetch" href="https://cdn.doctena.com">
+24|    
+25|    <meta charset="UTF-8" />
+26|    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+27|    <meta name="google-site-verification" content="1FykrPJA41s-utVL-wQJj26KcjkhA39r7ZBdLwVTbiM" />
+28|    <title>Diététicienne Luxembourg | Gabriela Ferent</title>
+29|    <meta name="description" content="Gabriela Ferent, diététicienne nutritionniste au Luxembourg. Consultations sur prescription médicale. Perte de poids, diabète, obésité. 3 cabinets." />
+30|    <meta name="keywords" content="diététicienne, Luxembourg, nutritionniste, perte de poids, diabète, cholestérol, obésité, hypertension, ménopause, thyroïde, troubles digestifs, Gabriela Ferent, Doctena Luxembourg, consultation diététique" />
+31|    <meta name="author" content="Gabriela Ferent" />
+32|    <meta name="robots" content="index, follow" />
+33|    
+34|    <!-- Canonical URL -->
+35|    <link rel="canonical" href="https://conseildietetique.lu/" />
+36|    
+37|    <!-- Hreflang for locale clarity -->
+38|    <link rel="alternate" hreflang="fr-LU" href="https://conseildietetique.lu/" />
+39|    <link rel="alternate" hreflang="x-default" href="https://conseildietetique.lu/" />
+40|    <!-- Language and Location -->
+41|    <meta name="geo.region" content="LU" />
+42|    <meta name="geo.placename" content="Luxembourg" />
+43|    <meta name="geo.position" content="49.6116;6.1319" />
+44|    
+45|    <!-- JSON-LD Structured Data for Medical Business with 3 Distinct Locations -->
+46|    <script type="application/ld+json">
+47|    {
+48|      "@context": "https://schema.org",
+49|      "@type": "MedicalBusiness",
+50|      "@id": "https://www.conseildietetique.lu/#organization",
+51|      "name": "Cabinet de Diététique Gabriela Ferent",
+52|      "description": "Diététicienne autorisée proposant des consultations diététiques sur ordonnance et privées au Luxembourg",
+53|      "url": "https://www.conseildietetique.lu",
+54|      "logo": "https://www.conseildietetique.lu/og-image-dietician-luxembourg.jpg",
+55|      "image": "https://www.conseildietetique.lu/og-image-dietician-luxembourg.jpg",
+56|      "telephone": "+352****9172",
+57|      "email": "dieteticienne@conseildietetique.lu",
+58|      "priceRange": "€€",
+59|      "medicalSpecialty": "Dietetics",
+60|      "founder": {
+61|        "@type": "Person",
+62|        "name": "Gabriela Ferent",
+63|        "jobTitle": "Diététicienne Nutritionniste"
+64|      },
+65|      "areaServed": [
+66|        { "@type": "City", "name": "Luxembourg" },
+67|        { "@type": "City", "name": "Ettelbruck" },
+68|        { "@type": "City", "name": "Insenborn" }
+69|      ],
+70|      "paymentAccepted": ["CNS", "Privé", "EUR"],
+71|      "currenciesAccepted": "EUR",
+72|      "availableService": [
+73|        {
+74|          "@type": "MedicalTherapy",
+75|          "name": "Consultation Diététique sur Ordonnance",
+76|          "description": "Consultations remboursées par la CNS (88-100%) pour diabète, obésité, troubles alimentaires, hypertension, dyslipidémies"
+77|        },
+78|        {
+79|          "@type": "MedicalTherapy",
+80|          "name": "Consultation Diététique Privée",
+81|          "description": "Consultations personnalisées pour perte de poids, bien-être digestif, nutrition sportive"
+82|        }
+83|      ],
+84|      "hasOfferCatalog": {
+85|        "@type": "OfferCatalog",
+86|        "name": "Services de Diététique",
+87|        "itemListElement": [
+88|          {
+89|            "@type": "Offer",
+90|            "itemOffered": {
+91|              "@type": "Service",
+92|              "name": "Anamnèse & diagnostic nutritionnel",
+93|              "description": "Première consultation de 60 minutes avec évaluation complète"
+94|            }
+95|          },
+96|          {
+97|            "@type": "Offer",
+98|            "itemOffered": {
+99|              "@type": "Service",
+100|              "name": "Conseil & plan nutritionnel",
+101|              "description": "Consultation de 45 minutes avec remise du plan personnalisé"
+102|            }
+103|          }
+104|        ]
+105|      },
+106|      "location": [
+107|        {
+108|          "@type": "MedicalClinic",
+109|          "@id": "https://www.conseildietetique.lu/#limpertsberg",
+110|          "name": "Cabinet de Diététique - Luxembourg-Ville (Limpertsberg)",
+111|          "address": {
+112|            "@type": "PostalAddress",
+113|            "streetAddress": "74 Avenue de la Faïencerie",
+114|            "addressLocality": "Luxembourg",
+115|            "postalCode": "1510",
+116|            "addressCountry": "LU"
+117|          },
+118|          "geo": {
+119|            "@type": "GeoCoordinates",
+120|            "latitude": "49.6244",
+121|            "longitude": "6.1267"
+122|          },
+123|          "telephone": "+352****9172",
+124|          "openingHoursSpecification": {
+125|            "@type": "OpeningHoursSpecification",
+126|            "dayOfWeek": "Wednesday",
+127|            "opens": "13:00",
+128|            "closes": "18:00"
+129|          },
+130|          "hasMap": "https://maps.app.goo.gl/hWQUNvnAqGR9gF1K8"
+131|        },
+132|        {
+133|          "@type": "MedicalClinic",
+134|          "@id": "https://www.conseildietetique.lu/#ettelbruck",
+135|          "name": "Cabinet de Diététique - Ettelbruck",
+136|          "address": {
+137|            "@type": "PostalAddress",
+138|            "streetAddress": "25 Grand-Rue",
+139|            "addressLocality": "Ettelbruck",
+140|            "postalCode": "9050",
+141|            "addressCountry": "LU"
+142|          },
+143|          "geo": {
+144|            "@type": "GeoCoordinates",
+145|            "latitude": "49.8474",
+146|            "longitude": "6.1042"
+147|          },
+148|          "telephone": "+352****9172",
+149|          "openingHoursSpecification": {
+150|            "@type": "OpeningHoursSpecification",
+151|            "dayOfWeek": "Tuesday",
+152|            "opens": "08:00",
+153|            "closes": "20:00"
+154|          },
+155|          "hasMap": "https://maps.app.goo.gl/BskmffZY7iEYCEEi7"
+156|        },
+157|        {
+158|          "@type": "MedicalClinic",
+159|          "@id": "https://www.conseildietetique.lu/#insenborn",
+160|          "name": "Cabinet de Diététique - Insenborn",
+161|          "address": {
+162|            "@type": "PostalAddress",
+163|            "streetAddress": "15 Burwiss",
+164|            "addressLocality": "Insenborn",
+165|            "postalCode": "9660",
+166|            "addressCountry": "LU"
+167|          },
+168|          "geo": {
+169|            "@type": "GeoCoordinates",
+170|            "latitude": "49.7147",
+171|            "longitude": "5.9311"
+172|          },
+173|          "telephone": "+352****9172",
+174|          "openingHoursSpecification": [
+175|            {
+176|              "@type": "OpeningHoursSpecification",
+177|              "dayOfWeek": ["Monday", "Thursday", "Friday"],
+178|              "opens": "09:00",
+179|              "closes": "19:00"
+180|            },
+181|            {
+182|              "@type": "OpeningHoursSpecification",
+183|              "dayOfWeek": "Saturday",
+184|              "opens": "09:00",
+185|              "closes": "14:00"
+186|            }
+187|          ],
+188|          "hasMap": "https://maps.app.goo.gl/aDhyAe8LhGMiRxVh8"
+189|        }
+190|      ],
+191|      "sameAs": [
+192|        "https://www.andl.lu/project/ferent-gabriela/",
+193|        "https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874"
+194|      ]
+195|    }
+196|    </script>
+197|    
+198|    <!-- Open Graph -->
+199|    <meta property="og:type" content="website">
+200|    <meta property="og:site_name" content="Conseil Diététique Luxembourg">
+201|    <meta property="og:title" content="Diététicienne Luxembourg | Gabriela Ferent – Consultations sur prescription">
+202|    <meta property="og:description" content="Diététicienne nutritionniste au Luxembourg. Consultations sur prescription médicale. Perte de poids, diabète, obésité. RDV à Luxembourg-Ville, Ettelbruck, Insenborn.">
+203|    <meta property="og:url" content="https://conseildietetique.lu/">
+204|    <meta property="og:image" content="https://conseildietetique.lu/og-image-dietician-luxembourg.jpg">
+205|
+206|    <!-- Twitter Card -->
+207|    <meta name="twitter:card" content="summary_large_image">
+208|    <meta name="twitter:title" content="Diététicienne Luxembourg | Gabriela Ferent – Consultations sur prescription">
+209|    <meta name="twitter:description" content="Diététicienne nutritionniste au Luxembourg. Consultations sur prescription médicale. Perte de poids, diabète, obésité. RDV à Luxembourg-Ville, Ettelbruck, Insenborn.">
+210|    <meta name="twitter:image" content="https://conseildietetique.lu/og-image-dietician-luxembourg.jpg">
+211|
+212|    <!-- FAQ Schema mirrored from FAQSection -->
+213|    <script type="application/ld+json">
+214|    {
+215|      "@context": "https://schema.org",
+216|      "@type": "FAQPage",
+217|      "mainEntity": [
+218|        {
+219|          "@type": "Question",
+220|          "name": "Est-ce que les consultations sont remboursées par la CNS ?",
+221|          "acceptedAnswer": { "@type": "Answer", "text": "Le remboursement n'est pas automatique. Seules les pathologies reconnues par la CNS et munies d'une ordonnance médicale de moins de 3 mois peuvent bénéficier d'une prise en charge." }
+222|        },
+223|        {
+224|          "@type": "Question",
+225|          "name": "Faut-il une prescription médicale pour consulter ?",
+226|          "acceptedAnswer": { "@type": "Answer", "text": "Sans ordonnance, la consultation est au tarif privé non remboursable. La prescription doit être obtenue avant la première séance visant un remboursement." }
+227|        },
+228|        {
+229|          "@type": "Question",
+230|          "name": "Quelle différence entre consultations CNS et privées ?",
+231|          "acceptedAnswer": { "@type": "Answer", "text": "Les consultations CNS nécessitent une ordonnance médicale et concernent uniquement certaines pathologies définies par la CNS. Les consultations privées ne nécessitent pas d'ordonnance et s'adressent à tous les autres objectifs nutritionnels." }
+232|        },
+233|        {
+234|          "@type": "Question",
+235|          "name": "Quelle est la différence entre une diététicienne et une nutritionniste ?",
+236|          "acceptedAnswer": { "@type": "Answer", "text": "La diététicienne a une formation spécialisée reconnue et un titre protégé, contrairement au terme « nutritionniste » qui peut être utilisé sans formation officielle." }
+237|        },
+238|        {
+239|          "@type": "Question",
+240|          "name": "À quoi dois-je m'attendre lors de ma première consultation ?",
+241|          "acceptedAnswer": { "@type": "Answer", "text": "La première consultation dure 60 minutes et comprend un bilan complet de votre situation, vos habitudes alimentaires et l'établissement d'un plan personnalisé." }
+242|        },
+243|        {
+244|          "@type": "Question",
+245|          "name": "Proposez-vous des plans alimentaires personnalisés ?",
+246|          "acceptedAnswer": { "@type": "Answer", "text": "Chaque patient reçoit un plan alimentaire entièrement personnalisé, adapté à ses goûts, contraintes, pathologies et objectifs spécifiques." }
+247|        },
+248|        {
+249|          "@type": "Question",
+250|          "name": "Quels résultats puis-je espérer et en combien de temps ?",
+251|          "acceptedAnswer": { "@type": "Answer", "text": "Les premiers résultats apparaissent dans les 2 à 4 semaines. Une transformation durable s'observe généralement sur 3 à 6 mois selon vos objectifs." }
+252|        },
+253|        {
+254|          "@type": "Question",
+255|          "name": "Dans quelles villes se trouvent vos cabinets et comment prendre rendez-vous ?",
+256|          "acceptedAnswer": { "@type": "Answer", "text": "Je consulte dans 3 cabinets au Luxembourg : Luxembourg-Ville, Ettelbruck et Insenborn. La prise de rendez-vous se fait via Doctena selon votre localisation." }
+257|        }
+258|      ]
+259|    }
+260|    </script>
+261|
+262|    <!-- Article Schema for AI Content Authority -->
+263|    <script type="application/ld+json">
+264|    {
+265|      "@context": "https://schema.org",
+266|      "@type": "MedicalWebPage",
+267|      "name": "Guide Nutrition Luxembourg - Gabriela Ferent",
+268|      "description": "Conseils nutritionnels professionnels pour la perte de poids, diabète et bien-être au Luxembourg",
+269|      "author": {
+270|        "@type": "Person",
+271|        "name": "Gabriela Ferent",
+272|        "jobTitle": "Diététicienne Nutritionniste",
+273|        "worksFor": {
+274|          "@type": "Organization",
+275|          "name": "Cabinet Gabriela Ferent Luxembourg"
+276|        }
+277|      },
+278|      "datePublished": "2024-01-01",
+279|      "dateModified": "2024-12-25",
+280|      "publisher": {
+281|        "@type": "Organization",
+282|        "name": "Gabriela Ferent Nutrition Luxembourg"
+283|      },
+284|      "medicalAudience": {
+285|        "@type": "PeopleAudience",
+286|        "suggestedMinAge": 18
+287|      },
+288|      "about": [
+289|        {
+290|          "@type": "MedicalCondition",
+291|          "name": "Obesity"
+292|        },
+293|        {
+294|          "@type": "MedicalCondition", 
+295|          "name": "Diabetes"
+296|        },
+297|        {
+298|          "@type": "MedicalCondition",
+299|          "name": "Hypertension"
+300|        }
+301|      ]
+302|    }
+303|    </script>
+304|
+305|    <!-- Critical CSS for above-the-fold content -->
+306|    <style>
+307|      /* Critical styles for initial render */
+308|      body { 
+309|        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+310|        font-size-adjust: 0.5;
+311|        margin: 0; 
+312|        padding-top: 136px;
+313|        background-color: #ffffff;
+314|        color: #0f172a;
+315|      }
+316|      
+317|      /* Critical navigation styles */
+318|      .trust-bar { 
+319|        position: fixed; 
+320|        top: 0; 
+321|        left: 0; 
+322|        right: 0; 
+323|        z-index: 50;
+324|        background-color: #e6f4eb;
+325|        padding: 8px 0;
+326|        font-size: 14px;
+327|      }
+328|      
+329|      .main-nav {
+330|        position: fixed;
+331|        top: 32px;
+332|        left: 0;
+333|        right: 0;
+334|        z-index: 50;
+335|        background-color: #fffbdd;
+336|        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+337|      }
+338|      
+339|      /* Critical loading state */
+340|      .loading-skeleton {
+341|        background: linear-gradient(90deg, #f3f4f6 25%, #e5e7eb 50%, #f3f4f6 75%);
+342|        background-size: 200% 100%;
+343|        animation: loading 1.5s infinite;
+344|      }
+345|      
+346|      /* Critical hero styles */
+347|      #accueil {
+348|        position: relative;
+349|        min-height: 80vh;
+350|        overflow: hidden;
+351|        display: flex;
+352|        align-items: center;
+353|        margin-top: -8px;
+354|        background-color: #f3f4f6;
+355|        padding: 4rem 1rem;
+356|        contain: layout style paint;
+357|      }
+358|      
+359|      #accueil img {
+360|        position: absolute;
+361|        top: 0;
+362|        left: 0;
+363|        width: 100%;
+364|        height: 100%;
+365|        object-fit: cover;
+366|        will-change: opacity;
+367|        content-visibility: auto;
+368|        aspect-ratio: 1335 / 890;
+369|      }
+370|      
+371|      #accueil img[fetchpriority="high"] {
+372|        content-visibility: visible;
+373|      }
+374|      
+375|      /* Critical text styles for above-the-fold */
+376|      .hero-content {
+377|        position: relative;
+378|        z-index: 10;
+379|        max-width: 64rem;
+380|        margin: 0 auto;
+381|        text-align: center;
+382|      }
+383|      
+384|      .hero-text-overlay {
+385|        background: rgba(0, 0, 0, 0.3);
+386|        backdrop-filter: blur(4px);
+387|        border-radius: 1rem;
+388|        padding: 2rem;
+389|        min-height: 200px;
+390|      }
+391|      
+392|      .hero-title {
+393|        font-size: 2.5rem;
+394|        font-weight: 700;
+395|        color: white;
+396|        margin-bottom: 1rem;
+397|        line-height: 1.1;
+398|      }
+399|      
+400|      .hero-subtitle {
+401|        font-size: 1.375rem;
+402|        font-weight: 500;
+403|        color: white;
+404|        margin-bottom: 0.5rem;
+405|      }
+406|      
+407|      .hero-description {
+408|        font-size: 1rem;
+409|        color: white;
+410|        margin-bottom: 2rem;
+411|      }
+412|      
+413|      .hero-cta {
+414|        display: inline-flex;
+415|        align-items: center;
+416|        padding: 1rem 2rem;
+417|        background-color: #047857;
+418|        color: white;
+419|        font-size: 1rem;
+420|        font-weight: 500;
+421|        border-radius: 0.375rem;
+422|        text-decoration: none;
+423|        border: none;
+424|        cursor: pointer;
+425|      }
+426|      
+427|      @media (min-width: 768px) {
+428|        .hero-title { font-size: 3.5rem; }
+429|        .hero-subtitle { font-size: 1.75rem; }
+430|        .hero-description { font-size: 1.25rem; }
+431|        .hero-cta { font-size: 1.25rem; padding: 1.25rem 2.5rem; }
+432|        .hero-text-overlay { padding: 3rem; }
+433|      }
+434|      
+435|      @keyframes loading {
+436|        0% { background-position: 200% 0; }
+437|        100% { background-position: -200% 0; }
+438|      }
+439|      
+440|      /* Content visible immediately in fallback font, swaps to Inter when loaded */
+441|    </style>
+442|
+443|    <!-- Resource hints optimized for critical request chains -->
+444|    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+445|    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"></noscript>
+446|    
+447|    <!-- Critical image - only preload the first visible hero image -->
+448|    <link rel="preload" href="/lovable-uploads/1f309c72-ddb5-4bae-944e-68046c01bf90.webp" as="image" type="image/webp" fetchpriority="high">
+449|    
+450|    <!-- Prefetch carousel images and other non-critical resources -->
+451|    <link rel="prefetch" href="/lovable-uploads/93b38569-b3fe-4bfa-bc2d-80b6a547847b.webp" as="image">
+452|    <link rel="prefetch" href="/lovable-uploads/6b584fa2-7cae-45b4-8d71-ff67ae89fad3.webp" as="image">
+453|    <link rel="prefetch" href="/src/i18n/locales/fr.json">
+454|    
+455|    <!-- Plausible Analytics - loaded after page interactive to avoid forced reflow -->
+456|    <script>
+457|      window.addEventListener('load', function() {
+458|        setTimeout(function() {
+459|          var s = document.createElement('script');
+460|          s.defer = true;
+461|          s.dataset.domain = 'conseildietetique.lu';
+462|          s.src = 'https://plausible.io/js/script.js';
+463|          document.head.appendChild(s);
+464|        }, 2000);
+465|      }, { once: true });
+466|    </script>
+467|
+468|    <!-- Google tag (gtag.js) -->
+469|    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F2VZD927EE"></script>
+470|    <script>
+471|      window.dataLayer = window.dataLayer || [];
+472|      function gtag(){dataLayer.push(arguments);}
+473|      gtag('js', new Date());
+474|
+475|      gtag('config', 'G-F2VZD927EE');
+476|    </script>
+477|
+478|    <!-- Favicon -->
+479|    <link rel="icon" href="/lovable-uploads/b60696cb-a1d6-4eec-bf95-2c544d726e80.png" type="image/png" />
+480|    <link rel="apple-touch-icon" sizes="180x180" href="/lovable-uploads/b60696cb-a1d6-4eec-bf95-2c544d726e80.png" />
+481|    <link rel="icon" type="image/png" sizes="32x32" href="/lovable-uploads/b60696cb-a1d6-4eec-bf95-2c544d726e80.png" />
+482|    <link rel="icon" type="image/png" sizes="16x16" href="/lovable-uploads/b60696cb-a1d6-4eec-bf95-2c544d726e80.png" />
+483|  </head>
+484|
+485|  <body>
+486|    <!-- Loading placeholder for critical above-the-fold content -->
+487|    <div id="initial-loading" style="position: fixed; top: 0; left: 0; right: 0; z-index: 40; background: #e6f4eb; height: 32px;"></div>
+488|    <div id="nav-loading" style="position: fixed; top: 32px; left: 0; right: 0; z-index: 40; background: #fffbdd; height: 88px; box-shadow: 0 1px 3px rgba(0,0,0,0.1);"></div>
+489|    
+490|    <!-- Static hero content — visible immediately in initial HTML, superseded by React on mount -->
+491|    <div id="hero-shell" style="position:relative;min-height:80vh;display:flex;align-items:center;justify-content:center;margin-top:-8px;background:linear-gradient(to bottom,rgba(0,0,0,0.1),rgba(0,0,0,0.4)),url(/lovable-uploads/1f309c72-ddb5-4bae-944e-68046c01bf90.webp) center/cover no-repeat;">
+492|      <div style="background:rgba(0,0,0,0.3);backdrop-filter:blur(4px);border-radius:1rem;padding:2rem;max-width:64rem;margin:0 auto;text-align:center;">
+493|        <h1 style="font-size:2.5rem;font-weight:700;color:white;margin-bottom:1rem;line-height:1.1;">Diététicienne à Luxembourg Gabriela Ferent</h1>
+494|        <p style="font-size:1.375rem;font-weight:500;color:white;margin-bottom:0.5rem;">3 cabinets au Luxembourg</p>
+495|        <p style="font-size:1rem;color:white;margin-bottom:2rem;">Des consultations adaptées à votre santé, avec ou sans ordonnance</p>
+496|        <div style="display:inline-flex;align-items:center;padding:1rem 2rem;background-color:#047857;color:white;font-size:1rem;font-weight:500;border-radius:0.375rem;border:none;">Je réserve ma consultation</div>
+497|      </div>
+498|    </div>
+499|    
+500|    <div id="root"></div>
+501|    
+502|    <!-- Remove loading placeholders when React takes over -->
+503|    <script>
+504|      window.addEventListener('DOMContentLoaded', function() {
+505|        setTimeout(function() {
+506|          var initialLoading = document.getElementById('initial-loading');
+507|          var navLoading = document.getElementById('nav-loading');
+508|          var heroShell = document.getElementById('hero-shell');
+509|          if (initialLoading) initialLoading.remove();
+510|          if (navLoading) navLoading.remove();
+511|          // Hide hero shell after a short delay (React should have mounted by then)
+512|          if (heroShell) {
+513|            heroShell.style.display = 'none';
+514|          }
+515|        }, 50);
+516|      });
+517|    </script>
+518|    
+519|    <script type="module" src="/src/main.tsx"></script>
+520|  </body>
+521|</html>
+522|
