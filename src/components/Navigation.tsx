@@ -44,7 +44,7 @@ const Navigation = () => {
       <div className="w-full h-10 md:h-12" style={{ backgroundColor: 'hsl(var(--nav-trust-bar))' }}>
         <div className="container mx-auto px-2 md:px-4 h-full flex items-center justify-center">
           <div className="flex items-center justify-center w-full">
-            <div className="flex items-center gap-2 md:gap-4 lg:gap-8 text-xs md:text-sm font-semibold" style={{ color: 'hsl(var(--nav-trust-text))' }}>
+            <div className="flex items-center gap-2 md:gap-4 lg:gap-8 text-xs md:text-sm font-medium tracking-wider" style={{ color: 'hsl(var(--nav-trust-text))' }}>
               <div className="flex items-center gap-1 md:gap-2">
                 <MapPin className="h-3 w-3 md:h-4 md:w-4" />
                 <span className="hidden sm:inline">{t('trustBar.cabinets')}</span>

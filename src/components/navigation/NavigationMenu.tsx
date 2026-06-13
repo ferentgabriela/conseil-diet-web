@@ -33,32 +33,32 @@ const NavigationMenu = ({ scrollToSection }: NavigationMenuProps) => {
     <div className="flex items-center space-x-1 lg:space-x-2">
       <button
         onClick={() => handleMenuClick('apropos')}
-        className="nav-menu-item text-gray-800 hover:text-green-600 font-semibold text-xs lg:text-base px-2 lg:px-4 py-2 rounded-md transition-colors"
+        className="nav-menu-item text-gray-800 hover:text-green-600 font-normal text-xs lg:text-base px-2 lg:px-4 py-2 rounded-md transition-colors"
       >
         {t('navigation.about')}
       </button>
       <button
         onClick={() => handleMenuClick('services')}
-        className="nav-menu-item text-gray-800 hover:text-green-600 font-semibold text-xs lg:text-base px-2 lg:px-4 py-2 rounded-md transition-colors"
+        className="nav-menu-item text-gray-800 hover:text-green-600 font-normal text-xs lg:text-base px-2 lg:px-4 py-2 rounded-md transition-colors"
         title="Découvrir nos prestations diététiques"
       >
         Prestations
       </button>
       <button
         onClick={() => handleMenuClick('processus')}
-        className="nav-menu-item text-gray-800 hover:text-green-600 font-semibold text-xs lg:text-base px-2 lg:px-4 py-2 rounded-md transition-colors"
+        className="nav-menu-item text-gray-800 hover:text-green-600 font-normal text-xs lg:text-base px-2 lg:px-4 py-2 rounded-md transition-colors"
       >
         {t('navigation.process')}
       </button>
       <button
         onClick={() => handleMenuClick('transformations')}
-        className="nav-menu-item text-gray-800 hover:text-green-600 font-semibold text-xs lg:text-base px-2 lg:px-4 py-2 rounded-md transition-colors"
+        className="nav-menu-item text-gray-800 hover:text-green-600 font-normal text-xs lg:text-base px-2 lg:px-4 py-2 rounded-md transition-colors"
       >
         {t('navigation.testimonials')}
       </button>
       <button
         onClick={() => handleMenuClick('cabinets')}
-        className="nav-menu-item text-gray-800 hover:text-green-600 font-semibold text-xs lg:text-base px-2 lg:px-4 py-2 rounded-md transition-colors"
+        className="nav-menu-item text-gray-800 hover:text-green-600 font-normal text-xs lg:text-base px-2 lg:px-4 py-2 rounded-md transition-colors"
         title="Choisissez votre cabinet pour prendre rendez-vous"
       >
         Contact
