@@ -71,7 +71,7 @@ const HeroSection = () => {
           
                     {/* Subtitle — name + title */}
                     <h2 className="hero-subtitle">
-                      Gabriela Ferent — Diététicienne nutritionniste au Luxembourg
+                      Gabriela Ferent — Diététicienne nutritionniste agréée CNS
                     </h2>
           
                     {/* Locations with pin icons */}
