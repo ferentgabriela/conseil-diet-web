@@ -12,11 +12,11 @@ const AboutPracticeSection = () => {
             </h2>
             
             <div className="max-w-4xl mx-auto">
-              <p className="text-xl md:text-2xl text-gray-600 mb-6 leading-relaxed font-semibold">
+              <p className="text-xl md:text-2xl text-gray-800 mb-6 leading-relaxed font-bold">
                 Clarté, bienveillance et expertise certifiée
               </p>
               
-              <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
+              <p className="text-lg md:text-xl text-gray-700 leading-relaxed pt-3">
                 Gabriela Ferent vous accompagne à chaque étape de votre parcours nutritionnel. Avec une approche personnalisée et fondée sur la science, chaque consultation est conçue pour répondre à vos besoins uniques.
               </p>
             </div>
@@ -30,7 +30,7 @@ const AboutPracticeSection = () => {
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">Accompagnement Bienveillant</h3>
-                  <p className="text-gray-600">Approche personnalisée qui respecte votre mode de vie et vos préférences</p>
+                  <p className="text-gray-600">Approche personnalisée qui respecte votre mode de vie et vos préférences.</p>
                 </div>
               </div>
               
@@ -57,13 +57,16 @@ const AboutPracticeSection = () => {
             
             <div className="text-center">
               <div className="rounded-2xl aspect-square overflow-hidden">
-                <img 
-                  src="/lovable-uploads/439c16cb-316f-4141-90f1-f377e383bc31.png"
-                  alt="Photo de Gabriela Ferent, diététicienne nutritionniste professionnelle au Luxembourg"
-                  className="w-full h-full object-cover"
-                  loading="lazy"
-                  decoding="async"
-                />
+                <picture>
+                  <source srcSet="/lovable-uploads/gabriela-portrait-consultation.webp" type="image/webp" />
+                  <img 
+                    src="/lovable-uploads/gabriela-portrait-consultation.jpg"
+                    alt="Photo de Gabriela Ferent, diététicienne nutritionniste professionnelle au Luxembourg"
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </picture>
               </div>
             </div>
           </div>
