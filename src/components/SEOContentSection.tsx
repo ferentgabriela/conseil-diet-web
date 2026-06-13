@@ -68,13 +68,13 @@ const SEOContentSection = () => {
                 <div className="flex items-start gap-3">
                   <ShieldCheck className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
                   <div>
-                    <p className="text-gray-700"><strong>Prises en charge par la CNS</strong> sur prescription médicale pour les pathologies éligibles.</p>
+                    <p className="text-gray-700"><strong>Prises en charge par la CNS</strong> pour toutes les pathologies éligibles (sur ordonnance).</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
                   <MapPin className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
                   <div>
-                    <p className="text-gray-700"><strong>3 cabinets au Luxembourg</strong> : Luxembourg, Ettelbruck et Insenborn — pour faciliter l'accès aux soins.</p>
+                    <p className="text-gray-700"><strong>3 cabinets de proximité</strong> répartis à travers le pays pour faciliter votre accès aux soins.</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
@@ -146,7 +146,7 @@ const SEOContentSection = () => {
               Réservez votre consultation
             </h2>
             <p className="text-lg text-gray-700 mb-6 max-w-2xl mx-auto">
-              Prenez rendez-vous en ligne via Doctena dans l'un des 3 cabinets. Créneaux disponibles rapidement, avec ou sans prescription médicale.
+              Sélectionnez votre cabinet et choisissez le créneau de votre choix directement sur Doctena. Prise en charge rapide, avec ou sans ordonnance initiale.
             </p>
             
             {/* Badge tags */}
