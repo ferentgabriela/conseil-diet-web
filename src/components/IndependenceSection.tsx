@@ -11,9 +11,9 @@ const IndependenceSection = () => {
             Contrairement aux approches commerciales, mes recommandations sont basées uniquement sur la science et vos besoins médicaux.
           </p>
           
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-8" style={{ alignItems: 'stretch' }}>
             {/* Independence Card */}
-            <div className="bg-white rounded-2xl shadow-lg p-8 border-2 border-green-200 hover:shadow-xl transition-shadow duration-300">
+            <div className="bg-white rounded-2xl shadow-lg p-8 border-2 border-green-200 hover:shadow-xl transition-shadow duration-300 flex flex-col">
               <div className="flex items-center gap-3 mb-4">
                 <div className="bg-green-100 p-3 rounded-full">
                   <ShieldCheck className="h-8 w-8 text-green-600" />
@@ -22,23 +22,23 @@ const IndependenceSection = () => {
                   Indépendance Totale
                 </h3>
               </div>
-              <p className="text-gray-700 leading-relaxed">
+              <p className="text-gray-700 leading-relaxed flex-1 text-[15px]">
                 Je ne vends <strong>aucun complément alimentaire</strong> ni produit commercial. 
                 Mes conseils sont libres de tout conflit d'intérêts financiers avec l'industrie agro-alimentaire.
               </p>
             </div>
 
             {/* Science-Based Card */}
-            <div className="bg-white rounded-2xl shadow-lg p-8 border-2 border-blue-200 hover:shadow-xl transition-shadow duration-300">
+            <div className="bg-white rounded-2xl shadow-lg p-8 border-2 border-blue-200 hover:shadow-xl transition-shadow duration-300 flex flex-col">
               <div className="flex items-center gap-3 mb-4">
                 <div className="bg-blue-100 p-3 rounded-full">
                   <Microscope className="h-8 w-8 text-blue-600" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900">
-                  100% Basé sur la Science
+                  100% basé sur la science
                 </h3>
               </div>
-              <p className="text-gray-700 leading-relaxed">
+              <p className="text-gray-700 leading-relaxed flex-1 text-[15px]">
                 Toutes mes recommandations nutritionnelles s'appuient sur les <strong>données scientifiques actuelles</strong> et votre évaluation médicale personnalisée.
               </p>
             </div>
