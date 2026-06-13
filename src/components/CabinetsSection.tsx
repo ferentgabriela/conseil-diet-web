@@ -19,8 +19,8 @@ const CabinetsSection = () => {
             Choisissez Votre Cabinet
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            3 locations au Luxembourg pour votre convenance. Sélectionnez le cabinet le plus proche de chez vous pour prendre rendez-vous.
-          </p>
+                      3 cabinets au Luxembourg pour votre convenance. Sélectionnez le cabinet le plus proche de chez vous pour prendre rendez-vous.
+                    </p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto items-stretch">
@@ -35,10 +35,10 @@ const CabinetsSection = () => {
               
             </div>
 
-            <div className="space-y-3 mb-6 flex-grow">
-              <div className="flex items-center gap-3 text-sm text-gray-600">
-                <Clock className="h-4 w-4 text-green-600" />
-                <span>Lun, Mer, Ven: 13h00-18h00</span>
+            <div className="space-y-3 mb-6 flex-grow min-h-[8rem]">
+                          <div className="flex items-center gap-3 text-sm text-gray-600">
+                            <Clock className="h-4 w-4 text-green-600" />
+                            <span>Lundi, Mercredi, Vendredi: 13h00-18h00</span>
               </div>
               <div className="flex items-center gap-3 text-sm text-gray-600">
                 <Car className="h-4 w-4 text-green-600 flex-shrink-0" />
@@ -64,10 +64,10 @@ const CabinetsSection = () => {
               
             </div>
 
-            <div className="space-y-3 mb-6 flex-grow">
-              <div className="flex items-center gap-3 text-sm text-gray-600">
-                <Clock className="h-4 w-4 text-blue-600" />
-                <span>Mardi: 8h00-20h00</span>
+            <div className="space-y-3 mb-6 flex-grow min-h-[8rem]">
+                          <div className="flex items-center gap-3 text-sm text-gray-600">
+                            <Clock className="h-4 w-4 text-blue-600" />
+                            <span>Mardi: 8h00-20h00</span>
               </div>
               <div className="flex items-center gap-3 text-sm text-gray-600">
                 <Car className="h-4 w-4 text-blue-600 flex-shrink-0" />
@@ -93,10 +93,10 @@ const CabinetsSection = () => {
               
             </div>
 
-            <div className="space-y-3 mb-6 flex-grow">
-              <div className="flex items-center gap-3 text-sm text-gray-600">
-                <Clock className="h-4 w-4 text-purple-600" />
-                <span>Jeudi: 9h00-19h00<br />Samedi: 9h00-14h00</span>
+            <div className="space-y-3 mb-6 flex-grow min-h-[8rem]">
+                          <div className="flex items-center gap-3 text-sm text-gray-600">
+                            <Clock className="h-4 w-4 text-purple-600" />
+                            <span>Jeudi: 9h00-19h00<br />Samedi: 9h00-14h00</span>
               </div>
               <div className="flex items-center gap-3 text-sm text-gray-600">
                 <Car className="h-4 w-4 text-purple-600 flex-shrink-0" />
