@@ -90,7 +90,7 @@ const SEOContentSection = () => {
               <img 
                 src={gabrielaPortrait} 
                 alt="Gabriela Ferent, diététicienne nutritionniste au Luxembourg" 
-                className="w-32 h-32 rounded-full object-cover mb-4 border-4 border-green-200 shadow-md"
+                className="w-32 h-32 rounded-full object-cover object-top mb-4 border-4 border-green-200 shadow-md"
                 loading="lazy"
                 width="128"
                 height="128"
