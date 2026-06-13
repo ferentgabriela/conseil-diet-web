@@ -4,22 +4,17 @@ const Footer = () => {
   return <footer className="bg-gray-50 border-t border-gray-200">
       <div className="container mx-auto px-4 py-6">
         <div className="flex flex-col sm:flex-row justify-center items-center space-y-0 sm:space-y-0 sm:space-x-8 text-sm text-gray-600">
-          <div className="flex items-center hover:text-green-600 transition-colors cursor-pointer py-3 sm:py-0">
-            <Phone className="h-4 w-4 mr-2" />
-            <a href="tel:+352691379172" itemProp="telephone" title="Appeler Gabriela Ferent diététicienne">+352 691 379 172</a>
+          <div className="flex items-center hover:text-green-600 transition-colors py-3 sm:py-0">
+            <a href="https://wa.me/352691379172" target="_blank" rel="noopener noreferrer" itemProp="telephone" title="Contacter Gabriela Ferent sur WhatsApp" className="flex items-center">
+              <Phone className="h-4 w-4 mr-2" />
+              <span>+352 691 379 172</span>
+            </a>
           </div>
           <div className="flex items-center hover:text-green-600 transition-colors py-3 sm:py-0">
-            <Mail className="h-4 w-4 mr-2" />
-            <span 
-              itemProp="email"
-              className="cursor-pointer" 
-              onClick={() => {
-                const email = 'dieteticienne' + '@' + 'conseildietetique.lu';
-                window.location.href = 'mailto:' + email;
-              }}
-            >
-              dieteticienne@conseildietetique.lu
-            </span>
+            <a href="mailto:dieteticienne@conseildietetique.lu" itemProp="email" title="Envoyer un email à Gabriela Ferent" className="flex items-center">
+              <Mail className="h-4 w-4 mr-2" />
+              <span>dieteticienne@conseildietetique.lu</span>
+            </a>
           </div>
         </div>
         
