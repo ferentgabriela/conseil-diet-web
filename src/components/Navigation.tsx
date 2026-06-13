@@ -71,28 +71,30 @@ const Navigation = () => {
       }`} style={{ backgroundColor: 'hsl(var(--nav-background))' }}>
         <div className="container mx-auto px-2 md:px-4">
           <div className="flex justify-between items-center py-2 md:py-4">
-            <NavigationLogo />
-            <div className="hidden lg:flex absolute left-1/2 transform -translate-x-1/2">
-              <NavigationMenu scrollToSection={scrollToSection} />
-            </div>
+                      <div className="flex items-center gap-4 lg:gap-8">
+                        <NavigationLogo />
+                        <div className="flex">
+                          <NavigationMenu scrollToSection={scrollToSection} />
+                        </div>
+                      </div>
             
-            {/* Desktop CTA Button */}
-            <div className="hidden lg:block">
-              <NavigationCTA scrollToCabinets={scrollToCabinets} />
-            </div>
+                      {/* Desktop CTA Button */}
+                      <div className="hidden lg:block">
+                        <NavigationCTA scrollToCabinets={scrollToCabinets} />
+                      </div>
 
 
-            {/* Mobile Section - Menu Button */}
-            <div className="lg:hidden flex items-center">
-              <button
-                className="p-2 rounded-md hover:bg-gray-100 transition-colors"
-                onClick={() => setIsMenuOpen(!isMenuOpen)}
-                aria-label={isMenuOpen ? 'Fermer le menu' : 'Ouvrir le menu'}
-              >
-                {isMenuOpen ? <X className="h-5 w-5 md:h-6 md:w-6" /> : <Menu className="h-5 w-5 md:h-6 md:w-6" />}
-              </button>
-            </div>
-          </div>
+                      {/* Mobile Section - Menu Button */}
+                      <div className="lg:hidden flex items-center">
+                        <button
+                          className="p-2 rounded-md hover:bg-gray-100 transition-colors"
+                          onClick={() => setIsMenuOpen(!isMenuOpen)}
+                          aria-label={isMenuOpen ? 'Fermer le menu' : 'Ouvrir le menu'}
+                        >
+                          {isMenuOpen ? <X className="h-5 w-5 md:h-6 md:w-6" /> : <Menu className="h-5 w-5 md:h-6 md:w-6" />}
+                        </button>
+                      </div>
+                    </div>
 
           <MobileMenu 
             isMenuOpen={isMenuOpen}
