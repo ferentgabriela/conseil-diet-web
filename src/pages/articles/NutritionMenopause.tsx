@@ -127,7 +127,7 @@ const NutritionMenopause = () => {
                 <div className="space-y-6 mb-8">
                   <div className="bg-gradient-to-r from-hsl(var(--category-feminine)) to-hsl(var(--accent)) p-6 rounded-2xl">
                     <h3 className="text-xl font-bold mb-3 text-hsl(var(--blog-text-primary))">🥩 1. Privilégier les protéines</h3>
-                    <p>Les protéines sont essentielles pour maintenir la masse musculaire. Visez <strong>1,2 à 1,6g par kg</strong> de poids corporel par jour.</p>
+                    <p>Les protéines sont essentielles pour maintenir la masse musculaire. Visez <strong>1,2 à 1,6g par kg</strong> de poids corporel par jour (soit environ 30g de protéines par repas principal pour une personne de 70kg).</p>
                   </div>
                   
                   <div className="bg-gradient-to-r from-hsl(var(--accent)) to-hsl(var(--category-feminine)) p-6 rounded-2xl">
@@ -148,7 +148,7 @@ const NutritionMenopause = () => {
                   <div className="space-y-4">
                     <div className="flex items-start gap-4">
                       <span className="bg-hsl(var(--primary)) text-hsl(var(--primary-foreground)) px-3 py-1 rounded-full text-sm font-semibold">Matin</span>
-                      <p>Flocons d'avoine avec fruits rouges et graines de lin</p>
+                      <p>Flocons d'avoine avec fruits rouges et graines de lin moulues ou concassées (les graines entières ne sont pas digérées et traversent le transit sans libérer leurs nutriments)</p>
                     </div>
                     <div className="flex items-start gap-4">
                       <span className="bg-hsl(var(--primary)) text-hsl(var(--primary-foreground)) px-3 py-1 rounded-full text-sm font-semibold">Midi</span>

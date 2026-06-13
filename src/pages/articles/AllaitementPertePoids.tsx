@@ -107,7 +107,7 @@ const AllaitementPertePoids = () => {
                 <div className="grid md:grid-cols-2 gap-4 mb-8">
                   <div className="bg-hsl(var(--accent)) p-6 rounded-2xl">
                     <h3 className="font-semibold text-hsl(var(--blog-text-primary)) mb-2">🍽️ Calories minimales</h3>
-                    <p>Ne pas descendre sous 1800 calories par jour</p>
+                    <p>Ne pas descendre sous 1800 calories par jour pour préserver la production de lait et éviter la fatigue maternelle intense.</p>
                   </div>
                   <div className="bg-hsl(var(--accent)) p-6 rounded-2xl">
                     <h3 className="font-semibold text-hsl(var(--blog-text-primary)) mb-2">⚖️ Perte progressive</h3>
@@ -133,28 +133,28 @@ const AllaitementPertePoids = () => {
                     <div className="text-2xl">🌾</div>
                     <div>
                       <h3 className="font-semibold text-hsl(var(--blog-text-primary))">Avoine</h3>
-                      <p>Riche en fibres et peut stimuler la production de lait</p>
+                      <p><strong>Riche en fibres</strong> et peut stimuler la production de lait</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4 p-4 bg-hsl(var(--accent)) rounded-xl">
                     <div className="text-2xl">🐟</div>
                     <div>
                       <h3 className="font-semibold text-hsl(var(--blog-text-primary))">Saumon</h3>
-                      <p>Excellente source d'oméga-3 et de protéines de qualité</p>
+                      <p><strong>Excellente source d'oméga-3</strong> et de protéines de qualité</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4 p-4 bg-hsl(var(--accent)) rounded-xl">
                     <div className="text-2xl">🥬</div>
                     <div>
                       <h3 className="font-semibold text-hsl(var(--blog-text-primary))">Épinards</h3>
-                      <p>Riches en fer et folates essentiels</p>
+                      <p><strong>Riches en fer</strong> et folates essentiels</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4 p-4 bg-hsl(var(--accent)) rounded-xl">
                     <div className="text-2xl">🌰</div>
                     <div>
                       <h3 className="font-semibold text-hsl(var(--blog-text-primary))">Graines de lin</h3>
-                      <p>Source d'oméga-3 végétaux et de fibres</p>
+                      <p><strong>Source d'oméga-3 végétaux</strong> et de fibres</p>
                     </div>
                   </div>
                 </div>

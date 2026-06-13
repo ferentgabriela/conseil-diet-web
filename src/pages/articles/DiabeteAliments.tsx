@@ -116,16 +116,16 @@ const DiabeteAliments = () => {
                   <div className="flex items-start gap-4 p-6 bg-hsl(var(--category-diabetes)) rounded-2xl border-l-4 border-hsl(var(--category-diabetes-text))">
                     <div className="text-3xl">🫘</div>
                     <div>
-                      <h3 className="text-xl font-bold mb-2 text-hsl(var(--blog-text-primary))">3. Légumineuses</h3>
-                      <p>Haricots, lentilles, pois chiches - riches en protéines et fibres, ils aident à stabiliser la glycémie.</p>
+                      <h3 className="text-xl font-bold mb-2 text-hsl(var(--blog-text-primary))">3. Légumineuses <strong>à index glycémique bas</strong></h3>
+                      <p>Haricots, lentilles, pois chiches - riches en fibres solubles qui freinent l'absorption du glucose et aident à stabiliser la glycémie.</p>
                     </div>
                   </div>
                   
                   <div className="flex items-start gap-4 p-6 bg-hsl(var(--accent)) rounded-2xl border-l-4 border-hsl(var(--primary))">
                     <div className="text-3xl">🌾</div>
                     <div>
-                      <h3 className="text-xl font-bold mb-2 text-hsl(var(--blog-text-primary))">4. Avoine</h3>
-                      <p>Riche en bêta-glucanes, l'avoine aide à ralentir l'absorption des glucides.</p>
+                      <h3 className="text-xl font-bold mb-2 text-hsl(var(--blog-text-primary))">4. Avoine <strong>à index glycémique bas</strong></h3>
+                      <p>Riche en bêta-glucanes (fibres solubles), l'avoine aide à ralentir l'absorption des glucides et à stabiliser la glycémie.</p>
                     </div>
                   </div>
                   

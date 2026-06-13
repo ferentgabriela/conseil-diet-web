@@ -100,13 +100,13 @@ const CholesterolAlimentation = () => {
 
                 {/* Aliments à limiter */}
                 <div className="bg-gradient-to-r from-red-50 to-orange-50 border border-red-200 p-8 rounded-2xl mb-10">
-                  <h2 className="text-3xl font-bold mb-6 text-red-800">🚫 Aliments à limiter</h2>
-                  <p className="text-lg mb-6 text-red-700">Ces aliments peuvent augmenter votre taux de cholestérol LDL :</p>
+                  <h2 className="text-3xl font-bold mb-6 text-red-800">🚫 Graisses saturées et trans à limiter</h2>
+                  <p className="text-lg mb-6 text-red-700">Ces aliments riches en graisses saturées et trans augmentent votre taux de cholestérol LDL. Privilégiez les coupes maigres et les modes de cuisson sains :</p>
                   
                   <div className="grid md:grid-cols-2 gap-4">
                     <div className="bg-white/70 p-4 rounded-xl border-l-4 border-red-400">
                       <h3 className="font-semibold text-red-800 mb-2">🥓 Viandes grasses</h3>
-                      <p className="text-red-700">Charcuteries, viandes rouges grasses</p>
+                      <p className="text-red-700">Charcuteries, viandes rouges grasses — choisissez des coupes maigres</p>
                     </div>
                     <div className="bg-white/70 p-4 rounded-xl border-l-4 border-red-400">
                       <h3 className="font-semibold text-red-800 mb-2">🧀 Produits laitiers entiers</h3>

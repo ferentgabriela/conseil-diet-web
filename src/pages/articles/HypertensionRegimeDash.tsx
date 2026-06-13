@@ -106,7 +106,7 @@ const HypertensionRegimeDash = () => {
                     <div className="bg-white/70 p-4 rounded-xl text-center">
                       <div className="text-2xl mb-2">🧂</div>
                       <p className="font-semibold">Réduction du sodium</p>
-                      <p className="text-sm">Moins de 2300mg/jour</p>
+                      <p className="text-sm">Moins de 2300mg/jour (soit environ 1 cuillère à café de sel au total sur la journée)</p>
                     </div>
                     <div className="bg-white/70 p-4 rounded-xl text-center">
                       <div className="text-2xl mb-2">⚡</div>

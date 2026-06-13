@@ -181,7 +181,7 @@ const PertePoidsApres40 = () => {
                         </div>
                         <div className="flex items-center gap-3">
                           <span className="text-lg">⏳</span>
-                          <span>Méthode 16:8 ou 14:10</span>
+                          <span>Méthode 16:8 ou 14:10 — À adapter selon votre profil hormonal et toujours sous supervision.</span>
                         </div>
                         <div className="flex items-center gap-3">
                           <span className="text-lg">💧</span>

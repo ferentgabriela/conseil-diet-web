@@ -120,8 +120,8 @@ const ThyroideAlimentation = () => {
                   <h3 className="text-xl font-bold mb-4 text-hsl(var(--blog-text-primary))">🍽️ Nutrition pour l'hypothyroïdie</h3>
                   <div className="space-y-4">
                     <div className="bg-white/50 p-4 rounded-xl">
-                      <h3 className="font-semibold mb-2">⚡ Iode (avec précaution)</h3>
-                      <p>Algues marines, poissons, fruits de mer, sel iodé en quantité raisonnable</p>
+                      <h3 className="font-semibold mb-2">⚡ Iode (<strong>avec précaution</strong>)</h3>
+                      <p>Algues marines, poissons, fruits de mer, sel iodé en quantité raisonnable — <strong>uniquement sous contrôle médical</strong></p>
                     </div>
                     <div className="bg-white/50 p-4 rounded-xl">
                       <h3 className="font-semibold mb-2">🛡️ Sélénium</h3>

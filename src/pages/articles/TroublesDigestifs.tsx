@@ -128,7 +128,7 @@ const TroublesDigestifs = () => {
                         </div>
                         <div className="flex items-center gap-3">
                           <span className="text-lg">🥦</span>
-                          <span>Crucifères si sensibilité</span>
+                          <span>Crucifères si sensibilité (la cuisson ou la fermentation réduit considérablement les composés responsables des gaz)</span>
                         </div>
                         <div className="flex items-center gap-3">
                           <span className="text-lg">🧪</span>
@@ -278,7 +278,7 @@ const TroublesDigestifs = () => {
                       </div>
                       <div className="flex items-start gap-3">
                         <span className="text-lg">🫘</span>
-                        <span>Tester les légumineuses</span>
+                        <span>Tester les légumineuses, en commençant par de très petites portions (2-3 cuillères à soupe)</span>
                       </div>
                       <div className="flex items-start gap-3">
                         <span className="text-lg">👀</span>
