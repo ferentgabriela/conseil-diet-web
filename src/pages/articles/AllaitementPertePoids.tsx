@@ -1,7 +1,6 @@
-
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { ArrowLeft, Clock, User, Calendar } from 'lucide-react';
+import { ArrowLeft, ArrowRight, Clock, User, Calendar } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Navigation from '@/components/Navigation';
 import allaitementImage from '@/assets/allaitement-optimized.webp';
@@ -35,7 +34,7 @@ const AllaitementPertePoids = () => {
           {/* Back Navigation */}
           <Link 
             to="/" 
-            className="inline-flex items-center gap-2 text-hsl(var(--blog-text-secondary)) hover:text-hsl(var(--primary)) mb-8 transition-colors group"
+            className="inline-flex items-center gap-2 text-hsl(var(--blog-text-secondary)) hover:text-hsl(var(--primary)) mb-8 sticky top-4 z-10 bg-background/90 backdrop-blur-sm rounded-lg px-3 py-2 -mx-3 transition-colors group"
           >
             <ArrowLeft className="h-4 w-4 transition-transform group-hover:-translate-x-1" />
             Retour au blog
@@ -189,12 +188,10 @@ const AllaitementPertePoids = () => {
                   <p className="text-lg mb-6">
                     La période d'allaitement n'est pas le moment idéal pour des régimes restrictifs. Privilégiez une approche douce et bienveillante qui respecte vos besoins nutritionnels et ceux de votre bébé.
                   </p>
-                  <a 
-                    href="/#services" 
-                    className="inline-flex items-center gap-2 bg-hsl(var(--primary-foreground)) text-hsl(var(--primary)) px-6 py-3 rounded-full font-semibold hover:opacity-90 transition-opacity"
-                    title="Découvrir nos prestations nutrition pour l'allaitement"
-                  >
-                    ✨ Un accompagnement personnalisé vous intéresse ?
+                  <a href="https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-white text-green-700 px-6 py-3 rounded-xl font-bold hover:bg-gray-100 transition-all shadow-md" title="Prendre rendez-vous pour un accompagnement personnalisé">
+                    <Calendar className="h-5 w-5" />
+                    Prendre rendez-vous sur Doctena
+                    <ArrowRight className="h-4 w-4" />
                   </a>
                 </div>
               </div>

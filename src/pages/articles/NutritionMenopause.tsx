@@ -1,11 +1,11 @@
 
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { ArrowLeft, Clock, User, Calendar } from 'lucide-react';
+import { ArrowLeft, ArrowRight, Clock, User, Calendar } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Navigation from '@/components/Navigation';
 import StickyBookingBar from '@/components/StickyBookingBar';
-import nutritionMenopause from '@/assets/nutrition-menopause-optimized.webp';
+import nutritionMenopause from '@/assets/dash-diet-foods-optimized.webp';
 
 const NutritionMenopause = () => {
   return (
@@ -37,7 +37,7 @@ const NutritionMenopause = () => {
           {/* Back Navigation */}
           <Link 
             to="/" 
-            className="inline-flex items-center gap-2 text-hsl(var(--blog-text-secondary)) hover:text-hsl(var(--primary)) mb-8 transition-colors group"
+            className="inline-flex items-center gap-2 text-hsl(var(--blog-text-secondary)) hover:text-hsl(var(--primary)) mb-8 sticky top-4 z-10 bg-background/90 backdrop-blur-sm rounded-lg px-3 py-2 -mx-3 transition-colors group"
           >
             <ArrowLeft className="h-4 w-4 transition-transform group-hover:-translate-x-1" />
             Retour au blog
@@ -48,7 +48,7 @@ const NutritionMenopause = () => {
             <div className="relative h-80 md:h-96">
               <img 
                 src={nutritionMenopause}
-                alt="Nutrition et Ménopause - Guide complet pour maintenir son poids naturellement"
+                alt="Alimentation équilibrée pour la ménopause - Guide nutritionnel complet"
                 className="w-full h-full object-cover"
                 loading="eager"
                 decoding="sync"
@@ -171,12 +171,10 @@ const NutritionMenopause = () => {
                   <p className="text-lg mb-6">
                     Adapter son alimentation pendant la ménopause demande patience et bienveillance envers soi-même. N'hésitez pas à consulter un professionnel pour un accompagnement personnalisé.
                   </p>
-                  <a 
-                    href="/#services" 
-                    className="inline-flex items-center gap-2 bg-hsl(var(--primary-foreground)) text-hsl(var(--primary)) px-6 py-3 rounded-full font-semibold hover:opacity-90 transition-opacity"
-                    title="Découvrir nos prestations diététiques pour la ménopause"
-                  >
-                    💫 Besoin d'un accompagnement personnalisé ?
+                  <a href="https://www.doctena.lu/en/specialty/dietitian/gabriela-ferent-1748874" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-white text-green-700 px-6 py-3 rounded-xl font-bold hover:bg-gray-100 transition-all shadow-md" title="Prendre rendez-vous pour un accompagnement personnalisé">
+                    <Calendar className="h-5 w-5" />
+                    Prendre rendez-vous sur Doctena
+                    <ArrowRight className="h-4 w-4" />
                   </a>
                 </div>
               </div>
