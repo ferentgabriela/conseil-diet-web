@@ -177,106 +177,213 @@ const FAQSection = () => {
               Vos Questions, Mes Réponses d'Experte
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Avec plus de 15 ans d'expérience, je réponds aux débats sur questions les plus fréquentes de mes patients au Luxembourg
-            </p>
+                          Avec plus de 15 ans d'expérience, je réponds aux questions les plus fréquentes de mes patients au Luxembourg
+                        </p>
           </div>
           
           <Accordion type="single" collapsible className="w-full space-y-4">
-            {faqs.map((faq, index) => {
-              const IconComponent = faq.icon;
-              return (
-                <AccordionItem 
-                  key={index} 
-                  value={`faq-${index}`}
-                  className="bg-white rounded-2xl shadow-lg border-0 overflow-hidden"
-                >
-                  <AccordionTrigger className="hover:no-underline p-0 [&[data-state=open]>div]:rounded-b-none [&>svg]:hidden group">
-                    <div className="bg-gradient-to-r from-green-600 to-teal-600 p-4 w-full rounded-2xl relative">
-                      <div className="flex items-center gap-4 justify-between">
-                        <div className="flex items-center gap-4 flex-1">
-                          <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0">
-                            <IconComponent className="h-5 w-5 text-white" />
-                          </div>
-                          <h3 className="text-lg font-bold text-white text-left">
-                            {faq.question}
-                          </h3>
-                        </div>
-                        <div className="flex-shrink-0 ml-4">
-                          <div className="w-8 h-8 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/20 group-hover:bg-white/20 group-hover:border-white/40 transition-all duration-300 group-hover:scale-110">
-                            <svg 
-                              className="w-4 h-4 text-white transform transition-transform duration-300 group-data-[state=open]:rotate-180" 
-                              fill="none" 
-                              stroke="currentColor" 
-                              viewBox="0 0 24 24"
-                            >
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                            </svg>
-                          </div>
+                      {/* Groupe 1 : Administratif & Remboursements */}
+                      <div>
+                        <h3 className="text-lg font-semibold text-gray-500 uppercase tracking-wider mb-4 flex items-center gap-2">
+                          <span className="w-8 h-0.5 bg-gray-300"></span>
+                          Administratif &amp; Remboursements
+                          <span className="flex-1 h-0.5 bg-gray-300"></span>
+                        </h3>
+                        <div className="space-y-4">
+                          {faqs.slice(0, 4).map((faq, index) => {
+                            const IconComponent = faq.icon;
+                            return (
+                              <AccordionItem 
+                                key={index} 
+                                value={`faq-${index}`}
+                                className="bg-white rounded-2xl shadow-lg border-0 overflow-hidden"
+                              >
+                                <AccordionTrigger className="hover:no-underline p-0 [&[data-state=open]>div]:rounded-b-none [&>svg]:hidden group">
+                                  <div className="bg-gradient-to-r from-green-600 to-teal-600 p-4 w-full rounded-2xl relative">
+                                    <div className="flex items-center gap-4 justify-between">
+                                      <div className="flex items-center gap-4 flex-1">
+                                        <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0">
+                                          <IconComponent className="h-5 w-5 text-white" />
+                                        </div>
+                                        <h3 className="text-lg font-bold text-white text-left">
+                                          {faq.question}
+                                        </h3>
+                                      </div>
+                                      <div className="flex-shrink-0 ml-4">
+                                        <div className="w-8 h-8 bg-white/25 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/40 group-hover:bg-white/40 group-hover:border-white/60 transition-all duration-300 group-hover:scale-110">
+                                          <svg 
+                                            className="w-4 h-4 text-white transform transition-transform duration-300 group-data-[state=open]:rotate-180" 
+                                            fill="none" 
+                                            stroke="currentColor" 
+                                            viewBox="0 0 24 24"
+                                          >
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                                          </svg>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </AccordionTrigger>
+                      
+                                <AccordionContent className="p-8 pb-8">
+                                  <div className="text-gray-700 text-lg leading-relaxed mb-6">
+                                    {faq.answer.split(/(\*\*.*?\*\*|\*.*?\*)/).map((part, index) => {
+                                      if (part.startsWith('**') && part.endsWith('**')) {
+                                        return <strong key={index}>{part.slice(2, -2)}</strong>;
+                                      } else if (part.startsWith('*') && part.endsWith('*')) {
+                                        return <strong key={index}>{part.slice(1, -1)}</strong>;
+                                      }
+                                      return part;
+                                    })}
+                                  </div>
+                      
+                                  <div className="mb-6">
+                                    <h4 className="font-semibold text-gray-900 mb-4">Dans le détail :</h4>
+                                    <ul className="space-y-3">
+                                      {faq.details.map((detail, detailIndex) => (
+                                        <li key={detailIndex} className="flex items-start gap-3">
+                                          <div className="w-2 h-2 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
+                                          <span className="text-gray-700">{detail}</span>
+                                        </li>
+                                      ))}
+                                    </ul>
+                                  </div>
+                        
+                                  <div className="bg-blue-50 rounded-lg p-4 mb-6">
+                                    <div className="flex items-start gap-3">
+                                      <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                        <span className="text-blue-600 font-bold text-sm">💡</span>
+                                      </div>
+                                      <p className="text-blue-800 font-medium">
+                                        {faq.expert}
+                                      </p>
+                                    </div>
+                                  </div>
+                        
+                                  <div className="text-center">
+                                    <button 
+                                      onClick={scrollToCabinets}
+                                      className="inline-flex items-center gap-2 px-8 py-4 bg-green-600 text-white font-bold rounded-xl hover:bg-green-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
+                                    >
+                                      <Calendar className="h-5 w-5" />
+                                      Consultation personnalisée
+                                      <ArrowRight className="h-4 w-4" />
+                                    </button>
+                                  </div>
+                        
+                                  <div className="mt-4 text-center">
+                                    <p className="text-sm text-gray-500">
+                                      Gabriela Ferent • Diététicienne autorisée au Luxembourg
+                                    </p>
+                                  </div>
+                                </AccordionContent>
+                              </AccordionItem>
+                            );
+                          })}
                         </div>
                       </div>
-                    </div>
-                  </AccordionTrigger>
-                  
-                   <AccordionContent className="p-8 pb-8">
-                     <div className="text-gray-700 text-lg leading-relaxed mb-6">
-                       {faq.answer.split(/(\*\*.*?\*\*|\*.*?\*)/).map((part, index) => {
-                         if (part.startsWith('**') && part.endsWith('**')) {
-                           return <strong key={index}>{part.slice(2, -2)}</strong>;
-                         } else if (part.startsWith('*') && part.endsWith('*')) {
-                           return <strong key={index}>{part.slice(1, -1)}</strong>;
-                         }
-                         return part;
-                       })}
-                     </div>
-                    
-                    {/* Details list */}
-                    <div className="mb-6">
-                      <h4 className="font-semibold text-gray-900 mb-4">Dans le détail :</h4>
-                      <ul className="space-y-3">
-                        {faq.details.map((detail, detailIndex) => (
-                          <li key={detailIndex} className="flex items-start gap-3">
-                            <div className="w-2 h-2 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
-                            <span className="text-gray-700">{detail}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                    
-                    {/* Expert advice */}
-                    <div className="bg-blue-50 rounded-lg p-4 mb-6">
-                      <div className="flex items-start gap-3">
-                        <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
-                          <span className="text-blue-600 font-bold text-sm">💡</span>
+
+                      {/* Groupe 2 : Ma Philosophie & Accompagnement */}
+                      <div className="mt-10">
+                        <h3 className="text-lg font-semibold text-gray-500 uppercase tracking-wider mb-4 flex items-center gap-2">
+                          <span className="w-8 h-0.5 bg-gray-300"></span>
+                          Ma Philosophie &amp; Accompagnement
+                          <span className="flex-1 h-0.5 bg-gray-300"></span>
+                        </h3>
+                        <div className="space-y-4">
+                          {faqs.slice(4).map((faq, index) => {
+                            const IconComponent = faq.icon;
+                            return (
+                              <AccordionItem 
+                                key={index} 
+                                value={`faq-${index + 4}`}
+                                className="bg-white rounded-2xl shadow-lg border-0 overflow-hidden"
+                              >
+                                <AccordionTrigger className="hover:no-underline p-0 [&[data-state=open]>div]:rounded-b-none [&>svg]:hidden group">
+                                  <div className="bg-gradient-to-r from-green-600 to-teal-600 p-4 w-full rounded-2xl relative">
+                                    <div className="flex items-center gap-4 justify-between">
+                                      <div className="flex items-center gap-4 flex-1">
+                                        <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0">
+                                          <IconComponent className="h-5 w-5 text-white" />
+                                        </div>
+                                        <h3 className="text-lg font-bold text-white text-left">
+                                          {faq.question}
+                                        </h3>
+                                      </div>
+                                      <div className="flex-shrink-0 ml-4">
+                                        <div className="w-8 h-8 bg-white/25 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/40 group-hover:bg-white/40 group-hover:border-white/60 transition-all duration-300 group-hover:scale-110">
+                                          <svg 
+                                            className="w-4 h-4 text-white transform transition-transform duration-300 group-data-[state=open]:rotate-180" 
+                                            fill="none" 
+                                            stroke="currentColor" 
+                                            viewBox="0 0 24 24"
+                                          >
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                                          </svg>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </AccordionTrigger>
+                      
+                                <AccordionContent className="p-8 pb-8">
+                                  <div className="text-gray-700 text-lg leading-relaxed mb-6">
+                                    {faq.answer.split(/(\*\*.*?\*\*|\*.*?\*)/).map((part, index) => {
+                                      if (part.startsWith('**') && part.endsWith('**')) {
+                                        return <strong key={index}>{part.slice(2, -2)}</strong>;
+                                      } else if (part.startsWith('*') && part.endsWith('*')) {
+                                        return <strong key={index}>{part.slice(1, -1)}</strong>;
+                                      }
+                                      return part;
+                                    })}
+                                  </div>
+                      
+                                  <div className="mb-6">
+                                    <h4 className="font-semibold text-gray-900 mb-4">Dans le détail :</h4>
+                                    <ul className="space-y-3">
+                                      {faq.details.map((detail, detailIndex) => (
+                                        <li key={detailIndex} className="flex items-start gap-3">
+                                          <div className="w-2 h-2 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
+                                          <span className="text-gray-700">{detail}</span>
+                                        </li>
+                                      ))}
+                                    </ul>
+                                  </div>
+                        
+                                  <div className="bg-blue-50 rounded-lg p-4 mb-6">
+                                    <div className="flex items-start gap-3">
+                                      <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                        <span className="text-blue-600 font-bold text-sm">💡</span>
+                                      </div>
+                                      <p className="text-blue-800 font-medium">
+                                        {faq.expert}
+                                      </p>
+                                    </div>
+                                  </div>
+                        
+                                  <div className="text-center">
+                                    <button 
+                                      onClick={scrollToCabinets}
+                                      className="inline-flex items-center gap-2 px-8 py-4 bg-green-600 text-white font-bold rounded-xl hover:bg-green-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
+                                    >
+                                      <Calendar className="h-5 w-5" />
+                                      Consultation personnalisée
+                                      <ArrowRight className="h-4 w-4" />
+                                    </button>
+                                  </div>
+                        
+                                  <div className="mt-4 text-center">
+                                    <p className="text-sm text-gray-500">
+                                      Gabriela Ferent • Diététicienne autorisée au Luxembourg
+                                    </p>
+                                  </div>
+                                </AccordionContent>
+                              </AccordionItem>
+                            );
+                          })}
                         </div>
-                        <p className="text-blue-800 font-medium">
-                          {faq.expert}
-                        </p>
                       </div>
-                    </div>
-                    
-                    {/* CTA Button */}
-                    <div className="text-center">
-                      <button 
-                        onClick={scrollToCabinets}
-                        className="inline-flex items-center gap-2 px-8 py-4 bg-green-600 text-white font-bold rounded-xl hover:bg-green-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
-                      >
-                        <Calendar className="h-5 w-5" />
-                        Consultation personnalisée
-                        <ArrowRight className="h-4 w-4" />
-                      </button>
-                    </div>
-                    
-                    {/* Footer info */}
-                    <div className="mt-4 text-center">
-                      <p className="text-sm text-gray-500">
-                        Gabriela Ferent • Diététicienne autorisée au Luxembourg
-                      </p>
-                    </div>
-                  </AccordionContent>
-                </AccordionItem>
-              );
-            })}
-          </Accordion>
+                    </Accordion>
         </div>
       </div>
     </section>
