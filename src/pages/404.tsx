@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { Home, Calendar, BookOpen, Phone, Mail } from 'lucide-react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
@@ -33,8 +34,17 @@ const NotFound = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-white flex flex-col pt-[34px]">
-      <Navigation />
+      <div className="min-h-screen bg-white flex flex-col pt-[34px]">
+        <Helmet>
+          <title>Page non trouvée – Conseil Diététique Luxembourg</title>
+          <meta name="description" content="La page que vous recherchez n'existe pas ou a été déplacée. Retournez à l'accueil ou parcourez nos articles." />
+          <meta name="robots" content="noindex, follow" />
+          <link rel="canonical" href="https://www.conseildietetique.lu/404" />
+          <meta property="og:title" content="Page non trouvée – Conseil Diététique Luxembourg" />
+          <meta property="og:description" content="La page que vous recherchez n'existe pas ou a été déplacée." />
+          <meta property="og:url" content="https://www.conseildietetique.lu/404" />
+        </Helmet>
+        <Navigation />
       
       <main className="flex-grow container mx-auto px-4 py-16">
         <div className="max-w-4xl mx-auto text-center">
