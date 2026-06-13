@@ -38,7 +38,7 @@ const CabinetsSection = () => {
             <div className="space-y-3 mb-6 flex-grow">
               <div className="flex items-center gap-3 text-sm text-gray-600">
                 <Clock className="h-4 w-4 text-green-600" />
-                <span>Mercredi: 13h00-18h00</span>
+                <span>Lun, Mer, Ven: 13h00-18h00</span>
               </div>
               <div className="flex items-center gap-3 text-sm text-gray-600">
                 <Car className="h-4 w-4 text-green-600 flex-shrink-0" />
@@ -96,7 +96,7 @@ const CabinetsSection = () => {
             <div className="space-y-3 mb-6 flex-grow">
               <div className="flex items-center gap-3 text-sm text-gray-600">
                 <Clock className="h-4 w-4 text-purple-600" />
-                <span>Lun, Jeu, Ven: 9h00-19h00<br />Sam: 9h00-14h00</span>
+                <span>Jeudi: 9h00-19h00<br />Samedi: 9h00-14h00</span>
               </div>
               <div className="flex items-center gap-3 text-sm text-gray-600">
                 <Car className="h-4 w-4 text-purple-600 flex-shrink-0" />
