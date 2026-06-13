@@ -34,8 +34,7 @@ export default defineConfig(({ mode }) => ({
           'radix-forms': ['@radix-ui/react-checkbox', '@radix-ui/react-select', '@radix-ui/react-radio-group'],
           'radix-overlay': ['@radix-ui/react-toast', '@radix-ui/react-popover', '@radix-ui/react-tooltip'],
           
-          // Backend and data
-          'supabase': ['@supabase/supabase-js'],
+          // Data fetching
           'query': ['@tanstack/react-query'],
           
           // Utilities and forms
