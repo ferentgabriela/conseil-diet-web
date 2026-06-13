@@ -438,8 +438,6 @@
       }
       
       /* Content visible immediately in fallback font, swaps to Inter when loaded */
-      .font-loading { }
-      .fonts-loaded { opacity: 1; }
     </style>
 
     <!-- Resource hints optimized for critical request chains -->
@@ -454,58 +452,6 @@
     <link rel="prefetch" href="/lovable-uploads/6b584fa2-7cae-45b4-8d71-ff67ae89fad3.webp" as="image">
     <link rel="prefetch" href="/src/i18n/locales/fr.json">
     
-    <!-- CSS Loading Optimization Script -->
-    <script>
-      // Load CSS asynchronously to prevent render blocking
-      (function() {
-        // Intercept Vite's automatic CSS injection to make it async
-        const observer = new MutationObserver(function(mutations) {
-          mutations.forEach(function(mutation) {
-            mutation.addedNodes.forEach(function(node) {
-              if (node.nodeType === 1 && node.tagName === 'LINK' && 
-                  node.rel === 'stylesheet' && node.href && 
-                  node.href.includes('/assets/') && node.href.includes('.css')) {
-                
-                // Make the CSS load asynchronously
-                node.media = 'print';
-                node.onload = function() {
-                  this.media = 'all';
-                  this.onload = null;
-                };
-                
-                // Fallback for browsers that don't support onload for links
-                setTimeout(function() {
-                  if (node.media === 'print') {
-                    node.media = 'all';
-                  }
-                }, 50);
-              }
-            });
-          });
-        });
-        
-        // Start observing
-        observer.observe(document.head, { childList: true });
-        
-        // Stop observing after page load
-        window.addEventListener('load', function() {
-          observer.disconnect();
-        }, { once: true });
-        
-        // Font loading optimization
-        if ('fonts' in document) {
-          document.fonts.ready.then(function() {
-            document.documentElement.classList.add('fonts-loaded');
-          });
-        } else {
-          // Fallback for older browsers
-          setTimeout(function() {
-            document.documentElement.classList.add('fonts-loaded');
-          }, 100);
-        }
-      })();
-    </script>
-
     <!-- Plausible Analytics - loaded after page interactive to avoid forced reflow -->
     <script>
       window.addEventListener('load', function() {
