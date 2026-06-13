@@ -79,7 +79,8 @@
     { "source": "/index.html", "destination": "/", "permanent": true },
     { "source": "/about", "destination": "/#apropos", "permanent": true },
     { "source": "/specialities", "destination": "/#services", "permanent": true },
-    { "source": "/prestations", "destination": "/#services", "permanent": true }
+    { "source": "/prestations", "destination": "/#services", "permanent": true },
+    { "source": "/contact", "destination": "/#cabinets", "permanent": true }
   ],
   "headers": [
     {
